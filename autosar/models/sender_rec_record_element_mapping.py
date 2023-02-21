@@ -178,8 +178,8 @@ class SenderRecRecordElementMapping:
 @dataclass
 class SenderRecRecordTypeMapping:
     """
-    If the ApplicationCompositeDataType is a Record, the "RecordTypeMapping"
-    will be used.
+    If the ApplicationCompositeDataType is a Record, the "RecordTypeMapping" will
+    be used.
 
     :ivar record_element_mappings: Each ApplicationRecordElement shall
         be mapped on a SystemSignal.
@@ -346,8 +346,8 @@ class SenderRecArrayElementMapping:
 @dataclass
 class SenderRecArrayTypeMapping:
     """
-    If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping"
-    will be used.
+    If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping" will be
+    used.
 
     :ivar array_element_mappings: Each ApplicationArrayElement shall be
         mapped on a SystemSignal.

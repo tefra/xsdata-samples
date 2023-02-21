@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .encumbrance_enumeration import EncumbranceEnumeration
 from .medical_need_enumeration import MedicalNeedEnumeration
@@ -14,36 +14,33 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "UserNeed_VersionedChildStructure"
 
-    mobility_need: Optional[MobilityEnumeration] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "MobilityNeed",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    psychosensory_need: Optional[PyschosensoryNeedEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "PsychosensoryNeed",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    medical_need: Optional[MedicalNeedEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "MedicalNeed",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    encumbrance_need: Optional[EncumbranceEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "EncumbranceNeed",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "MobilityNeed",
+                    "type": MobilityEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PsychosensoryNeed",
+                    "type": PyschosensoryNeedEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MedicalNeed",
+                    "type": MedicalNeedEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EncumbranceNeed",
+                    "type": EncumbranceEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     excluded: Optional[bool] = field(

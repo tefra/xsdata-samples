@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PduCollectionTriggerEnum:
     """
-    Defines whether a Pdu contributes to the triggering of the data
-    transmission if Pdu collection is enabled.
+    Defines whether a Pdu contributes to the triggering of the data transmission if
+    Pdu collection is enabled.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

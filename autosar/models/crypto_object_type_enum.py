@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoObjectTypeEnum:
     """
-    Enumeration of all types of crypto objects, i.e. types of content that can
-    be stored to a key slot.
+    Enumeration of all types of crypto objects, i.e. types of content that can be
+    stored to a key slot.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

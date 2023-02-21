@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrRectangle:
     """
-    two geo-coordinate pairs defining the rectangular.
+    Two geo-coordinate pairs defining the rectangular.
 
     :ivar openlr_lower_left: The lower left corner of the rectangle
     :ivar openlr_upper_right: the upper right corner of the rectangle

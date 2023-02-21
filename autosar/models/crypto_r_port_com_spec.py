@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoRPortComSpec:
     """
-    This meta-class represents the ability to define port-specific attributes
-    for supporting use cases of crypto on the required side.
+    This meta-class represents the ability to define port-specific attributes for
+    supporting use cases of crypto on the required side.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

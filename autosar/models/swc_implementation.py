@@ -34,8 +34,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcImplementation:
     """
-    This meta-class represents a specialization of the general Implementation
-    meta-class with respect to the usage in application software.
+    This meta-class represents a specialization of the general Implementation meta-
+    class with respect to the usage in application software.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

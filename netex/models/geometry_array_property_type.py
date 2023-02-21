@@ -15,7 +15,7 @@ class GeometryArrayPropertyType:
             "name": "Polygon",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-            "sequential": True,
+            "sequence": 34,
         }
     )
     line_string: List[LineString] = field(
@@ -24,7 +24,7 @@ class GeometryArrayPropertyType:
             "name": "LineString",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-            "sequential": True,
+            "sequence": 34,
         }
     )
     point: List[Point1] = field(
@@ -33,7 +33,7 @@ class GeometryArrayPropertyType:
             "name": "Point",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-            "sequential": True,
+            "sequence": 34,
         }
     )
     owns: bool = field(

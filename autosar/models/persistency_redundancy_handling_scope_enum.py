@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyRedundancyHandlingScopeEnum:
     """
-    This meta-class provides values to control the scope of redundancy measures
-    in the persistency deployment.
+    This meta-class provides values to control the scope of redundancy measures in
+    the persistency deployment.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

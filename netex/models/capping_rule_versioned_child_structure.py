@@ -70,28 +70,28 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     prices: Optional[CappingRulePricesRelStructure] = field(

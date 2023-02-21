@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
     """
-    the openLR method of areadefinition by providing points that bound the
-    area.
+    The openLR method of areadefinition by providing points that bound the area.
     """
     openlr_polygon_corners: Optional[OpenlrPolygonCorners] = field(
         default=None,

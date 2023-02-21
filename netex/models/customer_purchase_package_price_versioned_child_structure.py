@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List
 from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
@@ -12,19 +12,22 @@ class CustomerPurchasePackagePriceVersionedChildStructure(FarePriceVersionedChil
     class Meta:
         name = "CustomerPurchasePackagePrice_VersionedChildStructure"
 
-    customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = field(
-        default=None,
+    customer_purchase_package_ref_or_customer_purchase_package_element_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "CustomerPurchasePackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_purchase_package_element_ref: Optional[CustomerPurchasePackageElementRef] = field(
-        default=None,
-        metadata={
-            "name": "CustomerPurchasePackageElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerPurchasePackageRef",
+                    "type": CustomerPurchasePackageRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerPurchasePackageElementRef",
+                    "type": CustomerPurchasePackageElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

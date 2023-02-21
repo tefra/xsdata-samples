@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TlsCryptoServiceMapping:
     """
-    This meta-class has the ability to represent a crypto service mapping for
-    the socket-based configuration of Transport Layer Security (TLS).
+    This meta-class has the ability to represent a crypto service mapping for the
+    socket-based configuration of Transport Layer Security (TLS).
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SectionNamePrefix:
     """
-    A prefix to be used for generated code artifacts defining a memory section
-    name in the source code of the using module or SWC.
+    A prefix to be used for generated code artifacts defining a memory section name
+    in the source code of the using module or SWC.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

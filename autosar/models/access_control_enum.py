@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AccessControlEnum:
     """
-    This enumeration describes the options for the definition of access
-    restriction to resources.
+    This enumeration describes the options for the definition of access restriction
+    to resources.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

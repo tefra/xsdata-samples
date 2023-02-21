@@ -134,28 +134,28 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey_ref: Optional[ServiceJourneyRefStructure] = field(
-        default=None,
+    service_journey_ref_or_journey_designator_or_service_designator: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_designator: Optional[JourneyDesignator] = field(
-        default=None,
-        metadata={
-            "name": "JourneyDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_designator: Optional[ServiceDesignator] = field(
-        default=None,
-        metadata={
-            "name": "ServiceDesignator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyDesignator",
+                    "type": JourneyDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceDesignator",
+                    "type": ServiceDesignator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     maximum_interchange_window: Optional[XmlDuration] = field(

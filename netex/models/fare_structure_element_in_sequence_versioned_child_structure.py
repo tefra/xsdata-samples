@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
 from .fare_structure_element_ref import FareStructureElementRef
 from .generic_parameter_assignment_version_structure import (
@@ -33,27 +33,27 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )

@@ -30,8 +30,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoKeySlotInterface:
     """
-    This meta-class provides the ability to define a PortInterface for Crypto
-    Key Slots.
+    This meta-class provides the ability to define a PortInterface for Crypto Key
+    Slots.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

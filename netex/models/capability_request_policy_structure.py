@@ -24,19 +24,22 @@ class CapabilityRequestPolicyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    gml_coordinate_format: Optional[str] = field(
-        default=None,
+    gml_coordinate_format_or_wgs_decimal_degrees: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "GmlCoordinateFormat",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    wgs_decimal_degrees: Optional[EmptyType1] = field(
-        default=None,
-        metadata={
-            "name": "WgsDecimalDegrees",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GmlCoordinateFormat",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "WgsDecimalDegrees",
+                    "type": EmptyType1,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

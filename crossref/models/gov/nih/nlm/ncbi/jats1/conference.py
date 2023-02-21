@@ -40,7 +40,7 @@ class Conference:
         metadata={
             "name": "conf-name",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5677,
         }
     )
     conf_acronym: List[ConfAcronym] = field(
@@ -48,7 +48,7 @@ class Conference:
         metadata={
             "name": "conf-acronym",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5677,
         }
     )
     conf_num: Optional[ConfNum] = field(

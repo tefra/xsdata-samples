@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticSoftwareClusterProps:
     """
-    This meta-class represents the ability to specify properties for the
-    relation between a DiagnosticContributionSet and a SoftwareCluster.
+    This meta-class represents the ability to specify properties for the relation
+    between a DiagnosticContributionSet and a SoftwareCluster.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ImplementationDataTypeSubElementRef:
     """
-    This meta-class represents the specialization of SubElementMapping with
-    respect to ImplementationDataTypes.
+    This meta-class represents the specialization of SubElementMapping with respect
+    to ImplementationDataTypes.
 
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DtcKindEnum:
     """
-    This enumeration defines the possible kinds of diagnostic monitors
-    regarding the OBD relevance.
+    This enumeration defines the possible kinds of diagnostic monitors regarding
+    the OBD relevance.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

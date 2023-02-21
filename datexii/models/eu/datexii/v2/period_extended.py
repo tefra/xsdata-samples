@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PeriodExtended:
     """
-    An extension point for Period offering the possibility to describe special
-    days and public holidays.
+    An extension point for Period offering the possibility to describe special days
+    and public holidays.
 
     :ivar recurring_special_day: A recurring period in terms of special
         days.

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PulseTestEnum:
     """
-    This element indicates to the connected Actuator Software component whether
-    the data-element can be used to generate pulse test sequences using the
+    This element indicates to the connected Actuator Software component whether the
+    data-element can be used to generate pulse test sequences using the
     IoHwAbstraction layer.
 
     :ivar value:

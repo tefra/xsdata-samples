@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwDataDependency:
-    """This element describes the interdependencies of data objects, e.g.
-    variables and parameters. Use cases:
+    """This element describes the interdependencies of data objects, e.g. variables
+    and parameters. Use cases:
 
     * Calculate the value of a calibration parameter (by the MCD system) from the value(s) of other calibration parameters.
     * Virtual data - that means the data object is not directly in the ecu and this property describes how the "virtual variable" can be computed from the real ones (by the MCD system).

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
@@ -150,20 +150,23 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
-        default=None,
+    destination_display_ref_or_destination_display_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DestinationDisplayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_view: Optional[DestinationDisplayView] = field(
-        default=None,
-        metadata={
-            "name": "DestinationDisplayView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DestinationDisplayRef",
+                    "type": DestinationDisplayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DestinationDisplayView",
+                    "type": DestinationDisplayView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     vias: Optional[ViasRelStructure] = field(

@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers
 @dataclass
 class Target(TargetType):
     """
-    <description xmlns="">The specification of the target country, locale,
-    system of the message.</description>
+    <description xmlns="">The specification of the target country, locale, system
+    of the message.</description>
     """
     class Meta:
         namespace = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .access_space_ref import AccessSpaceRef
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .boarding_position_ref import BoardingPositionRef
@@ -49,124 +49,97 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    stop_place_ref: Optional[StopPlaceRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessSpaceRef",
+                    "type": AccessSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BoardingPositionRef",
+                    "type": BoardingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceEntranceRef",
+                    "type": StopPlaceEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestRef",
+                    "type": PointOfInterestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestSpaceRef",
+                    "type": PointOfInterestSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestEntranceRef",
+                    "type": PointOfInterestEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingRef",
+                    "type": ParkingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingAreaRef",
+                    "type": ParkingAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPassengerEntranceRef",
+                    "type": ParkingPassengerEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceRef",
+                    "type": ParkingEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 5,
         }
     )
-    access_space_ref: Optional[AccessSpaceRef] = field(
-        default=None,
+    operator_ref_or_operator_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AccessSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    boarding_position_ref: Optional[BoardingPositionRef] = field(
-        default=None,
-        metadata={
-            "name": "BoardingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay_ref: Optional[QuayRef] = field(
-        default=None,
-        metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_entrance_ref: Optional[StopPlaceEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_ref: Optional[PointOfInterestRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_space_ref: Optional[PointOfInterestSpaceRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_entrance_ref: Optional[PointOfInterestEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_ref: Optional[ParkingRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_area_ref: Optional[ParkingAreaRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_for_vehicles_ref: Optional[ParkingEntranceForVehiclesRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_passenger_entrance_ref: Optional[ParkingPassengerEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingPassengerEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_ref: Optional[ParkingEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_view: Optional[OperatorView] = field(
-        default=None,
-        metadata={
-            "name": "OperatorView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorView",
+                    "type": OperatorView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     label: Optional[MultilingualString] = field(

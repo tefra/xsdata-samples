@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CompositeNetworkRepresentation:
     """
-    This meta-class is used to define the network representation of leaf
-    elements of composite application data types.
+    This meta-class is used to define the network representation of leaf elements
+    of composite application data types.
 
     :ivar leaf_element_iref: This represents that leaf element of an
         application composite data type.

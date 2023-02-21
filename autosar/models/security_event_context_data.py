@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecurityEventContextData:
-    """This meta-class represents the possibility that context data can be
-    attached to the aggregating SecurityEventDefinition.
+    """This meta-class represents the possibility that context data can be attached
+    to the aggregating SecurityEventDefinition.
 
     If this meta-class does not exist for a SecurityEventDefinition,
     then no context data shall be provided for this

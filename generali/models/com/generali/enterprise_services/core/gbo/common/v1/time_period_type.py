@@ -7,9 +7,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class TimePeriodType:
-    """<description xmlns="">A component that states the date and time from
-    which this business object is effective (or valid) and the date and time to
-    which it is effective.
+    """<description xmlns="">A component that states the date and time from which
+    this business object is effective (or valid) and the date and time to which it
+    is effective.
 
     Again the ISO8601 standard must be used.</description>
 

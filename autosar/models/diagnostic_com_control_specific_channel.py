@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticComControlSpecificChannel:
     """
-    This represents the ability to add further attributes to the definition of
-    a specific channel that is subject to the diagnostic service "communication
+    This represents the ability to add further attributes to the definition of a
+    specific channel that is subject to the diagnostic service "communication
     control".
 
     :ivar specific_channel_ref: This represents the affected

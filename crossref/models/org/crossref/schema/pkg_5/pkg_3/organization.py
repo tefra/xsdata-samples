@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Organization:
-    """The name of an organization (as opposed to a person) that contributed to
-    an item.
+    """The name of an organization (as opposed to a person) that contributed to an
+    item.
 
     If an item was authored by individuals in addition to one or more
     organizations, person_name and organization may be freely intermixed

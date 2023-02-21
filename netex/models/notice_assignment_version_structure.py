@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -37,28 +37,28 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 
-    notice_ref: Optional[NoticeRef] = field(
-        default=None,
+    notice_ref_or_group_of_notices_ref_or_notice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "NoticeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_notices_ref: Optional[GeneralGroupOfEntitiesRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfNoticesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice: Optional[Notice] = field(
-        default=None,
-        metadata={
-            "name": "Notice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NoticeRef",
+                    "type": NoticeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfNoticesRef",
+                    "type": GeneralGroupOfEntitiesRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Notice",
+                    "type": Notice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     noticed_object_ref: Optional[VersionOfObjectRefStructure] = field(

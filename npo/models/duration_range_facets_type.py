@@ -16,7 +16,7 @@ class DurationRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "sequential": True,
+            "sequence": 331,
         }
     )
     range: List[DurationRangeFacetItemType] = field(
@@ -24,6 +24,6 @@ class DurationRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "sequential": True,
+            "sequence": 331,
         }
     )

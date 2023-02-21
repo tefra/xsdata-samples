@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GraphicFitEnum:
     """
-    This enumerator specifies the policy how to place and scale the figure on
-    the page.
+    This enumerator specifies the policy how to place and scale the figure on the
+    page.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

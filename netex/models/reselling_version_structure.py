@@ -60,28 +60,28 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_from_any_time: Optional[EmptyType2] = field(
-        default=None,
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ExchangableFromAnyTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchangable_from_duration: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "ExchangableFromDuration",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchangable_from_percent_use: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "ExchangableFromPercentUse",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ExchangableFromAnyTime",
+                    "type": EmptyType2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ExchangableFromDuration",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ExchangableFromPercentUse",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     exchangable_from_interval_ref: Optional[TimeIntervalRefStructure] = field(
@@ -92,28 +92,28 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_until_any_time: Optional[EmptyType2] = field(
-        default=None,
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ExchangableUntilAnyTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchangable_until_duration: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "ExchangableUntilDuration",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    exchangable_until_percent_use: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "ExchangableUntilPercentUse",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ExchangableUntilAnyTime",
+                    "type": EmptyType2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ExchangableUntilDuration",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ExchangableUntilPercentUse",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     exchangable_until_interval_ref: Optional[TimeIntervalRefStructure] = field(

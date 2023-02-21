@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class IndividualVehicleDataValues(TrafficData):
     """
-    Measured or calculated data values relating to individual vehicles derived
-    from detectors at the specified measurement site.
+    Measured or calculated data values relating to individual vehicles derived from
+    detectors at the specified measurement site.
 
     :ivar individual_vehicle_speed: The measured speed of the individual
         vehicle at the specified measurement site.

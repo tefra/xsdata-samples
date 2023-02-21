@@ -10,33 +10,34 @@ class LocationStructure1:
     class Meta:
         name = "LocationStructure"
 
-    longitude: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "Longitude",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-            "min_inclusive": Decimal("-180"),
-            "max_inclusive": Decimal("180"),
-        }
-    )
-    latitude: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "Latitude",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-            "min_inclusive": Decimal("-90"),
-            "max_inclusive": Decimal("90"),
-        }
-    )
-    coordinates: List[str] = field(
+    longitude_or_latitude_or_coordinates: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "Coordinates",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-            "tokens": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Longitude",
+                    "type": Decimal,
+                    "namespace": "http://www.siri.org.uk/siri",
+                    "min_inclusive": Decimal("-180"),
+                    "max_inclusive": Decimal("180"),
+                },
+                {
+                    "name": "Latitude",
+                    "type": Decimal,
+                    "namespace": "http://www.siri.org.uk/siri",
+                    "min_inclusive": Decimal("-90"),
+                    "max_inclusive": Decimal("90"),
+                },
+                {
+                    "name": "Coordinates",
+                    "type": List[str],
+                    "namespace": "http://www.siri.org.uk/siri",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     precision: Optional[int] = field(

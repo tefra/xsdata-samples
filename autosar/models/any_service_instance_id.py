@@ -6,9 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AnyServiceInstanceId:
-    """This is a positive integer or the literal ALL (the value ANY is
-    technically supported but deprecated) which can be denoted in decimal,
-    octal and hexadecimal.
+    """This is a positive integer or the literal ALL (the value ANY is technically
+    supported but deprecated) which can be denoted in decimal, octal and
+    hexadecimal.
 
     The value is between 0 and 4294967295.
 

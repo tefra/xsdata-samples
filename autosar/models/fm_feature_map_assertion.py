@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureMapAssertion:
-    """Defines a boolean expression which shall evaluate to true for this
-    mapping to become active.
+    """Defines a boolean expression which shall evaluate to true for this mapping
+    to become active.
 
     The expression is a formula that is based on features and system
     constants, and is defined by fmSyscond.

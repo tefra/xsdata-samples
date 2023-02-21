@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticPeriodicRate:
     """
-    This represents the ability to define a periodic rate for the specification
-    of the "read data by periodic ID" diagnostic service.
+    This represents the ability to define a periodic rate for the specification of
+    the "read data by periodic ID" diagnostic service.
 
     :ivar period: This represents the period of the
         DiagnosticPeriodicRate in seconds.

@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class LinTpConnection:
     """A LinTP channel represents an internal path for the transmission or
-    reception of a Pdu via LinTp and describes the sender and the receiver of
-    this particular communication.
+    reception of a Pdu via LinTp and describes the sender and the receiver of this
+    particular communication.
 
     LinTp supports (per Lin Cluster) the configuration of one Rx Tp-SDU
     and one Tx Tp-SDU per NAD the LinMaster uses to address one or more

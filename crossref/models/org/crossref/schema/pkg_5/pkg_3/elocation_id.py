@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ElocationId:
     """
-    article identifier or e-location id of the item.
+    Article identifier or e-location id of the item.
     """
     class Meta:
         name = "elocation_id"

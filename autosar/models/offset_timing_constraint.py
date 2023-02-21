@@ -22,9 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class OffsetTimingConstraint:
-    """Bounds the time offset between the occurrence of two timing events,
-    without requiring a direct functional dependency between the source and the
-    target.
+    """Bounds the time offset between the occurrence of two timing events, without
+    requiring a direct functional dependency between the source and the target.
 
     If the target event occurs, it is expected to occur earliest with
     the minimum, and latest with the maximum offset relatively after the

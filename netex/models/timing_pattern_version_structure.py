@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .link_sequence_version_structure import LinkSequenceVersionStructure
 from .route_ref_structure import RouteRefStructure
@@ -33,20 +33,23 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
-        default=None,
+    time_demand_type_ref_or_timeband_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TimeDemandTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timeband_ref: Optional[TimebandRef] = field(
-        default=None,
-        metadata={
-            "name": "TimebandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeDemandTypeRef",
+                    "type": TimeDemandTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimebandRef",
+                    "type": TimebandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     points_in_sequence: Optional[TimingPointsInJourneyPatternRelStructure] = field(

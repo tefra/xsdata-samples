@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Delays:
-    """The details of the delays being caused by the situation element defined
-    in the situation record.
+    """The details of the delays being caused by the situation element defined in
+    the situation record.
 
     It is recommended to only use one of the optional attributes to
     avoid confusion.

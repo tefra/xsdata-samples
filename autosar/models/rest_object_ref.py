@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestObjectRef:
     """
-    This meta-class represents the ability to define a REST property that
-    defines reference to another REST element.
+    This meta-class represents the ability to define a REST property that defines
+    reference to another REST element.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HwCategory:
     """
-    This metaclass represents the ability to declare hardware categories and
-    its particular attributes.
+    This metaclass represents the ability to declare hardware categories and its
+    particular attributes.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

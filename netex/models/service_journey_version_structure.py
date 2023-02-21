@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .block_ref import BlockRef
 from .calls_rel_structure import CallsRelStructure
@@ -250,52 +250,52 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
+    operator_ref_or_operator_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorView",
+                    "type": OperatorView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
-    operator_view: Optional[OperatorView] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatorView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: Optional[FlexibleLineRef] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_view: Optional[LineView] = field(
-        default=None,
-        metadata={
-            "name": "LineView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_view: Optional[FlexibleLineView] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleLineView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineView",
+                    "type": LineView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleLineView",
+                    "type": FlexibleLineView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
@@ -430,20 +430,23 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref: Optional[PassengerCarryingRequirementRef] = field(
-        default=None,
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "PassengerCarryingRequirementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_carrying_requirements_view: Optional[PassengerCarryingRequirementsView] = field(
-        default=None,
-        metadata={
-            "name": "PassengerCarryingRequirementsView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PassengerCarryingRequirementRef",
+                    "type": PassengerCarryingRequirementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerCarryingRequirementsView",
+                    "type": PassengerCarryingRequirementsView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     train_size: Optional[TrainSize] = field(
@@ -461,19 +464,22 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_service_properties_ref: Optional[FlexibleServicePropertiesRef] = field(
-        default=None,
+    flexible_service_properties_ref_or_flexible_service_properties: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "FlexibleServicePropertiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_service_properties: Optional[FlexibleServiceProperties] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleServiceProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleServicePropertiesRef",
+                    "type": FlexibleServicePropertiesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleServiceProperties",
+                    "type": FlexibleServiceProperties,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

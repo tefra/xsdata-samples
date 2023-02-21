@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwRecordLayout:
-    """Defines how the data objects (variables, calibration parameters etc.)
-    are to be stored in the ECU memory.
+    """Defines how the data objects (variables, calibration parameters etc.) are to
+    be stored in the ECU memory.
 
     As an example, this definition specifies the sequence of axis points
     in the ECU memory. Iterations through axis values are stored within

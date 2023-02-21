@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TlsIamRemoteSubject:
     """
-    This meta-class defines the proxy information about the remote node in case
-    of TLS.
+    This meta-class defines the proxy information about the remote node in case of
+    TLS.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

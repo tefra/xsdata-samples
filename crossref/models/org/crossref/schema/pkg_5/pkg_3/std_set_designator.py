@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class StdSetDesignator(StdDesignatorT):
     """
-    Provides for defining a DOI for a set of standards (sometimes know as
-    truncated form).
+    Provides for defining a DOI for a set of standards (sometimes know as truncated
+    form).
     """
     class Meta:
         name = "std_set_designator"

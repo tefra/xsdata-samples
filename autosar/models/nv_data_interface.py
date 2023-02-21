@@ -26,9 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NvDataInterface:
     """
-    A non volatile data interface declares a number of VariableDataPrototypes
-    to be exchanged between non volatile block components and atomic software
-    components.
+    A non volatile data interface declares a number of VariableDataPrototypes to be
+    exchanged between non volatile block components and atomic software components.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

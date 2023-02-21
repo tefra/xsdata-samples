@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -94,20 +94,23 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time: Optional[XmlDuration] = field(
-        default=None,
+    wait_time_or_wait_times: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "WaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "waitTimes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "waitTimes",
+                    "type": JourneyPatternWaitTimesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     headways: Optional[JourneyPatternHeadwaysRelStructure] = field(

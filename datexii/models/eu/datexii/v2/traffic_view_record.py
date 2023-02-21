@@ -12,9 +12,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TrafficViewRecord:
     """
-    An identifiable instance of a single record within a traffic view which
-    shall comprise at most one instance of each of the following:
-    OperatorAction, TrafficElement, ElaboratedData and CCTVImages.
+    An identifiable instance of a single record within a traffic view which shall
+    comprise at most one instance of each of the following: OperatorAction,
+    TrafficElement, ElaboratedData and CCTVImages.
 
     :ivar record_sequence_number: A number identifying the sequence of
         the record within the set of records which comprise the traffic

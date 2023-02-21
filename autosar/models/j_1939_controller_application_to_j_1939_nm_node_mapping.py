@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class J1939ControllerApplicationToJ1939NmNodeMapping:
-    """This meta-class represents the ability to map a
-    J1939ControllerApplication to a J1939NmNode.
+    """This meta-class represents the ability to map a J1939ControllerApplication
+    to a J1939NmNode.
 
     Note that this is similar but not identical to the mapping of
     SwComponentPrototypes to EcuInstances; for J1939 the semantics of an

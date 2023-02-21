@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HandleOutOfRangeEnum:
     """
-    A value of this type is taken for controlling the range checking behavior
-    of the AUTOSAR RTE.
+    A value of this type is taken for controlling the range checking behavior of
+    the AUTOSAR RTE.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

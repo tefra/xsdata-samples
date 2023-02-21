@@ -16,20 +16,23 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref: Optional[CodespaceRef] = field(
-        default=None,
+    codespace_ref_or_codespace: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "CodespaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    codespace: Optional[Codespace] = field(
-        default=None,
-        metadata={
-            "name": "Codespace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CodespaceRef",
+                    "type": CodespaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Codespace",
+                    "type": Codespace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     administrative_zone_ref: Optional[AdministrativeZoneRef] = field(
@@ -72,20 +75,23 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    start_value: Optional[str] = field(
-        default=None,
+    start_value_or_end_value: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "StartValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EndValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StartValue",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndValue",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     maximum_length: Optional[int] = field(

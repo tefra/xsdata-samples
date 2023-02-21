@@ -9,8 +9,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MeasurementSiteTable:
     """A Measurement Site Table comprising a number of sets of data, each
-    describing the location from where a stream of measured data may be
-    derived.
+    describing the location from where a stream of measured data may be derived.
 
     Each location is known as a "measurement site" which can be a point,
     a linear road section or an area.

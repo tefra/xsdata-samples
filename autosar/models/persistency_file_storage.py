@@ -26,9 +26,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyFileStorage:
     """
-    This meta-class comes with the ability to define a collection of single
-    files (directory) that creates the deployment-side counterpart to a
-    PortPrototype typed by a PersistencyFileStorageInterface.
+    This meta-class comes with the ability to define a collection of single files
+    (directory) that creates the deployment-side counterpart to a PortPrototype
+    typed by a PersistencyFileStorageInterface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

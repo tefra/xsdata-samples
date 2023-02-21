@@ -23,7 +23,7 @@ class Publisher:
         metadata={
             "name": "publisher-name",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6602,
         }
     )
     publisher_loc: List[PublisherLoc] = field(
@@ -31,7 +31,7 @@ class Publisher:
         metadata={
             "name": "publisher-loc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6602,
         }
     )
     content_type: Optional[str] = field(

@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExecutionDependency:
     """
-    This element defines a ProcessState in which a dependent process needs to
-    be before the process that aggregates the ExecutionDependency element can
-    be started.
+    This element defines a ProcessState in which a dependent process needs to be
+    before the process that aggregates the ExecutionDependency element can be
+    started.
 
     :ivar process_state_iref: This represent the applicable
         modeDeclaration that represents an ProcessState.

@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class A:
     """
-    content is "Inline" except that anchors shouldn't be nested.
+    Content is "Inline" except that anchors shouldn't be nested.
     """
     class Meta:
         name = "a"

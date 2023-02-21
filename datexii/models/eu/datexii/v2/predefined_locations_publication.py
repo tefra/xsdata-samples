@@ -11,9 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PredefinedLocationsPublication(PayloadPublication):
     """
-    A publication containing one or more groups of predefined locations
-    organised either as litineraries, non ordered groups or as individual
-    locations.
+    A publication containing one or more groups of predefined locations organised
+    either as litineraries, non ordered groups or as individual locations.
     """
     header_information: Optional[HeaderInformation] = field(
         default=None,

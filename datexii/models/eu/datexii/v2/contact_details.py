@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ContactDetails(Contact):
     """
-    Details for some person, service or the parking site itself, especially
-    address information.
+    Details for some person, service or the parking site itself, especially address
+    information.
 
     :ivar contact_organisation_name: Name of the organisation or
         service. Do not use this attribute in combination with role

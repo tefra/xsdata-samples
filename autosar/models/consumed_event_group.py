@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ConsumedEventGroup:
     """
-    This element represents an event-group to which the service consumer wants
-    to subscribe.
+    This element represents an event-group to which the service consumer wants to
+    subscribe.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

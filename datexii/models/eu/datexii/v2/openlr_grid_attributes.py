@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrGridAttributes:
     """
-    attributes required for the grid method.
+    Attributes required for the grid method.
 
     :ivar openlr_num_columns: the number that the base rectangle should
         be multiplied in the east direction

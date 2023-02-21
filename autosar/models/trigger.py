@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Trigger:
     """
-    A trigger which is provided (i.e. released) or required (i.e. used to
-    activate something) in the given context.
+    A trigger which is provided (i.e. released) or required (i.e. used to activate
+    something) in the given context.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

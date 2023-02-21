@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticFimAliasEventGroupMapping:
-    """This meta-class represents the ability to map a DiagnosticFimEventGroup
-    to a DiagnosticFimAliasEventGroup.
+    """This meta-class represents the ability to map a DiagnosticFimEventGroup to a
+    DiagnosticFimAliasEventGroup.
 
     By this means the "preliminary" modeling by way of a
     DiagnosticFimAliasEventGroup is further substantiated.

@@ -26,9 +26,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ObdRatioServiceNeeds:
     """
-    Specifies the abstract needs of a component or module on the configuration
-    of OBD Services in relation to a particular "ratio monitoring" which is
-    supported by this component or module.
+    Specifies the abstract needs of a component or module on the configuration of
+    OBD Services in relation to a particular "ratio monitoring" which is supported
+    by this component or module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

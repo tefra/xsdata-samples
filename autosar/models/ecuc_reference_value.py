@@ -15,9 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucReferenceValue:
     """
-    Used to represent a configuration value that has a parameter definition of
-    type EcucAbstractReferenceDef (used for all of its specializations
-    excluding EcucInstanceReferenceDef).
+    Used to represent a configuration value that has a parameter definition of type
+    EcucAbstractReferenceDef (used for all of its specializations excluding
+    EcucInstanceReferenceDef).
 
     :ivar index: Used to support the specification of ordering of
         parameter values.

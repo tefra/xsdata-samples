@@ -25,9 +25,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TransformerHardErrorEvent:
     """
-    The event is raised when data are received which should trigger a
-    Client/Server operation or an external trigger but during transformation of
-    the data a hard transformer error occurred.
+    The event is raised when data are received which should trigger a Client/Server
+    operation or an external trigger but during transformation of the data a hard
+    transformer error occurred.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

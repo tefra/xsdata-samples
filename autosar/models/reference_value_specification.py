@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ReferenceValueSpecification:
     """
-    Specifies a reference to a data prototype to be used as an initial value
-    for a pointer in the software.
+    Specifies a reference to a data prototype to be used as an initial value for a
+    pointer in the software.
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a

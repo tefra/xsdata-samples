@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CanClusterBusOffRecovery:
     """
-    This element contains the attributes that are used to configure the CAN bus
-    off monitoring / recovery at system level.
+    This element contains the attributes that are used to configure the CAN bus off
+    monitoring / recovery at system level.
 
     :ivar bor_counter_l_1_to_l_2: This threshold defines the count of
         bus-offs until the bus-off recovery switches from level 1 (short

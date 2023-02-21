@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class RGBColour:
     """
-    An RGB colour described by values for red, green and blue (0..255) as well
-    as an optional name.
+    An RGB colour described by values for red, green and blue (0..255) as well as
+    an optional name.
 
     :ivar rgb_red_value: The red value of the RGB colour (0..255).
     :ivar rgb_green_value: The green value of the RGB colour (0..255).

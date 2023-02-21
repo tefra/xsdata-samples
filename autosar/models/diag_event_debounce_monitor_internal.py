@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagEventDebounceMonitorInternal:
-    """"This meta-class represents the ability to indicate that no Dem pre-
-    debounce algorithm shall be used for this diagnostic monitor.
+    """"This meta-class represents the ability to indicate that no Dem pre-debounce
+    algorithm shall be used for this diagnostic monitor.
 
     The SWC might implement an internal debouncing algorithm and report
     qualified (debounced) results to the Dem/DM.

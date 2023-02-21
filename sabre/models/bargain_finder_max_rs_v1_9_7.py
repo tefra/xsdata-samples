@@ -310,8 +310,8 @@ class CouponOfferType:
 @dataclass
 class CurrencyAmountType:
     """
-    Provides a monetary amount and the code of the currency in which this
-    amount is expressed.
+    Provides a monetary amount and the code of the currency in which this amount is
+    expressed.
 
     Attributes
         amount:
@@ -1418,8 +1418,8 @@ class ComplexProcessingMessageType(ProcessingMessageType):
 @dataclass
 class ErrorType(FreeTextType):
     """
-    Standard way to indicate that an error occurred during the processing of an
-    OTA message.
+    Standard way to indicate that an error occurred during the processing of an OTA
+    message.
 
     Attributes
         type: The Error element MUST contain the Type attribute that
@@ -1629,8 +1629,8 @@ class OperatingAirlineType(CompanyNameType):
 
 @dataclass
 class RuleInfoType:
-    """Contains summary fare rule information as well as detailed Rule
-    Information for Fare Basis Codes.
+    """Contains summary fare rule information as well as detailed Rule Information
+    for Fare Basis Codes.
 
     Information may be actual rules data or the results returned from a
     rules-based inquiry.
@@ -1831,8 +1831,8 @@ class VccinformationType:
 @dataclass
 class WarningType(FreeTextType):
     """
-    Standard way to indicate successful processing of an OTA message, but one
-    in which warnings are generated.
+    Standard way to indicate successful processing of an OTA message, but one in
+    which warnings are generated.
 
     Attributes
         type: The Warning element MUST contain the Type attribute that
@@ -5775,8 +5775,8 @@ class PricedItineraryType:
 
 @dataclass
 class OtaAirLowFareSearchRs:
-    """The Low Fare Search Response message contains a number of .Priced
-    Itinerary. options. Each includes:
+    """The Low Fare Search Response message contains a number of .Priced Itinerary.
+    options. Each includes:
 
     - A set of available flights matching the client.s request.
     - Pricing information including taxes and full fare breakdown for each passenger type

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .other_error import OtherError
 from .service_not_available_error import ServiceNotAvailableError
@@ -60,20 +60,23 @@ class CheckStatusResponseBodyStructure:
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error: Optional[ServiceNotAvailableError] = field(
-            default=None,
+        service_not_available_error_or_other_error: List[object] = field(
+            default_factory=list,
             metadata={
-                "name": "ServiceNotAvailableError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            }
-        )
-        other_error: Optional[OtherError] = field(
-            default=None,
-            metadata={
-                "name": "OtherError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "ServiceNotAvailableError",
+                        "type": ServiceNotAvailableError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "OtherError",
+                        "type": OtherError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                ),
+                "max_occurs": 2,
             }
         )
         description: Optional[str] = field(

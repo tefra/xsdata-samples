@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureMap:
-    """A FMFeatureMap associates FMFeatures with variation points in the
-    AUTOSAR model.
+    """A FMFeatureMap associates FMFeatures with variation points in the AUTOSAR
+    model.
 
     To do this, it defines value sets for system constants and postbuild
     variant criterions that shall be chosen whenever a certain

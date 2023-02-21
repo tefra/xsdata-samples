@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .train_element import TrainElement
@@ -39,20 +39,23 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_element_ref: Optional[TrainElementRef] = field(
-        default=None,
+    train_element_ref_or_train_element: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TrainElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_element: Optional[TrainElement] = field(
-        default=None,
-        metadata={
-            "name": "TrainElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainElementRef",
+                    "type": TrainElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainElement",
+                    "type": TrainElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     operational_orientation: Optional[VehicleOrientationEnumeration] = field(

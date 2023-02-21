@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IoHwAbstractionServerAnnotation:
-    """The IoHwAbstractionServerAnnotation will only be used from a sensor- or
-    an actuator component while interacting with the IoHwAbstraction layer.
+    """The IoHwAbstractionServerAnnotation will only be used from a sensor- or an
+    actuator component while interacting with the IoHwAbstraction layer.
 
     Note that the "server" in the name of this meta-class is not meant
     to restrict the usage to ClientServerInterfaces.

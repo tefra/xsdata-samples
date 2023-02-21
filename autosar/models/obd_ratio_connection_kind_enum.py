@@ -8,9 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ObdRatioConnectionKindEnum:
     """
-    Defines the way how the IUMPR service connection between the Dem and the
-    client component or module is handled (for details see the DEM
-    Specification).
+    Defines the way how the IUMPR service connection between the Dem and the client
+    component or module is handled (for details see the DEM Specification).
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

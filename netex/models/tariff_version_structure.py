@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
@@ -94,116 +94,92 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    retail_consortium_ref: Optional[RetailConsortiumRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "RetailConsortiumRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailConsortiumRef",
+                    "type": RetailConsortiumRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisationRef",
+                    "type": GeneralOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgentRef",
+                    "type": ManagementAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisationRef",
+                    "type": ServicedOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgentRef",
+                    "type": TravelAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisationRef",
+                    "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationRef",
+                    "type": OrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfOperatorsRef",
+                    "type": GroupOfOperatorsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 10,
         }
     )
-    authority_ref: Optional[AuthorityRef] = field(
-        default=None,
+    choice_1: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_organisation_ref: Optional[GeneralOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "GeneralOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    management_agent_ref: Optional[ManagementAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "ManagementAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "ServicedOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_agent_ref: Optional[TravelAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "TravelAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    other_organisation_ref: Optional[OtherOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OtherOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_ref: Optional[OrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_operators_ref: Optional[GroupOfOperatorsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfOperatorsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_line_ref: Optional[FlexibleLineRef] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    network_ref: Optional[NetworkRef] = field(
-        default=None,
-        metadata={
-            "name": "NetworkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_lines_ref: Optional[GroupOfLinesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfLinesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NetworkRef",
+                    "type": NetworkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfLinesRef",
+                    "type": GroupOfLinesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     type_of_tariff_ref: Optional[TypeOfTariffRef] = field(

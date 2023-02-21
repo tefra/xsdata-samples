@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RuleBasedValueCont:
     """
-    This represents the values of a compound primitive (CURVE, MAP, CUBOID,
-    CUBE_4, CUBE_5, VAL_BLK) or an array.
+    This represents the values of a compound primitive (CURVE, MAP, CUBOID, CUBE_4,
+    CUBE_5, VAL_BLK) or an array.
 
     :ivar unit_ref: This represents the physical unit of the provided
         values.

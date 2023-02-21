@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PersistencyDataElement:
-    """This meta-class represents the ability to formally specify a piece of
-    data that is subject to persistency in the context of the enclosing
+    """This meta-class represents the ability to formally specify a piece of data
+    that is subject to persistency in the context of the enclosing
     PersistencyKeyValueStorageInterface.
 
     PersistencyDataElement represents also a key-value pair of the

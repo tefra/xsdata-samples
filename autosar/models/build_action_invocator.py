@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BuildActionInvocator:
     """
-    This meta-class represents the ability to specify the invocation of a task
-    in a build action.
+    This meta-class represents the ability to specify the invocation of a task in a
+    build action.
 
     :ivar command: This represents the command to invocate the
         processor. Note that this is a generic string which can be

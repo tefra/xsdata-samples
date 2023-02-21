@@ -12,9 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Period:
     """
-    A continuous time period or a set of discontinuous time periods defined by
-    the intersection of a set of criteria all within an overall delimiting
-    interval.
+    A continuous time period or a set of discontinuous time periods defined by the
+    intersection of a set of criteria all within an overall delimiting interval.
 
     :ivar start_of_period: Start of period.
     :ivar end_of_period: End of a period.

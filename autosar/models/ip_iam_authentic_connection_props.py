@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IpIamAuthenticConnectionProps:
     """
-    This meta-class defines a set of properties for IP connections in the
-    context of IAM configuration.
+    This meta-class defines a set of properties for IP connections in the context
+    of IAM configuration.
 
     :ivar ip_protocol: This attribute defines the relevant IP protocol.
     :ivar local_network_endpoint_ref: This reference defines an

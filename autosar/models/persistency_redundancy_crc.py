@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyRedundancyCrc:
     """
-    This meta-class formally describes the usage of a CRC for the
-    implementation of redundancy.
+    This meta-class formally describes the usage of a CRC for the implementation of
+    redundancy.
 
     :ivar scope: This attribute controls the scope in which the
         redundancy handling is applied.

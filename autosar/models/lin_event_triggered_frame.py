@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinEventTriggeredFrame:
-    """An event triggered frame is used as a placeholder to allow multiple
-    slave nodes to provide its response.
+    """An event triggered frame is used as a placeholder to allow multiple slave
+    nodes to provide its response.
 
     The header of an event triggered frame is transmitted when a frame
     slot allocated to the event triggered frame is processed. The

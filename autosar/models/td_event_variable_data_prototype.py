@@ -26,8 +26,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventVariableDataPrototype:
     """
-    This is used to describe timing events related to sender-receiver
-    communication at VFB level.
+    This is used to describe timing events related to sender-receiver communication
+    at VFB level.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

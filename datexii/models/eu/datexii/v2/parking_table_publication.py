@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingTablePublication:
     """
-    A publication defining one or more tables that have entries of parking
-    sites or groups of them, located in an urban or interurban context.
+    A publication defining one or more tables that have entries of parking sites or
+    groups of them, located in an urban or interurban context.
     """
     header_information: Optional[HeaderInformation] = field(
         default=None,

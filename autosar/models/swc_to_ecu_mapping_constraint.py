@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwcToEcuMappingConstraint:
-    """The System Constraint Description has to describe dedicated and
-    exclusive mapping of SW-Cs to one or more ECUs.
+    """The System Constraint Description has to describe dedicated and exclusive
+    mapping of SW-Cs to one or more ECUs.
 
     Dedicated mapping means that the SW-C can only be mapped to the ECUs
     it is dedicated to. Exclusive Mapping means that the SW-C cannot be

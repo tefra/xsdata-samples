@@ -165,19 +165,22 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         }
     )
-    distribution_points: Optional[PointRefsRelStructure] = field(
-        default=None,
+    distribution_points_or_distribution_group_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "distributionPoints",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distribution_group_ref: Optional[GeneralGroupOfEntitiesRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "DistributionGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "distributionPoints",
+                    "type": PointRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistributionGroupRef",
+                    "type": GeneralGroupOfEntitiesRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

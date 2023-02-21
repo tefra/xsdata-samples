@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingRecordStatus:
     """Contains the current status of one parking record defined in the static
-    model (i.e. parking site or group of parking sites) or historical or
-    forecasted data for one parking.
+    model (i.e. parking site or group of parking sites) or historical or forecasted
+    data for one parking.
 
     Only for the second case, 'parkingStatusTime' must be specified.
 

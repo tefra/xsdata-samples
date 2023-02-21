@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticTestIdentifier:
     """
-    This meta-class represents the ability to create a diagnostic test
-    identifier.
+    This meta-class represents the ability to create a diagnostic test identifier.
 
     :ivar id: This represents the numerical id associated with the
         diagnostic test identifier.

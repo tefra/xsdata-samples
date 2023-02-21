@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class UkspecifiedQuantitySolidFuelCodeType(CodeType):
     """
-    A codelist restricting a code to the set that can be sold in the UK for
-    solid fuel.
+    A codelist restricting a code to the set that can be sold in the UK for solid
+    fuel.
     """
     class Meta:
         name = "UKSpecifiedQuantitySolidFuelCodeType"

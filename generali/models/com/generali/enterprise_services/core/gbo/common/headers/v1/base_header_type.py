@@ -6,6 +6,5 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers
 @dataclass
 class BaseHeaderType:
     """
-    <description xmlns="">The base type for the SOAP message
-    headers.</description>
+    <description xmlns="">The base type for the SOAP message headers.</description>
     """

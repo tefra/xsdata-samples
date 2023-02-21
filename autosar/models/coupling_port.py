@@ -31,8 +31,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CouplingPort:
-    """A CouplingPort is used to connect a CouplingElement with an EcuInstance
-    or two CouplingElements with each other via a CouplingPortConnection.
+    """A CouplingPort is used to connect a CouplingElement with an EcuInstance or
+    two CouplingElements with each other via a CouplingPortConnection.
 
     Optionally, the CouplingPort may also have a reference to a
     macMulticastGroup and a defaultVLAN.

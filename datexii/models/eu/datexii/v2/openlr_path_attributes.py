@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrPathAttributes:
     """
-    The field path attributes is part of a location reference point (except for
-    the last location reference point) and consists of lowest functional road
-    class (LFRCNP) and distance to next point (DNP) data.
+    The field path attributes is part of a location reference point (except for the
+    last location reference point) and consists of lowest functional road class
+    (LFRCNP) and distance to next point (DNP) data.
 
     :ivar openlr_lowest_frcto_next_lrpoint: The lowest FRC to the next
         point indicates the lowest functional road class used in the

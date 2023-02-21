@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .fare_product_version_structure import FareProductVersionStructure
 from .general_group_of_entities import GeneralGroupOfEntities
 from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
@@ -21,19 +21,22 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    general_group_of_entities_ref: Optional[GeneralGroupOfEntitiesRef] = field(
-        default=None,
+    general_group_of_entities_ref_or_general_group_of_entities: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "GeneralGroupOfEntitiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_group_of_entities: Optional[GeneralGroupOfEntities] = field(
-        default=None,
-        metadata={
-            "name": "GeneralGroupOfEntities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeneralGroupOfEntitiesRef",
+                    "type": GeneralGroupOfEntitiesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralGroupOfEntities",
+                    "type": GeneralGroupOfEntities,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

@@ -21,8 +21,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ComFindServiceGrantDesign:
     """
-    This meta-class represents the ability to define a Grant for finding a
-    service.
+    This meta-class represents the ability to define a Grant for finding a service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

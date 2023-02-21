@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswDistinguishedPartition:
-    """Each instance of this meta-class represents an abstract partition in
-    which context the code of the enclosing  BswModuleBehavior can be executed.
+    """Each instance of this meta-class represents an abstract partition in which
+    context the code of the enclosing  BswModuleBehavior can be executed.
 
     The intended use case is to distinguish between several partitions
     in order to implement different behavior per partition, for example

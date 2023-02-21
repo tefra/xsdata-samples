@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LifeCycleInfoSet:
-    """This meta class represents the ability to attach a life cycle
-    information to a particular set of elements.
+    """This meta class represents the ability to attach a life cycle  information
+    to a particular set of elements.
 
     The information can be defined for a particular period. This
     supports the definition of transition plans. If no period is

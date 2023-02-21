@@ -17,9 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoServiceJobNeeds:
     """
-    This meta-class shall be taken to indicate that the service use case
-    modeled with this kind of ServiceNeeds assumes the usage of the crypto job
-    API.
+    This meta-class shall be taken to indicate that the service use case modeled
+    with this kind of ServiceNeeds assumes the usage of the crypto job API.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

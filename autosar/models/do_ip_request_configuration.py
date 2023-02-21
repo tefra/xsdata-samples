@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DoIpRequestConfiguration:
     """
-    This meta-class specifies a range of target addresses and its
-    interpretation as either physical or functional request.
+    This meta-class specifies a range of target addresses and its interpretation as
+    either physical or functional request.
 
     :ivar end_address: End address for range of target-addresses
         (including this address).

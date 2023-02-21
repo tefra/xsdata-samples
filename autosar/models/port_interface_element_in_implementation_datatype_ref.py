@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortInterfaceElementInImplementationDatatypeRef:
-    """This meta-class represents the ability to refer to the internal
-    structure of an AutosarDataPrototype  which is typed by an
-    implementationDatatype in the context of a PortInterface.
+    """This meta-class represents the ability to refer to the internal structure of
+    an AutosarDataPrototype  which is typed by an implementationDatatype in the
+    context of a PortInterface.
 
     In other words, this meta-class shall not be used to model a
     reference to the '''AutosarDataPrototype as a target itself''',

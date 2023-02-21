@@ -47,14 +47,14 @@ class JournalMeta:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6301,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6301,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -62,7 +62,7 @@ class JournalMeta:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6301,
         }
     )
     issn: List[Issn] = field(

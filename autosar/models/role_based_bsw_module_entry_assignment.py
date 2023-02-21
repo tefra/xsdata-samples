@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RoleBasedBswModuleEntryAssignment:
-    """This class specifies an assignment of a role to a particular
-    BswModuleEntry (usually a configurable callback).
+    """This class specifies an assignment of a role to a particular BswModuleEntry
+    (usually a configurable callback).
 
     With this assignment, the role of the callback is mapped to a
     specific ServiceNeeds element, so that a tool is able to create

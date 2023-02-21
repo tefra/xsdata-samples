@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrLineLocationReference:
     """
-    A LineLocationReference is defined by an ordered sequence of location
-    reference points and a terminating last location reference point.
+    A LineLocationReference is defined by an ordered sequence of location reference
+    points and a terminating last location reference point.
     """
     openlr_location_reference_point: List[OpenlrLocationReferencePoint] = field(
         default_factory=list,

@@ -11,8 +11,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswClientPolicy:
     """
-    The requiredClientServerEntry for which the BSW Scheduler using this
-    policy.
+    The requiredClientServerEntry for which the BSW Scheduler using this policy.
 
     :ivar enable_take_address: If set to true, the BSW Module is able to
         use the API reference for deriving a pointer to an object

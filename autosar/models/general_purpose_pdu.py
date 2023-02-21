@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class GeneralPurposePdu:
-    """This element is used for AUTOSAR Pdus without additional attributes that
-    are routed by a bus interface.
+    """This element is used for AUTOSAR Pdus without additional attributes that are
+    routed by a bus interface.
 
     Please note that the category name of such Pdus is standardized in
     the AUTOSAR System Template.

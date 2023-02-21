@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticServiceDataIdentifierPortMapping:
     """
-    This meta-class provides the ability to define a diagnostic access to an
-    entire DID.
+    This meta-class provides the ability to define a diagnostic access to an entire
+    DID.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ParameterProvideComSpec:
     """
-    "Communication" specification that applies to parameters on the provided
-    side of a connection.
+    "Communication" specification that applies to parameters on the provided side
+    of a connection.
 
     :ivar init_value: The initial value applicable for the corresponding
         ParameterDataPrototype.

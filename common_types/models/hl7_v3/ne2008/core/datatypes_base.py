@@ -386,8 +386,7 @@ class EnExplicitSuffix:
 
 @dataclass
 class AnynonNull(Any):
-    """The BooleanNonNull type is used where a Boolean cannot have a null
-    value.
+    """The BooleanNonNull type is used where a Boolean cannot have a null value.
 
     A Boolean value can be either true or false.
     """
@@ -558,9 +557,9 @@ class Ii(Any):
 
 @dataclass
 class Qty(Any):
-    """is an abstract generalization for all data types (1) whose value set has
-    an order relation (less-or-equal) and (2) where difference is defined in
-    all of the data type's totally ordered value subsets.
+    """is an abstract generalization for all data types (1) whose value set has an
+    order relation (less-or-equal) and (2) where difference is defined in all of
+    the data type's totally ordered value subsets.
 
     The quantity type abstraction is needed in defining certain other
     types, such as the interval and the probability distribution.
@@ -571,9 +570,8 @@ class Qty(Any):
 
 @dataclass
 class TelExplicit:
-    """A telephone number (voice or fax), e-mail address, or other locator for
-    a resource (information or service) mediated by telecommunication
-    equipment.
+    """A telephone number (voice or fax), e-mail address, or other locator for a
+    resource (information or service) mediated by telecommunication equipment.
 
     The address is specified as a URL qualified by time specification
     and use codes that help in deciding which address to use for a given
@@ -628,8 +626,8 @@ class TelExplicit:
 
 @dataclass
 class Url(Any):
-    """A telecommunications address  specified according to Internet standard
-    RFC 1738.
+    """A telecommunications address  specified according to Internet standard RFC
+    1738.
 
     [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the
     protocol and the contact point defined by that protocol for the
@@ -1251,8 +1249,7 @@ class AdExplicit:
 
 @dataclass
 class Bn(AnynonNull):
-    """The BooleanNonNull type is used where a Boolean cannot have a null
-    value.
+    """The BooleanNonNull type is used where a Boolean cannot have a null value.
 
     A Boolean value can be either true or false.
     """
@@ -1338,8 +1335,8 @@ class Ed(Bin):
 
 @dataclass
 class Int(Qty):
-    """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that
-    are results of counting and enumerating.
+    """Integer numbers (-1,0,1,2, 100, 3398129, etc.) are precise numbers that are
+    results of counting and enumerating.
 
     Integer numbers are discrete, the set of integers is infinite but
     countable.  No arbitrary limit is imposed on the range of integer
@@ -1567,8 +1564,8 @@ class ThumbnailExplicit:
 
 @dataclass
 class Cd(Any):
-    """A concept descriptor represents any kind of concept usually by giving a
-    code defined in a code system.
+    """A concept descriptor represents any kind of concept usually by giving a code
+    defined in a code system.
 
     A concept descriptor can contain the original text or phrase that
     served as the basis of the coding and one or more translations into
@@ -1809,8 +1806,8 @@ class IvxbTs(Ts):
 
 @dataclass
 class Rto(RtoQtyQty):
-    """A quantity constructed as the quotient of a numerator quantity divided
-    by a denominator quantity.
+    """A quantity constructed as the quotient of a numerator quantity divided by a
+    denominator quantity.
 
     Common factors in the numerator and denominator are not
     automatically cancelled out.   supports titers (e.g., "1:128") and
@@ -1978,8 +1975,8 @@ class ScExplicit:
 class St(Ed):
     """
     The character string data type stands for text data, primarily intended for
-    machine processing (e.g., sorting, querying, indexing, etc.) Used for
-    names, symbols, and formal expressions.
+    machine processing (e.g., sorting, querying, indexing, etc.) Used for names,
+    symbols, and formal expressions.
     """
     class Meta:
         name = "ST"
@@ -2006,8 +2003,8 @@ class St(Ed):
 class StExplicit:
     """
     The character string data type stands for text data, primarily intended for
-    machine processing (e.g., sorting, querying, indexing, etc.) Used for
-    names, symbols, and formal expressions.
+    machine processing (e.g., sorting, querying, indexing, etc.) Used for names,
+    symbols, and formal expressions.
 
     :ivar representation: Specifies the representation of the binary
         data that is the content of the binary data value.
@@ -2160,8 +2157,8 @@ class Adxp(St):
 
 @dataclass
 class CdExplicit(Any):
-    """A concept descriptor represents any kind of concept usually by giving a
-    code defined in a code system.
+    """A concept descriptor represents any kind of concept usually by giving a code
+    defined in a code system.
 
     A concept descriptor can contain the original text or phrase that
     served as the basis of the coding and one or more translations into
@@ -2276,8 +2273,8 @@ class CdExplicit(Any):
 
 @dataclass
 class Ce(Cd):
-    """Coded data, consists of a coded value (CV) and, optionally, coded
-    value(s) from other coding systems that identify the same concept.
+    """Coded data, consists of a coded value (CV) and, optionally, coded value(s)
+    from other coding systems that identify the same concept.
 
     Used when alternative codes may exist.
     """
@@ -2471,9 +2468,8 @@ class Sc(St):
 
 @dataclass
 class Tel(Url):
-    """A telephone number (voice or fax), e-mail address, or other locator for
-    a resource (information or service) mediated by telecommunication
-    equipment.
+    """A telephone number (voice or fax), e-mail address, or other locator for a
+    resource (information or service) mediated by telecommunication equipment.
 
     The address is specified as a URL qualified by time specification
     and use codes that help in deciding which address to use for a given
@@ -2511,8 +2507,8 @@ class Tel(Url):
 
 @dataclass
 class CeExplicit(CdExplicit):
-    """Coded data, consists of a coded value (CV) and, optionally, coded
-    value(s) from other coding systems that identify the same concept.
+    """Coded data, consists of a coded value (CV) and, optionally, coded value(s)
+    from other coding systems that identify the same concept.
 
     Used when alternative codes may exist.
     """
@@ -2534,8 +2530,8 @@ class Cv(Ce):
 @dataclass
 class EivlEvent(Ce):
     """
-    A code for a common (periodical) activity of daily living based on which
-    the event related periodic interval is specified.
+    A code for a common (periodical) activity of daily living based on which the
+    event related periodic interval is specified.
     """
     class Meta:
         name = "EIVL.event"
@@ -3338,7 +3334,7 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 856,
         }
     )
     high: List[IvxbTsExplicit] = field(
@@ -3347,7 +3343,7 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 849,
         }
     )
     center: Optional[TsExplicit] = field(
@@ -3689,7 +3685,7 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 716,
         }
     )
     high: List[IvxbTs] = field(
@@ -3698,7 +3694,7 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 709,
         }
     )
     center: Optional[Ts] = field(

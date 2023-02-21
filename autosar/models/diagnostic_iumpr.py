@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticIumpr:
-    """This meta-class represents he ability to model the in-us monitor
-    performance ratio.
+    """This meta-class represents he ability to model the in-us monitor performance
+    ratio.
 
     The latter computes to the number of times a fault could have been
     found divided by the number of times the vehicle conditions have

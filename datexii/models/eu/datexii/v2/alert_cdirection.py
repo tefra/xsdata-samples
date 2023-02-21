@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class AlertCDirection:
     """
-    The direction of traffic flow along the road to which the information
-    relates.
+    The direction of traffic flow along the road to which the information relates.
 
     :ivar alert_cdirection_coded: The direction of traffic flow to which
         the situation, traffic data or information is related. Positive

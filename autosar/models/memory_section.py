@@ -26,13 +26,13 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class MemorySection:
     """Provides a description of an abstract memory section used in the
     Implementation for code or data. It shall be declared by the Implementation
-    Description of the module or component, which actually allocates the memory
-    in its code. This means in case of data prototypes which are allocated by
-    the RTE, that the generated Implementation Description of the RTE shall
-    contain the corresponding MemorySections. The attribute "symbol" (if symbol
-    is missing: "shortName") defines the module or component specific section
-    name used in the code. For details see the document "Specification of
-    Memory Mapping". Typically the section name is build according the pattern:
+    Description of the module or component, which actually allocates the memory in
+    its code. This means in case of data prototypes which are allocated by the RTE,
+    that the generated Implementation Description of the RTE shall contain the
+    corresponding MemorySections. The attribute "symbol" (if symbol is missing:
+    "shortName") defines the module or component specific section name used in the
+    code. For details see the document "Specification of Memory Mapping". Typically
+    the section name is build according the pattern:
 
     &lt;SwAddrMethod shortName&gt;[_&lt;further specialization nominator&gt;][_&lt;alignment&gt;]
     where

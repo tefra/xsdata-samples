@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VehicleCharacteristics:
     """
-    The characteristics of a vehicle, e.g. lorry of gross weight greater than
-    30 tonnes.
+    The characteristics of a vehicle, e.g. lorry of gross weight greater than 30
+    tonnes.
 
     :ivar fuel_type: The type of fuel used by the vehicle.
     :ivar load_type: The type of load carried by the vehicle, especially

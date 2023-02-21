@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McDataAccessDetails:
-    """This meta-class allows to attach detailed information about the usage of
-    a data buffer by the RTE to a corresponding McDataInstance.
+    """This meta-class allows to attach detailed information about the usage of a
+    data buffer by the RTE to a corresponding McDataInstance.
 
     Use Case:  Direct memory access to RTE internal buffers for rapid
     prototyping. In case of implicit communication, the various task

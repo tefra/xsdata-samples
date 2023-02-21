@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TriggerMode:
     """
-    IPduM can be configured to send a transmission request for the new
-    multiplexed I-PDU to the PDU-Router because of conditions/ modes.
+    IPduM can be configured to send a transmission request for the new multiplexed
+    I-PDU to the PDU-Router because of conditions/ modes.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

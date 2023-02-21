@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class TdEventFrame:
     """
     This is used to describe timing events related to the exchange of frames
-    between the communication controller and the bus specific (FlexRay / CAN /
-    LIN) Interface BSW module.
+    between the communication controller and the bus specific (FlexRay / CAN / LIN)
+    Interface BSW module.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

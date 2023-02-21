@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class ConditionByFormula:
     """This class represents a condition which is computed based on system
     constants according to the specified expression. The expected result is
-    considered as boolean value. The result of the expression is interpreted as
-    a condition.
+    considered as boolean value. The result of the expression is interpreted as a
+    condition.
 
     * "0" represents "false";
     * a value other than zero is considered "true"

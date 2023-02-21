@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortDefinedArgumentValue:
-    """A PortDefinedArgumentValue is passed to a RunnableEntity dealing with
-    the ClientServerOperations provided by a given PortPrototype.
+    """A PortDefinedArgumentValue is passed to a RunnableEntity dealing with the
+    ClientServerOperations provided by a given PortPrototype.
 
     Note that this is restricted to PPortPrototypes of a
     ClientServerInterface.

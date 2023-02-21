@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucDestinationUriNestingContractEnum:
     """
-    EcucDestinationUriNestingContractEnum is used to determine what is
-    qualified by the EcucDestinationUriPolicy.
+    EcucDestinationUriNestingContractEnum is used to determine what is qualified by
+    the EcucDestinationUriPolicy.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

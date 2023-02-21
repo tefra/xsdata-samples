@@ -35,8 +35,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswImplementation:
-    """Contains the implementation specific information in addition to the
-    generic specification (BswModuleDescription and BswBehavior).
+    """Contains the implementation specific information in addition to the generic
+    specification (BswModuleDescription and BswBehavior).
 
     It is possible to have several different BswImplementations
     referring to the same BswBehavior.

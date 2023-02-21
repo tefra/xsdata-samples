@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .accessibility_assessment import AccessibilityAssessment
 from .check_constraint import CheckConstraint
@@ -93,20 +93,23 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
-        default=None,
+    time_demand_type_ref_or_timeband_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TimeDemandTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timeband_ref: Optional[TimebandRef] = field(
-        default=None,
-        metadata={
-            "name": "TimebandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeDemandTypeRef",
+                    "type": TimeDemandTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimebandRef",
+                    "type": TimebandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     duty_part_ref: Optional[DutyPartRef] = field(
@@ -117,36 +120,33 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_journey_stop_assignment_ref: Optional[VehicleJourneyStopAssignmentRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "VehicleJourneyStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dynamic_stop_assignment_ref: Optional[DynamicStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "DynamicStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay_assignment_view: Optional[QuayAssignmentView] = field(
-        default=None,
-        metadata={
-            "name": "QuayAssignmentView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleJourneyStopAssignmentRef",
+                    "type": VehicleJourneyStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignmentRef",
+                    "type": DynamicStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerStopAssignmentRef",
+                    "type": PassengerStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayAssignmentView",
+                    "type": QuayAssignmentView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     dynamic_stop_assignment: Optional[DynamicStopAssignment] = field(

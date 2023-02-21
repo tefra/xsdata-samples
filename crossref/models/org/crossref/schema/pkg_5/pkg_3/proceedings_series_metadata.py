@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ProceedingsSeriesMetadata:
     """
-    Container for all information that applies to a specific conference
-    proceeding that is part of a series.
+    Container for all information that applies to a specific conference proceeding
+    that is part of a series.
     """
     class Meta:
         name = "proceedings_series_metadata"
@@ -45,7 +45,7 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 32,
-            "sequential": True,
+            "sequence": 239,
         }
     )
     proceedings_subject: List[str] = field(
@@ -55,7 +55,7 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 255,
-            "sequential": True,
+            "sequence": 251,
         }
     )
     publisher: List[Publisher] = field(

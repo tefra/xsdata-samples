@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .access_not_allowed_error import AccessNotAllowedError
 from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
 from .beyond_data_horizon import BeyondDataHorizon
@@ -17,84 +17,63 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ErrorConditionStructure:
-    service_not_available_error: Optional[ServiceNotAvailableError] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ServiceNotAvailableError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    capability_not_supported_error: Optional[CapabilityNotSupportedError] = field(
-        default=None,
-        metadata={
-            "name": "CapabilityNotSupportedError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    access_not_allowed_error: Optional[AccessNotAllowedError] = field(
-        default=None,
-        metadata={
-            "name": "AccessNotAllowedError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    invalid_data_references_error: Optional[InvalidDataReferencesError] = field(
-        default=None,
-        metadata={
-            "name": "InvalidDataReferencesError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    beyond_data_horizon: Optional[BeyondDataHorizon] = field(
-        default=None,
-        metadata={
-            "name": "BeyondDataHorizon",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    no_info_for_topic_error: Optional[NoInfoForTopicError] = field(
-        default=None,
-        metadata={
-            "name": "NoInfoForTopicError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    parameters_ignored_error: Optional[ParametersIgnoredError] = field(
-        default=None,
-        metadata={
-            "name": "ParametersIgnoredError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    unknown_extensions_error: Optional[UnknownExtensionsError] = field(
-        default=None,
-        metadata={
-            "name": "UnknownExtensionsError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    allowed_resource_usage_exceeded_error: Optional[AllowedResourceUsageExceededError] = field(
-        default=None,
-        metadata={
-            "name": "AllowedResourceUsageExceededError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    other_error: Optional[OtherError] = field(
-        default=None,
-        metadata={
-            "name": "OtherError",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceNotAvailableError",
+                    "type": ServiceNotAvailableError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "CapabilityNotSupportedError",
+                    "type": CapabilityNotSupportedError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "AccessNotAllowedError",
+                    "type": AccessNotAllowedError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "InvalidDataReferencesError",
+                    "type": InvalidDataReferencesError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "BeyondDataHorizon",
+                    "type": BeyondDataHorizon,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "NoInfoForTopicError",
+                    "type": NoInfoForTopicError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "ParametersIgnoredError",
+                    "type": ParametersIgnoredError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "UnknownExtensionsError",
+                    "type": UnknownExtensionsError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "AllowedResourceUsageExceededError",
+                    "type": AllowedResourceUsageExceededError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "OtherError",
+                    "type": OtherError,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
+            "max_occurs": 10,
         }
     )
     description: Optional[NaturalLanguageStringStructure] = field(

@@ -5,8 +5,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class UserTypeEnum(Enum):
     """
-    Types of users; used for parking but also for usage of equipment and
-    services.
+    Types of users; used for parking but also for usage of equipment and services.
 
     :cvar ALL_USERS: All users.
     :cvar SHOPPERS: Shoppers.

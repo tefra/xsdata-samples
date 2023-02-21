@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .condition_summary import ConditionSummary
 from .distribution_assignments_rel_structure import DistributionAssignmentsRelStructure
@@ -84,20 +84,23 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_sales_offer_packages_ref: Optional[GroupOfSalesOfferPackagesRef] = field(
-        default=None,
+    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "GroupOfSalesOfferPackagesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    groups_of_sale_offer_packages: Optional[GroupOfSalesOfferPackageRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "groupsOfSaleOfferPackages",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GroupOfSalesOfferPackagesRef",
+                    "type": GroupOfSalesOfferPackagesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "groupsOfSaleOfferPackages",
+                    "type": GroupOfSalesOfferPackageRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     sales_offer_package_substitutions: Optional[SalesOfferPackageSubstitutionsRelStructure] = field(

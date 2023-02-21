@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SecOcCryptoServiceMapping:
     """
-    This meta-class has the ability to represent a crypto service mapping for
-    the Pdu-based communication via SecOC.
+    This meta-class has the ability to represent a crypto service mapping for the
+    Pdu-based communication via SecOC.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

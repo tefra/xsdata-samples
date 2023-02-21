@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PeriodicEventTriggering:
-    """The PeriodicEventTriggering describes the behavior of an event with a
-    strict periodic occurrence pattern, given by the period attribute.
+    """The PeriodicEventTriggering describes the behavior of an event with a strict
+    periodic occurrence pattern, given by the period attribute.
 
     Additionally, it is possible to soften the strictness of the
     periodic occurrence behavior by specifying a jitter, so that there

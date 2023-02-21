@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PositiveInteger:
-    """This is a positive integer which can be denoted in decimal, binary,
-    octal and hexadecimal.
+    """This is a positive integer which can be denoted in decimal, binary, octal
+    and hexadecimal.
 
     The value is between 0 and 4294967295.
 

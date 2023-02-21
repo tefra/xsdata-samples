@@ -45,14 +45,14 @@ class TransAbstract:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7141,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7141,
         }
     )
     abstract_type: Optional[str] = field(

@@ -50,28 +50,28 @@ class PropertyOfDayStructure:
             "tokens": True,
         }
     )
-    month_of_year: Optional[XmlPeriod] = field(
-        default=None,
+    month_of_year_or_day_of_month_or_day_of_year: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "MonthOfYear",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_of_month: Optional[XmlPeriod] = field(
-        default=None,
-        metadata={
-            "name": "DayOfMonth",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_of_year: Optional[XmlPeriod] = field(
-        default=None,
-        metadata={
-            "name": "DayOfYear",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "MonthOfYear",
+                    "type": XmlPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayOfMonth",
+                    "type": XmlPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayOfYear",
+                    "type": XmlPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     country_ref: Optional[CountryRefStructure] = field(

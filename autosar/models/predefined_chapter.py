@@ -112,7 +112,7 @@ class PredefinedChapter:
             "name": "MSR-QUERY-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     msr_query_p_2: List[MsrQueryP2] = field(
@@ -121,7 +121,7 @@ class PredefinedChapter:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     p: List[MultiLanguageParagraph] = field(
@@ -130,7 +130,7 @@ class PredefinedChapter:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     verbatim: List[MultiLanguageVerbatim] = field(
@@ -139,7 +139,7 @@ class PredefinedChapter:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     list_value: List[ListType] = field(
@@ -148,7 +148,7 @@ class PredefinedChapter:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     def_list: List[DefList] = field(
@@ -157,7 +157,7 @@ class PredefinedChapter:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     labeled_list: List[LabeledList] = field(
@@ -166,7 +166,7 @@ class PredefinedChapter:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     formula: List[MlFormula] = field(
@@ -175,7 +175,7 @@ class PredefinedChapter:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     figure: List[MlFigure] = field(
@@ -184,7 +184,7 @@ class PredefinedChapter:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     note: List[Note] = field(
@@ -193,7 +193,7 @@ class PredefinedChapter:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     trace: List[TraceableText] = field(
@@ -202,7 +202,7 @@ class PredefinedChapter:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     structured_req: List[StructuredReq] = field(
@@ -211,7 +211,7 @@ class PredefinedChapter:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     table: List[Table] = field(
@@ -220,7 +220,7 @@ class PredefinedChapter:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     traceable_table: List[TraceableTable] = field(
@@ -229,7 +229,7 @@ class PredefinedChapter:
             "name": "TRACEABLE-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     prms: List[Prms] = field(
@@ -238,7 +238,7 @@ class PredefinedChapter:
             "name": "PRMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     topic_1: List[Topic1] = field(
@@ -247,7 +247,7 @@ class PredefinedChapter:
             "name": "TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     msr_query_topic_1: List[MsrQueryTopic1] = field(
@@ -256,7 +256,7 @@ class PredefinedChapter:
             "name": "MSR-QUERY-TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     chapter: List[Chapter] = field(
@@ -265,7 +265,7 @@ class PredefinedChapter:
             "name": "CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     msr_query_chapter: List[MsrQueryChapter] = field(
@@ -274,7 +274,7 @@ class PredefinedChapter:
             "name": "MSR-QUERY-CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 79666,
         }
     )
     s: Optional[str] = field(

@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IPduTiming:
-    """AUTOSAR COM provides the possibility to define two different
-    TRANSMISSION MODES for each IPdu.
+    """AUTOSAR COM provides the possibility to define two different TRANSMISSION
+    MODES for each IPdu.
 
     The Transmission Mode of an IPdu that is valid at a specific point
     in time is selected using the values of the signals that are mapped

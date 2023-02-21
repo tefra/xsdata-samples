@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .entrance_refs_rel_structure import EntranceRefsRelStructure
 from .parking_bays_rel_structure import ParkingBaysRelStructure
 from .parking_component_version_structure import ParkingComponentVersionStructure
@@ -30,20 +30,23 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_properties: Optional[ParkingProperties] = field(
-        default=None,
+    parking_properties_or_parking_properties: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ParkingProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    netex_org_uk_netex_parking_properties: Optional[ParkingPropertiesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "parkingProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingProperties",
+                    "type": ParkingProperties,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "parkingProperties",
+                    "type": ParkingPropertiesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     bays: Optional[ParkingBaysRelStructure] = field(

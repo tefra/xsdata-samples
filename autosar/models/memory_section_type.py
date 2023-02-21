@@ -8,9 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MemorySectionType:
     """
-    Enumeration to specify the essential nature of the data which can be
-    allocated in a common memory class by the means of the AUTOSAR Memory
-    Mapping.
+    Enumeration to specify the essential nature of the data which can be allocated
+    in a common memory class by the means of the AUTOSAR Memory Mapping.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

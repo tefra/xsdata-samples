@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Dataset:
     """
-    dataset is used to capture information about one or more database records
-    or collections.
+    dataset is used to capture information about one or more database records or
+    collections.
     """
     class Meta:
         name = "dataset"

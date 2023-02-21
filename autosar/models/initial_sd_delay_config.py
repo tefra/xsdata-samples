@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InitialSdDelayConfig:
     """
-    This element is used to configure the offer behavior of the server and the
-    find behavior on the client.
+    This element is used to configure the offer behavior of the server and the find
+    behavior on the client.
 
     :ivar initial_delay_max_value: @RESTRICT_TO_STANDARD:CP! Max Value
         in seconds to delay randomly the first offer (if aggregated by

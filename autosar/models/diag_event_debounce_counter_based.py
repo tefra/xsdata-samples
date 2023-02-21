@@ -19,9 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagEventDebounceCounterBased:
-    """This meta-class represents the ability to indicate that the counter-
-    based debounce algorithm shall be used by the DEM for this diagnostic
-    monitor.
+    """This meta-class represents the ability to indicate that the counter-based
+    debounce algorithm shall be used by the DEM for this diagnostic monitor.
 
     This is related to set the ECUC choice container
     DemDebounceAlgorithmClass to DemDebounceCounterBased.

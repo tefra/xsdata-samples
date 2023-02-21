@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyElementLevelUpdateStrategyEnum:
     """
-    This enumeration provides possible values for the update strategy on
-    element level.
+    This enumeration provides possible values for the update strategy on element
+    level.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -17,9 +17,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HardwareTestNeeds:
     """
-    This meta-class represents the ability to indicate that a software-
-    component is interested in the results of the hardware test and will
-    establish a PortPrototype to query the hardware test manager.
+    This meta-class represents the ability to indicate that a software-component is
+    interested in the results of the hardware test and will establish a
+    PortPrototype to query the hardware test manager.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

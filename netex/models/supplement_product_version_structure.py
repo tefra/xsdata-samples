@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .fare_product_ref_structure import FareProductRefStructure
 from .fare_product_refs_rel_structure import FareProductRefsRelStructure
 from .preassigned_fare_product_version_structure import PreassignedFareProductVersionStructure
@@ -21,19 +21,22 @@ class SupplementProductVersionStructure(PreassignedFareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_to_fare_product_ref: Optional[FareProductRefStructure] = field(
-        default=None,
+    supplement_to_fare_product_ref_or_supplement_to: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "SupplementToFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    supplement_to: Optional[FareProductRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "supplementTo",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SupplementToFareProductRef",
+                    "type": FareProductRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "supplementTo",
+                    "type": FareProductRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

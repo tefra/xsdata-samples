@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef
@@ -33,20 +33,23 @@ class SiteVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "Site_VersionStructure"
 
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
-        default=None,
+    topographic_place_ref_or_topographic_place_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TopographicPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    topographic_place_view: Optional[TopographicPlaceView] = field(
-        default=None,
-        metadata={
-            "name": "TopographicPlaceView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TopographicPlaceRef",
+                    "type": TopographicPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TopographicPlaceView",
+                    "type": TopographicPlaceView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     additional_topographic_places: Optional[TopographicPlaceRefsRelStructure] = field(
@@ -81,84 +84,63 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    retail_consortium_ref: Optional[RetailConsortiumRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "RetailConsortiumRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    authority_ref: Optional[AuthorityRef] = field(
-        default=None,
-        metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_organisation_ref: Optional[GeneralOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "GeneralOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    management_agent_ref: Optional[ManagementAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "ManagementAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "ServicedOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_agent_ref: Optional[TravelAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "TravelAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    other_organisation_ref: Optional[OtherOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OtherOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_ref: Optional[OrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operating_organisation_view: Optional[OrganisationDerivedViewStructure] = field(
-        default=None,
-        metadata={
-            "name": "OperatingOrganisationView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailConsortiumRef",
+                    "type": RetailConsortiumRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisationRef",
+                    "type": GeneralOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgentRef",
+                    "type": ManagementAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisationRef",
+                    "type": ServicedOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgentRef",
+                    "type": TravelAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisationRef",
+                    "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationRef",
+                    "type": OrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatingOrganisationView",
+                    "type": OrganisationDerivedViewStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 10,
         }
     )
     parent_site_ref: Optional[SiteRefStructure] = field(

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsFault(Fault):
     """
-    Details of the fault which is being reported for the specified variable
-    message sign panel.
+    Details of the fault which is being reported for the specified variable message
+    sign panel.
 
     :ivar vms_fault: The type of fault which is being reported for the
         specified variable message sign panel.

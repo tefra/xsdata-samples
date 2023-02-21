@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/faults/
 
 @dataclass
 class FailureType:
-    """<description xmlns="">A component that describes individual failures
-    within the fault.
+    """<description xmlns="">A component that describes individual failures within
+    the fault.
 
     This component is used to support multiple causes to the fault, i.e.
     where the fault is generated from one or more API calls or one or

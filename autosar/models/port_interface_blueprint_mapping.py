@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PortInterfaceBlueprintMapping:
     """
-    This meta-class represents the ability to map two PortInterfaces of which
-    one acts as the blueprint for the other.
+    This meta-class represents the ability to map two PortInterfaces of which one
+    acts as the blueprint for the other.
 
     :ivar port_interface_blueprint_ref: This represents the interface
         blueprint. Note that this interface needs to live in a package

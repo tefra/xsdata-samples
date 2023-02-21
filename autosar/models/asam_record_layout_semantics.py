@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AsamRecordLayoutSemantics:
-    """This meta-class is used to denote the semantics in particular in terms
-    of the corresponding A2L-Keyword.
+    """This meta-class is used to denote the semantics in particular in terms of
+    the corresponding A2L-Keyword.
 
     This is to support the mapping of the more general record layouts in
     AUTOSAR/MSR to the specific A2L keywords. It is possible to express

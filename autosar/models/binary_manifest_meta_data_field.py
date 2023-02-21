@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BinaryManifestMetaDataField:
     """
-    This meta-class provides the ability to define a meta-data field for the
-    binary manifest descriptor.
+    This meta-class provides the ability to define a meta-data field for the binary
+    manifest descriptor.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

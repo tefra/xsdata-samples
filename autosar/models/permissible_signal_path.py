@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PermissibleSignalPath:
-    """The PermissibleSignalPath describes the way a data element shall take in
-    the topology.
+    """The PermissibleSignalPath describes the way a data element shall take in the
+    topology.
 
     The path is described by ordered references to PhysicalChannels. If
     more than one PermissibleSignalPath is defined for the same

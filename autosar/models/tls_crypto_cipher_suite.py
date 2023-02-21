@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class TlsCryptoCipherSuite:
     """
     This meta-class represents a cipher suite for describing cryptographic
-    operations in the context of establishing a connection of
-    ApplicationEndpoints that is protected by TLS.
+    operations in the context of establishing a connection of ApplicationEndpoints
+    that is protected by TLS.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

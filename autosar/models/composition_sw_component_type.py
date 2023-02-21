@@ -36,10 +36,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CompositionSwComponentType:
-    """A CompositionSwComponentType aggregates SwComponentPrototypes (that in
-    turn are typed by SwComponentTypes) as well as SwConnectors for primarily
-    connecting SwComponentPrototypes among each others and towards the surface
-    of the CompositionSwComponentType.
+    """A CompositionSwComponentType aggregates SwComponentPrototypes (that in turn
+    are typed by SwComponentTypes) as well as SwConnectors for primarily connecting
+    SwComponentPrototypes among each others and towards the surface of the
+    CompositionSwComponentType.
 
     By this means hierarchical structures of software-components can be
     created.

@@ -22,9 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticEcuInstanceProps:
-    """This meta-class represents the ability to model properties that are
-    specific for a given EcuInstance but on the other hand represent purely
-    diagnostic-related information.
+    """This meta-class represents the ability to model properties that are specific
+    for a given EcuInstance but on the other hand represent purely diagnostic-
+    related information.
 
     In the spirit of decentralized configuration it is therefore
     possible to specify the diagnostic-related information related to a

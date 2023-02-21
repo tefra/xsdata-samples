@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BlueprintMapping:
     """
-    This meta-class represents the ability to map two an object and its
-    blueprint.
+    This meta-class represents the ability to map two an object and its blueprint.
 
     :ivar blueprint_ref: This represents the mapped blueprint.
     :ivar derived_object_ref: This represents the object which was

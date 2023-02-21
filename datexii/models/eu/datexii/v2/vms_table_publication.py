@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsTablePublication(PayloadPublication):
     """
-    A publication containing one or more VMS Unit Tables each comprising a set
-    of records which hold details of VMS units.
+    A publication containing one or more VMS Unit Tables each comprising a set of
+    records which hold details of VMS units.
     """
     header_information: Optional[HeaderInformation] = field(
         default=None,

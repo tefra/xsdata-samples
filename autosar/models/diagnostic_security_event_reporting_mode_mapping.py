@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticSecurityEventReportingModeMapping:
-    """This meta-class represents the ability to associate a location in a DID
-    with a security event.
+    """This meta-class represents the ability to associate a location in a DID with
+    a security event.
 
     The purpose of this mapping is that the location in the DID contains
     the setting of the reporting mode for the specific security event.

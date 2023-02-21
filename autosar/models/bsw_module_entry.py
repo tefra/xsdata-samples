@@ -29,8 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswModuleEntry:
-    """This class represents a single API entry (C-function prototype) into the
-    BSW module or cluster.
+    """This class represents a single API entry (C-function prototype) into the BSW
+    module or cluster.
 
     The name of the C-function is equal to the short name of this
     element with one exception: In case of multiple instances of a

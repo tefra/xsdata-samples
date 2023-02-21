@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BuildActionManifest:
-    """This meta-class represents the ability to specify a manifest for
-    processing artifacts.
+    """This meta-class represents the ability to specify a manifest for processing
+    artifacts.
 
     An example use case is the processing of ECUC parameter values.
 

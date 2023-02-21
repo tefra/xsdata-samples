@@ -7,8 +7,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class ItemNumber:
     """
-    A publisher-assigned number that uniquely identifies the item being
-    registered.
+    A publisher-assigned number that uniquely identifies the item being registered.
     """
     class Meta:
         name = "item_number"

@@ -32,9 +32,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcuAbstractionSwComponentType:
-    """The ECUAbstraction is a special AtomicSwComponentType that resides
-    between a software-component that wants to access ECU periphery and the
-    Microcontroller Abstraction.
+    """The ECUAbstraction is a special AtomicSwComponentType that resides between a
+    software-component that wants to access ECU periphery and the Microcontroller
+    Abstraction.
 
     The EcuAbstractionSwComponentType introduces the possibility to link
     from the software representation to its hardware description

@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ConferenceTheme:
-    """The theme is the slogan or special emphasis of a conference in a
-    particular year.
+    """The theme is the slogan or special emphasis of a conference in a particular
+    year.
 
     It differs from the subject of a conference in that the subject is
     stable over the years while the theme may vary from year to year.

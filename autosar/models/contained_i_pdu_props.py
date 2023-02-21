@@ -11,8 +11,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ContainedIPduProps:
     """
-    Defines the aspects of an IPdu which can be collected inside a
-    ContainerIPdu.
+    Defines the aspects of an IPdu which can be collected inside a ContainerIPdu.
 
     :ivar collection_semantics: Defines whether this ContainedIPdu shall
         be collected using a last-is-best or queued semantics.

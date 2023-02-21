@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ShowResourceNumberEnum:
     """
-    This enumerator specifies if the number (e.g. chapter number) of the
-    reference target shall be rendered with the xref.
+    This enumerator specifies if the number (e.g. chapter number) of the reference
+    target shall be rendered with the xref.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

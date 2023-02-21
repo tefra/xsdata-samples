@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class StdUndatedDesignator(StdDesignatorT):
     """
-    Provides for defining a DOI for a group of closely related standard
-    documents (undated form is a stem for any dated form)
+    Provides for defining a DOI for a group of closely related standard documents
+    (undated form is a stem for any dated form)
     """
     class Meta:
         name = "std_undated_designator"

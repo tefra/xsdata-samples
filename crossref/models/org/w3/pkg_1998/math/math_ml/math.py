@@ -2915,7 +2915,7 @@ class Math:
             default_factory=list,
             metadata={
                 "type": "Element",
-                "sequential": True,
+                "sequence": 53,
             }
         )
         annotation_xml: List[AnnotationXml] = field(
@@ -2923,7 +2923,7 @@ class Math:
             metadata={
                 "name": "annotation-xml",
                 "type": "Element",
-                "sequential": True,
+                "sequence": 53,
             }
         )
         id: Optional[str] = field(

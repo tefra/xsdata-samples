@@ -28,8 +28,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ContainerIPdu:
     """
-    Allows to collect several IPdus in one ContainerIPdu based on the
-    headerType.
+    Allows to collect several IPdus in one ContainerIPdu based on the headerType.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

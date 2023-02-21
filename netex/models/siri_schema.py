@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
 from .check_status_request import CheckStatusRequest
@@ -22,132 +22,93 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    service_request: Optional[ServiceRequest] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ServiceRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscription_request: Optional[SubscriptionRequest] = field(
-        default=None,
-        metadata={
-            "name": "SubscriptionRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    terminate_subscription_request: Optional[TerminateSubscriptionRequest] = field(
-        default=None,
-        metadata={
-            "name": "TerminateSubscriptionRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    data_ready_notification: Optional[DataReadyNotification] = field(
-        default=None,
-        metadata={
-            "name": "DataReadyNotification",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    data_supply_request: Optional[DataSupplyRequest] = field(
-        default=None,
-        metadata={
-            "name": "DataSupplyRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    check_status_request: Optional[CheckStatusRequest] = field(
-        default=None,
-        metadata={
-            "name": "CheckStatusRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    heartbeat_notification: Optional[HeartbeatNotification] = field(
-        default=None,
-        metadata={
-            "name": "HeartbeatNotification",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    capabilities_request: Optional[CapabilitiesRequest] = field(
-        default=None,
-        metadata={
-            "name": "CapabilitiesRequest",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscription_response: Optional[SubscriptionResponse] = field(
-        default=None,
-        metadata={
-            "name": "SubscriptionResponse",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    terminate_subscription_response: Optional[TerminateSubscriptionResponse] = field(
-        default=None,
-        metadata={
-            "name": "TerminateSubscriptionResponse",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    data_ready_acknowledgement: Optional[DataReadyAcknowledgement] = field(
-        default=None,
-        metadata={
-            "name": "DataReadyAcknowledgement",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    service_delivery: Optional[ServiceDelivery] = field(
-        default=None,
-        metadata={
-            "name": "ServiceDelivery",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    data_received_acknowledgement: Optional[DataReceivedAcknowledgement] = field(
-        default=None,
-        metadata={
-            "name": "DataReceivedAcknowledgement",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    check_status_response: Optional[CheckStatusResponse] = field(
-        default=None,
-        metadata={
-            "name": "CheckStatusResponse",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    capabilities_response: Optional[CapabilitiesResponse] = field(
-        default=None,
-        metadata={
-            "name": "CapabilitiesResponse",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    extensions: Optional[Extensions1] = field(
-        default=None,
-        metadata={
-            "name": "Extensions",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceRequest",
+                    "type": ServiceRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriptionRequest",
+                    "type": SubscriptionRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "TerminateSubscriptionRequest",
+                    "type": TerminateSubscriptionRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "DataReadyNotification",
+                    "type": DataReadyNotification,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "DataSupplyRequest",
+                    "type": DataSupplyRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "CheckStatusRequest",
+                    "type": CheckStatusRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "HeartbeatNotification",
+                    "type": HeartbeatNotification,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "CapabilitiesRequest",
+                    "type": CapabilitiesRequest,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriptionResponse",
+                    "type": SubscriptionResponse,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "TerminateSubscriptionResponse",
+                    "type": TerminateSubscriptionResponse,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "DataReadyAcknowledgement",
+                    "type": DataReadyAcknowledgement,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "ServiceDelivery",
+                    "type": ServiceDelivery,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "DataReceivedAcknowledgement",
+                    "type": DataReceivedAcknowledgement,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "CheckStatusResponse",
+                    "type": CheckStatusResponse,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "CapabilitiesResponse",
+                    "type": CapabilitiesResponse,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "Extensions",
+                    "type": Extensions1,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
+            "max_occurs": 8,
         }
     )
     version: str = field(

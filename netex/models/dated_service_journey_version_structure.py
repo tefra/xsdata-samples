@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .driver_ref import DriverRef
 from .operating_day_ref import OperatingDayRef
 from .service_journey_version_structure import ServiceJourneyVersionStructure
@@ -13,20 +13,23 @@ class DatedServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
     class Meta:
         name = "DatedServiceJourney_VersionStructure"
 
-    operating_day_ref: Optional[OperatingDayRef] = field(
-        default=None,
+    operating_day_ref_or_uic_operating_period: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatingDayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    uic_operating_period: Optional[UicOperatingPeriod] = field(
-        default=None,
-        metadata={
-            "name": "UicOperatingPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatingDayRef",
+                    "type": OperatingDayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UicOperatingPeriod",
+                    "type": UicOperatingPeriod,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     driver_ref: Optional[DriverRef] = field(

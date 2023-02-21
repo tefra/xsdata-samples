@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcuStateMgrUserNeeds:
-    """Specifies the abstract needs on the configuration of the ECU State
-    Manager for one "user".
+    """Specifies the abstract needs on the configuration of the ECU State  Manager
+    for one "user".
 
     This class currently contains no attributes. Its name can be
     regarded as a symbol identifying the user  from the viewpoint of the

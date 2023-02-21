@@ -103,14 +103,14 @@ class ArticleMeta:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -118,7 +118,7 @@ class ArticleMeta:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     author_notes: Optional[AuthorNotes] = field(
@@ -252,7 +252,7 @@ class ArticleMeta:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     ext_link: List[ExtLink] = field(
@@ -260,21 +260,21 @@ class ArticleMeta:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     product: List[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -282,7 +282,7 @@ class ArticleMeta:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     history: Optional[History] = field(
@@ -316,7 +316,7 @@ class ArticleMeta:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     related_object: List[RelatedObject] = field(
@@ -324,14 +324,14 @@ class ArticleMeta:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     abstract: List[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5301,
         }
     )
     trans_abstract: List[TransAbstract] = field(

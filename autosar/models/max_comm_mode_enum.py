@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MaxCommModeEnum:
     """
-    Maximum bus communication mode required by a user of the Communication
-    Manager Service.
+    Maximum bus communication mode required by a user of the Communication Manager
+    Service.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

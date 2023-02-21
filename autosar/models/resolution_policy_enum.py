@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ResolutionPolicyEnum:
     """
-    This specifies if the content of the xref element follow a dedicated
-    resolution policy.
+    This specifies if the content of the xref element follow a dedicated resolution
+    policy.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import List, Optional
 from .cell_versioned_child_structure import FareStructureFactorVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -56,19 +56,22 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    number_of_units: Optional[int] = field(
-        default=None,
+    number_of_units_or_amount_factor: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "NumberOfUnits",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    amount_factor: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "name": "AmountFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NumberOfUnits",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AmountFactor",
+                    "type": Decimal,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

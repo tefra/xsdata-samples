@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ElaboratedData:
-    """An instance of data which is derived/computed from one or more
-    measurements over a period of time.
+    """An instance of data which is derived/computed from one or more measurements
+    over a period of time.
 
     It may be a current value or a forecast value predicted from
     historical measurements.

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataLimitKindEnum:
     """
-    Indicates whether the data element carries a minimum or maximum value,
-    thereby limiting the current range of another value.
+    Indicates whether the data element carries a minimum or maximum value, thereby
+    limiting the current range of another value.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

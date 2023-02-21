@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortInterfaceToDataTypeMapping:
-    """This meta-class represents the ability to associate a PortInterface with
-    a DataTypeMappingSet.
+    """This meta-class represents the ability to associate a PortInterface with a
+    DataTypeMappingSet.
 
     This association is needed for the generation of header files in the
     scope of a single PortInterface. The association is intentionally

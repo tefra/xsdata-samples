@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DltLogChannelDesign:
-    """This meta-class has the ability to stand in for a DltLogChannel at the
-    time when the DltLogChannel does not yet exist.
+    """This meta-class has the ability to stand in for a DltLogChannel at the time
+    when the DltLogChannel does not yet exist.
 
     But its future existence already needs to be considered during
     design phase and for that a dedicated model element is required.

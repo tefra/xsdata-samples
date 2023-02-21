@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipCollectionProps:
     """
-    Collection of attributes that are configurable for an event that is
-    provided by a ServiceInstance or for a method that is provided or requested
-    by a ServiceInstance.
+    Collection of attributes that are configurable for an event that is provided by
+    a ServiceInstance or for a method that is provided or requested by a
+    ServiceInstance.
 
     :ivar udp_collection_buffer_timeout: Maximum time, an outgoing
         message (event, method call or method response) may be delayed,

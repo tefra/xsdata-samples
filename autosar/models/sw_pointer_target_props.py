@@ -805,9 +805,9 @@ class SwDataDefPropsConditional:
 @dataclass
 class SwDataDefProps:
     """This class is a collection of properties relevant for data objects under
-    various aspects. One could consider this class as a "pattern of inheritance
-    by aggregation". The properties can be applied to all objects of all
-    classes in which SwDataDefProps is aggregated.
+    various aspects. One could consider this class as a "pattern of inheritance by
+    aggregation". The properties can be applied to all objects of all classes in
+    which SwDataDefProps is aggregated.
 
     @RESTRICT_TO_STANDARD:CP:AP!
     Note that not all of the attributes or associated elements are useful all of the time. Hence, the process definition (e.g. expressed with an OCL or a Document Control Instance MSR-DCI) has the task of implementing limitations.

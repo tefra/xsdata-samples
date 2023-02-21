@@ -195,9 +195,9 @@ class StayUnitType(Enum):
 @dataclass
 class TravelerCountType:
     """
-    Defines the number of travelers of a specific type (e.g. a driver type can
-    be either one of: Adult, YoungDriver, YoungerDriver, or it may be a code
-    that is acceptable to both Trading Partners).
+    Defines the number of travelers of a specific type (e.g. a driver type can be
+    either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that is
+    acceptable to both Trading Partners).
 
     Attributes
         age:
@@ -255,8 +255,8 @@ class TravelerCountType:
 @dataclass
 class VoluntaryChangesType:
     """
-    Specifies charges and/or penalties associated with making ticket changes
-    after purchase.
+    Specifies charges and/or penalties associated with making ticket changes after
+    purchase.
 
     Attributes
         penalty: Specifies penalty charges as either a currency amount
@@ -364,8 +364,8 @@ class VoluntaryChangesMatch(Enum):
 @dataclass
 class AdvResTicketingType:
     """
-    Container used to hold information regarding advance reservation and/or
-    advance ticketing.
+    Container used to hold information regarding advance reservation and/or advance
+    ticketing.
 
     Attributes
         adv_reservation: Specifies constraints on date of advance
@@ -647,8 +647,8 @@ class PassengerTypeQuantityType(TravelerCountType):
         @dataclass
         class VoluntaryChanges:
             """
-            Specifies charges and/or penalties associated with making ticket
-            changes after purchase.
+            Specifies charges and/or penalties associated with making ticket changes after
+            purchase.
 
             Attributes
                 penalty: Specifies penalty charges as either a currency

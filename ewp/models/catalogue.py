@@ -45,11 +45,12 @@ class OtherHeiIdValue(Enum):
 class ApisImplemented:
     """This section describes all APIs implemented by a particular EWP host.
 
-    Please note, that each API can be implemented a multiple number of times.
-    Usually, you will have only a single entry for each of your APIs, but there are
-    some use cases when serving two or more different versions of the same API is
-    desirable. More background and discussion here:
-    https://github.com/erasmus-without-paper/ewp-specs-architecture/issues/6
+    Please note, that each API can be implemented a multiple number of
+    times. Usually, you will have only a single entry for each of your
+    APIs, but there are some use cases when serving two or more
+    different versions of the same API is desirable. More background and
+    discussion
+    here:architecture/issues/6
 
     :ivar other_element: Manifest entries for each of the APIs are
         defined in separate schemas, within repositories describing
@@ -88,8 +89,7 @@ class Empty:
 @dataclass
 class ManifestApiEntryBase:
     """A common base type for children of the `apis-implemented` element of the
-    manifest file. We declare it here (as opposed to declaring in the
-    Discovery.
+    manifest file. We declare it here (as opposed to declaring in the Discovery.
 
     API's namespace) because it is shared between all the APIs - we want it to
     stay backwards-compatible when new releases of the Discovery API are published.
@@ -218,8 +218,8 @@ class OtherHeiId:
 
 @dataclass
 class HttpwithOptionalLang:
-    """An absolute URL (might be either HTTP or HTTPS) with an optional
-    xml:lang attribute.
+    """An absolute URL (might be either HTTP or HTTPS) with an optional xml:lang
+    attribute.
 
     This type is used in places where a single website can be provided
     in multiple language versions. However, as a general rule, if the
@@ -254,8 +254,8 @@ class HttpwithOptionalLang:
 
 @dataclass
 class MultilineStringWithOptionalLang:
-    """A multiline string (as defined in the MultilineString) with an optional
-    (but RECOMMENDED) xml:lang attribute.
+    """A multiline string (as defined in the MultilineString) with an optional (but
+    RECOMMENDED) xml:lang attribute.
 
     It is used in places where a description of some entity can be
     provided in multiple languages.

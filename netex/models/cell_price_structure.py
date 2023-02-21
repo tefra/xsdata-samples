@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDate
 from .capping_rule_price_ref import CappingRulePriceRef
 from .controllable_element_price_ref import ControllableElementPriceRef
@@ -282,60 +282,48 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref: Optional[LimitingRuleRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "LimitingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    discounting_rule_ref: Optional[DiscountingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "DiscountingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    pricing_rule_ref: Optional[PricingRuleRef] = field(
-        default=None,
-        metadata={
-            "name": "PricingRuleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limiting_rule_in_context: Optional[LimitingRuleInContext] = field(
-        default=None,
-        metadata={
-            "name": "LimitingRuleInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limiting_rule: Optional[LimitingRule] = field(
-        default=None,
-        metadata={
-            "name": "LimitingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    discounting_rule: Optional[DiscountingRule] = field(
-        default=None,
-        metadata={
-            "name": "DiscountingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    pricing_rule: Optional[PricingRule] = field(
-        default=None,
-        metadata={
-            "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LimitingRuleRef",
+                    "type": LimitingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRuleRef",
+                    "type": DiscountingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRuleRef",
+                    "type": PricingRuleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRuleInContext",
+                    "type": LimitingRuleInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRule",
+                    "type": LimitingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRule",
+                    "type": DiscountingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRule",
+                    "type": PricingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 7,
         }
     )
     can_be_cumulative: Optional[bool] = field(

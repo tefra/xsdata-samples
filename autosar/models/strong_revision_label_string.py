@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class StrongRevisionLabelString:
-    """This primitive represents a revision label which identifies an object
-    under version control.
+    """This primitive represents a revision label which identifies an object under
+    version control.
 
     It represents a pattern which requires three integer numbers separated by a dot, representing from left to right MajorVersion, MinorVersion, PatchVersion and additional labels for pre-release version and build metadata.
     Legal patterns are for example:

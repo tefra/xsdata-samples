@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BurstPatternEventTriggering:
-    """A BurstPatternEventTriggering describes the maximum number of
-    occurrences of the same event in a given time interval.
+    """A BurstPatternEventTriggering describes the maximum number of occurrences of
+    the same event in a given time interval.
 
     This is typically used to model a worst case activation scenario.
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .boarding_position_ref_structure import BoardingPositionRefStructure
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .multilingual_string import MultilingualString
@@ -50,20 +50,23 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_component_ref: Optional[TrainComponentRef] = field(
-        default=None,
+    train_component_ref_or_train_component_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TrainComponentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_component_view: Optional[TrainComponentView] = field(
-        default=None,
-        metadata={
-            "name": "TrainComponentView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainComponentRef",
+                    "type": TrainComponentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainComponentView",
+                    "type": TrainComponentView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     position_of_train_element: Optional[int] = field(

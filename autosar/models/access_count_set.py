@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AccessCountSet:
     """
-    This meta-class provides a set of count values evaluated according to the
-    rules of a specific countProfile.
+    This meta-class provides a set of count values evaluated according to the rules
+    of a specific countProfile.
 
     :ivar access_counts: Count value for a AbstractAccessPoint. The
         upper multiplicity of this role has been increased to * due to

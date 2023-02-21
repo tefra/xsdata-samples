@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class PublicHoliday:
-    """Specification of the public holiday type in a specific country or
-    region.
+    """Specification of the public holiday type in a specific country or region.
 
     Use this component only when specialDayType is set to
     'publicHoliday' or 'holidays'.

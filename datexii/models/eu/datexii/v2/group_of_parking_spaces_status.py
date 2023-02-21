@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class GroupOfParkingSpacesStatus(ParkingOccupancy):
     """
-    The status of the assigned parking spaces in the specified parking site,
-    i.e. the status of those spaces assigned for particular types of person or
-    vehicle and/or for specific duration types (e.g. short stay).
+    The status of the assigned parking spaces in the specified parking site, i.e.
+    the status of those spaces assigned for particular types of person or vehicle
+    and/or for specific duration types (e.g. short stay).
 
     :ivar group_declaration_valid_now: Override validity of
         AssignedParkingSpaces: True = Parking space declaration is valid

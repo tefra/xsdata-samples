@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SynchronizationTimingConstraint:
-    """This constraint is used to restrict the timing behavior of different,
-    but correlated events or event chains, with regard to synchronization.
+    """This constraint is used to restrict the timing behavior of different, but
+    correlated events or event chains, with regard to synchronization.
 
     Thereby, in case of imposing a synchronization timing constraint on events or event chains the following two scenarios are supported:
     1) [synchronizationConstraintType=responseSynchronization] Events: An arbitrary number of correlated events which play the role of responses shall occur synchronously with respect to a predefined tolerance. Event Chains: An arbitrary number of correlated event chains with a common stimulus, but different responses, where the responses shall occur synchronously with respect to a predefined tolerance.

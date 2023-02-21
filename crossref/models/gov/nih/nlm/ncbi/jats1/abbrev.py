@@ -6328,7 +6328,7 @@ class DefList:
         metadata={
             "name": "def-item",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5803,
         }
     )
     def_list: List["DefList"] = field(
@@ -6336,7 +6336,7 @@ class DefList:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5803,
         }
     )
     continued_from: Optional[str] = field(
@@ -7242,7 +7242,7 @@ class SubjGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6927,
         }
     )
     compound_subject: List[CompoundSubject] = field(
@@ -7250,7 +7250,7 @@ class SubjGroup:
         metadata={
             "name": "compound-subject",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6927,
         }
     )
     subj_group: List["SubjGroup"] = field(
@@ -7336,7 +7336,7 @@ class TableWrapFoot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7025,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -7344,28 +7344,28 @@ class TableWrapFoot:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7025,
         }
     )
     fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7025,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7025,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7025,
         }
     )
     id: Optional[str] = field(
@@ -7416,7 +7416,7 @@ class VerseGroup:
         metadata={
             "name": "verse-line",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7166,
         }
     )
     verse_group: List["VerseGroup"] = field(
@@ -7424,21 +7424,21 @@ class VerseGroup:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7166,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7166,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7166,
         }
     )
     content_type: Optional[str] = field(
@@ -7554,7 +7554,7 @@ class ListItem:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6401,
         }
     )
     def_list: List[DefList] = field(
@@ -7562,7 +7562,7 @@ class ListItem:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6401,
         }
     )
     list_value: List["ListType"] = field(
@@ -7570,7 +7570,7 @@ class ListItem:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6401,
         }
     )
     id: Optional[str] = field(
@@ -7616,7 +7616,7 @@ class NestedKwd:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6450,
         }
     )
     compound_kwd: List[CompoundKwd] = field(
@@ -7624,7 +7624,7 @@ class NestedKwd:
         metadata={
             "name": "compound-kwd",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6450,
         }
     )
     nested_kwd: List["NestedKwd"] = field(
@@ -7868,7 +7868,7 @@ class KwdGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6330,
         }
     )
     compound_kwd: List[CompoundKwd] = field(
@@ -7876,7 +7876,7 @@ class KwdGroup:
         metadata={
             "name": "compound-kwd",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6330,
         }
     )
     nested_kwd: List[NestedKwd] = field(
@@ -7884,7 +7884,7 @@ class KwdGroup:
         metadata={
             "name": "nested-kwd",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6330,
         }
     )
     assigning_authority: Optional[str] = field(
@@ -8172,7 +8172,7 @@ class DispFormulaGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -8180,7 +8180,7 @@ class DispFormulaGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -8188,7 +8188,7 @@ class DispFormulaGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     alt_text: List[AltText] = field(
@@ -8196,7 +8196,7 @@ class DispFormulaGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -8204,14 +8204,14 @@ class DispFormulaGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -8219,14 +8219,14 @@ class DispFormulaGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -8234,7 +8234,7 @@ class DispFormulaGroup:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     disp_formula_group: List["DispFormulaGroup"] = field(
@@ -8242,7 +8242,7 @@ class DispFormulaGroup:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5842,
         }
     )
     content_type: Optional[str] = field(
@@ -8983,14 +8983,14 @@ class NlmCitation:
         metadata={
             "name": "person-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     collab: List["Collab"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     article_title: List["ArticleTitle"] = field(
@@ -8998,7 +8998,7 @@ class NlmCitation:
         metadata={
             "name": "article-title",
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     trans_title: List[TransTitle] = field(
@@ -9006,7 +9006,7 @@ class NlmCitation:
         metadata={
             "name": "trans-title",
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     source: Optional[Source] = field(
@@ -9103,14 +9103,14 @@ class NlmCitation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     supplement: List[Supplement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 2628,
         }
     )
     publisher_loc: Optional[PublisherLoc] = field(
@@ -9131,14 +9131,14 @@ class NlmCitation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 2656,
         }
     )
     lpage: List[Lpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 2656,
         }
     )
     page_count: Optional[PageCount] = field(
@@ -9770,7 +9770,7 @@ class SecMeta:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6758,
         }
     )
     contrib_group: List["ContribGroup"] = field(
@@ -9778,14 +9778,14 @@ class SecMeta:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6758,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6758,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -9793,7 +9793,7 @@ class SecMeta:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6758,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -9801,7 +9801,7 @@ class SecMeta:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6758,
         }
     )
     permissions: Optional["Permissions"] = field(
@@ -9851,7 +9851,7 @@ class Statement:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -9859,7 +9859,7 @@ class Statement:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -9867,35 +9867,35 @@ class Statement:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     statement: List["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6843,
         }
     )
     content_type: Optional[str] = field(
@@ -9949,28 +9949,28 @@ class TableWrapGroup:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     caption: List["Caption"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -9978,7 +9978,7 @@ class TableWrapGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -9986,7 +9986,7 @@ class TableWrapGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     alt_text: List[AltText] = field(
@@ -9994,7 +9994,7 @@ class TableWrapGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -10002,14 +10002,14 @@ class TableWrapGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -10017,14 +10017,14 @@ class TableWrapGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -10032,14 +10032,14 @@ class TableWrapGroup:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 7036,
         }
     )
     content_type: Optional[str] = field(
@@ -10123,7 +10123,7 @@ class ChemStructWrap:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -10131,7 +10131,7 @@ class ChemStructWrap:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -10139,7 +10139,7 @@ class ChemStructWrap:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     alt_text: List[AltText] = field(
@@ -10147,7 +10147,7 @@ class ChemStructWrap:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -10155,14 +10155,14 @@ class ChemStructWrap:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -10170,21 +10170,21 @@ class ChemStructWrap:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     chem_struct: List["ChemStruct"] = field(
@@ -10192,35 +10192,35 @@ class ChemStructWrap:
         metadata={
             "name": "chem-struct",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     textual_form: List[TextualForm] = field(
@@ -10228,21 +10228,21 @@ class ChemStructWrap:
         metadata={
             "name": "textual-form",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5545,
         }
     )
     content_type: Optional[str] = field(
@@ -10308,28 +10308,28 @@ class FigGroup:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     caption: List["Caption"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -10337,7 +10337,7 @@ class FigGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -10345,7 +10345,7 @@ class FigGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     alt_text: List[AltText] = field(
@@ -10353,7 +10353,7 @@ class FigGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -10361,14 +10361,14 @@ class FigGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -10376,21 +10376,21 @@ class FigGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -10398,35 +10398,35 @@ class FigGroup:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6064,
         }
     )
     content_type: Optional[str] = field(
@@ -10497,14 +10497,14 @@ class Note:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6459,
         }
     )
     product: List[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6459,
         }
     )
     content_type: Optional[str] = field(
@@ -10564,7 +10564,7 @@ class Ref:
         metadata={
             "name": "citation-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6687,
         }
     )
     element_citation: List["ElementCitation"] = field(
@@ -10572,7 +10572,7 @@ class Ref:
         metadata={
             "name": "element-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6687,
         }
     )
     mixed_citation: List[MixedCitation] = field(
@@ -10580,7 +10580,7 @@ class Ref:
         metadata={
             "name": "mixed-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6687,
         }
     )
     nlm_citation: List[NlmCitation] = field(
@@ -10588,14 +10588,14 @@ class Ref:
         metadata={
             "name": "nlm-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6687,
         }
     )
     note: List[Note] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6687,
         }
     )
     content_type: Optional[str] = field(
@@ -10649,28 +10649,28 @@ class SupplementaryMaterial:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     caption: List["Caption"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -10678,7 +10678,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -10686,7 +10686,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     alt_text: List[AltText] = field(
@@ -10694,7 +10694,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -10702,14 +10702,14 @@ class SupplementaryMaterial:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -10717,14 +10717,14 @@ class SupplementaryMaterial:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -10732,7 +10732,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -10740,7 +10740,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -10748,7 +10748,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -10756,21 +10756,21 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -10778,7 +10778,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -10786,14 +10786,14 @@ class SupplementaryMaterial:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     def_list: List[DefList] = field(
@@ -10801,7 +10801,7 @@ class SupplementaryMaterial:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     list_value: List[ListType] = field(
@@ -10809,70 +10809,70 @@ class SupplementaryMaterial:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     content_type: Optional[str] = field(
@@ -11032,21 +11032,21 @@ class QuestionPreamble:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -11054,14 +11054,14 @@ class QuestionPreamble:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -11069,7 +11069,7 @@ class QuestionPreamble:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -11077,7 +11077,7 @@ class QuestionPreamble:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -11085,28 +11085,28 @@ class QuestionPreamble:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -11114,35 +11114,35 @@ class QuestionPreamble:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -11150,7 +11150,7 @@ class QuestionPreamble:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     question_wrap_group: List["QuestionWrapGroup"] = field(
@@ -11158,7 +11158,7 @@ class QuestionPreamble:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -11166,7 +11166,7 @@ class QuestionPreamble:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -11174,7 +11174,7 @@ class QuestionPreamble:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -11182,7 +11182,7 @@ class QuestionPreamble:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -11190,7 +11190,7 @@ class QuestionPreamble:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -11198,7 +11198,7 @@ class QuestionPreamble:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     def_list: List[DefList] = field(
@@ -11206,7 +11206,7 @@ class QuestionPreamble:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     list_value: List[ListType] = field(
@@ -11214,7 +11214,7 @@ class QuestionPreamble:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     tex_math: List[TexMath] = field(
@@ -11222,7 +11222,7 @@ class QuestionPreamble:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     math: List[Math] = field(
@@ -11230,14 +11230,14 @@ class QuestionPreamble:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -11245,7 +11245,7 @@ class QuestionPreamble:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -11253,7 +11253,7 @@ class QuestionPreamble:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -11261,21 +11261,21 @@ class QuestionPreamble:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -11283,14 +11283,14 @@ class QuestionPreamble:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6637,
         }
     )
     content_type: Optional[str] = field(
@@ -11460,21 +11460,21 @@ class RefList:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -11482,14 +11482,14 @@ class RefList:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -11497,7 +11497,7 @@ class RefList:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -11505,7 +11505,7 @@ class RefList:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -11513,28 +11513,28 @@ class RefList:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -11542,35 +11542,35 @@ class RefList:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -11578,7 +11578,7 @@ class RefList:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -11586,7 +11586,7 @@ class RefList:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -11594,7 +11594,7 @@ class RefList:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -11602,7 +11602,7 @@ class RefList:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -11610,7 +11610,7 @@ class RefList:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -11618,7 +11618,7 @@ class RefList:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -11626,7 +11626,7 @@ class RefList:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     def_list: List[DefList] = field(
@@ -11634,7 +11634,7 @@ class RefList:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     list_value: List[ListType] = field(
@@ -11642,7 +11642,7 @@ class RefList:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     tex_math: List[TexMath] = field(
@@ -11650,7 +11650,7 @@ class RefList:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     math: List[Math] = field(
@@ -11658,14 +11658,14 @@ class RefList:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -11673,7 +11673,7 @@ class RefList:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -11681,7 +11681,7 @@ class RefList:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -11689,21 +11689,21 @@ class RefList:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -11711,7 +11711,7 @@ class RefList:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6696,
         }
     )
     ref: List[Ref] = field(
@@ -11809,28 +11809,28 @@ class Option:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -11838,14 +11838,14 @@ class Option:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -11853,7 +11853,7 @@ class Option:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -11861,7 +11861,7 @@ class Option:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -11869,21 +11869,21 @@ class Option:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -11891,35 +11891,35 @@ class Option:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -11927,7 +11927,7 @@ class Option:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -11935,7 +11935,7 @@ class Option:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -11943,7 +11943,7 @@ class Option:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -11951,7 +11951,7 @@ class Option:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -11959,7 +11959,7 @@ class Option:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -11967,7 +11967,7 @@ class Option:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -11975,7 +11975,7 @@ class Option:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     def_list: List[DefList] = field(
@@ -11983,7 +11983,7 @@ class Option:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     list_value: List[ListType] = field(
@@ -11991,7 +11991,7 @@ class Option:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     tex_math: List[TexMath] = field(
@@ -11999,7 +11999,7 @@ class Option:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     math: List[Math] = field(
@@ -12007,14 +12007,14 @@ class Option:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -12022,7 +12022,7 @@ class Option:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -12030,7 +12030,7 @@ class Option:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -12038,21 +12038,21 @@ class Option:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -12060,7 +12060,7 @@ class Option:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6490,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -12068,14 +12068,14 @@ class Option:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6480,
         }
     )
     glossary: List["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6480,
         }
     )
     ref_list: List[RefList] = field(
@@ -12083,7 +12083,7 @@ class Option:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6480,
         }
     )
     explanation: List["Explanation"] = field(
@@ -12187,28 +12187,28 @@ class Question:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -12216,14 +12216,14 @@ class Question:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -12231,7 +12231,7 @@ class Question:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -12239,7 +12239,7 @@ class Question:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -12247,28 +12247,28 @@ class Question:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -12276,35 +12276,35 @@ class Question:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -12312,7 +12312,7 @@ class Question:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -12320,7 +12320,7 @@ class Question:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -12328,7 +12328,7 @@ class Question:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     table_wrap: List["TableWrap"] = field(
@@ -12336,7 +12336,7 @@ class Question:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -12344,7 +12344,7 @@ class Question:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -12352,7 +12352,7 @@ class Question:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -12360,7 +12360,7 @@ class Question:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     def_list: List[DefList] = field(
@@ -12368,7 +12368,7 @@ class Question:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     list_value: List[ListType] = field(
@@ -12376,7 +12376,7 @@ class Question:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     tex_math: List[TexMath] = field(
@@ -12384,7 +12384,7 @@ class Question:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     math: List[Math] = field(
@@ -12392,14 +12392,14 @@ class Question:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -12407,7 +12407,7 @@ class Question:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -12415,7 +12415,7 @@ class Question:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -12423,21 +12423,21 @@ class Question:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -12445,14 +12445,14 @@ class Question:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6624,
         }
     )
     option: List[Option] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6613,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -12460,14 +12460,14 @@ class Question:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6613,
         }
     )
     glossary: List["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6613,
         }
     )
     ref_list: List[RefList] = field(
@@ -12475,7 +12475,7 @@ class Question:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6613,
         }
     )
     content_type: Optional[str] = field(
@@ -13638,28 +13638,28 @@ class TableWrap:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     caption: List["Caption"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -13667,7 +13667,7 @@ class TableWrap:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -13675,7 +13675,7 @@ class TableWrap:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     alt_text: List[AltText] = field(
@@ -13683,7 +13683,7 @@ class TableWrap:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -13691,14 +13691,14 @@ class TableWrap:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -13706,14 +13706,14 @@ class TableWrap:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -13721,21 +13721,21 @@ class TableWrap:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -13743,7 +13743,7 @@ class TableWrap:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     def_list: List[DefList] = field(
@@ -13751,7 +13751,7 @@ class TableWrap:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     list_value: List[ListType] = field(
@@ -13759,14 +13759,14 @@ class TableWrap:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -13774,14 +13774,14 @@ class TableWrap:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -13789,42 +13789,42 @@ class TableWrap:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     table: List[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     table_wrap_foot: List[TableWrapFoot] = field(
@@ -13832,21 +13832,21 @@ class TableWrap:
         metadata={
             "name": "table-wrap-foot",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6981,
         }
     )
     content_type: Optional[str] = field(
@@ -13912,28 +13912,28 @@ class Fig:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     caption: List["Caption"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -13941,7 +13941,7 @@ class Fig:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -13949,7 +13949,7 @@ class Fig:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     alt_text: List[AltText] = field(
@@ -13957,7 +13957,7 @@ class Fig:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -13965,14 +13965,14 @@ class Fig:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -13980,14 +13980,14 @@ class Fig:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -13995,7 +13995,7 @@ class Fig:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14003,7 +14003,7 @@ class Fig:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -14011,7 +14011,7 @@ class Fig:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14019,21 +14019,21 @@ class Fig:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14041,7 +14041,7 @@ class Fig:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14049,14 +14049,14 @@ class Fig:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     def_list: List[DefList] = field(
@@ -14064,7 +14064,7 @@ class Fig:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     list_value: List[ListType] = field(
@@ -14072,70 +14072,70 @@ class Fig:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6021,
         }
     )
     fig_type: Optional[str] = field(
@@ -14226,21 +14226,21 @@ class BoxedText:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -14248,14 +14248,14 @@ class BoxedText:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -14263,7 +14263,7 @@ class BoxedText:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -14271,7 +14271,7 @@ class BoxedText:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -14279,28 +14279,28 @@ class BoxedText:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -14308,35 +14308,35 @@ class BoxedText:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -14344,7 +14344,7 @@ class BoxedText:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -14352,7 +14352,7 @@ class BoxedText:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -14360,7 +14360,7 @@ class BoxedText:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14368,7 +14368,7 @@ class BoxedText:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14376,7 +14376,7 @@ class BoxedText:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -14384,7 +14384,7 @@ class BoxedText:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14392,7 +14392,7 @@ class BoxedText:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     def_list: List[DefList] = field(
@@ -14400,7 +14400,7 @@ class BoxedText:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     list_value: List[ListType] = field(
@@ -14408,7 +14408,7 @@ class BoxedText:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     tex_math: List[TexMath] = field(
@@ -14416,7 +14416,7 @@ class BoxedText:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     math: List[Math] = field(
@@ -14424,14 +14424,14 @@ class BoxedText:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -14439,7 +14439,7 @@ class BoxedText:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -14447,7 +14447,7 @@ class BoxedText:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14455,21 +14455,21 @@ class BoxedText:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14477,14 +14477,14 @@ class BoxedText:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -14492,14 +14492,14 @@ class BoxedText:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     glossary: List["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     ref_list: List[RefList] = field(
@@ -14507,21 +14507,21 @@ class BoxedText:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5478,
         }
     )
     content_type: Optional[str] = field(
@@ -14587,7 +14587,7 @@ class BlockAlternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -14595,14 +14595,14 @@ class BlockAlternatives:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -14610,7 +14610,7 @@ class BlockAlternatives:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14618,7 +14618,7 @@ class BlockAlternatives:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14626,7 +14626,7 @@ class BlockAlternatives:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5458,
         }
     )
     id: Optional[str] = field(
@@ -14690,28 +14690,28 @@ class Explanation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -14719,14 +14719,14 @@ class Explanation:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -14734,7 +14734,7 @@ class Explanation:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -14742,7 +14742,7 @@ class Explanation:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -14750,21 +14750,21 @@ class Explanation:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -14772,35 +14772,35 @@ class Explanation:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -14808,7 +14808,7 @@ class Explanation:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -14816,7 +14816,7 @@ class Explanation:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -14824,7 +14824,7 @@ class Explanation:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14832,7 +14832,7 @@ class Explanation:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14840,7 +14840,7 @@ class Explanation:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -14848,7 +14848,7 @@ class Explanation:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14856,7 +14856,7 @@ class Explanation:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     def_list: List[DefList] = field(
@@ -14864,7 +14864,7 @@ class Explanation:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     list_value: List[ListType] = field(
@@ -14872,7 +14872,7 @@ class Explanation:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     tex_math: List[TexMath] = field(
@@ -14880,7 +14880,7 @@ class Explanation:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     math: List[Math] = field(
@@ -14888,14 +14888,14 @@ class Explanation:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -14903,7 +14903,7 @@ class Explanation:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -14911,7 +14911,7 @@ class Explanation:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14919,21 +14919,21 @@ class Explanation:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14941,7 +14941,7 @@ class Explanation:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6001,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -14949,14 +14949,14 @@ class Explanation:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5991,
         }
     )
     glossary: List["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5991,
         }
     )
     ref_list: List[RefList] = field(
@@ -14964,7 +14964,7 @@ class Explanation:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5991,
         }
     )
     content_type: Optional[str] = field(
@@ -15058,21 +15058,21 @@ class AnswerSet:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5177,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5177,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5177,
         }
     )
     content_type: Optional[str] = field(
@@ -15157,28 +15157,28 @@ class Answer:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -15186,14 +15186,14 @@ class Answer:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -15201,7 +15201,7 @@ class Answer:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -15209,7 +15209,7 @@ class Answer:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15217,21 +15217,21 @@ class Answer:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15239,35 +15239,35 @@ class Answer:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -15275,7 +15275,7 @@ class Answer:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -15283,7 +15283,7 @@ class Answer:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -15291,7 +15291,7 @@ class Answer:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15299,7 +15299,7 @@ class Answer:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15307,7 +15307,7 @@ class Answer:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -15315,7 +15315,7 @@ class Answer:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -15323,7 +15323,7 @@ class Answer:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     def_list: List[DefList] = field(
@@ -15331,7 +15331,7 @@ class Answer:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     list_value: List[ListType] = field(
@@ -15339,7 +15339,7 @@ class Answer:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     tex_math: List[TexMath] = field(
@@ -15347,7 +15347,7 @@ class Answer:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     math: List[Math] = field(
@@ -15355,14 +15355,14 @@ class Answer:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -15370,7 +15370,7 @@ class Answer:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -15378,7 +15378,7 @@ class Answer:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -15386,21 +15386,21 @@ class Answer:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -15408,7 +15408,7 @@ class Answer:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5105,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -15416,14 +15416,14 @@ class Answer:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5095,
         }
     )
     glossary: List["Glossary"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5095,
         }
     )
     ref_list: List[RefList] = field(
@@ -15431,7 +15431,7 @@ class Answer:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5095,
         }
     )
     explanation: List[Explanation] = field(
@@ -15518,21 +15518,21 @@ class Glossary:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     answer: List[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -15540,14 +15540,14 @@ class Glossary:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -15555,7 +15555,7 @@ class Glossary:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -15563,7 +15563,7 @@ class Glossary:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15571,28 +15571,28 @@ class Glossary:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15600,35 +15600,35 @@ class Glossary:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -15636,7 +15636,7 @@ class Glossary:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -15644,7 +15644,7 @@ class Glossary:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -15652,7 +15652,7 @@ class Glossary:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15660,7 +15660,7 @@ class Glossary:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15668,7 +15668,7 @@ class Glossary:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -15676,7 +15676,7 @@ class Glossary:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -15684,7 +15684,7 @@ class Glossary:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     def_list: List[DefList] = field(
@@ -15692,7 +15692,7 @@ class Glossary:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     list_value: List[ListType] = field(
@@ -15700,7 +15700,7 @@ class Glossary:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     tex_math: List[TexMath] = field(
@@ -15708,7 +15708,7 @@ class Glossary:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     math: List[Math] = field(
@@ -15716,14 +15716,14 @@ class Glossary:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -15731,7 +15731,7 @@ class Glossary:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -15739,7 +15739,7 @@ class Glossary:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -15747,21 +15747,21 @@ class Glossary:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -15769,7 +15769,7 @@ class Glossary:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6194,
         }
     )
     glossary: List["Glossary"] = field(
@@ -15847,21 +15847,21 @@ class Bio:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     answer: List[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -15869,14 +15869,14 @@ class Bio:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -15884,7 +15884,7 @@ class Bio:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -15892,7 +15892,7 @@ class Bio:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15900,28 +15900,28 @@ class Bio:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15929,35 +15929,35 @@ class Bio:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -15965,7 +15965,7 @@ class Bio:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -15973,7 +15973,7 @@ class Bio:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -15981,7 +15981,7 @@ class Bio:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15989,7 +15989,7 @@ class Bio:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15997,7 +15997,7 @@ class Bio:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -16005,7 +16005,7 @@ class Bio:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -16013,7 +16013,7 @@ class Bio:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     def_list: List[DefList] = field(
@@ -16021,7 +16021,7 @@ class Bio:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     list_value: List[ListType] = field(
@@ -16029,7 +16029,7 @@ class Bio:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     tex_math: List[TexMath] = field(
@@ -16037,7 +16037,7 @@ class Bio:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     math: List[Math] = field(
@@ -16045,14 +16045,14 @@ class Bio:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -16060,7 +16060,7 @@ class Bio:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -16068,7 +16068,7 @@ class Bio:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -16076,21 +16076,21 @@ class Bio:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -16098,14 +16098,14 @@ class Bio:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -16113,14 +16113,14 @@ class Bio:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     ref_list: List[RefList] = field(
@@ -16128,7 +16128,7 @@ class Bio:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5447,
         }
     )
     content_type: Optional[str] = field(
@@ -16240,21 +16240,21 @@ class Contrib:
         metadata={
             "name": "contrib-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     anonymous: List[Anonymous] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     collab: List["Collab"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     collab_alternatives: List[CollabAlternatives] = field(
@@ -16262,14 +16262,14 @@ class Contrib:
         metadata={
             "name": "collab-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     name: List[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     name_alternatives: List[NameAlternatives] = field(
@@ -16277,7 +16277,7 @@ class Contrib:
         metadata={
             "name": "name-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     string_name: List[StringName] = field(
@@ -16285,28 +16285,28 @@ class Contrib:
         metadata={
             "name": "string-name",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     degrees: List[Degrees] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -16314,7 +16314,7 @@ class Contrib:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     author_comment: List[AuthorComment] = field(
@@ -16322,21 +16322,21 @@ class Contrib:
         metadata={
             "name": "author-comment",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     bio: List[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -16344,7 +16344,7 @@ class Contrib:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     on_behalf_of: List[OnBehalfOf] = field(
@@ -16352,28 +16352,28 @@ class Contrib:
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     role: List[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5687,
         }
     )
     contrib_type: Optional[str] = field(
@@ -16496,21 +16496,21 @@ class ContribGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -16518,7 +16518,7 @@ class ContribGroup:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     author_comment: List[AuthorComment] = field(
@@ -16526,21 +16526,21 @@ class ContribGroup:
         metadata={
             "name": "author-comment",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     bio: List[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -16548,7 +16548,7 @@ class ContribGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     on_behalf_of: List[OnBehalfOf] = field(
@@ -16556,28 +16556,28 @@ class ContribGroup:
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     role: List[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5711,
         }
     )
     content_type: Optional[str] = field(
@@ -17612,7 +17612,7 @@ class CitationAlternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5577,
         }
     )
     element_citation: List[ElementCitation] = field(
@@ -17620,7 +17620,7 @@ class CitationAlternatives:
         metadata={
             "name": "element-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5577,
         }
     )
     mixed_citation: List[MixedCitation] = field(
@@ -17628,7 +17628,7 @@ class CitationAlternatives:
         metadata={
             "name": "mixed-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5577,
         }
     )
     nlm_citation: List[NlmCitation] = field(
@@ -17636,7 +17636,7 @@ class CitationAlternatives:
         metadata={
             "name": "nlm-citation",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5577,
         }
     )
     id: Optional[str] = field(
@@ -18142,14 +18142,14 @@ class Permissions:
         metadata={
             "type": "Element",
             "namespace": "http://www.niso.org/schemas/ali/1.0/",
-            "sequential": True,
+            "sequence": 6504,
         }
     )
     license: List[License] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6504,
         }
     )
     id: Optional[str] = field(
@@ -18193,21 +18193,21 @@ class DispQuote:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     answer: List[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -18215,14 +18215,14 @@ class DispQuote:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -18230,7 +18230,7 @@ class DispQuote:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -18238,7 +18238,7 @@ class DispQuote:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -18246,28 +18246,28 @@ class DispQuote:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     code: List["Code"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -18275,35 +18275,35 @@ class DispQuote:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -18311,7 +18311,7 @@ class DispQuote:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -18319,7 +18319,7 @@ class DispQuote:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -18327,7 +18327,7 @@ class DispQuote:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -18335,7 +18335,7 @@ class DispQuote:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -18343,7 +18343,7 @@ class DispQuote:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -18351,7 +18351,7 @@ class DispQuote:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -18359,7 +18359,7 @@ class DispQuote:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     def_list: List[DefList] = field(
@@ -18367,7 +18367,7 @@ class DispQuote:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     list_value: List[ListType] = field(
@@ -18375,7 +18375,7 @@ class DispQuote:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     tex_math: List[TexMath] = field(
@@ -18383,7 +18383,7 @@ class DispQuote:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     math: List[Math] = field(
@@ -18391,14 +18391,14 @@ class DispQuote:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -18406,7 +18406,7 @@ class DispQuote:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -18414,7 +18414,7 @@ class DispQuote:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -18422,21 +18422,21 @@ class DispQuote:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -18444,21 +18444,21 @@ class DispQuote:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     permissions: List[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5860,
         }
     )
     content_type: Optional[str] = field(
@@ -23289,7 +23289,7 @@ class IndexTerm:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6226,
         }
     )
     see_also: List[SeeAlso] = field(
@@ -23297,7 +23297,7 @@ class IndexTerm:
         metadata={
             "name": "see-also",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6226,
         }
     )
     content_type: Optional[str] = field(
@@ -24466,28 +24466,28 @@ class Sec:
         metadata={
             "type": "Element",
             "max_occurs": 2,
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     answer: List[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -24495,14 +24495,14 @@ class Sec:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -24510,7 +24510,7 @@ class Sec:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -24518,7 +24518,7 @@ class Sec:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -24526,28 +24526,28 @@ class Sec:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -24555,35 +24555,35 @@ class Sec:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -24591,7 +24591,7 @@ class Sec:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -24599,7 +24599,7 @@ class Sec:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -24607,7 +24607,7 @@ class Sec:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -24615,7 +24615,7 @@ class Sec:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -24623,7 +24623,7 @@ class Sec:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     disp_formula: List[DispFormula] = field(
@@ -24631,7 +24631,7 @@ class Sec:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -24639,7 +24639,7 @@ class Sec:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     def_list: List[DefList] = field(
@@ -24647,7 +24647,7 @@ class Sec:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     list_value: List[ListType] = field(
@@ -24655,7 +24655,7 @@ class Sec:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     tex_math: List[TexMath] = field(
@@ -24663,7 +24663,7 @@ class Sec:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     math: List[Math] = field(
@@ -24671,14 +24671,14 @@ class Sec:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     related_article: List[RelatedArticle] = field(
@@ -24686,7 +24686,7 @@ class Sec:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     related_object: List[RelatedObject] = field(
@@ -24694,7 +24694,7 @@ class Sec:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -24702,21 +24702,21 @@ class Sec:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -24724,14 +24724,14 @@ class Sec:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -24739,14 +24739,14 @@ class Sec:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     ref_list: List[RefList] = field(
@@ -24754,7 +24754,7 @@ class Sec:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5193,
         }
     )
     id: Optional[str] = field(
@@ -24826,14 +24826,14 @@ class Abstract:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 4885,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 4885,
         }
     )
     abstract_type: Optional[str] = field(
@@ -25099,7 +25099,7 @@ class Array:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -25107,14 +25107,14 @@ class Array:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -25122,35 +25122,35 @@ class Array:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     graphic: List[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     tbody: Optional[Tbody] = field(
@@ -25163,14 +25163,14 @@ class Array:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     permissions: List[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5259,
         }
     )
     content_type: Optional[str] = field(
@@ -25230,14 +25230,14 @@ class Alternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     array: List[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     chem_struct: List[ChemStruct] = field(
@@ -25245,21 +25245,21 @@ class Alternatives:
         metadata={
             "name": "chem-struct",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     graphic: List[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     inline_graphic: List[InlineGraphic] = field(
@@ -25267,7 +25267,7 @@ class Alternatives:
         metadata={
             "name": "inline-graphic",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     inline_media: List[InlineMedia] = field(
@@ -25275,7 +25275,7 @@ class Alternatives:
         metadata={
             "name": "inline-media",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     inline_supplementary_material: List["InlineSupplementaryMaterial"] = field(
@@ -25283,21 +25283,21 @@ class Alternatives:
         metadata={
             "name": "inline-supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     private_char: List[PrivateChar] = field(
@@ -25305,7 +25305,7 @@ class Alternatives:
         metadata={
             "name": "private-char",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -25313,14 +25313,14 @@ class Alternatives:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     table: List[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     textual_form: List[TextualForm] = field(
@@ -25328,7 +25328,7 @@ class Alternatives:
         metadata={
             "name": "textual-form",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     tex_math: List[TexMath] = field(
@@ -25336,7 +25336,7 @@ class Alternatives:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     math: List[Math] = field(
@@ -25344,7 +25344,7 @@ class Alternatives:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequential": True,
+            "sequence": 5069,
         }
     )
     id: Optional[str] = field(

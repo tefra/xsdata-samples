@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TpegPoint:
     """
-    A point on the road network which is either a junction point or a non
-    junction point.
+    A point on the road network which is either a junction point or a non junction
+    point.
     """
     tpeg_point_extension: Optional[ExtensionType] = field(
         default=None,

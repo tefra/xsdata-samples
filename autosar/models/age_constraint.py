@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AgeConstraint:
-    """The AgeConstraint is used to impose a constraint on an Timing
-    Description Event referenced by the scope.
+    """The AgeConstraint is used to impose a constraint on an Timing Description
+    Event referenced by the scope.
 
     A minimum and a maximum age can be specified.
 

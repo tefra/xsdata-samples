@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoKeySlotAllowedModification:
     """
-    This meta-class restricts the allowed modification of a key stored in the
-    key slot.
+    This meta-class restricts the allowed modification of a key stored in the key
+    slot.
 
     :ivar allow_content_type_change: This attribute describes whether
         the key content type can be changed (true) or not (false), e.g.

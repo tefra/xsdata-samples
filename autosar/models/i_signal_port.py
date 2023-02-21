@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ISignalPort:
-    """Connectors reception or send port on the referenced channel referenced
-    by an ISignalTriggering.
+    """Connectors reception or send port on the referenced channel referenced by an
+    ISignalTriggering.
 
     If different timeouts or DataFilters for ISignals need to be
     specified several ISignalPorts may be created.

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class SecurityEventContextProps:
     """
     This meta-class specifies the SecurityEventDefinition to be mapped to an
-    IdsmInstance and adds mapping-dependent properties of this security event
-    valid only for this specific mapping.
+    IdsmInstance and adds mapping-dependent properties of this security event valid
+    only for this specific mapping.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

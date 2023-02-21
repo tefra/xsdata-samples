@@ -351,9 +351,7 @@
                     </OperatingDay>
                   </operatingDays>
                 </AvailabilityCondition>
-                <ValidDuring id="bar:foo" version="001">
-                  <DaysOfWeek/>
-                </ValidDuring>
+                <ValidDuring id="bar:foo" version="001"/>
                 <ValidBetween id="bar:foo" version="001"/>
               </validityConditions>
               <alternativeTexts>

@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class SignSetting(OperatorAction):
     """
-    Provides information on message signs and the information currently
-    displayed.
+    Provides information on message signs and the information currently displayed.
     """
     vms_setting: Optional[VmsSetting] = field(
         default=None,

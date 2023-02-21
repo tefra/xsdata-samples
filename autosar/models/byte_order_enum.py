@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ByteOrderEnum:
-    """When more than one byte is stored in the memory the order of those bytes
-    may differ depending on the architecture of the processing unit.
+    """When more than one byte is stored in the memory the order of those bytes may
+    differ depending on the architecture of the processing unit.
 
     If the least significant byte is stored at the lowest address, this
     architecture is called little endian and otherwise it is called big

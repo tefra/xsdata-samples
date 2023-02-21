@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ProcessArgument:
     """
-    This meta-class has the ability to define command line arguments for
-    processing by the Main function.
+    This meta-class has the ability to define command line arguments for processing
+    by the Main function.
 
     :ivar argument: This represents one command-line argument to be
         processed by the executable software.

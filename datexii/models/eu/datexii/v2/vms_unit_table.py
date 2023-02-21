@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class VmsUnitTable:
     """
     A versioned VMS Unit Table comprising a number of data records, each record
-    defining the characteristics of a specific deployed variable message sign
-    unit.
+    defining the characteristics of a specific deployed variable message sign unit.
 
     :ivar vms_unit_table_identification: An alphanumeric identification
         for the VMS Unit table, possibly human readable.

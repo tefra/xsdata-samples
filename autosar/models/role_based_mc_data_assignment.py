@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RoleBasedMcDataAssignment:
-    """This meta-class allows to define links that specify logical
-    relationships between single McDataInstances.
+    """This meta-class allows to define links that specify logical relationships
+    between single McDataInstances.
 
     The details on the existence and semantics of such links are not
     standardized. Possible Use Case: Rapid Prototyping solutions in

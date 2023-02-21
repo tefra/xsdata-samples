@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McGroup:
-    """Represents a group element to be used as input to support measurement
-    and calibration.
+    """Represents a group element to be used as input to support measurement and
+    calibration.
 
     It is used to provide selection lists (groups) of calibration
     parameters, measurement variables, and functions in a hierarchical

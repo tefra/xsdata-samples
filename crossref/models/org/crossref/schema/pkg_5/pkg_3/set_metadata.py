@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 class SetMetadata:
     """
     When a book consists of multiple volumes that are not part of a serial
-    publication (series), set_metadata is used to describe information about
-    the entire set.
+    publication (series), set_metadata is used to describe information about the
+    entire set.
     """
     class Meta:
         name = "set_metadata"

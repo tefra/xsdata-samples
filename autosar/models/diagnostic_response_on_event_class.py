@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticResponseOnEventClass:
     """
-    This represents the ability to define common properties for alle instances
-    of the "Response on Event" diagnostic service.
+    This represents the ability to define common properties for alle instances of
+    the "Response on Event" diagnostic service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

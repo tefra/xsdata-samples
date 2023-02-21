@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class NamedArea:
     """An area defined by a name and/or in terms of known boundaries, such as
-    country or county boundaries or allocated control area of particular
-    authority.
+    country or county boundaries or allocated control area of particular authority.
 
     The attributes do not form a union; instead, the smallest
     intersection forms the resulting area.

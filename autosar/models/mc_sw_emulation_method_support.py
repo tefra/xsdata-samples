@@ -11,11 +11,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McSwEmulationMethodSupport:
-    """This denotes the method used by the RTE to handle the calibration data.
-    It is published by the RTE generator and can be used e.g. to generate the
+    """This denotes the method used by the RTE to handle the calibration data. It
+    is published by the RTE generator and can be used e.g. to generate the
     corresponding emulation method in a Complex Driver. According to the actual
-    method given by the category attribute,  not all attributes are always
-    needed:
+    method given by the category attribute,  not all attributes are always needed:
 
     * double pointered method: only baseReference is mandatory
     * single pointered method: only referenceTable is mandatory

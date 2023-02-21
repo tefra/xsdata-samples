@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InterpolationRoutine:
     """
-    This represents an interpolation routine taken to evaluate the contents of
-    a curve or map against a specific input value.
+    This represents an interpolation routine taken to evaluate the contents of a
+    curve or map against a specific input value.
 
     :ivar short_label: This is the name of the interpolation method
         which is implemented by the referenced bswModuleEntry. It

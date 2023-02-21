@@ -22,9 +22,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestArrayPropertyDef:
     """
-    This meta-class represents the ability to define a property of an element
-    of a rest service where the property is supposed to represent an array of
-    other primitive properties.
+    This meta-class represents the ability to define a property of an element of a
+    rest service where the property is supposed to represent an array of other
+    primitive properties.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

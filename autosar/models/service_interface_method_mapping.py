@@ -19,9 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ServiceInterfaceMethodMapping:
     """
-    This meta-class allows to define a mapping between methods of
-    ServiceInterfaces that are mapped to each other by the
-    ServiceInterfaceMapping.
+    This meta-class allows to define a mapping between methods of ServiceInterfaces
+    that are mapped to each other by the ServiceInterfaceMapping.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

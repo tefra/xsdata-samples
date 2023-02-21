@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FmConditionByFeaturesAndSwSystemconsts:
     """
-    A boolean expression that has the syntax of the AUTOSAR formula language
-    and may use references to features or system constants as operands.
+    A boolean expression that has the syntax of the AUTOSAR formula language and
+    may use references to features or system constants as operands.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

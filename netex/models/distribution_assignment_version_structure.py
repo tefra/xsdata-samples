@@ -153,20 +153,23 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         }
     )
-    all_countries_ref: Optional[AllCountriesRef] = field(
-        default=None,
+    all_countries_ref_or_country_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AllCountriesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    country_ref: Optional[CountryRef] = field(
-        default=None,
-        metadata={
-            "name": "CountryRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllCountriesRef",
+                    "type": AllCountriesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CountryRef",
+                    "type": CountryRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     allowed_in_country: Optional[bool] = field(
@@ -185,28 +188,28 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_distribution_channels_ref: Optional[AllDistributionChannelsRef] = field(
-        default=None,
+    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AllDistributionChannelsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distribution_channels_ref: Optional[GroupOfDistributionChannelsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistributionChannelsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distribution_channel_ref: Optional[DistributionChannelRef] = field(
-        default=None,
-        metadata={
-            "name": "DistributionChannelRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllDistributionChannelsRef",
+                    "type": AllDistributionChannelsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistributionChannelsRef",
+                    "type": GroupOfDistributionChannelsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistributionChannelRef",
+                    "type": DistributionChannelRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = field(
@@ -265,108 +268,78 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_authorities_ref: Optional[AllAuthoritiesRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AllAuthoritiesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    all_operators_ref: Optional[AllOperatorsRef] = field(
-        default=None,
-        metadata={
-            "name": "AllOperatorsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    all_transport_organisations_ref: Optional[AllTransportOrganisationsRef] = field(
-        default=None,
-        metadata={
-            "name": "AllTransportOrganisationsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    all_organisations_ref: Optional[AllOrganisationsRef] = field(
-        default=None,
-        metadata={
-            "name": "AllOrganisationsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_consortium_ref: Optional[RetailConsortiumRef] = field(
-        default=None,
-        metadata={
-            "name": "RetailConsortiumRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    authority_ref: Optional[AuthorityRef] = field(
-        default=None,
-        metadata={
-            "name": "AuthorityRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_organisation_ref: Optional[GeneralOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "GeneralOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    management_agent_ref: Optional[ManagementAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "ManagementAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "ServicedOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_agent_ref: Optional[TravelAgentRef] = field(
-        default=None,
-        metadata={
-            "name": "TravelAgentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    other_organisation_ref: Optional[OtherOrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OtherOrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_ref: Optional[OrganisationRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AllAuthoritiesRef",
+                    "type": AllAuthoritiesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AllOperatorsRef",
+                    "type": AllOperatorsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AllTransportOrganisationsRef",
+                    "type": AllTransportOrganisationsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AllOrganisationsRef",
+                    "type": AllOrganisationsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailConsortiumRef",
+                    "type": RetailConsortiumRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisationRef",
+                    "type": GeneralOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgentRef",
+                    "type": ManagementAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisationRef",
+                    "type": ServicedOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgentRef",
+                    "type": TravelAgentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisationRef",
+                    "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationRef",
+                    "type": OrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 13,
         }
     )
     responsibility_set_ref: Optional[ResponsibilitySetRef] = field(

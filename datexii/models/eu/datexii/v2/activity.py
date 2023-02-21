@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Activity(TrafficElement):
     """
-    Deliberate human action external to the traffic stream or roadway which
-    could disrupt traffic.
+    Deliberate human action external to the traffic stream or roadway which could
+    disrupt traffic.
 
     :ivar mobility_of_activity: Mobility of the activity.
     :ivar activity_extension:

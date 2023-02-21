@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class GenericModelReference:
-    """This meta-class represents the ability to express a late binding
-    reference to a model element.
+    """This meta-class represents the ability to express a late binding reference
+    to a model element.
 
     The model element can be from every model. Even if it is modeled
     according to the association representation, it is not limited to

@@ -21,9 +21,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DocumentElementScope:
-    """Specifies if a specification element such as a requirement,
-    specification, deliverable, artifact, task definition or activity is in
-    scope of this data exchange point.
+    """Specifies if a specification element such as a requirement, specification,
+    deliverable, artifact, task definition or activity is in scope of this data
+    exchange point.
 
     The DocumentElementScope may reference all specification elements
     that have a name or ID. The only exception are Meta Classes, Meta

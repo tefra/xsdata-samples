@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptSwPrototypingAccess:
     """
-    Describes the accessibility of data and modes by the rapid prototyping
-    tooling.
+    Describes the accessibility of data and modes by the rapid prototyping tooling.
 
     :ivar rpt_hook_access: The related data element can be modified
         using a post-build hooking tool. An ENABLED

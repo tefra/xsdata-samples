@@ -5,8 +5,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class EquipmentTypeEnum(Enum):
     """
-    Equipment available on the parking or parking space or grouped parking
-    spaces.
+    Equipment available on the parking or parking space or grouped parking spaces.
 
     :cvar TOILET: Indicates, whether there are toilets available.
     :cvar SHOWER: Indicates, whether there are shower facilities

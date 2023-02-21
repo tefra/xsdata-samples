@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EthTpConnection:
     """
-    A connection identifies which PduTriggerings shall be handled using the
-    "TP" semantics.
+    A connection identifies which PduTriggerings shall be handled using the "TP"
+    semantics.
 
     :ivar ident: This adds the ability to become referrable to
         TpConnection.

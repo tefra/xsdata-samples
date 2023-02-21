@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticMonitorUpdateKindEnum:
     """
-    This enumeration indicates the acceptance criteria for a diagnostic
-    monitor.
+    This enumeration indicates the acceptance criteria for a diagnostic monitor.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

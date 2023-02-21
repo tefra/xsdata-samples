@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecOcJobMapping:
-    """This meta-class allows to map a SecOcJobRequirement to a concrete crypto
-    job that will fulfill the JobRequirement.
+    """This meta-class allows to map a SecOcJobRequirement to a concrete crypto job
+    that will fulfill the JobRequirement.
 
     The crypto job represents a call to a specific routine that
     implements a crypto function and that uses a specific key and refers

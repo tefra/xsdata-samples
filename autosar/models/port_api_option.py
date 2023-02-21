@@ -15,10 +15,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PortApiOption:
     """
-    Options how to generate the signatures of calls for an
-    AtomicSwComponentType in order to communicate over a PortPrototype (for
-    calls into a RunnableEntity as well as for calls from a RunnableEntity to
-    the PortPrototype).
+    Options how to generate the signatures of calls for an AtomicSwComponentType in
+    order to communicate over a PortPrototype (for calls into a RunnableEntity as
+    well as for calls from a RunnableEntity to the PortPrototype).
 
     :ivar enable_take_address: If set to true, the software-component is
         able to use the API reference for deriving a pointer to an

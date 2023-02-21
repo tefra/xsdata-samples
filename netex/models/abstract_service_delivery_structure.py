@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .response_structure import ResponseStructure
 from .service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
@@ -9,36 +9,33 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
-    request_message_ref: Optional[str] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "RequestMessageRef",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscriber_ref: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SubscriberRef",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscription_filter_ref: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SubscriptionFilterRef",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    subscription_ref: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SubscriptionRef",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RequestMessageRef",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriberRef",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriptionFilterRef",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "SubscriptionRef",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     delegator_address: Optional[str] = field(

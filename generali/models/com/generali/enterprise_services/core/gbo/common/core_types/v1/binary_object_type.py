@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/core-ty
 
 @dataclass
 class BinaryObjectType:
-    """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:Co
-    reComponentsTechnicalSpecification:2">UNDT000002</ns1:UniqueID>
+    """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreCo
+    mponentsTechnicalSpecification:2">UNDT000002</ns1:UniqueID>
 
     <ns1:Acronym xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">CCT</ns1:Acronym>
     <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Binary Object. Type</ns1:DictionaryEntryName>

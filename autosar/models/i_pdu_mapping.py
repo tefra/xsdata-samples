@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IPduMapping:
     """
-    Arranges those IPdus that are transferred by the gateway from one channel
-    to the other in pairs and defines the mapping between them.
+    Arranges those IPdus that are transferred by the gateway from one channel to
+    the other in pairs and defines the mapping between them.
 
     :ivar introduction: This represents introductory documentation about
         the IPdu mapping.

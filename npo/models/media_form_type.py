@@ -49,7 +49,7 @@ class MediaFormType:
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
-                "sequential": True,
+                "sequence": 272,
             }
         )
         title_sort: List[TitleSortOrderType] = field(
@@ -58,6 +58,6 @@ class MediaFormType:
                 "name": "titleSort",
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
-                "sequential": True,
+                "sequence": 272,
             }
         )

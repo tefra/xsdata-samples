@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class D2LogicalModel1:
     """
-    The DATEX II logical model comprising exchange, content payload and
-    management sub-models.
+    The DATEX II logical model comprising exchange, content payload and management
+    sub-models.
     """
     class Meta:
         name = "D2LogicalModel"

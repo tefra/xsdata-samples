@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingStatusPublication:
     """
-    A publication containing the current status of one or more parking sites
-    and/or group of parking sites.
+    A publication containing the current status of one or more parking sites and/or
+    group of parking sites.
 
     :ivar parking_table_reference: It is possible to limit the
         publication to one or more ParkingTable and to set a reference

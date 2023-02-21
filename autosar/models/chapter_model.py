@@ -117,7 +117,7 @@ class ChapterModel:
             "name": "MSR-QUERY-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     msr_query_p_2: List[MsrQueryP2] = field(
@@ -126,7 +126,7 @@ class ChapterModel:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     p: List[MultiLanguageParagraph] = field(
@@ -135,7 +135,7 @@ class ChapterModel:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     verbatim: List[MultiLanguageVerbatim] = field(
@@ -144,7 +144,7 @@ class ChapterModel:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     list_value: List[ListType] = field(
@@ -153,7 +153,7 @@ class ChapterModel:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     def_list: List[DefList] = field(
@@ -162,7 +162,7 @@ class ChapterModel:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     labeled_list: List[LabeledList] = field(
@@ -171,7 +171,7 @@ class ChapterModel:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     formula: List[MlFormula] = field(
@@ -180,7 +180,7 @@ class ChapterModel:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     figure: List[MlFigure] = field(
@@ -189,7 +189,7 @@ class ChapterModel:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     note: List[Note] = field(
@@ -198,7 +198,7 @@ class ChapterModel:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     trace: List[TraceableText] = field(
@@ -207,7 +207,7 @@ class ChapterModel:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     structured_req: List[StructuredReq] = field(
@@ -216,7 +216,7 @@ class ChapterModel:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     table: List[Table] = field(
@@ -225,7 +225,7 @@ class ChapterModel:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     traceable_table: List[TraceableTable] = field(
@@ -234,7 +234,7 @@ class ChapterModel:
             "name": "TRACEABLE-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     prms: List[Prms] = field(
@@ -243,7 +243,7 @@ class ChapterModel:
             "name": "PRMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     topic_1: List[Topic1] = field(
@@ -252,7 +252,7 @@ class ChapterModel:
             "name": "TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     msr_query_topic_1: List[MsrQueryTopic1] = field(
@@ -261,7 +261,7 @@ class ChapterModel:
             "name": "MSR-QUERY-TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     chapter: List[Chapter] = field(
@@ -270,7 +270,7 @@ class ChapterModel:
             "name": "CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     msr_query_chapter: List[MsrQueryChapter] = field(
@@ -279,7 +279,7 @@ class ChapterModel:
             "name": "MSR-QUERY-CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 14766,
         }
     )
     s: Optional[str] = field(

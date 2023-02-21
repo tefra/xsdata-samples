@@ -184,20 +184,23 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
-        default=None,
+    topographic_place_ref_or_topographic_place_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TopographicPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    topographic_place_view: Optional[TopographicPlaceView] = field(
-        default=None,
-        metadata={
-            "name": "TopographicPlaceView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TopographicPlaceRef",
+                    "type": TopographicPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TopographicPlaceView",
+                    "type": TopographicPlaceView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     at_centre: Optional[bool] = field(

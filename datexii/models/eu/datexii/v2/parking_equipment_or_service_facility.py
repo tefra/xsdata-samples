@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingEquipmentOrServiceFacility:
     """
-    One type of equipment or additional service facility that is available at
-    the parking site, parking space or group of parking spaces.
+    One type of equipment or additional service facility that is available at the
+    parking site, parking space or group of parking spaces.
 
     :ivar equipment_or_service_facility_identifier: An internal
         identifier for the equipment or service facility, e.g. an

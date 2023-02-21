@@ -13,9 +13,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ImplementationDataTypeElementInSystemRef:
-    """This meta-class represents the ability to refer to the internal
-    structure of an AutosarDataPrototype which is typed by an
-    ImplementationDatatype in the context of a CompositionSwComponentType.
+    """This meta-class represents the ability to refer to the internal structure of
+    an AutosarDataPrototype which is typed by an ImplementationDatatype in the
+    context of a CompositionSwComponentType.
 
     In other words, this meta-class shall not be used to model a
     reference to the AutosarDataPrototype as a target itself, even if

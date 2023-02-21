@@ -22,8 +22,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DiagnosticRequestControlOfOnBoardDeviceClass:
     """
     This meta-class represents the ability to define common properties for all
-    instances of the "Request Control Of On-Board Device" OBD diagnostic
-    service.
+    instances of the "Request Control Of On-Board Device" OBD diagnostic service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

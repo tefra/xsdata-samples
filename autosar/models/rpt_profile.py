@@ -20,8 +20,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RptProfile:
     """
-    The RptProfile describes the common properties of a Rapid Prototyping
-    method.
+    The RptProfile describes the common properties of a Rapid Prototyping method.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

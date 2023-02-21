@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BswModeSwitchAckRequest:
     """
-    Requests acknowledgements that a mode switch has been processed
-    successfully.
+    Requests acknowledgements that a mode switch has been processed  successfully.
 
     :ivar timeout: Number of seconds before an error is reported.
     :ivar s: Checksum calculated by the user's tool environment for an

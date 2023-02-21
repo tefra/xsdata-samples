@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CpSoftwareClusterBinaryManifestDescriptor:
-    """This meta-class has the ability to act as a hub for all information
-    related to the binary manifest of a given CP software cluster.
+    """This meta-class has the ability to act as a hub for all information related
+    to the binary manifest of a given CP software cluster.
 
     The manifest is subject to integrator work and therefore not a part
     of the definition of the CP software cluster itself.

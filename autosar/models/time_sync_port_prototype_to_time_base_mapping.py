@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class TimeSyncPortPrototypeToTimeBaseMapping:
     """
     This meta-class provides the ability to map a PortPrototype typed by a
-    AbstractSynchronizedTimeBaseInterface to a TimeBaseResource in the context
-    of a Process.
+    AbstractSynchronizedTimeBaseInterface to a TimeBaseResource in the context of a
+    Process.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

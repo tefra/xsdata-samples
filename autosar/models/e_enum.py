@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EEnum:
-    """This specifies the possible kinds of emphasis as proposal how to render
-    it on paper or screen.
+    """This specifies the possible kinds of emphasis as proposal how to render it
+    on paper or screen.
 
     Note that it would have been better to use plain, weak (italic),
     strong (bold), veryStrong (bolditalic) ... But users complained

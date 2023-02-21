@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AsynchronousServerCallResultPoint:
-    """If a RunnableEntity owns a AsynchronousServerCallResultPoint it is
-    entitled to get the result of the referenced AsynchronousServerCallPoint.
+    """If a RunnableEntity owns a AsynchronousServerCallResultPoint it is entitled
+    to get the result of the referenced AsynchronousServerCallPoint.
 
     If it is associated with AsynchronousServerCallReturnsEvent, this
     RTEEvent notifies the completion of the required

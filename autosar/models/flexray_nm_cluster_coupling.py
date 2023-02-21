@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FlexrayNmClusterCoupling:
     """
-    FlexRay attributes that are valid for each of the referenced (coupled)
-    FlexRay clusters.
+    FlexRay attributes that are valid for each of the referenced (coupled) FlexRay
+    clusters.
 
     :ivar variation_point: This element was generated/modified due to an
         atpVariation stereotype.

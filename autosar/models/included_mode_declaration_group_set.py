@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IncludedModeDeclarationGroupSet:
     """
-    An IncludedModeDeclarationGroupSet declares that a set of
-    ModeDeclarationGroups used by the software component for its implementation
-    and consequently these ModeDeclarationGroups become part of the contract.
+    An IncludedModeDeclarationGroupSet declares that a set of ModeDeclarationGroups
+    used by the software component for its implementation and consequently these
+    ModeDeclarationGroups become part of the contract.
 
     :ivar mode_declaration_group_refs: This represents the referenced
         ModeDeclarationGroup.

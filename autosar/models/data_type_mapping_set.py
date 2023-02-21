@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DataTypeMappingSet:
-    """This class represents a list of mappings between ApplicationDataTypes
-    and ImplementationDataTypes.
+    """This class represents a list of mappings between ApplicationDataTypes and
+    ImplementationDataTypes.
 
     In addition, it can contain mappings between ImplementationDataTypes
     and ModeDeclarationGroups.

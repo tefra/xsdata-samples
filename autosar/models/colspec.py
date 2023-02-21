@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Colspec:
     """
-    This meta-class represents the ability to specify the properties of a
-    column in a  table.
+    This meta-class represents the ability to specify the properties of a column in
+    a  table.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

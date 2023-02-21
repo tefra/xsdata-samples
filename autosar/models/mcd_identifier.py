@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McdIdentifier:
-    """This primitive denotes a name used for measurement and calibration
-    systems and shall follow the restrictions for an ASAM ASAP2 ident.
+    """This primitive denotes a name used for measurement and calibration systems
+    and shall follow the restrictions for an ASAM ASAP2 ident.
 
     For detailed syntax see the xsd.pattern. The size limitations are
     not captured. McdIdentifiers are random names which may contain

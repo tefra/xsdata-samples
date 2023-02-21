@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ProcessDesignToMachineDesignMapping:
-    """This element is used in the design phase to predefine a mapping of a
-    process to a machine.
+    """This element is used in the design phase to predefine a mapping of a process
+    to a machine.
 
     Such a mapping may be overruled in the deployment phase.
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
@@ -49,116 +49,110 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    geographical_interval_ref: Optional[GeographicalIntervalRef] = field(
-        default=None,
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "GeographicalIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalIntervalRef",
+                    "type": GeographicalIntervalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "geographicalIntervals",
+                    "type": GeographicalIntervalsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "geographicalStructureFactors",
+                    "type": GeographicalStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
-    geographical_intervals: Optional[GeographicalIntervalsRelStructure] = field(
-        default=None,
+    time_interval_ref_or_time_intervals_or_time_structure_factors: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "geographicalIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeIntervalRef",
+                    "type": TimeIntervalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "timeIntervals",
+                    "type": TimeIntervalsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "timeStructureFactors",
+                    "type": TimeStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
-    geographical_structure_factors: Optional[GeographicalStructureFactorsRelStructure] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "geographicalStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareQuotaFactorRef",
+                    "type": FareQuotaFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareDemandFactorRef",
+                    "type": FareDemandFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorRef",
+                    "type": QualityStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "qualityStructureFactors",
+                    "type": QualityStructureFactorsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
-    time_interval_ref: Optional[TimeIntervalRef] = field(
-        default=None,
+    choice_1: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TimeIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_intervals: Optional[TimeIntervalsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "timeIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factors: Optional[TimeStructureFactorsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "timeStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "FareQuotaFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_demand_factor_ref: Optional[FareDemandFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "FareDemandFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factor_ref: Optional[QualityStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "QualityStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factors: Optional[QualityStructureFactorsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "qualityStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_elements: Optional[DistanceMatrixElementsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "distanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements_ref: Optional[GroupOfDistanceMatrixElementsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistanceMatrixElementsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distance_matrix_elements: Optional[GroupOfDistanceMatrixElements] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DistanceMatrixElementRef",
+                    "type": DistanceMatrixElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "distanceMatrixElements",
+                    "type": DistanceMatrixElementsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElementsRef",
+                    "type": GroupOfDistanceMatrixElementsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistanceMatrixElements",
+                    "type": GroupOfDistanceMatrixElements,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     fare_structure_elements_in_sequence: Optional[FareStructureElementsInSequenceRelStructure] = field(
@@ -169,28 +163,28 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     prices: Optional[FareStructureElementPricesRelStructure] = field(

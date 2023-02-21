@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers
 @dataclass
 class TargetType(BaseSystemTraceabilityType):
     """
-    <description xmlns="">The specification of the target country, locale,
-    system of the message.</description>
+    <description xmlns="">The specification of the target country, locale, system
+    of the message.</description>
 
     :ivar received_date_time: <description xmlns="">The date and time
         the message was received at the target system. Only applicable

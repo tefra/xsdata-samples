@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticServiceRequestCallbackTypeEnum:
     """
-    This represents the ability to define whether a Service Request
-    Notification was used in the role of a manufacturer or a supplier.
+    This represents the ability to define whether a Service Request Notification
+    was used in the role of a manufacturer or a supplier.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticRoutineNeeds:
     """Specifies the general needs on the configuration of the  Diagnostic
-    Communication Manager (Dcm) which are not related to a particular item
-    (e.g. a PID).
+    Communication Manager (Dcm) which are not related to a particular item (e.g. a
+    PID).
 
     The main use case is the mapping of service ports to the Dcm which
     are not related to a particular item.

@@ -6,8 +6,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CseCodeTypeString:
-    """This primitive represents an ASAM CSE (Codes for Scaling Units) based on
-    the definition in the ASAM-MCD-2MC-ASAP2  specification.
+    """This primitive represents an ASAM CSE (Codes for Scaling Units) based on the
+    definition in the ASAM-MCD-2MC-ASAP2  specification.
 
     The particular semantics is specified in [TPS_GST_00354].
 

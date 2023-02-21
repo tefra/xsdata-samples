@@ -21,8 +21,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class HwType:
-    """This represents the ability to describe Hardware types on an abstract
-    level.
+    """This represents the ability to describe Hardware types on an abstract level.
 
     The particular types of hardware are distinguished by the category.
     This category determines the applicable attributes. The possible

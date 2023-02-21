@@ -102,7 +102,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleModes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
             "tokens": True,
         }
     )
@@ -112,7 +112,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TransportSubmode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     group_of_operators_ref: List[GroupOfOperatorsRef] = field(
@@ -121,7 +121,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "GroupOfOperatorsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     all_operators_ref_or_operator_ref: List[object] = field(
@@ -166,7 +166,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "NetworkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     group_of_lines_ref: List[GroupOfLinesRef] = field(
@@ -175,7 +175,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "GroupOfLinesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     flexible_line_ref: List[FlexibleLineRef] = field(
@@ -184,7 +184,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FlexibleLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     line_ref: List[LineRef] = field(
@@ -193,7 +193,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "LineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_line_ref: List[TypeOfLineRef] = field(
@@ -202,7 +202,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     tariff_zone_ref: List[TariffZoneRef] = field(
@@ -211,7 +211,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     fare_zone_ref: List[FareZoneRef] = field(
@@ -220,7 +220,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FareZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     fare_section_ref: List[FareSectionRef] = field(
@@ -229,7 +229,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FareSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     fare_scheduled_stop_point_ref: List[FareScheduledStopPointRef] = field(
@@ -238,7 +238,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FareScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     scheduled_stop_point_ref: List[ScheduledStopPointRef] = field(
@@ -247,7 +247,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     place_use: List[PlaceUseEnumeration] = field(
@@ -256,7 +256,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PlaceUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     topographic_place_ref: List[TopographicPlaceRef] = field(
@@ -265,7 +265,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TopographicPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     postal_address_ref: List[PostalAddressRef] = field(
@@ -274,7 +274,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PostalAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     road_address_ref: List[RoadAddressRef] = field(
@@ -283,7 +283,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "RoadAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     address_ref: List[AddressRef] = field(
@@ -292,7 +292,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "AddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     vehicle_stopping_position_ref: List[VehicleStoppingPositionRef] = field(
@@ -301,7 +301,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleStoppingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     vehicle_stopping_place_ref: List[VehicleStoppingPlaceRef] = field(
@@ -310,7 +310,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleStoppingPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     boarding_position_ref: List[BoardingPositionRef] = field(
@@ -319,7 +319,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "BoardingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     access_space_ref: List[AccessSpaceRef] = field(
@@ -328,7 +328,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "AccessSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     quay_ref: List[QuayRef] = field(
@@ -337,7 +337,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "QuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     stop_place_space_ref: List[StopPlaceSpaceRef] = field(
@@ -346,7 +346,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     parking_bay_ref: List[ParkingBayRef] = field(
@@ -355,7 +355,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingBayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     point_of_interest_space_ref: List[PointOfInterestSpaceRef] = field(
@@ -364,7 +364,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     stop_place_vehicle_entrance_ref: List[StopPlaceVehicleEntranceRef] = field(
@@ -373,7 +373,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
@@ -382,7 +382,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
@@ -391,7 +391,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceForVehiclesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
@@ -400,7 +400,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingPassengerEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     parking_entrance_ref: List[ParkingEntranceRef] = field(
@@ -409,7 +409,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
@@ -418,7 +418,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestVehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
@@ -427,7 +427,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     vehicle_entrance_ref: List[VehicleEntranceRef] = field(
@@ -436,7 +436,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     entrance_ref: List[EntranceRef] = field(
@@ -445,7 +445,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "EntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     site_component_ref: List[SiteComponentRef] = field(
@@ -454,7 +454,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "SiteComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     stop_place_ref: List[StopPlaceRef] = field(
@@ -463,7 +463,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     parking_ref: List[ParkingRef] = field(
@@ -472,7 +472,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     point_of_interest_ref: List[PointOfInterestRef] = field(
@@ -481,7 +481,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     service_site_ref: List[ServiceSiteRef] = field(
@@ -490,7 +490,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceSiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     site_ref: List[SiteRef] = field(
@@ -499,7 +499,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     site_element_ref: List[SiteElementRef] = field(
@@ -508,7 +508,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "SiteElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     point_of_interest_classification_ref: List[PointOfInterestClassificationRef] = field(
@@ -517,7 +517,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PointOfInterestClassificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     routing_type: List[RoutingTypeEnumeration] = field(
@@ -526,7 +526,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     directions: List[RelativeDirectionEnumeration] = field(
@@ -535,7 +535,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "Directions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     series_constraint_ref: List[SeriesConstraintRef] = field(
@@ -544,7 +544,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "SeriesConstraintRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     service_journey_pattern_ref: List[ServiceJourneyPatternRef] = field(
@@ -553,7 +553,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     class_of_use_ref: List[ClassOfUseRef] = field(
@@ -562,7 +562,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     fare_class: List[FareClassEnumeration] = field(
@@ -571,7 +571,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     service_facility_set_ref: List[ServiceFacilitySetRef] = field(
@@ -580,7 +580,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     site_facility_set_ref: List[SiteFacilitySetRef] = field(
@@ -589,7 +589,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "SiteFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     facility_set_ref: List[FacilitySetRef] = field(
@@ -598,7 +598,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_product_category_ref: List[TypeOfProductCategoryRef] = field(
@@ -607,7 +607,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     template_service_journey_ref: List[TemplateServiceJourneyRef] = field(
@@ -616,7 +616,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TemplateServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     service_journey_ref: List[ServiceJourneyRef] = field(
@@ -625,7 +625,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     train_number_ref: List[TrainNumberRef] = field(
@@ -634,7 +634,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TrainNumberRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     group_of_services_ref: List[GroupOfServicesRef] = field(
@@ -643,7 +643,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "GroupOfServicesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     compound_train_ref: List[CompoundTrainRef] = field(
@@ -652,7 +652,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "CompoundTrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     train_ref: List[TrainRef] = field(
@@ -661,7 +661,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     vehicle_type_ref: List[VehicleTypeRef] = field(
@@ -670,7 +670,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "VehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_service_ref: List[TypeOfServiceRef] = field(
@@ -679,7 +679,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     train_element_ref: List[TrainElementRef] = field(
@@ -688,7 +688,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TrainElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     train_component_label_assignment_ref: List[TrainComponentLabelAssignmentRef] = field(
@@ -697,7 +697,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TrainComponentLabelAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     passenger_seat_ref: List[PassengerSeatRef] = field(
@@ -706,7 +706,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PassengerSeatRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_fare_structure_factor_ref: List[TypeOfFareStructureFactorRef] = field(
@@ -715,7 +715,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareStructureFactorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_fare_structure_element_ref: List[TypeOfFareStructureElementRef] = field(
@@ -724,7 +724,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_tariff_ref: List[TypeOfTariffRef] = field(
@@ -733,7 +733,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTariffRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     limiting_rule_ref: List[LimitingRuleRef] = field(
@@ -742,7 +742,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "LimitingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     discounting_rule_ref: List[DiscountingRuleRef] = field(
@@ -751,7 +751,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "DiscountingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     pricing_rule_ref: List[PricingRuleRef] = field(
@@ -760,7 +760,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "PricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_pricing_rule_ref: List[TypeOfPricingRuleRef] = field(
@@ -769,7 +769,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPricingRuleRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     charging_moment_ref: List[ChargingMomentRef] = field(
@@ -778,7 +778,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "ChargingMomentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_fare_product_ref: List[TypeOfFareProductRef] = field(
@@ -787,7 +787,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_usage_parameter_ref: List[TypeOfUsageParameterRef] = field(
@@ -796,7 +796,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfUsageParameterRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_concession_ref: List[TypeOfConcessionRef] = field(
@@ -805,7 +805,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfConcessionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_sales_offer_package_ref: List[TypeOfSalesOfferPackageRef] = field(
@@ -814,7 +814,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfSalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_travel_document_ref: List[TypeOfTravelDocumentRef] = field(
@@ -823,7 +823,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfTravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_machine_readability_ref: List[TypeOfMachineReadabilityRef] = field(
@@ -832,7 +832,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfMachineReadabilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     distribution_channel_ref_or_group_of_distribution_channels_ref: List[object] = field(
@@ -859,7 +859,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "FulfilmentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )
     type_of_payment_method_ref: List[TypeOfPaymentMethodRef] = field(
@@ -868,6 +868,6 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPaymentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "sequential": True,
+            "sequence": 216,
         }
     )

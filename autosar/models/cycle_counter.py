@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CycleCounter:
     """
-    The communication cycle where the frame is send is described by the
-    attribute "cycleCounter".
+    The communication cycle where the frame is send is described by the attribute
+    "cycleCounter".
 
     :ivar cycle_counter: The communication cycle where the frame
         described by this timing is sent. If a timing is given in this

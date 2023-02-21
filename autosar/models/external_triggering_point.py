@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExternalTriggeringPoint:
     """
-    If a RunnableEntity owns an ExternalTriggeringPoint it is entitled to raise
-    an ExternalTriggerOccurredEvent.
+    If a RunnableEntity owns an ExternalTriggeringPoint it is entitled to raise an
+    ExternalTriggerOccurredEvent.
 
     :ivar ident: The aggregation in the role ident provides the ability
         to make the ExternalTriggeringPoint identifiable. From the

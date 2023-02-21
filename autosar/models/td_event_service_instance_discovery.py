@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TdEventServiceInstanceDiscovery:
     """
-    This is used to describe timing description events related to different
-    phases of service discovery.
+    This is used to describe timing description events related to different phases
+    of service discovery.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

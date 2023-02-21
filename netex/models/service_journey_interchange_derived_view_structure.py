@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .connecting_journey_view import ConnectingJourneyView
 from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
@@ -98,20 +98,23 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    connecting_journey_ref: Optional[VehicleJourneyRefStructure] = field(
-        default=None,
+    connecting_journey_ref_or_connecting_journey_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ConnectingJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connecting_journey_view: Optional[ConnectingJourneyView] = field(
-        default=None,
-        metadata={
-            "name": "ConnectingJourneyView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ConnectingJourneyRef",
+                    "type": VehicleJourneyRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectingJourneyView",
+                    "type": ConnectingJourneyView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     connecting_line_view: Optional[LineDerivedViewStructure] = field(

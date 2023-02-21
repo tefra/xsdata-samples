@@ -11,8 +11,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class DayWeekMonth:
     """
-    Specification of periods defined by the intersection of days, weeks and
-    months.
+    Specification of periods defined by the intersection of days, weeks and months.
 
     :ivar applicable_day: Applicable day of the week. "All days of the
         week" is expressed by non-inclusion of this attribute.

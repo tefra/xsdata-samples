@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class OsTaskExecutionEvent:
-    """This RTEEvent is supposed to execute RunnableEntities which have to
-    react on the execution of specific OsTasks.
+    """This RTEEvent is supposed to execute RunnableEntities which have to react on
+    the execution of specific OsTasks.
 
     Therefore, this event is unconditionally raised whenever the OsTask
     on which it is mapped is executed. The main use case for this event

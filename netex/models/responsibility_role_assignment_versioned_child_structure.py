@@ -53,20 +53,23 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(VersionedChildStructur
             "tokens": True,
         }
     )
-    type_of_responsibility_role_ref: Optional[TypeOfResponsibilityRoleRef] = field(
-        default=None,
+    type_of_responsibility_role_ref_or_responsibility_role_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TypeOfResponsibilityRoleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    responsibility_role_ref: Optional[ResponsibilityRoleRef] = field(
-        default=None,
-        metadata={
-            "name": "ResponsibilityRoleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfResponsibilityRoleRef",
+                    "type": TypeOfResponsibilityRoleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResponsibilityRoleRef",
+                    "type": ResponsibilityRoleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     responsible_organisation_ref: Optional[OrganisationRefStructure] = field(

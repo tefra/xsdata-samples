@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class McParameterElementGroup:
     """
-    Denotes a group of calibration parameters which are handled by the RTE as
-    one data structure.
+    Denotes a group of calibration parameters which are handled by the RTE as one
+    data structure.
 
     :ivar short_label: Assigns a name to this element.
     :ivar ram_location_ref: Refers to the RAM location of this parameter

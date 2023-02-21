@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IdsmTrafficLimitation:
-    """This meta-class represents the configuration of a traffic limitation
-    filter for Security Events.
+    """This meta-class represents the configuration of a traffic limitation filter
+    for Security Events.
 
     This means that security events are dropped if the size (in terms of
     bandwidth) of security events (of any type) processed within a

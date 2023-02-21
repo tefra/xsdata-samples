@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Keyword:
     """This meta-class represents the ability to predefine keywords which may
-    subsequently be used to construct names following a given naming
-    convention, e.g. the AUTOSAR naming conventions.
+    subsequently be used to construct names following a given naming convention,
+    e.g. the AUTOSAR naming conventions.
 
     Note that such names is not only shortName. It could be symbol, or
     even longName. Application of keywords is not limited to particular

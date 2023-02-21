@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InvertCondition:
     """
-    inverts the nested condition.
+    Inverts the nested condition.
 
     :ivar condition: The inverted condition
     :ivar s: Checksum calculated by the user's tool environment for an

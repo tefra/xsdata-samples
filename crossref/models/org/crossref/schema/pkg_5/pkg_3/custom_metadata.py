@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class CustomMetadata:
-    """Publishers are encouraged to provided any non-bibliographical metadata
-    that they feel might help the researcher evaluate and make better use of
-    the content that the Crossmark record refers to.
+    """Publishers are encouraged to provided any non-bibliographical metadata that
+    they feel might help the researcher evaluate and make better use of the content
+    that the Crossmark record refers to.
 
     For example, publishers might want to provide funding information,
     clinical trial numbers, information about the peer-review process or
@@ -34,7 +34,7 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
             "max_occurs": 2,
-            "sequential": True,
+            "sequence": 672,
         }
     )
     program_1: List[AccessIndicatorsProgram] = field(
@@ -44,7 +44,7 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 676,
         }
     )
     program_2: List[ClinicaltrialsProgram] = field(
@@ -54,6 +54,6 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/clinicaltrials.xsd",
             "max_occurs": 4,
-            "sequential": True,
+            "sequence": 676,
         }
     )

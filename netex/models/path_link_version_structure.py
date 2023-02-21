@@ -57,20 +57,23 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    accessibility_assessment_ref: Optional[AccessibilityAssessmentRef] = field(
-        default=None,
+    accessibility_assessment_ref_or_accessibility_assessment: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AccessibilityAssessmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
-        default=None,
-        metadata={
-            "name": "AccessibilityAssessment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AccessibilityAssessmentRef",
+                    "type": AccessibilityAssessmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessibilityAssessment",
+                    "type": AccessibilityAssessment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     access_modes: List[AccessModeEnumeration] = field(

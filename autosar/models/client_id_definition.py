@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientIdDefinition:
     """Several clients in one client-ECU can communicate via inter-ECU client-
-    server communication with a server on a different ECU, if a client
-    identifier is used to distinguish the different clients.
+    server communication with a server on a different ECU, if a client identifier
+    is used to distinguish the different clients.
 
     The Client Identifier of the transaction handle that is used by the
     RTE can be defined by this element.

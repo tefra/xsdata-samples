@@ -15,8 +15,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BuildActionIoElement:
     """
-    This meta-class represents the ability to specify the input/output entities
-    of a BuildAction.
+    This meta-class represents the ability to specify the input/output entities of
+    a BuildAction.
 
     :ivar category: This element assigns a category to the parent
         element. It is intended to specialize the usage and/or the

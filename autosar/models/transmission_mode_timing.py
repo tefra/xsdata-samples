@@ -9,10 +9,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TransmissionModeTiming:
     """If the COM Transmission Mode is false the timing is aggregated by the
-    TransmissionModeTiming element in the role of transmissionModeFalseTiming.
-    If the COM Transmission Mode is true the timing is aggregated by the
-    TransmissionModeTiming element in the role of transmissionModeTrueTiming.
-    COM supports the following Transmission Modes:
+    TransmissionModeTiming element in the role of transmissionModeFalseTiming. If
+    the COM Transmission Mode is true the timing is aggregated by the
+    TransmissionModeTiming element in the role of transmissionModeTrueTiming. COM
+    supports the following Transmission Modes:
 
     * Periodic (Cyclic Timing)
     * Direct /n-times (EventControlledTiming)

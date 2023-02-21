@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RootSwClusterDesignComponentPrototype:
     """
-    This meta-class represents the ability to define the service endpoints in
-    the scope of a SwClusterDesign.
+    This meta-class represents the ability to define the service endpoints in the
+    scope of a SwClusterDesign.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

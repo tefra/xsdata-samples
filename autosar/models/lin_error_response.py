@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LinErrorResponse:
-    """Each slave node shall publish a one bit signal, named response_error, to
-    the master node in one of its transmitted unconditional frames.
+    """Each slave node shall publish a one bit signal, named response_error, to the
+    master node in one of its transmitted unconditional frames.
 
     The response_error signal shall be set whenever a frame (except for
     event triggered frame responses) that is transmitted or received by

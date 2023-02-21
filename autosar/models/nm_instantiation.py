@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NmInstantiation:
     """
-    This meta-class defines the attributes for the Nm configuration on a
-    specific machine.
+    This meta-class defines the attributes for the Nm configuration on a specific
+    machine.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

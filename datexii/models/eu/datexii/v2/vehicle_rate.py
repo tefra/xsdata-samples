@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class VehicleRate:
-    """Gives information about fill and exit rates OR vehicle flow rate
-    (without direction).
+    """Gives information about fill and exit rates OR vehicle flow rate (without
+    direction).
 
     If the time stamp is omitted, 'measurementTimeDefault' is used.
 

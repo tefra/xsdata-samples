@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GraphicNotationEnum:
     """
-    This enumerator specifies the various notations (finally file types) used
-    to represent the figure.
+    This enumerator specifies the various notations (finally file types) used to
+    represent the figure.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

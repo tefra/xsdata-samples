@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -58,20 +58,23 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time: Optional[XmlDuration] = field(
-        default=None,
+    wait_time_or_wait_times: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "WaitTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "waitTimes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WaitTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "waitTimes",
+                    "type": JourneyPatternWaitTimesRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
@@ -105,20 +108,23 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
-        default=None,
+    destination_display_ref_or_destination_display_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DestinationDisplayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_view: Optional[DestinationDisplayView] = field(
-        default=None,
-        metadata={
-            "name": "DestinationDisplayView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DestinationDisplayRef",
+                    "type": DestinationDisplayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DestinationDisplayView",
+                    "type": DestinationDisplayView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     vias: Optional[ViasRelStructure] = field(

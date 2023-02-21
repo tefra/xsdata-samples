@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Ipv6NdpProps:
     """
-    This meta-class specifies the configuration options for the Neighbor
-    Discovery Protocol for IPv6.
+    This meta-class specifies the configuration options for the Neighbor Discovery
+    Protocol for IPv6.
 
     :ivar tcp_ip_ndp_default_reachable_time: Configuration of the
         ReachableTime (s) specified in [RFC4861 6.3.2. Host Variables].

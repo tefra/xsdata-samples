@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticServiceDataMapping:
-    """This represents the ability to define a mapping of a diagnostic service
-    to a software-component.
+    """This represents the ability to define a mapping of a diagnostic service to a
+    software-component.
 
     This kind of service mapping is applicable for the usage of
     SenderReceiverInterfaces or event/notifier semantics in

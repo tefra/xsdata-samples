@@ -14,8 +14,7 @@ class DataPrototypeMapping:
     """Defines the mapping of two particular VariableDataPrototypes,
     ParameterDataPrototypes or ArgumentDataPrototypes with unequal names and/or
     unequal semantic (resolution or range) in context of two different
-    SenderReceiverInterface, NvDataInterface or ParameterInterface or
-    Operations.
+    SenderReceiverInterface, NvDataInterface or ParameterInterface or Operations.
 
     If the semantic is unequal following rules apply: The
     textTableMapping is only applicable if the referred DataPrototypes

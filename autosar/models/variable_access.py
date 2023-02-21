@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class VariableAccess:
-    """The presence of a VariableAccess implies that a RunnableEntity needs
-    access to a VariableDataPrototype.
+    """The presence of a VariableAccess implies that a RunnableEntity needs access
+    to a VariableDataPrototype.
 
     The kind of access is specified by the role in which the class is
     used.

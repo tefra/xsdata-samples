@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingSpaceStatus:
     """
-    Status (occupied or closed) for a single parking space which was defined in
-    the static part of the model.
+    Status (occupied or closed) for a single parking space which was defined in the
+    static part of the model.
 
     :ivar parking_space_occupied: True: Parking space is occupied;
         False: Parking space is free.

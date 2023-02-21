@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticStoreEventSupportEnum:
     """
-    This meta-class has the ability to define how a specific event in the
-    context of the UDS service ResponseOnEvent shall be handled.
+    This meta-class has the ability to define how a specific event in the context
+    of the UDS service ResponseOnEvent shall be handled.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class InitEvent:
-    """This RTEEvent is supposed to be used for initialization purposes, i.e.
-    for starting and restarting a partition.
+    """This RTEEvent is supposed to be used for initialization purposes, i.e. for
+    starting and restarting a partition.
 
     It is not guaranteed that all RunnableEntities referenced by this
     InitEvent are executed before the 'regular' RunnableEntities are

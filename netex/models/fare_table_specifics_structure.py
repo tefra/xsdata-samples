@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .class_of_use_ref import ClassOfUseRef
 from .distribution_channel_ref import DistributionChannelRef
 from .facility_set_ref import FacilitySetRef
@@ -205,36 +205,33 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    template_service_journey_ref: Optional[TemplateServiceJourneyRef] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_ref: Optional[ServiceJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_number_ref: Optional[TrainNumberRef] = field(
-        default=None,
-        metadata={
-            "name": "TrainNumberRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_services_ref: Optional[GroupOfServicesRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfServicesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainNumberRef",
+                    "type": TrainNumberRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfServicesRef",
+                    "type": GroupOfServicesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
@@ -245,20 +242,23 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    distribution_channel_ref: Optional[DistributionChannelRef] = field(
-        default=None,
+    distribution_channel_ref_or_group_of_distribution_channels_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DistributionChannelRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_distribution_channels_ref: Optional[GroupOfDistributionChannelsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfDistributionChannelsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DistributionChannelRef",
+                    "type": DistributionChannelRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfDistributionChannelsRef",
+                    "type": GroupOfDistributionChannelsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     payment_method: Optional[PaymentMethodEnumeration] = field(

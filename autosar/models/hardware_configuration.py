@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HardwareConfiguration:
     """
-    Describes in which mode the hardware is operating while needing this
-    resource consumption.
+    Describes in which mode the hardware is operating while needing this resource
+    consumption.
 
     :ivar additional_information: Specifies additional information on
         the HardwareConfiguration.

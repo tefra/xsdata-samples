@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticDataIdentifierSet:
     """
-    This represents the ability to define a list of DiagnosticDataIdentifiers
-    that can be reused in different contexts.
+    This represents the ability to define a list of DiagnosticDataIdentifiers that
+    can be reused in different contexts.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

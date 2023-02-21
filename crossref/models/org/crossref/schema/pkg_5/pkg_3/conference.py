@@ -11,8 +11,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class Conference:
-    """Container for all information about a single conference and its
-    proceedings.
+    """Container for all information about a single conference and its proceedings.
 
     If a conference proceedings spans multiple volumes, each volume must
     be contained in a unique conference element.

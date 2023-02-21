@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ImplementationElementInParameterInstanceRef:
-    """Describes a reference to a particular ImplementationDataTypeElement
-    instance in the context of a given ParameterDataPrototype.
+    """Describes a reference to a particular ImplementationDataTypeElement instance
+    in the context of a given ParameterDataPrototype.
 
     Thus it refers to a particular element in the implementation
     description of a software data structure. Use Case: The RTE

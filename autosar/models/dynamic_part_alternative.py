@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DynamicPartAlternative:
-    """One of the Com IPdu alternatives that are transmitted in the Dynamic
-    Part of the MultiplexedIPdu.
+    """One of the Com IPdu alternatives that are transmitted in the Dynamic Part of
+    the MultiplexedIPdu.
 
     The selectorFieldCode specifies which Com IPdu is contained in the
     DynamicPart within a certain transmission of a multiplexed PDU.

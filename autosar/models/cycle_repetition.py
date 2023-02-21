@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CycleRepetition:
     """
-    The communication cycle where the frame is send is described by the
-    attributes baseCycle and cycleRepetition.
+    The communication cycle where the frame is send is described by the attributes
+    baseCycle and cycleRepetition.
 
     :ivar base_cycle: The first communication cycle where the frame is
         sent. This value is incremented at the beginning of each new

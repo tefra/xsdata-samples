@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class GenderCodeType(CodeType):
     """
-    <description xmlns="">A codelist indicating the gender of an individual in
-    the normal run of things or of a concept if applicable, i.e. Words can have
-    gender in French and German.</description>
+    <description xmlns="">A codelist indicating the gender of an individual in the
+    normal run of things or of a concept if applicable, i.e. Words can have gender
+    in French and German.</description>
     """

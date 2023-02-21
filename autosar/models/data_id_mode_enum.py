@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataIdModeEnum:
     """
-    Supported inclusion modes to include the implicit two-byte Data ID in the
-    one-byte CRC.
+    Supported inclusion modes to include the implicit two-byte Data ID in the one-
+    byte CRC.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

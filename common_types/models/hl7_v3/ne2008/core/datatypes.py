@@ -705,7 +705,7 @@ class IvlInt(SxcmInt):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 279,
         }
     )
     high: List[IvxbInt] = field(
@@ -714,7 +714,7 @@ class IvlInt(SxcmInt):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 272,
         }
     )
     center: Optional[Int] = field(
@@ -757,7 +757,7 @@ class IvlMo(SxcmMo):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 355,
         }
     )
     high: List[IvxbMo] = field(
@@ -766,7 +766,7 @@ class IvlMo(SxcmMo):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 348,
         }
     )
     center: Optional[Mo] = field(
@@ -809,7 +809,7 @@ class IvlPq(SxcmPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 60,
         }
     )
     high: List[IvxbPq] = field(
@@ -818,7 +818,7 @@ class IvlPq(SxcmPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 53,
         }
     )
     center: Optional[Pq] = field(
@@ -861,7 +861,7 @@ class IvlReal(SxcmReal):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 317,
         }
     )
     high: List[IvxbReal] = field(
@@ -870,7 +870,7 @@ class IvlReal(SxcmReal):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 310,
         }
     )
     center: Optional[Real] = field(
@@ -1046,7 +1046,7 @@ class IvlPpdPq(SxcmPpdPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 204,
         }
     )
     high: List[IvxbPpdPq] = field(
@@ -1055,7 +1055,7 @@ class IvlPpdPq(SxcmPpdPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 197,
         }
     )
     center: Optional[PpdPq] = field(
@@ -1098,7 +1098,7 @@ class IvlPpdTs(SxcmPpdTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 154,
         }
     )
     high: List[IvxbPpdTs] = field(
@@ -1107,7 +1107,7 @@ class IvlPpdTs(SxcmPpdTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequential": True,
+            "sequence": 147,
         }
     )
     center: Optional[PpdTs] = field(

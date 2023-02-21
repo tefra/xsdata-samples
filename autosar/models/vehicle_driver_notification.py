@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class VehicleDriverNotification:
     """
-    This meta-class provides the ability to configure a notification of the
-    vehicle driver with respect to the update of vehicle software.
+    This meta-class provides the ability to configure a notification of the vehicle
+    driver with respect to the update of vehicle software.
 
     :ivar approval_required: This attribute controls whether approval is
         required for the driver notification.

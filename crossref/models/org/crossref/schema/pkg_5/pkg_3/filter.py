@@ -6,8 +6,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Filter:
     """The filter element is used to disambiguate content in situations where
-    multiple publishers share the same host (e.g. when on an aggregated
-    platform).
+    multiple publishers share the same host (e.g. when on an aggregated platform).
 
     It should contain a substring of the path that can be used to
     uniquely identify a publisher's or publication's content. For

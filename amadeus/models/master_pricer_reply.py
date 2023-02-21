@@ -265,8 +265,7 @@ class BaggageDetailsType:
 @dataclass
 class BagtagDetailsType:
     """
-    To identify baggage by company identification, serial numbers, and
-    destination.
+    To identify baggage by company identification, serial numbers, and destination.
 
     :ivar identifier: Identifier
     :ivar number: Number
@@ -986,8 +985,7 @@ class DataInformationType:
 @dataclass
 class DataTypeInformationType:
     """
-    To identify the type of data to be sent and to qualify the data when
-    required.
+    To identify the type of data to be sent and to qualify the data when required.
 
     :ivar sub_type: service group/sub-group/sub-code information
     :ivar option: Status (automated, manually added, exempted). Default
@@ -1202,8 +1200,8 @@ class DiscountPenaltyInformationType:
 @dataclass
 class DiscountPenaltyMonetaryInformationType:
     """
-    To specify the type of discount and penalty information, the monetary
-    amount, and associated information.
+    To specify the type of discount and penalty information, the monetary amount,
+    and associated information.
 
     :ivar fee_type: Type of discount/penalty
     :ivar fee_amount_type: The amount Type can be a percentage or an
@@ -1254,8 +1252,8 @@ class DiscountPenaltyMonetaryInformationType:
 @dataclass
 class DummySegmentTypeI:
     """
-    To serve the purpose of a mandatory segment at the beginning of a group and
-    to avoid segment collision.
+    To serve the purpose of a mandatory segment at the beginning of a group and to
+    avoid segment collision.
     """
 
 
@@ -1618,8 +1616,8 @@ class FreeTextQualificationType:
 @dataclass
 class FreeTextQualificationTypeI:
     """
-    To specify the type, purpose, and language of free text and whether any
-    action is required.
+    To specify the type, purpose, and language of free text and whether any action
+    is required.
 
     :ivar text_subject_qualifier: Text subject qualifier
     """
@@ -3177,8 +3175,8 @@ class StatusDetailsType:
 @dataclass
 class StatusDetailsType256255C:
     """
-    To specify a status, the action to be taken, and an additional
-    qualification of the status.
+    To specify a status, the action to be taken, and an additional qualification of
+    the status.
 
     :ivar indicator: list of status/qualifiers Either His for Historical
         or     Crt for Current
@@ -3541,7 +3539,7 @@ class ConversionRateTypeI78562S:
 @dataclass
 class DateAndTimeInformationType:
     """
-    not the standard only used in fare quote message.
+    Not the standard only used in fare quote message.
 
     :ivar stop_details: Details on date and time
     """
@@ -4745,8 +4743,8 @@ class ReferenceInfoType:
 @dataclass
 class ReferenceInfoType133176S:
     """
-    To specify an association between references given to travelers, to
-    products, to services.
+    To specify an association between references given to travelers, to products,
+    to services.
 
     :ivar referencing_detail: Referencing details
     """
@@ -4830,8 +4828,8 @@ class ReferenceInfoType165972S:
 @dataclass
 class ReferenceInfoType176658S:
     """
-    To specify an association between references given to travelers, to
-    products, to services.
+    To specify an association between references given to travelers, to products,
+    to services.
 
     :ivar referencing_detail: Referencing details
     """
@@ -4905,8 +4903,7 @@ class SequenceDetailsTypeU:
 @dataclass
 class SpecialRequirementsDetailsType:
     """
-    To specify special requests or service s information relating to a
-    traveller.
+    To specify special requests or service s information relating to a traveller.
 
     :ivar service_requirements_info: To specify the Service Requirement
         of the customer
@@ -4935,8 +4932,8 @@ class SpecialRequirementsDetailsType:
 @dataclass
 class SpecificDataInformationType:
     """
-    To specify miscellaneous data by first identifying the type of data to be
-    sent and then the actual data.
+    To specify miscellaneous data by first identifying the type of data to be sent
+    and then the actual data.
 
     :ivar data_type_information: Carrier fee description
     :ivar data_information: Data information
@@ -5051,8 +5048,7 @@ class TaxType:
 @dataclass
 class TransportIdentifierType:
     """
-    To specify the transport service(s) which is /are to be updated or
-    cancelled.
+    To specify the transport service(s) which is /are to be updated or cancelled.
 
     :ivar company_identification: Company identification
     """
@@ -5069,8 +5065,8 @@ class TransportIdentifierType:
 @dataclass
 class TravelProductType:
     """
-    Contains flight travel (date, time, flight number,...) and posting
-    avaibility information.
+    Contains flight travel (date, time, flight number,...) and posting avaibility
+    information.
 
     :ivar product_date_time: Date and time of departure and arrival
     :ivar location: Location of departure and arrival

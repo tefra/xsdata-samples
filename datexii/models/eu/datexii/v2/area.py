@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class Area(Location):
     """
     A geographic or geometric defined area which may be qualified by height
-    information to provide additional geospatial discrimination (e.g. for snow
-    in an area but only above a certain altitude).
+    information to provide additional geospatial discrimination (e.g. for snow in
+    an area but only above a certain altitude).
     """
     alert_carea: Optional[AlertCArea] = field(
         default=None,

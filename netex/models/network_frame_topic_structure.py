@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from xsdata.models.datatype import XmlDateTime
 from .alternative_texts_rel_structure import (
     AvailabilityCondition,
@@ -32,44 +32,38 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    current: Optional[EmptyType2] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "Current",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    changed_since: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "ChangedSince",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    current_at: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "CurrentAt",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    historic_between: Optional[ClosedTimestampRangeStructure] = field(
-        default=None,
-        metadata={
-            "name": "HistoricBetween",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    selection_validity_conditions: Optional["NetworkFrameTopicStructure.SelectionValidityConditions"] = field(
-        default=None,
-        metadata={
-            "name": "selectionValidityConditions",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Current",
+                    "type": EmptyType2,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChangedSince",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CurrentAt",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HistoricBetween",
+                    "type": ClosedTimestampRangeStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "selectionValidityConditions",
+                    "type": Type["NetworkFrameTopicStructure.SelectionValidityConditions"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 5,
         }
     )
     type_of_frame_ref: Optional[TypeOfFrameRef] = field(
@@ -80,7 +74,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice_1: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TrafficStatus(BasicData):
     """
-    The status of traffic conditions on a specific section or at a specific
-    point on the road network.
+    The status of traffic conditions on a specific section or at a specific point
+    on the road network.
 
     :ivar traffic_trend_type: A characterization of the trend in the
         traffic conditions at the specified location and direction.

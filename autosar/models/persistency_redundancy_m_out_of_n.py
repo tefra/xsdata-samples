@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PersistencyRedundancyMOutOfN:
-    """This meta-class provides the ability to describe redundancy via an "M
-    out of N" approach.
+    """This meta-class provides the ability to describe redundancy via an "M out of
+    N" approach.
 
     In this case N is the number of copies created and M is the minimum
     number of identical copies to justify a reliable read access to the

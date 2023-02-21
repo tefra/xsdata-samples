@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
     """
-    the openLR method of areadefinition by providing a rectangular shape
-    defined by two geo-coordinate pairs.
+    The openLR method of areadefinition by providing a rectangular shape defined by
+    two geo-coordinate pairs.
     """
     openlr_rectangle: Optional[OpenlrRectangle] = field(
         default=None,

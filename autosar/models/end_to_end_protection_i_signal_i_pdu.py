@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EndToEndProtectionISignalIPdu:
     """It is possible to protect the inter-ECU data exchange of safety-related
-    ISignalGroups at the level of COM IPdus using protection mechanisms
-    provided by E2E Library.
+    ISignalGroups at the level of COM IPdus using protection mechanisms provided by
+    E2E Library.
 
     For each ISignalGroup to be protected, a separate
     EndToEndProtectionISignalIPdu element shall be created within the

@@ -34,8 +34,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyKeyValuePair:
     """
-    This meta-class represents the ability to formally model a key-value pair
-    in the context of the deployment of persistency.
+    This meta-class represents the ability to formally model a key-value pair in
+    the context of the deployment of persistency.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

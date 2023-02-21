@@ -9,8 +9,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class AlertCPoint:
     """
     A single point on the road network defined by reference to a pre-defined
-    ALERT-C location table and which has an associated direction of traffic
-    flow.
+    ALERT-C location table and which has an associated direction of traffic flow.
 
     :ivar alert_clocation_country_code: EBU country code.
     :ivar alert_clocation_table_number: Number allocated to an ALERT-C

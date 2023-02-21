@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class KeepWithPreviousEnum:
     """
-    This enumerator specifies a page break policy by controlling blocks which
-    shall be kept together.
+    This enumerator specifies a page break policy by controlling blocks which shall
+    be kept together.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

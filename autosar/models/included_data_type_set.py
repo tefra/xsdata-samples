@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IncludedDataTypeSet:
-    """An includedDataTypeSet declares that a set of AutosarDataType is used by
-    a basic software module or a software component for its implementation and
-    the AutosarDataType becomes part of the contract.
+    """An includedDataTypeSet declares that a set of AutosarDataType is used by a
+    basic software module or a software component for its implementation and the
+    AutosarDataType becomes part of the contract.
 
     This information is required if the AutosarDataType is not used for
     any DataPrototype owned by this software component or if the

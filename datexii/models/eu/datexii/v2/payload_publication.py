@@ -11,9 +11,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PayloadPublication:
     """
-    A payload publication of traffic related information or associated
-    management information created at a specific point in time that can be
-    exchanged via a DATEX II interface.
+    A payload publication of traffic related information or associated management
+    information created at a specific point in time that can be exchanged via a
+    DATEX II interface.
 
     :ivar feed_description: A description of the information which is to
         be found in the publications originating from the particular

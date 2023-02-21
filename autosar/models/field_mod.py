@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Field:
-    """This meta-class represents the ability to define a piece of data that
-    can be accessed with read and/or write semantics.
+    """This meta-class represents the ability to define a piece of data that can be
+    accessed with read and/or write semantics.
 
     It is also possible to generate a notification if the value of the
     data changes.

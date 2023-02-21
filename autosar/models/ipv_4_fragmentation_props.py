@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Ipv4FragmentationProps:
     """
-    Specifies the configuration options for IPv4 packet
-    fragmentation/reassembly.
+    Specifies the configuration options for IPv4 packet fragmentation/reassembly.
 
     :ivar tcp_ip_ip_fragmentation_rx_enabled: Enables (TRUE) or disables
         (FALSE) support for reassembling of incoming datagrams that are

@@ -12,8 +12,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CppTemplateArgument:
     """
-    This meta-class has the ability to define properties for template
-    arguments.
+    This meta-class has the ability to define properties for template arguments.
 
     :ivar allocator_ref: This reference identifies the applicable
         allocator.

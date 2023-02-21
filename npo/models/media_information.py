@@ -6,8 +6,8 @@ __NAMESPACE__ = "urn:vpro:media:2009"
 
 @dataclass
 class MediaInformation(MediaTableType):
-    """Base element only used when programs, groups and schedule information
-    need to be bundled in one XML.
+    """Base element only used when programs, groups and schedule information need
+    to be bundled in one XML.
 
     E.g. when distributing to cable companies.
     """

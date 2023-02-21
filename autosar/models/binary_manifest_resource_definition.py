@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BinaryManifestResourceDefinition:
     """
-    This meta-class represents the ability to specify a resource definition
-    that provides information that can be shared by al resources that refer to
-    the respective resource definition.
+    This meta-class represents the ability to specify a resource definition that
+    provides information that can be shared by al resources that refer to the
+    respective resource definition.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

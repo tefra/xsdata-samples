@@ -12,19 +12,21 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopPlaces_RelStructure"
 
-    stop_place_ref: Optional[StopPlaceRef] = field(
+    stop_place_ref_or_stop_place: Optional[object] = field(
         default=None,
         metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place: Optional[StopPlace] = field(
-        default=None,
-        metadata={
-            "name": "StopPlace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlace",
+                    "type": StopPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EnterExitTimeout:
     """
-    This meta-class represents the ability to specify a pair of timeouts, one
-    for entering, and one for exiting.
+    This meta-class represents the ability to specify a pair of timeouts, one for
+    entering, and one for exiting.
 
     :ivar enter_timeout_value: This attribute represents the value of
         the enter timeout in seconds.

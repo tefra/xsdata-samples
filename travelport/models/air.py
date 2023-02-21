@@ -848,8 +848,8 @@ class BookingCode:
 
 @dataclass
 class BookingCodeInfo:
-    """Details Cabin class info and class of service information with
-    availability counts.
+    """Details Cabin class info and class of service information with availability
+    counts.
 
     Only provided on search results and grouped by Cabin class
 
@@ -1869,8 +1869,8 @@ class ExemptObfee:
 @dataclass
 class ExemptTaxes:
     """
-    Request tax exemption for specific tax category and/or all taxes of a
-    specific country.
+    Request tax exemption for specific tax category and/or all taxes of a specific
+    country.
 
     Parameters
     ----------
@@ -2472,8 +2472,8 @@ class FareRuleShortRef:
 
 @dataclass
 class FareRulesFilterCategory:
-    """Fare Rules Filter if requested will return rules for requested category
-    in the response.
+    """Fare Rules Filter if requested will return rules for requested category in
+    the response.
 
     Applicable for providers 1G,1V,1P,1J.
 
@@ -3944,8 +3944,8 @@ class PassengerDetailsRef:
 @dataclass
 class PassengerReceiptOverride:
     """
-    It is required when a passenger receipt is required immediately ,GDS
-    overrides the default value.
+    It is required when a passenger receipt is required immediately ,GDS overrides
+    the default value.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4531,8 +4531,7 @@ class PrintBlankFormItinerary:
 @dataclass
 class PromoCode:
     """
-    A container to specify Promotional code with Provider code and Supplier
-    code.
+    A container to specify Promotional code with Provider code and Supplier code.
 
     Parameters
     ----------
@@ -5109,8 +5108,7 @@ class SplitTicketingSearch:
 
 @dataclass
 class SponsoredFltInfo:
-    """This describes whether the segment is determined to be a sponsored
-    flight.
+    """This describes whether the segment is determined to be a sponsored flight.
 
     The SponsoredFltInfo node will only come back for Travelport UIs and
     not for other customers.
@@ -5352,8 +5350,8 @@ class TextInfo:
 
 @dataclass
 class TicketAgency:
-    """This modifier will override the pseudo of the ticketing agency found in
-    the AAT (TKAG).
+    """This modifier will override the pseudo of the ticketing agency found in the
+    AAT (TKAG).
 
     Used for all plating carrier validation.
 
@@ -6548,8 +6546,8 @@ class TypePricingMethod(Enum):
 
 
 class TypePrivateFare(Enum):
-    """List the types of private fares, Agency private fare, Airline private
-    Fare and Unknown.
+    """List the types of private fares, Agency private fare, Airline private Fare
+    and Unknown.
 
     Also, this enumaration list includes PrivateFare to indetify private
     fares for GDSs where we can not identify specific private fares.
@@ -6711,8 +6709,8 @@ class TypeTicketModifierAccountingType:
 @dataclass
 class TypeTicketModifierAmountType:
     """
-    Ticketing Modifier used to alter a fare amount before or during the
-    ticketing operation.
+    Ticketing Modifier used to alter a fare amount before or during the ticketing
+    operation.
 
     Parameters
     ----------
@@ -10325,8 +10323,8 @@ class FareSurcharge:
 @dataclass
 class FeeInfo(TypeFeeInfo):
     """
-    A generic type of fee for those charges which are incurred by the
-    passenger, but not necessarily shown on tickets.
+    A generic type of fee for those charges which are incurred by the passenger,
+    but not necessarily shown on tickets.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10334,10 +10332,10 @@ class FeeInfo(TypeFeeInfo):
 
 @dataclass
 class FlexExploreModifiers:
-    """This is the container for a set of modifiers which allow the user to
-    perform a special kind of low fare search, depicted as flex explore, based
-    on different parameters like Area, Zone, Country, State, Specific
-    locations, Distance around the actual destination of the itinerary.
+    """This is the container for a set of modifiers which allow the user to perform
+    a special kind of low fare search, depicted as flex explore, based on different
+    parameters like Area, Zone, Country, State, Specific locations, Distance around
+    the actual destination of the itinerary.
 
     Applicable for providers 1G,1V,1P
 
@@ -10959,8 +10957,8 @@ class OptionalServiceModifiers:
 
 @dataclass
 class OriginalItineraryDetails:
-    """Used for rapid reprice to provide additional information about the
-    original itinerary.
+    """Used for rapid reprice to provide additional information about the original
+    itinerary.
 
     Providers: 1G/1V/1P/1S/1A
 
@@ -12365,8 +12363,8 @@ class Text(TypeTextElement):
 
 @dataclass
 class TicketFailureInfo:
-    """Will be optionally returned as part of AirTicketingRsp if one or all
-    ticket requests fail.
+    """Will be optionally returned as part of AirTicketingRsp if one or all ticket
+    requests fail.
 
     Atrributes are faiilure code, failure message, and passenger
     reference key. Passenger name is a child element.
@@ -12567,8 +12565,8 @@ class VoidResultInfo:
 @dataclass
 class TypeFarePenalty:
     """
-    Penalty applicable on a Fare for change/ cancellation etc- expressed in
-    both Money and Percentage.
+    Penalty applicable on a Fare for change/ cancellation etc- expressed in both
+    Money and Percentage.
 
     Parameters
     ----------
@@ -12821,8 +12819,8 @@ class ApisrequirementsList:
 @dataclass
 class AirExchangeBundle:
     """
-    Bundle exchange, pricing, and penalty information for one ticket number
-    Used both in request and response.
+    Bundle exchange, pricing, and penalty information for one ticket number Used
+    both in request and response.
 
     Parameters
     ----------
@@ -13238,8 +13236,8 @@ class AirLegModifiers:
 @dataclass
 class AirRefundBundle:
     """
-    Bundle refund, pricing, and penalty information for one ticket number Used
-    both in request and response.
+    Bundle refund, pricing, and penalty information for one ticket number Used both
+    in request and response.
 
     Parameters
     ----------
@@ -13769,8 +13767,8 @@ class AirVoidDocumentReq(BaseReq):
 @dataclass
 class AlternateLocationDistanceList:
     """
-    Provides the Distance Information between Original Search Airports or City
-    to Alternate Search Airports.
+    Provides the Distance Information between Original Search Airports or City to
+    Alternate Search Airports.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16053,9 +16051,8 @@ class RuleLengthOfStay:
 @dataclass
 class TcrexchangeBundle:
     """
-    Bundle exchange, pricing, and penalty information for one ticketless
-    carrier reservation Used in AirExchangeReq request and AirExchangeQuoteRsp
-    response.
+    Bundle exchange, pricing, and penalty information for one ticketless carrier
+    reservation Used in AirExchangeReq request and AirExchangeQuoteRsp response.
 
     Parameters
     ----------
@@ -19759,8 +19756,7 @@ class AirFareDisplayReq(BaseReq):
 @dataclass
 class AirMerchandisingDetailsReq(BaseReq):
     """
-    Request to retrieve brand details and optional services included in the
-    brand.
+    Request to retrieve brand details and optional services included in the brand.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20160,8 +20156,8 @@ class EmdissuanceRsp(BaseRsp):
 @dataclass
 class EmdretrieveRsp(BaseRsp):
     """
-    Electronic Miscellaneous Document list and detail retrieve
-    response.Supported providers are 1G/1V/1P/1J.
+    Electronic Miscellaneous Document list and detail retrieve response.Supported
+    providers are 1G/1V/1P/1J.
 
     Parameters
     ----------
@@ -22269,8 +22265,7 @@ class AirItinerary:
 @dataclass
 class AirMerchandisingDetailsRsp(BaseRsp):
     """
-    Response for retrieved brand details and optional services included in
-    them.
+    Response for retrieved brand details and optional services included in them.
 
     Parameters
     ----------
@@ -22424,8 +22419,8 @@ class AirSegmentList:
 @dataclass
 class AirSolution:
     """
-    Defines an air solution that is comprised of an itinerary (the segments)
-    along with the passengers.
+    Defines an air solution that is comprised of an itinerary (the segments) along
+    with the passengers.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22484,8 +22479,7 @@ class BrandList:
 @dataclass
 class ExchangeAirSegment:
     """
-    A container to define segment and cabin class in order to process an
-    exchange.
+    A container to define segment and cabin class in order to process an exchange.
 
     Parameters
     ----------
@@ -23210,8 +23204,8 @@ class SeatMapRsp(BaseRsp):
 @dataclass
 class TcrrefundBundle:
     """
-    Bundle refund, pricing, and penalty information for a TCR reservation Used
-    both in request and response.
+    Bundle refund, pricing, and penalty information for a TCR reservation Used both
+    in request and response.
 
     Parameters
     ----------
@@ -23342,8 +23336,8 @@ class AirExchangeMultiQuoteOption:
 @dataclass
 class AirMerchandisingOfferAvailabilityReq(BaseReq):
     """
-    Check with the supplier whether or not the reservation or air solution
-    supports any merchandising offerings.
+    Check with the supplier whether or not the reservation or air solution supports
+    any merchandising offerings.
 
     Parameters
     ----------
@@ -26769,9 +26763,9 @@ class AirRetrieveDocumentRsp(BaseRsp):
 @dataclass
 class AirScheduleChangedInfo:
     """
-    Returned when the requested schedule does not match the host system
-    schedule Contents will be a new AirPricingSolution that contains all the
-    new schedule information as well as the pricing information.
+    Returned when the requested schedule does not match the host system schedule
+    Contents will be a new AirPricingSolution that contains all the new schedule
+    information as well as the pricing information.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26788,8 +26782,8 @@ class AirScheduleChangedInfo:
 
 @dataclass
 class AirSolutionChangedInfo:
-    """If RetainReservation is None, this will contain the new values returned
-    from the provider.
+    """If RetainReservation is None, this will contain the new values returned from
+    the provider.
 
     If RetainReservation is Price, Schedule, or Both and there is a
     price/schedule change, this will contain the new values that were
@@ -27560,8 +27554,8 @@ class AirUpsellSearchRsp(BaseAirPriceRsp):
 @dataclass
 class LowFareSearchAsynchRsp(AirSearchRsp):
     """
-    Asynchronous Low Fare Search Response contains only the 1st Provider
-    response unless time out occurs.
+    Asynchronous Low Fare Search Response contains only the 1st Provider response
+    unless time out occurs.
 
     Parameters
     ----------

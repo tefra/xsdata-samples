@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class TransmissionModeDeclaration:
-    """AUTOSAR COM provides the possibility to define two different
-    TRANSMISSION MODES (True and False) for each I-PDU.
+    """AUTOSAR COM provides the possibility to define two different TRANSMISSION
+    MODES (True and False) for each I-PDU.
 
     As TransmissionMode selector the signal content can be evaluated via
     transmissionModeCondition (implemented directly in the COM module)

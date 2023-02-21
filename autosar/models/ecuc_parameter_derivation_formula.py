@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class EcucParameterDerivationFormula:
     """
-    This formula is intended to specify how an ecu parameter can be derived
-    from other information in the Autosar Templates.
+    This formula is intended to specify how an ecu parameter can be derived from
+    other information in the Autosar Templates.
 
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if

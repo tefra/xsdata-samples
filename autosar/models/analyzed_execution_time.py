@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AnalyzedExecutionTime:
     """
-    AnalyzedExecutionTime provides an analytic method for specifying the best
-    and worst case execution time.
+    AnalyzedExecutionTime provides an analytic method for specifying the best and
+    worst case execution time.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

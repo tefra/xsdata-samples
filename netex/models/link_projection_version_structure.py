@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .link_ref_structure import LinkRefStructure
 from .point_on_link_by_value_structure import PointOnLinkByValueStructure
 from .point_on_link_ref_structure_1 import PointOnLinkRefStructure1
@@ -29,35 +29,41 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    start_point_on_link_ref: Optional[PointOnLinkRefStructure1] = field(
-        default=None,
+    start_point_on_link_ref_or_start_point_on_link_by_value: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "StartPointOnLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StartPointOnLinkRef",
+                    "type": PointOnLinkRefStructure1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartPointOnLinkByValue",
+                    "type": PointOnLinkByValueStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
-    start_point_on_link_by_value: Optional[PointOnLinkByValueStructure] = field(
-        default=None,
+    end_point_on_link_ref_or_end_point_on_link_by_value: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "StartPointOnLinkByValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_point_on_link_ref: Optional[PointOnLinkRefStructure1] = field(
-        default=None,
-        metadata={
-            "name": "EndPointOnLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    end_point_on_link_by_value: Optional[PointOnLinkByValueStructure] = field(
-        default=None,
-        metadata={
-            "name": "EndPointOnLinkByValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "EndPointOnLinkRef",
+                    "type": PointOnLinkRefStructure1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndPointOnLinkByValue",
+                    "type": PointOnLinkByValueStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

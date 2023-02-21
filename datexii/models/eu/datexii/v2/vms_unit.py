@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsUnit(VmsSetting):
     """
-    Status of a VMS unit which may control one or more variable message signs
-    on a single gantry or on different gantries.
+    Status of a VMS unit which may control one or more variable message signs on a
+    single gantry or on different gantries.
 
     :ivar vms_unit_table_reference: A reference to a versioned VMS Unit
         table.

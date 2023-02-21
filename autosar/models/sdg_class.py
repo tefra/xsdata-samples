@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SdgClass:
-    """An SdgClass specifies the name and structure of the SDG that may be used
-    to store proprietary data in an AUTOSAR model.
+    """An SdgClass specifies the name and structure of the SDG that may be used to
+    store proprietary data in an AUTOSAR model.
 
     The SdgClass is similar to an UML stereotype.
 

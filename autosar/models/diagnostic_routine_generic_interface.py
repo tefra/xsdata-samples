@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticRoutineGenericInterface:
     """
-    This meta-class represents the ability to implement a generic Routine-
-    focused PortInterface for diagnostics on the adaptive platform.
+    This meta-class represents the ability to implement a generic Routine-focused
+    PortInterface for diagnostics on the adaptive platform.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

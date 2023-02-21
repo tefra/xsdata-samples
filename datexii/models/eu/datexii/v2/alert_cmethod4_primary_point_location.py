@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class AlertCMethod4PrimaryPointLocation:
-    """The point (called Primary point) which is either a single point or at
-    the downstream end of a linear road section.
+    """The point (called Primary point) which is either a single point or at the
+    downstream end of a linear road section.
 
     The point is specified by a reference to a point in a pre-defined
     ALERT-C location table plus a non-negative offset distance.

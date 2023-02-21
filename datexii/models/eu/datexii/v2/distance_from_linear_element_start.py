@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class DistanceFromLinearElementStart(DistanceAlongLinearElement):
     """
-    Distance of a point along a linear element measured from the start node of
-    the linear element, where start node is relative to the element definition
-    rather than the direction of traffic flow.
+    Distance of a point along a linear element measured from the start node of the
+    linear element, where start node is relative to the element definition rather
+    than the direction of traffic flow.
 
     :ivar distance_along: A measure of distance along a linear element.
     :ivar distance_from_linear_element_start_extension:

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .dated_passing_time_versioned_child_structure import DatedPassingTimeVersionedChildStructure
 from .headway_interval_structure import HeadwayIntervalStructure
@@ -12,60 +12,48 @@ class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildS
     class Meta:
         name = "ObservedPassingTime_VersionedChildStructure"
 
-    actual_arrival_time: Optional[XmlTime] = field(
-        default=None,
+    choice: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ActualArrivalTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    arrival_day_offset: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "ArrivalDayOffset",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_departure_time: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "name": "ActualDepartureTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    departure_day_offset: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "DepartureDayOffset",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_waiting_time: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "ActualWaitingTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    actual_nonstop_passing_time: Optional[XmlTime] = field(
-        default=None,
-        metadata={
-            "name": "ActualNonstopPassingTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passing_time_day_offset: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "PassingTimeDayOffset",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ActualArrivalTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ArrivalDayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActualDepartureTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DepartureDayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActualWaitingTime",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActualNonstopPassingTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassingTimeDayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 7,
         }
     )
     actual_headway: Optional[HeadwayIntervalStructure] = field(

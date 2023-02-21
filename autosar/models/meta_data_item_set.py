@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class MetaDataItemSet:
     """
-    This meta-class represents the ability to define a set of meta-data items
-    to be used in SenderReceiverInterfaces.
+    This meta-class represents the ability to define a set of meta-data items to be
+    used in SenderReceiverInterfaces.
 
     :ivar data_element_refs: This reference identifies the dataElement
         for which the ordered list of meta-data items is defined.

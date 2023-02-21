@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MicrogramsConcentrationValue(DataValue):
     """
-    A measured or calculated value of concentration of a substance in
-    micrograms per unit volume.
+    A measured or calculated value of concentration of a substance in micrograms
+    per unit volume.
 
     :ivar micrograms_concentration: A value of the amount of a substance
         in a given volume (concentration) expressed in µg/m3

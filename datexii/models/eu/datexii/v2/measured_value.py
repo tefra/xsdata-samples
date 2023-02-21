@@ -12,10 +12,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class MeasuredValue:
     """
-    Contains optional characteristics for the specific measured value (indexed
-    to correspond with the defined characteristics of the measurement at the
-    referenced measurement site) which override the static characteristics
-    defined in the MeasurementSiteTable.
+    Contains optional characteristics for the specific measured value (indexed to
+    correspond with the defined characteristics of the measurement at the
+    referenced measurement site) which override the static characteristics defined
+    in the MeasurementSiteTable.
 
     :ivar measurement_equipment_type_used: The type of equipment used to
         gather the raw information from which the data values are

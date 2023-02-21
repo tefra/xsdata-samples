@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RxIdentifierRange:
     """Optional definition of a CanId range to reduce the effort of specifying
-    every possible FrameTriggering within the defined Id range during
-    reception.
+    every possible FrameTriggering within the defined Id range during reception.
 
     All frames received within a range are mapped to the same Pdu that
     is passed to a upper layer module (e.g. Nm, CDD, PduR).

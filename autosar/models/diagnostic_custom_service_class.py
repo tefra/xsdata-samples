@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticCustomServiceClass:
-    """This represents the ability to define a custom diagnostic service class
-    and assign an ID to it.
+    """This represents the ability to define a custom diagnostic service class and
+    assign an ID to it.
 
     Further configuration is not foreseen from the point of view of the
     diagnostic extract and consequently needs to be done on the level of

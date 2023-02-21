@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .data_name_spaces_structure import DataNameSpacesStructure
 from .delivery_method_enumeration import DeliveryMethodEnumeration
@@ -91,20 +91,23 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    wgs_decimal_degrees: Optional[EmptyType1] = field(
-        default=None,
+    wgs_decimal_degrees_or_gml_coordinate_format: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "WgsDecimalDegrees",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        }
-    )
-    gml_coordinate_format: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GmlCoordinateFormat",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WgsDecimalDegrees",
+                    "type": EmptyType1,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+                {
+                    "name": "GmlCoordinateFormat",
+                    "type": str,
+                    "namespace": "http://www.siri.org.uk/siri",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     distance_units: Optional[str] = field(

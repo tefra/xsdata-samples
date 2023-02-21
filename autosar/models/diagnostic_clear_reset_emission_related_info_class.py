@@ -22,8 +22,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DiagnosticClearResetEmissionRelatedInfoClass:
     """
     This meta-class represents the ability to define common properties for all
-    instances of the "Clear Reset Emission Related Data" OBD diagnostic
-    service.
+    instances of the "Clear Reset Emission Related Data" OBD diagnostic service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

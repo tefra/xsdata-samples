@@ -7,6 +7,5 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 @dataclass
 class ChecksMadeByType(BaseIdentifiedComponentType):
     """
-    The person or organisation that made the checks against the business
-    object.
+    The person or organisation that made the checks against the business object.
     """

@@ -5,8 +5,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 @dataclass
 class ConferenceAcronym:
-    """The popularly known as or jargon name (e.g. SIGGRAPH for "Special
-    Interest Group on Computer Graphics").
+    """The popularly known as or jargon name (e.g. SIGGRAPH for "Special Interest
+    Group on Computer Graphics").
 
     Authors commonly cite the conference acronym rather than the full
     conference or proceedings name, so it is best to include this

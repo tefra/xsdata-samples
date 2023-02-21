@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DoIpRoutingActivation:
-    """This meta-class defines a DoIP routing activation possibility that
-    activates the routing to the referenced doIPTargetAddress.
+    """This meta-class defines a DoIP routing activation possibility that activates
+    the routing to the referenced doIPTargetAddress.
 
     This means that the diagnostic request messages related to the
     specified doIPTargetAddress received by socketConnections that are

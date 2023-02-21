@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ArbitraryEventTriggering:
-    """The ArbitraryEventTriggering describes that an event occurs
-    occasionally, singly, irregularly or randomly.
+    """The ArbitraryEventTriggering describes that an event occurs occasionally,
+    singly, irregularly or randomly.
 
     The primary purpose of this event triggering is to abstract event
     occurrences captured by data acquisition tools (background debugger,

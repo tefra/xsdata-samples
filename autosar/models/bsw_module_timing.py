@@ -55,8 +55,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswModuleTiming:
-    """A model element used to define timing descriptions and constraints for
-    the BswInternalBehavior of one BSW Module.
+    """A model element used to define timing descriptions and constraints for the
+    BswInternalBehavior of one BSW Module.
 
     Thereby, for each BswInternalBehavior a separate timing can be
     specified. A constraint defined at this level holds true for all

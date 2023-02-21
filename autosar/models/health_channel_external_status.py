@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class HealthChannelExternalStatus:
     """
-    This element defines a health channel representing the status of an
-    external health channel.
+    This element defines a health channel representing the status of an external
+    health channel.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

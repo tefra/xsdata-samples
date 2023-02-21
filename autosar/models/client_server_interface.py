@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientServerInterface:
     """
-    A client/server interface declares a number of operations that can be
-    invoked on a server by a client.
+    A client/server interface declares a number of operations that can be invoked
+    on a server by a client.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

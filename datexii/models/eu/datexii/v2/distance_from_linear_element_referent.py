@@ -10,10 +10,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
     """
-    Distance of a point along a linear element measured from a "from referent"
-    on the linear element, in the sense relative to the linear element
-    definition rather than the direction of traffic flow or optionally towards
-    a "towards referent".
+    Distance of a point along a linear element measured from a "from referent" on
+    the linear element, in the sense relative to the linear element definition
+    rather than the direction of traffic flow or optionally towards a "towards
+    referent".
 
     :ivar distance_along: A measure of distance along a linear element.
     :ivar from_referent: A known location along the linear element from

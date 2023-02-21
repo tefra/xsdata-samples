@@ -189,7 +189,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 98896,
         }
     )
     sw_record_layout_v: List[SwRecordLayoutV] = field(
@@ -198,7 +198,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-V",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 98896,
         }
     )
     sw_record_layout_group: List["SwRecordLayoutGroup"] = field(
@@ -207,7 +207,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 98896,
         }
     )
     s: Optional[str] = field(

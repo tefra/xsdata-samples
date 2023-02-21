@@ -49,7 +49,7 @@ class Ack:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -57,7 +57,7 @@ class Ack:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -65,21 +65,21 @@ class Ack:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     p: List[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     ref_list: List[RefList] = field(
@@ -87,7 +87,7 @@ class Ack:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 4906,
         }
     )
     content_type: Optional[str] = field(

@@ -55,9 +55,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SystemTiming:
-    """A model element used to refine timing descriptions and constraints (from
-    a VfbTiming) at System level, utilizing information about topology,
-    software deployment, and signal mapping described in the System Template.
+    """A model element used to refine timing descriptions and constraints (from a
+    VfbTiming) at System level, utilizing information about topology, software
+    deployment, and signal mapping described in the System Template.
 
     TimingDescriptions aggregated by SystemTiming are restricted to
     events which are derived from the class TDEventVfb,

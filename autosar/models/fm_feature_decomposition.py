@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FmFeatureDecomposition:
-    """A FMFeatureDecomposition describes dependencies between a list of
-    features and their parent feature (i.e., the FMFeature that aggregates the
+    """A FMFeatureDecomposition describes dependencies between a list of features
+    and their parent feature (i.e., the FMFeature that aggregates the
     FMFeatureDecomposition).
 
     The kind of dependency is defined by the attribute category.

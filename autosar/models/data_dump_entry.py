@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataDumpEntry:
     """
-    This service is reserved for initial configuration of a slave node by the
-    slave node supplier and the format of this message is supplier specific.
+    This service is reserved for initial configuration of a slave node by the slave
+    node supplier and the format of this message is supplier specific.
 
     :ivar introduction: This represents introductory documentation about
         the schedule table entry.

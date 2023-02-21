@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GlobalSupervision:
     """
-    This element defines a collection of LocalSupervisions in order to provide
-    a aggregated supervision state.
+    This element defines a collection of LocalSupervisions in order to provide a
+    aggregated supervision state.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

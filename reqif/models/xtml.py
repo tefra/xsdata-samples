@@ -4026,7 +4026,7 @@ class XhtmlDlType:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "sequential": True,
+            "sequence": 26,
         }
     )
     dd: List[XhtmlDdType] = field(
@@ -4034,7 +4034,7 @@ class XhtmlDlType:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "sequential": True,
+            "sequence": 26,
         }
     )
     space: SpaceValue = field(
@@ -4729,7 +4729,7 @@ class XhtmlTrType:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "sequential": True,
+            "sequence": 95,
         }
     )
     td: List[XhtmlTdType] = field(
@@ -4737,7 +4737,7 @@ class XhtmlTrType:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-            "sequential": True,
+            "sequence": 95,
         }
     )
     space: SpaceValue = field(

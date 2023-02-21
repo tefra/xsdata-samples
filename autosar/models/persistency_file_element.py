@@ -20,9 +20,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PersistencyFileElement:
     """
-    This meta-class has the ability to represent a file at design time such
-    that it is possible to configure the behavior for accessing the represented
-    file at run-time.
+    This meta-class has the ability to represent a file at design time such that it
+    is possible to configure the behavior for accessing the represented file at
+    run-time.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

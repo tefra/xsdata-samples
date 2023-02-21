@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DtcStatusChangeNotificationNeeds:
     """
-    This meta-class represents the needs of a software-component interested to
-    get information regarding any DTC status change.
+    This meta-class represents the needs of a software-component interested to get
+    information regarding any DTC status change.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

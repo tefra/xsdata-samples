@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .authority_ref import AuthorityRef
@@ -50,20 +50,23 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
-        default=None,
+    type_of_fare_product_ref_or_types_of_fare_product: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TypeOfFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    types_of_fare_product: Optional[TypeOfFareProductRefsRelStructure] = field(
-        default=None,
-        metadata={
-            "name": "typesOfFareProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfFareProductRef",
+                    "type": TypeOfFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "typesOfFareProduct",
+                    "type": TypeOfFareProductRefsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     authority_ref: Optional[AuthorityRef] = field(
@@ -154,28 +157,28 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments: Optional[GenericParameterAssignmentsRelStructure] = field(
-        default=None,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "validityParameterAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment: Optional[GenericParameterAssignment] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    generic_parameter_assignment_in_context: Optional[GenericParameterAssignmentInContext] = field(
-        default=None,
-        metadata={
-            "name": "GenericParameterAssignmentInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "validityParameterAssignments",
+                    "type": GenericParameterAssignmentsRelStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignment",
+                    "type": GenericParameterAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GenericParameterAssignmentInContext",
+                    "type": GenericParameterAssignmentInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     validable_elements: Optional[ValidableElementsRelStructure] = field(

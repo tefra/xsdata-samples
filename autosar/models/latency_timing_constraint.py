@@ -23,9 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class LatencyTimingConstraint:
-    """This constraint type restricts the time duration between the occurrence
-    of the stimulus and the occurrence of the corresponding response of that
-    chain.
+    """This constraint type restricts the time duration between the occurrence of
+    the stimulus and the occurrence of the corresponding response of that chain.
 
     Two latency constraint types are of interest for automotive systems.
     These are the age of a certain response and the reaction to a

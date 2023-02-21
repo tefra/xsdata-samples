@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AclRole:
-    """This meta class represents the ability to specify a particular role
-    which is used to grant access rights to AUTOSAR model.
+    """This meta class represents the ability to specify a particular role which is
+    used to grant access rights to AUTOSAR model.
 
     The purpose of this meta-class is to support the mutual agreements
     between the involved parties.

@@ -20,9 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class InternalTriggeringPoint:
     """
-    If a RunnableEntity owns an InternalTriggeringPoint it is entitled to
-    trigger the execution of RunnableEntities of the corresponding software-
-    component.
+    If a RunnableEntity owns an InternalTriggeringPoint it is entitled to trigger
+    the execution of RunnableEntities of the corresponding software-component.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

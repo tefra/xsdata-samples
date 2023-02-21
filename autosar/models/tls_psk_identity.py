@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TlsPskIdentity:
     """
-    This element is used to describe the pre-shared key shared during the
-    handshake among the communication parties, to establish a TLS connection if
-    the handshake is based on the existence of a pre-shared key.
+    This element is used to describe the pre-shared key shared during the handshake
+    among the communication parties, to establish a TLS connection if the handshake
+    is based on the existence of a pre-shared key.
 
     :ivar pre_shared_key_ref: This reference identifies the applicable
         cryptograhic key.

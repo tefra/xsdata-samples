@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientServerOperationMapping:
     """
-    Defines the mapping of two particular ClientServerOperations in context of
-    two different ClientServerInterfaces.
+    Defines the mapping of two particular ClientServerOperations in context of two
+    different ClientServerInterfaces.
 
     :ivar argument_mappings: Defines the mapping of two particular
         ArgumentDataPrototypes with unequal names or unequal semantic

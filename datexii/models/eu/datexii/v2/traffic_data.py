@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class TrafficData(BasicData):
     """
-    Measured or derived values relating to traffic or individual vehicle
-    movements on a specific section or at a specific point on the road network.
+    Measured or derived values relating to traffic or individual vehicle movements
+    on a specific section or at a specific point on the road network.
 
     :ivar for_vehicles_with_characteristics_of: Used to define the
         vehicle characteristics to which the TrafficValue is applicable

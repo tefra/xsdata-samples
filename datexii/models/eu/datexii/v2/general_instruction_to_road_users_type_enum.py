@@ -5,9 +5,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 class GeneralInstructionToRoadUsersTypeEnum(Enum):
     """
-    General instructions that may be issued to road users (specifically drivers
-    and sometimes passengers) by an operator or operational system in support
-    of network management activities or emergency situations.
+    General instructions that may be issued to road users (specifically drivers and
+    sometimes passengers) by an operator or operational system in support of
+    network management activities or emergency situations.
 
     :cvar ALLOW_EMERGENCY_VEHICLES_TO_PASS: Allow emergency vehicles to
         pass.

@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecurityEventFilterChain:
-    """This meta-class represents a configurable chain of filters used to
-    qualify security events.
+    """This meta-class represents a configurable chain of filters used to qualify
+    security events.
 
     The different filters of this filter chain are applied in the follow
     order: SecurityEventStateFilter, SecurityEventOneEveryNFilter,

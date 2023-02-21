@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .other_error import OtherError
@@ -71,36 +71,33 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error: Optional[CapabilityNotSupportedError] = field(
-            default=None,
+        choice: List[object] = field(
+            default_factory=list,
             metadata={
-                "name": "CapabilityNotSupportedError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            }
-        )
-        unknown_subscriber_error: Optional[UnknownSubscriberError] = field(
-            default=None,
-            metadata={
-                "name": "UnknownSubscriberError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            }
-        )
-        unknown_subscription_error: Optional[UnknownSubscriptionError] = field(
-            default=None,
-            metadata={
-                "name": "UnknownSubscriptionError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            }
-        )
-        other_error: Optional[OtherError] = field(
-            default=None,
-            metadata={
-                "name": "OtherError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CapabilityNotSupportedError",
+                        "type": CapabilityNotSupportedError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "UnknownSubscriberError",
+                        "type": UnknownSubscriberError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "UnknownSubscriptionError",
+                        "type": UnknownSubscriptionError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "OtherError",
+                        "type": OtherError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                ),
+                "max_occurs": 4,
             }
         )
         description: Optional[str] = field(

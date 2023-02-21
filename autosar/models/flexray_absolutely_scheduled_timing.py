@@ -9,8 +9,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlexrayAbsolutelyScheduledTiming:
-    """Each frame in FlexRay is identified by its slot id and communication
-    cycle.
+    """Each frame in FlexRay is identified by its slot id and communication cycle.
 
     A description is provided by the usage of AbsolutelyScheduledTiming.
     In the static segment a frame can be sent multiple times within one

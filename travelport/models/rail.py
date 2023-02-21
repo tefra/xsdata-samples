@@ -106,8 +106,8 @@ class JourneyRemark:
 @dataclass
 class OperatingCompany:
     """
-    A textual remark identifying the OperatingCompany/Train Service other than
-    BN orTL.
+    A textual remark identifying the OperatingCompany/Train Service other than BN
+    orTL.
 
     Parameters
     ----------
@@ -626,8 +626,8 @@ class RailSolutionChangedInfoReasonCode(Enum):
 @dataclass
 class RailSpecificSeatAssignment:
     """
-    Request object used to request a specific coach and seat number or a seat
-    near-to a specific seat number.
+    Request object used to request a specific coach and seat number or a seat near-
+    to a specific seat number.
 
     Parameters
     ----------
@@ -832,8 +832,7 @@ class TypeTransportMode(Enum):
 @dataclass
 class Characteristic:
     """
-    Defines coach characteristics such as accommodation class, smoking choice,
-    etc.
+    Defines coach characteristics such as accommodation class, smoking choice, etc.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2677,8 +2676,7 @@ class RailReservation(BaseReservation):
 @dataclass
 class SearchRailLeg:
     """
-    Holds Origin, Destination, and Departure times for a Rail Leg to search
-    for.
+    Holds Origin, Destination, and Departure times for a Rail Leg to search for.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2952,8 +2950,8 @@ class RailPricingSolution(TypeRailPricingSolution):
 
 @dataclass
 class RailSolutionChangedInfo:
-    """If RetainReservation is None, this will contain the new values returned
-    from the provider.
+    """If RetainReservation is None, this will contain the new values returned from
+    the provider.
 
     If RetainReservation is Price, Schedule, or Both and there is a
     price/schedule change, this will contain the new values that were

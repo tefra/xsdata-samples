@@ -26,8 +26,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class StandardMetadata:
     """
-    Container for the metadata related to a Standard that is not part of a
-    series.
+    Container for the metadata related to a Standard that is not part of a series.
     """
     class Meta:
         name = "standard_metadata"

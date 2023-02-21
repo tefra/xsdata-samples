@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RestEnumeratorDef:
     """
-    This meta-class represents the ability to define enumerator values that can
-    be taken as a the value of the enclosing string property.
+    This meta-class represents the ability to define enumerator values that can be
+    taken as a the value of the enclosing string property.
 
     :ivar value: This attribute represents the ability to assign a value
         to an enumerator.

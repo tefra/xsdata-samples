@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticEnvBswModeElement:
     """
-    This meta-class represents the ability to refer to a specific
-    ModeDeclaration in the scope of a BswModuleDescription.
+    This meta-class represents the ability to refer to a specific ModeDeclaration
+    in the scope of a BswModuleDescription.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
     """
-    Point along line with access is a point location which is defined by a
-    line,an offset value and a coordinate.
+    Point along line with access is a point location which is defined by a line,an
+    offset value and a coordinate.
 
     :ivar openlr_coordinate: The coordinate of the actual point of
         interest

@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BlueprintMappingSet:
     """
-    This represents a container of mappings between "actual" model elements and
-    the "blueprint" that has been taken for their creation.
+    This represents a container of mappings between "actual" model elements and the
+    "blueprint" that has been taken for their creation.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

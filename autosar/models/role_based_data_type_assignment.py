@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RoleBasedDataTypeAssignment:
-    """This class specifies an assignment of a role to a particular data type
-    of a software component (or in the BswModuleBehavior of a module or
-    cluster) in the context of an AUTOSAR Service.
+    """This class specifies an assignment of a role to a particular data type of a
+    software component (or in the BswModuleBehavior of a module or cluster) in the
+    context of an AUTOSAR Service.
 
     With this assignment, the role of the data type can be mapped to a
     specific ServiceNeeds element, so that a tool is able to create the

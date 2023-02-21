@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TransmissionComSpecProps:
     """
-    This meta-class defines a set of transmission attributes which the
-    application software is assumed to implement.
+    This meta-class defines a set of transmission attributes which the application
+    software is assumed to implement.
 
     :ivar data_update_period: This attribute defines the period in which
         the application is assumed to transmit the respective data.

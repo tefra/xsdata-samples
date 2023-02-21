@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PoorEnvironmentConditions(Conditions):
     """
-    Any environmental conditions which may be affecting the driving conditions
-    on the road.
+    Any environmental conditions which may be affecting the driving conditions on
+    the road.
 
     :ivar poor_environment_type: The type of environment condition which
         is affecting driving conditions.

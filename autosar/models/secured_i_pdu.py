@@ -27,8 +27,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SecuredIPdu:
-    """If useAsCryptographicPdu is not set or set to false this IPdu contains
-    the payload of an Authentic IPdu supplemented by additional Authentication
+    """If useAsCryptographicPdu is not set or set to false this IPdu contains the
+    payload of an Authentic IPdu supplemented by additional Authentication
     Information (Freshness Counter and an Authenticator).
 
     If useAsCryptographicPdu is set to true this IPdu contains the

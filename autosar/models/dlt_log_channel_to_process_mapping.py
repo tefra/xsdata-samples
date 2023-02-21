@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DltLogChannelToProcessMapping:
     """
-    This meta-class represents the ability to assign a Log&amp;Trace Channel to
-    a Process.
+    This meta-class represents the ability to assign a Log&amp;Trace Channel to a
+    Process.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

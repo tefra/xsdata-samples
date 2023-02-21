@@ -160,8 +160,8 @@ class ClientServerRecordElementMapping:
 @dataclass
 class ClientServerRecordTypeMapping:
     """
-    If the ApplicationCompositeDataType is a Record, the "RecordTypeMapping"
-    will be used.
+    If the ApplicationCompositeDataType is a Record, the "RecordTypeMapping" will
+    be used.
 
     :ivar argument_ref: Reference to an argument in the context of the
         mappedOperation. Only ClientServerCompositeTypeMapping elements
@@ -350,8 +350,8 @@ class ClientServerArrayElementMapping:
 @dataclass
 class ClientServerArrayTypeMapping:
     """
-    If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping"
-    will be used.
+    If the ApplicationCompositeDataType is an Array, the "ArrayTypeMapping" will be
+    used.
 
     :ivar argument_ref: Reference to an argument in the context of the
         mappedOperation. Only ClientServerCompositeTypeMapping elements

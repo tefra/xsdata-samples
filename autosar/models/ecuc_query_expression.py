@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucQueryExpression:
-    """Defines a query expression to the ECUC Description and output the result
-    as an numerical value.
+    """Defines a query expression to the ECUC Description and output the result as
+    an numerical value.
 
     Due to the "mixedString" nature of the formula there can be several
     EcuQueryExpressions used.

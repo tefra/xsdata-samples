@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ParkingVMS:
     """
-    A reference to a record that contains the metadata for a specific VMS unit
-    that may be used to manage the parking site (e.g. to indicate to drivers
-    the current availability of spaces).
+    A reference to a record that contains the metadata for a specific VMS unit that
+    may be used to manage the parking site (e.g. to indicate to drivers the current
+    availability of spaces).
 
     :ivar vms_unit_used_to_manage_parking: A reference to a record that
         contains the metadata for a specific VMS unit that may be used

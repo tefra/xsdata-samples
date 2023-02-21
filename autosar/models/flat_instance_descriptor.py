@@ -20,10 +20,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FlatInstanceDescriptor:
-    """Represents exactly one node (e.g. a component instance or data element)
-    of the instance tree of a software system. The purpose of this element is
-    to map the various nested representations of this instance to a flat
-    representation and assign a unique name (shortName) to it. Use cases:
+    """Represents exactly one node (e.g. a component instance or data element) of
+    the instance tree of a software system. The purpose of this element is to map
+    the various nested representations of this instance to a flat representation
+    and assign a unique name (shortName) to it. Use cases:
 
     * Specify unique names of measurable data to be used by MCD tools
     * Specify unique names of calibration data to be used by MCD tool

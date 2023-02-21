@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SwServiceArg:
-    """Specifies the properties of a data object exchanged during the call of
-    an SwService, e.g. an argument or a return value.
+    """Specifies the properties of a data object exchanged during the call of an
+    SwService, e.g. an argument or a return value.
 
     The SwServiceArg can also be used in the argument list of a C-macro.
     For this purpose the category shall be set to "MACRO". A reference

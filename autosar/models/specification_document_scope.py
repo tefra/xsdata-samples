@@ -21,9 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SpecificationDocumentScope:
-    """Represents a standardized or custom specification document such as
-    Software Component Template, Main Requirements, Specification of
-    Communication, etc.
+    """Represents a standardized or custom specification document such as Software
+    Component Template, Main Requirements, Specification of Communication, etc.
 
     Autosar specifications are referenced via their title.
 

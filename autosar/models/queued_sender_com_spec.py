@@ -17,9 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class QueuedSenderComSpec:
     """
-    Communication attributes specific to distribution of  events
-    (PPortPrototype, SenderReceiverInterface and dataElement carries an
-    "event").
+    Communication attributes specific to distribution of  events (PPortPrototype,
+    SenderReceiverInterface and dataElement carries an "event").
 
     :ivar composite_network_representations: This represents a
         CompositeNetworkRepresentation defined in the context of a

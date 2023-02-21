@@ -32,8 +32,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class NonqueuedSenderComSpec:
     """
-    Communication attributes for non-queued sender/receiver communication
-    (sender side)
+    Communication attributes for non-queued sender/receiver communication (sender
+    side)
 
     :ivar composite_network_representations: This represents a
         CompositeNetworkRepresentation defined in the context of a

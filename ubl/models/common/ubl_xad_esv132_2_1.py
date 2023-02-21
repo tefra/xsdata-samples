@@ -927,7 +927,7 @@ class GenericTimeStampType:
             "name": "EncapsulatedTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "sequential": True,
+            "sequence": 43,
         }
     )
     xmltime_stamp: Tuple[AnyType, ...] = field(
@@ -936,7 +936,7 @@ class GenericTimeStampType:
             "name": "XMLTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "sequential": True,
+            "sequence": 43,
         }
     )
     id: Optional[str] = field(

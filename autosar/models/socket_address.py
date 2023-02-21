@@ -29,8 +29,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SocketAddress:
-    """This meta-class represents a socket address towards the rest of the
-    meta-model.
+    """This meta-class represents a socket address towards the rest of the meta-
+    model.
 
     The actual semantics of the represented socket address, however, is
     contributed by aggregation of an ApplicationEndpoint.

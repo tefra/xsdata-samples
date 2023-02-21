@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationErrorMapping:
-    """In client server communication, the server may return any value within
-    the application error range.
+    """In client server communication, the server may return any value within the
+    application error range.
 
     The ApplicationError is mapped to the responseGroup.
 

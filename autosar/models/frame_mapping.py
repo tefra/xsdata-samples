@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class FrameMapping:
-    """The entire source frame is mapped as it is onto the target frame (what
-    in general is only possible inside of a common platform).
+    """The entire source frame is mapped as it is onto the target frame (what in
+    general is only possible inside of a common platform).
 
     In this case source and target frame should be the identical object.
     Each pair consists in a SOURCE and a TARGET referencing to a

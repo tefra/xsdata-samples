@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticInhibitSourceEventMapping:
     """This meta-class represents the ability to map a
-    DiagnosticFunctionInhibitSource directly to alternatively one
-    DiagnosticEvent or one DiagnosticFimSummaryEvent.
+    DiagnosticFunctionInhibitSource directly to alternatively one DiagnosticEvent
+    or one DiagnosticFimSummaryEvent.
 
     This model element shall be used if the approach via the alias
     events is not applicable, i.e. when diagnostic events defined by the

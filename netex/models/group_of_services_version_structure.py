@@ -34,20 +34,23 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref: Optional[DirectionRef] = field(
-        default=None,
+    direction_ref_or_direction_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    direction_view: Optional[DirectionView] = field(
-        default=None,
-        metadata={
-            "name": "DirectionView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DirectionRef",
+                    "type": DirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DirectionView",
+                    "type": DirectionView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     origin: Optional[GroupOfServicesEndPointDerivedViewStructure] = field(

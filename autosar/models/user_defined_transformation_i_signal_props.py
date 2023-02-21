@@ -14,8 +14,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class UserDefinedTransformationISignalProps:
     """
-    The UserDefinedTransformationISignalProps is used to specify ISignal
-    specific configuration properties for custom transformers.
+    The UserDefinedTransformationISignalProps is used to specify ISignal specific
+    configuration properties for custom transformers.
 
     :ivar desc: This represents a general but brief (one paragraph)
         description what the object in question is about. It is only one

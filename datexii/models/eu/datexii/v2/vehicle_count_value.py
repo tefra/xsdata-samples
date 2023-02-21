@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VehicleCountValue(DataValue):
     """
-    A measured or calculated value of absolute count of vehicles within a
-    specified period of time expressed as non negative integer.
+    A measured or calculated value of absolute count of vehicles within a specified
+    period of time expressed as non negative integer.
 
     :ivar vehicle_count: A measured or calculated absolute count of
         vehicles within a specified period of time expressed as non

@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class OperatorAction(SituationRecord):
     """
     Actions that a traffic operator can decide to implement to prevent or help
-    correct dangerous or poor driving conditions, including maintenance of the
-    road infrastructure.
+    correct dangerous or poor driving conditions, including maintenance of the road
+    infrastructure.
 
     :ivar action_origin: Indicates whether the actions to be undertaken
         by the operator are the result of an internal operation or

@@ -24,8 +24,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class BusMirrorChannelMappingCan:
     """
-    This element defines the bus mirroring between a CAN or LIN sourceChannel
-    and a CAN targetChannel.
+    This element defines the bus mirroring between a CAN or LIN sourceChannel and a
+    CAN targetChannel.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

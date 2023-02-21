@@ -8,9 +8,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticSupportInfoByte:
     """
-    This meta-class defines the support information (typically byte A) to
-    declare the usability of the DataElements within the so-called packeted
-    PIDs (e.g. PID$68).
+    This meta-class defines the support information (typically byte A) to declare
+    the usability of the DataElements within the so-called packeted PIDs (e.g.
+    PID$68).
 
     :ivar position: This represents the position of the supportInfo in
         the PID. Unit: byte.

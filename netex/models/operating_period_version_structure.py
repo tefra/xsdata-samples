@@ -40,36 +40,42 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    from_operating_day_ref: Optional[OperatingDayRefStructure] = field(
-        default=None,
+    from_operating_day_ref_or_from_date: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "FromOperatingDayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FromOperatingDayRef",
+                    "type": OperatingDayRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FromDate",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
-    from_date: Optional[XmlDateTime] = field(
-        default=None,
+    to_operating_day_ref_or_to_date: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "FromDate",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    to_operating_day_ref: Optional[OperatingDayRefStructure] = field(
-        default=None,
-        metadata={
-            "name": "ToOperatingDayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    to_date: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "ToDate",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ToOperatingDayRef",
+                    "type": OperatingDayRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ToDate",
+                    "type": XmlDateTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     holiday_type: List[HolidayTypeEnumeration] = field(

@@ -21,9 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SwcToApplicationPartitionMapping:
     """
-    Allows to map a given SwComponentPrototype to a formally defined partition
-    at a point in time when the corresponding EcuInstance is not yet known or
-    defined.
+    Allows to map a given SwComponentPrototype to a formally defined partition at a
+    point in time when the corresponding EcuInstance is not yet known or defined.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

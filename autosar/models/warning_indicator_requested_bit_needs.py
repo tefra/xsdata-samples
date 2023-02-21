@@ -20,8 +20,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class WarningIndicatorRequestedBitNeeds:
     """
-    This meta-class represents the ability to explicitly request the existence
-    of the WarningIndicatorRequestedBit.
+    This meta-class represents the ability to explicitly request the existence of
+    the WarningIndicatorRequestedBit.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

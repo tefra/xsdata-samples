@@ -19,8 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ViewMap:
-    """The ViewMap allows to relate any number of elements on the "first" side
-    to any number of elements on the "second" side.
+    """The ViewMap allows to relate any number of elements on the "first" side to
+    any number of elements on the "second" side.
 
     Since the ViewMap does not address a specific mapping use-case the
     roles "first" and "second" shall imply this generality. This mapping

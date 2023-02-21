@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class PhmCheckpoint:
     """
-    This meta-class provides the ability to implement a checkpoint for
-    interaction with the Platform Health Management Supervised Entity.
+    This meta-class provides the ability to implement a checkpoint for interaction
+    with the Platform Health Management Supervised Entity.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

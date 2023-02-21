@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DelegatedPortAnnotation:
     """
-    Annotation to a "delegated port" to specify the Signal Fan In or Signal Fan
-    Out inside the CompositionSwComponentType.
+    Annotation to a "delegated port" to specify the Signal Fan In or Signal Fan Out
+    inside the CompositionSwComponentType.
 
     :ivar label: This is the headline for the annotation.
     :ivar annotation_origin: This attribute identifies the origin of the

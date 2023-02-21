@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class VerbatimString:
     """
-    This primitive represents a string in which white-space needs to be
-    preserved.
+    This primitive represents a string in which white-space needs to be preserved.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class FrameEnum:
     """
-    This enumerator specifies the policy, where to place a frame border around
-    the table.
+    This enumerator specifies the policy, where to place a frame border around the
+    table.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

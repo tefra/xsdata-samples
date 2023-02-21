@@ -12,9 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CouplingPortConnection:
     """
-    Connection between two CouplingPorts (firstPort and secondPort) or between
-    a collection of Ports that are all referenced by the portCollection
-    reference.
+    Connection between two CouplingPorts (firstPort and secondPort) or between a
+    collection of Ports that are all referenced by the portCollection reference.
 
     :ivar first_port_ref: Reference to the first CouplingPort that is
         connected via the CouplingPortConnection.

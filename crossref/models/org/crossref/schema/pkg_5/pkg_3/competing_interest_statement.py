@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class CompetingInterestStatement:
     """
-    Statement of competing interest supplied by a review author during the
-    review process.
+    Statement of competing interest supplied by a review author during the review
+    process.
     """
     class Meta:
         name = "competing_interest_statement"

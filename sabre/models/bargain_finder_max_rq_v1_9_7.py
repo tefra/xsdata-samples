@@ -221,8 +221,8 @@ class BrandType:
 
 class CabinType(Enum):
     """
-    A cabin is either Premium First (P), First (F), Premium Business (J),
-    Business (C), Premium Economy (S) or Economy (Y)
+    A cabin is either Premium First (P), First (F), Premium Business (J), Business
+    (C), Premium Economy (S) or Economy (Y)
     """
     PREMIUM_FIRST = "PremiumFirst"
     FIRST = "First"
@@ -1094,9 +1094,8 @@ class PositionType:
 
 class PreferLevelType(Enum):
     """
-    Used to specify a preference level for something that is or will be
-    requested (e.g. a supplier of a service, a type of service, a form of
-    payment, etc.).
+    Used to specify a preference level for something that is or will be requested
+    (e.g. a supplier of a service, a type of service, a form of payment, etc.).
     """
     ONLY = "Only"
     UNACCEPTABLE = "Unacceptable"
@@ -1114,8 +1113,8 @@ class PrivacyGroupShareMarketInd(Enum):
 
 class PrivacyGroupShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of
-    information held by other travel service providers.
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
     """
     YES = "Yes"
     NO = "No"
@@ -1439,8 +1438,8 @@ class TaxCodeType:
 @dataclass
 class TravelDateTimeType:
     """
-    Date and time of trip, that allows specifying a time window before and
-    after the given date.
+    Date and time of trip, that allows specifying a time window before and after
+    the given date.
 
     Attributes
         departure_date_time: This date should be of the form YYYY-MM-
@@ -1525,7 +1524,7 @@ class TravelDateTimeType:
                 "name": "Day",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2079,
             }
         )
         days_range: List["TravelDateTimeType.DepartureDates.DaysRange"] = field(
@@ -1534,7 +1533,7 @@ class TravelDateTimeType:
                 "name": "DaysRange",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2079,
             }
         )
         length_of_stay: List["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(
@@ -1638,7 +1637,7 @@ class TravelDateTimeType:
                 "name": "Day",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2079,
             }
         )
         days_range: List["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
@@ -1647,7 +1646,7 @@ class TravelDateTimeType:
                 "name": "DaysRange",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2079,
             }
         )
 
@@ -1944,8 +1943,8 @@ class AddressType:
 @dataclass
 class AltCitiesCombinationsType:
     """
-    Which (if any) alt cities locations should be handled in a special way
-    (i.e. Validate instead of precomputed path).
+    Which (if any) alt cities locations should be handled in a special way (i.e.
+    Validate instead of precomputed path).
 
     Attributes
         origins: Which origins to process in live path (All or Main
@@ -2036,8 +2035,7 @@ class BookingClassPrefType:
 @dataclass
 class CabinPrefType:
     """
-    Indicates preferences for choice of airline cabin for a given travel
-    situation.
+    Indicates preferences for choice of airline cabin for a given travel situation.
 
     Attributes
         prefer_level:
@@ -2156,8 +2154,8 @@ class ConnectionType:
 @dataclass
 class CustLoyaltyType:
     """
-    Program rewarding frequent use by accumulating credits for services
-    provided by vendors.
+    Program rewarding frequent use by accumulating credits for services provided by
+    vendors.
 
     Attributes
         share_synch_ind:
@@ -2567,8 +2565,7 @@ class DiversityControlType:
 
                 @dataclass
                 class Range:
-                    """Either all Range elements shall contain attribute
-                    Options or none.
+                    """Either all Range elements shall contain attribute Options or none.
 
                     Ranges shall not overlap.
                     """
@@ -3098,8 +3095,8 @@ class ExchangeTpaExtensionsType:
 @dataclass
 class FareRestrictPrefType:
     """
-    Identifies preferences for airfare restrictions acceptable or not
-    acceptable for a given travel situation.
+    Identifies preferences for airfare restrictions acceptable or not acceptable
+    for a given travel situation.
 
     Attributes
         prefer_level:
@@ -3290,7 +3287,7 @@ class FlexibleFaresType:
                 "name": "CorporateID",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2804,
             }
         )
         account_code: List["FlexibleFaresType.FareParameters.AccountCode"] = field(
@@ -3299,7 +3296,7 @@ class FlexibleFaresType:
                 "name": "AccountCode",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequential": True,
+                "sequence": 2804,
             }
         )
 
@@ -3860,7 +3857,7 @@ class PriceRequestInformationType:
             "name": "NegotiatedFareCode",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequential": True,
+            "sequence": 332,
         }
     )
     account_code: List["PriceRequestInformationType.AccountCode"] = field(
@@ -3869,7 +3866,7 @@ class PriceRequestInformationType:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequential": True,
+            "sequence": 332,
         }
     )
     tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
@@ -4942,9 +4939,9 @@ class TicketDistribPrefType:
 @dataclass
 class UniqueIdType:
     """
-    An identifier used to uniquely reference an object in a system (e.g. an
-    airline reservation reference, customer profile reference, booking
-    confirmation number, or a reference to a previous availability quote).
+    An identifier used to uniquely reference an object in a system (e.g. an airline
+    reservation reference, customer profile reference, booking confirmation number,
+    or a reference to a previous availability quote).
 
     Attributes
         company_name: Identifies the company that is associated with the
@@ -9086,8 +9083,8 @@ class ExchangePostype:
 @dataclass
 class PosType:
     """
-    Point of Sale (POS) is the details identifying the party or connection
-    channel making the request.
+    Point of Sale (POS) is the details identifying the party or connection channel
+    making the request.
 
     Attributes
         source: This holds details regarding the requestor. It may be
@@ -9246,7 +9243,7 @@ class ExchangeType:
             "name": "OriginDestinationInformation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequential": True,
+            "sequence": 2644,
         }
     )
     arunk: List[ArunkType] = field(
@@ -9255,7 +9252,7 @@ class ExchangeType:
             "name": "Arunk",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequential": True,
+            "sequence": 2644,
         }
     )
     travel_preferences: Optional[ExchangeAirSearchPrefsType] = field(
@@ -9327,9 +9324,9 @@ class ExchangeType:
 
 @dataclass
 class OtaAirLowFareSearchRq:
-    """The Low Fare Search Request message requests priced itinerary options
-    for flights between specific city pairs on specific dates for specific
-    numbers and types of passengers.
+    """The Low Fare Search Request message requests priced itinerary options for
+    flights between specific city pairs on specific dates for specific numbers and
+    types of passengers.
 
     Optional request information can include: - Time / Time Window - Connecting cities. - Client Preferences (airlines, cabin, flight types etc.) The Low Fare Search request contains similar information to a Low Fare Search entry on an airline CRS or GDS.
 

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipMessageTypeEnum:
     """
-    Depending on the style of the communication different message types shall
-    be set in the header of a SOME/IP message.
+    Depending on the style of the communication different message types shall be
+    set in the header of a SOME/IP message.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

@@ -19,8 +19,7 @@ class J1939RmIncomingRequestServiceNeeds:
     """
     "This meta-class shall be used to specify needs with respect to the
     configuration of the J1939Rm, in particular for the case where an
-    ApplicationSwComponentType needs to accept a request from another J1939
-    node.
+    ApplicationSwComponentType needs to accept a request from another J1939 node.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

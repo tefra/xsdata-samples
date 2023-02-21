@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 class NonManagedCause(Cause):
     """
     A cause of this situation record which is not managed by the publication
-    creator, i.e. one which is not represented by another situation record
-    produced by the same publication creator.
+    creator, i.e. one which is not represented by another situation record produced
+    by the same publication creator.
 
     :ivar cause_description: Description of a cause which is not managed
         by the publication creator (e.g. an off network cause).

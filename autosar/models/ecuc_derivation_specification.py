@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucDerivationSpecification:
-    """Allows to define configuration items that are calculated based on the
-    value of.
+    """Allows to define configuration items that are calculated based on the value
+    of.
 
     * other parameter values
     * elements (attributes/classes) defined in other AUTOSAR templates such as System template and SW component template

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PointExtended:
     """
-    Extension point for 'Point' to support the description of junctions (and
-    other alternative point descriptions).
+    Extension point for 'Point' to support the description of junctions (and other
+    alternative point descriptions).
 
     :ivar description: Textual description for a point location
     :ivar junction:

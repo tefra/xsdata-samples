@@ -10,8 +10,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class RestSystemTriggeredEvent:
     """
     This meta-class represents the ability to identify an element such that at
-    runtime an event is generated when the value of the reference element
-    changes.
+    runtime an event is generated when the value of the reference element changes.
 
     :ivar element_ref: This reference represent the element that is
         linked to the system triggered event.

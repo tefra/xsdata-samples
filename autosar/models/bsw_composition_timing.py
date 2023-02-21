@@ -55,8 +55,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswCompositionTiming:
-    """A model element used to define timing descriptions and constraints for a
-    set of BswImplementations representing a BSW composition.
+    """A model element used to define timing descriptions and constraints for a set
+    of BswImplementations representing a BSW composition.
 
     A constraint defined at this level holds true for all referenced
     BswImplementations. Note, that multiple implementations of the same

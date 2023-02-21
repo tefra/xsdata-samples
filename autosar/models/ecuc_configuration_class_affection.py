@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EcucConfigurationClassAffection:
-    """Specifies in the "VendorSpecificModuleDefinition" whether changes on
-    this parameter do affect other parameters in a later configuration step.
+    """Specifies in the "VendorSpecificModuleDefinition" whether changes on this
+    parameter do affect other parameters in a later configuration step.
 
     This element is removed from the specifications and shall not be
     used.

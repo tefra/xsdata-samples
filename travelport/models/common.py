@@ -43,9 +43,9 @@ class Arcpayment:
 @dataclass
 class AccountCode:
     """
-    Account Code is used to get Private Fares.If ProviderCode or SupplierCode
-    is not specified, it will be considered a default AccounCode to be sent to
-    all the Providers or Suppliers.
+    Account Code is used to get Private Fares.If ProviderCode or SupplierCode is
+    not specified, it will be considered a default AccounCode to be sent to all the
+    Providers or Suppliers.
 
     Parameters
     ----------
@@ -263,8 +263,7 @@ class AgentActionActionType(Enum):
 @dataclass
 class AgentIdoverride:
     """
-    Vendor specific agent identifier overrides to be used to access vendor
-    systems.
+    Vendor specific agent identifier overrides to be used to access vendor systems.
 
     Parameters
     ----------
@@ -612,8 +611,8 @@ class BookingTravelerName:
 @dataclass
 class CabinClass:
     """
-    Requests cabin class (First, Business and Economy, etc.) as supported by
-    the provider or supplier.
+    Requests cabin class (First, Business and Economy, etc.) as supported by the
+    provider or supplier.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -1188,8 +1187,7 @@ class EnettVan:
 @dataclass
 class ExchangedCoupon:
     """
-    The coupon numbers that were used in the exchange process to create the
-    MCO.
+    The coupon numbers that were used in the exchange process to create the MCO.
 
     Parameters
     ----------
@@ -1314,8 +1312,8 @@ class IndustryStandardSsr:
 @dataclass
 class KeyMapping:
     """
-    Element for which mapping key sent in the request is different from the
-    mapping key comes in the response.
+    Element for which mapping key sent in the request is different from the mapping
+    key comes in the response.
 
     Parameters
     ----------
@@ -1741,8 +1739,7 @@ class NameOverride:
 @dataclass
 class NextResultReference:
     """
-    Container to return/send additional retrieve/request additional search
-    results.
+    Container to return/send additional retrieve/request additional search results.
 
     Parameters
     ----------
@@ -2151,8 +2148,8 @@ class PointOfCommencement:
 
 @dataclass
 class PointOfSale:
-    """User can use this node to send a specific PCC to access fares allowed
-    only for that PCC.
+    """User can use this node to send a specific PCC to access fares allowed only
+    for that PCC.
 
     This node gives the capability for fare redistribution at UR level.  For fare redistribution at the stored fare level see AirPricingSolution/AirPricingInfo/AirPricingModifiers/PointOfSale.
 
@@ -4282,8 +4279,8 @@ class AgencyPayment(TypeAgencyPayment):
 @dataclass
 class AgentAction:
     """
-    Depending on context, this will represent information about which agent
-    perform different actions.
+    Depending on context, this will represent information about which agent perform
+    different actions.
 
     Parameters
     ----------
@@ -4385,8 +4382,7 @@ class Airport(Location):
 @dataclass
 class AppliedProfile:
     """
-    A simple container to specify the profiles that were applied to a
-    reservation.
+    A simple container to specify the profiles that were applied to a reservation.
 
     Parameters
     ----------
@@ -4709,8 +4705,8 @@ class City(Location):
 @dataclass
 class CityOrAirport(Location):
     """
-    This element can be used when it is not known whether the value is an
-    airport or a city code.
+    This element can be used when it is not known whether the value is an airport
+    or a city code.
 
     Parameters
     ----------
@@ -6265,8 +6261,8 @@ class PermittedProviders:
 @dataclass
 class PhoneNumber:
     """
-    Consists of type (office, home, fax), location (city code), the country
-    code, the number, and an extension.
+    Consists of type (office, home, fax), location (city code), the country code,
+    the number, and an extension.
 
     Parameters
     ----------
@@ -6637,8 +6633,8 @@ class ProviderReservationDetail(TypeProviderReservationDetail):
 @dataclass
 class QueuePlace:
     """
-    Allow queue placement of a PNR at the time of booking to be used for
-    Providers 1G,1V,1P and 1J.
+    Allow queue placement of a PNR at the time of booking to be used for Providers
+    1G,1V,1P and 1J.
 
     Parameters
     ----------
@@ -6780,8 +6776,8 @@ class RailSeatAssignment:
 @dataclass
 class RequestKeyMappings:
     """
-    All the elements for which mapping key sent in the request is different
-    from the mapping key comes in the response.
+    All the elements for which mapping key sent in the request is different from
+    the mapping key comes in the response.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v48_0"
@@ -7654,8 +7650,8 @@ class ThirdPartyInformation:
 @dataclass
 class TravelComplianceData:
     """
-    Travel Compliance and Preferred Supplier information of the traveler
-    specific to a segment.
+    Travel Compliance and Preferred Supplier information of the traveler specific
+    to a segment.
 
     Parameters
     ----------
@@ -8112,8 +8108,8 @@ class TypeErrorInfo:
 @dataclass
 class TypeFeeInfo:
     """
-    A generic type of fee for those charges which are incurred by the
-    passenger, but not necessarily shown on tickets.
+    A generic type of fee for those charges which are incurred by the passenger,
+    but not necessarily shown on tickets.
 
     Parameters
     ----------
@@ -10488,8 +10484,8 @@ class TransactionType:
 @dataclass
 class TravelSegment(Segment):
     """
-    Generic segment used to provide travel information that was not processed
-    by the system.
+    Generic segment used to provide travel information that was not processed by
+    the system.
 
     Parameters
     ----------
@@ -10654,8 +10650,8 @@ class TypeAgencyHierarchyLongReference(TypeAgencyHierarchyReference):
 @dataclass
 class TypeAssociatedRemarkWithSegmentRef(TypeAssociatedRemark):
     """
-    A textual remark container to hold Associated itinerary remarks with
-    segment association.
+    A textual remark container to hold Associated itinerary remarks with segment
+    association.
 
     Parameters
     ----------
@@ -11349,8 +11345,8 @@ class BookingTraveler:
 @dataclass
 class BookingTravelerInfo:
     """
-    Container that will allow modifying Universal record data that is not
-    product specific.
+    Container that will allow modifying Universal record data that is not product
+    specific.
 
     Parameters
     ----------

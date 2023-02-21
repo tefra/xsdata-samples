@@ -37,21 +37,21 @@ class AuthorNotes:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5391,
         }
     )
     fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5391,
         }
     )
     p: List[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5391,
         }
     )
     id: Optional[str] = field(

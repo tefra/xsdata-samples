@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -57,20 +57,23 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    route_ref: Optional[RouteRef] = field(
-        default=None,
+    route_ref_or_route_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "RouteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    route_view: Optional[RouteView] = field(
-        default=None,
-        metadata={
-            "name": "RouteView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RouteRef",
+                    "type": RouteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteView",
+                    "type": RouteView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
@@ -81,36 +84,42 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref: Optional[DirectionRef] = field(
-        default=None,
+    direction_ref_or_direction_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DirectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DirectionRef",
+                    "type": DirectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DirectionView",
+                    "type": DirectionView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
-    direction_view: Optional[DirectionView] = field(
-        default=None,
+    destination_display_ref_or_destination_display_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DirectionView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
-        default=None,
-        metadata={
-            "name": "DestinationDisplayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_view: Optional[DestinationDisplayView] = field(
-        default=None,
-        metadata={
-            "name": "DestinationDisplayView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DestinationDisplayRef",
+                    "type": DestinationDisplayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DestinationDisplayView",
+                    "type": DestinationDisplayView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(

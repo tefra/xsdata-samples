@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
@@ -28,20 +28,23 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
-        default=None,
+    time_demand_type_ref_or_timeband_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TimeDemandTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timeband_ref: Optional[TimebandRef] = field(
-        default=None,
-        metadata={
-            "name": "TimebandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeDemandTypeRef",
+                    "type": TimeDemandTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimebandRef",
+                    "type": TimebandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(

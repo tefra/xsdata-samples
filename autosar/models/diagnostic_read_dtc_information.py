@@ -21,8 +21,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticReadDtcInformation:
     """
-    This represents an instance of the "Read DTC Information" diagnostic
-    service.
+    This represents an instance of the "Read DTC Information" diagnostic service.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

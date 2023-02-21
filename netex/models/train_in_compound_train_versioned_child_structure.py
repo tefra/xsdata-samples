@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .compound_train_ref import CompoundTrainRef
 from .multilingual_string import MultilingualString
@@ -31,20 +31,23 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_ref: Optional[TrainRef] = field(
-        default=None,
+    train_ref_or_train: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train: Optional[Train] = field(
-        default=None,
-        metadata={
-            "name": "Train",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Train",
+                    "type": Train,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     label: Optional[MultilingualString] = field(

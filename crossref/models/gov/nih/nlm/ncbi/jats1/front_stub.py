@@ -102,14 +102,14 @@ class FrontStub:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -117,7 +117,7 @@ class FrontStub:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     author_notes: Optional[AuthorNotes] = field(
@@ -251,7 +251,7 @@ class FrontStub:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     ext_link: List[ExtLink] = field(
@@ -259,21 +259,21 @@ class FrontStub:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     product: List[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -281,7 +281,7 @@ class FrontStub:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     history: Optional[History] = field(
@@ -315,7 +315,7 @@ class FrontStub:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     related_object: List[RelatedObject] = field(
@@ -323,14 +323,14 @@ class FrontStub:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     abstract: List[Abstract] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 6124,
         }
     )
     trans_abstract: List[TransAbstract] = field(

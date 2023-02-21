@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoCertificateAlgorithmFamilyEnum:
     """
-    This meta-class defies possible cryptographic algorithm families used to
-    create public keys and  signatures within the certificate.
+    This meta-class defies possible cryptographic algorithm families used to create
+    public keys and  signatures within the certificate.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

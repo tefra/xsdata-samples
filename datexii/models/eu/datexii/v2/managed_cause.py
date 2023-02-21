@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class ManagedCause(Cause):
     """
-    A cause of this situation record which is managed by the publication
-    creator, i.e. one which is represented by another situation record produced
-    by the same publication creator.
+    A cause of this situation record which is managed by the publication creator,
+    i.e. one which is represented by another situation record produced by the same
+    publication creator.
 
     :ivar managed_cause: A reference to another situation record
         produced by the same publication creator which defines a cause

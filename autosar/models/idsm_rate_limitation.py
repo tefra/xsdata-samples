@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class IdsmRateLimitation:
-    """This meta-class represents the configuration of a rate limitation filter
-    for security events.
+    """This meta-class represents the configuration of a rate limitation filter for
+    security events.
 
     This means that security events are dropped if the number of events
     (of any type) processed within a configurable time window is greater

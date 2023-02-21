@@ -13,8 +13,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Autosar:
     """
-    Root element of an AUTOSAR description, also the root element in
-    corresponding XML documents.
+    Root element of an AUTOSAR description, also the root element in corresponding
+    XML documents.
 
     :ivar file_info_comment: This represents a possibility to provide a
         structured comment in an AUTOSAR file.

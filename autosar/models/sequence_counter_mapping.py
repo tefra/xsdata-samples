@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SequenceCounterMapping:
-    """The purpose of sequence counters is to map a response to the correct
-    request of a known client.
+    """The purpose of sequence counters is to map a response to the correct request
+    of a known client.
 
     The SequenceCounter is mapped to the requestGroup and to the
     responseGroup.

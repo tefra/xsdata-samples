@@ -16,8 +16,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DoIpActivationLineNeeds:
-    """A DoIP entity needs to be informed when an external tester is attached
-    or activated.
+    """A DoIP entity needs to be informed when an external tester is attached or
+    activated.
 
     The DoIpActivationServiceNeeds specifies the trigger for such an
     event. Examples would be a Pdu via a regular communication bus, a

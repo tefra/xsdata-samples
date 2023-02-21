@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EvaluatedVariantSet:
-    """This meta class represents the ability to express if a set of ARElements
-    is able to support one or more particular variants.
+    """This meta class represents the ability to express if a set of ARElements is
+    able to support one or more particular variants.
 
     In other words, for a given set of evaluatedElements this meta class
     represents a table of evaluated variants, where each

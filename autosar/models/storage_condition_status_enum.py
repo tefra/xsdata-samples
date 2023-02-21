@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class StorageConditionStatusEnum:
     """
-    This enumeration specifies the initial status for enable or disable of
-    storage of a diagnostic event.
+    This enumeration specifies the initial status for enable or disable of storage
+    of a diagnostic event.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

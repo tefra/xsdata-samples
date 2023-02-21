@@ -23,9 +23,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class BswAsynchronousServerCallReturnsEvent:
-    """This is the "callback" event for asynchronous Client-Server-
-    Communication via the BSW Scheduler which is thrown after completion of the
-    asynchronous Client-Server call.
+    """This is the "callback" event for asynchronous Client-Server-Communication
+    via the BSW Scheduler which is thrown after completion of the asynchronous
+    Client-Server call.
 
     Its eventSource specifies the call point to be used for retrieving
     the result.

@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class SaComponent:
     """
-    Container for component metadata if the component is being registered after
-    the parent record/DOI is created.
+    Container for component metadata if the component is being registered after the
+    parent record/DOI is created.
     """
     class Meta:
         name = "sa_component"

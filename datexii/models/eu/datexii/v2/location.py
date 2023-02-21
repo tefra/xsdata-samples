@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Location(GroupOfLocations):
-    """The specification of a location either on a network (as a point or a
-    linear location) or as an area.
+    """The specification of a location either on a network (as a point or a linear
+    location) or as an area.
 
     This may be provided in one or more referencing systems.
 

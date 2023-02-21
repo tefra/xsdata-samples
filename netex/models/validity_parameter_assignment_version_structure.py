@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
@@ -18,44 +18,47 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref: Optional[TimeIntervalRef] = field(
-        default=None,
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "TimeIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimeIntervalRef",
+                    "type": TimeIntervalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingChargeBandRef",
+                    "type": ParkingChargeBandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeStructureFactorRef",
+                    "type": TimeStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
-    parking_charge_band_ref: Optional[ParkingChargeBandRef] = field(
-        default=None,
+    geographical_interval_ref_or_geographical_structure_factor_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ParkingChargeBandRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_structure_factor_ref: Optional[TimeStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_interval_ref: Optional[GeographicalIntervalRef] = field(
-        default=None,
-        metadata={
-            "name": "GeographicalIntervalRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_structure_factor_ref: Optional[GeographicalStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "GeographicalStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "GeographicalIntervalRef",
+                    "type": GeographicalIntervalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalStructureFactorRef",
+                    "type": GeographicalStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(

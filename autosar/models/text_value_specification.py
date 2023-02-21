@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class TextValueSpecification:
     """
-    The purpose of TextValueSpecification is to define the labels that
-    correspond to enumeration values.
+    The purpose of TextValueSpecification is to define the labels that correspond
+    to enumeration values.
 
     :ivar short_label: This can be used to identify particular value
         specifications for human readers, for example elements of a

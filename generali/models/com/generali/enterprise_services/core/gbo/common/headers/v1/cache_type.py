@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers
 @dataclass
 class CacheType(BaseHeaderType):
     """
-    <description xmlns="">Mandatory cache parameter supported by all services
-    (a service must understand the directive even if no caching support in the
-    service – this allows for future extensibility of the service
+    <description xmlns="">Mandatory cache parameter supported by all services (a
+    service must understand the directive even if no caching support in the service
+    – this allows for future extensibility of the service
     implementation)</description>
 
     :ivar use_cache: <description xmlns="">Indicates whether caching

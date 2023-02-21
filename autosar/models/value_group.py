@@ -69,7 +69,7 @@ class ValueGroup:
             "name": "VTF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 110433,
         }
     )
     vf: List[NumericalValueVariationPoint] = field(
@@ -78,7 +78,7 @@ class ValueGroup:
             "name": "VF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 110433,
         }
     )
     vt: List[VerbatimString] = field(
@@ -87,7 +87,7 @@ class ValueGroup:
             "name": "VT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 110433,
         }
     )
     v: List[NumericalValue] = field(
@@ -96,7 +96,7 @@ class ValueGroup:
             "name": "V",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 110433,
         }
     )
     vg: List["ValueGroup"] = field(
@@ -105,7 +105,7 @@ class ValueGroup:
             "name": "VG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequential": True,
+            "sequence": 110433,
         }
     )
     s: Optional[str] = field(

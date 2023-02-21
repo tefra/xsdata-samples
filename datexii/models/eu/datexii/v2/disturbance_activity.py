@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class DisturbanceActivity(Activity):
     """
-    Deliberate human action of either a public disorder nature or of a
-    situation alert type which could disrupt traffic.
+    Deliberate human action of either a public disorder nature or of a situation
+    alert type which could disrupt traffic.
 
     :ivar disturbance_activity_type: Includes all situations of a public
         disorder type or of an alert type, with potential to disrupt

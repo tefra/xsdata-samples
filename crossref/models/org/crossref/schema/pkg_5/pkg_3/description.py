@@ -22,8 +22,7 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class Description:
     """
-    A narrative description of a file (e.g. a figure caption or video
-    description).
+    A narrative description of a file (e.g. a figure caption or video description).
     """
     class Meta:
         name = "description"

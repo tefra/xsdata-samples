@@ -8,8 +8,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DataTransformationStatusForwardingEnum:
     """
-    This enumeration defines different ways how a RunnableEntity shall be able
-    to forward status into the transformer chain.
+    This enumeration defines different ways how a RunnableEntity shall be able to
+    forward status into the transformer chain.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

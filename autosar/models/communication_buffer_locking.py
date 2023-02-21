@@ -7,8 +7,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class CommunicationBufferLocking:
-    """The aggregation of this meta-class specifies that a RunnableEntity
-    supports locked communication buffers supplied by the RTE.
+    """The aggregation of this meta-class specifies that a RunnableEntity supports
+    locked communication buffers supplied by the RTE.
 
     It is able to cope with the error RTE_E_COM_BUSY.
 

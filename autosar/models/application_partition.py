@@ -17,9 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ApplicationPartition:
-    """ApplicationPartition to which SwComponentPrototypes are mapped at a
-    point in time when the corresponding EcuInstance is not yet known or
-    defined.
+    """ApplicationPartition to which SwComponentPrototypes are mapped at a point in
+    time when the corresponding EcuInstance is not yet known or defined.
 
     In a later methodology step the ApplicationPartition can be assigned
     to an EcuPartition.

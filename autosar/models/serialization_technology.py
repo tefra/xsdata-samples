@@ -18,9 +18,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class SerializationTechnology:
-    """&lt;font color="#0f0f0f"&gt;This element is deprecated and will be
-    removed in future. This information is replaced by the
-    TransformationTechnology element.&lt;/font&gt;
+    """&lt;font color="#0f0f0f"&gt;This element is deprecated and will be removed
+    in future. This information is replaced by the TransformationTechnology
+    element.&lt;/font&gt;
 
     &lt;font color="#0f0f0f"&gt; &lt;/font&gt;&lt;font
     color="#0f0f0f"&gt;Old description: Identifies the used

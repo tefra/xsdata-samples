@@ -9,9 +9,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DiagnosticEnvModeCondition:
-    """DiagnosticEnvModeCondition are atomic condition based on the comparison
-    of the active ModeDeclaration in a ModeDeclarationGroupProtoype with the
-    constant value of a ModeDeclaration.
+    """DiagnosticEnvModeCondition are atomic condition based on the comparison of
+    the active ModeDeclaration in a ModeDeclarationGroupProtoype with the constant
+    value of a ModeDeclaration.
 
     The formulation of this condition uses only one
     DiagnosticEnvElement, which contains enough information to deduce

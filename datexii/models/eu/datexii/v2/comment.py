@@ -11,8 +11,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class Comment:
     """
-    A free text comment with an optional date/time stamp that can be used by
-    the operator to convey un-coded observations/information.
+    A free text comment with an optional date/time stamp that can be used by the
+    operator to convey un-coded observations/information.
 
     :ivar comment: A free text comment that can be used by the operator
         to convey un-coded observations/information.

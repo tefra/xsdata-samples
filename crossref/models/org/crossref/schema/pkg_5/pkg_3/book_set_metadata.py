@@ -25,8 +25,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 @dataclass
 class BookSetMetadata:
     """
-    A container for all information that applies to an individual volume of a
-    book set.
+    A container for all information that applies to an individual volume of a book
+    set.
     """
     class Meta:
         name = "book_set_metadata"

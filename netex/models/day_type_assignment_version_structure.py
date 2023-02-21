@@ -25,28 +25,28 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operating_period_ref: Optional[OperatingPeriodRef] = field(
-        default=None,
+    operating_period_ref_or_operating_day_ref_or_date: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatingPeriodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operating_day_ref: Optional[OperatingDayRef] = field(
-        default=None,
-        metadata={
-            "name": "OperatingDayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    date: Optional[XmlDate] = field(
-        default=None,
-        metadata={
-            "name": "Date",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatingPeriodRef",
+                    "type": OperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatingDayRef",
+                    "type": OperatingDayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Date",
+                    "type": XmlDate,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     fare_day_type_ref: Optional[FareDayTypeRef] = field(

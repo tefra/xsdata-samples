@@ -7,8 +7,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class Supscript:
     """
-    This is text which is rendered superscript or subscript depending on the
-    role.
+    This is text which is rendered superscript or subscript depending on the role.
 
     :ivar value:
     :ivar s: Checksum calculated by the user's tool environment for an

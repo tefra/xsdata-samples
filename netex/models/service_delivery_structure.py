@@ -52,20 +52,23 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error: Optional[CapabilityNotSupportedError] = field(
-            default=None,
+        capability_not_supported_error_or_other_error: List[object] = field(
+            default_factory=list,
             metadata={
-                "name": "CapabilityNotSupportedError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            }
-        )
-        other_error: Optional[OtherError] = field(
-            default=None,
-            metadata={
-                "name": "OtherError",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CapabilityNotSupportedError",
+                        "type": CapabilityNotSupportedError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "OtherError",
+                        "type": OtherError,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                ),
+                "max_occurs": 2,
             }
         )
         description: Optional[str] = field(

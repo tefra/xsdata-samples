@@ -21,8 +21,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ApApplicationError:
     """
-    This meta-class represents the ability to formally specify the semantics of
-    an application error on the AUTOSAR adaptive platform.
+    This meta-class represents the ability to formally specify the semantics of an
+    application error on the AUTOSAR adaptive platform.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

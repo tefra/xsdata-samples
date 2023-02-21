@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SomeipMethodProps:
     """
-    This meta-class allows to set configuration options for a method in the
-    service instance.
+    This meta-class allows to set configuration options for a method in the service
+    instance.
 
     :ivar collection_props: Collection of timing attributes configurable
         for a method that is provided or requested by a Service

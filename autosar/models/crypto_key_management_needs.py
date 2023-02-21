@@ -17,8 +17,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class CryptoKeyManagementNeeds:
     """
-    This meta-class can be used to indicate a service use case for key
-    management.
+    This meta-class can be used to indicate a service use case for key management.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

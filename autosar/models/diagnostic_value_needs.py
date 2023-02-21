@@ -23,8 +23,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class DiagnosticValueNeeds:
     """Specifies the general needs on the configuration of the  Diagnostic
-    Communication Manager (DCM) which are not related to a particular item
-    (e.g. a PID).
+    Communication Manager (DCM) which are not related to a particular item (e.g. a
+    PID).
 
     The main use case is the mapping of service ports to the DCM which
     are not related to a particular item. In the case of using a sender

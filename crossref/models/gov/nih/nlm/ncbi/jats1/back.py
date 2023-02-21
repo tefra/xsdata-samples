@@ -42,7 +42,7 @@ class Back:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     app_group: List[AppGroup] = field(
@@ -50,14 +50,14 @@ class Back:
         metadata={
             "name": "app-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     bio: List[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -65,14 +65,14 @@ class Back:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     ref_list: List[RefList] = field(
@@ -80,21 +80,21 @@ class Back:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     notes: List[Notes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequential": True,
+            "sequence": 5422,
         }
     )
     id: Optional[str] = field(

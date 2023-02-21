@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .class_of_use_ref import ClassOfUseRef
 from .companion_profile_ref import CompanionProfileRef
@@ -78,20 +78,23 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref: Optional[OperatorRef] = field(
-        default=None,
+    operator_ref_or_group_of_operators_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    group_of_operators_ref: Optional[GroupOfOperatorsRef] = field(
-        default=None,
-        metadata={
-            "name": "GroupOfOperatorsRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfOperatorsRef",
+                    "type": GroupOfOperatorsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(

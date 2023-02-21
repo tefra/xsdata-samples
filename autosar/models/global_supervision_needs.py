@@ -17,8 +17,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class GlobalSupervisionNeeds:
     """
-    Specifies the abstract needs on the configuration of the Watchdog Manager
-    to get access on the Global Supervision control and status interface.
+    Specifies the abstract needs on the configuration of the Watchdog Manager to
+    get access on the Global Supervision control and status interface.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

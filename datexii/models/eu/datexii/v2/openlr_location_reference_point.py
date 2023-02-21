@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class OpenlrLocationReferencePoint(OpenlrBaseLocationReferencePoint):
     """
-    The basis of a location reference is a sequence of location reference
-    points (LRPs).
+    The basis of a location reference is a sequence of location reference points
+    (LRPs).
     """
     openlr_path_attributes: Optional[OpenlrPathAttributes] = field(
         default=None,

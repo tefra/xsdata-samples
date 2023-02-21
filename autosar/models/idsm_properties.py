@@ -20,8 +20,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class IdsmProperties:
     """
-    This meta-class provides the ability to aggregate filters for security
-    events.
+    This meta-class provides the ability to aggregate filters for security events.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

@@ -20,8 +20,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ClientServerToSignalMapping:
     """
-    This element maps the ClientServerOperation to call- and return-
-    SystemSignals.
+    This element maps the ClientServerOperation to call- and return-SystemSignals.
 
     :ivar communication_direction: This attribute controls the direction
         into which the mapped SystemSignal is communicated with respect

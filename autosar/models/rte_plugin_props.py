@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RtePluginProps:
     """
-    The properties of a communication graph with respect to the utilization of
-    RTE Implementation Plug-in.
+    The properties of a communication graph with respect to the utilization of RTE
+    Implementation Plug-in.
 
     :ivar associated_cross_sw_cluster_com_rte_plugin_ref: This
         associates a communication graph to a specific RTE

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .country_ref import CountryRef
 from .projection_version_structure import ProjectionVersionStructure
 from .topographic_place_ref import TopographicPlaceRef
@@ -21,19 +21,22 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    country_ref: Optional[CountryRef] = field(
-        default=None,
+    country_ref_or_topographic_place_ref: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "CountryRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
-        default=None,
-        metadata={
-            "name": "TopographicPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CountryRef",
+                    "type": CountryRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TopographicPlaceRef",
+                    "type": TopographicPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )

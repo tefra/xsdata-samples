@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import List, Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
@@ -45,28 +45,28 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
-        default=None,
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointView",
+                    "type": ScheduledStopPointView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
     onward_timing_link_view: Optional[OnwardTimingLinkView] = field(
@@ -77,20 +77,23 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    onward_service_link_ref: Optional[ServiceLinkRefStructure] = field(
-        default=None,
+    onward_service_link_ref_or_onward_service_link_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "OnwardServiceLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    onward_service_link_view: Optional[OnwardServiceLinkView] = field(
-        default=None,
-        metadata={
-            "name": "OnwardServiceLinkView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OnwardServiceLinkRef",
+                    "type": ServiceLinkRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnwardServiceLinkView",
+                    "type": OnwardServiceLinkView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     timing_point_status: Optional[TimingPointStatusEnumeration] = field(
@@ -149,20 +152,23 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
-        default=None,
+    destination_display_ref_or_destination_display_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "DestinationDisplayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    destination_display_view: Optional[DestinationDisplayView] = field(
-        default=None,
-        metadata={
-            "name": "DestinationDisplayView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DestinationDisplayRef",
+                    "type": DestinationDisplayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DestinationDisplayView",
+                    "type": DestinationDisplayView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     vias: Optional[ViasRelStructure] = field(
@@ -252,20 +258,23 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref: Optional[PassengerCarryingRequirementRef] = field(
-        default=None,
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "PassengerCarryingRequirementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_carrying_requirements_view: Optional[PassengerCarryingRequirementsView] = field(
-        default=None,
-        metadata={
-            "name": "PassengerCarryingRequirementsView",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PassengerCarryingRequirementRef",
+                    "type": PassengerCarryingRequirementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerCarryingRequirementsView",
+                    "type": PassengerCarryingRequirementsView,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
     train_size: Optional[TrainSize] = field(

@@ -9,8 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class VmsPictogramDisplayArea:
     """
-    An area on a VMS used for the display of pictograms and associated
-    supplemental information or instructions.
+    An area on a VMS used for the display of pictograms and associated supplemental
+    information or instructions.
 
     :ivar synchronized_sequencing_with_text_pages: Indicates whether the
         sequence of pictograms are sequenced synchronously with the text

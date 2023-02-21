@@ -19,7 +19,7 @@ class TopographicPlacesRelStructure(ContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-            "sequential": True,
+            "sequence": 55,
         }
     )
     topographic_place: List[TopographicPlace] = field(
@@ -29,6 +29,6 @@ class TopographicPlacesRelStructure(ContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-            "sequential": True,
+            "sequence": 55,
         }
     )

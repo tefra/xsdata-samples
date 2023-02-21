@@ -524,28 +524,28 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "required": True,
         }
     )
-    end_time: Optional[XmlTime] = field(
-        default=None,
+    end_time_or_day_offset_or_duration: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "EndTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_offset: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "DayOffset",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    duration: Optional[XmlDuration] = field(
-        default=None,
-        metadata={
-            "name": "Duration",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "EndTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayOffset",
+                    "type": int,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Duration",
+                    "type": XmlDuration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
 
@@ -678,44 +678,47 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    attribute_name: Optional[str] = field(
-        default=None,
+    attribute_name_or_comparison_operator_or_is_valid: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "AttributeName",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AttributeName",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComparisonOperator",
+                    "type": RelativeOperatorEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "isValid",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 3,
         }
     )
-    comparison_operator: Optional[RelativeOperatorEnumeration] = field(
-        default=None,
+    attribute_value_or_method: List[object] = field(
+        default_factory=list,
         metadata={
-            "name": "ComparisonOperator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    attribute_value: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "AttributeValue",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    method: Optional[object] = field(
-        default=None,
-        metadata={
-            "name": "Method",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    is_valid: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "isValid",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AttributeValue",
+                    "type": object,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Method",
+                    "type": object,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+            "max_occurs": 2,
         }
     )
 
@@ -837,40 +840,38 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    fare_day_type_ref: Optional[FareDayTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "FareDayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_type_ref: Optional[DayTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "DayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    days_of_week: List[DayOfWeekEnumeration] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DaysOfWeek",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        }
-    )
-    days: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Days",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_length": 7,
-            "max_length": 7,
-            "pattern": r"([Y | N])*",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareDayTypeRef",
+                    "type": FareDayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayTypeRef",
+                    "type": DayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DaysOfWeek",
+                    "type": List[DayOfWeekEnumeration],
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "default_factory": list,
+                    "tokens": True,
+                },
+                {
+                    "name": "Days",
+                    "type": str,
+                    "namespace": "http://www.netex.org.uk/netex",
+                    "min_length": 7,
+                    "max_length": 7,
+                    "pattern": r"([Y | N])*",
+                },
+            ),
+            "max_occurs": 4,
         }
     )
     timebands: Optional[TimebandsRelStructure] = field(

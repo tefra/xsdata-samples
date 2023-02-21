@@ -10,8 +10,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeErrorBehavior:
     """
-    This represents the ability to define the error behavior in the context of
-    mode handling.
+    This represents the ability to define the error behavior in the context of mode
+    handling.
 
     :ivar default_mode_ref: This represents the ModeDeclaration that is
         considered the error mode in the context of the enclosing

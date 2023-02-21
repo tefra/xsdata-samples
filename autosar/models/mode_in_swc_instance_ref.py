@@ -12,8 +12,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ModeInSwcInstanceRef:
     """
-    Instance reference to be capable of referencing a ModeDeclaration at a
-    specific Mode Switch Port of a SW-C.
+    Instance reference to be capable of referencing a ModeDeclaration at a specific
+    Mode Switch Port of a SW-C.
 
     :ivar context_component_ref: Specifies the SW component prototype
         representing the context.

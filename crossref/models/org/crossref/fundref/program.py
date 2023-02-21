@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://www.crossref.org/fundref.xsd"
 @dataclass
 class Program:
     """FundRef documentation and examples: http://help.crossref.org/#fundref As
-    part of CrossMark metadata, a deposit may contain what is called FundRef
-    info.
+    part of CrossMark metadata, a deposit may contain what is called FundRef info.
 
     This details the funding behind a published article. The schema is a sequence of nested &lt;assertion&gt; tags.
     If a DOI is not participating in CrossMark, FundRef data may be deposited as part of the &lt;journal_article&gt; metadata.

@@ -14,9 +14,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass
 class PointAlongLinearElement:
     """
-    A point on a linear element where the linear element is either a part of or
-    the whole of a linear object (i.e. a road), consistent with ISO 19148
-    definitions.
+    A point on a linear element where the linear element is either a part of or the
+    whole of a linear object (i.e. a road), consistent with ISO 19148 definitions.
 
     :ivar administrative_area_of_point: Identification of the road
         administration area which contains the specified point.
