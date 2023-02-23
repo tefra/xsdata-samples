@@ -194,12 +194,12 @@
           <timingLinks>
             <TimingLink id="ao:Briga-p_to_NovaSela-p" version="any">
               <Name>Overall timing Alpha  to  Charley reen</Name>
-              <FromPointRef version="any" ref="ao:Briga-p"/>
-              <ToPointRef version="any" ref="ao:NovaSela-p"/>
+              <FromPointRef version="any" ref="ao:Briga-p" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="ao:NovaSela-p" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="ao:Briga-p_to_Briga-p_t1" version="any">
               <Name>After Alpha   t1</Name>
-              <FromPointRef version="any" ref="ao:Briga-p"/>
+              <FromPointRef version="any" ref="ao:Briga-p" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="ao:Briga-p_t1"/>
             </TimingLink>
             <TimingLink id="ao:Briga-p_t1_to_Briga-p_t2" version="any">
@@ -210,17 +210,17 @@
             <TimingLink id="ao:Briga-p_t2_to_Banjaloka-p" version="any">
               <Name>After Alpha  t2 to Bravo</Name>
               <FromPointRef version="any" ref="ao:Briga-p_t2"/>
-              <ToPointRef version="any" ref="ao:Banjaloka-p"/>
+              <ToPointRef version="any" ref="ao:Banjaloka-p" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="ao:Banjaloka-p_to_Banjaloka-p_t3" version="any">
               <Name>Bravo to After Bravo t1</Name>
-              <FromPointRef version="any" ref="ao:Banjaloka-p"/>
+              <FromPointRef version="any" ref="ao:Banjaloka-p" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="ao:Banjaloka-p_t3"/>
             </TimingLink>
             <TimingLink id="ao:Banjaloka-p_t3_to_NovaSela-p" version="any">
               <Name>After Bravo t1 to Charley</Name>
               <FromPointRef version="any" ref="ao:Banjaloka-p_t3"/>
-              <ToPointRef version="any" ref="ao:NovaSela-p"/>
+              <ToPointRef version="any" ref="ao:NovaSela-p" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
           </timingLinks>
           <timingPatterns>
@@ -230,7 +230,7 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="ao:Briga-p"/>
+                  <TimingPointRef version="any" ref="ao:Briga-p" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="ao:Briga-p_to_Briga-p_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="ao:tpijp_24o_02" version="any" order="2">

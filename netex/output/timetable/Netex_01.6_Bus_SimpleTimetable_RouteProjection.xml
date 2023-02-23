@@ -136,7 +136,7 @@
               <projections>
                 <LinkProjection id="mybus:LP_RL_RT_24o_SSP_001@_to_RT_24o_1_01" version="any" order="1">
                   <Name>Project on to first part of  Alpha to Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002" xsi:type="ServiceLinkRefStructure"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"/>
                 </LinkProjection>
               </projections>
@@ -147,7 +147,7 @@
               <projections>
                 <LinkProjection id="mybus:LP_RL_24o_RT_24_1_to_RT_24_2_02" version="any" order="1">
                   <Name>Project on to second part of  Alpa to Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002" xsi:type="ServiceLinkRefStructure"/>
                   <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500"/>
                 </LinkProjection>
@@ -159,7 +159,7 @@
               <projections>
                 <LinkProjection id="mybus:LP_RL_24o_RT_24_2_to_RT_24_3_01" version="any" order="1">
                   <Name>Project on to third  part of  Alpha to Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002" xsi:type="ServiceLinkRefStructure"/>
                   <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_03-d600"/>
                 </LinkProjection>
@@ -171,7 +171,7 @@
               <projections>
                 <LinkProjection id="mybus:LP_RL_24o_RT_24_3_to_RT_24_4_01" version="any" order="1">
                   <Name>Project on to last  part of alpha to Bravo and first part of  Bravo  to Charley </Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077" xsi:type="ServiceLinkRefStructure"/>
                   <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_002_to_SSP_077_rtpt_05-d800"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_003@-d2000"/>
                 </LinkProjection>
@@ -195,7 +195,7 @@
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_RL_24o_RT_24_4_to_RT_24_5_02" version="any" order="2">
                   <Name>Project on to first part of Bravo  to Charley </Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077" xsi:type="ServiceLinkRefStructure"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400"/>
                 </LinkProjection>
               </projections>
@@ -206,7 +206,7 @@
               <projections>
                 <LinkProjection id="mybus:LP_RL_24o_RT_24_5_to_RT_24_SSP_003@_01" version="any" order="1">
                   <Name>Project on to last  part of Alpha to Bravo   to Charley </Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077" xsi:type="ServiceLinkRefStructure"/>
                   <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400"/>
                 </LinkProjection>
               </projections>
@@ -384,29 +384,29 @@
               <Name>Alpha   to Bravo Arch</Name>
               <projections>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_01" version="any" order="1">
-                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_SSP_001@_to_RT_24_1"/>
+                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_SSP_001@_to_RT_24_1" xsi:type="RouteLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_02" version="any" order="2">
-                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_1_to_RT_24_2"/>
+                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_1_to_RT_24_2" xsi:type="RouteLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_03" version="any" order="3">
-                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_2_to_RT_24_3"/>
+                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_2_to_RT_24_3" xsi:type="RouteLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_04" version="any" order="4">
-                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_3_to_RT_24_4"/>
+                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_3_to_RT_24_4" xsi:type="RouteLinkRefStructure"/>
                   <EndPointOnLinkRef version="any" ref="mybus:pol_SSP_002_to_SSP_077_01-d300"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_01" version="any" order="1">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_077"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_077" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_02" version="any" order="2">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_03" version="any" order="3">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t1_to_SSP_001_t2" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_04" version="any" order="4">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
               </projections>
               <passingThrough>
@@ -473,10 +473,10 @@
                   <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_5_to_RT_24_SSP_003@"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_002_to_SSP_077_SLontoTL_01" version="any" order="1">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t1"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_002_t1" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
                 <LinkProjection id="mybus:LP_SSP_002_to_SSP_077_SLontoTL_02" version="any" order="2">
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_t1_to_SSP_077"/>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_t1_to_SSP_077" xsi:type="TimingLinkRefStructure"/>
                 </LinkProjection>
               </projections>
               <passingThrough>
@@ -630,8 +630,8 @@
           <timingLinks>
             <TimingLink id="mybus:SSP_001_to_SSP_077" version="any">
               <Name>Overall timing Alpha   to  Charley  </Name>
-              <FromPointRef version="any" ref="mybus:SSP_001"/>
-              <ToPointRef version="any" ref="mybus:SSP_077"/>
+              <FromPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_001_to_SSP_001_t1" version="any">
               <Name>Alpha   to  After Alpha   t1</Name>
@@ -647,7 +647,7 @@
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_1"/>
                 </PointOnLink>
               </passingThrough>
-              <FromPointRef version="any" ref="mybus:SSP_001"/>
+              <FromPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_001_t1_to_SSP_001_t2" version="any">
@@ -687,7 +687,7 @@
                 </PointOnLink>
               </passingThrough>
               <FromPointRef version="any" ref="mybus:SSP_001_t2"/>
-              <ToPointRef version="any" ref="mybus:SSP_002"/>
+              <ToPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_002_to_SSP_002_t1" version="any">
               <Name>Bravo   to After Bravo   t1</Name>
@@ -703,7 +703,7 @@
                   <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_4"/>
                 </PointOnLink>
               </passingThrough>
-              <FromPointRef version="any" ref="mybus:SSP_002"/>
+              <FromPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t1"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_002_t1_to_SSP_077" version="any">
@@ -726,26 +726,26 @@
                 </PointOnLink>
               </passingThrough>
               <FromPointRef version="any" ref="mybus:SSP_002_t1"/>
-              <ToPointRef version="any" ref="mybus:SSP_077"/>
+              <ToPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_077_to_SSP_001" version="any">
               <Name>Overall timing Charley to Alpha        </Name>
-              <FromPointRef version="any" ref="mybus:SSP_077"/>
-              <ToPointRef version="any" ref="mybus:SSP_001"/>
+              <FromPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_077_to_SSP_002_t1" version="any">
               <Name>Charlet to After Bravo   t1    </Name>
-              <FromPointRef version="any" ref="mybus:SSP_077"/>
+              <FromPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t1"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_002_t1_to_SSP_002" version="any">
               <Name>After Bravo  t1  to   Bravo  </Name>
               <FromPointRef version="any" ref="mybus:SSP_002_t1"/>
-              <ToPointRef version="any" ref="mybus:SSP_002"/>
+              <ToPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_002_to_SSP_001_t2" version="any">
               <Name>After Bravo to Alpha   t2  </Name>
-              <FromPointRef version="any" ref="mybus:SSP_002"/>
+              <FromPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_001_t2"/>
             </TimingLink>
             <TimingLink id="mybus:SSP_001_t2_to_SSP_001_t1" version="any">
@@ -756,7 +756,7 @@
             <TimingLink id="mybus:SSP_001_t1_to_SSP_001" version="any">
               <Name>After Alpha   t1 to alALpha </Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t1"/>
-              <ToPointRef version="any" ref="mybus:SSP_001"/>
+              <ToPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
           </timingLinks>
           <timingPatterns>
@@ -766,7 +766,7 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:SSP_001"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_001_to_SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_02" version="any" order="2">
@@ -796,7 +796,7 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:SSP_077"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_077_to_SSP_002_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_02" version="any" order="2">
@@ -804,7 +804,7 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_t1_to_SSP_002"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_03" version="any" order="3">
-                  <TimingPointRef version="any" ref="mybus:SSP_002"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:SSP_002_to_SSP_001_t2"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24i_04" version="any" order="4">

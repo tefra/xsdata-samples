@@ -4,6 +4,7 @@ from xsdata.models.datatype import XmlDateTime
 from .delta_values_rel_structure import DeltaValuesRelStructure
 from .modification_enumeration import ModificationEnumeration
 from .simple_object_ref import SimpleObjectRef
+from .simple_object_ref_structure import SimpleObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,7 +19,7 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    from_version_ref: Optional["DeltaStructure.FromVersionRef"] = field(
+    from_version_ref: Optional[SimpleObjectRefStructure] = field(
         default=None,
         metadata={
             "name": "FromVersionRef",
@@ -26,7 +27,7 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    to_version_ref: Optional["DeltaStructure.ToVersionRef"] = field(
+    to_version_ref: Optional[SimpleObjectRefStructure] = field(
         default=None,
         metadata={
             "name": "ToVersionRef",
@@ -63,35 +64,3 @@ class DeltaStructure:
             "type": "Attribute",
         }
     )
-
-    @dataclass
-    class FromVersionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            }
-        )
-        ref: Optional[str] = field(
-            default=None,
-            metadata={
-                "type": "Attribute",
-                "required": True,
-            }
-        )
-
-    @dataclass
-    class ToVersionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            }
-        )
-        ref: Optional[str] = field(
-            default=None,
-            metadata={
-                "type": "Attribute",
-                "required": True,
-            }
-        )

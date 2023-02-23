@@ -26,12 +26,6 @@ class AttributeTypeScalarType(Enum):
 
 @dataclass(kw_only=True)
 class AttributeValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
@@ -40,21 +34,27 @@ class AttributeValue:
             "required": True,
         }
     )
-
-
-@dataclass(kw_only=True)
-class Buyer:
     value: str = field(
         default="",
         metadata={
             "required": True,
         }
     )
+
+
+@dataclass(kw_only=True)
+class Buyer:
     partner_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartnerRef",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 
@@ -96,17 +96,17 @@ class CatalogSystem:
 
 @dataclass(kw_only=True)
 class CategoryName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -183,12 +183,6 @@ class IsRequired:
 
 @dataclass(kw_only=True)
 class LongDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
@@ -204,21 +198,27 @@ class LongDescription:
             "type": "Attribute",
         }
     )
-
-
-@dataclass(kw_only=True)
-class Manufacturer:
     value: str = field(
         default="",
         metadata={
             "required": True,
         }
     )
+
+
+@dataclass(kw_only=True)
+class Manufacturer:
     partner_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartnerRef",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 
@@ -276,17 +276,17 @@ class ProductIdType(Enum):
 
 @dataclass(kw_only=True)
 class ProductName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -319,17 +319,17 @@ class SchemaCategoryRefList:
 
 @dataclass(kw_only=True)
 class ShortDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -581,17 +581,17 @@ class ProductId:
     class Meta:
         name = "ProductID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     type: ProductIdType = field(
         default=ProductIdType.SUPPLIER,
         metadata={
             "name": "Type",
             "type": "Attribute",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -602,17 +602,17 @@ class ProductIdstandard:
     class Meta:
         name = "ProductIDStandard"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     agency: ProductIdstandardAgency = field(
         default=ProductIdstandardAgency.OTHER,
         metadata={
             "name": "Agency",
             "type": "Attribute",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -694,17 +694,17 @@ class ProductPrice:
 
 @dataclass(kw_only=True)
 class RelatedProduct:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     target_type: RelatedProductTargetType = field(
         default=RelatedProductTargetType.COMPONENT,
         metadata={
             "name": "TargetType",
             "type": "Attribute",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )

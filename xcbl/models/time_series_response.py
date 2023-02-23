@@ -863,12 +863,6 @@ class LocationAttributeName:
 
 @dataclass(kw_only=True)
 class MaximumValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     significance_coded: Optional[MaximumValueSignificanceCoded] = field(
         default=None,
         metadata={
@@ -897,16 +891,16 @@ class MaximumValue:
             "type": "Attribute",
         }
     )
-
-
-@dataclass(kw_only=True)
-class MeasurementValue:
     value: str = field(
         default="",
         metadata={
             "required": True,
         }
     )
+
+
+@dataclass(kw_only=True)
+class MeasurementValue:
     significance_coded: Optional[MeasurementValueSignificanceCoded] = field(
         default=None,
         metadata={
@@ -935,16 +929,16 @@ class MeasurementValue:
             "type": "Attribute",
         }
     )
-
-
-@dataclass(kw_only=True)
-class MinimumValue:
     value: str = field(
         default="",
         metadata={
             "required": True,
         }
     )
+
+
+@dataclass(kw_only=True)
+class MinimumValue:
     significance_coded: Optional[MinimumValueSignificanceCoded] = field(
         default=None,
         metadata={
@@ -971,6 +965,12 @@ class MinimumValue:
         metadata={
             "name": "SignificanceCodedOther",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 

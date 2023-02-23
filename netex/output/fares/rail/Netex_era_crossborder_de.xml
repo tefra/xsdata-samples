@@ -2484,148 +2484,148 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <members>
                 <DistanceMatrixElement id="dbn:6050-to-6176" version="01">
                   <Name>Dresden hbf to Arnsdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6176"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-6105" version="01">
                   <Name>Dresden hbf to Grossharthau</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6105"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-6103" version="01">
                   <Name>Dresden hbf to Bischofswerda</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6103"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-56145" version="01">
                   <Name>Dresden hbf to Bautzen</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:56145"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-56715" version="01">
                   <Name>Dresden hbf to Goerlitz</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:56715"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-6105" version="01">
                   <Name>Arnsdorf to Grossharthau</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:6105"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-6103" version="01">
                   <Name>Arnsdorf to Bischofswerda</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:6103"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-56145" version="01">
                   <Name>Arnsdorf to Bautzen</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:56145"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-56715" version="01">
                   <Name>Arnsdorf to Goerlitz</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:56715"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-6103" version="01">
                   <Name>Grossharthau to Bischofswerda</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:6103"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-56145" version="01">
                   <Name>Grossharthau to Bautzen</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:56145"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-56715" version="01">
                   <Name>Grossharthau to Goerlitz</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:56715"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-56145" version="01">
                   <Name>Bischofswerda to Bautzen</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:56145"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-56715" version="01">
                   <Name>Bischofswerda to Goerlitz</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:56715"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56145-to-56715" version="01">
                   <Name>Bautzen to Goerlitz</Name>
-                  <StartStopPointRef version="01" ref="uic:56145"/>
-                  <EndStopPointRef version="01" ref="uic:56715"/>
+                  <StartStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-6129" version="01">
                   <Name>Dresden hbf to Wilthen</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6129"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6050-to-6113" version="01">
                   <Name>Dresden hbf to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-6129" version="01">
                   <Name>Arnsdorf to Wilthen</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:6129"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-6113" version="01">
                   <Name>Arnsdorf to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-6129" version="01">
                   <Name>Grossharthau to Wilthen</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:6129"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-6113" version="01">
                   <Name>Grossharthau to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-6129" version="01">
                   <Name>Bischofswerda to Wilthen</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:6129"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-6113" version="01">
                   <Name>Bischofswerda to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6129-to-6113" version="01">
                   <Name>Wilthen to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6129"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6113-to-96045" version="01">
                   <Name>Zittau  to Varnsdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:6113"/>
-                  <EndStopPointRef version="01" ref="uic:96045"/>
+                  <StartStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6113-to-6121" version="01">
                   <Name>Zittau  to Seifhennersdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:6113"/>
-                  <EndStopPointRef version="01" ref="uic:6121"/>
+                  <StartStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6121" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6113-to-56719" version="01">
                   <Name>Zittau  to Rybniste</Name>
-                  <StartStopPointRef version="01" ref="uic:6113"/>
-                  <EndStopPointRef version="01" ref="uic:56719"/>
+                  <StartStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56719" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:96045-to-6121" version="01">
                   <Name>Varnsdorf  to Seifhennersdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:96045"/>
-                  <EndStopPointRef version="01" ref="uic:6121"/>
+                  <StartStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6121" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:96045-to-56719" version="01">
                   <Name>Varnsdorf  to Rybniste</Name>
-                  <StartStopPointRef version="01" ref="uic:96045"/>
-                  <EndStopPointRef version="01" ref="uic:56719"/>
+                  <StartStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:56719" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
               </members>
             </GroupOfDistanceMatrixElements>
@@ -2663,8 +2663,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <members>
                 <DistanceMatrixElement id="dbn:6050-to-54212" version="01">
                   <Name>Dresden hbf to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                   <seriesConstraints>
                     <SeriesConstraint id="dbn:6050-to-54212" version="01" order="1">
                       <Name>Dresden hbf to Liberec</Name>
@@ -2696,68 +2696,68 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-54212" version="01">
                   <Name>Arnsdorf to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-54212" version="01">
                   <Name>Grossharthau to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-54212" version="01">
                   <Name>Bischofswerda to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6129-to-54212" version="01">
                   <Name>Wilthen to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6129"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6129" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6113-to-54212" version="01">
                   <Name>Zittau to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6113"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6121-to-96045" version="01">
                   <Name>Seifhennersdorf to Varnsdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:6121"/>
-                  <EndStopPointRef version="01" ref="uic:96045"/>
+                  <StartStopPointRef version="01" ref="uic:6121" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6121-to-6113" version="01">
                   <Name>Seifhennersdorf to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:6121"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:6121" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6121-to-54212" version="01">
                   <Name>Seifhennersdorf to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:6121"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:6121" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56719-to-96045" version="01">
                   <Name>Rybniste to Varnsdorf</Name>
-                  <StartStopPointRef version="01" ref="uic:56719"/>
-                  <EndStopPointRef version="01" ref="uic:96045"/>
+                  <StartStopPointRef version="01" ref="uic:56719" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56719-to-6113" version="01">
                   <Name>Rybniste to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:56719"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:56719" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56719-to-54212" version="01">
                   <Name>Rybniste to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:56719"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:56719" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:96045-to-6113" version="01">
                   <Name>Varnsdorf to Zittau</Name>
-                  <StartStopPointRef version="01" ref="uic:96045"/>
-                  <EndStopPointRef version="01" ref="uic:6113"/>
+                  <StartStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6113" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:96045-to-54212" version="01">
                   <Name>Varnsdorf to Liberec</Name>
-                  <StartStopPointRef version="01" ref="uic:96045"/>
-                  <EndStopPointRef version="01" ref="uic:54212"/>
+                  <StartStopPointRef version="01" ref="uic:96045" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:54212" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElementRef version="01" ref="dbn:6113-to-54212">Zittau to Liberec</DistanceMatrixElementRef>
               </members>
@@ -2767,8 +2767,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               <members>
                 <DistanceMatrixElement id="dbn:6050-to-6010" version="01">
                   <Name>Dresden hbf to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:6050"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:6050" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                   <seriesConstraints>
                     <SeriesConstraint id="dbn:6050-to-6010" version="01" order="1">
                       <farePointsInPattern>
@@ -2799,28 +2799,28 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6176-to-6010" version="01">
                   <Name>Arnsdorf to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:6176"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:6176" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6105-to-6010" version="01">
                   <Name>Grossharthau to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:6105"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:6105" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:6103-to-6010" version="01">
                   <Name>Bischofswerda to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:6103"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:6103" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56145-to-6010" version="01">
                   <Name>Bautzen to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:56145"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:56145" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
                 <DistanceMatrixElement id="dbn:56715-to-6010" version="01">
                   <Name>Goerlitz to Wroclaw</Name>
-                  <StartStopPointRef version="01" ref="uic:56715"/>
-                  <EndStopPointRef version="01" ref="uic:6010"/>
+                  <StartStopPointRef version="01" ref="uic:56715" xsi:type="FareScheduledStopPointRefStructure"/>
+                  <EndStopPointRef version="01" ref="uic:6010" xsi:type="FareScheduledStopPointRefStructure"/>
                 </DistanceMatrixElement>
               </members>
             </GroupOfDistanceMatrixElements>

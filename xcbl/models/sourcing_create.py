@@ -51,17 +51,17 @@ class AggregationType:
 
 @dataclass(kw_only=True)
 class AttributeName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     lang: str = field(
         default="en",
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )

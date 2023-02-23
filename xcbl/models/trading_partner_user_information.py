@@ -175,17 +175,17 @@ class Pobox:
     class Meta:
         name = "POBox"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     pobox_postal_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "POBoxPostalCode",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 
@@ -285,17 +285,17 @@ class UserId:
     class Meta:
         name = "UserID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     user_short_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "UserShortID",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 

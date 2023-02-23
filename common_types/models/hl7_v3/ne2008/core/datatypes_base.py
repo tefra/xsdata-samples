@@ -235,156 +235,6 @@ class TsExplicit:
 
 
 @dataclass
-class EnExplicitDelimiter:
-    class Meta:
-        name = "en_explicit.delimiter"
-
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.DEL,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
-
-@dataclass
-class EnExplicitFamily:
-    class Meta:
-        name = "en_explicit.family"
-
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.FAM,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
-
-@dataclass
-class EnExplicitGiven:
-    class Meta:
-        name = "en_explicit.given"
-
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.GIV,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
-
-@dataclass
-class EnExplicitPrefix:
-    class Meta:
-        name = "en_explicit.prefix"
-
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.PFX,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
-
-@dataclass
-class EnExplicitSuffix:
-    class Meta:
-        name = "en_explicit.suffix"
-
-    part_type: EntityNamePartType = field(
-        init=False,
-        default=EntityNamePartType.SFX,
-        metadata={
-            "name": "partType",
-            "type": "Attribute",
-        }
-    )
-    qualifier: List[EntityNamePartQualifier] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-        }
-    )
-
-
-@dataclass
 class AnynonNull(Any):
     """The BooleanNonNull type is used where a Boolean cannot have a null value.
 
@@ -1044,6 +894,81 @@ class AdxpExplicitUnitType(AdxpExplicit):
     part_type: AddressPartType = field(
         init=False,
         default=AddressPartType.UNIT,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicitDelimiter(EnxpExplicit):
+    class Meta:
+        name = "en_explicit.delimiter"
+
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.DEL,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicitFamily(EnxpExplicit):
+    class Meta:
+        name = "en_explicit.family"
+
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.FAM,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicitGiven(EnxpExplicit):
+    class Meta:
+        name = "en_explicit.given"
+
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.GIV,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicitPrefix(EnxpExplicit):
+    class Meta:
+        name = "en_explicit.prefix"
+
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.PFX,
+        metadata={
+            "name": "partType",
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class EnExplicitSuffix(EnxpExplicit):
+    class Meta:
+        name = "en_explicit.suffix"
+
+    part_type: EntityNamePartType = field(
+        init=False,
+        default=EntityNamePartType.SFX,
         metadata={
             "name": "partType",
             "type": "Attribute",

@@ -1131,17 +1131,17 @@ class ItemCharacteristic:
 
 @dataclass(kw_only=True)
 class LineItemNumberReference:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     line_item_num_type_coded: LineItemNumberReferenceLineItemNumTypeCoded = field(
         default=LineItemNumberReferenceLineItemNumTypeCoded.BUYER,
         metadata={
             "name": "LineItemNumTypeCoded",
             "type": "Attribute",
+            "required": True,
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
             "required": True,
         }
     )
@@ -1375,12 +1375,6 @@ class QuantityRange:
 
 @dataclass(kw_only=True)
 class QuantityValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        }
-    )
     significance_coded: Optional[QuantityValueSignificanceCoded] = field(
         default=None,
         metadata={
@@ -1407,6 +1401,12 @@ class QuantityValue:
         metadata={
             "name": "SignificanceCodedOther",
             "type": "Attribute",
+        }
+    )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         }
     )
 

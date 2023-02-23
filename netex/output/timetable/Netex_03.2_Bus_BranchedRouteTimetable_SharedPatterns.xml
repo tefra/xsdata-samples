@@ -694,10 +694,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_YAo_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Yankee"/>
+                  <TimingPointRef version="any" ref="mybus:Yankee" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YAo_02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -707,10 +707,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_ZAo_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Zulu"/>
+                  <TimingPointRef version="any" ref="mybus:Zulu" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZAo_02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -720,7 +720,7 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_ABCo_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ABCo_02" version="any" order="2">
                   <TimingPointRef version="any" ref="mybus:Bravo"/>
@@ -736,10 +736,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_CPo_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Charley"/>
+                  <TimingPointRef version="any" ref="mybus:Charley" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_CPo_02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Papa"/>
+                  <TimingPointRef version="any" ref="mybus:Papa" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -749,10 +749,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_CQo_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Charley"/>
+                  <TimingPointRef version="any" ref="mybus:Charley" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_CQo_02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Quebec"/>
+                  <TimingPointRef version="any" ref="mybus:Quebec" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>

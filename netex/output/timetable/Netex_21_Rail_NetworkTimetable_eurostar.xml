@@ -285,28 +285,28 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_01_out_01" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_02" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_03" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_03-04@_uk_01" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_03-04@_fr_02" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_04" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_05" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_out_06" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <PointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -315,28 +315,28 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_03_out_01" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_02" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_03" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_03-04@_uk_01" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_03-04@_fr_02" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_04" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_05" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_out_07" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <PointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -345,28 +345,28 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_04_out_01" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_02" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_03" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_03-04@_uk_01" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_03-04@_fr_02" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_04" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_05" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_out_08" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
+                  <PointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -375,31 +375,31 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_05_out_01" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_02" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_03" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_03-04@_uk_01" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_03-04@_fr_02" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_04" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_21" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+                  <PointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_22" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+                  <PointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_out_23" version="any" order="9">
-                  <PointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
+                  <PointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -408,25 +408,25 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_06_out_01" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_03" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_03-04@_uk_01" version="any" order="3">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_03-04@_fr_02" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_04" version="any" order="5">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_05" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_out_31" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
+                  <PointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -435,28 +435,28 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_01_in_06" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <PointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_05" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_04" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_03-04@_fr_02" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_03-04@_uk_01" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_03" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_02" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_01_in_01" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -465,28 +465,28 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_03_in_07" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <PointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_05" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_04" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_03-04@_fr_02" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_03-04@_uk_01" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_03" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_02" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_03_in_01" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -495,28 +495,28 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_04_in_08" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
+                  <PointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_05" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_04" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_03-04@_fr_02" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_03-04@_uk_01" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_03" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_02" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_04_in_01" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -525,34 +525,34 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_05_in_23" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
+                  <PointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_22" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+                  <PointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_21" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+                  <PointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_05" version="any" order="4">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_04" version="any" order="5">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_03-04@_fr_02" version="any" order="6">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_03-04@_uk_01" version="any" order="7">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_03" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_02" version="any" order="9">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_05_in_01" version="any" order="10">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -561,28 +561,28 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <PointOnRoute id="eos:POR_RT_06_in_31" version="any" order="1">
-                  <PointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
+                  <PointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_05" version="any" order="2">
-                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <PointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_04" version="any" order="3">
-                  <PointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <PointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_03-04@_fr_02" version="any" order="4">
-                  <PointRef version="any" ref="eos:RP_03-04_fr_@02"/>
+                  <PointRef version="any" ref="eos:RP_03-04_fr_@02" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_03-04@_uk_01" version="any" order="5">
-                  <PointRef version="any" ref="eos:RP_03-04_uk_@01"/>
+                  <PointRef version="any" ref="eos:RP_03-04_uk_@01" xsi:type="RoutePointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_03" version="any" order="6">
-                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <PointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_02" version="any" order="7">
-                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <PointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
                 <PointOnRoute id="eos:POR_RT_06_in_01" version="any" order="8">
-                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <PointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </PointOnRoute>
               </pointsInSequence>
             </Route>
@@ -2419,252 +2419,252 @@
           <timingLinks>
             <TimingLink id="eos:TL_out_01-02" version="any">
               <Name>St Pancras to Ebbsfleet</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_02-03" version="any">
               <Name>Ebbsfleet to Ashford</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_03-04" version="any">
               <Name>Ashford to Calais</Name>
               <Distance>72.2</Distance>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_04-05" version="any">
               <Name>Calais to Lille</Name>
               <Distance>100.9</Distance>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_04-07" version="any">
               <Name>Calais toBrussels</Name>
               <Distance>100.9</Distance>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_05-06" version="any">
               <Name>Lille to Paris GdN</Name>
               <Distance>225.3</Distance>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_05-07" version="any">
               <Name>Lille to Brussels</Name>
               <Distance>106.8</Distance>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_05-08" version="any">
               <Name>Lille to Marne</Name>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_05-31" version="any">
               <Name>Lille to Avignon</Name>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_05-21" version="any">
               <Name>Calais to Moûtiers</Name>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_21-22" version="any">
               <Name>Moûtiers to Aime</Name>
-              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
-              <ToPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_22-23" version="any">
               <Name>Aime to Bourg St Maurice</Name>
-              <FromPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
-              <ToPointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
+              <FromPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_01-04" version="any">
               <Name>St Pancras to Calais</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_01-05" version="any">
               <Name>St Pancras to Lille</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_01-06" version="any">
               <Name>St Pancras to Paris GdN</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_01-07" version="any">
               <Name>St Pancras to Brussels</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_01-03" version="any">
               <Name>St Pancras to Ashford</Name>
-              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_02-04" version="any">
               <Name>St Pancras to Calais</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_02-05" version="any">
               <Name>Ebbsfleet to Lille</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_02-06" version="any">
               <Name>Ebbsfleet to Paris GdN</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_02-07" version="any">
               <Name>Ebbsfleet to Brussels</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_03-05" version="any">
               <Name>Ashford to Lille</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_03-06" version="any">
               <Name>Ashford to Paris GdN</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_03-07" version="any">
               <Name>Ashford to Brussels</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_out_03-21" version="any">
               <Name>Ashford to Moutieres</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_07-05" version="any">
               <Name>Brussels to Lille</Name>
               <Distance>106.8</Distance>
-              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_06-05" version="any">
               <Name>Paris GdN to Lille</Name>
               <Distance>225.3</Distance>
-              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_05-04" version="any">
               <Name>Lille to Calais</Name>
               <Distance>100.9</Distance>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_04-03" version="any">
               <Name>Calais to Ashford</Name>
               <Distance>72.2</Distance>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_03-02" version="any">
               <Name>Ashford to Ebbsfleet</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_02-01" version="any">
               <Name>Ebbsfleet to  St Pancras</Name>
-              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_08-05" version="any">
               <Name>Marne to Lille</Name>
-              <FromPointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_31-05" version="any">
               <Name>Avignon to Lille</Name>
-              <FromPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
-              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+              <FromPointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_21-05" version="any">
               <Name>Moûtiers to Calais</Name>
-              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_22-21" version="any">
               <Name>Aime to Moûtiers</Name>
-              <FromPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
-              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+              <FromPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_23-22" version="any">
               <Name>Bourg St Maurice to Aime</Name>
-              <FromPointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
-              <ToPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+              <FromPointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_03-01" version="any">
               <Name>Ashford to London</Name>
-              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_04-01" version="any">
               <Name>Calais to London</Name>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_04-02" version="any">
               <Name>Calais to Ebbsfleet</Name>
-              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+              <FromPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_05-01" version="any">
               <Name>Lille to London</Name>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_05-02" version="any">
               <Name>Lille to Ebbsfleet</Name>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_05-03" version="any">
               <Name>Lille to Ashford</Name>
-              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_06-01" version="any">
               <Name>Paris GdN to London</Name>
-              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_06-02" version="any">
               <Name>Paris GdN to Ebbssfleet</Name>
-              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
-              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_06-03" version="any">
               <Name>Paris GdN to Ashford</Name>
-              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_07-01" version="any">
               <Name>Brussels to London</Name>
-              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
-              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_07-04" version="any">
               <Name>Brussels to Calais</Name>
-              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
-              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+              <FromPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="eos:TL_in_21-03" version="any">
               <Name>Moûtiers to Ashford</Name>
-              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
-              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+              <FromPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
           </timingLinks>
           <timingPatterns>
@@ -2675,22 +2675,22 @@
               <TimeDemandTypeRef version="any" ref="eos:TDT_01_Normal"/>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01__ALL_out" version="any" order="6">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2700,22 +2700,22 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_out" version="any" order="6">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2725,11 +2725,11 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01a_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-06"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01a_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2739,15 +2739,15 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-06"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2757,17 +2757,17 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-06"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2777,14 +2777,14 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01d_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01d_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_02-06"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01d_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2794,22 +2794,22 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_out" version="any" order="7">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2819,11 +2819,11 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03a_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-07"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03a_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2833,15 +2833,15 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-07"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2851,18 +2851,18 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_02-05"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_05-07"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2872,14 +2872,14 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-05"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2889,15 +2889,15 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-04"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_04-07"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2907,20 +2907,20 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_02-04"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_out" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2930,17 +2930,17 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2950,18 +2950,18 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-05"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2971,18 +2971,18 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-05"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
+                  <TimingPointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -2992,20 +2992,20 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+                  <TimingPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+                  <TimingPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_out" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
+                  <TimingPointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3015,18 +3015,18 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_out" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_01-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_out" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_out_03-05"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_out" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_out" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
+                  <TimingPointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3036,22 +3036,22 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01_ALL_in" version="any" order="6">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3061,11 +3061,11 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01a_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_06-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01a_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3075,15 +3075,15 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_06-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01b_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3093,17 +3093,17 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-02"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01c_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3113,14 +3113,14 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01f_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                  <TimingPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_06-02"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01f_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_01f_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3130,22 +3130,22 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03_ALL_in" version="any" order="6">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3155,11 +3155,11 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03a_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_07-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03a_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3169,18 +3169,18 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03b_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3190,17 +3190,17 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-02"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03c_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3210,14 +3210,14 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03d_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3227,15 +3227,15 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_07-04"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_04-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03e_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3245,17 +3245,17 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03f_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3265,20 +3265,20 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_04-02"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                  <TimingPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03g_in" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3288,20 +3288,20 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                  <TimingPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                  <TimingPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_03h_in" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3311,18 +3311,18 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
+                  <TimingPointRef version="any" ref="eos:SSP_08_fr_MarneLV" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_04a_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3332,20 +3332,20 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_23_fr_BourgStM"/>
+                  <TimingPointRef version="any" ref="eos:SSP_23_fr_BourgStM" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
+                  <TimingPointRef version="any" ref="eos:SSP_22_fr_AimeLP" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
+                  <TimingPointRef version="any" ref="eos:SSP_21_fr_Moutiers" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_05a_in" version="any" order="5">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -3355,18 +3355,18 @@
               <DirectionType>inbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_in" version="any" order="1">
-                  <TimingPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
+                  <TimingPointRef version="any" ref="eos:SSP_31_fr_Avignon" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_in" version="any" order="2">
-                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
+                  <TimingPointRef version="any" ref="eos:SSP_05_fr_LilleEuro" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_05-03"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_in" version="any" order="3">
-                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                  <TimingPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="eos:TL_in_03-01"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="eos:TPIP_TP_06a_in" version="any" order="4">
-                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
+                  <TimingPointRef version="any" ref="eos:SSP_01_uk_StPancras" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -4610,7 +4610,7 @@
                 <Call id="eos:VJ_MF_9078_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT2H08M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -4670,7 +4670,7 @@
                 <Call id="eos:VJ_MF_9002a_02" version="any" order="2">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                    <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT24M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -4683,7 +4683,7 @@
                 <Call id="eos:VJ_MF_9002a_03" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT2H01M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival/>
@@ -4931,7 +4931,7 @@
                 <Call id="eos:VJ_MF_9014_01" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
+                    <ToPointRef version="any" ref="eos:SSP_03_uk_AshfordInt" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT33M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5122,7 +5122,7 @@
                 <Call id="eos:VJ_EV_9030" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT2H21M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5203,7 +5203,7 @@
                 <Call id="eos:VJ_MF_9038" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT2H25M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5375,7 +5375,7 @@
                 <Call id="eos:VJ_MF_9048" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
+                    <ToPointRef version="any" ref="eos:SSP_06_fr_ParisGdN" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT2H16M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5825,7 +5825,7 @@
                 <Call id="eos:VJ_MF_9108" version="any" order="4">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT38M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5838,7 +5838,7 @@
                 <Call id="eos:VJ_MF_9108" version="any" order="5">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT32M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5912,7 +5912,7 @@
                 <Call id="eos:VJ_MF_9120" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
+                    <ToPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT18M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -5934,7 +5934,7 @@
                 <Call id="eos:VJ_MF_9120" version="any" order="3">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
+                    <ToPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT37M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>
@@ -6243,7 +6243,7 @@
                 <Call id="eos:VJ_MF_9154b" version="any" order="1">
                   <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
                   <OnwardTimingLinkView>
-                    <ToPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
+                    <ToPointRef version="any" ref="eos:SSP_04_fr_Calais" xsi:type="ScheduledStopPointRefStructure"/>
                     <RunTime>PT59M</RunTime>
                   </OnwardTimingLinkView>
                   <Arrival>

@@ -10167,123 +10167,123 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
                   <members>
                     <DistanceMatrixElement id="atc:LST_to_TOM" version="01">
                       <Name>London Liverpool Street to Tottenham Hale</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:TOM"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:TOM" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:TOM_to_LST" version="01">
                       <Name>Tottenham Hale to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:TOM"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:TOM" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:TOM_to_SSD" version="01">
                       <Name>Tottenham Hale  to  Stansted Airport</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:TOM"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SSD"/>
+                      <StartStopPointRef version="01" ref="atc:Station:TOM" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SSD_to_TOM" version="01">
                       <Name>Stansted Airport to Tottenham Hale</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SSD"/>
-                      <EndStopPointRef version="01" ref="atc:Station:TOM"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:TOM" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SSD_to_GYM" version="01">
                       <Name>Stansted Airport  to  Great Yarmouth</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SSD"/>
-                      <EndStopPointRef version="01" ref="atc:Station:GYM"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:GYM" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:GYM_to_SSD" version="01">
                       <Name>Great Yarmouth to  Stansted Airport</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:GYM"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SSD"/>
+                      <StartStopPointRef version="01" ref="atc:Station:GYM" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_SSD" version="01">
                       <Name>London Liverpool Street to Stansted Airport</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SSD"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SSD_to_LST" version="01">
                       <Name>Stansted Airport to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SSD"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SSD" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_SNF" version="01">
                       <Name>London Liverpool Street  to Shenfield</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SNF"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SNF_to_LST" version="01">
                       <Name>Shenfield to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SNF"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_IPS" version="01">
                       <Name>London Liverpool Street  to Ipswich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:IPS"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:IPS_to_LST" version="01">
                       <Name>Ipswich to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:IPS"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SNF_to_IPS" version="01">
                       <Name>Shenfield to Ipswich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SNF"/>
-                      <EndStopPointRef version="01" ref="atc:Station:IPS"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:IPS_to_SNF" version="01">
                       <Name>Ipswich to Shenfield</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:IPS"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SNF"/>
+                      <StartStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:IPS_to_NRW" version="01">
                       <Name>Ipswich to Norwich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:IPS"/>
-                      <EndStopPointRef version="01" ref="atc:Station:NRW"/>
+                      <StartStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:NRW_to_IPS" version="01">
                       <Name>Norwich to Ipswich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:NRW"/>
-                      <EndStopPointRef version="01" ref="atc:Station:IPS"/>
+                      <StartStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:IPS" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SNF_to_NRW" version="01">
                       <Name>Shenfield to Norwich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SNF"/>
-                      <EndStopPointRef version="01" ref="atc:Station:NRW"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:NRW_to_SNF" version="01">
                       <Name>Norwich to Shenfield</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:NRW"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SNF"/>
+                      <StartStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SNF" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_NRW" version="01">
                       <Name>London Liverpool Street to Norwich</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:NRW"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:NRW_to_LST" version="01">
                       <Name>Norwich to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:NRW"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:NRW" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_SOV" version="01">
                       <Name>London Liverpool Street to Southend Victoria</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:SOV"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:SOV" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:SOV_to_LST" version="01">
                       <Name>Southend Victoria to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:SOV"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:SOV" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_LWT" version="01">
                       <Name>London Liverpool Street to Lowestoft</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LWT"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LWT" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LWT_to_LST" version="01">
                       <Name>Lowestoft to London Liverpool Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LWT"/>
-                      <EndStopPointRef version="01" ref="atc:Station:LST"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LWT" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                   </members>
                 </GroupOfDistanceMatrixElements>
@@ -10333,48 +10333,48 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
                   <members>
                     <DistanceMatrixElement id="atc:LST_to_WAT" version="01">
                       <Name>London Liverpool Street to  Waterloo</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:WAT" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:WAT" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_KGX" version="01">
                       <Name>London Liverpool Street to  Kings CRoss</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:KGX" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:KGX" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_VIC" version="01">
                       <Name>London Liverpool Street to  Victoria</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:VIC" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:VIC" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_PAD" version="01">
                       <Name>London Liverpool Street to  Paddington</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:PAD" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:PAD" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_LBG" version="01">
                       <Name>London Liverpool Street to  London Bridge</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:LBG" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:LBG" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_CHX" version="01">
                       <Name>London Liverpool Street to  London Charing Cross</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:CHX" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:CHX" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_MYB" version="01">
                       <Name>London Liverpool Street to  London Marylebone</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:MYB" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:MYB" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_FST" version="01">
                       <Name>London Liverpool Street to  London Fenchurch Street</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:FST" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:FST" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="atc:LST_to_STP" version="01">
                       <Name>London Liverpool Street to  London St Pancras</Name>
-                      <StartStopPointRef version="01" ref="atc:Station:LST"/>
-                      <EndStopPointRef ref="atc:Station:STP" versionRef="TODO"/>
+                      <StartStopPointRef version="01" ref="atc:Station:LST" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef ref="atc:Station:STP" versionRef="TODO" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                   </members>
                 </GroupOfDistanceMatrixElements>

@@ -756,10 +756,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_YPo@01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Yankee"/>
+                  <TimingPointRef version="any" ref="mybus:Yankee" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YPo@02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YPo@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:Bravo"/>
@@ -778,10 +778,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_YQo@01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Yankee"/>
+                  <TimingPointRef version="any" ref="mybus:Yankee" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YQo@02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_YQo@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:Bravo"/>
@@ -800,10 +800,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_ZPo@01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Zulu"/>
+                  <TimingPointRef version="any" ref="mybus:Zulu" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZPo@02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZPo@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:Bravo"/>
@@ -822,10 +822,10 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_ZQo@01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Zulu"/>
+                  <TimingPointRef version="any" ref="mybus:Zulu" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZQo@02" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_ZQo@03" version="any" order="3">
                   <TimingPointRef version="any" ref="mybus:Bravo"/>

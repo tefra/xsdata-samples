@@ -6937,103 +6937,103 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                     <DistanceMatrixElement id="tfc:dme_10108+30172" version="01">
                       <Name>Bucuresti nord to Peris</Name>
                       <Distance>30</Distance>
-                      <StartStopPointRef version="01" ref="uic:10108"/>
-                      <EndStopPointRef version="01" ref="uic:30172"/>
+                      <StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_30172+30184" version="01">
                       <Name>Peris  to   Scrovistea</Name>
                       <Distance>5</Distance>
-                      <StartStopPointRef version="01" ref="uic:30172"/>
-                      <EndStopPointRef version="01" ref="uic:30184"/>
+                      <StartStopPointRef version="01" ref="uic:30172" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_30184+30196" version="01">
                       <Name>Scrovistea  to  Crivina</Name>
                       <Distance>4</Distance>
-                      <StartStopPointRef version="01" ref="uic:30184"/>
-                      <EndStopPointRef version="01" ref="uic:30196"/>
+                      <StartStopPointRef version="01" ref="uic:30184" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_30196+30225" version="01">
                       <Name>Crivina  to Brazi </Name>
                       <Distance>12</Distance>
-                      <StartStopPointRef version="01" ref="uic:30196"/>
-                      <EndStopPointRef version="01" ref="uic:30225"/>
+                      <StartStopPointRef version="01" ref="uic:30196" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_30225+30304" version="01">
                       <Name>Brazi  to Ploiesti vest</Name>
                       <Distance>6</Distance>
-                      <StartStopPointRef version="01" ref="uic:30225"/>
-                      <EndStopPointRef version="01" ref="uic:30304"/>
+                      <StartStopPointRef version="01" ref="uic:30225" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_30304+50017" version="01">
                       <Name>Ploiesti vest  to Ploiesti Sud</Name>
                       <Distance>3</Distance>
-                      <StartStopPointRef version="01" ref="uic:30304"/>
-                      <EndStopPointRef version="01" ref="uic:50017"/>
+                      <StartStopPointRef version="01" ref="uic:30304" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50017+500792" version="01">
                       <Name>Ploiesti Sud  to Ploiesti Est</Name>
                       <Distance>4</Distance>
-                      <StartStopPointRef version="01" ref="uic:50017"/>
-                      <EndStopPointRef version="01" ref="uic:50079"/>
+                      <StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50079+50158" version="01">
                       <Name>Ploiesti Est  to Muru HC.</Name>
                       <Distance>11</Distance>
-                      <StartStopPointRef version="01" ref="uic:50079"/>
-                      <EndStopPointRef version="01" ref="uic:50158"/>
+                      <StartStopPointRef version="01" ref="uic:50079" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50158+50160" version="01">
                       <Name>Muru HC. to Cricov HM.</Name>
                       <Distance>12</Distance>
-                      <StartStopPointRef version="01" ref="uic:50158"/>
-                      <EndStopPointRef version="01" ref="uic:50160"/>
+                      <StartStopPointRef version="01" ref="uic:50158" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50160+50172" version="01">
                       <Name>Cricov HM. to Tomsani HC.</Name>
                       <Distance>5</Distance>
-                      <StartStopPointRef version="01" ref="uic:50160"/>
-                      <EndStopPointRef version="01" ref="uic:50172"/>
+                      <StartStopPointRef version="01" ref="uic:50160" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50172+50213" version="01">
                       <Name>Tomsani HC.  to Mizil.</Name>
                       <Distance>12</Distance>
-                      <StartStopPointRef version="01" ref="uic:50172"/>
-                      <EndStopPointRef version="01" ref="uic:50213"/>
+                      <StartStopPointRef version="01" ref="uic:50172" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50213+50237" version="01">
                       <Name>Mizil  to Săhăteni.</Name>
                       <Distance>7</Distance>
-                      <StartStopPointRef version="01" ref="uic:50213"/>
-                      <EndStopPointRef version="01" ref="uic:50237"/>
+                      <StartStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50237+50263" version="01">
                       <Name>Săhăteni to Ulmeni.</Name>
                       <Distance>12</Distance>
-                      <StartStopPointRef version="01" ref="uic:50237"/>
-                      <EndStopPointRef version="01" ref="uic:50263"/>
+                      <StartStopPointRef version="01" ref="uic:50237" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50263+50342" version="01">
                       <Name>Ulmeni to Buzau.</Name>
                       <Distance>16</Distance>
-                      <StartStopPointRef version="01" ref="uic:50263"/>
-                      <EndStopPointRef version="01" ref="uic:50342"/>
+                      <StartStopPointRef version="01" ref="uic:50263" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_10108+50342" version="01">
                       <Name>Bucharest to Buzau</Name>
                       <Distance>129</Distance>
-                      <StartStopPointRef version="01" ref="uic:10108"/>
-                      <EndStopPointRef version="01" ref="uic:50342"/>
+                      <StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_50342+10108" version="01">
                       <Name>Buzau to Bucharest.</Name>
                       <Distance>129</Distance>
-                      <StartStopPointRef version="01" ref="uic:50342"/>
-                      <EndStopPointRef version="01" ref="uic:10108"/>
+                      <StartStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_10108+50213" version="01">
                       <Name>Bucharest North to Mizil.</Name>
-                      <StartStopPointRef version="01" ref="uic:10108"/>
-                      <EndStopPointRef version="01" ref="uic:50213"/>
+                      <StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50213" xsi:type="FareScheduledStopPointRefStructure"/>
                       <seriesConstraints>
                         <SeriesConstraintRef version="01" ref="tfc:sc_via_30172" order="2">via Peris</SeriesConstraintRef>
                         <SeriesConstraintRef version="01" ref="tfc:sc_via_33368_and_30304" order="3">via Targoviste</SeriesConstraintRef>
@@ -7059,14 +7059,14 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                     <DistanceMatrixElement id="tfc:dme_50017+50342" version="01">
                       <Name>Ploesti sud  to Slanic</Name>
                       <Distance>44</Distance>
-                      <StartStopPointRef version="01" ref="uic:50017"/>
-                      <EndStopPointRef version="01" ref="uic:50342"/>
+                      <StartStopPointRef version="01" ref="uic:50017" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:50342" xsi:type="FareScheduledStopPointRefStructure"/>
                     </DistanceMatrixElement>
                     <DistanceMatrixElement id="tfc:dme_10108+33368" version="01">
                       <Name>Bucharest to Slanic</Name>
                       <Distance>71</Distance>
-                      <StartStopPointRef version="01" ref="uic:10108"/>
-                      <EndStopPointRef version="01" ref="uic:33368"/>
+                      <StartStopPointRef version="01" ref="uic:10108" xsi:type="FareScheduledStopPointRefStructure"/>
+                      <EndStopPointRef version="01" ref="uic:33368" xsi:type="FareScheduledStopPointRefStructure"/>
                       <seriesConstraints>
                         <SeriesConstraint id="tfc:sc_10108+33368@either" version="01" order="1">
                           <Name>(Bucharest to Slanic) - Via Ploesti South</Name>

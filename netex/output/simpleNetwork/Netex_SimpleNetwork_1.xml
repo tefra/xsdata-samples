@@ -74,17 +74,17 @@
           <routeLinks>
             <RouteLink id="hde:hde:RL_001o@SSP0001A+RteP021" version="any">
               <Distance>110</Distance>
-              <FromPointRef version="032" ref="hde:SSP0001A"/>
+              <FromPointRef version="032" ref="hde:SSP0001A" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="hde:RteP021"/>
             </RouteLink>
             <RouteLink id="hde:RL_001o@RteP021+SSP0002B_a" version="any">
               <Distance>120</Distance>
               <FromPointRef version="any" ref="hde:RteP021"/>
-              <ToPointRef version="032" ref="hde:SSP0002B_a"/>
+              <ToPointRef version="032" ref="hde:SSP0002B_a" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_001o@SSP0001B_a+RteP022" version="any">
               <Distance>130</Distance>
-              <FromPointRef version="032" ref="hde:SSP0002B_a"/>
+              <FromPointRef version="032" ref="hde:SSP0002B_a" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="hde:RteP022"/>
             </RouteLink>
             <RouteLink id="hde:RL_001o@RteP022+RteP025" version="any">
@@ -95,21 +95,21 @@
             <RouteLink id="hde:RL_001o@RteP025+SSP0003C_a" version="any">
               <Distance>150</Distance>
               <FromPointRef version="any" ref="hde:RteP025"/>
-              <ToPointRef version="015" ref="hde:SSP0003C_a"/>
+              <ToPointRef version="015" ref="hde:SSP0003C_a" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_001o@SSP0003C_a5+SSP0003D" version="any">
               <Distance>160</Distance>
-              <FromPointRef version="015" ref="hde:SSP0003C_a"/>
+              <FromPointRef version="015" ref="hde:SSP0003C_a" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="015" ref="hde:SSP0004D"/>
             </RouteLink>
             <RouteLink id="hde:RL_001i_01" version="any">
               <Distance>161</Distance>
-              <FromPointRef version="015" ref="hde:SSP0004D"/>
-              <ToPointRef version="015" ref="hde:SSP0003C_b"/>
+              <FromPointRef version="015" ref="hde:SSP0004D" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="015" ref="hde:SSP0003C_b" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_001i_02" version="any">
               <Distance>151</Distance>
-              <FromPointRef version="015" ref="hde:SSP0003C_b"/>
+              <FromPointRef version="015" ref="hde:SSP0003C_b" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="hde:RteP025"/>
             </RouteLink>
             <RouteLink id="hde:RL_001i_03" version="any">
@@ -120,27 +120,27 @@
             <RouteLink id="hde:RL_001i_04" version="any">
               <Distance>131</Distance>
               <FromPointRef version="any" ref="hde:RteP022"/>
-              <ToPointRef version="032" ref="hde:SSP0002B_b"/>
+              <ToPointRef version="032" ref="hde:SSP0002B_b" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_001i_05" version="any">
               <Distance>121</Distance>
-              <FromPointRef version="015" ref="hde:SSP0003C_b"/>
+              <FromPointRef version="015" ref="hde:SSP0003C_b" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="hde:RteP021"/>
             </RouteLink>
             <RouteLink id="hde:RL_001i_06" version="any">
               <Distance>111</Distance>
               <FromPointRef version="any" ref="hde:RteP021"/>
-              <ToPointRef version="032" ref="hde:SSP0001A"/>
+              <ToPointRef version="032" ref="hde:SSP0001A" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_002o_06" version="any">
               <Distance>170</Distance>
-              <FromPointRef version="015" ref="hde:SSP0003C_a"/>
-              <ToPointRef version="015" ref="hde:SSP0005E"/>
+              <FromPointRef version="015" ref="hde:SSP0003C_a" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="015" ref="hde:SSP0005E" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
             <RouteLink id="hde:RL_002i_01" version="any">
               <Distance>171</Distance>
-              <FromPointRef version="015" ref="hde:SSP0005E"/>
-              <ToPointRef version="015" ref="hde:SSP0003C_b"/>
+              <FromPointRef version="015" ref="hde:SSP0005E" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="015" ref="hde:SSP0003C_b" xsi:type="ScheduledStopPointRefStructure"/>
             </RouteLink>
           </routeLinks>
           <routes>
@@ -285,7 +285,7 @@
             <CommonSection id="hde:CSc001o_JP" version="any">
               <Name>A - B - C Common Section: Journey {atterb</Name>
               <usedIn>
-                <LinkSequenceRef version="any" ref="hde:JP001o"/>
+                <LinkSequenceRef version="any" ref="hde:JP001o" xsi:type="JourneyPatternRefStructure"/>
               </usedIn>
               <pointsOnSection>
                 <PointOnSection id="hde:CSc001o_JP" version="1" order="1">
@@ -304,8 +304,8 @@
             <CommonSection id="hde:CSc001i_JP" version="any" responsibilitySetRef="hde:RS_22">
               <Name>C - B - A Common Section: Journey {atterb</Name>
               <usedIn>
-                <LinkSequenceRef version="any" ref="hde:JP001i"/>
-                <LinkSequenceRef ref="hde:JP002i"/>
+                <LinkSequenceRef version="any" ref="hde:JP001i" xsi:type="JourneyPatternRefStructure"/>
+                <LinkSequenceRef ref="hde:JP002i" xsi:type="JourneyPatternRefStructure"/>
               </usedIn>
               <pointsOnSection>
                 <PointOnSection id="hde:CSc001i_JP" version="1" order="1">

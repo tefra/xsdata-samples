@@ -366,17 +366,17 @@
           <timingLinks>
             <TimingLink id="mybus:TL@SSP_001+SSP_022_TOTAL_bus" version="any">
               <Name>Overall timing Alpha  to  Quebec</Name>
-              <FromPointRef version="any" ref="mybus:SSP_001"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_002+SSP_022_TOTAL_tram" version="any">
               <Name>Overall timing Bravo   to  Quebec</Name>
-              <FromPointRef version="any" ref="mybus:SSP_002"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_001+SSP_001_t1" version="any">
               <Name>Alpha to  After Alpha  t1</Name>
-              <FromPointRef version="any" ref="mybus:SSP_001"/>
+              <FromPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_001_t1"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_001_t1+SSP_001_t2" version="any">
@@ -387,40 +387,40 @@
             <TimingLink id="mybus:TL@SSP_001_t2+SSP_002" version="any">
               <Name>After Alpha  t2 to Bravo</Name>
               <FromPointRef version="any" ref="mybus:SSP_001_t2"/>
-              <ToPointRef version="any" ref="mybus:SSP_002"/>
+              <ToPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_002+SSP_002_t1" version="any">
               <Name>Bravo to After Bravo t1</Name>
-              <FromPointRef version="any" ref="mybus:SSP_002"/>
+              <FromPointRef version="any" ref="mybus:SSP_002" xsi:type="ScheduledStopPointRefStructure"/>
               <ToPointRef version="any" ref="mybus:SSP_002_t1"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_002_t1+SSP_077" version="any">
               <Name>After Bravo t1 to Charley</Name>
               <FromPointRef version="any" ref="mybus:SSP_002_t1"/>
-              <ToPointRef version="any" ref="mybus:SSP_077"/>
+              <ToPointRef version="any" ref="mybus:SSP_077" xsi:type="ScheduledStopPointRefStructure"/>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_077+SSP_021_bus" version="any">
               <Name>CHarley to Papa</Name>
-              <FromPointRef version="any" ref="mybus:SSP_021"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_021" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
               <VehicleMode>bus</VehicleMode>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_021+SSP_022_bus" version="any">
               <Name>Papa to Quebec </Name>
-              <FromPointRef version="any" ref="mybus:SSP_021"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_021" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
               <VehicleMode>bus</VehicleMode>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_077+SSP_021_tram" version="any">
               <Name>Charley to Papa TRAM</Name>
-              <FromPointRef version="any" ref="mybus:SSP_021"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_021" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
               <VehicleMode>tram</VehicleMode>
             </TimingLink>
             <TimingLink id="mybus:TL@SSP_021+SSP_022_tram" version="any">
               <Name>Papa to Quebec TRAM</Name>
-              <FromPointRef version="any" ref="mybus:SSP_021"/>
-              <ToPointRef version="any" ref="mybus:SSP_022"/>
+              <FromPointRef version="any" ref="mybus:SSP_021" xsi:type="ScheduledStopPointRefStructure"/>
+              <ToPointRef version="any" ref="mybus:SSP_022" xsi:type="ScheduledStopPointRefStructure"/>
               <VehicleMode>tram</VehicleMode>
             </TimingLink>
           </timingLinks>
@@ -431,7 +431,7 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:SSP_001"/>
+                  <TimingPointRef version="any" ref="mybus:SSP_001" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@SSP_001+SSP_001_t1"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_24o_02" version="any" order="2">

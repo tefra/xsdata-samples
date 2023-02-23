@@ -399,7 +399,7 @@
               <DirectionType>outbound</DirectionType>
               <pointsInSequence>
                 <TimingPointInJourneyPattern id="hde:tpip_42c@01" version="any" order="1">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Alpha+Bravo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42c@02" version="any" order="2">
@@ -415,11 +415,11 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Delta+Echo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42c@05" version="any" order="5">
-                  <TimingPointRef version="any" ref="mybus:Echo"/>
+                  <TimingPointRef version="any" ref="mybus:Echo" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Echo+Alpha"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42c@06" version="any" order="6">
-                  <TimingPointRef version="any" ref="mybus:Alpha"/>
+                  <TimingPointRef version="any" ref="mybus:Alpha" xsi:type="ScheduledStopPointRefStructure"/>
                 </TimingPointInJourneyPattern>
               </pointsInSequence>
             </TimingPattern>
@@ -433,11 +433,11 @@
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Echo+Delta"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42a@021" version="any" order="2">
-                  <TimingPointRef version="any" ref="mybus:Delta"/>
+                  <TimingPointRef version="any" ref="mybus:Delta" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Delta+Charley"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42a@03" version="any" order="3">
-                  <TimingPointRef version="any" ref="mybus:Charley"/>
+                  <TimingPointRef version="any" ref="mybus:Charley" xsi:type="ScheduledStopPointRefStructure"/>
                   <OnwardTimingLinkRef version="any" ref="mybus:TL@Charley+Bravo"/>
                 </TimingPointInJourneyPattern>
                 <TimingPointInJourneyPattern id="hde:tpip_42a@04" version="any" order="4">
