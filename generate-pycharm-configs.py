@@ -22,7 +22,7 @@ schemas = [
 
 template = """<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="{name}"
-  type="PythonConfigurationType" factoryName="Python">
+    type="PythonConfigurationType" factoryName="Python">
     <module name="xsdata" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
