@@ -2774,7 +2774,7 @@ class Set:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2800,7 +2800,7 @@ class Set:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2826,7 +2826,7 @@ class Set:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4558,7 +4558,7 @@ class ListType:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4584,7 +4584,7 @@ class ListType:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8874,7 +8874,7 @@ class Otherwise:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8900,7 +8900,7 @@ class Otherwise:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10051,7 +10051,7 @@ class Piece:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10077,7 +10077,7 @@ class Piece:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10129,7 +10129,7 @@ class Piecewise:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10155,7 +10155,7 @@ class Piecewise:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11030,7 +11030,7 @@ class Cerror:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11056,7 +11056,7 @@ class Cerror:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12098,7 +12098,7 @@ class Mrow:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12124,7 +12124,7 @@ class Mrow:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13196,7 +13196,7 @@ class Mrow:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -13222,7 +13222,7 @@ class Mrow:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -14625,7 +14625,7 @@ class Mfrac:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14651,7 +14651,7 @@ class Mfrac:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15742,7 +15742,7 @@ class Mfrac:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -15768,7 +15768,7 @@ class Mfrac:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -17171,7 +17171,7 @@ class Mroot:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17197,7 +17197,7 @@ class Mroot:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18263,7 +18263,7 @@ class Mroot:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -18289,7 +18289,7 @@ class Mroot:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -19356,7 +19356,7 @@ class Mfenced:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19382,7 +19382,7 @@ class Mfenced:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19409,19 +19409,19 @@ class Mfenced:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    open: Optional[str] = field(
+    open: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    close: Optional[str] = field(
+    close: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    separators: Optional[str] = field(
+    separators: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20466,7 +20466,7 @@ class Mfenced:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -20492,7 +20492,7 @@ class Mfenced:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -21895,7 +21895,7 @@ class Msub:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21921,7 +21921,7 @@ class Msub:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22994,7 +22994,7 @@ class Msub:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -23020,7 +23020,7 @@ class Msub:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -24423,7 +24423,7 @@ class Msup:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24449,7 +24449,7 @@ class Msup:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25522,7 +25522,7 @@ class Msup:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -25548,7 +25548,7 @@ class Msup:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -26951,7 +26951,7 @@ class Msubsup:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -26977,7 +26977,7 @@ class Msubsup:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -28057,7 +28057,7 @@ class Msubsup:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -28083,7 +28083,7 @@ class Msubsup:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -29486,7 +29486,7 @@ class Munder:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -29512,7 +29512,7 @@ class Munder:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30590,7 +30590,7 @@ class Munder:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -30616,7 +30616,7 @@ class Munder:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -32019,7 +32019,7 @@ class Mover:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -32045,7 +32045,7 @@ class Mover:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -33123,7 +33123,7 @@ class Mover:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -33149,7 +33149,7 @@ class Mover:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -34552,7 +34552,7 @@ class Munderover:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -34578,7 +34578,7 @@ class Munderover:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -35662,7 +35662,7 @@ class Munderover:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -35688,7 +35688,7 @@ class Munderover:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -36936,7 +36936,7 @@ class Mmultiscripts:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -36962,7 +36962,7 @@ class Mmultiscripts:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -38042,7 +38042,7 @@ class Mmultiscripts:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -38068,7 +38068,7 @@ class Mmultiscripts:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -40502,7 +40502,7 @@ class ImpliedMrow:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -40528,7 +40528,7 @@ class ImpliedMrow:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -40580,7 +40580,7 @@ class Menclose(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40606,7 +40606,7 @@ class Menclose(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40633,7 +40633,7 @@ class Menclose(ImpliedMrow):
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    notation: Optional[str] = field(
+    notation: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40653,7 +40653,7 @@ class Merror(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40679,7 +40679,7 @@ class Merror(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40720,7 +40720,7 @@ class Mpadded(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40746,7 +40746,7 @@ class Mpadded(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40822,7 +40822,7 @@ class Mphantom(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40848,7 +40848,7 @@ class Mphantom(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40889,7 +40889,7 @@ class Msqrt(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40915,7 +40915,7 @@ class Msqrt(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40956,7 +40956,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40982,7 +40982,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41091,7 +41091,7 @@ class Mstyle(ImpliedMrow):
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    close: Optional[str] = field(
+    close: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41195,7 +41195,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    framespacing: List[str] = field(
+    framespacing: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -41256,7 +41256,7 @@ class Mstyle(ImpliedMrow):
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indenttarget: Optional[str] = field(
+    indenttarget: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41287,7 +41287,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    linebreakmultchar: Optional[str] = field(
+    linebreakmultchar: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41325,7 +41325,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    lquote: Optional[str] = field(
+    lquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41385,7 +41385,7 @@ class Mstyle(ImpliedMrow):
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    notation: Optional[str] = field(
+    notation: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41397,7 +41397,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    open: Optional[str] = field(
+    open: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41445,7 +41445,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    rquote: Optional[str] = field(
+    rquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41470,7 +41470,7 @@ class Mstyle(ImpliedMrow):
             "type": "Attribute",
         }
     )
-    separators: Optional[str] = field(
+    separators: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41534,7 +41534,7 @@ class Mstyle(ImpliedMrow):
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    fontfamily: Optional[str] = field(
+    fontfamily: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -42657,7 +42657,7 @@ class Mscarry:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -42683,7 +42683,7 @@ class Mscarry:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -43762,7 +43762,7 @@ class Mscarry:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -43788,7 +43788,7 @@ class Mscarry:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -44861,7 +44861,7 @@ class Msrow:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -44887,7 +44887,7 @@ class Msrow:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45959,7 +45959,7 @@ class Msrow:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -45985,7 +45985,7 @@ class Msrow:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -47064,7 +47064,7 @@ class Mscarries:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -47090,7 +47090,7 @@ class Mscarries:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -48181,7 +48181,7 @@ class Mscarries:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -48207,7 +48207,7 @@ class Mscarries:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -49298,7 +49298,7 @@ class Msgroup:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -49324,7 +49324,7 @@ class Msgroup:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -50402,7 +50402,7 @@ class Msgroup:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -50428,7 +50428,7 @@ class Msgroup:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -51519,7 +51519,7 @@ class Mstack:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -51545,7 +51545,7 @@ class Mstack:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52637,7 +52637,7 @@ class Mstack:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -52663,7 +52663,7 @@ class Mstack:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -52882,7 +52882,7 @@ class Csymbol(CsymbolContent):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52908,7 +52908,7 @@ class Csymbol(CsymbolContent):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52934,7 +52934,7 @@ class Csymbol(CsymbolContent):
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -54171,7 +54171,7 @@ class Mlongdiv:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -54197,7 +54197,7 @@ class Mlongdiv:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -55281,7 +55281,7 @@ class Mlongdiv:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -55307,7 +55307,7 @@ class Mlongdiv:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -55531,7 +55531,7 @@ class Cn(CnContent):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -55557,7 +55557,7 @@ class Cn(CnContent):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -55583,13 +55583,13 @@ class Cn(CnContent):
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    base: Optional[str] = field(
+    base: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56624,7 +56624,7 @@ class Maction:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56650,7 +56650,7 @@ class Maction:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56677,7 +56677,7 @@ class Maction:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    actiontype: Optional[str] = field(
+    actiontype: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -57729,7 +57729,7 @@ class Maction:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -57755,7 +57755,7 @@ class Maction:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -57974,7 +57974,7 @@ class Ci(CiContent):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58000,7 +58000,7 @@ class Ci(CiContent):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58026,7 +58026,7 @@ class Ci(CiContent):
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60593,7 +60593,7 @@ class Bvar:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60619,7 +60619,7 @@ class Bvar:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60668,7 +60668,7 @@ class Bvar:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -60694,7 +60694,7 @@ class Bvar:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -61924,7 +61924,7 @@ class Apply(ApplyContent):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -61950,7 +61950,7 @@ class Apply(ApplyContent):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -61983,7 +61983,7 @@ class Bind(BindContent):
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -62009,7 +62009,7 @@ class Bind(BindContent):
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",

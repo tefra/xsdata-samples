@@ -281,25 +281,25 @@ class CouponOfferType:
     """
     Not used.
     """
-    promo_id: Optional[str] = field(
+    promo_id: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    corp_id: Optional[str] = field(
+    corp_id: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    headline: Optional[str] = field(
+    headline: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    discount_pctg: Optional[str] = field(
+    discount_pctg: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -737,7 +737,7 @@ class OcfeeType:
             "type": "Attribute",
         }
     )
-    start_segment: Optional[str] = field(
+    start_segment: Optional[object] = field(
         default=None,
         metadata={
             "name": "StartSegment",
@@ -745,7 +745,7 @@ class OcfeeType:
             "required": True,
         }
     )
-    end_segment: Optional[str] = field(
+    end_segment: Optional[object] = field(
         default=None,
         metadata={
             "name": "EndSegment",
@@ -1561,14 +1561,14 @@ class FareComponentTaxesType:
             departure_airport_code: Departure point of flight segment.
             arrival_airport_code: Arrival point of flight segment.
         """
-        departure_airport_code: Optional[str] = field(
+        departure_airport_code: Optional[object] = field(
             default=None,
             metadata={
                 "name": "DepartureAirportCode",
                 "type": "Attribute",
             }
         )
-        arrival_airport_code: Optional[str] = field(
+        arrival_airport_code: Optional[object] = field(
             default=None,
             metadata={
                 "name": "ArrivalAirportCode",
@@ -2239,7 +2239,7 @@ class BookFlightSegmentType:
                     "type": "Attribute",
                 }
             )
-            equipment: Optional[str] = field(
+            equipment: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "Equipment",
@@ -3113,7 +3113,7 @@ class FareType:
 
                 @dataclass
                 class TotalMileage:
-                    amount: Optional[str] = field(
+                    amount: Optional[object] = field(
                         default=None,
                         metadata={
                             "name": "Amount",
@@ -3608,7 +3608,7 @@ class ItinTotalFareType(FareType):
 
     @dataclass
     class Extras:
-        amount: Optional[str] = field(
+        amount: Optional[object] = field(
             default=None,
             metadata={
                 "name": "Amount",
@@ -3619,7 +3619,7 @@ class ItinTotalFareType(FareType):
 
     @dataclass
     class TotalWithExtras:
-        amount: Optional[str] = field(
+        amount: Optional[object] = field(
             default=None,
             metadata={
                 "name": "Amount",
@@ -3630,7 +3630,7 @@ class ItinTotalFareType(FareType):
 
     @dataclass
     class TotalMileage:
-        amount: Optional[str] = field(
+        amount: Optional[object] = field(
             default=None,
             metadata={
                 "name": "Amount",
@@ -3884,14 +3884,14 @@ class PtcfareBreakdownType:
                     "type": "Attribute",
                 }
             )
-            departure_airport_code: Optional[str] = field(
+            departure_airport_code: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "DepartureAirportCode",
                     "type": "Attribute",
                 }
             )
-            arrival_airport_code: Optional[str] = field(
+            arrival_airport_code: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "ArrivalAirportCode",
@@ -4965,7 +4965,7 @@ class AirItineraryPricingInfoType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 }
             )
-            message: Optional[str] = field(
+            message: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "Message",
@@ -4990,7 +4990,7 @@ class AirItineraryPricingInfoType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     }
                 )
-                code: Optional[str] = field(
+                code: Optional[object] = field(
                     default=None,
                     metadata={
                         "name": "Code",
@@ -4998,7 +4998,7 @@ class AirItineraryPricingInfoType:
                         "required": True,
                     }
                 )
-                name: Optional[str] = field(
+                name: Optional[object] = field(
                     default=None,
                     metadata={
                         "name": "Name",
@@ -5006,7 +5006,7 @@ class AirItineraryPricingInfoType:
                         "required": True,
                     }
                 )
-                message: Optional[str] = field(
+                message: Optional[object] = field(
                     default=None,
                     metadata={
                         "name": "Message",
@@ -5052,7 +5052,7 @@ class AirItineraryPricingInfoType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     }
                 )
-                number: Optional[str] = field(
+                number: Optional[object] = field(
                     default=None,
                     metadata={
                         "name": "Number",

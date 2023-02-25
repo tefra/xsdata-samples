@@ -39,7 +39,7 @@ class Mtable:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -65,7 +65,7 @@ class Mtable:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -179,7 +179,7 @@ class Mtable:
             "type": "Attribute",
         }
     )
-    framespacing: List[str] = field(
+    framespacing: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",

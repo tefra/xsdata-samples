@@ -5612,7 +5612,7 @@ class HostToken:
             "max_length": 5,
         }
     )
-    key: Optional[str] = field(
+    key: Optional[object] = field(
         default=None,
         metadata={
             "name": "Key",
@@ -5756,7 +5756,7 @@ class LoyaltyProgram:
             "type": "Attribute",
         }
     )
-    level: Optional[str] = field(
+    level: Optional[object] = field(
         default=None,
         metadata={
             "name": "Level",
@@ -6406,7 +6406,7 @@ class PolicyInformation:
             "required": True,
         }
     )
-    name: Optional[str] = field(
+    name: Optional[object] = field(
         default=None,
         metadata={
             "name": "Name",
@@ -8382,14 +8382,14 @@ class TypeKeyword:
             "max_length": 12,
         }
     )
-    number: Optional[str] = field(
+    number: Optional[object] = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
         }
     )
-    description: Optional[str] = field(
+    description: Optional[object] = field(
         default=None,
         metadata={
             "name": "Description",
@@ -8448,14 +8448,14 @@ class TypeOtakeyword:
             "max_length": 6,
         }
     )
-    number: Optional[str] = field(
+    number: Optional[object] = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
         }
     )
-    description: Optional[str] = field(
+    description: Optional[object] = field(
         default=None,
         metadata={
             "name": "Description",
@@ -10599,14 +10599,14 @@ class TravelerInformation:
                 "type": "Element",
             }
         )
-        name: Optional[str] = field(
+        name: Optional[object] = field(
             default=None,
             metadata={
                 "name": "Name",
                 "type": "Attribute",
             }
         )
-        relationship: Optional[str] = field(
+        relationship: Optional[object] = field(
             default=None,
             metadata={
                 "name": "Relationship",

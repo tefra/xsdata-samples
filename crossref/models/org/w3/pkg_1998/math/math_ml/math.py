@@ -1331,7 +1331,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    close: Optional[str] = field(
+    close: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1435,7 +1435,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    framespacing: List[str] = field(
+    framespacing: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
@@ -1496,7 +1496,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indenttarget: Optional[str] = field(
+    indenttarget: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1527,7 +1527,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    linebreakmultchar: Optional[str] = field(
+    linebreakmultchar: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1565,7 +1565,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    lquote: Optional[str] = field(
+    lquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1625,7 +1625,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    notation: Optional[str] = field(
+    notation: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1637,7 +1637,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    open: Optional[str] = field(
+    open: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1685,7 +1685,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    rquote: Optional[str] = field(
+    rquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1710,7 +1710,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    separators: Optional[str] = field(
+    separators: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1780,7 +1780,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1806,7 +1806,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1868,7 +1868,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    alttext: Optional[str] = field(
+    alttext: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2932,7 +2932,7 @@ class Math:
                 "type": "Attribute",
             }
         )
-        xref: Optional[str] = field(
+        xref: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -2958,7 +2958,7 @@ class Math:
                 "type": "Attribute",
             }
         )
-        other: Optional[str] = field(
+        other: Optional[object] = field(
             default=None,
             metadata={
                 "type": "Attribute",

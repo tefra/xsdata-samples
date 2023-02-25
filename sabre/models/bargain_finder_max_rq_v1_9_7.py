@@ -7029,14 +7029,14 @@ class AirSearchPrefsType:
                     threshold to be respected while choosing alternative
                     options
             """
-            minimum_price: Optional[str] = field(
+            minimum_price: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "MinimumPrice",
                     "type": "Attribute",
                 }
             )
-            maximum_price: Optional[str] = field(
+            maximum_price: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "MaximumPrice",
@@ -7193,7 +7193,7 @@ class AirSearchPrefsType:
                 code: Group code
                 count: Number of items
             """
-            code: Optional[str] = field(
+            code: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "Code",
@@ -7201,7 +7201,7 @@ class AirSearchPrefsType:
                     "required": True,
                 }
             )
-            count: Optional[str] = field(
+            count: Optional[object] = field(
                 default=None,
                 metadata={
                     "name": "Count",

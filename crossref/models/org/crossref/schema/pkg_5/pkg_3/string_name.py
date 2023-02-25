@@ -14,7 +14,7 @@ class StringName:
         name = "string-name"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    content_type: Optional[str] = field(
+    content_type: Optional[object] = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -28,7 +28,7 @@ class StringName:
             "type": "Attribute",
         }
     )
-    specific_use: Optional[str] = field(
+    specific_use: Optional[object] = field(
         default=None,
         metadata={
             "name": "specific-use",

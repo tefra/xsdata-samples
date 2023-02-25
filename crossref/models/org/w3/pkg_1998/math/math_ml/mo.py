@@ -39,7 +39,7 @@ class Mo:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -65,7 +65,7 @@ class Mo:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -111,7 +111,7 @@ class Mo:
             "type": "Attribute",
         }
     )
-    fontfamily: Optional[str] = field(
+    fontfamily: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -245,7 +245,7 @@ class Mo:
             "type": "Attribute",
         }
     )
-    linebreakmultchar: Optional[str] = field(
+    linebreakmultchar: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -264,7 +264,7 @@ class Mo:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indenttarget: Optional[str] = field(
+    indenttarget: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",

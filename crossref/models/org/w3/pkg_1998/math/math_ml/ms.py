@@ -25,7 +25,7 @@ class Ms:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -51,7 +51,7 @@ class Ms:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -97,7 +97,7 @@ class Ms:
             "type": "Attribute",
         }
     )
-    fontfamily: Optional[str] = field(
+    fontfamily: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -136,13 +136,13 @@ class Ms:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    lquote: Optional[str] = field(
+    lquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    rquote: Optional[str] = field(
+    rquote: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",

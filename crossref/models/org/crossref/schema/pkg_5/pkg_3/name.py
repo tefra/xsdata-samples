@@ -48,7 +48,7 @@ class Name:
             "max_length": 10,
         }
     )
-    content_type: Optional[str] = field(
+    content_type: Optional[object] = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -62,7 +62,7 @@ class Name:
             "type": "Attribute",
         }
     )
-    specific_use: Optional[str] = field(
+    specific_use: Optional[object] = field(
         default=None,
         metadata={
             "name": "specific-use",

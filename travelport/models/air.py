@@ -5363,7 +5363,7 @@ class TicketAgency:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    provider_code: Optional[str] = field(
+    provider_code: Optional[object] = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -5371,7 +5371,7 @@ class TicketAgency:
             "required": True,
         }
     )
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: Optional[object] = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -6883,7 +6883,7 @@ class Apisrequirements:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: Optional[object] = field(
         default=None,
         metadata={
             "name": "Key",
@@ -13293,7 +13293,7 @@ class AirRefundBundle:
             "type": "Attribute",
         }
     )
-    ptc: Optional[str] = field(
+    ptc: Optional[object] = field(
         default=None,
         metadata={
             "name": "PTC",

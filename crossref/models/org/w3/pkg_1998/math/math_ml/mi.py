@@ -25,7 +25,7 @@ class Mi:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -51,7 +51,7 @@ class Mi:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -97,7 +97,7 @@ class Mi:
             "type": "Attribute",
         }
     )
-    fontfamily: Optional[str] = field(
+    fontfamily: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",

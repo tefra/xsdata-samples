@@ -22,7 +22,7 @@ class Mglyph:
             "type": "Attribute",
         }
     )
-    xref: Optional[str] = field(
+    xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -48,7 +48,7 @@ class Mglyph:
             "type": "Attribute",
         }
     )
-    other: Optional[str] = field(
+    other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -102,7 +102,7 @@ class Mglyph:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    alt: Optional[str] = field(
+    alt: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -127,7 +127,7 @@ class Mglyph:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    fontfamily: Optional[str] = field(
+    fontfamily: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
