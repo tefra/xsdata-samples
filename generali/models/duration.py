@@ -11,11 +11,13 @@ class Duration:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

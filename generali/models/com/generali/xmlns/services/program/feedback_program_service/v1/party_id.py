@@ -15,6 +15,7 @@ class PartyId:
         metadata={
             "name": "PartyGUNS",
             "type": "Attribute",
+            "required": True,
         }
     )
     party_type: Optional[str] = field(
@@ -22,8 +23,12 @@ class PartyId:
         metadata={
             "name": "PartyType",
             "type": "Attribute",
+            "required": True,
         }
     )
     value: str = field(
-        default=""
+        default="",
+        metadata={
+            "required": True,
+        }
     )

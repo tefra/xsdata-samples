@@ -11,6 +11,7 @@ class Numeric:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[object] = field(

@@ -14,5 +14,6 @@ class ReinsuranceAgreements:
         metadata={
             "name": "ReinsuranceAgreementID",
             "type": "Element",
+            "required": True,
         }
     )

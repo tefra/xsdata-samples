@@ -16,5 +16,6 @@ class PartyIds:
         metadata={
             "name": "PartyID",
             "type": "Element",
+            "required": True,
         }
     )

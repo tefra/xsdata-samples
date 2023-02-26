@@ -15,5 +15,6 @@ class Policies:
         metadata={
             "name": "Policy",
             "type": "Element",
+            "required": True,
         }
     )

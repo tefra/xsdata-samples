@@ -18,6 +18,7 @@ class LocalPolicy:
         metadata={
             "name": "LocalPolicyID",
             "type": "Element",
+            "required": True,
         }
     )
     status: Optional[str] = field(
@@ -25,6 +26,7 @@ class LocalPolicy:
         metadata={
             "name": "Status",
             "type": "Element",
+            "required": True,
         }
     )
     party_ids: Optional[PartyIds] = field(
@@ -32,6 +34,7 @@ class LocalPolicy:
         metadata={
             "name": "PartyIDs",
             "type": "Element",
+            "required": True,
         }
     )
     risks: Optional[Risks] = field(
@@ -39,6 +42,7 @@ class LocalPolicy:
         metadata={
             "name": "Risks",
             "type": "Element",
+            "required": True,
         }
     )
     reinsurance_agreements: Optional[ReinsuranceAgreements] = field(
@@ -46,6 +50,7 @@ class LocalPolicy:
         metadata={
             "name": "ReinsuranceAgreements",
             "type": "Element",
+            "required": True,
         }
     )
     inception_date: Optional[XmlDateTime] = field(
@@ -53,6 +58,7 @@ class LocalPolicy:
         metadata={
             "name": "InceptionDate",
             "type": "Element",
+            "required": True,
         }
     )
     issuance_date: Optional[XmlDateTime] = field(
@@ -60,6 +66,7 @@ class LocalPolicy:
         metadata={
             "name": "IssuanceDate",
             "type": "Element",
+            "required": True,
         }
     )
     expiry_date: Optional[XmlDateTime] = field(
@@ -67,5 +74,6 @@ class LocalPolicy:
         metadata={
             "name": "ExpiryDate",
             "type": "Element",
+            "required": True,
         }
     )

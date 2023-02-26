@@ -11,5 +11,6 @@ class TypeType:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

@@ -80,12 +80,14 @@ class Categories:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -99,18 +101,21 @@ class CategoryCode:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -176,24 +181,28 @@ class CreatedById:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     required: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -207,6 +216,7 @@ class Criteria:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[object] = field(
@@ -219,6 +229,7 @@ class Criteria:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -315,24 +326,28 @@ class Id:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     required: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -346,18 +361,21 @@ class Identification:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -371,12 +389,14 @@ class Ids:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -390,24 +410,28 @@ class LastModifiedById:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     required: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -485,12 +509,14 @@ class QueryExpression:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -523,24 +549,28 @@ class StatusCode:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     required: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
 
@@ -606,18 +636,21 @@ class ValidityPeriod:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -631,12 +664,14 @@ class ValueExpression:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
 
@@ -650,24 +685,28 @@ class VersionId:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     properties: Optional["Properties"] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     required: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
 

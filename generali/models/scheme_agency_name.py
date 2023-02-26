@@ -11,5 +11,6 @@ class SchemeAgencyName:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

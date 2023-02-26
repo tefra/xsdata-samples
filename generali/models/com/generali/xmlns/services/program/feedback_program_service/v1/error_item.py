@@ -14,6 +14,7 @@ class ErrorItem:
         metadata={
             "name": "Code",
             "type": "Element",
+            "required": True,
         }
     )
     description: Optional[str] = field(
@@ -21,6 +22,7 @@ class ErrorItem:
         metadata={
             "name": "Description",
             "type": "Element",
+            "required": True,
         }
     )
     type: Optional[str] = field(
@@ -28,6 +30,7 @@ class ErrorItem:
         metadata={
             "name": "Type",
             "type": "Element",
+            "required": True,
         }
     )
     level: Optional[str] = field(
@@ -35,5 +38,6 @@ class ErrorItem:
         metadata={
             "name": "Level",
             "type": "Element",
+            "required": True,
         }
     )

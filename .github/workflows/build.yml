@@ -21,7 +21,6 @@ jobs:
           - { name: "Common Types", id: "common_types" }
           - { name: "Crossref Metadata", id: "crossref" }
           - { name: "DateX II", id: "datexii" }
-          - { name: "DefXML", id: "defxml" }
           - { name: "EWP", id: "ewp" }
           - { name: "Generali", id: "generali" }
           - { name: "NeTEx", id: "netex" }
@@ -46,9 +45,9 @@ jobs:
           pip install -r requirements.txt
       - name: Generate Code
         if: matrix.collection.id != 'defxml'
-        run: make build-${{ matrix.collection.id }}
+        run: ./run.py build ${{ matrix.collection.id }}
       - name: Run Tests
         if: matrix.collection.id != 'common_types'
-        run: make test-${{ matrix.collection.id }}
+        run: ./run.py test ${{ matrix.collection.id }}
       - name: Run mypy
-        run: make mypy-${{ matrix.collection.id }}
+        run: ./run.py mypy ${{ matrix.collection.id }}

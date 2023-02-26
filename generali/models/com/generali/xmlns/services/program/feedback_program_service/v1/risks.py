@@ -15,5 +15,6 @@ class Risks:
         metadata={
             "name": "Risk",
             "type": "Element",
+            "required": True,
         }
     )
