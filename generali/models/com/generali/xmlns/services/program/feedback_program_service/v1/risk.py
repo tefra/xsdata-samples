@@ -15,6 +15,7 @@ class Risk:
         metadata={
             "name": "GlobalRiskID",
             "type": "Element",
+            "required": True,
         }
     )
     local_risk_id: Optional[str] = field(
@@ -22,6 +23,7 @@ class Risk:
         metadata={
             "name": "LocalRiskID",
             "type": "Element",
+            "required": True,
         }
     )
     reinsurance_agreement: Optional[str] = field(
@@ -29,6 +31,7 @@ class Risk:
         metadata={
             "name": "ReinsuranceAgreement",
             "type": "Element",
+            "required": True,
         }
     )
     locations: Optional[Locations] = field(
@@ -36,5 +39,6 @@ class Risk:
         metadata={
             "name": "Locations",
             "type": "Element",
+            "required": True,
         }
     )

@@ -66,6 +66,7 @@ class Models:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     fault_cause: Optional[FaultCause] = field(

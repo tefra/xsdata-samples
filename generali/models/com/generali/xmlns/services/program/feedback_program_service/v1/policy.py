@@ -16,6 +16,7 @@ class Policy:
         metadata={
             "name": "PolicyID",
             "type": "Element",
+            "required": True,
         }
     )
     status: Optional[str] = field(
@@ -23,6 +24,7 @@ class Policy:
         metadata={
             "name": "Status",
             "type": "Element",
+            "required": True,
         }
     )
     local_policies: Optional[LocalPolicies] = field(
@@ -30,6 +32,7 @@ class Policy:
         metadata={
             "name": "LocalPolicies",
             "type": "Element",
+            "required": True,
         }
     )
     errors: Optional[Errors] = field(
@@ -37,5 +40,6 @@ class Policy:
         metadata={
             "name": "Errors",
             "type": "Element",
+            "required": True,
         }
     )

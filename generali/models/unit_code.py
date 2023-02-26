@@ -11,5 +11,6 @@ class UnitCode:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

@@ -11,11 +11,13 @@ class CreatedDateTime:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     format: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

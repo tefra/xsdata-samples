@@ -14,11 +14,13 @@ class Links:
         metadata={
             "name": "self",
             "type": "Element",
+            "required": True,
         }
     )
     find: Optional[Find] = field(
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

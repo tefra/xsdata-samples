@@ -15,6 +15,7 @@ class FeedbackProgramPolicies:
         default=None,
         metadata={
             "type": "Attribute",
+            "required": True,
         }
     )
     schema_location: Optional[str] = field(
@@ -23,6 +24,7 @@ class FeedbackProgramPolicies:
             "name": "schemaLocation",
             "type": "Attribute",
             "namespace": "http://www.w3.org/2001/XMLSchema-instance",
+            "required": True,
         }
     )
     consumer_id: Optional[str] = field(
@@ -30,6 +32,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "ConsumerID",
             "type": "Element",
+            "required": True,
         }
     )
     transmission_id: Optional[str] = field(
@@ -37,6 +40,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "TransmissionID",
             "type": "Element",
+            "required": True,
         }
     )
     program_id: Optional[str] = field(
@@ -44,6 +48,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "ProgramID",
             "type": "Element",
+            "required": True,
         }
     )
     local_program_id: Optional[str] = field(
@@ -51,6 +56,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "LocalProgramID",
             "type": "Element",
+            "required": True,
         }
     )
     policies: Optional[Policies] = field(
@@ -58,6 +64,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "Policies",
             "type": "Element",
+            "required": True,
         }
     )
     status: Optional[str] = field(
@@ -65,6 +72,7 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "Status",
             "type": "Element",
+            "required": True,
         }
     )
     errors: Optional[Errors] = field(
@@ -72,5 +80,6 @@ class FeedbackProgramPolicies:
         metadata={
             "name": "Errors",
             "type": "Element",
+            "required": True,
         }
     )

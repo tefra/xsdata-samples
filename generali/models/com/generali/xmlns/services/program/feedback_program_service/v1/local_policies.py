@@ -15,5 +15,6 @@ class LocalPolicies:
         metadata={
             "name": "LocalPolicy",
             "type": "Element",
+            "required": True,
         }
     )

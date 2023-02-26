@@ -11,5 +11,6 @@ class CurrencyId:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )

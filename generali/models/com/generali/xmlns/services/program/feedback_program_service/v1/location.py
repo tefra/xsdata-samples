@@ -14,6 +14,7 @@ class Location:
         metadata={
             "name": "GlobalLocationID",
             "type": "Element",
+            "required": True,
         }
     )
     local_location_id: Optional[str] = field(
@@ -21,5 +22,6 @@ class Location:
         metadata={
             "name": "LocalLocationID",
             "type": "Element",
+            "required": True,
         }
     )
