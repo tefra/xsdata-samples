@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.relations.intra_work_relation_identifier_type import IntraWorkRelationIdentifierType
 from crossref.models.org.crossref.relations.intra_work_relation_relationship_type import IntraWorkRelationRelationshipType
-from crossref.models.org.crossref.relations.relations_type_atts_identifier_type import RelationsTypeAttsIdentifierType
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
@@ -33,7 +33,7 @@ class IntraWorkRelation:
             "required": True,
         }
     )
-    identifier_type: Optional[RelationsTypeAttsIdentifierType] = field(
+    identifier_type: Optional[IntraWorkRelationIdentifierType] = field(
         default=None,
         metadata={
             "name": "identifier-type",

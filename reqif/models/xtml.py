@@ -10,7 +10,7 @@ from reqif.models.org.w3.xml.pkg_1998.namespace import (
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
 
-class XhtmlCellHalignAttribAlign(Enum):
+class XhtmlColTypeAlign(Enum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -18,14 +18,39 @@ class XhtmlCellHalignAttribAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlCellValignAttribValign(Enum):
+class XhtmlColTypeValign(Enum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlFrameAttribFrame(Enum):
+class XhtmlColgroupTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlColgroupTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlObjectTypeDeclare(Enum):
+    DECLARE = "declare"
+
+
+class XhtmlParamTypeValuetype(Enum):
+    DATA = "data"
+    REF = "ref"
+    OBJECT = "object"
+
+
+class XhtmlTableTypeFrame(Enum):
     VOID = "void"
     ABOVE = "above"
     BELOW = "below"
@@ -37,17 +62,7 @@ class XhtmlFrameAttribFrame(Enum):
     BORDER = "border"
 
 
-class XhtmlObjectAttlistDeclare(Enum):
-    DECLARE = "declare"
-
-
-class XhtmlParamAttlistValuetype(Enum):
-    DATA = "data"
-    REF = "ref"
-    OBJECT = "object"
-
-
-class XhtmlRulesAttribRules(Enum):
+class XhtmlTableTypeRules(Enum):
     NONE = "none"
     GROUPS = "groups"
     ROWS = "rows"
@@ -55,11 +70,108 @@ class XhtmlRulesAttribRules(Enum):
     ALL = "all"
 
 
-class XhtmlScopeAttribScope(Enum):
+class XhtmlTbodyTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlTbodyTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlTdTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlTdTypeScope(Enum):
     ROW = "row"
     COL = "col"
     ROWGROUP = "rowgroup"
     COLGROUP = "colgroup"
+
+
+class XhtmlTdTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlTfootTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlTfootTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlThTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlThTypeScope(Enum):
+    ROW = "row"
+    COL = "col"
+    ROWGROUP = "rowgroup"
+    COLGROUP = "colgroup"
+
+
+class XhtmlThTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlTheadTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlTheadTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
+
+
+class XhtmlTrTypeAlign(Enum):
+    LEFT = "left"
+    CENTER = "center"
+    RIGHT = "right"
+    JUSTIFY = "justify"
+    CHAR = "char"
+
+
+class XhtmlTrTypeValign(Enum):
+    TOP = "top"
+    MIDDLE = "middle"
+    BOTTOM = "bottom"
+    BASELINE = "baseline"
 
 
 @dataclass
@@ -154,7 +266,7 @@ class XhtmlColType:
             "pattern": r"\d*\*",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlColTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -174,7 +286,7 @@ class XhtmlColType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlColTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -308,8 +420,8 @@ class XhtmlParamType:
             "type": "Attribute",
         }
     )
-    valuetype: XhtmlParamAttlistValuetype = field(
-        default=XhtmlParamAttlistValuetype.DATA,
+    valuetype: XhtmlParamTypeValuetype = field(
+        default=XhtmlParamTypeValuetype.DATA,
         metadata={
             "type": "Attribute",
         }
@@ -323,102 +435,9 @@ class XhtmlParamType:
 
 
 @dataclass
-class XhtmlColgroupType:
+class XhtmlCaptionType:
     class Meta:
-        name = "xhtml.colgroup.type"
-
-    col: List[XhtmlColType] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.w3.org/1999/xhtml",
-        }
-    )
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    span: int = field(
-        default=1,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    width: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d*\*",
-        }
-    )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    char: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "length": 1,
-        }
-    )
-    charoff: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        }
-    )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class XhtmlQType:
-    class Meta:
-        name = "xhtml.q.type"
+        name = "xhtml.caption.type"
 
     space: SpaceValue = field(
         init=False,
@@ -455,12 +474,6 @@ class XhtmlQType:
         }
     )
     style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    cite: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -599,9 +612,102 @@ class XhtmlQType:
 
 
 @dataclass
-class XhtmlAcronymType:
+class XhtmlColgroupType:
     class Meta:
-        name = "xhtml.acronym.type"
+        name = "xhtml.colgroup.type"
+
+    col: List[XhtmlColType] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+        }
+    )
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    span: int = field(
+        default=1,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    width: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d*\*",
+        }
+    )
+    align: Optional[XhtmlColgroupTypeAlign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    char: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
+    )
+    charoff: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
+    )
+    valign: Optional[XhtmlColgroupTypeValign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+
+
+@dataclass
+class XhtmlDtType:
+    class Meta:
+        name = "xhtml.dt.type"
 
     space: SpaceValue = field(
         init=False,
@@ -712,1777 +818,7 @@ class XhtmlAcronymType:
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlAbbrType:
-    class Meta:
-        name = "xhtml.abbr.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": Type["XhtmlSampType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": Type["XhtmlKbdType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": Type["XhtmlVarType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": Type["XhtmlCiteType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": Type["XhtmlAbbrType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlCiteType:
-    class Meta:
-        name = "xhtml.cite.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": Type["XhtmlSampType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": Type["XhtmlKbdType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": Type["XhtmlVarType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": Type["XhtmlCiteType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlVarType:
-    class Meta:
-        name = "xhtml.var.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": Type["XhtmlSampType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": Type["XhtmlKbdType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": Type["XhtmlVarType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlKbdType:
-    class Meta:
-        name = "xhtml.kbd.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": Type["XhtmlSampType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": Type["XhtmlKbdType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlSampType:
-    class Meta:
-        name = "xhtml.samp.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": Type["XhtmlSampType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlCodeType:
-    class Meta:
-        name = "xhtml.code.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": Type["XhtmlCodeType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlDfnType:
-    class Meta:
-        name = "xhtml.dfn.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": Type["XhtmlDfnType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlStrongType:
-    class Meta:
-        name = "xhtml.strong.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": Type["XhtmlStrongType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlCaptionType:
-    class Meta:
-        name = "xhtml.caption.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": XhtmlStrongType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlDtType:
-    class Meta:
-        name = "xhtml.dt.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": XhtmlStrongType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2614,52 +950,52 @@ class XhtmlH2Type:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2791,52 +1127,52 @@ class XhtmlH3Type:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2968,52 +1304,52 @@ class XhtmlH4Type:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3145,52 +1481,52 @@ class XhtmlH5Type:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3322,52 +1658,52 @@ class XhtmlH6Type:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3499,52 +1835,52 @@ class XhtmlPType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3676,52 +2012,52 @@ class XhtmlPreType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3760,9 +2096,9 @@ class XhtmlPreType:
 
 
 @dataclass
-class XhtmlDdType:
+class XhtmlTdType:
     class Meta:
-        name = "xhtml.dd.type"
+        name = "xhtml.td.type"
 
     space: SpaceValue = field(
         init=False,
@@ -3799,6 +2135,69 @@ class XhtmlDdType:
         }
     )
     style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    abbr: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    axis: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    headers: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    scope: Optional[XhtmlTdTypeScope] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    rowspan: int = field(
+        default=1,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    colspan: int = field(
+        default=1,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    align: Optional[XhtmlTdTypeAlign] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    char: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "length": 1,
+        }
+    )
+    charoff: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
+    )
+    valign: Optional[XhtmlTdTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3908,435 +2307,52 @@ class XhtmlDdType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": Type["XhtmlAType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": Type["XhtmlObjectType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlDlType:
-    class Meta:
-        name = "xhtml.dl.type"
-
-    dt: List[XhtmlDtType] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "sequence": 26,
-        }
-    )
-    dd: List[XhtmlDdType] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "sequence": 26,
-        }
-    )
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-
-
-@dataclass
-class XhtmlTdType:
-    class Meta:
-        name = "xhtml.td.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    abbr: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    axis: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    headers: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    scope: Optional[XhtmlScopeAttribScope] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    rowspan: int = field(
-        default=1,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    colspan: int = field(
-        default=1,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    char: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "length": 1,
-        }
-    )
-    charoff: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        }
-    )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "h1",
-                    "type": Type["XhtmlH1Type"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h2",
-                    "type": XhtmlH2Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h3",
-                    "type": XhtmlH3Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h4",
-                    "type": XhtmlH4Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h5",
-                    "type": XhtmlH5Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h6",
-                    "type": XhtmlH6Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ul",
-                    "type": Type["XhtmlUlType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ol",
-                    "type": XhtmlOlType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dl",
-                    "type": XhtmlDlType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "p",
-                    "type": XhtmlPType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "div",
-                    "type": Type["XhtmlDivType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "pre",
-                    "type": XhtmlPreType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "blockquote",
-                    "type": Type["XhtmlBlockquoteType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "address",
-                    "type": Type["XhtmlAddressType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "hr",
-                    "type": XhtmlHrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "table",
-                    "type": Type["XhtmlTableType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": Type["XhtmlEmType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": XhtmlStrongType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4463,7 +2479,7 @@ class XhtmlThType:
             "tokens": True,
         }
     )
-    scope: Optional[XhtmlScopeAttribScope] = field(
+    scope: Optional[XhtmlThTypeScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4481,7 +2497,7 @@ class XhtmlThType:
             "type": "Attribute",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlThTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4501,7 +2517,7 @@ class XhtmlThType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlThTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4556,7 +2572,7 @@ class XhtmlThType:
                 },
                 {
                     "name": "dl",
-                    "type": XhtmlDlType,
+                    "type": Type["XhtmlDlType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4611,52 +2627,52 @@ class XhtmlThType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4780,7 +2796,7 @@ class XhtmlTrType:
             "type": "Attribute",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlTrTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4800,7 +2816,7 @@ class XhtmlTrType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlTrTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4861,7 +2877,7 @@ class XhtmlTbodyType:
             "type": "Attribute",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlTbodyTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4881,7 +2897,7 @@ class XhtmlTbodyType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlTbodyTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4942,7 +2958,7 @@ class XhtmlTfootType:
             "type": "Attribute",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlTfootTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4962,7 +2978,7 @@ class XhtmlTfootType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlTfootTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5023,7 +3039,7 @@ class XhtmlTheadType:
             "type": "Attribute",
         }
     )
-    align: Optional[XhtmlCellHalignAttribAlign] = field(
+    align: Optional[XhtmlTheadTypeAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5043,7 +3059,7 @@ class XhtmlTheadType:
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         }
     )
-    valign: Optional[XhtmlCellValignAttribValign] = field(
+    valign: Optional[XhtmlTheadTypeValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5164,13 +3180,13 @@ class XhtmlTableType:
             "type": "Attribute",
         }
     )
-    frame: Optional[XhtmlFrameAttribFrame] = field(
+    frame: Optional[XhtmlTableTypeFrame] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    rules: Optional[XhtmlRulesAttribRules] = field(
+    rules: Optional[XhtmlTableTypeRules] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5253,7 +3269,7 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         }
     )
-    dl: List[XhtmlDlType] = field(
+    dl: List["XhtmlDlType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5466,7 +3482,7 @@ class XhtmlDivType:
                 },
                 {
                     "name": "dl",
-                    "type": XhtmlDlType,
+                    "type": Type["XhtmlDlType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5521,52 +3537,52 @@ class XhtmlDivType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5625,6 +3641,326 @@ class XhtmlDivType:
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
+        }
+    )
+
+
+@dataclass
+class XhtmlDdType:
+    class Meta:
+        name = "xhtml.dd.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "h1",
+                    "type": Type["XhtmlH1Type"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h2",
+                    "type": XhtmlH2Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h3",
+                    "type": XhtmlH3Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h4",
+                    "type": XhtmlH4Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h5",
+                    "type": XhtmlH5Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h6",
+                    "type": XhtmlH6Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ul",
+                    "type": Type["XhtmlUlType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ol",
+                    "type": XhtmlOlType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dl",
+                    "type": Type["XhtmlDlType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "p",
+                    "type": XhtmlPType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "div",
+                    "type": XhtmlDivType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "pre",
+                    "type": XhtmlPreType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "blockquote",
+                    "type": XhtmlBlockquoteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "address",
+                    "type": Type["XhtmlAddressType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "hr",
+                    "type": XhtmlHrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "table",
+                    "type": XhtmlTableType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": Type["XhtmlAcronymType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": Type["XhtmlQType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": Type["XhtmlAType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": Type["XhtmlObjectType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": Type["XhtmlEditType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": Type["XhtmlEditType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlDlType:
+    class Meta:
+        name = "xhtml.dl.type"
+
+    dt: List[XhtmlDtType] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequence": 26,
+        }
+    )
+    dd: List[XhtmlDdType] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "sequence": 26,
+        }
+    )
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
         }
     )
 
@@ -5778,52 +4114,52 @@ class XhtmlLiType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5942,9 +4278,9 @@ class XhtmlUlType:
 
 
 @dataclass
-class XhtmlObjectType:
+class XhtmlEditType:
     class Meta:
-        name = "xhtml.object.type"
+        name = "xhtml.edit.type"
 
     space: SpaceValue = field(
         init=False,
@@ -5986,76 +4322,13 @@ class XhtmlObjectType:
             "type": "Attribute",
         }
     )
-    declare: Optional[XhtmlObjectAttlistDeclare] = field(
+    cite: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    classid: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    codebase: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    data: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    type: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    codetype: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    archive: List[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        }
-    )
-    standby: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    height: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        }
-    )
-    width: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        }
-    )
-    name: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    tabindex: Optional[int] = field(
+    datetime: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6068,11 +4341,6 @@ class XhtmlObjectType:
             "namespace": "##any",
             "mixed": True,
             "choices": (
-                {
-                    "name": "param",
-                    "type": XhtmlParamType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
                 {
                     "name": "h1",
                     "type": Type["XhtmlH1Type"],
@@ -6170,52 +4438,52 @@ class XhtmlObjectType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6271,6 +4539,520 @@ class XhtmlObjectType:
                 {
                     "name": "del",
                     "type": Type["XhtmlEditType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlH1Type:
+    class Meta:
+        name = "xhtml.h1.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": Type["XhtmlAcronymType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": Type["XhtmlQType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": Type["XhtmlAType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": Type["XhtmlObjectType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlObjectType:
+    class Meta:
+        name = "xhtml.object.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    declare: Optional[XhtmlObjectTypeDeclare] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    classid: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    codebase: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    data: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    type: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    codetype: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    archive: List[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        }
+    )
+    standby: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    height: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
+    )
+    width: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        }
+    )
+    name: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    tabindex: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "param",
+                    "type": XhtmlParamType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h1",
+                    "type": XhtmlH1Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h2",
+                    "type": XhtmlH2Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h3",
+                    "type": XhtmlH3Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h4",
+                    "type": XhtmlH4Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h5",
+                    "type": XhtmlH5Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "h6",
+                    "type": XhtmlH6Type,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ul",
+                    "type": XhtmlUlType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ol",
+                    "type": XhtmlOlType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dl",
+                    "type": XhtmlDlType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "p",
+                    "type": XhtmlPType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "div",
+                    "type": XhtmlDivType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "pre",
+                    "type": XhtmlPreType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "blockquote",
+                    "type": XhtmlBlockquoteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "address",
+                    "type": Type["XhtmlAddressType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "hr",
+                    "type": XhtmlHrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "table",
+                    "type": XhtmlTableType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": Type["XhtmlAcronymType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": Type["XhtmlQType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": Type["XhtmlInlPresType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": Type["XhtmlAType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": Type["XhtmlObjectType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -6398,52 +5180,52 @@ class XhtmlAType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6488,12 +5270,12 @@ class XhtmlAType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -6570,52 +5352,52 @@ class XhtmlInlPresType:
                 },
                 {
                     "name": "strong",
-                    "type": XhtmlStrongType,
+                    "type": Type["XhtmlStrongType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "dfn",
-                    "type": XhtmlDfnType,
+                    "type": Type["XhtmlDfnType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "code",
-                    "type": XhtmlCodeType,
+                    "type": Type["XhtmlCodeType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "samp",
-                    "type": XhtmlSampType,
+                    "type": Type["XhtmlSampType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "kbd",
-                    "type": XhtmlKbdType,
+                    "type": Type["XhtmlKbdType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "var",
-                    "type": XhtmlVarType,
+                    "type": Type["XhtmlVarType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "cite",
-                    "type": XhtmlCiteType,
+                    "type": Type["XhtmlCiteType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "abbr",
-                    "type": XhtmlAbbrType,
+                    "type": Type["XhtmlAbbrType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "acronym",
-                    "type": XhtmlAcronymType,
+                    "type": Type["XhtmlAcronymType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "q",
-                    "type": XhtmlQType,
+                    "type": Type["XhtmlQType"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6665,12 +5447,1788 @@ class XhtmlInlPresType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlQType:
+    class Meta:
+        name = "xhtml.q.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    cite: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": Type["XhtmlAcronymType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": Type["XhtmlQType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlAcronymType:
+    class Meta:
+        name = "xhtml.acronym.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": Type["XhtmlAcronymType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlAbbrType:
+    class Meta:
+        name = "xhtml.abbr.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": Type["XhtmlAbbrType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlCiteType:
+    class Meta:
+        name = "xhtml.cite.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": Type["XhtmlCiteType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlVarType:
+    class Meta:
+        name = "xhtml.var.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": Type["XhtmlVarType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlKbdType:
+    class Meta:
+        name = "xhtml.kbd.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": Type["XhtmlKbdType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": XhtmlVarType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlSampType:
+    class Meta:
+        name = "xhtml.samp.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": Type["XhtmlSampType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": XhtmlKbdType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": XhtmlVarType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlCodeType:
+    class Meta:
+        name = "xhtml.code.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": Type["XhtmlCodeType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": XhtmlSampType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": XhtmlKbdType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": XhtmlVarType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlDfnType:
+    class Meta:
+        name = "xhtml.dfn.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": Type["XhtmlDfnType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": XhtmlCodeType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": XhtmlSampType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": XhtmlKbdType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": XhtmlVarType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
+class XhtmlStrongType:
+    class Meta:
+        name = "xhtml.strong.type"
+
+    space: SpaceValue = field(
+        init=False,
+        default=SpaceValue.PRESERVE,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    class_value: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "class",
+            "type": "Attribute",
+        }
+    )
+    title: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    lang: Optional[Union[str, LangValue]] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        }
+    )
+    style: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    content: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Wildcard",
+            "namespace": "##any",
+            "mixed": True,
+            "choices": (
+                {
+                    "name": "br",
+                    "type": XhtmlBrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "span",
+                    "type": Type["XhtmlSpanType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "em",
+                    "type": Type["XhtmlEmType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "strong",
+                    "type": Type["XhtmlStrongType"],
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "dfn",
+                    "type": XhtmlDfnType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "code",
+                    "type": XhtmlCodeType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "samp",
+                    "type": XhtmlSampType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "kbd",
+                    "type": XhtmlKbdType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "var",
+                    "type": XhtmlVarType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "cite",
+                    "type": XhtmlCiteType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "abbr",
+                    "type": XhtmlAbbrType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "acronym",
+                    "type": XhtmlAcronymType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "q",
+                    "type": XhtmlQType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "tt",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "i",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "b",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "big",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "small",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sub",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "sup",
+                    "type": XhtmlInlPresType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "a",
+                    "type": XhtmlAType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "object",
+                    "type": XhtmlObjectType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "ins",
+                    "type": XhtmlEditType,
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                },
+                {
+                    "name": "del",
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -6842,458 +7400,12 @@ class XhtmlEmType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlH1Type:
-    class Meta:
-        name = "xhtml.h1.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": XhtmlEmType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": XhtmlStrongType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": XhtmlAType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": XhtmlObjectType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
-class XhtmlEditType:
-    class Meta:
-        name = "xhtml.edit.type"
-
-    space: SpaceValue = field(
-        init=False,
-        default=SpaceValue.PRESERVE,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    class_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "class",
-            "type": "Attribute",
-        }
-    )
-    title: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
-    )
-    style: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    cite: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    datetime: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    content: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Wildcard",
-            "namespace": "##any",
-            "mixed": True,
-            "choices": (
-                {
-                    "name": "h1",
-                    "type": XhtmlH1Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h2",
-                    "type": XhtmlH2Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h3",
-                    "type": XhtmlH3Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h4",
-                    "type": XhtmlH4Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h5",
-                    "type": XhtmlH5Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "h6",
-                    "type": XhtmlH6Type,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ul",
-                    "type": XhtmlUlType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ol",
-                    "type": XhtmlOlType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dl",
-                    "type": XhtmlDlType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "p",
-                    "type": XhtmlPType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "div",
-                    "type": XhtmlDivType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "pre",
-                    "type": XhtmlPreType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "blockquote",
-                    "type": XhtmlBlockquoteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "address",
-                    "type": Type["XhtmlAddressType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "hr",
-                    "type": XhtmlHrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "table",
-                    "type": XhtmlTableType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "br",
-                    "type": XhtmlBrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "span",
-                    "type": Type["XhtmlSpanType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "em",
-                    "type": XhtmlEmType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "strong",
-                    "type": XhtmlStrongType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "dfn",
-                    "type": XhtmlDfnType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "code",
-                    "type": XhtmlCodeType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "samp",
-                    "type": XhtmlSampType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "kbd",
-                    "type": XhtmlKbdType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "var",
-                    "type": XhtmlVarType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "cite",
-                    "type": XhtmlCiteType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "abbr",
-                    "type": XhtmlAbbrType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "acronym",
-                    "type": XhtmlAcronymType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "q",
-                    "type": XhtmlQType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "tt",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "i",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "b",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "big",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "small",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sub",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "sup",
-                    "type": XhtmlInlPresType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "a",
-                    "type": XhtmlAType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "object",
-                    "type": XhtmlObjectType,
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "ins",
-                    "type": Type["XhtmlEditType"],
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                },
-                {
-                    "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": XhtmlEditType,
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),

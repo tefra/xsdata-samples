@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
+from crossref.models.gov.nih.nlm.ncbi.jats1.ack import Ack
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Bio,
     FnGroup,
     Glossary,
@@ -9,7 +10,6 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Sec,
     Title,
 )
-from crossref.models.gov.nih.nlm.ncbi.jats1.ack import Ack
 from crossref.models.gov.nih.nlm.ncbi.jats1.app_group import AppGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.notes import Notes
 

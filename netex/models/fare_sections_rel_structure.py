@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_section_ref import FareSectionRef
-from .link_sequence_version_structure import FareSection
+from .section_in_sequence_versioned_child_structure import FareSection
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

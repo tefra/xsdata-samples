@@ -233,10 +233,6 @@ from .link_in_journey_pattern import LinkInJourneyPattern
 from .link_on_section import LinkOnSection
 from .link_projection import LinkProjection
 from .link_sequence_projection import LinkSequenceProjection
-from .link_sequence_version_structure import (
-    JourneyPattern,
-    SectionInSequence,
-)
 from .logical_display import LogicalDisplay
 from .lost_property_service import LostPropertyService
 from .luggage_allowance import LuggageAllowance
@@ -363,6 +359,10 @@ from .sanitary_equipment import SanitaryEquipment
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
+from .section_in_sequence_versioned_child_structure import (
+    JourneyPattern,
+    SectionInSequence,
+)
 from .series_constraint import SeriesConstraint
 from .series_constraint_price import SeriesConstraintPrice
 from .service_access_right_1 import ServiceAccessRight1

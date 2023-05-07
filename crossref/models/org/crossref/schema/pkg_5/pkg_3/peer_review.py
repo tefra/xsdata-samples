@@ -6,7 +6,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.competing_interest_statemen
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import Institution
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.peer_review_language import PeerReviewLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.peer_review_recommendation import PeerReviewRecommendation
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.peer_review_stage import PeerReviewStage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.peer_review_type import PeerReviewType
@@ -137,7 +137,7 @@ class PeerReview:
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[PeerReviewLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

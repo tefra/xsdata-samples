@@ -3,12 +3,12 @@ from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import ArchiveLocations
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_metadata_language import ProceedingsMetadataLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_metadata_reference_distribution_opts import ProceedingsMetadataReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import PublicationDate
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher import Publisher
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import PublisherItem
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.reference_distribution_opts_att_reference_distribution_opts import ReferenceDistributionOptsAttReferenceDistributionOpts
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -87,14 +87,14 @@ class ProceedingsMetadata:
             "type": "Element",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[ProceedingsMetadataLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    reference_distribution_opts: ReferenceDistributionOptsAttReferenceDistributionOpts = field(
-        default=ReferenceDistributionOptsAttReferenceDistributionOpts.NONE,
+    reference_distribution_opts: ProceedingsMetadataReferenceDistributionOpts = field(
+        default=ProceedingsMetadataReferenceDistributionOpts.NONE,
         metadata={
             "type": "Attribute",
         }

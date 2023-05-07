@@ -1,11 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
-from crossref.models.org.w3.pkg_1998.math.math_ml.common_pres_att_value import CommonPresAttValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_fontstyle import DeprecatedTokenAttFontstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_fontweight import DeprecatedTokenAttFontweight
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_value import DeprecatedTokenAttValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_deprecatedattributes_mathvariant import MglyphDeprecatedattributesMathvariant
-from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_deprecatedattributes_value import MglyphDeprecatedattributesValue
+from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_fontstyle import MglyphFontstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_fontweight import MglyphFontweight
+from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_mathvariant import MglyphMathvariant
+from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_value import MglyphValue
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
@@ -68,7 +66,7 @@ class Mglyph:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathbackground: Optional[Union[str, CommonPresAttValue]] = field(
+    mathbackground: Optional[Union[str, MglyphValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -114,13 +112,13 @@ class Mglyph:
             "type": "Attribute",
         }
     )
-    mathvariant: Optional[MglyphDeprecatedattributesMathvariant] = field(
+    mathvariant: Optional[MglyphMathvariant] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    mathsize: Optional[Union[str, MglyphDeprecatedattributesValue]] = field(
+    mathsize: Optional[Union[str, MglyphValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -133,13 +131,13 @@ class Mglyph:
             "type": "Attribute",
         }
     )
-    fontweight: Optional[DeprecatedTokenAttFontweight] = field(
+    fontweight: Optional[MglyphFontweight] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    fontstyle: Optional[DeprecatedTokenAttFontstyle] = field(
+    fontstyle: Optional[MglyphFontstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -159,7 +157,7 @@ class Mglyph:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    background: Optional[Union[str, DeprecatedTokenAttValue]] = field(
+    background: Optional[Union[str, MglyphValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",

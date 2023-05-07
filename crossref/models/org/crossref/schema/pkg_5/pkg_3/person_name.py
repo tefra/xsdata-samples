@@ -2,11 +2,11 @@ from dataclasses import dataclass, field
 from typing import Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.affiliations import Affiliations
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.alt_name import AltName
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_contributor_role import ContributorAttsContributorRole
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_name_style import ContributorAttsNameStyle
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_sequence import ContributorAttsSequence
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.orcid import Orcid
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.person_name_contributor_role import PersonNameContributorRole
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.person_name_language import PersonNameLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.person_name_name_style import PersonNameNameStyle
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.person_name_sequence import PersonNameSequence
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -70,28 +70,28 @@ class PersonName:
             "type": "Element",
         }
     )
-    sequence: Optional[ContributorAttsSequence] = field(
+    sequence: Optional[PersonNameSequence] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    contributor_role: Optional[ContributorAttsContributorRole] = field(
+    contributor_role: Optional[PersonNameContributorRole] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    name_style: Optional[ContributorAttsNameStyle] = field(
+    name_style: Optional[PersonNameNameStyle] = field(
         default=None,
         metadata={
             "name": "name-style",
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[PersonNameLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

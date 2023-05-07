@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.original_language_title_language import OriginalLanguageTitleLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     Em,
@@ -29,7 +29,7 @@ class OriginalLanguageTitle:
         name = "original_language_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[OriginalLanguageTitleLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

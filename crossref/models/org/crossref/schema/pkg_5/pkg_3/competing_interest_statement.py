@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.competing_interest_statement_language import CompetingInterestStatementLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     Em,
@@ -29,7 +29,7 @@ class CompetingInterestStatement:
         name = "competing_interest_statement"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[CompetingInterestStatementLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

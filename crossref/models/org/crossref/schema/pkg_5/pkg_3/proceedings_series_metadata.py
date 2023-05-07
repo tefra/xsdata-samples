@@ -4,10 +4,10 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import Ar
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_series_metadata_reference_distribution_opts import ProceedingsSeriesMetadataReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import PublicationDate
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher import Publisher
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import PublisherItem
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.reference_distribution_opts_att_reference_distribution_opts import ReferenceDistributionOptsAttReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.series_metadata import SeriesMetadata
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -103,8 +103,8 @@ class ProceedingsSeriesMetadata:
             "type": "Element",
         }
     )
-    reference_distribution_opts: ReferenceDistributionOptsAttReferenceDistributionOpts = field(
-        default=ReferenceDistributionOptsAttReferenceDistributionOpts.NONE,
+    reference_distribution_opts: ProceedingsSeriesMetadataReferenceDistributionOpts = field(
+        default=ProceedingsSeriesMetadataReferenceDistributionOpts.NONE,
         metadata={
             "type": "Attribute",
         }

@@ -126,12 +126,33 @@ class MaximumStayReturnType(Enum):
     S = "S"
 
 
-class OtaPayloadStdAttributesTarget(Enum):
+class OtaAirLowFareSearchRqTarget(Enum):
     TEST = "Test"
     PRODUCTION = "Production"
 
 
-class OtaPayloadStdAttributesTransactionStatusCode(Enum):
+class OtaAirLowFareSearchRqTransactionStatusCode(Enum):
+    """
+    Attributes
+        START: This is the first message within a transaction.
+        END: This is the last message within a transaction.
+        ROLLBACK: This indicates that all messages within the current
+            transaction must be ignored.
+        IN_SERIES: This is any message that is not the first or last
+            message within a transaction.
+    """
+    START = "Start"
+    END = "End"
+    ROLLBACK = "Rollback"
+    IN_SERIES = "InSeries"
+
+
+class OtaAirLowFareSearchRsTarget(Enum):
+    TEST = "Test"
+    PRODUCTION = "Production"
+
+
+class OtaAirLowFareSearchRsTransactionStatusCode(Enum):
     """
     Attributes
         START: This is the first message within a transaction.

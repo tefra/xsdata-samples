@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import Abstract
 from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
 from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
 from crossref.models.org.crossref.relations.program import Program as RelationsProgram
@@ -10,7 +10,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import Institution
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.intent_statement import IntentStatement
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.item_number import ItemNumber
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.pending_publication_language import PendingPublicationLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication import Publication
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -120,7 +120,7 @@ class PendingPublication:
             "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[PendingPublicationLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

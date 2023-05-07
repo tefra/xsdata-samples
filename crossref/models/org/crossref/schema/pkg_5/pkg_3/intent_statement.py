@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.a import A
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.intent_statement_language import IntentStatementLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     I,
@@ -21,7 +21,7 @@ class IntentStatement:
         name = "intent_statement"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[IntentStatementLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

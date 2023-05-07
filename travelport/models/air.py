@@ -64,7 +64,8 @@ from travelport.models.common import (
     ServiceRuleType,
     SupplierLocator,
     ThirdPartyInformation,
-    AttrDocumentDocumentType,
+    VoidDocumentInfoDocumentType,
+    VoidResultInfoDocumentType,
     TypeAdjustmentTarget,
     TypeAdjustmentType,
     TypeAssociatedRemarkWithSegmentRef,
@@ -12504,7 +12505,7 @@ class VoidDocumentInfo:
             "max_length": 13,
         }
     )
-    document_type: Optional[AttrDocumentDocumentType] = field(
+    document_type: Optional[VoidDocumentInfoDocumentType] = field(
         default=None,
         metadata={
             "name": "DocumentType",
@@ -12546,7 +12547,7 @@ class VoidResultInfo:
             "max_length": 13,
         }
     )
-    document_type: Optional[AttrDocumentDocumentType] = field(
+    document_type: Optional[VoidResultInfoDocumentType] = field(
         default=None,
         metadata={
             "name": "DocumentType",

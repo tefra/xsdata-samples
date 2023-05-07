@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.degrees_language import DegreesLanguage
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -25,7 +25,7 @@ class Degrees:
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[DegreesLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

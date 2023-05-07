@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .link_sequence_version_structure import JourneyPatternVersionStructure
+from .section_in_sequence_versioned_child_structure import JourneyPatternVersionStructure
 from .service_journey_pattern_type_enumeration import ServiceJourneyPatternTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

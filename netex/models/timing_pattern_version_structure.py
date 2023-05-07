@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .direction_type_enumeration import DirectionTypeEnumeration
-from .link_sequence_version_structure import LinkSequenceVersionStructure
 from .route_ref_structure import RouteRefStructure
+from .section_in_sequence_versioned_child_structure import LinkSequenceVersionStructure
 from .time_demand_type_ref import TimeDemandTypeRef
 from .timeband_ref import TimebandRef
 from .timing_links_rel_structure import TimingLinksRelStructure

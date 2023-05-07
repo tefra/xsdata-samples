@@ -3,8 +3,8 @@ from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import ArchiveLocations
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn import Issn
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.reference_distribution_opts_att_reference_distribution_opts import ReferenceDistributionOptsAttReferenceDistributionOpts
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_metadata_language import JournalMetadataLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_metadata_reference_distribution_opts import JournalMetadataReferenceDistributionOpts
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -64,14 +64,14 @@ class JournalMetadata:
             "type": "Element",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[JournalMetadataLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    reference_distribution_opts: ReferenceDistributionOptsAttReferenceDistributionOpts = field(
-        default=ReferenceDistributionOptsAttReferenceDistributionOpts.NONE,
+    reference_distribution_opts: JournalMetadataReferenceDistributionOpts = field(
+        default=JournalMetadataReferenceDistributionOpts.NONE,
         metadata={
             "type": "Attribute",
         }

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.name_language import NameLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.name_name_style import NameNameStyle
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.prefix import Prefix
 
@@ -69,7 +69,7 @@ class Name:
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[NameLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

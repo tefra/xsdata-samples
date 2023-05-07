@@ -1,14 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
 from crossref.models.org.w3.pkg_1998.math.math_ml.columnalignstyle import Columnalignstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.common_pres_att_value import CommonPresAttValue
 from crossref.models.org.w3.pkg_1998.math.math_ml.linestyle import Linestyle
 from crossref.models.org.w3.pkg_1998.math.math_ml.mlabeledtr import Mlabeledtr
-from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_attributes_displaystyle import MtableAttributesDisplaystyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_attributes_equalcolumns import MtableAttributesEqualcolumns
-from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_attributes_equalrows import MtableAttributesEqualrows
-from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_attributes_side import MtableAttributesSide
-from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_attributes_value import MtableAttributesValue
+from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_displaystyle import MtableDisplaystyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_equalcolumns import MtableEqualcolumns
+from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_equalrows import MtableEqualrows
+from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_side import MtableSide
+from crossref.models.org.w3.pkg_1998.math.math_ml.mtable_value import MtableValue
 from crossref.models.org.w3.pkg_1998.math.math_ml.mtr import Mtr
 from crossref.models.org.w3.pkg_1998.math.math_ml.verticalalign import Verticalalign
 
@@ -85,7 +84,7 @@ class Mtable:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathbackground: Optional[Union[str, CommonPresAttValue]] = field(
+    mathbackground: Optional[Union[str, MtableValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -120,21 +119,21 @@ class Mtable:
             "pattern": r"(\s*\{\s*(left|center|right|decimalpoint)(\s+(left|center|right|decimalpoint))*\})*\s*",
         }
     )
-    alignmentscope: List[MtableAttributesValue] = field(
+    alignmentscope: List[MtableValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         }
     )
-    columnwidth: List[MtableAttributesValue] = field(
+    columnwidth: List[MtableValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         }
     )
-    width: Optional[Union[str, MtableAttributesValue]] = field(
+    width: Optional[Union[str, MtableValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -187,25 +186,25 @@ class Mtable:
             "tokens": True,
         }
     )
-    equalrows: Optional[MtableAttributesEqualrows] = field(
+    equalrows: Optional[MtableEqualrows] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    equalcolumns: Optional[MtableAttributesEqualcolumns] = field(
+    equalcolumns: Optional[MtableEqualcolumns] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    displaystyle: Optional[MtableAttributesDisplaystyle] = field(
+    displaystyle: Optional[MtableDisplaystyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    side: Optional[MtableAttributesSide] = field(
+    side: Optional[MtableSide] = field(
         default=None,
         metadata={
             "type": "Attribute",

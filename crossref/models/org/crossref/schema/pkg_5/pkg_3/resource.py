@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.mime_type_atts_mime_type import MimeTypeAttsMimeType
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.resource_content_version import ResourceContentVersion
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.resource_mime_type import ResourceMimeType
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -24,7 +24,7 @@ class Resource:
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
         }
     )
-    mime_type: Optional[MimeTypeAttsMimeType] = field(
+    mime_type: Optional[ResourceMimeType] = field(
         default=None,
         metadata={
             "type": "Attribute",

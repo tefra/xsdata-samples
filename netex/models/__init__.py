@@ -1270,7 +1270,7 @@ from .geographical_unit import GeographicalUnit
 from .geographical_unit_price import GeographicalUnitPrice
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .geographical_unit_price_ref_structure import GeographicalUnitPriceRefStructure
-from .geographical_unit_price_versioned_child_structure import (
+from .geographical_unit_prices_rel_structure import (
     GeographicalUnitPriceVersionedChildStructure,
     GeographicalUnitPricesRelStructure,
 )
@@ -1636,23 +1636,6 @@ from .link_sequence_projection_version_structure import LinkSequenceProjectionVe
 from .link_sequence_ref import LinkSequenceRef
 from .link_sequence_ref_structure import LinkSequenceRefStructure
 from .link_sequence_refs_rel_structure import LinkSequenceRefsRelStructure
-from .link_sequence_version_structure import (
-    CommonSection,
-    CommonSectionVersionStructure,
-    FareSection,
-    FareSectionVersionStructure,
-    GeneralSection,
-    GeneralSectionVersionStructure,
-    JourneyPattern,
-    JourneyPatternVersionStructure,
-    LineSection,
-    LineSectionVersionStructure,
-    LinkSequenceVersionStructure,
-    SectionInSequence,
-    SectionInSequenceVersionedChildStructure,
-    SectionVersionStructure,
-    SectionsInSequenceRelStructure,
-)
 from .link_type_refs_rel_structure import LinkTypeRefsRelStructure
 from .link_version_structure import LinkVersionStructure
 from .links_in_journey_pattern_rel_structure import LinksInJourneyPatternRelStructure
@@ -2131,11 +2114,12 @@ from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_ref_structure import PointOfInterestRefStructure
 from .point_of_interest_refs_rel_structure import PointOfInterestRefsRelStructure
 from .point_of_interest_space import PointOfInterestSpace
-from .point_of_interest_space_descriptor_group_access_space_type import PointOfInterestSpaceDescriptorGroupAccessSpaceType
+from .point_of_interest_space_access_space_type import PointOfInterestSpaceAccessSpaceType
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
 from .point_of_interest_space_ref_structure import PointOfInterestSpaceRefStructure
 from .point_of_interest_space_type_enumeration import PointOfInterestSpaceTypeEnumeration
 from .point_of_interest_space_version_structure import PointOfInterestSpaceVersionStructure
+from .point_of_interest_space_version_structure_access_space_type import PointOfInterestSpaceVersionStructureAccessSpaceType
 from .point_of_interest_spaces_rel_structure import PointOfInterestSpacesRelStructure
 from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
@@ -2596,6 +2580,23 @@ from .seating_equipment import SeatingEquipment
 from .seating_equipment_ref import SeatingEquipmentRef
 from .seating_equipment_ref_structure import SeatingEquipmentRefStructure
 from .seating_equipment_version_structure import SeatingEquipmentVersionStructure
+from .section_in_sequence_versioned_child_structure import (
+    CommonSection,
+    CommonSectionVersionStructure,
+    FareSection,
+    FareSectionVersionStructure,
+    GeneralSection,
+    GeneralSectionVersionStructure,
+    JourneyPattern,
+    JourneyPatternVersionStructure,
+    LineSection,
+    LineSectionVersionStructure,
+    LinkSequenceVersionStructure,
+    SectionInSequence,
+    SectionInSequenceVersionedChildStructure,
+    SectionVersionStructure,
+    SectionsInSequenceRelStructure,
+)
 from .section_ref import SectionRef
 from .section_ref_structure import SectionRefStructure
 from .section_type_enumeration import SectionTypeEnumeration
@@ -5352,21 +5353,6 @@ __all__ = [
     "LinkSequenceRef",
     "LinkSequenceRefStructure",
     "LinkSequenceRefsRelStructure",
-    "CommonSection",
-    "CommonSectionVersionStructure",
-    "FareSection",
-    "FareSectionVersionStructure",
-    "GeneralSection",
-    "GeneralSectionVersionStructure",
-    "JourneyPattern",
-    "JourneyPatternVersionStructure",
-    "LineSection",
-    "LineSectionVersionStructure",
-    "LinkSequenceVersionStructure",
-    "SectionInSequence",
-    "SectionInSequenceVersionedChildStructure",
-    "SectionVersionStructure",
-    "SectionsInSequenceRelStructure",
     "LinkTypeRefsRelStructure",
     "LinkVersionStructure",
     "LinksInJourneyPatternRelStructure",
@@ -5845,11 +5831,12 @@ __all__ = [
     "PointOfInterestRefStructure",
     "PointOfInterestRefsRelStructure",
     "PointOfInterestSpace",
-    "PointOfInterestSpaceDescriptorGroupAccessSpaceType",
+    "PointOfInterestSpaceAccessSpaceType",
     "PointOfInterestSpaceRef",
     "PointOfInterestSpaceRefStructure",
     "PointOfInterestSpaceTypeEnumeration",
     "PointOfInterestSpaceVersionStructure",
+    "PointOfInterestSpaceVersionStructureAccessSpaceType",
     "PointOfInterestSpacesRelStructure",
     "PointOfInterestVehicleEntrance",
     "PointOfInterestVehicleEntranceRef",
@@ -6310,6 +6297,21 @@ __all__ = [
     "SeatingEquipmentRef",
     "SeatingEquipmentRefStructure",
     "SeatingEquipmentVersionStructure",
+    "CommonSection",
+    "CommonSectionVersionStructure",
+    "FareSection",
+    "FareSectionVersionStructure",
+    "GeneralSection",
+    "GeneralSectionVersionStructure",
+    "JourneyPattern",
+    "JourneyPatternVersionStructure",
+    "LineSection",
+    "LineSectionVersionStructure",
+    "LinkSequenceVersionStructure",
+    "SectionInSequence",
+    "SectionInSequenceVersionedChildStructure",
+    "SectionVersionStructure",
+    "SectionsInSequenceRelStructure",
     "SectionRef",
     "SectionRefStructure",
     "SectionTypeEnumeration",

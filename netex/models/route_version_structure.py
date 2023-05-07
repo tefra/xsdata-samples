@@ -4,9 +4,9 @@ from .direction_ref import DirectionRef
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
-from .link_sequence_version_structure import LinkSequenceVersionStructure
 from .points_on_route_rel_structure import PointsOnRouteRelStructure
 from .route_ref_structure import RouteRefStructure
+from .section_in_sequence_versioned_child_structure import LinkSequenceVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

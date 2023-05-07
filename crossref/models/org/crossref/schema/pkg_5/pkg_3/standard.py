@@ -2,8 +2,8 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_list import ComponentList
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.content_item import ContentItem
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_type_atts_publication_type import PublicationTypeAttsPublicationType
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.standard_metadata import StandardMetadata
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.standard_publication_type import StandardPublicationType
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -36,8 +36,8 @@ class Standard:
             "type": "Element",
         }
     )
-    publication_type: PublicationTypeAttsPublicationType = field(
-        default=PublicationTypeAttsPublicationType.FULL_TEXT,
+    publication_type: StandardPublicationType = field(
+        default=StandardPublicationType.FULL_TEXT,
         metadata={
             "type": "Attribute",
         }

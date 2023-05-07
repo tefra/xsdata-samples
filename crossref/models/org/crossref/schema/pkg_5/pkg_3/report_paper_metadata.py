@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import Abstract
 from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
 from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
 from crossref.models.org.crossref.relations.program import Program as RelationsProgram
@@ -12,11 +12,11 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import Institution
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import PublicationDate
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher import Publisher
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import PublisherItem
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.reference_distribution_opts_att_reference_distribution_opts import ReferenceDistributionOptsAttReferenceDistributionOpts
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.report_paper_metadata_language import ReportPaperMetadataLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.report_paper_metadata_reference_distribution_opts import ReportPaperMetadataReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.scn_policies import ScnPolicies
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -162,14 +162,14 @@ class ReportPaperMetadata:
             "type": "Element",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[ReportPaperMetadataLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    reference_distribution_opts: ReferenceDistributionOptsAttReferenceDistributionOpts = field(
-        default=ReferenceDistributionOptsAttReferenceDistributionOpts.NONE,
+    reference_distribution_opts: ReportPaperMetadataReferenceDistributionOpts = field(
+        default=ReportPaperMetadataReferenceDistributionOpts.NONE,
         metadata={
             "type": "Attribute",
         }

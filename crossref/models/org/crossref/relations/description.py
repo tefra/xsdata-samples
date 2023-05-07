@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.relations.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.relations.description_language import DescriptionLanguage
 from crossref.models.org.crossref.relations.xref_faces import (
     B,
     Em,
@@ -27,7 +27,7 @@ class Description:
         name = "description"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[DescriptionLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

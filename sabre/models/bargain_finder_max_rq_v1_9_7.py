@@ -9,8 +9,8 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     CompanyNameType,
     DepartureOrArrival,
     EquipmentType,
-    OtaPayloadStdAttributesTarget,
-    OtaPayloadStdAttributesTransactionStatusCode,
+    OtaAirLowFareSearchRqTarget,
+    OtaAirLowFareSearchRqTransactionStatusCode,
     OutboundOrInbound,
     PassengerTypeQuantityType,
     StayRestrictionsType,
@@ -18,6 +18,50 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
 )
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
+
+
+class AddressTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class AddressTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class AirTravelerTypeGender(Enum):
+    MALE = "Male"
+    FEMALE = "Female"
+    UNKNOWN = "Unknown"
+
+
+class AirTravelerTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class AirTravelerTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
 
 
 @dataclass
@@ -304,6 +348,30 @@ class CountryNameType:
     )
 
 
+class CustLoyaltyTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class CustLoyaltyTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class CustLoyaltyTypeSingleVendorInd(Enum):
+    SINGLE_VNDR = "SingleVndr"
+    ALLIANCE = "Alliance"
+
+
 class CustomerTypeValue(Enum):
     """
     Attributes
@@ -429,6 +497,50 @@ class DepartureDaysType:
             "length": 7,
         }
     )
+
+
+class DocumentTypeGender(Enum):
+    MALE = "Male"
+    FEMALE = "Female"
+    UNKNOWN = "Unknown"
+
+
+class DocumentTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class DocumentTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class EmailTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class EmailTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
 
 
 @dataclass
@@ -721,12 +833,6 @@ class FlightTypeType(Enum):
     CONNECTION = "Connection"
 
 
-class GenderGroupGender(Enum):
-    MALE = "Male"
-    FEMALE = "Female"
-    UNKNOWN = "Unknown"
-
-
 @dataclass
 class GoverningCarrierOverrideType:
     """
@@ -949,6 +1055,25 @@ class PassengerStatusType(Enum):
     N = "N"
 
 
+class PersonNameTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class PersonNameTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
 @dataclass
 class PlusUpType:
     """
@@ -1100,25 +1225,6 @@ class PreferLevelType(Enum):
     ONLY = "Only"
     UNACCEPTABLE = "Unacceptable"
     PREFERRED = "Preferred"
-
-
-class PrivacyGroupShareMarketInd(Enum):
-    """
-    value="Inherit" Permission for sharing data for marketing purposes.
-    """
-    YES = "Yes"
-    NO = "No"
-    INHERIT = "Inherit"
-
-
-class PrivacyGroupShareSynchInd(Enum):
-    """
-    value="Inherit" Permission for sharing data for synchronization of information
-    held by other travel service providers.
-    """
-    YES = "Yes"
-    NO = "No"
-    INHERIT = "Inherit"
 
 
 @dataclass
@@ -1349,11 +1455,6 @@ class SideTripType:
     )
 
 
-class SingleVendorIndGroupSingleVendorInd(Enum):
-    SINGLE_VNDR = "SingleVndr"
-    ALLIANCE = "Alliance"
-
-
 class SpanishFamilyDiscountLevel(Enum):
     VALUE_1 = 1
     VALUE_2 = 2
@@ -1433,6 +1534,25 @@ class TaxCodeType:
             "pattern": r"[A-Z0-9]{2}[A-Z0-9]{0,1}",
         }
     )
+
+
+class TelephoneTypeShareMarketInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for marketing purposes.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
+
+
+class TelephoneTypeShareSynchInd(Enum):
+    """
+    value="Inherit" Permission for sharing data for synchronization of information
+    held by other travel service providers.
+    """
+    YES = "Yes"
+    NO = "No"
+    INHERIT = "Inherit"
 
 
 @dataclass
@@ -1917,14 +2037,14 @@ class AddressType:
             "type": "Attribute",
         }
     )
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[AddressTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[AddressTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -2177,14 +2297,14 @@ class CustLoyaltyType:
         rph: Reference place holder, to reference it back in the
             response.
     """
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[CustLoyaltyTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[CustLoyaltyTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -2225,7 +2345,7 @@ class CustLoyaltyType:
             "max_length": 16,
         }
     )
-    single_vendor_ind: Optional[SingleVendorIndGroupSingleVendorInd] = field(
+    single_vendor_ind: Optional[CustLoyaltyTypeSingleVendorInd] = field(
         default=None,
         metadata={
             "name": "SingleVendorInd",
@@ -2657,14 +2777,14 @@ class DocumentType:
             "max_length": 64,
         }
     )
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[DocumentTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[DocumentTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -2705,7 +2825,7 @@ class DocumentType:
             "type": "Attribute",
         }
     )
-    gender: Optional[GenderGroupGender] = field(
+    gender: Optional[DocumentTypeGender] = field(
         default=None,
         metadata={
             "name": "Gender",
@@ -2757,14 +2877,14 @@ class EmailType:
             "max_length": 128,
         }
     )
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[EmailTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[EmailTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -3798,14 +3918,14 @@ class PersonNameType:
             "max_length": 16,
         }
     )
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[PersonNameTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[PersonNameTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -4811,14 +4931,14 @@ class TelephoneType:
             not. If true, then it is formatted, if false, then not
             formatted.
     """
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[TelephoneTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[TelephoneTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -7368,21 +7488,21 @@ class AirTravelerType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    gender: Optional[GenderGroupGender] = field(
+    gender: Optional[AirTravelerTypeGender] = field(
         default=None,
         metadata={
             "name": "Gender",
             "type": "Attribute",
         }
     )
-    share_synch_ind: Optional[PrivacyGroupShareSynchInd] = field(
+    share_synch_ind: Optional[AirTravelerTypeShareSynchInd] = field(
         default=None,
         metadata={
             "name": "ShareSynchInd",
             "type": "Attribute",
         }
     )
-    share_market_ind: Optional[PrivacyGroupShareMarketInd] = field(
+    share_market_ind: Optional[AirTravelerTypeShareMarketInd] = field(
         default=None,
         metadata={
             "name": "ShareMarketInd",
@@ -9451,8 +9571,8 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         }
     )
-    target: OtaPayloadStdAttributesTarget = field(
-        default=OtaPayloadStdAttributesTarget.PRODUCTION,
+    target: OtaAirLowFareSearchRqTarget = field(
+        default=OtaAirLowFareSearchRqTarget.PRODUCTION,
         metadata={
             "name": "Target",
             "type": "Attribute",
@@ -9482,7 +9602,7 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         }
     )
-    transaction_status_code: Optional[OtaPayloadStdAttributesTransactionStatusCode] = field(
+    transaction_status_code: Optional[OtaAirLowFareSearchRqTransactionStatusCode] = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",

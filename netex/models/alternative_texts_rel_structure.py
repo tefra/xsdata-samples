@@ -112,6 +112,31 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
 
 
 @dataclass
+class TimebandsRelStructure(ContainmentAggregationStructure):
+    class Meta:
+        name = "timebands_RelStructure"
+
+    timeband_ref_or_timeband: List[object] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TimebandRef",
+                    "type": TimebandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Timeband",
+                    "type": Type["TimebandVersionedChildStructure"],
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        }
+    )
+
+
+@dataclass
 class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
@@ -421,7 +446,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    timebands: Optional["TimebandsRelStructure"] = field(
+    timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -747,31 +772,6 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
 
 
 @dataclass
-class TimebandsRelStructure(ContainmentAggregationStructure):
-    class Meta:
-        name = "timebands_RelStructure"
-
-    timeband_ref_or_timeband: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "TimebandRef",
-                    "type": TimebandRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Timeband",
-                    "type": TimebandVersionedChildStructure,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        }
-    )
-
-
-@dataclass
 class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "AvailabilityCondition_VersionStructure"
@@ -800,7 +800,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    timebands: Optional["TimebandsRelStructure"] = field(
+    timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",

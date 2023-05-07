@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.mime_type_atts_mime_type import MimeTypeAttsMimeType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.format_mime_type import FormatMimeType
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -22,7 +22,7 @@ class Format:
             "max_length": 130,
         }
     )
-    mime_type: Optional[MimeTypeAttsMimeType] = field(
+    mime_type: Optional[FormatMimeType] = field(
         default=None,
         metadata={
             "type": "Attribute",

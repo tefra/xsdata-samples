@@ -25,9 +25,42 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cbytes import Cbytes
 from crossref.models.org.w3.pkg_1998.math.math_ml.ceiling import Ceiling
 from crossref.models.org.w3.pkg_1998.math.math_ml.codomain import Codomain
 from crossref.models.org.w3.pkg_1998.math.math_ml.columnalignstyle import Columnalignstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.common_pres_att_value import CommonPresAttValue
 from crossref.models.org.w3.pkg_1998.math.math_ml.complexes import Complexes
 from crossref.models.org.w3.pkg_1998.math.math_ml.compose import Compose
+from crossref.models.org.w3.pkg_1998.math.math_ml.condition import (
+    Apply,
+    Bind,
+    Cerror,
+    Ci,
+    Cn,
+    Csymbol,
+    Declare,
+    Fn,
+    ListType,
+    Maction,
+    Menclose,
+    Merror,
+    Mfenced,
+    Mfrac,
+    Mlongdiv,
+    Mmultiscripts,
+    Mover,
+    Mpadded,
+    Mphantom,
+    Mroot,
+    Mrow,
+    Msqrt,
+    Mstack,
+    Mstyle,
+    Msub,
+    Msubsup,
+    Msup,
+    Munder,
+    Munderover,
+    Piecewise,
+    Reln,
+    Set,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.conjugate import Conjugate
 from crossref.models.org.w3.pkg_1998.math.math_ml.cos import Cos
 from crossref.models.org.w3.pkg_1998.math.math_ml.cosh import Cosh
@@ -78,46 +111,42 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.limit import Limit
 from crossref.models.org.w3.pkg_1998.math.math_ml.linestyle import Linestyle
 from crossref.models.org.w3.pkg_1998.math.math_ml.ln import Ln
 from crossref.models.org.w3.pkg_1998.math.math_ml.log import Log
-from crossref.models.org.w3.pkg_1998.math.math_ml.lowlimit import (
-    Apply,
-    Bind,
-    Cerror,
-    Ci,
-    Cn,
-    Csymbol,
-    Declare,
-    Fn,
-    ListType,
-    Maction,
-    Menclose,
-    Merror,
-    Mfenced,
-    Mfrac,
-    Mlongdiv,
-    Mmultiscripts,
-    Mover,
-    Mpadded,
-    Mphantom,
-    Mroot,
-    Mrow,
-    Msqrt,
-    Mstack,
-    Mstyle,
-    Msub,
-    Msubsup,
-    Msup,
-    Munder,
-    Munderover,
-    Piecewise,
-    Reln,
-    Set,
-)
 from crossref.models.org.w3.pkg_1998.math.math_ml.lt import Lt
 from crossref.models.org.w3.pkg_1998.math.math_ml.maligngroup import Maligngroup
 from crossref.models.org.w3.pkg_1998.math.math_ml.malignmark import Malignmark
-from crossref.models.org.w3.pkg_1998.math.math_ml.math_attributes_display import MathAttributesDisplay
-from crossref.models.org.w3.pkg_1998.math.math_ml.math_attributes_overflow import MathAttributesOverflow
-from crossref.models.org.w3.pkg_1998.math.math_ml.math_attributes_value import MathAttributesValue
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_accent import MathAccent
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_accentunder import MathAccentunder
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_align import MathAlign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_bevelled import MathBevelled
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_charalign import MathCharalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_denomalign import MathDenomalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_dir import MathDir
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_display import MathDisplay
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_displaystyle import MathDisplaystyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_edge import MathEdge
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_equalcolumns import MathEqualcolumns
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_equalrows import MathEqualrows
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_fence import MathFence
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_form import MathForm
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_indentalign import MathIndentalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_indentalignfirst import MathIndentalignfirst
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_indentalignlast import MathIndentalignlast
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_infixlinebreakstyle import MathInfixlinebreakstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_largeop import MathLargeop
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_linebreak import MathLinebreak
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_linebreakstyle import MathLinebreakstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_location import MathLocation
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_longdivstyle import MathLongdivstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_mathvariant import MathMathvariant
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_movablelimits import MathMovablelimits
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_numalign import MathNumalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_overflow import MathOverflow
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_separator import MathSeparator
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_side import MathSide
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_stackalign import MathStackalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_stretchy import MathStretchy
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_symmetric import MathSymmetric
+from crossref.models.org.w3.pkg_1998.math.math_ml.math_value import MathValue
 from crossref.models.org.w3.pkg_1998.math.math_ml.matrix import Matrix
 from crossref.models.org.w3.pkg_1998.math.math_ml.matrixrow import Matrixrow
 from crossref.models.org.w3.pkg_1998.math.math_ml.max import Max
@@ -132,37 +161,6 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.mode import Mode
 from crossref.models.org.w3.pkg_1998.math.math_ml.moment import Moment
 from crossref.models.org.w3.pkg_1998.math.math_ml.ms import Ms
 from crossref.models.org.w3.pkg_1998.math.math_ml.mspace import Mspace
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_accent import MstyleGeneralattributesAccent
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_accentunder import MstyleGeneralattributesAccentunder
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_align import MstyleGeneralattributesAlign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_bevelled import MstyleGeneralattributesBevelled
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_charalign import MstyleGeneralattributesCharalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_denomalign import MstyleGeneralattributesDenomalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_dir import MstyleGeneralattributesDir
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_edge import MstyleGeneralattributesEdge
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_equalcolumns import MstyleGeneralattributesEqualcolumns
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_equalrows import MstyleGeneralattributesEqualrows
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_fence import MstyleGeneralattributesFence
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_form import MstyleGeneralattributesForm
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_indentalign import MstyleGeneralattributesIndentalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_indentalignfirst import MstyleGeneralattributesIndentalignfirst
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_indentalignlast import MstyleGeneralattributesIndentalignlast
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_largeop import MstyleGeneralattributesLargeop
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_linebreak import MstyleGeneralattributesLinebreak
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_linebreakstyle import MstyleGeneralattributesLinebreakstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_location import MstyleGeneralattributesLocation
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_longdivstyle import MstyleGeneralattributesLongdivstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_mathvariant import MstyleGeneralattributesMathvariant
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_movablelimits import MstyleGeneralattributesMovablelimits
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_numalign import MstyleGeneralattributesNumalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_separator import MstyleGeneralattributesSeparator
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_side import MstyleGeneralattributesSide
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_stackalign import MstyleGeneralattributesStackalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_stretchy import MstyleGeneralattributesStretchy
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_symmetric import MstyleGeneralattributesSymmetric
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_generalattributes_value import MstyleGeneralattributesValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_specificattributes_displaystyle import MstyleSpecificattributesDisplaystyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.mstyle_specificattributes_infixlinebreakstyle import MstyleSpecificattributesInfixlinebreakstyle
 from crossref.models.org.w3.pkg_1998.math.math_ml.mtable import Mtable
 from crossref.models.org.w3.pkg_1998.math.math_ml.mtext import Mtext
 from crossref.models.org.w3.pkg_1998.math.math_ml.naturalnumbers import Naturalnumbers
@@ -1242,7 +1240,7 @@ class Math:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathbackground: Optional[Union[str, CommonPresAttValue]] = field(
+    mathbackground: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1255,7 +1253,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    displaystyle: Optional[MstyleSpecificattributesDisplaystyle] = field(
+    displaystyle: Optional[MathDisplaystyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1274,7 +1272,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    infixlinebreakstyle: Optional[MstyleSpecificattributesInfixlinebreakstyle] = field(
+    infixlinebreakstyle: Optional[MathInfixlinebreakstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1287,44 +1285,44 @@ class Math:
             "pattern": r"\s*\S\s*",
         }
     )
-    accent: Optional[MstyleGeneralattributesAccent] = field(
+    accent: Optional[MathAccent] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    accentunder: Optional[MstyleGeneralattributesAccentunder] = field(
+    accentunder: Optional[MathAccentunder] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    align: Optional[MstyleGeneralattributesAlign] = field(
+    align: Optional[MathAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    alignmentscope: List[MstyleGeneralattributesValue] = field(
+    alignmentscope: List[MathValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         }
     )
-    bevelled: Optional[MstyleGeneralattributesBevelled] = field(
+    bevelled: Optional[MathBevelled] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    charalign: Optional[MstyleGeneralattributesCharalign] = field(
+    charalign: Optional[MathCharalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    charspacing: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    charspacing: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1366,21 +1364,21 @@ class Math:
             "type": "Attribute",
         }
     )
-    columnwidth: List[MstyleGeneralattributesValue] = field(
+    columnwidth: List[MathValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         }
     )
-    crossout: List[MstyleGeneralattributesValue] = field(
+    crossout: List[MathValue] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
         }
     )
-    denomalign: Optional[MstyleGeneralattributesDenomalign] = field(
+    denomalign: Optional[MathDenomalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1393,37 +1391,37 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    dir: Optional[MstyleGeneralattributesDir] = field(
+    dir: Optional[MathDir] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    edge: Optional[MstyleGeneralattributesEdge] = field(
+    edge: Optional[MathEdge] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    equalcolumns: Optional[MstyleGeneralattributesEqualcolumns] = field(
+    equalcolumns: Optional[MathEqualcolumns] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    equalrows: Optional[MstyleGeneralattributesEqualrows] = field(
+    equalrows: Optional[MathEqualrows] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    fence: Optional[MstyleGeneralattributesFence] = field(
+    fence: Optional[MathFence] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    form: Optional[MstyleGeneralattributesForm] = field(
+    form: Optional[MathForm] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1457,19 +1455,19 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indentalign: Optional[MstyleGeneralattributesIndentalign] = field(
+    indentalign: Optional[MathIndentalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    indentalignfirst: Optional[MstyleGeneralattributesIndentalignfirst] = field(
+    indentalignfirst: Optional[MathIndentalignfirst] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    indentalignlast: Optional[MstyleGeneralattributesIndentalignlast] = field(
+    indentalignlast: Optional[MathIndentalignlast] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1482,14 +1480,14 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indentshiftfirst: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    indentshiftfirst: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indentshiftlast: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    indentshiftlast: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1502,7 +1500,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    largeop: Optional[MstyleGeneralattributesLargeop] = field(
+    largeop: Optional[MathLargeop] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1521,7 +1519,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    linebreak: Optional[MstyleGeneralattributesLinebreak] = field(
+    linebreak: Optional[MathLinebreak] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1533,7 +1531,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    linebreakstyle: Optional[MstyleGeneralattributesLinebreakstyle] = field(
+    linebreakstyle: Optional[MathLinebreakstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1546,20 +1544,20 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    linethickness: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    linethickness: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    location: Optional[MstyleGeneralattributesLocation] = field(
+    location: Optional[MathLocation] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    longdivstyle: Optional[MstyleGeneralattributesLongdivstyle] = field(
+    longdivstyle: Optional[MathLongdivstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1578,20 +1576,20 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    mathsize: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    mathsize: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    mathvariant: Optional[MstyleGeneralattributesMathvariant] = field(
+    mathvariant: Optional[MathMathvariant] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    maxsize: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    maxsize: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1612,13 +1610,13 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    movablelimits: Optional[MstyleGeneralattributesMovablelimits] = field(
+    movablelimits: Optional[MathMovablelimits] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    mslinethickness: Optional[Union[str, MstyleGeneralattributesValue]] = field(
+    mslinethickness: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1631,7 +1629,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    numalign: Optional[MstyleGeneralattributesNumalign] = field(
+    numalign: Optional[MathNumalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1704,7 +1702,7 @@ class Math:
             "type": "Attribute",
         }
     )
-    separator: Optional[MstyleGeneralattributesSeparator] = field(
+    separator: Optional[MathSeparator] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1722,19 +1720,19 @@ class Math:
             "type": "Attribute",
         }
     )
-    side: Optional[MstyleGeneralattributesSide] = field(
+    side: Optional[MathSide] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stackalign: Optional[MstyleGeneralattributesStackalign] = field(
+    stackalign: Optional[MathStackalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stretchy: Optional[MstyleGeneralattributesStretchy] = field(
+    stretchy: Optional[MathStretchy] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1754,7 +1752,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    symmetric: Optional[MstyleGeneralattributesSymmetric] = field(
+    symmetric: Optional[MathSymmetric] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1819,7 +1817,7 @@ class Math:
             "namespace": "##other",
         }
     )
-    display: Optional[MathAttributesDisplay] = field(
+    display: Optional[MathDisplay] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1832,7 +1830,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    overflow: Optional[MathAttributesOverflow] = field(
+    overflow: Optional[MathOverflow] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1860,7 +1858,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    altimg_valign: Optional[Union[str, MathAttributesValue]] = field(
+    altimg_valign: Optional[Union[str, MathValue]] = field(
         default=None,
         metadata={
             "name": "altimg-valign",

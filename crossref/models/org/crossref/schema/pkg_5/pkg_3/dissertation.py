@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import Abstract
 from crossref.models.org.crossref.access_indicators.program import Program as AccessIndicatorsProgram
 from crossref.models.org.crossref.fundref.program import Program as FundrefProgram
 from crossref.models.org.crossref.relations.program import Program as RelationsProgram
@@ -10,14 +10,14 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_list import Citati
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_list import ComponentList
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.dissertation_language import DissertationLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.dissertation_publication_type import DissertationPublicationType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.dissertation_reference_distribution_opts import DissertationReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import Institution
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.person_name import PersonName
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_type_atts_publication_type import PublicationTypeAttsPublicationType
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import PublisherItem
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.reference_distribution_opts_att_reference_distribution_opts import ReferenceDistributionOptsAttReferenceDistributionOpts
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.scn_policies import ScnPolicies
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -158,20 +158,20 @@ class Dissertation:
             "type": "Element",
         }
     )
-    publication_type: PublicationTypeAttsPublicationType = field(
-        default=PublicationTypeAttsPublicationType.FULL_TEXT,
+    publication_type: DissertationPublicationType = field(
+        default=DissertationPublicationType.FULL_TEXT,
         metadata={
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[DissertationLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    reference_distribution_opts: ReferenceDistributionOptsAttReferenceDistributionOpts = field(
-        default=ReferenceDistributionOptsAttReferenceDistributionOpts.NONE,
+    reference_distribution_opts: DissertationReferenceDistributionOpts = field(
+        default=DissertationReferenceDistributionOpts.NONE,
         metadata={
             "type": "Attribute",
         }

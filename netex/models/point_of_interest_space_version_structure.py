@@ -3,9 +3,9 @@ from typing import Optional
 from .passage_type_enumeration import PassageTypeEnumeration
 from .point_of_interest_component_version_structure import PointOfInterestComponentVersionStructure
 from .point_of_interest_entrances_rel_structure import PointOfInterestEntrancesRelStructure
-from .point_of_interest_space_descriptor_group_access_space_type import PointOfInterestSpaceDescriptorGroupAccessSpaceType
 from .point_of_interest_space_ref_structure import PointOfInterestSpaceRefStructure
 from .point_of_interest_space_type_enumeration import PointOfInterestSpaceTypeEnumeration
+from .point_of_interest_space_version_structure_access_space_type import PointOfInterestSpaceVersionStructureAccessSpaceType
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -15,7 +15,7 @@ class PointOfInterestSpaceVersionStructure(PointOfInterestComponentVersionStruct
     class Meta:
         name = "PointOfInterestSpace_VersionStructure"
 
-    access_space_type: Optional[PointOfInterestSpaceDescriptorGroupAccessSpaceType] = field(
+    access_space_type: Optional[PointOfInterestSpaceVersionStructureAccessSpaceType] = field(
         default=None,
         metadata={
             "name": "AccessSpaceType",

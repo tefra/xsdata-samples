@@ -364,6 +364,12 @@ class AirSearchParameters:
     )
 
 
+class AirTier(Enum):
+    VALUE_1 = 1
+    VALUE_2 = 2
+    VALUE_3 = 3
+
+
 @dataclass
 class Auxdata:
     class Meta:
@@ -3077,17 +3083,18 @@ class UnitedNations:
     )
 
 
-class AttrDocumentDocumentType(Enum):
+class VoidDocumentInfoDocumentType(Enum):
     SERVICE_FEE = "Service Fee"
     PAPER_TICKET = "Paper Ticket"
     MCO = "MCO"
     E_TICKET = "E-Ticket"
 
 
-class AttrFlexShoppingTier(Enum):
-    VALUE_1 = 1
-    VALUE_2 = 2
-    VALUE_3 = 3
+class VoidResultInfoDocumentType(Enum):
+    SERVICE_FEE = "Service Fee"
+    PAPER_TICKET = "Paper Ticket"
+    MCO = "MCO"
+    E_TICKET = "E-Ticket"
 
 
 class TypeAdjustmentTarget(Enum):
@@ -10416,7 +10423,7 @@ class TransactionType:
             be returned in the shop response.  Provider: 1G, 1V, 1P, 1J,
             ACH
         """
-        tier: Optional[AttrFlexShoppingTier] = field(
+        tier: Optional[AirTier] = field(
             default=None,
             metadata={
                 "name": "Tier",

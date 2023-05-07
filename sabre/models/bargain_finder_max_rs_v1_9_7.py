@@ -9,8 +9,8 @@ from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     CompanyNameType,
     EquipmentType,
     FareDirectionality,
-    OtaPayloadStdAttributesTarget,
-    OtaPayloadStdAttributesTransactionStatusCode,
+    OtaAirLowFareSearchRsTarget,
+    OtaAirLowFareSearchRsTransactionStatusCode,
     PassengerTypeQuantityType,
     PenaltyType,
     StayRestrictionsType,
@@ -81,7 +81,7 @@ class AirFeeType:
     )
 
 
-class AirItineraryPricingInfoExchangeAttributeGroupReissueExchange(Enum):
+class AirItineraryPricingInfoTypeReissueExchange(Enum):
     """
     Attributes
         VALUE_1: Priced as Reissue
@@ -4447,7 +4447,7 @@ class AirItineraryPricingInfoType:
             "type": "Attribute",
         }
     )
-    reissue_exchange: Optional[AirItineraryPricingInfoExchangeAttributeGroupReissueExchange] = field(
+    reissue_exchange: Optional[AirItineraryPricingInfoTypeReissueExchange] = field(
         default=None,
         metadata={
             "name": "ReissueExchange",
@@ -5922,8 +5922,8 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         }
     )
-    target: OtaPayloadStdAttributesTarget = field(
-        default=OtaPayloadStdAttributesTarget.PRODUCTION,
+    target: OtaAirLowFareSearchRsTarget = field(
+        default=OtaAirLowFareSearchRsTarget.PRODUCTION,
         metadata={
             "name": "Target",
             "type": "Attribute",
@@ -5953,7 +5953,7 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         }
     )
-    transaction_status_code: Optional[OtaPayloadStdAttributesTransactionStatusCode] = field(
+    transaction_status_code: Optional[OtaAirLowFareSearchRsTransactionStatusCode] = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",

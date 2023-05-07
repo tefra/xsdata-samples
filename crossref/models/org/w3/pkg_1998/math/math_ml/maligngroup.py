@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
-from crossref.models.org.w3.pkg_1998.math.math_ml.common_pres_att_value import CommonPresAttValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.maligngroup_attributes_groupalign import MaligngroupAttributesGroupalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.maligngroup_groupalign import MaligngroupGroupalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.maligngroup_value import MaligngroupValue
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
@@ -64,14 +64,14 @@ class Maligngroup:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathbackground: Optional[Union[str, CommonPresAttValue]] = field(
+    mathbackground: Optional[Union[str, MaligngroupValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    groupalign: Optional[MaligngroupAttributesGroupalign] = field(
+    groupalign: Optional[MaligngroupGroupalign] = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Bold,
     FixedCase,
     Graphic,

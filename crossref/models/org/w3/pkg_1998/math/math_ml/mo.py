@@ -1,28 +1,25 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
-from crossref.models.org.w3.pkg_1998.math.math_ml.common_pres_att_value import CommonPresAttValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_fontstyle import DeprecatedTokenAttFontstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_fontweight import DeprecatedTokenAttFontweight
-from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_token_att_value import DeprecatedTokenAttValue
 from crossref.models.org.w3.pkg_1998.math.math_ml.malignmark import Malignmark
 from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph import Mglyph
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_accent import MoAttributesAccent
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_fence import MoAttributesFence
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_form import MoAttributesForm
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_indentalign import MoAttributesIndentalign
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_indentalignfirst import MoAttributesIndentalignfirst
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_indentalignlast import MoAttributesIndentalignlast
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_largeop import MoAttributesLargeop
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_linebreak import MoAttributesLinebreak
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_linebreakstyle import MoAttributesLinebreakstyle
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_movablelimits import MoAttributesMovablelimits
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_separator import MoAttributesSeparator
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_stretchy import MoAttributesStretchy
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_symmetric import MoAttributesSymmetric
-from crossref.models.org.w3.pkg_1998.math.math_ml.mo_attributes_value import MoAttributesValue
-from crossref.models.org.w3.pkg_1998.math.math_ml.token_att_dir import TokenAttDir
-from crossref.models.org.w3.pkg_1998.math.math_ml.token_att_mathvariant import TokenAttMathvariant
-from crossref.models.org.w3.pkg_1998.math.math_ml.token_att_value import TokenAttValue
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_accent import MoAccent
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_dir import MoDir
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_fence import MoFence
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_fontstyle import MoFontstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_fontweight import MoFontweight
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_form import MoForm
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_indentalign import MoIndentalign
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_indentalignfirst import MoIndentalignfirst
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_indentalignlast import MoIndentalignlast
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_largeop import MoLargeop
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_linebreak import MoLinebreak
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_linebreakstyle import MoLinebreakstyle
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_mathvariant import MoMathvariant
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_movablelimits import MoMovablelimits
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_separator import MoSeparator
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_stretchy import MoStretchy
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_symmetric import MoSymmetric
+from crossref.models.org.w3.pkg_1998.math.math_ml.mo_value import MoValue
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
@@ -85,27 +82,27 @@ class Mo:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathbackground: Optional[Union[str, CommonPresAttValue]] = field(
+    mathbackground: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    mathvariant: Optional[TokenAttMathvariant] = field(
+    mathvariant: Optional[MoMathvariant] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    mathsize: Optional[Union[str, TokenAttValue]] = field(
+    mathsize: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    dir: Optional[TokenAttDir] = field(
+    dir: Optional[MoDir] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -117,13 +114,13 @@ class Mo:
             "type": "Attribute",
         }
     )
-    fontweight: Optional[DeprecatedTokenAttFontweight] = field(
+    fontweight: Optional[MoFontweight] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    fontstyle: Optional[DeprecatedTokenAttFontstyle] = field(
+    fontstyle: Optional[MoFontstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -143,26 +140,26 @@ class Mo:
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    background: Optional[Union[str, DeprecatedTokenAttValue]] = field(
+    background: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         }
     )
-    form: Optional[MoAttributesForm] = field(
+    form: Optional[MoForm] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    fence: Optional[MoAttributesFence] = field(
+    fence: Optional[MoFence] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    separator: Optional[MoAttributesSeparator] = field(
+    separator: Optional[MoSeparator] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -182,19 +179,19 @@ class Mo:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    stretchy: Optional[MoAttributesStretchy] = field(
+    stretchy: Optional[MoStretchy] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    symmetric: Optional[MoAttributesSymmetric] = field(
+    symmetric: Optional[MoSymmetric] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    maxsize: Optional[Union[str, MoAttributesValue]] = field(
+    maxsize: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -208,25 +205,25 @@ class Mo:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    largeop: Optional[MoAttributesLargeop] = field(
+    largeop: Optional[MoLargeop] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    movablelimits: Optional[MoAttributesMovablelimits] = field(
+    movablelimits: Optional[MoMovablelimits] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    accent: Optional[MoAttributesAccent] = field(
+    accent: Optional[MoAccent] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    linebreak: Optional[MoAttributesLinebreak] = field(
+    linebreak: Optional[MoLinebreak] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -239,7 +236,7 @@ class Mo:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    linebreakstyle: Optional[MoAttributesLinebreakstyle] = field(
+    linebreakstyle: Optional[MoLinebreakstyle] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -251,7 +248,7 @@ class Mo:
             "type": "Attribute",
         }
     )
-    indentalign: Optional[MoAttributesIndentalign] = field(
+    indentalign: Optional[MoIndentalign] = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -270,26 +267,26 @@ class Mo:
             "type": "Attribute",
         }
     )
-    indentalignfirst: Optional[MoAttributesIndentalignfirst] = field(
+    indentalignfirst: Optional[MoIndentalignfirst] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    indentshiftfirst: Optional[Union[str, MoAttributesValue]] = field(
+    indentshiftfirst: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         }
     )
-    indentalignlast: Optional[MoAttributesIndentalignlast] = field(
+    indentalignlast: Optional[MoIndentalignlast] = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    indentshiftlast: Optional[Union[str, MoAttributesValue]] = field(
+    indentshiftlast: Optional[Union[str, MoValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",

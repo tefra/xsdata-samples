@@ -189,7 +189,6 @@ from .line_network import LineNetwork
 from .line_shape import LineShape
 from .link_projection import LinkProjection
 from .link_sequence_projection import LinkSequenceProjection
-from .link_sequence_version_structure import JourneyPattern
 from .logical_display import LogicalDisplay
 from .lost_property_service import LostPropertyService
 from .luggage_allowance import LuggageAllowance
@@ -299,6 +298,7 @@ from .sanitary_equipment import SanitaryEquipment
 from .scheduled_stop_point import ScheduledStopPoint
 from .schematic_map import SchematicMap
 from .seating_equipment import SeatingEquipment
+from .section_in_sequence_versioned_child_structure import JourneyPattern
 from .series_constraint import SeriesConstraint
 from .service_access_right_1 import ServiceAccessRight1
 from .service_access_right_2 import ServiceAccessRight2

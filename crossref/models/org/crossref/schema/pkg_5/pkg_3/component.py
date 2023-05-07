@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from crossref.models.org.crossref.access_indicators.program import Program
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_language import ComponentLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_parent_relation import ComponentParentRelation
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import Contributors
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.description import Description
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.format import Format
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import PublicationDate
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -91,7 +91,7 @@ class Component:
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[ComponentLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

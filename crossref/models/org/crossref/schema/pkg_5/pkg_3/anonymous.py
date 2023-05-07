@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.affiliations import Affiliations
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_contributor_role import ContributorAttsContributorRole
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_name_style import ContributorAttsNameStyle
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributor_atts_sequence import ContributorAttsSequence
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.language_atts_language import LanguageAttsLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous_contributor_role import AnonymousContributorRole
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous_language import AnonymousLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous_name_style import AnonymousNameStyle
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous_sequence import AnonymousSequence
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -21,28 +21,28 @@ class Anonymous:
             "type": "Element",
         }
     )
-    sequence: Optional[ContributorAttsSequence] = field(
+    sequence: Optional[AnonymousSequence] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    contributor_role: Optional[ContributorAttsContributorRole] = field(
+    contributor_role: Optional[AnonymousContributorRole] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    name_style: Optional[ContributorAttsNameStyle] = field(
+    name_style: Optional[AnonymousNameStyle] = field(
         default=None,
         metadata={
             "name": "name-style",
             "type": "Attribute",
         }
     )
-    language: Optional[LanguageAttsLanguage] = field(
+    language: Optional[AnonymousLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",

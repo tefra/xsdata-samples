@@ -1,4 +1,8 @@
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
+from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev_journal_title import AbbrevJournalTitle
+from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
+from crossref.models.gov.nih.nlm.ncbi.jats1.ack import Ack
+from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
+from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Abbrev,
     Abstract,
     AddrLine,
@@ -150,10 +154,6 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Version,
     Xref,
 )
-from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev_journal_title import AbbrevJournalTitle
-from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
-from crossref.models.gov.nih.nlm.ncbi.jats1.ack import Ack
-from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
 from crossref.models.gov.nih.nlm.ncbi.jats1.anonymous import Anonymous
 from crossref.models.gov.nih.nlm.ncbi.jats1.app import App
 from crossref.models.gov.nih.nlm.ncbi.jats1.app_group import AppGroup
@@ -380,6 +380,10 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.xref_ref_type import XrefRefType
 from crossref.models.gov.nih.nlm.ncbi.jats1.year import Year
 
 __all__ = [
+    "AbbrevJournalTitle",
+    "AccessDate",
+    "Ack",
+    "AltText",
     "Abbrev",
     "Abstract",
     "AddrLine",
@@ -530,10 +534,6 @@ __all__ = [
     "VerseLine",
     "Version",
     "Xref",
-    "AbbrevJournalTitle",
-    "AccessDate",
-    "Ack",
-    "AltText",
     "Anonymous",
     "App",
     "AppGroup",

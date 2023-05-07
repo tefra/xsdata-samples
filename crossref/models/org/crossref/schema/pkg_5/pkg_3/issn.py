@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.media_type_atts_media_type import MediaTypeAttsMediaType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn_media_type import IssnMediaType
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -22,8 +22,8 @@ class Issn:
             "pattern": r"\d{4}-?\d{3}[\dX]",
         }
     )
-    media_type: MediaTypeAttsMediaType = field(
-        default=MediaTypeAttsMediaType.PRINT,
+    media_type: IssnMediaType = field(
+        default=IssnMediaType.PRINT,
         metadata={
             "type": "Attribute",
         }

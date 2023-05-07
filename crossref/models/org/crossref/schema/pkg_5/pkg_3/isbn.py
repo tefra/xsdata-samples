@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.media_type_atts_media_type import MediaTypeAttsMediaType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn_media_type import IsbnMediaType
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -22,8 +22,8 @@ class Isbn:
             "pattern": r"(97(8|9)-)?\d[\d \-]+[\dX]",
         }
     )
-    media_type: MediaTypeAttsMediaType = field(
-        default=MediaTypeAttsMediaType.PRINT,
+    media_type: IsbnMediaType = field(
+        default=IsbnMediaType.PRINT,
         metadata={
             "type": "Attribute",
         }
