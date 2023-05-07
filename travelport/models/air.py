@@ -2978,14 +2978,7 @@ class ImageLocation:
 class InFlightServices:
     """Available InFlight Services.
 
-    They are: 'Movie', 'Telephone', 'Telex', 'AudioProgramming',
-    'Television' ,'ResvBookingService' ,'DutyFreeSales' ,'Smoking'
-    ,'NonSmoking' ,'ShortFeatureVideo' ,'NoDutyFree'
-    ,'InSeatPowerSource' ,'InternetAccess' ,'Email' ,'Library'
-    ,'LieFlatSeat' ,'Additional service(s) exists' ,'WiFi' ,'Lie-Flat
-    seat first' ,'Lie-Flat seat business' ,'Lie-Flat seat premium
-    economy' ,'Amenities subject to change' etc.. These follow the IATA
-    standard. Please see the IATA standards for a more complete list.
+    They are: 'Movie', 'Telephone', 'Telex', 'AudioProgramming', 'Television' ,'ResvBookingService' ,'DutyFreeSales' ,'Smoking' ,'NonSmoking' ,'ShortFeatureVideo' ,'NoDutyFree' ,'InSeatPowerSource' ,'InternetAccess' ,'Email' ,'Library' ,'LieFlatSeat' ,'Additional service(s) exists' ,'WiFi' ,'Lie-Flat seat first' ,'Lie-Flat seat business' ,'Lie-Flat seat premium economy' ,'Amenities subject to change' etc.. These follow the IATA standard. Please see the IATA standards for a more complete list.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -6315,8 +6308,9 @@ class TypeFareStatusCode(Enum):
 
 
 class TypeFareTripType(Enum):
-    """Type of trip for this fare ( One-way, Return, etc..)
+    """Type of trip for this fare ( One-way, Return,
 
+    etc..)
     OneWay - one way fare
     OneWayOnly - one way fare only. Do not
     double
@@ -6689,10 +6683,8 @@ class TypeTextElement:
 
 @dataclass
 class TypeTicketModifierAccountingType:
-    """Ticketing Modifier used to add accounting.
-
-    - discount information.
-    """
+    """Ticketing Modifier used to add accounting
+    - discount information."""
     class Meta:
         name = "typeTicketModifierAccountingType"
 
@@ -21947,11 +21939,9 @@ class AirPrePayRsp(BaseRsp):
 
 @dataclass
 class AirPricingTicketingModifiers:
-    """AirPricing TicketingModifier information.
-
+    """AirPricing TicketingModifier information
     - used to associate Ticketing Modifiers with one or more
-    AirPricingInfos/ProviderReservationInfo
-    """
+    AirPricingInfos/ProviderReservationInfo"""
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 

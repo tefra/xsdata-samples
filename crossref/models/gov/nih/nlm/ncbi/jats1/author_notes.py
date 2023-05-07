@@ -13,9 +13,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class AuthorNotes:
-    """<div>
-
-    <h3>Author Note Group</h3> </div>
+    """
+    <div> <h3>Author Note Group</h3> </div>
     """
     class Meta:
         name = "author-notes"
@@ -37,21 +36,18 @@ class AuthorNotes:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5391,
         }
     )
     fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5391,
         }
     )
     p: List[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5391,
         }
     )
     id: Optional[str] = field(

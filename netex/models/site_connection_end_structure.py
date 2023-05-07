@@ -123,8 +123,8 @@ class SiteConnectionEndStructure:
             "max_occurs": 5,
         }
     )
-    operator_ref_or_operator_view: List[object] = field(
-        default_factory=list,
+    operator_ref_or_operator_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -139,7 +139,6 @@ class SiteConnectionEndStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     label: Optional[MultilingualString] = field(

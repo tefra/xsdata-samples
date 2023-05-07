@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.niso.org/schemas/ali/1.0/"
 
 @dataclass
 class LicenseRef:
-    """<div>
-
-    <h3>License Reference (Niso Ali)</h3> </div>
+    """
+    <div> <h3>License Reference (Niso Ali)</h3> </div>
     """
     class Meta:
         name = "license_ref"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
 from .sales_offer_package_element_ref import SalesOfferPackageElementRef
 from .sales_offer_package_ref import SalesOfferPackageRef
@@ -12,8 +12,8 @@ class SalesOfferPackagePriceVersionedChildStructure(FarePriceVersionedChildStruc
     class Meta:
         name = "SalesOfferPackagePrice_VersionedChildStructure"
 
-    sales_offer_package_ref_or_sales_offer_package_element_ref: List[object] = field(
-        default_factory=list,
+    sales_offer_package_ref_or_sales_offer_package_element_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -28,6 +28,5 @@ class SalesOfferPackagePriceVersionedChildStructure(FarePriceVersionedChildStruc
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

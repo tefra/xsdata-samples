@@ -109,8 +109,8 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    authority_ref_or_operator_ref: List[object] = field(
-        default_factory=list,
+    authority_ref_or_operator_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -125,7 +125,6 @@ class LineVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     additional_operators: Optional[TransportOrganisationRefsRelStructure] = field(

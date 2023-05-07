@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class IssnL:
-    """<div>
-
-    <h3>Issn Linking</h3> </div>
+    """
+    <div> <h3>Issn Linking</h3> </div>
     """
     class Meta:
         name = "issn-l"

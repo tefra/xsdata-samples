@@ -29,9 +29,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class McDataInstance:
     """Describes the specific properties of one data instance in order to support
-    measurement and/or calibration of this data instance. The most important
-    attributes are:
+    measurement and/or calibration of this data instance.
 
+    The most important attributes are:
     * Its shortName is copied from the ECU Flat map (if applicable) and will be used as identifier and for display by the MC system.
     * The category is copied from the corresponding data type (ApplicationDataType if defined, otherwise ImplementationDataType) as far as applicable.
     * The symbol is the one used in the programming language. It will be used to find out the actual memory address by the final generation tool with the help of linker generated information.

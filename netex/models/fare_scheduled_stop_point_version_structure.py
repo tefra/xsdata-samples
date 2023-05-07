@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref_structure import FareScheduledStopPointRefStructure
 from .multilingual_string import MultilingualString
@@ -15,8 +15,8 @@ class FareScheduledStopPointVersionStructure(ScheduledStopPointVersionStructure)
     class Meta:
         name = "FareScheduledStopPoint_VersionStructure"
 
-    site_facility_set_ref_or_site_facility_set: List[object] = field(
-        default_factory=list,
+    site_facility_set_ref_or_site_facility_set: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -31,7 +31,6 @@ class FareScheduledStopPointVersionStructure(ScheduledStopPointVersionStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     name_on_routing: Optional[MultilingualString] = field(

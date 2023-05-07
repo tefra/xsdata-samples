@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class Phone:
-    """<div>
-
-    <h3>Phone Number: in an Address</h3> </div>
+    """
+    <div> <h3>Phone Number: in an Address</h3> </div>
     """
     class Meta:
         name = "phone"

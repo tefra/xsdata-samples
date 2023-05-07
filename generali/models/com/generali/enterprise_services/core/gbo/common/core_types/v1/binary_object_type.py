@@ -7,10 +7,13 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/core-ty
 @dataclass
 class BinaryObjectType:
     """<ns1:UniqueID xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreCo
-    mponentsTechnicalSpecification:2">UNDT000002</ns1:UniqueID>
+    mponentsTechnicalSpecification:2">UNDT000002</ns1:UniqueID> <ns1:Acronym xmlns:
+    ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecif
+    ication:2">CCT</ns1:Acronym> <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:u
+    ncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Binary
+    Object.
 
-    <ns1:Acronym xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">CCT</ns1:Acronym>
-    <ns1:DictionaryEntryName xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Binary Object. Type</ns1:DictionaryEntryName>
+    Type</ns1:DictionaryEntryName>
     <ns1:Version xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">2.01</ns1:Version>
     <ns1:Definition xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">A set of finite-length sequences of binary octets.</ns1:Definition>
     <ns1:PrimaryRepresentationTerm xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Binary Object</ns1:PrimaryRepresentationTerm>

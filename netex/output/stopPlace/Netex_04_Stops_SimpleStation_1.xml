@@ -206,17 +206,17 @@
                   <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
+                    <EntranceEquipment id="ztb:bh0023@A1-E1@entrance" version="any">
+                      <Door>true</Door>
+                      <KeptOpen>true</KeptOpen>
+                      <WheelchairPassable>true</WheelchairPassable>
+                    </EntranceEquipment>
                     <RampEquipment id="ztb:bh0023@A1-E1@ramp" version="any">
                       <DirectionOfUse>both</DirectionOfUse>
                       <Gradient>22</Gradient>
                       <GradientType>steep</GradientType>
                       <VisualGuidanceBands>true</VisualGuidanceBands>
                     </RampEquipment>
-                    <EntranceEquipment id="ztb:bh0023@A1-E1@entrance" version="any">
-                      <Door>true</Door>
-                      <KeptOpen>true</KeptOpen>
-                      <WheelchairPassable>true</WheelchairPassable>
-                    </EntranceEquipment>
                   </placeEquipments>
                   <Label lang="de">Eingang</Label>
                   <EntranceType>openDoor</EntranceType>
@@ -259,16 +259,16 @@
                   <AccessModes/>
                   <LevelRef version="01" ref="ztb:bh0023@Lvl_0"/>
                   <placeEquipments>
-                    <RampEquipment id="ztb:bh0023@Rail@Q1-E1tr@ramp" version="any">
-                      <DirectionOfUse>both</DirectionOfUse>
-                      <Gradient>22</Gradient>
-                      <VisualGuidanceBands>true</VisualGuidanceBands>
-                    </RampEquipment>
                     <EntranceEquipment id="ztb:bh0023@Rail@Q1-E1tr@entrance" version="any">
                       <Door>false</Door>
                       <KeptOpen>true</KeptOpen>
                       <WheelchairPassable>true</WheelchairPassable>
                     </EntranceEquipment>
+                    <RampEquipment id="ztb:bh0023@Rail@Q1-E1tr@ramp" version="any">
+                      <DirectionOfUse>both</DirectionOfUse>
+                      <Gradient>22</Gradient>
+                      <VisualGuidanceBands>true</VisualGuidanceBands>
+                    </RampEquipment>
                   </placeEquipments>
                   <EntranceType>opening</EntranceType>
                   <IsExternal>true</IsExternal>
@@ -336,18 +336,18 @@
                         </EquipmentPosition>
                       </equipmentPositions>
                       <placeEquipments>
-                        <PlaceSign id="ztb:bh0023@Rail@Q1@Sign_01" version="any">
-                          <Height>1</Height>
-                          <Width>2</Width>
-                          <HeightFromFloor>1.5</HeightFromFloor>
-                          <PlaceName>Reid</PlaceName>
-                        </PlaceSign>
                         <GeneralSign id="ztb:bh0023@Rail@Q1@Sign_02" version="any">
                           <Height>1</Height>
                           <Width>2</Width>
                           <HeightFromFloor>1.5</HeightFromFloor>
                           <Content>Ausgang</Content>
                         </GeneralSign>
+                        <PlaceSign id="ztb:bh0023@Rail@Q1@Sign_01" version="any">
+                          <Height>1</Height>
+                          <Width>2</Width>
+                          <HeightFromFloor>1.5</HeightFromFloor>
+                          <PlaceName>Reid</PlaceName>
+                        </PlaceSign>
                       </placeEquipments>
                     </EquipmentPlace>
                   </equipmentPlaces>

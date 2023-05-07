@@ -6,9 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AxisIndexType:
-    """This meta-class specifies an axis in a curve/map data object. The index
-    satisfies  the following convention:
+    """This meta-class specifies an axis in a curve/map data object.
 
+    The index satisfies  the following convention:
     * 0 output "axis"
     * 1 input axis 1 (X input axis e.g. of a CURVE)
     * 2 input axis 2 (Y input axis e.g. of a MAP)

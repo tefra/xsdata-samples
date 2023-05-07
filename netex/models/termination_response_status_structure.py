@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .other_error import OtherError
@@ -71,8 +71,8 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        choice: List[object] = field(
-            default_factory=list,
+        choice: Optional[object] = field(
+            default=None,
             metadata={
                 "type": "Elements",
                 "choices": (
@@ -97,7 +97,6 @@ class TerminationResponseStatusStructure:
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-                "max_occurs": 4,
             }
         )
         description: Optional[str] = field(

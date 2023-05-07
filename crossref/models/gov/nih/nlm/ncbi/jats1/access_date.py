@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class AccessDate:
-    """<div>
-
-    <h3>Access Date For Cited Work</h3> </div>
+    """
+    <div> <h3>Access Date For Cited Work</h3> </div>
     """
     class Meta:
         name = "access-date"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .border_point_ref import BorderPointRef
 from .destination_display_ref import DestinationDisplayRef
@@ -22,8 +22,8 @@ class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"
 
-    destination_display_ref_or_destination_display_view_or_name: List[object] = field(
-        default_factory=list,
+    destination_display_ref_or_destination_display_view_or_name: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -43,7 +43,6 @@ class ViaVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     border_point_ref: Optional[BorderPointRef] = field(

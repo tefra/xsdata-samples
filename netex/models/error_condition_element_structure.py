@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .access_not_allowed_error import AccessNotAllowedError
 from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
 from .beyond_data_horizon import BeyondDataHorizon
@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ErrorConditionElementStructure:
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -108,7 +108,6 @@ class ErrorConditionElementStructure:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-            "max_occurs": 15,
         }
     )
     description: Optional[str] = field(

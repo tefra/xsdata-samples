@@ -150,8 +150,8 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -196,11 +196,10 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 8,
         }
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: List[object] = field(
-        default_factory=list,
+    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -220,6 +219,5 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )

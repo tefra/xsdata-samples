@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
 from .access_ref import AccessRef
 from .access_right_in_product_ref import AccessRightInProductRef
@@ -469,8 +469,8 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -2725,6 +2725,5 @@ class ComplexFeatureMemberVersionedChildStructure(AbstractGroupMemberVersionedCh
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 450,
         }
     )

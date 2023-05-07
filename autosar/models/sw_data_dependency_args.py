@@ -50,6 +50,7 @@ class SwDataDependencyArgs:
             "name": "AR-PARAMETER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
+            "sequence": 98705,
         }
     )
     mc_data_instance_ref: List["SwDataDependencyArgs.McDataInstanceRef"] = field(
@@ -58,6 +59,7 @@ class SwDataDependencyArgs:
             "name": "MC-DATA-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
+            "sequence": 98705,
         }
     )
     autosar_variable: List[AutosarVariableRef] = field(
@@ -66,6 +68,7 @@ class SwDataDependencyArgs:
             "name": "AUTOSAR-VARIABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
+            "sequence": 98718,
         }
     )
     mc_data_instance_var_ref: List["SwDataDependencyArgs.McDataInstanceVarRef"] = field(
@@ -74,6 +77,7 @@ class SwDataDependencyArgs:
             "name": "MC-DATA-INSTANCE-VAR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
+            "sequence": 98718,
         }
     )
     s: Optional[str] = field(

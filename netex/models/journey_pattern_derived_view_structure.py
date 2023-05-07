@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -57,8 +57,8 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    route_ref_or_route_view: List[object] = field(
-        default_factory=list,
+    route_ref_or_route_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -73,7 +73,6 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
@@ -84,8 +83,8 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: List[object] = field(
-        default_factory=list,
+    direction_ref_or_direction_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -100,11 +99,10 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    destination_display_ref_or_destination_display_view: List[object] = field(
-        default_factory=list,
+    destination_display_ref_or_destination_display_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -119,7 +117,6 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(

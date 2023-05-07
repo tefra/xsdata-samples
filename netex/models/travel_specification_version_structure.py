@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_ref import CellRef
@@ -110,8 +110,8 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -211,7 +211,6 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 19,
         }
     )
     amount: Optional[Decimal] = field(

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .class_of_use_ref import ClassOfUseRef
 from .distribution_channel_ref import DistributionChannelRef
 from .facility_set_ref import FacilitySetRef
@@ -205,8 +205,8 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -231,7 +231,6 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
@@ -242,8 +241,8 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: List[object] = field(
-        default_factory=list,
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -258,7 +257,6 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     payment_method: Optional[PaymentMethodEnumeration] = field(

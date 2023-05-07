@@ -407,7 +407,7 @@ class Ii(Any):
 
 @dataclass
 class Qty(Any):
-    """is an abstract generalization for all data types (1) whose value set has an
+    """Is an abstract generalization for all data types (1) whose value set has an
     order relation (less-or-equal) and (2) where difference is defined in all of
     the data type's totally ordered value subsets.
 
@@ -477,13 +477,12 @@ class TelExplicit:
 @dataclass
 class Url(Any):
     """A telecommunications address  specified according to Internet standard RFC
-    1738.
+    1738 [http://www.ietf.org/rfc/rfc1738.txt].
 
-    [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the
-    protocol and the contact point defined by that protocol for the
-    resource.  Notable uses of the telecommunication address data type
-    are for telephone and telefax numbers, e-mail addresses, Hypertext
-    references, FTP references, etc.
+    The URL specifies the protocol and the contact point defined by that
+    protocol for the resource.  Notable uses of the telecommunication
+    address data type are for telephone and telefax numbers, e-mail
+    addresses, Hypertext references, FTP references, etc.
     """
     class Meta:
         name = "URL"
@@ -3259,7 +3258,6 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequence": 856,
         }
     )
     high: List[IvxbTsExplicit] = field(
@@ -3268,7 +3266,6 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequence": 849,
         }
     )
     center: Optional[TsExplicit] = field(
@@ -3610,7 +3607,6 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequence": 716,
         }
     )
     high: List[IvxbTs] = field(
@@ -3619,7 +3615,6 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-            "sequence": 709,
         }
     )
     center: Optional[Ts] = field(

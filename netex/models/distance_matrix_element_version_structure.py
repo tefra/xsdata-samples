@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
 from .fare_point_in_pattern_ref_structure import FarePointInPatternRefStructure
@@ -55,8 +55,8 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    start_stop_point_ref_or_start_stop_point_view: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -70,15 +70,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "type": ScheduledStopPointDerivedViewStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-            ),
-            "max_occurs": 2,
-        }
-    )
-    start_tariff_zone_ref_or_start_tariff_zone_view: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
                 {
                     "name": "StartTariffZoneRef",
                     "type": TariffZoneRefStructure,
@@ -89,15 +80,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "type": ZoneDerivedViewStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-            ),
-            "max_occurs": 2,
-        }
-    )
-    from_fare_section_ref_or_from_fare_point_in_pattern_ref: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
                 {
                     "name": "FromFareSectionRef",
                     "type": FareSectionRefStructure,
@@ -109,11 +91,10 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    end_stop_point_ref_or_end_stop_point_view: List[object] = field(
-        default_factory=list,
+    choice_1: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -127,15 +108,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "type": ScheduledStopPointDerivedViewStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-            ),
-            "max_occurs": 2,
-        }
-    )
-    end_tariff_zone_ref_or_end_tariff_zone_view: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
                 {
                     "name": "EndTariffZoneRef",
                     "type": TariffZoneRefStructure,
@@ -146,15 +118,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "type": ZoneDerivedViewStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
-            ),
-            "max_occurs": 2,
-        }
-    )
-    to_fare_section_ref_or_to_fare_point_in_pattern_ref: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
                 {
                     "name": "ToFareSectionRef",
                     "type": FareSectionRefStructure,
@@ -166,7 +129,6 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     series_constraints: Optional[SeriesConstraintsRelStructure] = field(

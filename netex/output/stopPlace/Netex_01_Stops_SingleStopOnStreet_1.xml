@@ -23,9 +23,9 @@
             </LowerRight>
           </BoundingBox>
           <objectReferences>
-            <ScheduledStopPointRef ref=""/>
-            <StopPlaceRef ref=""/>
             <TopographicPlaceRef ref=""/>
+            <StopPlaceRef ref=""/>
+            <ScheduledStopPointRef ref=""/>
           </objectReferences>
           <NetworkRef ref="mynet">REQUEST</NetworkRef>
         </NetworkFilterByValue>

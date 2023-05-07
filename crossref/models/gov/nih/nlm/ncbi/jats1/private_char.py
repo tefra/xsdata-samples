@@ -9,9 +9,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class PrivateChar:
-    """<div>
-
-    <h3>Private Character (Custom or Unicode)</h3> </div>
+    """
+    <div> <h3>Private Character (Custom or Unicode)</h3> </div>
     """
     class Meta:
         name = "private-char"

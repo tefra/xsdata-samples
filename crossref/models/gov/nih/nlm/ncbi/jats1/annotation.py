@@ -140,9 +140,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class CollabAlternatives:
-    """<div>
-
-    <h3>Collaboration Alternatives</h3> </div>
+    """
+    <div> <h3>Collaboration Alternatives</h3> </div>
     """
     class Meta:
         name = "collab-alternatives"
@@ -171,9 +170,8 @@ class CollabAlternatives:
 
 @dataclass
 class Annotation:
-    """<div>
-
-    <h3>Annotation in a Citation</h3> </div>
+    """
+    <div> <h3>Annotation in a Citation</h3> </div>
     """
     class Meta:
         name = "annotation"
@@ -223,9 +221,8 @@ class Annotation:
 
 @dataclass
 class AuthorComment:
-    """<div>
-
-    <h3>Author Comment</h3> </div>
+    """
+    <div> <h3>Author Comment</h3> </div>
     """
     class Meta:
         name = "author-comment"
@@ -281,9 +278,8 @@ class AuthorComment:
 
 @dataclass
 class Caption:
-    """<div>
-
-    <h3>Caption of a Figure, Table, Etc.</h3> </div>
+    """
+    <div> <h3>Caption of a Figure, Table, Etc.</h3> </div>
     """
     class Meta:
         name = "caption"
@@ -345,9 +341,8 @@ class Caption:
 
 @dataclass
 class Fn:
-    """<div>
-
-    <h3>Footnote</h3> </div>
+    """
+    <div> <h3>Footnote</h3> </div>
     """
     class Meta:
         name = "fn"
@@ -416,9 +411,8 @@ class Fn:
 
 @dataclass
 class ListItem:
-    """<div>
-
-    <h3>List Item</h3> </div>
+    """
+    <div> <h3>List Item</h3> </div>
     """
     class Meta:
         name = "list-item"
@@ -440,7 +434,6 @@ class ListItem:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6401,
         }
     )
     def_list: List["DefList"] = field(
@@ -448,7 +441,6 @@ class ListItem:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6401,
         }
     )
     list_value: List["ListType"] = field(
@@ -456,7 +448,6 @@ class ListItem:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6401,
         }
     )
     id: Optional[str] = field(
@@ -490,9 +481,8 @@ class ListItem:
 
 @dataclass
 class OpenAccess:
-    """<div>
-
-    <h3>Open Access</h3> </div>
+    """
+    <div> <h3>Open Access</h3> </div>
     """
     class Meta:
         name = "open-access"
@@ -535,9 +525,8 @@ class OpenAccess:
 
 @dataclass
 class QuestionWrap:
-    """<div>
-
-    <h3>Question Wrap</h3> </div>
+    """
+    <div> <h3>Question Wrap</h3> </div>
     """
     class Meta:
         name = "question-wrap"
@@ -620,9 +609,8 @@ class QuestionWrap:
 
 @dataclass
 class Rb:
-    """<div>
-
-    <h3>Ruby Base</h3> </div>
+    """
+    <div> <h3>Ruby Base</h3> </div>
     """
     class Meta:
         name = "rb"
@@ -716,9 +704,8 @@ class Rb:
 
 @dataclass
 class FnGroup:
-    """<div>
-
-    <h3>Footnote Group</h3> </div>
+    """
+    <div> <h3>Footnote Group</h3> </div>
     """
     class Meta:
         name = "fn-group"
@@ -780,9 +767,8 @@ class FnGroup:
 
 @dataclass
 class ListType:
-    """<div>
-
-    <h3>List</h3> </div>
+    """
+    <div> <h3>List</h3> </div>
     """
     class Meta:
         name = "list"
@@ -873,9 +859,8 @@ class ListType:
 
 @dataclass
 class Ruby:
-    """<div>
-
-    <h3>Ruby Wrapper</h3> </div>
+    """
+    <div> <h3>Ruby Wrapper</h3> </div>
     """
     class Meta:
         name = "ruby"
@@ -926,9 +911,8 @@ class Ruby:
 
 @dataclass
 class Price:
-    """<div>
-
-    <h3>Price</h3> </div>
+    """
+    <div> <h3>Price</h3> </div>
     """
     class Meta:
         name = "price"
@@ -1032,9 +1016,8 @@ class Price:
 
 @dataclass
 class Sup:
-    """<div>
-
-    <h3>Superscript</h3> </div>
+    """
+    <div> <h3>Superscript</h3> </div>
     """
     class Meta:
         name = "sup"
@@ -1229,9 +1212,8 @@ class Sup:
 
 @dataclass
 class Xref:
-    """<div>
-
-    <h3>X(cross) Reference</h3> </div>
+    """
+    <div> <h3>X(cross) Reference</h3> </div>
     """
     class Meta:
         name = "xref"
@@ -1365,9 +1347,8 @@ class Xref:
 
 @dataclass
 class Sub:
-    """<div>
-
-    <h3>Subscript</h3> </div>
+    """
+    <div> <h3>Subscript</h3> </div>
     """
     class Meta:
         name = "sub"
@@ -1562,9 +1543,8 @@ class Sub:
 
 @dataclass
 class AwardId:
-    """<div>
-
-    <h3>Award Identifier</h3> </div>
+    """
+    <div> <h3>Award Identifier</h3> </div>
     """
     class Meta:
         name = "award-id"
@@ -1793,9 +1773,8 @@ class AwardId:
 
 @dataclass
 class CompoundSubjectPart:
-    """<div>
-
-    <h3>Compound Subject Part Name</h3> </div>
+    """
+    <div> <h3>Compound Subject Part Name</h3> </div>
     """
     class Meta:
         name = "compound-subject-part"
@@ -1919,9 +1898,8 @@ class CompoundSubjectPart:
 
 @dataclass
 class CopyrightStatement:
-    """<div>
-
-    <h3>Copyright Statement</h3> </div>
+    """
+    <div> <h3>Copyright Statement</h3> </div>
     """
     class Meta:
         name = "copyright-statement"
@@ -2047,9 +2025,8 @@ class CopyrightStatement:
 
 @dataclass
 class DataTitle:
-    """<div>
-
-    <h3>Data Title in a Citation</h3> </div>
+    """
+    <div> <h3>Data Title in a Citation</h3> </div>
     """
     class Meta:
         name = "data-title"
@@ -2187,9 +2164,8 @@ class DataTitle:
 
 @dataclass
 class Edition:
-    """<div>
-
-    <h3>Edition Statement, Cited</h3> </div>
+    """
+    <div> <h3>Edition Statement, Cited</h3> </div>
     """
     class Meta:
         name = "edition"
@@ -2257,9 +2233,8 @@ class Edition:
 
 @dataclass
 class Gov:
-    """<div>
-
-    <h3>Government Report, Cited</h3> </div>
+    """
+    <div> <h3>Government Report, Cited</h3> </div>
     """
     class Meta:
         name = "gov"
@@ -2373,9 +2348,8 @@ class Gov:
 
 @dataclass
 class Institution:
-    """<div>
-
-    <h3>Institution Name: in an Address</h3> </div>
+    """
+    <div> <h3>Institution Name: in an Address</h3> </div>
     """
     class Meta:
         name = "institution"
@@ -2487,9 +2461,8 @@ class Institution:
 
 @dataclass
 class Kwd:
-    """<div>
-
-    <h3>Keyword</h3> </div>
+    """
+    <div> <h3>Keyword</h3> </div>
     """
     class Meta:
         name = "kwd"
@@ -2623,9 +2596,8 @@ class Kwd:
 
 @dataclass
 class Role:
-    """<div>
-
-    <h3>Role or Function Title of Contributor</h3> </div>
+    """
+    <div> <h3>Role or Function Title of Contributor</h3> </div>
     """
     class Meta:
         name = "role"
@@ -2780,9 +2752,8 @@ class Role:
 
 @dataclass
 class Series:
-    """<div>
-
-    <h3>Series</h3> </div>
+    """
+    <div> <h3>Series</h3> </div>
     """
     class Meta:
         name = "series"
@@ -2896,9 +2867,8 @@ class Series:
 
 @dataclass
 class Subject:
-    """<div>
-
-    <h3>Subject Name</h3> </div>
+    """
+    <div> <h3>Subject Name</h3> </div>
     """
     class Meta:
         name = "subject"
@@ -3056,9 +3026,8 @@ class Subject:
 
 @dataclass
 class Supplement:
-    """<div>
-
-    <h3>Supplement</h3> </div>
+    """
+    <div> <h3>Supplement</h3> </div>
     """
     class Meta:
         name = "supplement"
@@ -3224,9 +3193,8 @@ class Supplement:
 
 @dataclass
 class Target:
-    """<div>
-
-    <h3>Target of an Internal Link</h3> </div>
+    """
+    <div> <h3>Target of an Internal Link</h3> </div>
     """
     class Meta:
         name = "target"
@@ -3341,9 +3309,8 @@ class Target:
 
 @dataclass
 class TextualForm:
-    """<div>
-
-    <h3>Textual Form</h3> </div>
+    """
+    <div> <h3>Textual Form</h3> </div>
     """
     class Meta:
         name = "textual-form"
@@ -3471,9 +3438,8 @@ class TextualForm:
 
 @dataclass
 class Version:
-    """<div>
-
-    <h3>Version Statement, Cited</h3> </div>
+    """
+    <div> <h3>Version Statement, Cited</h3> </div>
     """
     class Meta:
         name = "version"
@@ -3541,9 +3507,8 @@ class Version:
 
 @dataclass
 class AltTitle:
-    """<div>
-
-    <h3>Alternate Title</h3> </div>
+    """
+    <div> <h3>Alternate Title</h3> </div>
     """
     class Meta:
         name = "alt-title"
@@ -3750,9 +3715,8 @@ class AltTitle:
 
 @dataclass
 class ArticleTitle:
-    """<div>
-
-    <h3>Article Title</h3> </div>
+    """
+    <div> <h3>Article Title</h3> </div>
     """
     class Meta:
         name = "article-title"
@@ -3945,9 +3909,8 @@ class ArticleTitle:
 
 @dataclass
 class Attrib:
-    """<div>
-
-    <h3>Attribution</h3> </div>
+    """
+    <div> <h3>Attribution</h3> </div>
     """
     class Meta:
         name = "attrib"
@@ -4143,9 +4106,8 @@ class Attrib:
 
 @dataclass
 class ChapterTitle:
-    """<div>
-
-    <h3>Chapter Title in a Citation</h3> </div>
+    """
+    <div> <h3>Chapter Title in a Citation</h3> </div>
     """
     class Meta:
         name = "chapter-title"
@@ -4313,9 +4275,8 @@ class ChapterTitle:
 
 @dataclass
 class Code:
-    """<div>
-
-    <h3>Code Text</h3> </div>
+    """
+    <div> <h3>Code Text</h3> </div>
     """
     class Meta:
         name = "code"
@@ -4537,9 +4498,8 @@ class Code:
 
 @dataclass
 class Comment:
-    """<div>
-
-    <h3>Comment in a Citation</h3> </div>
+    """
+    <div> <h3>Comment in a Citation</h3> </div>
     """
     class Meta:
         name = "comment"
@@ -4742,9 +4702,8 @@ class Comment:
 
 @dataclass
 class CompoundKwdPart:
-    """<div>
-
-    <h3>Compound Keyword Part</h3> </div>
+    """
+    <div> <h3>Compound Keyword Part</h3> </div>
     """
     class Meta:
         name = "compound-kwd-part"
@@ -4880,9 +4839,8 @@ class CompoundKwdPart:
 
 @dataclass
 class CompoundSubject:
-    """<div>
-
-    <h3>Compound Subject Name</h3> </div>
+    """
+    <div> <h3>Compound Subject Name</h3> </div>
     """
     class Meta:
         name = "compound-subject"
@@ -4953,9 +4911,8 @@ class CompoundSubject:
 
 @dataclass
 class InstitutionWrap:
-    """<div>
-
-    <h3>Institution Wrapper</h3> </div>
+    """
+    <div> <h3>Institution Wrapper</h3> </div>
     """
     class Meta:
         name = "institution-wrap"
@@ -4991,9 +4948,8 @@ class InstitutionWrap:
 
 @dataclass
 class PartTitle:
-    """<div>
-
-    <h3>Part Title in a Citation</h3> </div>
+    """
+    <div> <h3>Part Title in a Citation</h3> </div>
     """
     class Meta:
         name = "part-title"
@@ -5161,9 +5117,8 @@ class PartTitle:
 
 @dataclass
 class Source:
-    """<div>
-
-    <h3>Source</h3> </div>
+    """
+    <div> <h3>Source</h3> </div>
     """
     class Meta:
         name = "source"
@@ -5338,9 +5293,8 @@ class Source:
 
 @dataclass
 class Speaker:
-    """<div>
-
-    <h3>Speaker</h3> </div>
+    """
+    <div> <h3>Speaker</h3> </div>
     """
     class Meta:
         name = "speaker"
@@ -5426,9 +5380,8 @@ class Speaker:
 
 @dataclass
 class TransSource:
-    """<div>
-
-    <h3>Translated Source</h3> </div>
+    """
+    <div> <h3>Translated Source</h3> </div>
     """
     class Meta:
         name = "trans-source"
@@ -5603,9 +5556,8 @@ class TransSource:
 
 @dataclass
 class TransTitle:
-    """<div>
-
-    <h3>Translated Title</h3> </div>
+    """
+    <div> <h3>Translated Title</h3> </div>
     """
     class Meta:
         name = "trans-title"
@@ -5812,9 +5764,8 @@ class TransTitle:
 
 @dataclass
 class VerseLine:
-    """<div>
-
-    <h3>Line of a Verse</h3> </div>
+    """
+    <div> <h3>Line of a Verse</h3> </div>
     """
     class Meta:
         name = "verse-line"
@@ -6011,9 +5962,8 @@ class VerseLine:
 
 @dataclass
 class Aff:
-    """<div>
-
-    <h3>Affiliation</h3> </div>
+    """
+    <div> <h3>Affiliation</h3> </div>
     """
     class Meta:
         name = "aff"
@@ -6206,9 +6156,8 @@ class Aff:
 
 @dataclass
 class CompoundKwd:
-    """<div>
-
-    <h3>Compound Keyword</h3> </div>
+    """
+    <div> <h3>Compound Keyword</h3> </div>
     """
     class Meta:
         name = "compound-kwd"
@@ -6279,9 +6228,8 @@ class CompoundKwd:
 
 @dataclass
 class ConfLoc:
-    """<div>
-
-    <h3>Conference Location</h3> </div>
+    """
+    <div> <h3>Conference Location</h3> </div>
     """
     class Meta:
         name = "conf-loc"
@@ -6371,9 +6319,8 @@ class ConfLoc:
 
 @dataclass
 class ConfSponsor:
-    """<div>
-
-    <h3>Conference Sponsor</h3> </div>
+    """
+    <div> <h3>Conference Sponsor</h3> </div>
     """
     class Meta:
         name = "conf-sponsor"
@@ -6435,9 +6382,8 @@ class ConfSponsor:
 
 @dataclass
 class CopyrightHolder:
-    """<div>
-
-    <h3>Copyright Holder</h3> </div>
+    """
+    <div> <h3>Copyright Holder</h3> </div>
     """
     class Meta:
         name = "copyright-holder"
@@ -6507,9 +6453,8 @@ class CopyrightHolder:
 
 @dataclass
 class FundingSource:
-    """<div>
-
-    <h3>Funding Source</h3> </div>
+    """
+    <div> <h3>Funding Source</h3> </div>
     """
     class Meta:
         name = "funding-source"
@@ -6738,9 +6683,8 @@ class FundingSource:
 
 @dataclass
 class OnBehalfOf:
-    """<div>
-
-    <h3>On Behalf of</h3> </div>
+    """
+    <div> <h3>On Behalf of</h3> </div>
     """
     class Meta:
         name = "on-behalf-of"
@@ -6867,9 +6811,8 @@ class OnBehalfOf:
 
 @dataclass
 class Preformat:
-    """<div>
-
-    <h3>Preformatted Text</h3> </div>
+    """
+    <div> <h3>Preformatted Text</h3> </div>
     """
     class Meta:
         name = "preformat"
@@ -7051,9 +6994,8 @@ class Preformat:
 
 @dataclass
 class PublisherLoc:
-    """<div>
-
-    <h3>Publisher's Location</h3> </div>
+    """
+    <div> <h3>Publisher's Location</h3> </div>
     """
     class Meta:
         name = "publisher-loc"
@@ -7148,9 +7090,8 @@ class PublisherLoc:
 
 @dataclass
 class PublisherName:
-    """<div>
-
-    <h3>Publisher's Name</h3> </div>
+    """
+    <div> <h3>Publisher's Name</h3> </div>
     """
     class Meta:
         name = "publisher-name"
@@ -7205,9 +7146,8 @@ class PublisherName:
 
 @dataclass
 class Speech:
-    """<div>
-
-    <h3>Speech</h3> </div>
+    """
+    <div> <h3>Speech</h3> </div>
     """
     class Meta:
         name = "speech"
@@ -7271,9 +7211,8 @@ class Speech:
 
 @dataclass
 class StdOrganization:
-    """<div>
-
-    <h3>Standards Organization</h3> </div>
+    """
+    <div> <h3>Standards Organization</h3> </div>
     """
     class Meta:
         name = "std-organization"
@@ -7351,7 +7290,6 @@ class SubjGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6927,
         }
     )
     compound_subject: List[CompoundSubject] = field(
@@ -7359,7 +7297,6 @@ class SubjGroup:
         metadata={
             "name": "compound-subject",
             "type": "Element",
-            "sequence": 6927,
         }
     )
     subj_group: List["SubjGroup"] = field(
@@ -7427,9 +7364,8 @@ class SubjGroup:
 
 @dataclass
 class TableWrapFoot:
-    """<div>
-
-    <h3>Table Wrap Footer</h3> </div>
+    """
+    <div> <h3>Table Wrap Footer</h3> </div>
     """
     class Meta:
         name = "table-wrap-foot"
@@ -7445,7 +7381,6 @@ class TableWrapFoot:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7025,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -7453,28 +7388,24 @@ class TableWrapFoot:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 7025,
         }
     )
     fn: List[Fn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7025,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7025,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7025,
         }
     )
     id: Optional[str] = field(
@@ -7494,9 +7425,8 @@ class TableWrapFoot:
 
 @dataclass
 class VerseGroup:
-    """<div>
-
-    <h3>Verse Form For Poetry</h3> </div>
+    """
+    <div> <h3>Verse Form For Poetry</h3> </div>
     """
     class Meta:
         name = "verse-group"
@@ -7525,7 +7455,6 @@ class VerseGroup:
         metadata={
             "name": "verse-line",
             "type": "Element",
-            "sequence": 7166,
         }
     )
     verse_group: List["VerseGroup"] = field(
@@ -7533,21 +7462,18 @@ class VerseGroup:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 7166,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7166,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7166,
         }
     )
     content_type: Optional[str] = field(
@@ -7608,9 +7534,8 @@ class VerseGroup:
 
 @dataclass
 class AffAlternatives:
-    """<div>
-
-    <h3>Affiliation Alternatives</h3> </div>
+    """
+    <div> <h3>Affiliation Alternatives</h3> </div>
     """
     class Meta:
         name = "aff-alternatives"
@@ -7639,9 +7564,8 @@ class AffAlternatives:
 
 @dataclass
 class NestedKwd:
-    """<div>
-
-    <h3>Nested Keyword</h3> </div>
+    """
+    <div> <h3>Nested Keyword</h3> </div>
     """
     class Meta:
         name = "nested-kwd"
@@ -7651,7 +7575,6 @@ class NestedKwd:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6450,
         }
     )
     compound_kwd: List[CompoundKwd] = field(
@@ -7659,7 +7582,6 @@ class NestedKwd:
         metadata={
             "name": "compound-kwd",
             "type": "Element",
-            "sequence": 6450,
         }
     )
     nested_kwd: List["NestedKwd"] = field(
@@ -7727,9 +7649,8 @@ class NestedKwd:
 
 @dataclass
 class Std:
-    """<div>
-
-    <h3>Standard, Cited</h3> </div>
+    """
+    <div> <h3>Standard, Cited</h3> </div>
     """
     class Meta:
         name = "std"
@@ -7879,9 +7800,8 @@ class Std:
 
 @dataclass
 class KwdGroup:
-    """<div>
-
-    <h3>Keyword Group</h3> </div>
+    """
+    <div> <h3>Keyword Group</h3> </div>
     """
     class Meta:
         name = "kwd-group"
@@ -7903,7 +7823,6 @@ class KwdGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6330,
         }
     )
     compound_kwd: List[CompoundKwd] = field(
@@ -7911,7 +7830,6 @@ class KwdGroup:
         metadata={
             "name": "compound-kwd",
             "type": "Element",
-            "sequence": 6330,
         }
     )
     nested_kwd: List[NestedKwd] = field(
@@ -7919,7 +7837,6 @@ class KwdGroup:
         metadata={
             "name": "nested-kwd",
             "type": "Element",
-            "sequence": 6330,
         }
     )
     assigning_authority: Optional[str] = field(
@@ -7980,9 +7897,8 @@ class KwdGroup:
 
 @dataclass
 class PersonGroup:
-    """<div>
-
-    <h3>Person Group For a Cited Publication</h3> </div>
+    """
+    <div> <h3>Person Group For a Cited Publication</h3> </div>
     """
     class Meta:
         name = "person-group"
@@ -8083,9 +7999,8 @@ class PersonGroup:
 
 @dataclass
 class ChemStructWrap:
-    """<div>
-
-    <h3>Chemical Structure Wrapper</h3> </div>
+    """
+    <div> <h3>Chemical Structure Wrapper</h3> </div>
     """
     class Meta:
         name = "chem-struct-wrap"
@@ -8114,7 +8029,6 @@ class ChemStructWrap:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -8122,7 +8036,6 @@ class ChemStructWrap:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -8130,7 +8043,6 @@ class ChemStructWrap:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     alt_text: List[AltText] = field(
@@ -8138,7 +8050,6 @@ class ChemStructWrap:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -8146,14 +8057,12 @@ class ChemStructWrap:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -8161,21 +8070,18 @@ class ChemStructWrap:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     chem_struct: List["ChemStruct"] = field(
@@ -8183,35 +8089,30 @@ class ChemStructWrap:
         metadata={
             "name": "chem-struct",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     textual_form: List[TextualForm] = field(
@@ -8219,21 +8120,18 @@ class ChemStructWrap:
         metadata={
             "name": "textual-form",
             "type": "Element",
-            "sequence": 5545,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5545,
         }
     )
     content_type: Optional[str] = field(
@@ -8286,9 +8184,8 @@ class ChemStructWrap:
 
 @dataclass
 class DispFormulaGroup:
-    """<div>
-
-    <h3>Formula, Display Group</h3> </div>
+    """
+    <div> <h3>Formula, Display Group</h3> </div>
     """
     class Meta:
         name = "disp-formula-group"
@@ -8317,7 +8214,6 @@ class DispFormulaGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5842,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -8325,7 +8221,6 @@ class DispFormulaGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -8333,7 +8228,6 @@ class DispFormulaGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     alt_text: List[AltText] = field(
@@ -8341,7 +8235,6 @@ class DispFormulaGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -8349,14 +8242,12 @@ class DispFormulaGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5842,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -8364,14 +8255,12 @@ class DispFormulaGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5842,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -8379,7 +8268,6 @@ class DispFormulaGroup:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     disp_formula_group: List["DispFormulaGroup"] = field(
@@ -8387,7 +8275,6 @@ class DispFormulaGroup:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5842,
         }
     )
     content_type: Optional[str] = field(
@@ -8428,9 +8315,8 @@ class DispFormulaGroup:
 
 @dataclass
 class ElementCitation:
-    """<div>
-
-    <h3>Element Citation</h3> </div>
+    """
+    <div> <h3>Element Citation</h3> </div>
     """
     class Meta:
         name = "element-citation"
@@ -9112,9 +8998,8 @@ class ElementCitation:
 
 @dataclass
 class FigGroup:
-    """<div>
-
-    <h3>Figure Group</h3> </div>
+    """
+    <div> <h3>Figure Group</h3> </div>
     """
     class Meta:
         name = "fig-group"
@@ -9125,28 +9010,24 @@ class FigGroup:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     caption: List[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -9154,7 +9035,6 @@ class FigGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -9162,7 +9042,6 @@ class FigGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     alt_text: List[AltText] = field(
@@ -9170,7 +9049,6 @@ class FigGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -9178,14 +9056,12 @@ class FigGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -9193,21 +9069,18 @@ class FigGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -9215,35 +9088,30 @@ class FigGroup:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6064,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6064,
         }
     )
     content_type: Optional[str] = field(
@@ -9296,9 +9164,8 @@ class FigGroup:
 
 @dataclass
 class MixedCitation:
-    """<div>
-
-    <h3>Mixed Citation</h3> </div>
+    """
+    <div> <h3>Mixed Citation</h3> </div>
     """
     class Meta:
         name = "mixed-citation"
@@ -9771,9 +9638,8 @@ class MixedCitation:
 
 @dataclass
 class NlmCitation:
-    """<div>
-
-    <h3>Nlm Citation Model</h3> </div>
+    """
+    <div> <h3>Nlm Citation Model</h3> </div>
     """
     class Meta:
         name = "nlm-citation"
@@ -9784,14 +9650,12 @@ class NlmCitation:
         metadata={
             "name": "person-group",
             "type": "Element",
-            "sequence": 2628,
         }
     )
     collab: List["Collab"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 2628,
         }
     )
     article_title: List[ArticleTitle] = field(
@@ -9799,7 +9663,6 @@ class NlmCitation:
         metadata={
             "name": "article-title",
             "type": "Element",
-            "sequence": 2628,
         }
     )
     trans_title: List[TransTitle] = field(
@@ -9807,7 +9670,6 @@ class NlmCitation:
         metadata={
             "name": "trans-title",
             "type": "Element",
-            "sequence": 2628,
         }
     )
     source: Optional[Source] = field(
@@ -9904,14 +9766,12 @@ class NlmCitation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 2628,
         }
     )
     supplement: List[Supplement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 2628,
         }
     )
     publisher_loc: Optional[PublisherLoc] = field(
@@ -9932,14 +9792,12 @@ class NlmCitation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 2656,
         }
     )
     lpage: List[Lpage] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 2656,
         }
     )
     page_count: Optional[PageCount] = field(
@@ -10076,9 +9934,8 @@ class NlmCitation:
 
 @dataclass
 class Product:
-    """<div>
-
-    <h3>Product Information</h3> </div>
+    """
+    <div> <h3>Product Information</h3> </div>
     """
     class Meta:
         name = "product"
@@ -10558,9 +10415,8 @@ class Product:
 
 @dataclass
 class Statement:
-    """<div>
-
-    <h3>Statement, Formal</h3> </div>
+    """
+    <div> <h3>Statement, Formal</h3> </div>
     """
     class Meta:
         name = "statement"
@@ -10582,7 +10438,6 @@ class Statement:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6843,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -10590,7 +10445,6 @@ class Statement:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6843,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -10598,35 +10452,30 @@ class Statement:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6843,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6843,
         }
     )
     statement: List["Statement"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6843,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6843,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6843,
         }
     )
     content_type: Optional[str] = field(
@@ -10667,9 +10516,8 @@ class Statement:
 
 @dataclass
 class CitationAlternatives:
-    """<div>
-
-    <h3>Citation Alternatives</h3> </div>
+    """
+    <div> <h3>Citation Alternatives</h3> </div>
     """
     class Meta:
         name = "citation-alternatives"
@@ -10680,7 +10528,6 @@ class CitationAlternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 5577,
         }
     )
     element_citation: List[ElementCitation] = field(
@@ -10688,7 +10535,6 @@ class CitationAlternatives:
         metadata={
             "name": "element-citation",
             "type": "Element",
-            "sequence": 5577,
         }
     )
     mixed_citation: List[MixedCitation] = field(
@@ -10696,7 +10542,6 @@ class CitationAlternatives:
         metadata={
             "name": "mixed-citation",
             "type": "Element",
-            "sequence": 5577,
         }
     )
     nlm_citation: List[NlmCitation] = field(
@@ -10704,7 +10549,6 @@ class CitationAlternatives:
         metadata={
             "name": "nlm-citation",
             "type": "Element",
-            "sequence": 5577,
         }
     )
     id: Optional[str] = field(
@@ -10724,9 +10568,8 @@ class CitationAlternatives:
 
 @dataclass
 class Note:
-    """<div>
-
-    <h3>Note in a Reference List</h3> </div>
+    """
+    <div> <h3>Note in a Reference List</h3> </div>
     """
     class Meta:
         name = "note"
@@ -10742,14 +10585,12 @@ class Note:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6459,
         }
     )
     product: List[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6459,
         }
     )
     content_type: Optional[str] = field(
@@ -10790,9 +10631,8 @@ class Note:
 
 @dataclass
 class Ref:
-    """<div>
-
-    <h3>Reference Item</h3> </div>
+    """
+    <div> <h3>Reference Item</h3> </div>
     """
     class Meta:
         name = "ref"
@@ -10809,7 +10649,6 @@ class Ref:
         metadata={
             "name": "citation-alternatives",
             "type": "Element",
-            "sequence": 6687,
         }
     )
     element_citation: List[ElementCitation] = field(
@@ -10817,7 +10656,6 @@ class Ref:
         metadata={
             "name": "element-citation",
             "type": "Element",
-            "sequence": 6687,
         }
     )
     mixed_citation: List[MixedCitation] = field(
@@ -10825,7 +10663,6 @@ class Ref:
         metadata={
             "name": "mixed-citation",
             "type": "Element",
-            "sequence": 6687,
         }
     )
     nlm_citation: List[NlmCitation] = field(
@@ -10833,14 +10670,12 @@ class Ref:
         metadata={
             "name": "nlm-citation",
             "type": "Element",
-            "sequence": 6687,
         }
     )
     note: List[Note] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6687,
         }
     )
     content_type: Optional[str] = field(
@@ -11860,10 +11695,8 @@ class Thead:
 @dataclass
 class Table:
     """<div>
-
     <h3>Table: Table Element ..............................</h3>
-    </div>
-    """
+    </div>"""
     class Meta:
         name = "table"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -11983,9 +11816,8 @@ class Table:
 
 @dataclass
 class TableWrap:
-    """<div>
-
-    <h3>Table Wrapper</h3> </div>
+    """
+    <div> <h3>Table Wrapper</h3> </div>
     """
     class Meta:
         name = "table-wrap"
@@ -11996,28 +11828,24 @@ class TableWrap:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     caption: List[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -12025,7 +11853,6 @@ class TableWrap:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -12033,7 +11860,6 @@ class TableWrap:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     alt_text: List[AltText] = field(
@@ -12041,7 +11867,6 @@ class TableWrap:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -12049,14 +11874,12 @@ class TableWrap:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -12064,14 +11887,12 @@ class TableWrap:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -12079,21 +11900,18 @@ class TableWrap:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -12101,7 +11919,6 @@ class TableWrap:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     def_list: List["DefList"] = field(
@@ -12109,7 +11926,6 @@ class TableWrap:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     list_value: List[ListType] = field(
@@ -12117,14 +11933,12 @@ class TableWrap:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -12132,14 +11946,12 @@ class TableWrap:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -12147,42 +11959,36 @@ class TableWrap:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     table: List[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     table_wrap_foot: List[TableWrapFoot] = field(
@@ -12190,21 +11996,18 @@ class TableWrap:
         metadata={
             "name": "table-wrap-foot",
             "type": "Element",
-            "sequence": 6981,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6981,
         }
     )
     content_type: Optional[str] = field(
@@ -12257,9 +12060,8 @@ class TableWrap:
 
 @dataclass
 class SupplementaryMaterial:
-    """<div>
-
-    <h3>Supplementary Material</h3> </div>
+    """
+    <div> <h3>Supplementary Material</h3> </div>
     """
     class Meta:
         name = "supplementary-material"
@@ -12270,28 +12072,24 @@ class SupplementaryMaterial:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     caption: List[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -12299,7 +12097,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -12307,7 +12104,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     alt_text: List[AltText] = field(
@@ -12315,7 +12111,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -12323,14 +12118,12 @@ class SupplementaryMaterial:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -12338,14 +12131,12 @@ class SupplementaryMaterial:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -12353,7 +12144,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -12361,7 +12151,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -12369,7 +12158,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -12377,21 +12165,18 @@ class SupplementaryMaterial:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -12399,7 +12184,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -12407,14 +12191,12 @@ class SupplementaryMaterial:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     def_list: List["DefList"] = field(
@@ -12422,7 +12204,6 @@ class SupplementaryMaterial:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     list_value: List[ListType] = field(
@@ -12430,70 +12211,60 @@ class SupplementaryMaterial:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     content_type: Optional[str] = field(
@@ -12609,9 +12380,8 @@ class SupplementaryMaterial:
 
 @dataclass
 class TableWrapGroup:
-    """<div>
-
-    <h3>Table Wrapper Group</h3> </div>
+    """
+    <div> <h3>Table Wrapper Group</h3> </div>
     """
     class Meta:
         name = "table-wrap-group"
@@ -12622,28 +12392,24 @@ class TableWrapGroup:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     caption: List[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -12651,7 +12417,6 @@ class TableWrapGroup:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -12659,7 +12424,6 @@ class TableWrapGroup:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     alt_text: List[AltText] = field(
@@ -12667,7 +12431,6 @@ class TableWrapGroup:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -12675,14 +12438,12 @@ class TableWrapGroup:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -12690,14 +12451,12 @@ class TableWrapGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -12705,14 +12464,12 @@ class TableWrapGroup:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 7036,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7036,
         }
     )
     content_type: Optional[str] = field(
@@ -12765,9 +12522,8 @@ class TableWrapGroup:
 
 @dataclass
 class QuestionPreamble:
-    """<div>
-
-    <h3>Question Preamble</h3> </div>
+    """
+    <div> <h3>Question Preamble</h3> </div>
     """
     class Meta:
         name = "question-preamble"
@@ -12809,21 +12565,18 @@ class QuestionPreamble:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -12831,14 +12584,12 @@ class QuestionPreamble:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -12846,7 +12597,6 @@ class QuestionPreamble:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -12854,7 +12604,6 @@ class QuestionPreamble:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -12862,28 +12611,24 @@ class QuestionPreamble:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -12891,35 +12636,30 @@ class QuestionPreamble:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -12927,7 +12667,6 @@ class QuestionPreamble:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     question_wrap_group: List["QuestionWrapGroup"] = field(
@@ -12935,7 +12674,6 @@ class QuestionPreamble:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -12943,7 +12681,6 @@ class QuestionPreamble:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -12951,7 +12688,6 @@ class QuestionPreamble:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -12959,7 +12695,6 @@ class QuestionPreamble:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -12967,7 +12702,6 @@ class QuestionPreamble:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -12975,7 +12709,6 @@ class QuestionPreamble:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     def_list: List["DefList"] = field(
@@ -12983,7 +12716,6 @@ class QuestionPreamble:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     list_value: List[ListType] = field(
@@ -12991,7 +12723,6 @@ class QuestionPreamble:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     tex_math: List[TexMath] = field(
@@ -12999,7 +12730,6 @@ class QuestionPreamble:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     math: List[Math] = field(
@@ -13007,14 +12737,12 @@ class QuestionPreamble:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6637,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -13022,7 +12750,6 @@ class QuestionPreamble:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -13030,7 +12757,6 @@ class QuestionPreamble:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -13038,21 +12764,18 @@ class QuestionPreamble:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -13060,14 +12783,12 @@ class QuestionPreamble:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6637,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6637,
         }
     )
     content_type: Optional[str] = field(
@@ -13108,9 +12829,8 @@ class QuestionPreamble:
 
 @dataclass
 class QuestionWrapGroup:
-    """<div>
-
-    <h3>Question Wrap Group</h3> </div>
+    """
+    <div> <h3>Question Wrap Group</h3> </div>
     """
     class Meta:
         name = "question-wrap-group"
@@ -13206,9 +12926,8 @@ class QuestionWrapGroup:
 
 @dataclass
 class Glossary:
-    """<div>
-
-    <h3>Glossary Elements</h3> </div>
+    """
+    <div> <h3>Glossary Elements</h3> </div>
     """
     class Meta:
         name = "glossary"
@@ -13237,21 +12956,18 @@ class Glossary:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -13259,14 +12975,12 @@ class Glossary:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -13274,7 +12988,6 @@ class Glossary:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -13282,7 +12995,6 @@ class Glossary:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -13290,28 +13002,24 @@ class Glossary:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -13319,35 +13027,30 @@ class Glossary:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -13355,7 +13058,6 @@ class Glossary:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -13363,7 +13065,6 @@ class Glossary:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -13371,7 +13072,6 @@ class Glossary:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -13379,7 +13079,6 @@ class Glossary:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -13387,7 +13086,6 @@ class Glossary:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -13395,7 +13093,6 @@ class Glossary:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -13403,7 +13100,6 @@ class Glossary:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     def_list: List["DefList"] = field(
@@ -13411,7 +13107,6 @@ class Glossary:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     list_value: List[ListType] = field(
@@ -13419,7 +13114,6 @@ class Glossary:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     tex_math: List[TexMath] = field(
@@ -13427,7 +13121,6 @@ class Glossary:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     math: List[Math] = field(
@@ -13435,14 +13128,12 @@ class Glossary:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6194,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -13450,7 +13141,6 @@ class Glossary:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -13458,7 +13148,6 @@ class Glossary:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -13466,21 +13155,18 @@ class Glossary:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6194,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -13488,7 +13174,6 @@ class Glossary:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6194,
         }
     )
     glossary: List["Glossary"] = field(
@@ -13535,9 +13220,8 @@ class Glossary:
 
 @dataclass
 class RefList:
-    """<div>
-
-    <h3>Reference List (Bibliographic Reference List)</h3> </div>
+    """
+    <div> <h3>Reference List (Bibliographic Reference List)</h3> </div>
     """
     class Meta:
         name = "ref-list"
@@ -13566,21 +13250,18 @@ class RefList:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -13588,14 +13269,12 @@ class RefList:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -13603,7 +13282,6 @@ class RefList:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -13611,7 +13289,6 @@ class RefList:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -13619,28 +13296,24 @@ class RefList:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -13648,35 +13321,30 @@ class RefList:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -13684,7 +13352,6 @@ class RefList:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -13692,7 +13359,6 @@ class RefList:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -13700,7 +13366,6 @@ class RefList:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -13708,7 +13373,6 @@ class RefList:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -13716,7 +13380,6 @@ class RefList:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -13724,7 +13387,6 @@ class RefList:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -13732,7 +13394,6 @@ class RefList:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     def_list: List["DefList"] = field(
@@ -13740,7 +13401,6 @@ class RefList:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     list_value: List[ListType] = field(
@@ -13748,7 +13408,6 @@ class RefList:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     tex_math: List[TexMath] = field(
@@ -13756,7 +13415,6 @@ class RefList:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     math: List[Math] = field(
@@ -13764,14 +13422,12 @@ class RefList:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6696,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -13779,7 +13435,6 @@ class RefList:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -13787,7 +13442,6 @@ class RefList:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -13795,21 +13449,18 @@ class RefList:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6696,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -13817,7 +13468,6 @@ class RefList:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6696,
         }
     )
     ref: List[Ref] = field(
@@ -13871,9 +13521,8 @@ class RefList:
 
 @dataclass
 class Option:
-    """<div>
-
-    <h3>Option Elements</h3> </div>
+    """
+    <div> <h3>Option Elements</h3> </div>
     """
     class Meta:
         name = "option"
@@ -13915,28 +13564,24 @@ class Option:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -13944,14 +13589,12 @@ class Option:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -13959,7 +13602,6 @@ class Option:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -13967,7 +13609,6 @@ class Option:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -13975,21 +13616,18 @@ class Option:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -13997,35 +13635,30 @@ class Option:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -14033,7 +13666,6 @@ class Option:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -14041,7 +13673,6 @@ class Option:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -14049,7 +13680,6 @@ class Option:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14057,7 +13687,6 @@ class Option:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14065,7 +13694,6 @@ class Option:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -14073,7 +13701,6 @@ class Option:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14081,7 +13708,6 @@ class Option:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     def_list: List["DefList"] = field(
@@ -14089,7 +13715,6 @@ class Option:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     list_value: List[ListType] = field(
@@ -14097,7 +13722,6 @@ class Option:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     tex_math: List[TexMath] = field(
@@ -14105,7 +13729,6 @@ class Option:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     math: List[Math] = field(
@@ -14113,14 +13736,12 @@ class Option:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6490,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -14128,7 +13749,6 @@ class Option:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -14136,7 +13756,6 @@ class Option:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14144,21 +13763,18 @@ class Option:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6490,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14166,7 +13782,6 @@ class Option:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6490,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -14174,14 +13789,12 @@ class Option:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 6480,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6480,
         }
     )
     ref_list: List[RefList] = field(
@@ -14189,7 +13802,6 @@ class Option:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 6480,
         }
     )
     explanation: List["Explanation"] = field(
@@ -14242,9 +13854,8 @@ class Option:
 
 @dataclass
 class Question:
-    """<div>
-
-    <h3>Question</h3> </div>
+    """
+    <div> <h3>Question</h3> </div>
     """
     class Meta:
         name = "question"
@@ -14293,28 +13904,24 @@ class Question:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -14322,14 +13929,12 @@ class Question:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -14337,7 +13942,6 @@ class Question:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -14345,7 +13949,6 @@ class Question:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -14353,28 +13956,24 @@ class Question:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -14382,35 +13981,30 @@ class Question:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     question: List["Question"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -14418,7 +14012,6 @@ class Question:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -14426,7 +14019,6 @@ class Question:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -14434,7 +14026,6 @@ class Question:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14442,7 +14033,6 @@ class Question:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14450,7 +14040,6 @@ class Question:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -14458,7 +14047,6 @@ class Question:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14466,7 +14054,6 @@ class Question:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     def_list: List["DefList"] = field(
@@ -14474,7 +14061,6 @@ class Question:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     list_value: List[ListType] = field(
@@ -14482,7 +14068,6 @@ class Question:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     tex_math: List[TexMath] = field(
@@ -14490,7 +14075,6 @@ class Question:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     math: List[Math] = field(
@@ -14498,14 +14082,12 @@ class Question:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6624,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -14513,7 +14095,6 @@ class Question:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -14521,7 +14102,6 @@ class Question:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14529,21 +14109,18 @@ class Question:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6624,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14551,14 +14128,12 @@ class Question:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6624,
         }
     )
     option: List[Option] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6613,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -14566,14 +14141,12 @@ class Question:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 6613,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6613,
         }
     )
     ref_list: List[RefList] = field(
@@ -14581,7 +14154,6 @@ class Question:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 6613,
         }
     )
     content_type: Optional[str] = field(
@@ -14629,9 +14201,8 @@ class Question:
 
 @dataclass
 class DispQuote:
-    """<div>
-
-    <h3>Quote, Displayed</h3> </div>
+    """
+    <div> <h3>Quote, Displayed</h3> </div>
     """
     class Meta:
         name = "disp-quote"
@@ -14653,21 +14224,18 @@ class DispQuote:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -14675,14 +14243,12 @@ class DispQuote:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -14690,7 +14256,6 @@ class DispQuote:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -14698,7 +14263,6 @@ class DispQuote:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -14706,28 +14270,24 @@ class DispQuote:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     fig: List["Fig"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -14735,35 +14295,30 @@ class DispQuote:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -14771,7 +14326,6 @@ class DispQuote:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -14779,7 +14333,6 @@ class DispQuote:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -14787,7 +14340,6 @@ class DispQuote:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -14795,7 +14347,6 @@ class DispQuote:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -14803,7 +14354,6 @@ class DispQuote:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -14811,7 +14361,6 @@ class DispQuote:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -14819,7 +14368,6 @@ class DispQuote:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     def_list: List["DefList"] = field(
@@ -14827,7 +14375,6 @@ class DispQuote:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     list_value: List[ListType] = field(
@@ -14835,7 +14382,6 @@ class DispQuote:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     tex_math: List[TexMath] = field(
@@ -14843,7 +14389,6 @@ class DispQuote:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     math: List[Math] = field(
@@ -14851,14 +14396,12 @@ class DispQuote:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5860,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -14866,7 +14409,6 @@ class DispQuote:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -14874,7 +14416,6 @@ class DispQuote:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     disp_quote: List["DispQuote"] = field(
@@ -14882,21 +14423,18 @@ class DispQuote:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -14904,21 +14442,18 @@ class DispQuote:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 5860,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5860,
         }
     )
     content_type: Optional[str] = field(
@@ -14959,9 +14494,8 @@ class DispQuote:
 
 @dataclass
 class Fig:
-    """<div>
-
-    <h3>Figure</h3> </div>
+    """
+    <div> <h3>Figure</h3> </div>
     """
     class Meta:
         name = "fig"
@@ -14972,28 +14506,24 @@ class Fig:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     label: List["Label"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     caption: List[Caption] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -15001,7 +14531,6 @@ class Fig:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -15009,7 +14538,6 @@ class Fig:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     alt_text: List[AltText] = field(
@@ -15017,7 +14545,6 @@ class Fig:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -15025,14 +14552,12 @@ class Fig:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -15040,14 +14565,12 @@ class Fig:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -15055,7 +14578,6 @@ class Fig:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -15063,7 +14585,6 @@ class Fig:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15071,7 +14592,6 @@ class Fig:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -15079,21 +14599,18 @@ class Fig:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -15101,7 +14618,6 @@ class Fig:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15109,14 +14625,12 @@ class Fig:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     def_list: List["DefList"] = field(
@@ -15124,7 +14638,6 @@ class Fig:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     list_value: List[ListType] = field(
@@ -15132,70 +14645,60 @@ class Fig:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6021,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6021,
         }
     )
     fig_type: Optional[str] = field(
@@ -15248,9 +14751,8 @@ class Fig:
 
 @dataclass
 class BoxedText:
-    """<div>
-
-    <h3>Boxed Text</h3> </div>
+    """
+    <div> <h3>Boxed Text</h3> </div>
     """
     class Meta:
         name = "boxed-text"
@@ -15286,21 +14788,18 @@ class BoxedText:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -15308,14 +14807,12 @@ class BoxedText:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     block_alternatives: List["BlockAlternatives"] = field(
@@ -15323,7 +14820,6 @@ class BoxedText:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     boxed_text: List["BoxedText"] = field(
@@ -15331,7 +14827,6 @@ class BoxedText:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15339,28 +14834,24 @@ class BoxedText:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15368,35 +14859,30 @@ class BoxedText:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -15404,7 +14890,6 @@ class BoxedText:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -15412,7 +14897,6 @@ class BoxedText:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -15420,7 +14904,6 @@ class BoxedText:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15428,7 +14911,6 @@ class BoxedText:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15436,7 +14918,6 @@ class BoxedText:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -15444,7 +14925,6 @@ class BoxedText:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -15452,7 +14932,6 @@ class BoxedText:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     def_list: List["DefList"] = field(
@@ -15460,7 +14939,6 @@ class BoxedText:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     list_value: List[ListType] = field(
@@ -15468,7 +14946,6 @@ class BoxedText:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     tex_math: List[TexMath] = field(
@@ -15476,7 +14953,6 @@ class BoxedText:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     math: List[Math] = field(
@@ -15484,14 +14960,12 @@ class BoxedText:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5478,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -15499,7 +14973,6 @@ class BoxedText:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -15507,7 +14980,6 @@ class BoxedText:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -15515,21 +14987,18 @@ class BoxedText:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -15537,14 +15006,12 @@ class BoxedText:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -15552,14 +15019,12 @@ class BoxedText:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     ref_list: List[RefList] = field(
@@ -15567,21 +15032,18 @@ class BoxedText:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 5478,
         }
     )
     attrib: List[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     permissions: List["Permissions"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5478,
         }
     )
     content_type: Optional[str] = field(
@@ -15634,9 +15096,8 @@ class BoxedText:
 
 @dataclass
 class BlockAlternatives:
-    """<div>
-
-    <h3>Block-Level Alternatives For Processing</h3> </div>
+    """
+    <div> <h3>Block-Level Alternatives For Processing</h3> </div>
     """
     class Meta:
         name = "block-alternatives"
@@ -15647,7 +15108,6 @@ class BlockAlternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 5458,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -15655,14 +15115,12 @@ class BlockAlternatives:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5458,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5458,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15670,7 +15128,6 @@ class BlockAlternatives:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5458,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15678,7 +15135,6 @@ class BlockAlternatives:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5458,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15686,7 +15142,6 @@ class BlockAlternatives:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5458,
         }
     )
     id: Optional[str] = field(
@@ -15706,9 +15161,8 @@ class BlockAlternatives:
 
 @dataclass
 class Bio:
-    """<div>
-
-    <h3>Biography</h3> </div>
+    """
+    <div> <h3>Biography</h3> </div>
     """
     class Meta:
         name = "bio"
@@ -15737,21 +15191,18 @@ class Bio:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -15759,14 +15210,12 @@ class Bio:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -15774,7 +15223,6 @@ class Bio:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -15782,7 +15230,6 @@ class Bio:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -15790,28 +15237,24 @@ class Bio:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -15819,35 +15262,30 @@ class Bio:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -15855,7 +15293,6 @@ class Bio:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -15863,7 +15300,6 @@ class Bio:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -15871,7 +15307,6 @@ class Bio:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -15879,7 +15314,6 @@ class Bio:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -15887,7 +15321,6 @@ class Bio:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -15895,7 +15328,6 @@ class Bio:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -15903,7 +15335,6 @@ class Bio:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     def_list: List["DefList"] = field(
@@ -15911,7 +15342,6 @@ class Bio:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     list_value: List[ListType] = field(
@@ -15919,7 +15349,6 @@ class Bio:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     tex_math: List[TexMath] = field(
@@ -15927,7 +15356,6 @@ class Bio:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     math: List[Math] = field(
@@ -15935,14 +15363,12 @@ class Bio:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5447,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -15950,7 +15376,6 @@ class Bio:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -15958,7 +15383,6 @@ class Bio:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -15966,21 +15390,18 @@ class Bio:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -15988,14 +15409,12 @@ class Bio:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -16003,14 +15422,12 @@ class Bio:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5447,
         }
     )
     ref_list: List[RefList] = field(
@@ -16018,7 +15435,6 @@ class Bio:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 5447,
         }
     )
     content_type: Optional[str] = field(
@@ -16117,9 +15533,8 @@ class Bio:
 
 @dataclass
 class Collab:
-    """<div>
-
-    <h3>Collaborative (Group) Author</h3> </div>
+    """
+    <div> <h3>Collaborative (Group) Author</h3> </div>
     """
     class Meta:
         name = "collab"
@@ -16421,9 +15836,8 @@ class Collab:
 
 @dataclass
 class Contrib:
-    """<div>
-
-    <h3>Contributor</h3> </div>
+    """
+    <div> <h3>Contributor</h3> </div>
     """
     class Meta:
         name = "contrib"
@@ -16434,21 +15848,18 @@ class Contrib:
         metadata={
             "name": "contrib-id",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     anonymous: List[Anonymous] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     collab: List[Collab] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     collab_alternatives: List[CollabAlternatives] = field(
@@ -16456,14 +15867,12 @@ class Contrib:
         metadata={
             "name": "collab-alternatives",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     name: List[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     name_alternatives: List[NameAlternatives] = field(
@@ -16471,7 +15880,6 @@ class Contrib:
         metadata={
             "name": "name-alternatives",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     string_name: List[StringName] = field(
@@ -16479,28 +15887,24 @@ class Contrib:
         metadata={
             "name": "string-name",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     degrees: List[Degrees] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -16508,7 +15912,6 @@ class Contrib:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     author_comment: List[AuthorComment] = field(
@@ -16516,21 +15919,18 @@ class Contrib:
         metadata={
             "name": "author-comment",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     bio: List[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -16538,7 +15938,6 @@ class Contrib:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     on_behalf_of: List[OnBehalfOf] = field(
@@ -16546,28 +15945,24 @@ class Contrib:
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
-            "sequence": 5687,
         }
     )
     role: List[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5687,
         }
     )
     contrib_type: Optional[str] = field(
@@ -16678,9 +16073,8 @@ class Contrib:
 
 @dataclass
 class ContribGroup:
-    """<div>
-
-    <h3>Contributor Group</h3> </div>
+    """
+    <div> <h3>Contributor Group</h3> </div>
     """
     class Meta:
         name = "contrib-group"
@@ -16690,21 +16084,18 @@ class ContribGroup:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -16712,7 +16103,6 @@ class ContribGroup:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequence": 5711,
         }
     )
     author_comment: List[AuthorComment] = field(
@@ -16720,21 +16110,18 @@ class ContribGroup:
         metadata={
             "name": "author-comment",
             "type": "Element",
-            "sequence": 5711,
         }
     )
     bio: List[Bio] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -16742,7 +16129,6 @@ class ContribGroup:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 5711,
         }
     )
     on_behalf_of: List[OnBehalfOf] = field(
@@ -16750,28 +16136,24 @@ class ContribGroup:
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
-            "sequence": 5711,
         }
     )
     role: List[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     xref: List[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5711,
         }
     )
     content_type: Optional[str] = field(
@@ -16805,9 +16187,8 @@ class ContribGroup:
 
 @dataclass
 class SecMeta:
-    """<div>
-
-    <h3>Section Metadata</h3> </div>
+    """
+    <div> <h3>Section Metadata</h3> </div>
     """
     class Meta:
         name = "sec-meta"
@@ -16818,7 +16199,6 @@ class SecMeta:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 6758,
         }
     )
     contrib_group: List[ContribGroup] = field(
@@ -16826,14 +16206,12 @@ class SecMeta:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequence": 6758,
         }
     )
     abstract: List["Abstract"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6758,
         }
     )
     kwd_group: List[KwdGroup] = field(
@@ -16841,7 +16219,6 @@ class SecMeta:
         metadata={
             "name": "kwd-group",
             "type": "Element",
-            "sequence": 6758,
         }
     )
     subj_group: List[SubjGroup] = field(
@@ -16849,7 +16226,6 @@ class SecMeta:
         metadata={
             "name": "subj-group",
             "type": "Element",
-            "sequence": 6758,
         }
     )
     permissions: Optional["Permissions"] = field(
@@ -16875,9 +16251,8 @@ class SecMeta:
 
 @dataclass
 class Sec:
-    """<div>
-
-    <h3>Section</h3> </div>
+    """
+    <div> <h3>Section</h3> </div>
     """
     class Meta:
         name = "sec"
@@ -16908,21 +16283,18 @@ class Sec:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -16930,14 +16302,12 @@ class Sec:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -16945,7 +16315,6 @@ class Sec:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -16953,7 +16322,6 @@ class Sec:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -16961,28 +16329,24 @@ class Sec:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     explanation: List["Explanation"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -16990,35 +16354,30 @@ class Sec:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -17026,7 +16385,6 @@ class Sec:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -17034,7 +16392,6 @@ class Sec:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -17042,7 +16399,6 @@ class Sec:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -17050,7 +16406,6 @@ class Sec:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -17058,7 +16413,6 @@ class Sec:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -17066,7 +16420,6 @@ class Sec:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -17074,7 +16427,6 @@ class Sec:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     def_list: List["DefList"] = field(
@@ -17082,7 +16434,6 @@ class Sec:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     list_value: List[ListType] = field(
@@ -17090,7 +16441,6 @@ class Sec:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     tex_math: List[TexMath] = field(
@@ -17098,7 +16448,6 @@ class Sec:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     math: List[Math] = field(
@@ -17106,14 +16455,12 @@ class Sec:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5193,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -17121,7 +16468,6 @@ class Sec:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -17129,7 +16475,6 @@ class Sec:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -17137,21 +16482,18 @@ class Sec:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -17159,14 +16501,12 @@ class Sec:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     sec: List["Sec"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -17174,14 +16514,12 @@ class Sec:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5193,
         }
     )
     ref_list: List[RefList] = field(
@@ -17189,7 +16527,6 @@ class Sec:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 5193,
         }
     )
     id: Optional[str] = field(
@@ -17230,9 +16567,8 @@ class Sec:
 
 @dataclass
 class Explanation:
-    """<div>
-
-    <h3>Explanation</h3> </div>
+    """
+    <div> <h3>Explanation</h3> </div>
     """
     class Meta:
         name = "explanation"
@@ -17274,28 +16610,24 @@ class Explanation:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     answer_set: List["AnswerSet"] = field(
@@ -17303,14 +16635,12 @@ class Explanation:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -17318,7 +16648,6 @@ class Explanation:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -17326,7 +16655,6 @@ class Explanation:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -17334,21 +16662,18 @@ class Explanation:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -17356,35 +16681,30 @@ class Explanation:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     media: List["Media"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -17392,7 +16712,6 @@ class Explanation:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -17400,7 +16719,6 @@ class Explanation:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -17408,7 +16726,6 @@ class Explanation:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -17416,7 +16733,6 @@ class Explanation:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -17424,7 +16740,6 @@ class Explanation:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     disp_formula: List["DispFormula"] = field(
@@ -17432,7 +16747,6 @@ class Explanation:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -17440,7 +16754,6 @@ class Explanation:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     def_list: List["DefList"] = field(
@@ -17448,7 +16761,6 @@ class Explanation:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     list_value: List[ListType] = field(
@@ -17456,7 +16768,6 @@ class Explanation:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     tex_math: List[TexMath] = field(
@@ -17464,7 +16775,6 @@ class Explanation:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     math: List[Math] = field(
@@ -17472,14 +16782,12 @@ class Explanation:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 6001,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -17487,7 +16795,6 @@ class Explanation:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -17495,7 +16802,6 @@ class Explanation:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -17503,21 +16809,18 @@ class Explanation:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6001,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -17525,7 +16828,6 @@ class Explanation:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 6001,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -17533,14 +16835,12 @@ class Explanation:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 5991,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5991,
         }
     )
     ref_list: List[RefList] = field(
@@ -17548,7 +16848,6 @@ class Explanation:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 5991,
         }
     )
     content_type: Optional[str] = field(
@@ -17598,9 +16897,8 @@ class Explanation:
 
 @dataclass
 class AnswerSet:
-    """<div>
-
-    <h3>Answer Set</h3> </div>
+    """
+    <div> <h3>Answer Set</h3> </div>
     """
     class Meta:
         name = "answer-set"
@@ -17642,21 +16940,18 @@ class AnswerSet:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5177,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5177,
         }
     )
     explanation: List[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5177,
         }
     )
     content_type: Optional[str] = field(
@@ -17697,9 +16992,8 @@ class AnswerSet:
 
 @dataclass
 class LicenseP:
-    """<div>
-
-    <h3>License Paragraph</h3> </div>
+    """
+    <div> <h3>License Paragraph</h3> </div>
     """
     class Meta:
         name = "license-p"
@@ -18039,9 +17333,8 @@ class LicenseP:
 
 @dataclass
 class License:
-    """<div>
-
-    <h3>License Information</h3> </div>
+    """
+    <div> <h3>License Information</h3> </div>
     """
     class Meta:
         name = "license"
@@ -18149,9 +17442,8 @@ class License:
 
 @dataclass
 class Permissions:
-    """<div>
-
-    <h3>Permissions</h3> </div>
+    """
+    <div> <h3>Permissions</h3> </div>
     """
     class Meta:
         name = "permissions"
@@ -18183,14 +17475,12 @@ class Permissions:
         metadata={
             "type": "Element",
             "namespace": "http://www.niso.org/schemas/ali/1.0/",
-            "sequence": 6504,
         }
     )
     license: List[License] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6504,
         }
     )
     id: Optional[str] = field(
@@ -18210,9 +17500,8 @@ class Permissions:
 
 @dataclass
 class Media:
-    """<div>
-
-    <h3>Media Object</h3> </div>
+    """
+    <div> <h3>Media Object</h3> </div>
     """
     class Meta:
         name = "media"
@@ -18422,9 +17711,8 @@ class Media:
 
 @dataclass
 class DispFormula:
-    """<div>
-
-    <h3>Formula, Display</h3> </div>
+    """
+    <div> <h3>Formula, Display</h3> </div>
     """
     class Meta:
         name = "disp-formula"
@@ -18639,9 +17927,8 @@ class DispFormula:
 
 @dataclass
 class See:
-    """<div>
-
-    <h3>See</h3> </div>
+    """
+    <div> <h3>See</h3> </div>
     """
     class Meta:
         name = "see"
@@ -18879,9 +18166,8 @@ class See:
 
 @dataclass
 class SeeAlso:
-    """<div>
-
-    <h3>See-Also Term</h3> </div>
+    """
+    <div> <h3>See-Also Term</h3> </div>
     """
     class Meta:
         name = "see-also"
@@ -19146,9 +18432,8 @@ class SeeAlso:
 
 @dataclass
 class Term:
-    """<div>
-
-    <h3>Definition List: Term</h3> </div>
+    """
+    <div> <h3>Definition List: Term</h3> </div>
     """
     class Meta:
         name = "term"
@@ -19420,9 +18705,8 @@ class Term:
 
 @dataclass
 class DefItem:
-    """<div>
-
-    <h3>Definition List: Definition Item</h3> </div>
+    """
+    <div> <h3>Definition List: Definition Item</h3> </div>
     """
     class Meta:
         name = "def-item"
@@ -19473,9 +18757,8 @@ class DefItem:
 
 @dataclass
 class IndexTerm:
-    """<div>
-
-    <h3>Index Term</h3> </div>
+    """
+    <div> <h3>Index Term</h3> </div>
     """
     class Meta:
         name = "index-term"
@@ -19499,7 +18782,6 @@ class IndexTerm:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6226,
         }
     )
     see_also: List[SeeAlso] = field(
@@ -19507,7 +18789,6 @@ class IndexTerm:
         metadata={
             "name": "see-also",
             "type": "Element",
-            "sequence": 6226,
         }
     )
     content_type: Optional[str] = field(
@@ -19583,9 +18864,8 @@ class IndexTerm:
 
 @dataclass
 class Subtitle:
-    """<div>
-
-    <h3>Article Subtitle</h3> </div>
+    """
+    <div> <h3>Article Subtitle</h3> </div>
     """
     class Meta:
         name = "subtitle"
@@ -19792,9 +19072,8 @@ class Subtitle:
 
 @dataclass
 class Answer:
-    """<div>
-
-    <h3>Answer Elements</h3> </div>
+    """
+    <div> <h3>Answer Elements</h3> </div>
     """
     class Meta:
         name = "answer"
@@ -19836,28 +19115,24 @@ class Answer:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     address: List["Address"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     answer: List["Answer"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     answer_set: List[AnswerSet] = field(
@@ -19865,14 +19140,12 @@ class Answer:
         metadata={
             "name": "answer-set",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     array: List["Array"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     block_alternatives: List[BlockAlternatives] = field(
@@ -19880,7 +19153,6 @@ class Answer:
         metadata={
             "name": "block-alternatives",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     boxed_text: List[BoxedText] = field(
@@ -19888,7 +19160,6 @@ class Answer:
         metadata={
             "name": "boxed-text",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     chem_struct_wrap: List[ChemStructWrap] = field(
@@ -19896,21 +19167,18 @@ class Answer:
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     fig: List[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     fig_group: List[FigGroup] = field(
@@ -19918,35 +19186,30 @@ class Answer:
         metadata={
             "name": "fig-group",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     graphic: List["Graphic"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     question: List[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     question_wrap: List[QuestionWrap] = field(
@@ -19954,7 +19217,6 @@ class Answer:
         metadata={
             "name": "question-wrap",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     question_wrap_group: List[QuestionWrapGroup] = field(
@@ -19962,7 +19224,6 @@ class Answer:
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -19970,7 +19231,6 @@ class Answer:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     table_wrap: List[TableWrap] = field(
@@ -19978,7 +19238,6 @@ class Answer:
         metadata={
             "name": "table-wrap",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     table_wrap_group: List[TableWrapGroup] = field(
@@ -19986,7 +19245,6 @@ class Answer:
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     disp_formula: List[DispFormula] = field(
@@ -19994,7 +19252,6 @@ class Answer:
         metadata={
             "name": "disp-formula",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     disp_formula_group: List[DispFormulaGroup] = field(
@@ -20002,7 +19259,6 @@ class Answer:
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     def_list: List["DefList"] = field(
@@ -20010,7 +19266,6 @@ class Answer:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     list_value: List[ListType] = field(
@@ -20018,7 +19273,6 @@ class Answer:
         metadata={
             "name": "list",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     tex_math: List[TexMath] = field(
@@ -20026,7 +19280,6 @@ class Answer:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     math: List[Math] = field(
@@ -20034,14 +19287,12 @@ class Answer:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5105,
         }
     )
     p: List["P"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     related_article: List["RelatedArticle"] = field(
@@ -20049,7 +19300,6 @@ class Answer:
         metadata={
             "name": "related-article",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     related_object: List["RelatedObject"] = field(
@@ -20057,7 +19307,6 @@ class Answer:
         metadata={
             "name": "related-object",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     disp_quote: List[DispQuote] = field(
@@ -20065,21 +19314,18 @@ class Answer:
         metadata={
             "name": "disp-quote",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     speech: List[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     statement: List[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5105,
         }
     )
     verse_group: List[VerseGroup] = field(
@@ -20087,7 +19333,6 @@ class Answer:
         metadata={
             "name": "verse-group",
             "type": "Element",
-            "sequence": 5105,
         }
     )
     fn_group: List[FnGroup] = field(
@@ -20095,14 +19340,12 @@ class Answer:
         metadata={
             "name": "fn-group",
             "type": "Element",
-            "sequence": 5095,
         }
     )
     glossary: List[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5095,
         }
     )
     ref_list: List[RefList] = field(
@@ -20110,7 +19353,6 @@ class Answer:
         metadata={
             "name": "ref-list",
             "type": "Element",
-            "sequence": 5095,
         }
     )
     explanation: List[Explanation] = field(
@@ -20166,9 +19408,8 @@ class Answer:
 
 @dataclass
 class StyledContent:
-    """<div>
-
-    <h3>Styled Special (Subject) Content</h3> </div>
+    """
+    <div> <h3>Styled Special (Subject) Content</h3> </div>
     """
     class Meta:
         name = "styled-content"
@@ -20508,9 +19749,8 @@ class StyledContent:
 
 @dataclass
 class InlineFormula:
-    """<div>
-
-    <h3>Formula, Inline</h3> </div>
+    """
+    <div> <h3>Formula, Inline</h3> </div>
     """
     class Meta:
         name = "inline-formula"
@@ -20665,9 +19905,8 @@ class InlineFormula:
 
 @dataclass
 class DefHead:
-    """<div>
-
-    <h3>Definition List: Definition Head</h3> </div>
+    """
+    <div> <h3>Definition List: Definition Head</h3> </div>
     """
     class Meta:
         name = "def-head"
@@ -20849,9 +20088,8 @@ class DefHead:
 
 @dataclass
 class TermHead:
-    """<div>
-
-    <h3>Definition List: Term Head</h3> </div>
+    """
+    <div> <h3>Definition List: Term Head</h3> </div>
     """
     class Meta:
         name = "term-head"
@@ -21033,9 +20271,8 @@ class TermHead:
 
 @dataclass
 class Title:
-    """<div>
-
-    <h3>Title</h3> </div>
+    """
+    <div> <h3>Title</h3> </div>
     """
     class Meta:
         name = "title"
@@ -21251,9 +20488,8 @@ class Title:
 
 @dataclass
 class DefList:
-    """<div>
-
-    <h3>Definition List</h3> </div>
+    """
+    <div> <h3>Definition List</h3> </div>
     """
     class Meta:
         name = "def-list"
@@ -21290,7 +20526,6 @@ class DefList:
         metadata={
             "name": "def-item",
             "type": "Element",
-            "sequence": 5803,
         }
     )
     def_list: List["DefList"] = field(
@@ -21298,7 +20533,6 @@ class DefList:
         metadata={
             "name": "def-list",
             "type": "Element",
-            "sequence": 5803,
         }
     )
     continued_from: Optional[str] = field(
@@ -21360,9 +20594,8 @@ class DefList:
 
 @dataclass
 class ChemStruct:
-    """<div>
-
-    <h3>Chemical Structure (Display)</h3> </div>
+    """
+    <div> <h3>Chemical Structure (Display)</h3> </div>
     """
     class Meta:
         name = "chem-struct"
@@ -21607,9 +20840,8 @@ class ChemStruct:
 
 @dataclass
 class AddrLine:
-    """<div>
-
-    <h3>Address Line</h3> </div>
+    """
+    <div> <h3>Address Line</h3> </div>
     """
     class Meta:
         name = "addr-line"
@@ -21799,9 +21031,8 @@ class AddrLine:
 
 @dataclass
 class Address:
-    """<div>
-
-    <h3>Address/Contact Information</h3> </div>
+    """
+    <div> <h3>Address/Contact Information</h3> </div>
     """
     class Meta:
         name = "address"
@@ -21921,9 +21152,8 @@ class Address:
 
 @dataclass
 class NamedContent:
-    """<div>
-
-    <h3>Named Special (Subject) Content</h3> </div>
+    """
+    <div> <h3>Named Special (Subject) Content</h3> </div>
     """
     class Meta:
         name = "named-content"
@@ -22329,9 +21559,8 @@ class NamedContent:
 
 @dataclass
 class InlineMedia:
-    """<div>
-
-    <h3>Inline Media Object</h3> </div>
+    """
+    <div> <h3>Inline Media Object</h3> </div>
     """
     class Meta:
         name = "inline-media"
@@ -22556,9 +21785,8 @@ class InlineMedia:
 
 @dataclass
 class Label:
-    """<div>
-
-    <h3>Label of a Figure, Reference, Etc.</h3> </div>
+    """
+    <div> <h3>Label of a Figure, Reference, Etc.</h3> </div>
     """
     class Meta:
         name = "label"
@@ -22680,9 +21908,8 @@ class Label:
 
 @dataclass
 class Abstract:
-    """<div>
-
-    <h3>Abstract</h3> </div>
+    """
+    <div> <h3>Abstract</h3> </div>
     """
     class Meta:
         name = "abstract"
@@ -22711,14 +21938,12 @@ class Abstract:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 4885,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 4885,
         }
     )
     abstract_type: Optional[str] = field(
@@ -22759,9 +21984,8 @@ class Abstract:
 
 @dataclass
 class Graphic:
-    """<div>
-
-    <h3>Graphic</h3> </div>
+    """
+    <div> <h3>Graphic</h3> </div>
     """
     class Meta:
         name = "graphic"
@@ -22971,9 +22195,8 @@ class Graphic:
 
 @dataclass
 class Array:
-    """<div>
-
-    <h3>Array (Simple Tabular Array)</h3> </div>
+    """
+    <div> <h3>Array (Simple Tabular Array)</h3> </div>
     """
     class Meta:
         name = "array"
@@ -22984,7 +22207,6 @@ class Array:
         metadata={
             "name": "alt-text",
             "type": "Element",
-            "sequence": 5259,
         }
     )
     long_desc: List[LongDesc] = field(
@@ -22992,14 +22214,12 @@ class Array:
         metadata={
             "name": "long-desc",
             "type": "Element",
-            "sequence": 5259,
         }
     )
     email: List[Email] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     ext_link: List["ExtLink"] = field(
@@ -23007,35 +22227,30 @@ class Array:
         metadata={
             "name": "ext-link",
             "type": "Element",
-            "sequence": 5259,
         }
     )
     uri: List[Uri] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     alternatives: List["Alternatives"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     graphic: List[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     tbody: Optional[Tbody] = field(
@@ -23048,14 +22263,12 @@ class Array:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     permissions: List[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5259,
         }
     )
     content_type: Optional[str] = field(
@@ -23102,9 +22315,8 @@ class Array:
 
 @dataclass
 class Alternatives:
-    """<div>
-
-    <h3>Alternatives For Processing</h3> </div>
+    """
+    <div> <h3>Alternatives For Processing</h3> </div>
     """
     class Meta:
         name = "alternatives"
@@ -23115,14 +22327,12 @@ class Alternatives:
         metadata={
             "name": "object-id",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     array: List[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     chem_struct: List[ChemStruct] = field(
@@ -23130,21 +22340,18 @@ class Alternatives:
         metadata={
             "name": "chem-struct",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     code: List[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     graphic: List[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     inline_graphic: List[InlineGraphic] = field(
@@ -23152,7 +22359,6 @@ class Alternatives:
         metadata={
             "name": "inline-graphic",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     inline_media: List[InlineMedia] = field(
@@ -23160,7 +22366,6 @@ class Alternatives:
         metadata={
             "name": "inline-media",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     inline_supplementary_material: List["InlineSupplementaryMaterial"] = field(
@@ -23168,21 +22373,18 @@ class Alternatives:
         metadata={
             "name": "inline-supplementary-material",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     media: List[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     preformat: List[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     private_char: List[PrivateChar] = field(
@@ -23190,7 +22392,6 @@ class Alternatives:
         metadata={
             "name": "private-char",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     supplementary_material: List[SupplementaryMaterial] = field(
@@ -23198,14 +22399,12 @@ class Alternatives:
         metadata={
             "name": "supplementary-material",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     table: List[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 5069,
         }
     )
     textual_form: List[TextualForm] = field(
@@ -23213,7 +22412,6 @@ class Alternatives:
         metadata={
             "name": "textual-form",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     tex_math: List[TexMath] = field(
@@ -23221,7 +22419,6 @@ class Alternatives:
         metadata={
             "name": "tex-math",
             "type": "Element",
-            "sequence": 5069,
         }
     )
     math: List[Math] = field(
@@ -23229,7 +22426,6 @@ class Alternatives:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1998/Math/MathML",
-            "sequence": 5069,
         }
     )
     id: Optional[str] = field(
@@ -23249,9 +22445,8 @@ class Alternatives:
 
 @dataclass
 class Underline:
-    """<div>
-
-    <h3>Underline</h3> </div>
+    """
+    <div> <h3>Underline</h3> </div>
     """
     class Meta:
         name = "underline"
@@ -23453,9 +22648,8 @@ class Underline:
 
 @dataclass
 class Strike:
-    """<div>
-
-    <h3>Strike Through</h3> </div>
+    """
+    <div> <h3>Strike Through</h3> </div>
     """
     class Meta:
         name = "strike"
@@ -23650,9 +22844,8 @@ class Strike:
 
 @dataclass
 class Sc:
-    """<div>
-
-    <h3>Small Caps</h3> </div>
+    """
+    <div> <h3>Small Caps</h3> </div>
     """
     class Meta:
         name = "sc"
@@ -23847,9 +23040,8 @@ class Sc:
 
 @dataclass
 class SansSerif:
-    """<div>
-
-    <h3>Sans Serif</h3> </div>
+    """
+    <div> <h3>Sans Serif</h3> </div>
     """
     class Meta:
         name = "sans-serif"
@@ -24044,9 +23236,8 @@ class SansSerif:
 
 @dataclass
 class Roman:
-    """<div>
-
-    <h3>Roman</h3> </div>
+    """
+    <div> <h3>Roman</h3> </div>
     """
     class Meta:
         name = "roman"
@@ -24241,9 +23432,8 @@ class Roman:
 
 @dataclass
 class Overline:
-    """<div>
-
-    <h3>Overline</h3> </div>
+    """
+    <div> <h3>Overline</h3> </div>
     """
     class Meta:
         name = "overline"
@@ -24438,9 +23628,8 @@ class Overline:
 
 @dataclass
 class Monospace:
-    """<div>
-
-    <h3>Monospace Text (Typewriter Text)</h3> </div>
+    """
+    <div> <h3>Monospace Text (Typewriter Text)</h3> </div>
     """
     class Meta:
         name = "monospace"
@@ -24635,9 +23824,8 @@ class Monospace:
 
 @dataclass
 class RelatedObject:
-    """<div>
-
-    <h3>Related Object Information</h3> </div>
+    """
+    <div> <h3>Related Object Information</h3> </div>
     """
     class Meta:
         name = "related-object"
@@ -25118,9 +24306,8 @@ class RelatedObject:
 
 @dataclass
 class Italic:
-    """<div>
-
-    <h3>Italic</h3> </div>
+    """
+    <div> <h3>Italic</h3> </div>
     """
     class Meta:
         name = "italic"
@@ -25315,9 +24502,8 @@ class Italic:
 
 @dataclass
 class RelatedArticle:
-    """<div>
-
-    <h3>Related Article Information</h3> </div>
+    """
+    <div> <h3>Related Article Information</h3> </div>
     """
     class Meta:
         name = "related-article"
@@ -25772,9 +24958,8 @@ class RelatedArticle:
 
 @dataclass
 class FixedCase:
-    """<div>
-
-    <h3>Fixed Case</h3> </div>
+    """
+    <div> <h3>Fixed Case</h3> </div>
     """
     class Meta:
         name = "fixed-case"
@@ -25970,9 +25155,8 @@ class FixedCase:
 
 @dataclass
 class InlineSupplementaryMaterial:
-    """<div>
-
-    <h3>Inline Supplementary Material</h3> </div>
+    """
+    <div> <h3>Inline Supplementary Material</h3> </div>
     """
     class Meta:
         name = "inline-supplementary-material"
@@ -26169,9 +25353,8 @@ class InlineSupplementaryMaterial:
 
 @dataclass
 class Bold:
-    """<div>
-
-    <h3>Bold</h3> </div>
+    """
+    <div> <h3>Bold</h3> </div>
     """
     class Meta:
         name = "bold"
@@ -26366,9 +25549,8 @@ class Bold:
 
 @dataclass
 class ExtLink:
-    """<div>
-
-    <h3>External Link</h3> </div>
+    """
+    <div> <h3>External Link</h3> </div>
     """
     class Meta:
         name = "ext-link"
@@ -26539,9 +25721,8 @@ class ExtLink:
 
 @dataclass
 class P:
-    """<div>
-
-    <h3>Paragraph</h3> </div>
+    """
+    <div> <h3>Paragraph</h3> </div>
     """
     class Meta:
         name = "p"
@@ -26884,9 +26065,8 @@ class P:
 
 @dataclass
 class Def:
-    """<div>
-
-    <h3>Definition List: Definition</h3> </div>
+    """
+    <div> <h3>Definition List: Definition</h3> </div>
     """
     class Meta:
         name = "def"
@@ -26936,9 +26116,8 @@ class Def:
 
 @dataclass
 class Abbrev:
-    """<div>
-
-    <h3>Abbreviation or Acronym</h3> </div>
+    """
+    <div> <h3>Abbreviation or Acronym</h3> </div>
     """
     class Meta:
         name = "abbrev"

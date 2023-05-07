@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .block_ref import BlockRef
 from .calls_rel_structure import CallsRelStructure
@@ -250,8 +250,8 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref_or_operator_view: List[object] = field(
-        default_factory=list,
+    operator_ref_or_operator_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -266,11 +266,10 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -295,7 +294,6 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
@@ -430,8 +428,8 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: List[object] = field(
-        default_factory=list,
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -446,7 +444,6 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     train_size: Optional[TrainSize] = field(
@@ -464,8 +461,8 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_service_properties_ref_or_flexible_service_properties: List[object] = field(
-        default_factory=list,
+    flexible_service_properties_ref_or_flexible_service_properties: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -480,6 +477,5 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

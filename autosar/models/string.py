@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class String:
     """This represents a String in which white-space shall be normalized before
-    processing. For example: in order to compare two Strings:
+    processing.
 
+    For example: in order to compare two Strings:
     * leading and trailing white-space needs to be removed
     * consecutive white-space (blank, cr, lf, tab) needs to be replaced by one blank.
 

@@ -53,7 +53,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 7,
+            "max_occurs": 5,
         }
     )
     expected_headway: Optional[HeadwayIntervalStructure] = field(

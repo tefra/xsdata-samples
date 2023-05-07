@@ -40,8 +40,8 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    from_operating_day_ref_or_from_date: List[object] = field(
-        default_factory=list,
+    from_operating_day_ref_or_from_date: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -56,11 +56,10 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    to_operating_day_ref_or_to_date: List[object] = field(
-        default_factory=list,
+    to_operating_day_ref_or_to_date: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -75,7 +74,6 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     holiday_type: List[HolidayTypeEnumeration] = field(

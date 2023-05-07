@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -58,8 +58,8 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time_or_wait_times: List[object] = field(
-        default_factory=list,
+    wait_time_or_wait_times: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -74,7 +74,6 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
@@ -108,8 +107,8 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref_or_destination_display_view: List[object] = field(
-        default_factory=list,
+    destination_display_ref_or_destination_display_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -124,7 +123,6 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     vias: Optional[ViasRelStructure] = field(

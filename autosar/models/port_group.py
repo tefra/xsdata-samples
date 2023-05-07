@@ -19,8 +19,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class PortGroup:
-    """Group of ports which share a common functionality.
-
+    """Group of ports which share a common functionality
     @RESTRICT_TO_STANDARD:CP:AP!
     , e.g. need specific network resources. This information shall be available on the VFB level in order to delegate it properly via compositions. When propagated into the ECU extract, this information is used as input for the configuration of Services like the Communication Manager.
     @END_RESTRICT_TO_STANDARD!

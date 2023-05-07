@@ -25,10 +25,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ExecutionTimeConstraint:
     """An ExecutionTimeConstraint is used to specify the execution time of the
-    referenced ExecutableEntity in the referenced component. A minimum and maximum
-    execution time can be defined. Two types of execution time semantics can be
-    used. The desired semantics can be set by the attribute executionTimeType:
+    referenced ExecutableEntity in the referenced component.
 
+    A minimum and maximum execution time can be defined.
+    Two types of execution time semantics can be used. The desired semantics can be set by the attribute executionTimeType:
     * The "net" execution time is the time used to execute the ExecutableEntity without interruption and without external calls.
     * The "gross" execution time is the time used to execute the ExecutableEntity without interruption including external calls to other entities.
     The time to execute the ExecutableEntity including interruptions by other entities and including external calls is commonly called "response time". The TimingExtensions provide the concept of event chains and latency constraints for that purpose. An event chain from the start of the entity to the termination of the entity with according latency constraint represents a response time constraint for that executable entity.

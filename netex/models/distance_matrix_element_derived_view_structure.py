@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .derived_view_structure import DerivedViewStructure
 from .multilingual_string import MultilingualString
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
@@ -13,8 +13,8 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "DistanceMatrixElement_DerivedViewStructure"
 
-    start_stop_point_ref_or_start_tariff_zone_ref: List[object] = field(
-        default_factory=list,
+    start_stop_point_ref_or_start_tariff_zone_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -29,7 +29,6 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     start_name: Optional[MultilingualString] = field(
@@ -40,8 +39,8 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    end_stop_point_ref_or_end_tariff_zone_ref: List[object] = field(
-        default_factory=list,
+    end_stop_point_ref_or_end_tariff_zone_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -56,7 +55,6 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     end_name: Optional[MultilingualString] = field(

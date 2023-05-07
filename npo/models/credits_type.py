@@ -16,7 +16,6 @@ class CreditsType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "sequence": 316,
         }
     )
     name: List[NameType] = field(
@@ -24,6 +23,5 @@ class CreditsType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "sequence": 316,
         }
     )

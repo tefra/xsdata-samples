@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .entrance_refs_rel_structure import EntranceRefsRelStructure
 from .parking_bays_rel_structure import ParkingBaysRelStructure
 from .parking_component_version_structure import ParkingComponentVersionStructure
@@ -30,8 +30,8 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_properties_or_parking_properties: List[object] = field(
-        default_factory=list,
+    parking_properties_or_parking_properties: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -46,7 +46,6 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     bays: Optional[ParkingBaysRelStructure] = field(

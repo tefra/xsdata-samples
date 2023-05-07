@@ -60,8 +60,8 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: List[object] = field(
-        default_factory=list,
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -81,7 +81,6 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     exchangable_from_interval_ref: Optional[TimeIntervalRefStructure] = field(
@@ -92,8 +91,8 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: List[object] = field(
-        default_factory=list,
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -113,7 +112,6 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     exchangable_until_interval_ref: Optional[TimeIntervalRefStructure] = field(

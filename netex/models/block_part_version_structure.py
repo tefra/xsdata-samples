@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_ref import BlockRef
 from .compound_block_ref import CompoundBlockRef
@@ -83,8 +83,8 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    journey_part_couple_ref_or_journey_parts: List[object] = field(
-        default_factory=list,
+    journey_part_couple_ref_or_journey_parts: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -99,7 +99,6 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     order: Optional[int] = field(

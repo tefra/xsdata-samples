@@ -50,8 +50,8 @@ class PropertyOfDayStructure:
             "tokens": True,
         }
     )
-    month_of_year_or_day_of_month_or_day_of_year: List[object] = field(
-        default_factory=list,
+    month_of_year_or_day_of_month_or_day_of_year: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -71,7 +71,6 @@ class PropertyOfDayStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     country_ref: Optional[CountryRefStructure] = field(

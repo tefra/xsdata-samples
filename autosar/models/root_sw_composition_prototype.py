@@ -21,9 +21,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RootSwCompositionPrototype:
-    """The RootSwCompositionPrototype represents the top-level-composition of
-    software components within a given System.
-
+    """The RootSwCompositionPrototype represents the top-level-composition of software components within a given System.
     @RESTRICT_TO_STANDARD:CP:AP!
     According to the use case of the System, this may for example be a more or less complete VFB description, the software of a System Extract or the software of a flat ECU Extract with only atomic SWCs.
     @RESTRICT_TO_STANDARD:FO!

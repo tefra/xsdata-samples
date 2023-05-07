@@ -155,10 +155,10 @@
                 <EquipmentPlace id="bar:foo2-x" version="001">
                   <Name>ZONE</Name>
                   <placeEquipments>
+                    <PlaceLighting id="bar:foo2" version="001"/>
                     <HeadingSign id="bar:foo2" version="001">
                       <PlaceName>SIGN</PlaceName>
                     </HeadingSign>
-                    <PlaceLighting id="bar:foo2" version="001"/>
                   </placeEquipments>
                 </EquipmentPlace>
               </equipmentPlaces>
@@ -337,8 +337,8 @@
             </TravelAgent>
             <OtherOrganisation id="bar:foo5" version="001">
               <validityConditions>
-                <ValidityCondition id="bar:foo" version="001"/>
-                <ValidityTrigger id="bar:foo1" version="001"/>
+                <ValidBetween id="bar:foo" version="001"/>
+                <ValidDuring id="bar:foo" version="001"/>
                 <AvailabilityCondition id="bar:foo3" version="001">
                   <timebands>
                     <Timeband id="bar:foo" version="001">
@@ -351,8 +351,8 @@
                     </OperatingDay>
                   </operatingDays>
                 </AvailabilityCondition>
-                <ValidDuring id="bar:foo" version="001"/>
-                <ValidBetween id="bar:foo" version="001"/>
+                <ValidityTrigger id="bar:foo1" version="001"/>
+                <ValidityCondition id="bar:foo" version="001"/>
               </validityConditions>
               <alternativeTexts>
                 <AlternativeText id="bar:foo" version="001" attributeName="Name" order="1">
@@ -373,14 +373,14 @@
               </alternativeNames>
               <OrganisationType/>
               <parts>
+                <ControlCentre id="bar:foo" version="001"/>
+                <OperatingDepartment id="bar:foo1" version="001"/>
+                <Department id="bar:foo" version="001"/>
                 <OrganisationPart id="bar:foo" version="001">
                   <administrativeZones>
                     <AdministrativeZone id="bar:foo" version="001"/>
                   </administrativeZones>
                 </OrganisationPart>
-                <ControlCentre id="bar:foo" version="001"/>
-                <Department id="bar:foo" version="001"/>
-                <OperatingDepartment id="bar:foo1" version="001"/>
               </parts>
               <ownResponsibilitySets>
                 <ResponsibilitySet id="bar:foo" version="001">
@@ -480,12 +480,12 @@
                 <WirePointRef version="001" ref="bar:foo"/>
               </members>
               <projections>
-                <PointProjection id="bar:foo" version="001">
-                  <ProjectToPointRef version="001" ref="bar:foo"/>
-                </PointProjection>
                 <ZoneProjection id="bar:foo" version="001">
                   <ProjectedZoneRef version="001" ref="bar:foo"/>
                 </ZoneProjection>
+                <PointProjection id="bar:foo" version="001">
+                  <ProjectToPointRef version="001" ref="bar:foo"/>
+                </PointProjection>
               </projections>
             </GeneralZone>
           </zones>

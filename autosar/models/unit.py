@@ -24,8 +24,9 @@ class Unit:
     """This is a physical measurement unit. All units that might be defined should
     stem from SI units. In order to convert one unit into another factor and offset
     are defined. For the calculation from SI-unit to the defined unit the factor
-    (factorSiToUnit ) and the offset (offsetSiToUnit ) are applied as follows:
+    (factorSiToUnit ) and the offset.
 
+    (offsetSiToUnit ) are applied as follows:
     x  [{unit}]  :=  y * [{siUnit}] * factorSiToUnit [[unit]/{siUnit}] + offsetSiToUnit [{unit}]
     For the calculation from a unit to SI-unit the reciprocal of the factor (factorSiToUnit ) and the negation of the offset (offsetSiToUnit ) are applied.
     y {siUnit} := (x*{unit} - offsetSiToUnit [{unit}]) / (factorSiToUnit [[unit]/{siUnit}]

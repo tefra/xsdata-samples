@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .all_modes_enumeration import AllModesEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
@@ -28,8 +28,8 @@ class TransportModeStructure:
             "required": True,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -94,6 +94,5 @@ class TransportModeStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 12,
         }
     )

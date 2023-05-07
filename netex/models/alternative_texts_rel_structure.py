@@ -570,7 +570,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
+            "max_occurs": 2,
         }
     )
 
@@ -703,7 +703,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    attribute_name_or_comparison_operator_or_is_valid: List[object] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -719,20 +719,6 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "isValid",
-                    "type": bool,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 3,
-        }
-    )
-    attribute_value_or_method: List[object] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
                     "name": "AttributeValue",
                     "type": object,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -742,8 +728,13 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
                     "type": object,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
+                {
+                    "name": "isValid",
+                    "type": bool,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
             ),
-            "max_occurs": 2,
+            "max_occurs": 3,
         }
     )
 
@@ -840,8 +831,8 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -871,7 +862,6 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
                     "pattern": r"([Y | N])*",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     timebands: Optional[TimebandsRelStructure] = field(

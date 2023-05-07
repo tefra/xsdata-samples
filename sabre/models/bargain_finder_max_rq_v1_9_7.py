@@ -22,7 +22,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class AddressTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -31,7 +31,7 @@ class AddressTypeShareMarketInd(Enum):
 
 class AddressTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -47,7 +47,7 @@ class AirTravelerTypeGender(Enum):
 
 class AirTravelerTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -56,7 +56,7 @@ class AirTravelerTypeShareMarketInd(Enum):
 
 class AirTravelerTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -350,7 +350,7 @@ class CountryNameType:
 
 class CustLoyaltyTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -359,7 +359,7 @@ class CustLoyaltyTypeShareMarketInd(Enum):
 
 class CustLoyaltyTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -507,7 +507,7 @@ class DocumentTypeGender(Enum):
 
 class DocumentTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -516,7 +516,7 @@ class DocumentTypeShareMarketInd(Enum):
 
 class DocumentTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -526,7 +526,7 @@ class DocumentTypeShareSynchInd(Enum):
 
 class EmailTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -535,7 +535,7 @@ class EmailTypeShareMarketInd(Enum):
 
 class EmailTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -1057,7 +1057,7 @@ class PassengerStatusType(Enum):
 
 class PersonNameTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -1066,7 +1066,7 @@ class PersonNameTypeShareMarketInd(Enum):
 
 class PersonNameTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -1538,7 +1538,7 @@ class TaxCodeType:
 
 class TelephoneTypeShareMarketInd(Enum):
     """
-    value="Inherit" Permission for sharing data for marketing purposes.
+    Value="Inherit" Permission for sharing data for marketing purposes.
     """
     YES = "Yes"
     NO = "No"
@@ -1547,7 +1547,7 @@ class TelephoneTypeShareMarketInd(Enum):
 
 class TelephoneTypeShareSynchInd(Enum):
     """
-    value="Inherit" Permission for sharing data for synchronization of information
+    Value="Inherit" Permission for sharing data for synchronization of information
     held by other travel service providers.
     """
     YES = "Yes"
@@ -1757,7 +1757,6 @@ class TravelDateTimeType:
                 "name": "Day",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2079,
             }
         )
         days_range: List["TravelDateTimeType.ArrivalDates.DaysRange"] = field(
@@ -1766,7 +1765,6 @@ class TravelDateTimeType:
                 "name": "DaysRange",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2079,
             }
         )
 
@@ -3407,7 +3405,6 @@ class FlexibleFaresType:
                 "name": "CorporateID",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2804,
             }
         )
         account_code: List["FlexibleFaresType.FareParameters.AccountCode"] = field(
@@ -3416,7 +3413,6 @@ class FlexibleFaresType:
                 "name": "AccountCode",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2804,
             }
         )
 
@@ -3977,7 +3973,6 @@ class PriceRequestInformationType:
             "name": "NegotiatedFareCode",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequence": 332,
         }
     )
     account_code: List["PriceRequestInformationType.AccountCode"] = field(
@@ -3986,7 +3981,6 @@ class PriceRequestInformationType:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequence": 332,
         }
     )
     tpa_extensions: Optional["PriceRequestInformationType.TpaExtensions"] = field(
@@ -9363,7 +9357,7 @@ class ExchangeType:
             "name": "OriginDestinationInformation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequence": 2644,
+            "min_occurs": 1,
         }
     )
     arunk: List[ArunkType] = field(
@@ -9372,7 +9366,6 @@ class ExchangeType:
             "name": "Arunk",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "sequence": 2644,
         }
     )
     travel_preferences: Optional[ExchangeAirSearchPrefsType] = field(

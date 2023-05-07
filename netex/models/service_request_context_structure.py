@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .data_name_spaces_structure import DataNameSpacesStructure
 from .delivery_method_enumeration import DeliveryMethodEnumeration
@@ -91,8 +91,8 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    wgs_decimal_degrees_or_gml_coordinate_format: List[object] = field(
-        default_factory=list,
+    wgs_decimal_degrees_or_gml_coordinate_format: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -107,7 +107,6 @@ class ServiceRequestContextStructure:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     distance_units: Optional[str] = field(

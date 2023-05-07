@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
 from .service_link_ref import ServiceLinkRef
 from .timing_link_ref import TimingLinkRef
@@ -12,8 +12,8 @@ class LinkInJourneyPatternVersionedChildStructure(LinkInLinkSequenceVersionedChi
     class Meta:
         name = "LinkInJourneyPattern_VersionedChildStructure"
 
-    service_link_ref_or_timing_link_ref: List[object] = field(
-        default_factory=list,
+    service_link_ref_or_timing_link_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -28,6 +28,5 @@ class LinkInJourneyPatternVersionedChildStructure(LinkInLinkSequenceVersionedChi
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

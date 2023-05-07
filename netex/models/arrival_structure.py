@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .accessibility_assessment import AccessibilityAssessment
 from .check_constraint import CheckConstraint
@@ -85,8 +85,8 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref_or_timeband_ref: List[object] = field(
-        default_factory=list,
+    time_demand_type_ref_or_timeband_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -101,7 +101,6 @@ class ArrivalStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     duty_part_ref: Optional[DutyPartRef] = field(
@@ -112,8 +111,8 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -138,7 +137,6 @@ class ArrivalStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     dynamic_stop_assignment: Optional[DynamicStopAssignment] = field(

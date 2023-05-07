@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .extensions_1 import Extensions1
 from .other_error import OtherError
@@ -70,8 +70,8 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: List[object] = field(
-            default_factory=list,
+        service_not_available_error_or_other_error: Optional[object] = field(
+            default=None,
             metadata={
                 "type": "Elements",
                 "choices": (
@@ -86,7 +86,6 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-                "max_occurs": 2,
             }
         )
         description: Optional[str] = field(

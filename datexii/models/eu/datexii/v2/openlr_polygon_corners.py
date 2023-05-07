@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class OpenlrPolygonCorners:
-    """geo-coordinate pairs.
+    """Geo-coordinate pairs.
 
     The coordinate pairs defining the corners of the underlying
     geometrical polygon.

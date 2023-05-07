@@ -10,9 +10,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class SelfUri:
-    """<div>
-
-    <h3>Uri For This Same Article Online</h3> </div>
+    """
+    <div> <h3>Uri For This Same Article Online</h3> </div>
     """
     class Meta:
         name = "self-uri"

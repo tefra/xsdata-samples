@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .stop_area_ref_structure import StopAreaRefStructure
 from .topographic_place_ref import TopographicPlaceRef
 from .topographic_place_view import TopographicPlaceView
@@ -29,8 +29,8 @@ class StopAreaVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    topographic_place_ref_or_topographic_place_view: List[object] = field(
-        default_factory=list,
+    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -45,6 +45,5 @@ class StopAreaVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

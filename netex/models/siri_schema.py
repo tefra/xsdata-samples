@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
 from .check_status_request import CheckStatusRequest
@@ -22,8 +22,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -108,7 +108,6 @@ class SiriSchema:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-            "max_occurs": 8,
         }
     )
     version: str = field(

@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class ArticleId:
-    """<div>
-
-    <h3>Article Identifier</h3> </div>
+    """
+    <div> <h3>Article Identifier</h3> </div>
     """
     class Meta:
         name = "article-id"

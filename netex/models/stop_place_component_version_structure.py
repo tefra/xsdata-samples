@@ -30,8 +30,8 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -86,7 +86,6 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
         }
     )
     other_transport_modes: List[VehicleModeEnumeration] = field(

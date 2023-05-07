@@ -19,10 +19,8 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class AutosarVariableInstance:
     """This class represents a reference to a variable instance within AUTOSAR.
-    This way it is possible to reference a variable instance in the occurrence
-    expression formula. The variable instance can target to one of the following
-    variables:
 
+    This way it is possible to reference a variable instance in the occurrence expression formula. The variable instance can target to one of the following variables:
     * a variable provided via a PortPrototype as whole
     * an element inside of a composite variable provided via a PortPrototype
 

@@ -17,7 +17,6 @@ class DateRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "sequence": 206,
         }
     )
     preset: List[DateRangePresetTypeEnum] = field(
@@ -25,7 +24,6 @@ class DateRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "sequence": 206,
         }
     )
     range: List[DateRangeFacetItemType] = field(
@@ -33,6 +31,5 @@ class DateRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "sequence": 206,
         }
     )

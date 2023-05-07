@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class UnderlineStart:
-    """<div>
-
-    <h3>Underline Start</h3> </div>
+    """
+    <div> <h3>Underline Start</h3> </div>
     """
     class Meta:
         name = "underline-start"

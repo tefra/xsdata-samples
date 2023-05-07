@@ -8,9 +8,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class CustomMetaGroup:
-    """<div>
-
-    <h3>Custom Metadata Group</h3> </div>
+    """
+    <div> <h3>Custom Metadata Group</h3> </div>
     """
     class Meta:
         name = "custom-meta-group"

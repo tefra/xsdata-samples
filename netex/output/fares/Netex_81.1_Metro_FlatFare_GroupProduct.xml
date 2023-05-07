@@ -69,6 +69,10 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:eligible"/>
                     <LimitationGroupingType>XOR</LimitationGroupingType>
                     <limitations>
+                      <GroupTicket id="myfares:group" version="any">
+                        <Name>Group Fare - 10 or more people</Name>
+                        <MinimumNumberOfPersons>10</MinimumNumberOfPersons>
+                      </GroupTicket>
                       <UserProfile id="myfares:adult" version="any">
                         <Name>Child Fare</Name>
                         <MinimumAge>17</MinimumAge>
@@ -79,10 +83,6 @@
                         <MaximumAge>16</MaximumAge>
                         <ProofRequired/>
                       </UserProfile>
-                      <GroupTicket id="myfares:group" version="any">
-                        <Name>Group Fare - 10 or more people</Name>
-                        <MinimumNumberOfPersons>10</MinimumNumberOfPersons>
-                      </GroupTicket>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -93,20 +93,20 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
-                      <RoundTrip id="myfares:Flat@conditions_of_travel@single@trip" version="any">
-                        <Name>Single</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
-                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@single@frequency" version="1.0">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                        <MaximalFrequency>1</MaximalFrequency>
-                      </FrequencyOfUse>
                       <Interchanging id="myfares:Flat@conditions_of_travel@single@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <FromMode>metro</FromMode>
                         <ToMode>metro</ToMode>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@single@frequency" version="1.0">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                      <RoundTrip id="myfares:Flat@conditions_of_travel@single@trip" version="any">
+                        <Name>Single</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -117,18 +117,18 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
-                      <RoundTrip id="myfares:Flat@conditions_of_travel@outbound@trip" version="any">
-                        <Name>Outbound</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
-                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@outbound@frequency" version="1.0">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                        <MaximalFrequency>1</MaximalFrequency>
-                      </FrequencyOfUse>
                       <Interchanging id="myfares:Flat@conditions_of_travel@outbound@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@outbound@frequency" version="1.0">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                      <RoundTrip id="myfares:Flat@conditions_of_travel@outbound@trip" version="any">
+                        <Name>Outbound</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -139,18 +139,18 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
-                      <RoundTrip id="myfares:Flat@conditions_of_travel@inbound@trip" version="any">
-                        <Name>Return</Name>
-                        <TripType>returnOnly</TripType>
-                      </RoundTrip>
-                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@inbound@frequency" version="1.0">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                        <MaximalFrequency>1</MaximalFrequency>
-                      </FrequencyOfUse>
                       <Interchanging id="myfares:Flat@conditions_of_travel@inbound@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="myfares:Flat@conditions_of_travel@inbound@frequency" version="1.0">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                      <RoundTrip id="myfares:Flat@conditions_of_travel@inbound@trip" version="any">
+                        <Name>Return</Name>
+                        <TripType>returnOnly</TripType>
+                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

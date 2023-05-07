@@ -8,8 +8,8 @@
     <topics>
       <NetworkFrameTopic>
         <Current/>
-        <InfrastructureFrameRef ref="mybus:ifwkf001">REQUEST</InfrastructureFrameRef>
         <ServiceFrameRef ref="mybus:ntwkf001">REQUEST</ServiceFrameRef>
+        <InfrastructureFrameRef ref="mybus:ifwkf001">REQUEST</InfrastructureFrameRef>
       </NetworkFrameTopic>
     </topics>
   </PublicationRequest>

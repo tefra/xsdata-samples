@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -27,8 +27,8 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -83,7 +83,6 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
         }
     )
     notice_assignments: Optional[NoticeAssignmentViewsRelStructure] = field(

@@ -134,8 +134,8 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey_ref_or_journey_designator_or_service_designator: List[object] = field(
-        default_factory=list,
+    service_journey_ref_or_journey_designator_or_service_designator: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -155,7 +155,6 @@ class InterchangeRuleParameterStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     maximum_interchange_window: Optional[XmlDuration] = field(

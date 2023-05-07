@@ -165,8 +165,8 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         }
     )
-    distribution_points_or_distribution_group_ref: List[object] = field(
-        default_factory=list,
+    distribution_points_or_distribution_group_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -181,6 +181,5 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

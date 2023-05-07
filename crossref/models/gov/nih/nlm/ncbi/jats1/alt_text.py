@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class AltText:
-    """<div>
-
-    <h3>Alternate Title Text For a Figure, Etc.</h3> </div>
+    """
+    <div> <h3>Alternate Title Text For a Figure, Etc.</h3> </div>
     """
     class Meta:
         name = "alt-text"

@@ -205,6 +205,7 @@ class SwAxisIndividual:
                 "name": "AUTOSAR-VARIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
+                "sequence": 98039,
             }
         )
         mc_data_instance_var_ref: List["SwAxisIndividual.SwVariableRefs.McDataInstanceVarRef"] = field(
@@ -213,6 +214,7 @@ class SwAxisIndividual:
                 "name": "MC-DATA-INSTANCE-VAR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
+                "sequence": 98039,
             }
         )
 

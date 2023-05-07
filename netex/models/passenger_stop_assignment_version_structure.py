@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
 from .quay import Quay
@@ -17,8 +17,8 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "PassengerStopAssignment_VersionStructure"
 
-    stop_place_ref_or_stop_place: List[object] = field(
-        default_factory=list,
+    stop_place_ref_or_stop_place: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -33,11 +33,10 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    quay_ref_or_quay: List[object] = field(
-        default_factory=list,
+    quay_ref_or_quay: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -52,11 +51,10 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    boarding_position_ref_or_boarding_position: List[object] = field(
-        default_factory=list,
+    boarding_position_ref_or_boarding_position: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -71,7 +69,6 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     train_elements: Optional[TrainStopAssignmentsRelStructure] = field(

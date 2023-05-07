@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class ElocationId:
-    """<div>
-
-    <h3>Electronic Location Identifier</h3> </div>
+    """
+    <div> <h3>Electronic Location Identifier</h3> </div>
     """
     class Meta:
         name = "elocation-id"

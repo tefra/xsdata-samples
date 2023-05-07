@@ -9,10 +9,9 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/com
 
 @dataclass
 class PostalAddressType:
-    """<description xmlns="">
-
-    <description>A definition of a postal address.</description>
-    </description>
+    """
+    <description xmlns=""> <description>A definition of a postal
+    address.</description> </description>
 
     :ivar occupant_name_text: <description xmlns="">The occupant at this
         address</description>

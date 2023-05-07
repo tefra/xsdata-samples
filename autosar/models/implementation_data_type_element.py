@@ -23,12 +23,11 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class ImplementationDataTypeElement:
-    """Declares a data object which is locally aggregated. Such an element can only
-    be used within the scope where it is aggregated. This element either consists
-    of further subElements or it is further defined via its swDataDefProps. There
-    are several use cases within the system of ImplementationDataTypes fur such a
-    local declaration:
+    """Declares a data object which is locally aggregated.
 
+    Such an element can only be used within the scope where it is aggregated.
+    This element either consists of further subElements or it is further defined via its swDataDefProps.
+    There are several use cases within the system of ImplementationDataTypes fur such a local declaration:
     * It can represent the elements of an array, defining the element type and array size
     * It can represent an element of a struct, defining its type
     * It can be the local declaration of a debug element.

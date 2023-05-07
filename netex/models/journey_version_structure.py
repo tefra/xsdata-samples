@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .accessibility_assessment import AccessibilityAssessment
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .external_object_ref_structure import ExternalObjectRefStructure
@@ -60,8 +60,8 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    link_sequence_projection_ref_or_link_sequence_projection: List[object] = field(
-        default_factory=list,
+    link_sequence_projection_ref_or_link_sequence_projection: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -76,7 +76,6 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     monitored: Optional[bool] = field(

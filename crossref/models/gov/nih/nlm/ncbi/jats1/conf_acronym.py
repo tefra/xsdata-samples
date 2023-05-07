@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class ConfAcronym:
-    """<div>
-
-    <h3>Conference Acronym</h3> </div>
+    """
+    <div> <h3>Conference Acronym</h3> </div>
     """
     class Meta:
         name = "conf-acronym"

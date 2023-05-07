@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .authority_ref import AuthorityRef
@@ -50,8 +50,8 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_fare_product_ref_or_types_of_fare_product: List[object] = field(
-        default_factory=list,
+    type_of_fare_product_ref_or_types_of_fare_product: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -66,7 +66,6 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     authority_ref: Optional[AuthorityRef] = field(
@@ -157,8 +156,8 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
-        default_factory=list,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -178,7 +177,6 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     validable_elements: Optional[ValidableElementsRelStructure] = field(

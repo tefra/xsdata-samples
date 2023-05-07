@@ -20,20 +20,17 @@ class Contributors:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 935,
         }
     )
     person_name: List[PersonName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 935,
         }
     )
     anonymous: List[Anonymous] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 935,
         }
     )

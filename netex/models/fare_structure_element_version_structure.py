@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
@@ -49,8 +49,8 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: List[object] = field(
-        default_factory=list,
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -70,11 +70,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
-    time_interval_ref_or_time_intervals_or_time_structure_factors: List[object] = field(
-        default_factory=list,
+    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -94,11 +93,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -123,11 +121,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
-    choice_1: List[object] = field(
-        default_factory=list,
+    choice_1: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -152,7 +149,6 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     fare_structure_elements_in_sequence: Optional[FareStructureElementsInSequenceRelStructure] = field(
@@ -163,8 +159,8 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
-        default_factory=list,
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -184,7 +180,6 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     prices: Optional[FareStructureElementPricesRelStructure] = field(

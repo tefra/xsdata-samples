@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class SectionInitializationPolicyType:
     """SectionInitializationPolicyType describes the intended initialization of
-    MemorySections. The following values are standardized in AUTOSAR Methodology:
+    MemorySections.
 
+    The following values are standardized in AUTOSAR Methodology:
     * '''NO-INIT''': No initialization and no clearing is performed. Such data elements shall not be read before one has written a value into it.
     * '''INIT''': To be used for data that are initialized by every reset to the specified value (initValue).
     * '''POWER-ON-INIT''': To be used for data that are initialized by "Power On" to the specified value (initValue). Note: there might be several resets between power on resets.

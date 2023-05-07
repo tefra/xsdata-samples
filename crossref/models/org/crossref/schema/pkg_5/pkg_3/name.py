@@ -32,6 +32,7 @@ class Name:
             "max_length": 60,
             "white_space": "collapse",
             "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
+            "sequence": 1017,
         }
     )
     prefix: Optional[Prefix] = field(

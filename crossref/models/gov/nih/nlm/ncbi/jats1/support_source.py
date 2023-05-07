@@ -40,9 +40,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class SupportSource:
-    """<div>
-
-    <h3>Support Source</h3> </div>
+    """
+    <div> <h3>Support Source</h3> </div>
     """
     class Meta:
         name = "support-source"

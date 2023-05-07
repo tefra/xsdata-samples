@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
@@ -18,8 +18,8 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: List[object] = field(
-        default_factory=list,
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -39,11 +39,10 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
-    geographical_interval_ref_or_geographical_structure_factor_ref: List[object] = field(
-        default_factory=list,
+    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -58,7 +57,6 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(

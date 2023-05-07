@@ -106,18 +106,18 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
-                      <RoundTrip id="myfares:Tz2z@conditions_of_travel@trip" version="1.0">
-                        <Name>Single Trip</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
+                      <Interchanging id="myfares:Tz2z@conditions_of_travel@interchanging" version="1.0">
+                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
+                      </Interchanging>
                       <FrequencyOfUse id="myfares:Tz2z@conditions_of_travel@frequency" version="1.0">
                         <Name>One trip no transfers</Name>
                         <FrequencyOfUseType>single</FrequencyOfUseType>
                         <MaximalFrequency>1</MaximalFrequency>
                       </FrequencyOfUse>
-                      <Interchanging id="myfares:Tz2z@conditions_of_travel@interchanging" version="1.0">
-                        <MaximumNumberOfInterchanges>0</MaximumNumberOfInterchanges>
-                      </Interchanging>
+                      <RoundTrip id="myfares:Tz2z@conditions_of_travel@trip" version="1.0">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

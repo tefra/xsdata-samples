@@ -45,7 +45,7 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 32,
-            "sequence": 239,
+            "sequence": 236,
         }
     )
     proceedings_subject: List[str] = field(
@@ -55,7 +55,6 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 255,
-            "sequence": 251,
         }
     )
     publisher: List[Publisher] = field(

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from .line_string import LineString
 from .link_sequence_ref_structure import LinkSequenceRefStructure
 from .point_refs_rel_structure import PointRefsRelStructure
@@ -30,8 +30,8 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    points_or_line_string: List[object] = field(
-        default_factory=list,
+    points_or_line_string: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -46,6 +46,5 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
             ),
-            "max_occurs": 2,
         }
     )

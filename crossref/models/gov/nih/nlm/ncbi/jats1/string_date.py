@@ -12,9 +12,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class StringDate:
-    """<div>
-
-    <h3>Date As a String</h3> </div>
+    """
+    <div> <h3>Date As a String</h3> </div>
     """
     class Meta:
         name = "string-date"

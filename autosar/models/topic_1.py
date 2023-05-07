@@ -230,7 +230,6 @@ class Topic1:
             "name": "MSR-QUERY-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     msr_query_p_2: List[MsrQueryP2] = field(
@@ -239,7 +238,6 @@ class Topic1:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     p: List[MultiLanguageParagraph] = field(
@@ -248,7 +246,6 @@ class Topic1:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     verbatim: List[MultiLanguageVerbatim] = field(
@@ -257,7 +254,6 @@ class Topic1:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     list_value: List[ListType] = field(
@@ -266,7 +262,6 @@ class Topic1:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     def_list: List[DefList] = field(
@@ -275,7 +270,6 @@ class Topic1:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     labeled_list: List[LabeledList] = field(
@@ -284,7 +278,6 @@ class Topic1:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     formula: List[MlFormula] = field(
@@ -293,7 +286,6 @@ class Topic1:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     figure: List[MlFigure] = field(
@@ -302,7 +294,6 @@ class Topic1:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     note: List[Note] = field(
@@ -311,7 +302,6 @@ class Topic1:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     trace: List[TraceableText] = field(
@@ -320,7 +310,6 @@ class Topic1:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     structured_req: List[StructuredReq] = field(
@@ -329,7 +318,6 @@ class Topic1:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     table: List[Table] = field(
@@ -338,7 +326,6 @@ class Topic1:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     traceable_table: List[TraceableTable] = field(
@@ -347,7 +334,6 @@ class Topic1:
             "name": "TRACEABLE-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 106148,
         }
     )
     variation_point: Optional[VariationPoint] = field(

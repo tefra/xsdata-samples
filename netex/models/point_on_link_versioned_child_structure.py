@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
@@ -68,8 +68,8 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -229,7 +229,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 31,
         }
     )
     order: Optional[int] = field(

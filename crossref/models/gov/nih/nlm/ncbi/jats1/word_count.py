@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class WordCount:
-    """<div>
-
-    <h3>Word Count</h3> </div>
+    """
+    <div> <h3>Word Count</h3> </div>
     """
     class Meta:
         name = "word-count"

@@ -56,8 +56,8 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -112,7 +112,6 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
         }
     )
 
@@ -214,8 +213,8 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "JourneyPattern_VersionStructure"
 
-    route_ref_or_route_view: List[object] = field(
-        default_factory=list,
+    route_ref_or_route_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -230,7 +229,6 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
@@ -241,8 +239,8 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: List[object] = field(
-        default_factory=list,
+    direction_ref_or_direction_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -257,11 +255,10 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    destination_display_ref_or_destination_display_view: List[object] = field(
-        default_factory=list,
+    destination_display_ref_or_destination_display_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -276,7 +273,6 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(
@@ -394,8 +390,8 @@ class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
 
-    points_on_section_or_members: List[object] = field(
-        default_factory=list,
+    points_on_section_or_members: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -410,7 +406,6 @@ class CommonSectionVersionStructure(SectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
 
@@ -449,8 +444,8 @@ class LineSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "LineSection_VersionStructure"
 
-    points_on_section_or_members: List[object] = field(
-        default_factory=list,
+    points_on_section_or_members: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -465,11 +460,10 @@ class LineSectionVersionStructure(SectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    reverse_points_on_section_or_reverse_members: List[object] = field(
-        default_factory=list,
+    reverse_points_on_section_or_reverse_members: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -484,7 +478,6 @@ class LineSectionVersionStructure(SectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     section_type: Optional[SectionTypeEnumeration] = field(
@@ -540,8 +533,8 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -571,7 +564,6 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 5,
         }
     )
     from_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = field(

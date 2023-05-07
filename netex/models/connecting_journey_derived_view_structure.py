@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from xsdata.models.datatype import XmlTime
 from .day_type_ref import DayTypeRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -30,8 +30,8 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "required": True,
         }
     )
-    departure_time_or_frequency: List[object] = field(
-        default_factory=list,
+    departure_time_or_frequency: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -46,7 +46,6 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     name: Optional[MultilingualString] = field(

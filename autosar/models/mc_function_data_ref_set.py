@@ -7,9 +7,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class McFunctionDataRefSet:
-    """Refers to a set of data assigned to an McFunction in a particular role. The
-    data are given.
+    """Refers to a set of data assigned to an McFunction in a particular role.
 
+    The data are given
     * either by entries in a FlatMap
     * or by data instances that are part of MC support data.
     These two possibilities are exclusive within a given McFunctionDataRefSet. Which one to use depends on the process and tool environment.

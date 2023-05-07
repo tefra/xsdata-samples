@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class ConfNum:
-    """<div>
-
-    <h3>Conference Number</h3> </div>
+    """
+    <div> <h3>Conference Number</h3> </div>
     """
     class Meta:
         name = "conf-num"

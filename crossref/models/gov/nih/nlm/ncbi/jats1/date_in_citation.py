@@ -12,9 +12,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class DateInCitation:
-    """<div>
-
-    <h3>Date Inside Citation</h3> </div>
+    """
+    <div> <h3>Date Inside Citation</h3> </div>
     """
     class Meta:
         name = "date-in-citation"

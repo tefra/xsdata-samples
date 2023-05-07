@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import Optional
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
@@ -18,8 +18,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AllSubmodeStructure:
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -84,6 +84,5 @@ class AllSubmodeStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 12,
         }
     )

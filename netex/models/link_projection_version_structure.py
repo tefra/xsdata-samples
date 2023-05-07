@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .link_ref_structure import LinkRefStructure
 from .point_on_link_by_value_structure import PointOnLinkByValueStructure
 from .point_on_link_ref_structure_1 import PointOnLinkRefStructure1
@@ -29,8 +29,8 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    start_point_on_link_ref_or_start_point_on_link_by_value: List[object] = field(
-        default_factory=list,
+    start_point_on_link_ref_or_start_point_on_link_by_value: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -45,11 +45,10 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
-    end_point_on_link_ref_or_end_point_on_link_by_value: List[object] = field(
-        default_factory=list,
+    end_point_on_link_ref_or_end_point_on_link_by_value: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -64,6 +63,5 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )

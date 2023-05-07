@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
 from .other_error import OtherError
 from .unknown_subscription_error import UnknownSubscriptionError
@@ -28,8 +28,8 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: List[object] = field(
-            default_factory=list,
+        unknown_subscription_error_or_other_error: Optional[object] = field(
+            default=None,
             metadata={
                 "type": "Elements",
                 "choices": (
@@ -44,7 +44,6 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-                "max_occurs": 2,
             }
         )
         description: Optional[str] = field(

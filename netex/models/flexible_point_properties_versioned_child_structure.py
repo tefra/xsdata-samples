@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
@@ -26,8 +26,8 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexiblePointProperties_VersionedChildStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -112,7 +112,6 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 16,
         }
     )
     may_be_skipped: Optional[bool] = field(

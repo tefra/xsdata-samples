@@ -14,10 +14,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class EventControlledTiming:
-    """Specification of a event driven sending behavior. The PDU is sent n
-    (numberOfRepeat + 1) times separated by the repetitionPeriod. If
-    numberOfRepeats.
+    """Specification of a event driven sending behavior.
 
+    The PDU is sent n
+    (numberOfRepeat + 1) times separated by the repetitionPeriod. If numberOfRepeats
     = 0, then the Pdu is sent just once.
 
     :ivar desc: This represents a general but brief (one paragraph)

@@ -483,6 +483,51 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <Date>2013-07-08T01:07:00</Date>
                   <Amount>35.40</Amount>
                 </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans002@Oyster_Top_Up" version="any">
+                  <Name>Top up Oyster card with £10</Name>
+                  <Description>   £10     </Description>
+                  <Date>2013-07-08T01:07:10</Date>
+                  <Amount>10.00</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans003@touch_in" version="any">
+                  <Name>Oyster Touch in  in a zone inside  travel card</Name>
+                  <Description> Raises liability for max far £.8.40 ( £2.40) </Description>
+                  <Date>2013-07-08T01:09:00</Date>
+                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
+                  <Amount>8.40</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans004@purchase" version="any">
+                  <Name>Oyster Touch out  in a zone inside  travel card</Name>
+                  <Description> Raises liabliity for max incremntal  fare zons 2- 8 £.8.40 ( £2.40) </Description>
+                  <Date>2013-07-08T01:09:10</Date>
+                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
+                  <Amount>-8.40</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans005@touch_in" version="any">
+                  <Name>Oyster Touch in</Name>
+                  <Description> Raises libailiity for max far £.8.40 ( £2.40) </Description>
+                  <Date>2013-07-08T01:12:00</Date>
+                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
+                  <Amount>8.40</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans006@touch_out" version="any">
+                  <Name>Oyster Touch out  n a zone outside traval card</Name>
+                  <Description> Max 8.40  - actusl £2.40   = -£6.00</Description>
+                  <Date>2013-07-08T01:12:30</Date>
+                  <Amount>-6.0</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans007@Oyster_Auto_Top_Up@signup" version="any">
+                  <Name>Top up Oyster card with £10</Name>
+                  <Description> Put  £10  on card to trigger    </Description>
+                  <Date>2013-07-08T01:07:10</Date>
+                  <Amount>10.00</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-12345@trans008@Oyster_Auto_Top_Up@activate" version="any">
+                  <Name>Top up Oyster card with £10</Name>
+                  <Description> Put  £10  on card to trigger    </Description>
+                  <Date>2013-07-08T01:07:10</Date>
+                  <Amount>10.00</Amount>
+                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans001@purchase_new_card@Adult_OysterCard" version="any">
                   <Name>Adult Oyste Card</Name>
                   <Date>2013-07-08T01:07:00</Date>
@@ -527,12 +572,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans002@Oyster_Top_Up" version="any">
-                  <Name>Top up Oyster card with £10</Name>
-                  <Description>   £10     </Description>
-                  <Date>2013-07-08T01:07:10</Date>
-                  <Amount>10.00</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans002@Oyster_Top_Up@Oyster_Top_Up" version="any">
                   <Name>Add 10 Pay as you go</Name>
                   <Date>2013-07-08T01:07:10</Date>
@@ -550,13 +589,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans003@touch_in" version="any">
-                  <Name>Oyster Touch in  in a zone inside  travel card</Name>
-                  <Description> Raises liability for max far £.8.40 ( £2.40) </Description>
-                  <Date>2013-07-08T01:09:00</Date>
-                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
-                  <Amount>8.40</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans003@touch_in@touch_in" version="any">
                   <Name>Add Max fare</Name>
                   <Date>2013-07-08T01:08:50</Date>
@@ -580,13 +612,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans004@purchase" version="any">
-                  <Name>Oyster Touch out  in a zone inside  travel card</Name>
-                  <Description> Raises liabliity for max incremntal  fare zons 2- 8 £.8.40 ( £2.40) </Description>
-                  <Date>2013-07-08T01:09:10</Date>
-                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
-                  <Amount>-8.40</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans004@purchase@yellow_touch_out" version="any">
                   <Name>Touch out to complete Fare within zone</Name>
                   <Date>2013-07-08T01:09:10</Date>
@@ -618,13 +643,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans005@touch_in" version="any">
-                  <Name>Oyster Touch in</Name>
-                  <Description> Raises libailiity for max far £.8.40 ( £2.40) </Description>
-                  <Date>2013-07-08T01:12:00</Date>
-                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
-                  <Amount>8.40</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans005@touch_in@" version="any">
                   <Name>Tuoch out in out of xpme</Name>
                   <Date>2013-07-08T01:12:00</Date>
@@ -637,8 +655,8 @@ Special peak and off-peak times apply on journeys that start at stations north o
                       <FareStructureElementRef version="any" ref="tfl:Zone_3_only"/>
                       <SalesOfferPackageRef version="any" ref="tfl:PayAsYouGo_trip-SOP"/>
                       <limitations>
-                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:Travel_time_70M"/>
+                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
                       </limitations>
                       <validityParameters>
@@ -651,12 +669,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans006@touch_out" version="any">
-                  <Name>Oyster Touch out  n a zone outside traval card</Name>
-                  <Description> Max 8.40  - actusl £2.40   = -£6.00</Description>
-                  <Date>2013-07-08T01:12:30</Date>
-                  <Amount>-6.0</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans006@touch_out" version="any">
                   <Name>Pay as you go Fare  zone 3-4  (End at Finchley Central)</Name>
                   <Date>2013-07-08T01:12:30</Date>
@@ -670,8 +682,8 @@ Special peak and off-peak times apply on journeys that start at stations north o
                       <FareStructureElementRef version="any" ref="tfl:Zones_3-4"/>
                       <SalesOfferPackageRef version="any" ref="tfl:PayAsYouGo_trip-SOP"/>
                       <limitations>
-                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:Travel_time_70M"/>
+                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
                       </limitations>
                       <validityParameters>
@@ -681,12 +693,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans007@Oyster_Auto_Top_Up@signup" version="any">
-                  <Name>Top up Oyster card with £10</Name>
-                  <Description> Put  £10  on card to trigger    </Description>
-                  <Date>2013-07-08T01:07:10</Date>
-                  <Amount>10.00</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans007@Oyster_Auto_Top_Up@signup" version="any">
                   <Name>Add 10 Pay as you go</Name>
                   <Date>2013-07-08T01:07:10</Date>
@@ -724,12 +730,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-12345@trans008@Oyster_Auto_Top_Up@activate" version="any">
-                  <Name>Top up Oyster card with £10</Name>
-                  <Description> Put  £10  on card to trigger    </Description>
-                  <Date>2013-07-08T01:07:10</Date>
-                  <Amount>10.00</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-12345@trans008@Oyster_Auto_Top_Up@activate" version="any">
                   <Name>Add 10 Pay as you go</Name>
                   <Date>2013-07-08T01:07:10</Date>
@@ -778,6 +778,19 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <Date>2013-07-08T01:07:00</Date>
                   <Amount>25.00</Amount>
                 </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-122222@trans005@touch_in" version="any">
+                  <Name>Oyster Touch in</Name>
+                  <Description> Raises libailiity for max far £.8.40 ( £2.40) </Description>
+                  <Date>2013-07-08T01:12:00</Date>
+                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
+                  <Amount>8.40</Amount>
+                </SalesTransaction>
+                <SalesTransaction id="xpl:Oyster-122222@trans006@touch_out" version="any">
+                  <Name>Oyster Touch out  n a zone outside traval card</Name>
+                  <Description> Max 8.40  - actusl £2.40   = -£6.00</Description>
+                  <Date>2013-07-08T01:12:30</Date>
+                  <Amount>-6.0</Amount>
+                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-122222@trans001@purchase_new_card@Adult_OysterCard" version="any">
                   <Name>Adult Oyste Card</Name>
                   <Date>2013-07-08T01:07:00</Date>
@@ -816,13 +829,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-122222@trans005@touch_in" version="any">
-                  <Name>Oyster Touch in</Name>
-                  <Description> Raises libailiity for max far £.8.40 ( £2.40) </Description>
-                  <Date>2013-07-08T01:12:00</Date>
-                  <TypeOfFareContractEntryRef version="any" ref="tfl:yellow_touch_in"/>
-                  <Amount>8.40</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-122222@trans005@touch_in@" version="any">
                   <Name>Tuoch out in out of xpme</Name>
                   <Date>2013-07-08T01:12:00</Date>
@@ -835,8 +841,8 @@ Special peak and off-peak times apply on journeys that start at stations north o
                       <FareStructureElementRef version="any" ref="tfl:Zone_3_only"/>
                       <SalesOfferPackageRef version="any" ref="tfl:PayAsYouGo_trip-SOP"/>
                       <limitations>
-                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:Travel_time_70M"/>
+                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
                       </limitations>
                       <validityParameters>
@@ -849,12 +855,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                     </SpecificParameterAssignment>
                   </specificParameterAssignments>
                 </TravelSpecification>
-                <SalesTransaction id="xpl:Oyster-122222@trans006@touch_out" version="any">
-                  <Name>Oyster Touch out  n a zone outside traval card</Name>
-                  <Description> Max 8.40  - actusl £2.40   = -£6.00</Description>
-                  <Date>2013-07-08T01:12:30</Date>
-                  <Amount>-6.0</Amount>
-                </SalesTransaction>
                 <TravelSpecification id="xpl:Oyster-122222@trans006@touch_out" version="any">
                   <Name>Pay as you go Fare  zone 3-4  (End at Finchley Central)</Name>
                   <Date>2013-07-08T01:12:30</Date>
@@ -868,8 +868,8 @@ Special peak and off-peak times apply on journeys that start at stations north o
                       <FareStructureElementRef version="any" ref="tfl:Zones_3-4"/>
                       <SalesOfferPackageRef version="any" ref="tfl:PayAsYouGo_trip-SOP"/>
                       <limitations>
-                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:Travel_time_70M"/>
+                        <RoundTripRef version="any" ref="tfl:single"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
                       </limitations>
                       <validityParameters>
@@ -2821,8 +2821,8 @@ Oyster_PayAsYouGo_right -   PayAsYouGo_trip
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <limitations>
                     <FrequencyOfUseRef version="any" ref="tfl:one_trip"/>
-                    <RoundTripRef version="any" ref="tfl:single"/>
                     <UsageValidityPeriodRef version="any" ref="tfl:endOfRide"/>
+                    <RoundTripRef version="any" ref="tfl:single"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="tfl:Prepaid_trip@returnRide" version="any" order="6">
@@ -2830,8 +2830,8 @@ Oyster_PayAsYouGo_right -   PayAsYouGo_trip
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <limitations>
                     <FrequencyOfUseRef version="any" ref="tfl:one_trip"/>
-                    <RoundTripRef version="any" ref="tfl:return"/>
                     <UsageValidityPeriodRef version="any" ref="tfl:endOfRide"/>
+                    <RoundTripRef version="any" ref="tfl:return"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -3039,8 +3039,8 @@ Oyster_PayAsYouGo_right -   PayAsYouGo_trip
                   <Name>No Transfer by anyone.</Name>
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <limitations>
-                    <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                     <UserProfileRef version="any" ref="tfl:anyone"/>
+                    <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="tfl:TravelCard@user_profile@anyone" version="any" order="7">
@@ -3383,8 +3383,8 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
                       <TypeOfAccessRightAssignmentRef version="any" ref="tfl:eligible"/>
                       <limitations>
                         <EntitlementRequiredRef version="any" ref="tfl:GoldCardHolder"/>
-                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                         <UserProfileRef version="any" ref="tfl:goldCardHolder"/>
+                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="tfl:Family_day_TravelCard@EntitlementRequired@RailCard" version="any" order="2">
@@ -3393,8 +3393,8 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
                       <TypeOfAccessRightAssignmentRef version="any" ref="tfl:eligible"/>
                       <limitations>
                         <EntitlementRequiredRef version="any" ref="nr:RailCard"/>
-                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                         <UserProfileRef version="any" ref="tfl:RailCard_holder"/>
+                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </includes>
@@ -3440,8 +3440,8 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
                   <Name>Valid for travel for 1 day anytime</Name>
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:eligible"/>
                   <limitations>
-                    <GroupTicketRef version="any" ref="tfl:family_group"/>
                     <UsageValidityPeriodRef version="any" ref="tfl:TravelCardValidityPeriod@1DAnyTime"/>
+                    <GroupTicketRef version="any" ref="tfl:family_group"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -3613,8 +3613,8 @@ If your Oyster only has pay as you go credit at adult rate on it you can let som
                       <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                       <ChargingBasis>normalFare</ChargingBasis>
                       <limitations>
-                        <TransferabilityRef version="any" ref="tfl:CanTransfer"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
+                        <TransferabilityRef version="any" ref="tfl:CanTransfer"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="tfl:Oyster@Transferability@concessions" version="any" order="2">
@@ -3622,8 +3622,8 @@ If your Oyster only has pay as you go credit at adult rate on it you can let som
                       <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                       <ChargingBasis>free</ChargingBasis>
                       <limitations>
-                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                         <UserProfileRef version="any" ref="tfl:concession"/>
+                        <TransferabilityRef version="any" ref="tfl:NoTransfer"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </includes>
@@ -3669,10 +3669,10 @@ If your Oyster only has pay as you go credit at adult rate on it you can let som
                   <validityParameterAssignments>
                     <GenericParameterAssignment id="tfl:GenericParameterAssignment@CappingRule@PAYG@rail" version="any" order="1">
                       <limitations>
-                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
-                        <PenaltyPolicyRef version="any" ref="tfl:PenaltyPolicy:PAYG"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:PAYG@1D"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
+                        <PenaltyPolicyRef version="any" ref="tfl:PenaltyPolicy:PAYG"/>
+                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -3701,10 +3701,10 @@ If your Oyster only has pay as you go credit at adult rate on it you can let som
                   <validityParameterAssignments>
                     <GenericParameterAssignment id="tfl:GenericParameterAssignment@CappingRule@PAYG@metro" version="any" order="1">
                       <limitations>
-                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
-                        <PenaltyPolicyRef version="any" ref="tfl:PenaltyPolicy:PAYG"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:PAYG@1D"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
+                        <PenaltyPolicyRef version="any" ref="tfl:PenaltyPolicy:PAYG"/>
+                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -3733,9 +3733,9 @@ If your Oyster only has pay as you go credit at adult rate on it you can let som
                   <validityParameterAssignments>
                     <GenericParameterAssignment id="tfl:GenericParameterAssignment@CappingRule@PAYG@bus" version="any" order="1">
                       <limitations>
-                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:PAYG@1D"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
+                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:PAYG"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -3780,9 +3780,9 @@ You can use Oyster pay as you go to pay for journeys on KPMG Thames Clipper rive
                   <validityParameterAssignments>
                     <GenericParameterAssignment id="tfl:GenericParameterAssignment@CappingRule@cableway" version="any" order="1">
                       <limitations>
-                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:Cableway5+"/>
                         <UsageValidityPeriodRef version="any" ref="tfl:Cableway5+@1W"/>
                         <UserProfileRef version="any" ref="tfl:adult"/>
+                        <ChargingPolicyRef version="any" ref="tfl:ChargingPolicy:Cableway5+"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -4933,8 +4933,8 @@ You must confirm you're still eligible by 31 October 2012 - your 18+ Student Oys
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:eligible"/>
                   <limitations>
                     <CommercialProfileRef version="any" ref="tfl:Registered_Educational_Establishment"/>
-                    <PurchaseWindowRef version="any" ref="tfl:18Plus_up_to_4_Weeks_in_advance"/>
                     <UserProfileRef version="any" ref="tfl:18Plus"/>
+                    <PurchaseWindowRef version="any" ref="tfl:18Plus_up_to_4_Weeks_in_advance"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -11927,6 +11927,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <PreassignedFareProductRef version="any" ref="tfl:Prepaid_trip"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Single@Prepaid_trip@Freedom_pass" version="any">
+                      <Amount>3.25</Amount>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@Prepaid_trip@adult" version="any">
                       <Amount>6.50</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -11935,10 +11939,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>3.25</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Single@Prepaid_trip@Freedom_pass" version="any">
-                      <Amount>3.25</Amount>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@Prepaid_trip@18Plus@return" version="any">
                       <Amount>4.30</Amount>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -11954,6 +11954,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <PreassignedFareProductRef version="any" ref="tfl:Prepaid_trip"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Single@Oyster_PayAsYouGo@Freedom_pass" version="any">
+                      <IsAllowed>false</IsAllowed>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@Oyster_PayAsYouGo@adult" version="any">
                       <Amount>6.50</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -11962,10 +11966,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <IsAllowed>false</IsAllowed>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Single@Oyster_PayAsYouGo@Freedom_pass" version="any">
-                      <IsAllowed>false</IsAllowed>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@Oyster_PayAsYouGo@18Plus" version="any">
                       <IsAllowed>false</IsAllowed>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -11981,6 +11981,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <PreassignedFareProductRef version="any" ref="tfl:Prepaid_trip"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Single@TravelCard@Freedom_pass" version="any">
+                      <IsAllowed>false</IsAllowed>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@TravelCard@adult" version="any">
                       <Amount>4.30</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -11989,10 +11993,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>2.15</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Single@TravelCard@Freedom_pass" version="any">
-                      <IsAllowed>false</IsAllowed>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Single@TravelCard@18Plus" version="any">
                       <IsAllowed>false</IsAllowed>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -12008,6 +12008,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <TimeIntervalRef version="any" ref="tfl:1w"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Week@TravelCard@Freedom_pass" version="any">
+                      <Amount>20.55</Amount>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Week@TravelCard@adult" version="any">
                       <Amount>41.10</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -12016,10 +12020,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>20.55</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Week@TravelCard@Freedom_pass" version="any">
-                      <Amount>20.55</Amount>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Week@TravelCard@18Plus" version="any">
                       <Amount>27.40</Amount>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -12035,6 +12035,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <TimeIntervalRef version="any" ref="tfl:1m"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Month@TravelCard@Freedom_pass" version="any">
+                      <Amount>20.55</Amount>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Month@TravelCard@adult" version="any">
                       <Amount>41.10</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -12043,10 +12047,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>20.55</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Month@TravelCard@Freedom_pass" version="any">
-                      <Amount>20.55</Amount>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Month@TravelCard@18Plus" version="any">
                       <Amount>27.40</Amount>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -12062,6 +12062,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <TimeIntervalRef version="any" ref="tfl:6m"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@7Month@TravelCard@Freedom_pass" version="any">
+                      <Amount>20.55</Amount>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@7Month@TravelCard@adult" version="any">
                       <Amount>41.10</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -12070,10 +12074,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>20.55</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@7Month@TravelCard@Freedom_pass" version="any">
-                      <Amount>20.55</Amount>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@7Month@TravelCard@18Plus" version="any">
                       <Amount>27.40</Amount>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -12089,6 +12089,10 @@ Find out more about using contactless payment cards on buses</Description>
                     <TimeIntervalRef version="any" ref="tfl:1y"/>
                   </pricesFor>
                   <cells>
+                    <FareProductPrice id="lrs:RB1@Year@TravelCard@Freedom_pass" version="any">
+                      <Amount>20.55</Amount>
+                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
+                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Year@TravelCard@adult" version="any">
                       <Amount>41.10</Amount>
                       <UserProfileRef version="any" ref="tfl:adult"/>
@@ -12097,10 +12101,6 @@ Find out more about using contactless payment cards on buses</Description>
                       <Amount>20.55</Amount>
                       <UserProfileRef version="any" ref="tfl:child"/>
                     </UsageParameterPrice>
-                    <FareProductPrice id="lrs:RB1@Year@TravelCard@Freedom_pass" version="any">
-                      <Amount>20.55</Amount>
-                      <SaleDiscountRightRef version="any" ref="tfl:Freedom_pass"/>
-                    </FareProductPrice>
                     <UsageParameterPrice id="lrs:RB1@Year@TravelCard@18Plus" version="any">
                       <Amount>27.40</Amount>
                       <UserProfileRef version="any" ref="tfl:18Plus"/>
@@ -13276,8 +13276,8 @@ Oyster card holders who want to travel on the Emirates Air Line as part of a 360
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <ValidableElementRef version="any" ref="ea:cableway_trip"/>
                   <limitations>
-                    <RoundTripRef version="any" ref="tfl:return"/>
                     <InterchangingRef version="any" ref="tfl:no_interchange_cannot_break_journey"/>
+                    <RoundTripRef version="any" ref="tfl:return"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -14778,6 +14778,8 @@ Multi-journey Boarding Passes are not transferable.</Description>
                       <Description>Monday to Saturday: 	07:15-20:00
 																Sunday and Bank Holidays: 08:15-19:00</Description>
                       <dayTypes>
+                        <DayTypeRef version="1" ref="tfl:LVP_EUS@Sunday"/>
+                        <DayTypeRef version="1" ref="tfl:LVP_EUS@Holiday"/>
                         <DayType id="tfl:VIC_KGX@Mon-Tue-Wed-Thur-Fri-Sat" version="1">
                           <properties>
                             <PropertyOfDay>
@@ -14795,8 +14797,6 @@ Multi-journey Boarding Passes are not transferable.</Description>
                             </Timeband>
                           </timebands>
                         </DayType>
-                        <DayTypeRef version="1" ref="tfl:LVP_EUS@Sunday"/>
-                        <DayTypeRef version="1" ref="tfl:LVP_EUS@Holiday"/>
                       </dayTypes>
                     </AvailabilityCondition>
                   </validityConditions>

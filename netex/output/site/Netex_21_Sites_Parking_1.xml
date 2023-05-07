@@ -12,6 +12,7 @@
       <validityConditions>
         <AvailabilityCondition id="pkg:PP01_Opening_Hours" version="any">
           <dayTypes>
+            <DayTypeRef ref=""/>
             <DayType id="pkg:EveryDay" version="any">
               <Name>Every day</Name>
               <properties>
@@ -24,7 +25,6 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayTypeRef ref=""/>
           </dayTypes>
           <timebands>
             <Timeband id="pkg:PP01_Opening_Hours@range" version="any">
@@ -35,6 +35,7 @@
         </AvailabilityCondition>
         <AvailabilityCondition id="pkg:PP01_Exit_Hours" version="any">
           <dayTypes>
+            <DayTypeRef ref=""/>
             <DayType id="pkg:24HrsEveryDay" version="any">
               <Name>Every day</Name>
               <properties>
@@ -47,7 +48,6 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
-            <DayTypeRef ref=""/>
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>

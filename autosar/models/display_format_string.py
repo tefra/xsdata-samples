@@ -6,7 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class DisplayFormatString:
-    """This is a display format specifier for the display of values  e.g. in documents or in measurement and calibration systems.
+    """This is a display format specifier for the display of values  e.g. in
+    documents or in measurement and calibration systems.
+
     The display format specifier is a subset of the ANSI C printf specifiers with the following
     form:
     % [flags] [width] [.prec] type character

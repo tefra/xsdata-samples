@@ -14,9 +14,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class TransAbstract:
-    """<div>
-
-    <h3>Translated Abstract</h3> </div>
+    """
+    <div> <h3>Translated Abstract</h3> </div>
     """
     class Meta:
         name = "trans-abstract"
@@ -45,14 +44,12 @@ class TransAbstract:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7141,
         }
     )
     sec: List[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 7141,
         }
     )
     abstract_type: Optional[str] = field(

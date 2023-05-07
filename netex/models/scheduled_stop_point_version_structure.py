@@ -184,8 +184,8 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    topographic_place_ref_or_topographic_place_view: List[object] = field(
-        default_factory=list,
+    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -200,7 +200,6 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     at_centre: Optional[bool] = field(

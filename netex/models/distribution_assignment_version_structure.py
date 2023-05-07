@@ -153,8 +153,8 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         }
     )
-    all_countries_ref_or_country_ref: List[object] = field(
-        default_factory=list,
+    all_countries_ref_or_country_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -169,7 +169,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     allowed_in_country: Optional[bool] = field(
@@ -188,8 +187,8 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: List[object] = field(
-        default_factory=list,
+    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -209,7 +208,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 3,
         }
     )
     distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = field(
@@ -268,8 +266,8 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -339,7 +337,6 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 13,
         }
     )
     responsibility_set_ref: Optional[ResponsibilitySetRef] = field(

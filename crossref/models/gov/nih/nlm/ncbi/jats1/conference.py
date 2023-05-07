@@ -19,9 +19,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class Conference:
-    """<div>
-
-    <h3>Conference Information</h3> </div>
+    """
+    <div> <h3>Conference Information</h3> </div>
     """
     class Meta:
         name = "conference"
@@ -40,7 +39,6 @@ class Conference:
         metadata={
             "name": "conf-name",
             "type": "Element",
-            "sequence": 5677,
         }
     )
     conf_acronym: List[ConfAcronym] = field(
@@ -48,7 +46,6 @@ class Conference:
         metadata={
             "name": "conf-acronym",
             "type": "Element",
-            "sequence": 5677,
         }
     )
     conf_num: Optional[ConfNum] = field(

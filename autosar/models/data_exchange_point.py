@@ -23,10 +23,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DataExchangePoint:
     """The Data Exchange Point describes the relationship between a work product
     and its intended use in the methodology with a tailoring of the AUTOSAR
-    templates. An informal description is provided by the 'desc' and 'introduction'
-    attributes of the DataExchangePoint. The informal description SHOULD include
-    the subject that is described by this data exchange point. E.g.
+    templates.
 
+    An informal description is provided by the 'desc' and 'introduction' attributes of the DataExchangePoint. The informal description SHOULD include the subject that is described by this data exchange point.
+    E.g.
     * producible data of tool A, version x
     * consumable data of tool B, version y
     * agreed profile between partner A and partner B in project xyz

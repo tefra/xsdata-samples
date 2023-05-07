@@ -53,8 +53,8 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(VersionedChildStructur
             "tokens": True,
         }
     )
-    type_of_responsibility_role_ref_or_responsibility_role_ref: List[object] = field(
-        default_factory=list,
+    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -69,7 +69,6 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(VersionedChildStructur
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     responsible_organisation_ref: Optional[OrganisationRefStructure] = field(

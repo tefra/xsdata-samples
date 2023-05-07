@@ -51,8 +51,8 @@ class ServiceDeliveryBodyStructure:
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: List[object] = field(
-            default_factory=list,
+        capability_not_supported_error_or_other_error: Optional[object] = field(
+            default=None,
             metadata={
                 "type": "Elements",
                 "choices": (
@@ -67,7 +67,6 @@ class ServiceDeliveryBodyStructure:
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-                "max_occurs": 2,
             }
         )
         description: Optional[str] = field(

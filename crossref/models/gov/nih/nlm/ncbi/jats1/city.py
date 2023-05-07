@@ -8,10 +8,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class City:
     """<div>
-
     <h3>City: in an Address</h3>
-    </div>
-    """
+    </div>"""
     class Meta:
         name = "city"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"

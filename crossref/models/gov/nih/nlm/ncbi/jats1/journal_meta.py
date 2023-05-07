@@ -19,9 +19,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class JournalMeta:
-    """<div>
-
-    <h3>Journal Metadata</h3> </div>
+    """
+    <div> <h3>Journal Metadata</h3> </div>
     """
     class Meta:
         name = "journal-meta"
@@ -47,14 +46,12 @@ class JournalMeta:
         metadata={
             "name": "contrib-group",
             "type": "Element",
-            "sequence": 6301,
         }
     )
     aff: List[Aff] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 6301,
         }
     )
     aff_alternatives: List[AffAlternatives] = field(
@@ -62,7 +59,6 @@ class JournalMeta:
         metadata={
             "name": "aff-alternatives",
             "type": "Element",
-            "sequence": 6301,
         }
     )
     issn: List[Issn] = field(

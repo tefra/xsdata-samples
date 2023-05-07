@@ -7,8 +7,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class RevisionLabelString:
     """This primitive represents an internal AUTOSAR revision label which
-    identifies an engineering object. It represents a pattern which.
+    identifies an engineering object.
 
+    It represents a pattern which
     * supports three integers representing from left to right MajorVersion, MinorVersion, PatchVersion.
     * may add an application specific suffix separated by one of ".", "_", ";".
     Legal patterns are for example:

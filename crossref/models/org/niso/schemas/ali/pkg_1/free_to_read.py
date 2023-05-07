@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.niso.org/schemas/ali/1.0/"
 
 @dataclass
 class FreeToRead:
-    """<div>
-
-    <h3>Free to Read (Niso Ali)</h3> </div>
+    """
+    <div> <h3>Free to Read (Niso Ali)</h3> </div>
     """
     class Meta:
         name = "free_to_read"

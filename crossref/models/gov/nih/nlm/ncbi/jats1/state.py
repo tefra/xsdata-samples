@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class State:
-    """<div>
-
-    <h3>State or Province: in an Address</h3> </div>
+    """
+    <div> <h3>State or Province: in an Address</h3> </div>
     """
     class Meta:
         name = "state"

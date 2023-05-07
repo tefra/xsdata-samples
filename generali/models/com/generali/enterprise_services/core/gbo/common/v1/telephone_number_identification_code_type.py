@@ -6,8 +6,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class TelephoneNumberIdentificationCodeType(TextType):
-    """<description xmlns="">
-
-    <description>The definition Identification Code or Destination Code
-    part of a Telephone Number.</description> </description>
+    """
+    <description xmlns=""> <description>The definition Identification Code or
+    Destination Code part of a Telephone Number.</description> </description>
     """

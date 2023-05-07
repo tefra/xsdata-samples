@@ -34,7 +34,6 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
             "max_occurs": 2,
-            "sequence": 672,
         }
     )
     program_1: List[AccessIndicatorsProgram] = field(
@@ -44,7 +43,6 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
             "max_occurs": 3,
-            "sequence": 676,
         }
     )
     program_2: List[ClinicaltrialsProgram] = field(
@@ -54,6 +52,5 @@ class CustomMetadata:
             "type": "Element",
             "namespace": "http://www.crossref.org/clinicaltrials.xsd",
             "max_occurs": 4,
-            "sequence": 676,
         }
     )

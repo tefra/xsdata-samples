@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .activation_link import ActivationLink
 from .activation_link_ref import ActivationLinkRef
 from .line_link_ref import LineLinkRef
@@ -28,8 +28,8 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
     class Meta:
         name = "LinkOnSection_VersionedChildStructure"
 
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -124,7 +124,6 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 18,
         }
     )
     reverse: Optional[bool] = field(

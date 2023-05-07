@@ -49,8 +49,8 @@ class ApisImplemented:
     times. Usually, you will have only a single entry for each of your
     APIs, but there are some use cases when serving two or more
     different versions of the same API is desirable. More background and
-    discussion
-    here:architecture/issues/6
+    discussion here:
+    https://github.com/erasmus-without-paper/ewp-specs-architecture/issues/6
 
     :ivar other_element: Manifest entries for each of the APIs are
         defined in separate schemas, within repositories describing
@@ -88,9 +88,9 @@ class Empty:
 
 @dataclass
 class ManifestApiEntryBase:
-    """A common base type for children of the `apis-implemented` element of the
-    manifest file. We declare it here (as opposed to declaring in the Discovery.
+    """A common base type for children of the `apis-implemented` element of the.
 
+    manifest file. We declare it here (as opposed to declaring in the Discovery
     API's namespace) because it is shared between all the APIs - we want it to
     stay backwards-compatible when new releases of the Discovery API are published.
     IMPORTANT: Clients MUST NOT assume that all children of `apis-implemented` will

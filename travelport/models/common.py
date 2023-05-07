@@ -6630,7 +6630,7 @@ class ProviderArnksegment:
 @dataclass
 class ProviderReservationDetail(TypeProviderReservationDetail):
     """
-    common element for mentioning provider reservation locator (PNR) details in
+    Common element for mentioning provider reservation locator (PNR) details in
     request.
     """
     class Meta:

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef
@@ -33,8 +33,8 @@ class SiteVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "Site_VersionStructure"
 
-    topographic_place_ref_or_topographic_place_view: List[object] = field(
-        default_factory=list,
+    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -49,7 +49,6 @@ class SiteVersionStructure(SiteElementVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     additional_topographic_places: Optional[TopographicPlaceRefsRelStructure] = field(
@@ -84,8 +83,8 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -140,7 +139,6 @@ class SiteVersionStructure(SiteElementVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
         }
     )
     parent_site_ref: Optional[SiteRefStructure] = field(

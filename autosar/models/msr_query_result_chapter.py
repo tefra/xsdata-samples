@@ -391,7 +391,6 @@ class Chapter:
             "name": "MSR-QUERY-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     msr_query_p_2: List[MsrQueryP2] = field(
@@ -400,7 +399,6 @@ class Chapter:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     p: List[MultiLanguageParagraph] = field(
@@ -409,7 +407,6 @@ class Chapter:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     verbatim: List[MultiLanguageVerbatim] = field(
@@ -418,7 +415,6 @@ class Chapter:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     list_value: List[ListType] = field(
@@ -427,7 +423,6 @@ class Chapter:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     def_list: List[DefList] = field(
@@ -436,7 +431,6 @@ class Chapter:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     labeled_list: List[LabeledList] = field(
@@ -445,7 +439,6 @@ class Chapter:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     formula: List[MlFormula] = field(
@@ -454,7 +447,6 @@ class Chapter:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     figure: List[MlFigure] = field(
@@ -463,7 +455,6 @@ class Chapter:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     note: List[Note] = field(
@@ -472,7 +463,6 @@ class Chapter:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     trace: List[TraceableText] = field(
@@ -481,7 +471,6 @@ class Chapter:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     structured_req: List[StructuredReq] = field(
@@ -490,7 +479,6 @@ class Chapter:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     table: List[Table] = field(
@@ -499,7 +487,6 @@ class Chapter:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     traceable_table: List[TraceableTable] = field(
@@ -508,7 +495,6 @@ class Chapter:
             "name": "TRACEABLE-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     prms: List[Prms] = field(
@@ -517,7 +503,6 @@ class Chapter:
             "name": "PRMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     topic_1: List[Topic1] = field(
@@ -526,7 +511,6 @@ class Chapter:
             "name": "TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     msr_query_topic_1: List[MsrQueryTopic1] = field(
@@ -535,7 +519,6 @@ class Chapter:
             "name": "MSR-QUERY-TOPIC-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     chapter: List["Chapter"] = field(
@@ -544,7 +527,6 @@ class Chapter:
             "name": "CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     msr_query_chapter: List[MsrQueryChapter] = field(
@@ -553,7 +535,6 @@ class Chapter:
             "name": "MSR-QUERY-CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 14604,
         }
     )
     variation_point: Optional[VariationPoint] = field(

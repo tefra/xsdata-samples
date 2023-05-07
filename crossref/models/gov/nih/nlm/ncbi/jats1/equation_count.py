@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class EquationCount:
-    """<div>
-
-    <h3>Equation Count</h3> </div>
+    """
+    <div> <h3>Equation Count</h3> </div>
     """
     class Meta:
         name = "equation-count"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .bus_submode_enumeration import BusSubmodeEnumeration
@@ -69,8 +69,8 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -125,6 +125,5 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 10,
         }
     )

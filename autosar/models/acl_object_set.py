@@ -28,10 +28,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AclObjectSet:
-    """This meta class represents the ability to denote a set of objects for which
-    roles and rights (access control lists) shall be defined. It basically can
-    define the objects based on.
-
+    """This meta class represents the ability to denote a set of objects for which roles and rights (access control lists) shall be defined. It basically can define the objects based on
     * the nature of objects
     * the involved blueprints
     * the artifact in which the objects are serialized

@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class Break:
-    """<div>
-
-    <h3>Line Break</h3> </div>
+    """
+    <div> <h3>Line Break</h3> </div>
     """
     class Meta:
         name = "break"

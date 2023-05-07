@@ -6,9 +6,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class Ref:
-    """This primitive denotes a name based reference. For detailed syntax see the
-    xsd.pattern.
+    """This primitive denotes a name based reference.
 
+    For detailed syntax see the xsd.pattern.
     * first slash (relative or absolute reference) [optional]
     * Identifier  [required]
     * a sequence of slashes and Identifiers [optional]

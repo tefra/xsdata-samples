@@ -32,8 +32,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -63,7 +63,6 @@ class NetworkFrameTopicStructure(TopicStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 5,
         }
     )
     type_of_frame_ref: Optional[TypeOfFrameRef] = field(

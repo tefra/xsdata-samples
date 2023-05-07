@@ -16,9 +16,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class RptExecutionContext:
-    """Defines an environment for the execution of ExecutableEntites which is
-    qualified by.
-
+    """Defines an environment for the execution of ExecutableEntites which is qualified by
     * OSTask
     * communication buffer usage
 

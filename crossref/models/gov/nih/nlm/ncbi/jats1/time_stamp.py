@@ -6,9 +6,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class TimeStamp:
-    """<div>
-
-    <h3>Time Stamp For Cited Work</h3> </div>
+    """
+    <div> <h3>Time Stamp For Cited Work</h3> </div>
     """
     class Meta:
         name = "time-stamp"

@@ -16,8 +16,8 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: List[object] = field(
-        default_factory=list,
+    codespace_ref_or_codespace: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -32,7 +32,6 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     administrative_zone_ref: Optional[AdministrativeZoneRef] = field(

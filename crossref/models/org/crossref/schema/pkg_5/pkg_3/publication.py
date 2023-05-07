@@ -33,7 +33,6 @@ class Publication:
         metadata={
             "type": "Element",
             "max_occurs": 2,
-            "sequence": 702,
         }
     )
     isbn: List[Isbn] = field(
@@ -41,7 +40,6 @@ class Publication:
         metadata={
             "type": "Element",
             "max_occurs": 2,
-            "sequence": 702,
         }
     )
     doi: Optional[str] = field(

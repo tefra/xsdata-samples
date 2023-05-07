@@ -7,9 +7,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class Anonymous:
-    """<div>
-
-    <h3>Anonymous</h3> </div>
+    """
+    <div> <h3>Anonymous</h3> </div>
     """
     class Meta:
         name = "anonymous"

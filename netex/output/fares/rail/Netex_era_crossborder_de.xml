@@ -1022,8 +1022,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@outbound"/>
                     <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
+                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@outbound"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1038,8 +1038,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@inbound"/>
                     <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
+                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@period_return@inbound"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1055,8 +1055,8 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_access"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@single"/>
                     <FrequencyOfUseRef version="any" ref="db:DB@Tariff@Trip@frequency@single_use"/>
+                    <RoundTripRef version="any" ref="db:DB@Tariff@Trip@trip_type@single"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -1141,15 +1141,15 @@ All other animals and animals with infectious diseases are excluded from carriag
                   <Name>The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted.</Name>
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                   <limitations>
+                    <Interchanging id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging" version="01">
+                      <CanInterchange>true</CanInterchange>
+                      <CanBreakJourney>false</CanBreakJourney>
+                    </Interchanging>
                     <UsageValidityPeriod id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@validity" version="01">
                       <UsageTrigger>purchase</UsageTrigger>
                       <UsageEnd>endOfTrip</UsageEnd>
                       <StandardDuration>P14D</StandardDuration>
                     </UsageValidityPeriod>
-                    <Interchanging id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging" version="01">
-                      <CanInterchange>true</CanInterchange>
-                      <CanBreakJourney>false</CanBreakJourney>
-                    </Interchanging>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -2090,13 +2090,13 @@ Example: If you are traveling with the trilex from Hainewalde to Zittau and tran
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="db:DB@Tariff@Trip@frequency@single_use" version="any">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                      </FrequencyOfUse>
                       <Interchanging id="db:DB@Tariff@Trip@interchanging@can_break_trip" version="any">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="db:DB@Tariff@Trip@frequency@single_use" version="any">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -3031,8 +3031,8 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                           <FareStructureElementRef version="01" ref="tlx:Trilex@Tariff@Tagesticket@COMPOSITION"/>
                           <SalesOfferPackageRef version="01" ref="tlx:Trilex@Product@Pass@Tagesticket@period-SOP"/>
                           <limitations>
-                            <UserProfileRef version="any" ref="db:adult"/>
                             <GroupTicketRef version="01" ref="tlx:Trilex@Tariff@Tagesticket@group"/>
+                            <UserProfileRef version="any" ref="db:adult"/>
                           </limitations>
                           <validityParameters>
                             <FareSectionRef version="01" ref="tlx:Trilex@Dresden-to-Goerlitz"/>
@@ -3366,9 +3366,6 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             </ResponsibilitySet>
           </responsibilitySets>
           <typesOfValue>
-            <TypeOfFrame id="eura:Fare" version="any">
-              <Name>Fares Frame</Name>
-            </TypeOfFrame>
             <ValueSet id="eura:Types_of_ProductCategory" version="any" classOfValues="TypeOfProductCategory">
               <Name>Types of Product Category</Name>
               <values>
@@ -3591,6 +3588,9 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
+            <TypeOfFrame id="eura:Fare" version="any">
+              <Name>Fares Frame</Name>
+            </TypeOfFrame>
           </typesOfValue>
           <organisations>
             <Operator id="uic:0051" version="any">

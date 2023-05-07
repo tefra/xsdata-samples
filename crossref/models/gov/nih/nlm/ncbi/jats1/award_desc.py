@@ -10,9 +10,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class AwardDesc:
-    """<div>
-
-    <h3>Award Description</h3> </div>
+    """
+    <div> <h3>Award Description</h3> </div>
     """
     class Meta:
         name = "award-desc"

@@ -8,10 +8,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 @dataclass
 class History:
     """<div>
-
     <h3>History: Document History</h3>
-    </div>
-    """
+    </div>"""
     class Meta:
         name = "history"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"

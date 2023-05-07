@@ -201,8 +201,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
-        default_factory=list,
+    choice: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -392,7 +392,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 37,
         }
     )
     customer_purchase_package_element_ref: List[CustomerPurchasePackageElementRef] = field(
@@ -1059,8 +1058,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: List[object] = field(
-        default_factory=list,
+    choice_1: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -1085,7 +1084,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 4,
         }
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
@@ -1096,8 +1094,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: List[object] = field(
-        default_factory=list,
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -1112,7 +1110,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
     payment_method: Optional[PaymentMethodEnumeration] = field(
@@ -1192,8 +1189,8 @@ class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "ParkingPrice_VersionedChildStructure"
 
-    parking_tariff_ref_or_parking_charge_band: List[object] = field(
-        default_factory=list,
+    parking_tariff_ref_or_parking_charge_band: Optional[object] = field(
+        default=None,
         metadata={
             "type": "Elements",
             "choices": (
@@ -1208,7 +1205,6 @@ class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-            "max_occurs": 2,
         }
     )
 

@@ -45,9 +45,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class MetaValue:
-    """<div>
-
-    <h3>Metadata Data Value For Custom Metadata</h3> </div>
+    """
+    <div> <h3>Metadata Data Value For Custom Metadata</h3> </div>
     """
     class Meta:
         name = "meta-value"

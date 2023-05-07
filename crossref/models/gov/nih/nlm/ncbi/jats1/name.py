@@ -12,9 +12,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class Name:
-    """<div>
-
-    <h3>Name of Person (Structured)</h3> </div>
+    """
+    <div> <h3>Name of Person (Structured)</h3> </div>
     """
     class Meta:
         name = "name"
@@ -32,6 +31,7 @@ class Name:
             "name": "given-names",
             "type": "Element",
             "max_occurs": 2,
+            "sequence": 2550,
         }
     )
     prefix: Optional[Prefix] = field(

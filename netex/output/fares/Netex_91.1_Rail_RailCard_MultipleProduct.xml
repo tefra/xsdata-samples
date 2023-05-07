@@ -247,6 +247,19 @@
                   <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:can_purchase"/>
                   <LimitationGroupingType>XOR</LimitationGroupingType>
                   <limitations>
+                    <Suspending id="myfares:ABO_suspending" version="1.0">
+                      <SuspensionPolicy>forCertifiedIllness forHoliday</SuspensionPolicy>
+                      <QualificationPeriod>P6M</QualificationPeriod>
+                      <MinimumSuspensionPeriod>P1M</MinimumSuspensionPeriod>
+                      <MaximumSuspensionPeriod>P9M</MaximumSuspensionPeriod>
+                      <MaximumNumberOfSuspensionsPerTerm>1</MaximumNumberOfSuspensionsPerTerm>
+                    </Suspending>
+                    <UsageValidityPeriod id="myfares:ABO_validity_conditions" version="1.0">
+                      <Name>Refund for subscription</Name>
+                      <ValidityPeriodType>subscription</ValidityPeriodType>
+                      <UsageTrigger>specifiedStartDate</UsageTrigger>
+                      <UsageStartConstraintType>variable</UsageStartConstraintType>
+                    </UsageValidityPeriod>
                     <Subscribing id="myfares:ABO_3year_card_on_1year_payment_installment" version="1.0">
                       <SubscriptionTermType>openEnded</SubscriptionTermType>
                       <MinimumSubscriptionPeriod>P1Y</MinimumSubscriptionPeriod>
@@ -258,19 +271,12 @@
                       </possibleInstallmenttIntervals>
                       <InstallmentPaymentMethods>debitCard creditCard directDebit</InstallmentPaymentMethods>
                     </Subscribing>
-                    <UsageValidityPeriod id="myfares:ABO_validity_conditions" version="1.0">
-                      <Name>Refund for subscription</Name>
-                      <ValidityPeriodType>subscription</ValidityPeriodType>
-                      <UsageTrigger>specifiedStartDate</UsageTrigger>
-                      <UsageStartConstraintType>variable</UsageStartConstraintType>
-                    </UsageValidityPeriod>
-                    <Suspending id="myfares:ABO_suspending" version="1.0">
-                      <SuspensionPolicy>forCertifiedIllness forHoliday</SuspensionPolicy>
-                      <QualificationPeriod>P6M</QualificationPeriod>
-                      <MinimumSuspensionPeriod>P1M</MinimumSuspensionPeriod>
-                      <MaximumSuspensionPeriod>P9M</MaximumSuspensionPeriod>
-                      <MaximumNumberOfSuspensionsPerTerm>1</MaximumNumberOfSuspensionsPerTerm>
-                    </Suspending>
+                    <PurchaseWindow id="myfares:ABO_purchase Window_conditions" version="1.0">
+                      <Name>Purchase window for subscription</Name>
+                      <PurchaseWhen>advanceOnly</PurchaseWhen>
+                      <MinimumPeriodBeforeDeparture>P3D</MinimumPeriodBeforeDeparture>
+                      <PurchaseMoment>inAdvanceOnly</PurchaseMoment>
+                    </PurchaseWindow>
                     <Refunding id="myfares:ABO_refund_conditions" version="1.0">
                       <Name>Refund for subscription</Name>
                       <CanChangeClass>true</CanChangeClass>
@@ -289,12 +295,6 @@
                       <PartialRefundBasis>unusedMonths</PartialRefundBasis>
                       <PaymentMethod/>
                     </Refunding>
-                    <PurchaseWindow id="myfares:ABO_purchase Window_conditions" version="1.0">
-                      <Name>Purchase window for subscription</Name>
-                      <PurchaseWhen>advanceOnly</PurchaseWhen>
-                      <MinimumPeriodBeforeDeparture>P3D</MinimumPeriodBeforeDeparture>
-                      <PurchaseMoment>inAdvanceOnly</PurchaseMoment>
-                    </PurchaseWindow>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>

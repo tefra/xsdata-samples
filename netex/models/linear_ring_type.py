@@ -31,6 +31,5 @@ class LinearRingType(AbstractRingType):
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
             ),
-            "min_occurs": 8,
         }
     )

@@ -21,9 +21,8 @@ __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 @dataclass
 class FloatsGroup:
-    """<div>
-
-    <h3>Floats Group</h3> </div>
+    """
+    <div> <h3>Floats Group</h3> </div>
     """
     class Meta:
         name = "floats-group"
