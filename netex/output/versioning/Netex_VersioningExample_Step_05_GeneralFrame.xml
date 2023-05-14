@@ -40,34 +40,6 @@
         <DefaultResponsibilitySetRef ref="mybus:RS_10">EXTERNAL</DefaultResponsibilitySetRef>
       </FrameDefaults>
       <members>
-        <ServicePattern id="mybus:SP001" created="2010-05-21T10:30:51Z" changed="2010-05-22T10:30:51Z" version="002">
-          <Name>From A to D, version 2</Name>
-          <pointsInSequence>
-            <StopPointInJourneyPattern id="mybus:P001_01" version="002" order="1">
-              <ScheduledStopPointRef version="002" ref="mybus:SSP0001A"/>
-            </StopPointInJourneyPattern>
-            <StopPointInJourneyPattern id="mybus:P001_02" version="002" order="2">
-              <ScheduledStopPointRef version="002" ref="mybus:SSP0002B"/>
-              <ForAlighting>true</ForAlighting>
-              <ForBoarding>false</ForBoarding>
-            </StopPointInJourneyPattern>
-            <StopPointInJourneyPattern id="mybus:P001_03" version="001" order="3">
-              <ScheduledStopPointRef version="001" ref="mybus:SSP0003C"/>
-            </StopPointInJourneyPattern>
-          </pointsInSequence>
-        </ServicePattern>
-        <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="002">
-          <Name>Version one of Link from A to B</Name>
-          <Distance>1.12</Distance>
-          <FromPointRef version="002" ref="mybus:SSP0001A"/>
-          <ToPointRef version="002" ref="mybus:SSP0002B"/>
-        </ServiceLink>
-        <ServiceLink id="mybu:SL_BtoC01" created="2010-05-21T10:30:51Z" version="001">
-          <Name>Version one of Link from B to C</Name>
-          <Distance>1.25</Distance>
-          <FromPointRef version="002" ref="mybus:SSP0002B"/>
-          <ToPointRef version="001" ref="mybus:SSP0003C"/>
-        </ServiceLink>
         <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" changed="2010-05-18T09:30:47Z" modification="revise" version="002">
           <Name>Haltstelle A - Museum</Name>
           <Description>Version two of stop A. Name is Changed</Description>
@@ -85,6 +57,34 @@
           <Description>Version one of stop C</Description>
           <VehicleModes/>
         </ScheduledStopPoint>
+        <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="002">
+          <Name>Version one of Link from A to B</Name>
+          <Distance>1.12</Distance>
+          <FromPointRef version="002" ref="mybus:SSP0001A"/>
+          <ToPointRef version="002" ref="mybus:SSP0002B"/>
+        </ServiceLink>
+        <ServiceLink id="mybu:SL_BtoC01" created="2010-05-21T10:30:51Z" version="001">
+          <Name>Version one of Link from B to C</Name>
+          <Distance>1.25</Distance>
+          <FromPointRef version="002" ref="mybus:SSP0002B"/>
+          <ToPointRef version="001" ref="mybus:SSP0003C"/>
+        </ServiceLink>
+        <ServicePattern id="mybus:SP001" created="2010-05-21T10:30:51Z" changed="2010-05-22T10:30:51Z" version="002">
+          <Name>From A to D, version 2</Name>
+          <pointsInSequence>
+            <StopPointInJourneyPattern id="mybus:P001_01" version="002" order="1">
+              <ScheduledStopPointRef version="002" ref="mybus:SSP0001A"/>
+            </StopPointInJourneyPattern>
+            <StopPointInJourneyPattern id="mybus:P001_02" version="002" order="2">
+              <ScheduledStopPointRef version="002" ref="mybus:SSP0002B"/>
+              <ForAlighting>true</ForAlighting>
+              <ForBoarding>false</ForBoarding>
+            </StopPointInJourneyPattern>
+            <StopPointInJourneyPattern id="mybus:P001_03" version="001" order="3">
+              <ScheduledStopPointRef version="001" ref="mybus:SSP0003C"/>
+            </StopPointInJourneyPattern>
+          </pointsInSequence>
+        </ServicePattern>
         <DayType id="mybus:DT001_MF" created="2010-05-18T10:30:47Z" version="001">
           <Name>Monday to Friday</Name>
           <properties>

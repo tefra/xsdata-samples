@@ -12,7 +12,6 @@
       <validityConditions>
         <AvailabilityCondition id="mysite:PP01_OpeningHours" version="any">
           <dayTypes>
-            <DayTypeRef ref=""/>
             <DayType id="mysite:EveryDay" version="any">
               <Name>Every day</Name>
               <properties>
@@ -25,6 +24,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
           <timebands>
             <Timeband id="mysite:OpeningHours" version="any">
@@ -35,7 +35,6 @@
         </AvailabilityCondition>
         <AvailabilityCondition id="mysite:PP01_ExitHours" version="any">
           <dayTypes>
-            <DayTypeRef ref=""/>
             <DayType id="mysite:24HrsEveryDay" version="any">
               <Name>Every day</Name>
               <properties>
@@ -48,6 +47,7 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <DayTypeRef ref=""/>
           </dayTypes>
         </AvailabilityCondition>
       </validityConditions>
@@ -221,7 +221,6 @@
               <Name>Charged Parking times</Name>
               <Description>Modnay to friday not PublicHolidays</Description>
               <dayTypes>
-                <DayTypeRef ref=""/>
                 <DayType id="mysite:WorkingDay" version="any">
                   <Name>Working day</Name>
                   <properties>
@@ -235,6 +234,7 @@
                     </PropertyOfDay>
                   </properties>
                 </DayType>
+                <DayTypeRef ref=""/>
               </dayTypes>
               <timebands>
                 <Timeband id="mysite:ParkingChargeHours" version="any">

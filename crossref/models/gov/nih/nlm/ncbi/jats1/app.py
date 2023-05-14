@@ -76,7 +76,7 @@ class App:
         metadata={
             "type": "Element",
             "max_occurs": 2,
-            "sequence": 5189,
+            "sequence": 1,
         }
     )
     address: List[Address] = field(

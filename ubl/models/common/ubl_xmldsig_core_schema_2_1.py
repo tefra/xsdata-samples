@@ -220,7 +220,7 @@ class SpkidataType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "min_occurs": 1,
-            "sequence": 114,
+            "sequence": 1,
             "format": "base64",
         }
     )
@@ -229,7 +229,7 @@ class SpkidataType:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-            "sequence": 114,
+            "sequence": 1,
         }
     )
 
@@ -433,7 +433,7 @@ class X509DataType:
             "name": "X509IssuerSerial",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "sequence": 90,
+            "sequence": 1,
         }
     )
     x509_ski: Tuple[bytes, ...] = field(
@@ -442,7 +442,7 @@ class X509DataType:
             "name": "X509SKI",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "sequence": 90,
+            "sequence": 1,
             "format": "base64",
         }
     )
@@ -452,7 +452,7 @@ class X509DataType:
             "name": "X509SubjectName",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "sequence": 90,
+            "sequence": 1,
         }
     )
     x509_certificate: Tuple[bytes, ...] = field(
@@ -461,7 +461,7 @@ class X509DataType:
             "name": "X509Certificate",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "sequence": 90,
+            "sequence": 1,
             "format": "base64",
         }
     )
@@ -471,7 +471,7 @@ class X509DataType:
             "name": "X509CRL",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "sequence": 90,
+            "sequence": 1,
             "format": "base64",
         }
     )
@@ -480,7 +480,7 @@ class X509DataType:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-            "sequence": 90,
+            "sequence": 1,
         }
     )
 

@@ -1644,7 +1644,7 @@ class TravelDateTimeType:
                 "name": "Day",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2079,
+                "sequence": 1,
             }
         )
         days_range: List["TravelDateTimeType.DepartureDates.DaysRange"] = field(
@@ -1653,7 +1653,7 @@ class TravelDateTimeType:
                 "name": "DaysRange",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "sequence": 2079,
+                "sequence": 1,
             }
         )
         length_of_stay: List["TravelDateTimeType.DepartureDates.LengthOfStay"] = field(

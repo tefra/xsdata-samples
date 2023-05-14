@@ -120,9 +120,6 @@
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations>
-                      <CommercialProfile id="atc:corporate" version="any">
-                        <Name>General coprorate profile</Name>
-                      </CommercialProfile>
                       <UserProfile id="atc:adult" version="any">
                         <Name>Adult Fare - 15 or over</Name>
                         <Description>Adult  - if not eligible for CONCESSION</Description>
@@ -212,6 +209,9 @@
                         <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
+                      <CommercialProfile id="atc:corporate" version="any">
+                        <Name>General coprorate profile</Name>
+                      </CommercialProfile>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -223,9 +223,9 @@
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations>
-                      <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                       <UserProfileRef version="any" ref="atc:youth"/>
                       <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled"/>
+                      <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                     </limitations>
                     <IncludesGroupingType>AND</IncludesGroupingType>
                     <includes>
@@ -1208,8 +1208,6 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@anytime"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
-                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                         <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
                         <UsageValidityPeriod id="atc:ATOC@Tariff@Trip@single@validity@anytime" version="any">
                           <Description>Anytime Single must be used within 2 days of the date shown on the ticket and up until 04:29 after the last day of validity.</Description>
@@ -1219,6 +1217,8 @@ From London: Valid on the following services:
                           <UsageEnd>endOfFareDay</UsageEnd>
                           <StandardDuration>P2D</StandardDuration>
                         </UsageValidityPeriod>
+                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
+                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@single@validity_xD3@off_peak" version="01" order="1">
@@ -1227,8 +1227,6 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@any_off_peak"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
-                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                         <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
                         <UsageValidityPeriod id="atc:ATOC@Tariff@Trip@single@validity@off_peak" version="any">
                           <Description>Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.</Description>
@@ -1237,6 +1235,8 @@ From London: Valid on the following services:
                           <UsageTrigger>specifiedStartDate</UsageTrigger>
                           <UsageEnd>endOfFareDay</UsageEnd>
                         </UsageValidityPeriod>
+                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
+                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@single@validity@advance" version="01" order="1">
@@ -1245,15 +1245,7 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@advance"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                         <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
-                        <Interchanging id="atc:ATOC@Tariff@Trip@single@interchanging@no_break" version="any">
-                          <Name>No Break of journey</Name>
-                          <Description>INFORMATION: Please note that advance Tickets do not permit a break of journey. The special conditions for advance Tickets can be found at</Description>
-                          <Url>www.nationalrail.co.uk/times_fares/ticket_types/46546.aspx.</Url>
-                          <CanInterchange>true</CanInterchange>
-                          <CanBreakJourney>false</CanBreakJourney>
-                        </Interchanging>
                         <UsageValidityPeriod id="atc:ATOC@Tariff@Trip@single@validity@advance" version="any">
                           <Description>Advance can only be used on teh day.</Description>
                           <Url>www.nationalrail.co.uk/times_fares/ticket_types/46546.aspx.</Url>
@@ -1262,6 +1254,14 @@ From London: Valid on the following services:
                           <UsageEnd>endOfTrip</UsageEnd>
                           <StandardDuration>P1D</StandardDuration>
                         </UsageValidityPeriod>
+                        <Interchanging id="atc:ATOC@Tariff@Trip@single@interchanging@no_break" version="any">
+                          <Name>No Break of journey</Name>
+                          <Description>INFORMATION: Please note that advance Tickets do not permit a break of journey. The special conditions for advance Tickets can be found at</Description>
+                          <Url>www.nationalrail.co.uk/times_fares/ticket_types/46546.aspx.</Url>
+                          <CanInterchange>true</CanInterchange>
+                          <CanBreakJourney>false</CanBreakJourney>
+                        </Interchanging>
+                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -1275,9 +1275,9 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@anytime"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
+                        <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@return"/>
                         <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
                         <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
-                        <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@return"/>
                       </limitations>
                       <includes>
                         <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@return@outbound@validity_xD3@anytime@period_return" version="01" order="1">
@@ -1298,8 +1298,8 @@ From London: Valid on the following services:
                           <Description>Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.</Description>
                           <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                           <limitations>
-                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@off_peak"/>
                             <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@day_return@outbound"/>
+                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@off_peak"/>
                           </limitations>
                         </GenericParameterAssignment>
                       </includes>
@@ -1310,8 +1310,6 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@any_off_peak"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
-                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                         <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@return@outbound"/>
                         <UsageValidityPeriod id="atc:ATOC@Tariff@Trip@return@outbound@validity@off_peak" version="any">
                           <Description>Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.</Description>
@@ -1320,6 +1318,8 @@ From London: Valid on the following services:
                           <UsageTrigger>specifiedStartDate</UsageTrigger>
                           <UsageEnd>endOfFareDay</UsageEnd>
                         </UsageValidityPeriod>
+                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
+                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@return@outbound@validity_xD3@advance" version="01" order="1">
@@ -1342,9 +1342,9 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@anytime"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
+                        <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@return"/>
                         <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
                         <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
-                        <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@return"/>
                       </limitations>
                       <includes>
                         <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@return@inbound@validity_xD3@anytime@period_return" version="01" order="1">
@@ -1365,8 +1365,8 @@ From London: Valid on the following services:
                           <Description>Anytime Day (Single and Return) tickets must be used on the date shown on your ticket and up to 04:29 the following day.</Description>
                           <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                           <limitations>
-                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@off_peak"/>
                             <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@day_return@inbound"/>
+                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@off_peak"/>
                           </limitations>
                         </GenericParameterAssignment>
                       </includes>
@@ -1377,8 +1377,6 @@ From London: Valid on the following services:
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@any_off_peak"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
-                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                         <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
                         <UsageValidityPeriod id="atc:ATOC@Tariff@Trip@return@inbound@validity@off_peak" version="any">
                           <Description>the return portion must be used within one calendar month and up until 04:29 after the last day of validiy  CHECKt</Description>
@@ -1388,6 +1386,8 @@ From London: Valid on the following services:
                           <UsageEnd>endOfFareDay</UsageEnd>
                           <StandardDuration>P1M</StandardDuration>
                         </UsageValidityPeriod>
+                        <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
+                        <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@return@inbound@validity_xD3@advance" version="01" order="1">
@@ -1464,6 +1464,9 @@ From London: Valid on the following services:
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
                       </Interchanging>
+                      <FrequencyOfUse id="atc:ATOC@Tariff@Trip@frequency@single_use" version="any">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                      </FrequencyOfUse>
                       <Interchanging id="atc:ATOC@Tariff@Trip@interchanging@can_break_trip" version="any">
                         <Description>16. Break of journey
 16.1. Most Tickets allow you to break your journey. This means that you do not have to make the whole of your journey at the same time or, where allowed, on the same day.
@@ -1477,9 +1480,6 @@ INFORMATION: For example, where a train service makes a circular journey, you ma
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="atc:ATOC@Tariff@Trip@frequency@single_use" version="any">
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -2095,22 +2095,6 @@ Refunds: Your ticket is refundable.</Description>
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations>
-                      <Refunding id="atc:ATOC@Tariff@General@after_sales@can_refund" version="any">
-                        <Name>Can Refund</Name>
-                        <Description>Refunds: Your ticket is refundable.
-
-If you decide not to use your ticket to make all or part of your intended journey then you can get a refund by returning your unused ticket to the ticket office or place of purchase (for tickets bought via websites, telesales or travel agents) within 28 days of the ticket expiry date. You may be required to pay an administration fee.</Description>
-                        <Url>http://www.nationalrail.co.uk/National%20Rail%20Conditions%20of%20Travel.pdf</Url>
-                        <Allowed>partial</Allowed>
-                        <UnusedTicketsOnly>true</UnusedTicketsOnly>
-                        <ResellWhen>afterEndOfValidity</ResellWhen>
-                        <ExchangableUntilDuration>-P28D</ExchangableUntilDuration>
-                        <HasFee>true</HasFee>
-                        <RefundBasis>perPerson</RefundBasis>
-                        <PaymentMethods/>
-                        <RefundPolicy/>
-                        <PaymentMethod>cash cheque creditCard voucher warrant</PaymentMethod>
-                      </Refunding>
                       <Exchanging id="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route" version="any">
                         <Name>Exchange</Name>
                         <Description>Changing the time or date of travel
@@ -2127,6 +2111,22 @@ There are no restrictions on when you can travel, however you will need to buy a
                         <RefundBasis>perOffer</RefundBasis>
                         <PaymentMethods/>
                       </Exchanging>
+                      <Refunding id="atc:ATOC@Tariff@General@after_sales@can_refund" version="any">
+                        <Name>Can Refund</Name>
+                        <Description>Refunds: Your ticket is refundable.
+
+If you decide not to use your ticket to make all or part of your intended journey then you can get a refund by returning your unused ticket to the ticket office or place of purchase (for tickets bought via websites, telesales or travel agents) within 28 days of the ticket expiry date. You may be required to pay an administration fee.</Description>
+                        <Url>http://www.nationalrail.co.uk/National%20Rail%20Conditions%20of%20Travel.pdf</Url>
+                        <Allowed>partial</Allowed>
+                        <UnusedTicketsOnly>true</UnusedTicketsOnly>
+                        <ResellWhen>afterEndOfValidity</ResellWhen>
+                        <ExchangableUntilDuration>-P28D</ExchangableUntilDuration>
+                        <HasFee>true</HasFee>
+                        <RefundBasis>perPerson</RefundBasis>
+                        <PaymentMethods/>
+                        <RefundPolicy/>
+                        <PaymentMethod>cash cheque creditCard voucher warrant</PaymentMethod>
+                      </Refunding>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -2136,14 +2136,6 @@ There are no restrictions on when you can travel, however you will need to buy a
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                     <LimitationGroupingType>OR</LimitationGroupingType>
                     <limitations>
-                      <Refunding id="atc:ATOC@Tariff@General@after_sales@advance@no_refund" version="any">
-                        <Name>No Refund</Name>
-                        <Url>http://www.nationalrail.co.uk/times_fares/ticket_types/46583.aspx#</Url>
-                        <Allowed>none</Allowed>
-                        <PaymentMethods/>
-                        <RefundPolicy/>
-                        <PaymentMethod/>
-                      </Refunding>
                       <Exchanging id="atc:ATOC@Tariff@General@after_sales@advance@can_change_trip_date_for fee" version="any">
                         <Name>Exchange</Name>
                         <Description>Changing the time or date of travel
@@ -2160,6 +2152,14 @@ Any difference in fare and an administration fee will be payable prior to travel
                         <RefundBasis>perOffer</RefundBasis>
                         <PaymentMethods/>
                       </Exchanging>
+                      <Refunding id="atc:ATOC@Tariff@General@after_sales@advance@no_refund" version="any">
+                        <Name>No Refund</Name>
+                        <Url>http://www.nationalrail.co.uk/times_fares/ticket_types/46583.aspx#</Url>
+                        <Allowed>none</Allowed>
+                        <PaymentMethods/>
+                        <RefundPolicy/>
+                        <PaymentMethod/>
+                      </Refunding>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -2172,8 +2172,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@anytime"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                         <ExchangingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route"/>
+                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@Standard@after_sales_xD3@any_off_peak" version="01" order="1">
@@ -2182,8 +2182,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@any_off_peak"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                         <ExchangingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route"/>
+                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                       </limitations>
                     </GenericParameterAssignment>
                     <GenericParameterAssignment id="atc:ATOC@Tariff@Trip@Standard@after_sales_xD3@advance" version="01" order="1">
@@ -2192,8 +2192,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                       <FareStructureElementRef version="01" ref="atc:ATOC@Tariff@Demand@advance"/>
                       <LimitationGroupingType>AND</LimitationGroupingType>
                       <limitations>
-                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                         <ExchangingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route"/>
+                        <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                       </limitations>
                     </GenericParameterAssignment>
                   </validityParameterAssignments>
@@ -2557,8 +2557,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                   <ValidableElementRef version="01" ref="atc:ATOC@Products@Trip@COMMON">Chain with COMMON values</ValidableElementRef>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
+                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -2571,8 +2571,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                   <ValidableElementRef version="01" ref="atc:ATOC@Products@Trip@COMMON">Chain with COMMON values</ValidableElementRef>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@period_return@outbound"/>
+                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -2585,8 +2585,8 @@ Any difference in fare and an administration fee will be payable prior to travel
                   <ValidableElementRef version="01" ref="atc:ATOC@Products@Trip@COMMON">Chain with COMMON values</ValidableElementRef>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                     <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@period_return@inbound"/>
+                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -2698,11 +2698,11 @@ Refunds: Your ticket is refundable.
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
+                    <ExchangingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route"/>
+                    <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
                     <TransferabilityRef version="any" ref="atc:ATOC@Tariff@General@transferring@individual@not_transferable"/>
                     <TransferabilityRef version="any" ref="atc:ATOC@Tariff@General@transferring@corporate@can_transfer"/>
                     <ReplacingRef version="any" ref="atc:ATOC@Tariff@General@replacing"/>
-                    <RefundingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@can_refund"/>
-                    <ExchangingRef version="any" ref="atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="atc:ATOC@Products@Trip@Standard@single@generic@group_tickets" version="01" order="1">
@@ -4974,17 +4974,6 @@ IThe ticket may be issued anytime up to seven days in advance.</Description>
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:gives_entitlement"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
-                      <Replacing id="atc:ATOC@Tariff@Pass@Season@can_replace" version="any">
-                        <Name>Replacing</Name>
-                        <Description>39.1. If you lose or mislay a Season Ticket valid for one month or longer, or it is stolen, the Train Company or Licensed Retailer from which it was purchased, will arrange for a duplicate Season Ticket to be issued provided that:
-39.1.1. you report the loss as soon as you reasonably can and, if required, you give a reasonable explanation for the loss (some Train Companies may ask you to complete a form explaining the reason for the loss);
-39.1.2. you agree to return the lost Season Ticket to the retailer immediately if it is subsequently found;
-39.1.3. you pay the Train Company or Licensed Retailer's administration charge, which will not exceed GBP20.</Description>
-                        <Url>http://www.nationalrail.co.uk/National%20Rail%20Conditions%20of%20Travel.pdf</Url>
-                        <OnlyAtCertainDistributionPoints>true</OnlyAtCertainDistributionPoints>
-                        <HasFee>true</HasFee>
-                        <PaymentMethods/>
-                      </Replacing>
                       <Refunding id="atc:ATOC@Tariff@Pass@Season@can_refund" version="any">
                         <Name>Can Refund</Name>
                         <Allowed>partial</Allowed>
@@ -4996,6 +4985,17 @@ IThe ticket may be issued anytime up to seven days in advance.</Description>
                         <RefundPolicy/>
                         <PaymentMethod/>
                       </Refunding>
+                      <Replacing id="atc:ATOC@Tariff@Pass@Season@can_replace" version="any">
+                        <Name>Replacing</Name>
+                        <Description>39.1. If you lose or mislay a Season Ticket valid for one month or longer, or it is stolen, the Train Company or Licensed Retailer from which it was purchased, will arrange for a duplicate Season Ticket to be issued provided that:
+39.1.1. you report the loss as soon as you reasonably can and, if required, you give a reasonable explanation for the loss (some Train Companies may ask you to complete a form explaining the reason for the loss);
+39.1.2. you agree to return the lost Season Ticket to the retailer immediately if it is subsequently found;
+39.1.3. you pay the Train Company or Licensed Retailer's administration charge, which will not exceed GBP20.</Description>
+                        <Url>http://www.nationalrail.co.uk/National%20Rail%20Conditions%20of%20Travel.pdf</Url>
+                        <OnlyAtCertainDistributionPoints>true</OnlyAtCertainDistributionPoints>
+                        <HasFee>true</HasFee>
+                        <PaymentMethods/>
+                      </Replacing>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -5283,8 +5283,8 @@ Southeastern offers discounted 7 day or monthly Season Tickets for travel on ear
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <ReplacingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_replace"/>
                     <RefundingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_refund"/>
+                    <ReplacingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_replace"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="atc:ATOC@Products@Pass@Season@buy" version="01" order="1">
@@ -5462,7 +5462,6 @@ Please make sure that your child rate photocard is in date (not past the "Valid 
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:can_purchase_where"/>
                   <LimitationGroupingType>OR</LimitationGroupingType>
                   <limitations>
-                    <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                     <UserProfileRef version="any" ref="atc:adult"/>
                     <UserProfileRef version="any" ref="atc:infant"/>
                     <UserProfileRef version="any" ref="atc:child"/>
@@ -5470,6 +5469,7 @@ Please make sure that your child rate photocard is in date (not past the "Valid 
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student"/>
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior"/>
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled"/>
+                    <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                   </limitations>
                   <validityParameters>
                     <DistributionChannelRef version="01" ref="eura:at_counter"/>
@@ -6939,10 +6939,10 @@ The price for each set of 10 tickets is based on 9 return ticket prices (so you 
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_use"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
-                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
-                    <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@anytime"/>
                     <RoundTripRef version="any" ref="atc:ATOC@Tariff@Trip@trip_type@single"/>
+                    <InterchangingRef version="any" ref="atc:ATOC@Tariff@Trip@interchanging@can_break_trip"/>
+                    <UsageValidityPeriodRef version="any" ref="atc:ATOC@Tariff@Trip@single@validity@anytime"/>
+                    <FrequencyOfUseRef version="any" ref="atc:ATOC@Tariff@Trip@frequency@single_use"/>
                   </limitations>
                   <IncludesGroupingType>OR</IncludesGroupingType>
                   <includes>
@@ -6969,7 +6969,6 @@ The price for each set of 10 tickets is based on 9 return ticket prices (so you 
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <TransferabilityRef version="any" ref="atc:ATOC@Tariff@General@transferring@individual@can_transfer"/>
                     <Refunding id="abga:multi_trip@carnet@after_sales@advance@no_refund" version="any">
                       <Name>No Refund for carnet</Name>
                       <Allowed>none</Allowed>
@@ -6977,6 +6976,7 @@ The price for each set of 10 tickets is based on 9 return ticket prices (so you 
                       <RefundPolicy/>
                       <PaymentMethod/>
                     </Refunding>
+                    <TransferabilityRef version="any" ref="atc:ATOC@Tariff@General@transferring@individual@can_transfer"/>
                   </limitations>
                 </GenericParameterAssignment>
                 <GenericParameterAssignment id="abga:multi_trip@carnet@entitlements" version="01" order="5">
@@ -7680,13 +7680,13 @@ On the "Breeze" town services in Bury St Edmunds operated by Stephensons</Descri
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:eligible"/>
                   <LimitationGroupingType>OR</LimitationGroupingType>
                   <limitations>
-                    <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                     <UserProfileRef version="any" ref="atc:adult"/>
                     <UserProfileRef version="any" ref="atc:child"/>
                     <UserProfileRef version="any" ref="atc:youth"/>
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student"/>
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior"/>
                     <UserProfileRef version="any" ref="atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled"/>
+                    <CompanionProfileRef version="any" ref="atc:disabledCompanion"/>
                   </limitations>
                   <validityParameters>
                     <DistributionChannelRef version="01" ref="eura:at_counter"/>
@@ -8383,15 +8383,15 @@ You must buy 2 tickets at the same time.					</Description>
                     <TypeOfAccessRightAssignmentRef version="any" ref="eura:prerequisites"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
+                      <EntitlementRequired id="jsp:JSP@Tariff@Pass@Season@prequisites" version="01">
+                        <Name>Must have a rail season pass</Name>
+                        <FareProductRef version="01" ref="atc:ATOC@Products@Pass@Season"/>
+                      </EntitlementRequired>
                       <UsageValidityPeriod id="jsp:JSP@Tariff@Pass@Season@validity" version="01">
                         <ValidityPeriodType>seasonTicket</ValidityPeriodType>
                         <UsageTrigger>specifiedStartDate</UsageTrigger>
                         <UsageEnd>productExpiry</UsageEnd>
                       </UsageValidityPeriod>
-                      <EntitlementRequired id="jsp:JSP@Tariff@Pass@Season@prequisites" version="01">
-                        <Name>Must have a rail season pass</Name>
-                        <FareProductRef version="01" ref="atc:ATOC@Products@Pass@Season"/>
-                      </EntitlementRequired>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>
@@ -8822,8 +8822,8 @@ http://www.plusbus.info/faq/14-are-refunds-available-ltigtplusbusltigt-tickets
                   <TypeOfAccessRightAssignmentRef version="any" ref="eura:condition_of_sale"/>
                   <LimitationGroupingType>AND</LimitationGroupingType>
                   <limitations>
-                    <ReplacingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_replace"/>
                     <RefundingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_refund"/>
+                    <ReplacingRef version="any" ref="atc:ATOC@Tariff@Pass@Season@can_replace"/>
                   </limitations>
                 </GenericParameterAssignment>
               </validityParameterAssignments>
@@ -11358,8 +11358,8 @@ West Midlands Railway
                           <DistanceMatrixElementRef version="01" ref="atc:LST_to_SSD">Ipswich to London Liverpool Street</DistanceMatrixElementRef>
                           <SalesOfferPackageRef version="01" ref="abga:LE@Products@Pass_Season@period-SOP"/>
                           <limitations>
-                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Products@Pass@Season@annual"/>
                             <UserProfileRef version="any" ref="atc:adult"/>
+                            <UsageValidityPeriodRef version="any" ref="atc:ATOC@Products@Pass@Season@annual"/>
                           </limitations>
                           <validityParameters>
                             <ClassOfUseRef version="any" ref="eura:second"/>
@@ -11693,6 +11693,9 @@ West Midlands Railway
             </ResponsibilitySet>
           </responsibilitySets>
           <typesOfValue>
+            <TypeOfFrame id="eura:Fare" version="any">
+              <Name>Fares Frame</Name>
+            </TypeOfFrame>
             <ValueSet id="eura:Types_of_ProductCategory" version="any" classOfValues="TypeOfProductCategory">
               <Name>Types of Product Category</Name>
               <values>
@@ -11915,9 +11918,6 @@ West Midlands Railway
                 </TypeOfAccessRightAssignment>
               </values>
             </ValueSet>
-            <TypeOfFrame id="eura:Fare" version="any">
-              <Name>Fares Frame</Name>
-            </TypeOfFrame>
           </typesOfValue>
           <organisations>
             <Operator id="uic:1170" version="any">

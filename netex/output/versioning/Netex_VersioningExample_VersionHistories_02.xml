@@ -10,14 +10,14 @@
         <Current/>
         <NetworkFilterByValue>
           <objectReferences>
-            <ServicePatternRef ref="mybus:SP_001">REQUEST</ServicePatternRef>
-            <DayTypeRef ref="mybus:DT001_MF">REQUEST</DayTypeRef>
-            <ServiceLinkRef ref="mybu:SL_AtoB01">REQUEST</ServiceLinkRef>
-            <ServiceLinkRef ref="mybu:SL_BtoC01">REQUEST</ServiceLinkRef>
-            <ServiceLinkRef ref="mybu:SL_BtoA01">REQUEST</ServiceLinkRef>
             <ScheduledStopPointRef ref="mybus:SSP0001A">REQUEST</ScheduledStopPointRef>
             <ScheduledStopPointRef ref="mybus:SSP0002B">REQUEST</ScheduledStopPointRef>
             <ScheduledStopPointRef ref="mybus:SSP0003C">REQUEST</ScheduledStopPointRef>
+            <ServiceLinkRef ref="mybu:SL_AtoB01">REQUEST</ServiceLinkRef>
+            <ServiceLinkRef ref="mybu:SL_BtoC01">REQUEST</ServiceLinkRef>
+            <ServiceLinkRef ref="mybu:SL_BtoA01">REQUEST</ServiceLinkRef>
+            <ServicePatternRef ref="mybus:SP_001">REQUEST</ServicePatternRef>
+            <DayTypeRef ref="mybus:DT001_MF">REQUEST</DayTypeRef>
           </objectReferences>
         </NetworkFilterByValue>
       </NetworkFrameTopic>

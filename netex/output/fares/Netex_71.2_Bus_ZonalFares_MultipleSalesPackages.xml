@@ -146,13 +146,13 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
+                      <FrequencyOfUse id="cdla:Time_interval@standard@conditions_of_travel@frequency" version="1.0">
+                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
+                      </FrequencyOfUse>
                       <Interchanging id="cdla:Time_interval@standard@conditions_of_travel@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>true</CanBreakJourney>
                       </Interchanging>
-                      <FrequencyOfUse id="cdla:Time_interval@standard@conditions_of_travel@frequency" version="1.0">
-                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
-                      </FrequencyOfUse>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

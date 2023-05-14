@@ -9398,20 +9398,6 @@
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
-                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_10_02" version="any">
-                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_02" version="any">
-                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
-                          <suitabilities>
-                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_10_02">
-                              <MobilityNeed>wheelchair</MobilityNeed>
-                              <Suitable>notSuitable</Suitable>
-                            </Suitability>
-                          </suitabilities>
-                        </AccessibilityAssessment>
-                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
-                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
-                        <CompanionSeat>true</CompanionSeat>
-                      </WheelchairVehicleEquipment>
                       <SanitaryEquipment id="est:sfe_veheq_trne_LP01_10_01" version="any">
                         <Name>WCD</Name>
                         <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_01" version="any">
@@ -9429,6 +9415,20 @@
                         <PaymentMethods/>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
+                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_10_02" version="any">
+                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_10_02" version="any">
+                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                          <suitabilities>
+                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_10_02">
+                              <MobilityNeed>wheelchair</MobilityNeed>
+                              <Suitable>notSuitable</Suitable>
+                            </Suitability>
+                          </suitabilities>
+                        </AccessibilityAssessment>
+                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
+                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
+                        <CompanionSeat>true</CompanionSeat>
+                      </WheelchairVehicleEquipment>
                     </equipments>
                   </TrainElement>
                 </TrainComponent>
@@ -9447,20 +9447,6 @@
                       <ServiceFacilitySetRef version="any" ref="es:sfs_firstAndDisabledCarriage"/>
                     </facilities>
                     <equipments>
-                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_11_02" version="any">
-                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_02" version="any">
-                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
-                          <suitabilities>
-                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_11_02">
-                              <MobilityNeed>wheelchair</MobilityNeed>
-                              <Suitable>suitable</Suitable>
-                            </Suitability>
-                          </suitabilities>
-                        </AccessibilityAssessment>
-                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
-                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
-                        <CompanionSeat>true</CompanionSeat>
-                      </WheelchairVehicleEquipment>
                       <SanitaryEquipment id="est:sfe_veheq_trne_LP01_11_01" version="any">
                         <Name>WCD</Name>
                         <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_01" version="any">
@@ -9478,6 +9464,20 @@
                         <PaymentMethods/>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
+                      <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_11_02" version="any">
+                        <AccessibilityAssessment id="est:acaa_sfe_veheq_trne_LP01_11_02" version="any">
+                          <MobilityImpairedAccess>true</MobilityImpairedAccess>
+                          <suitabilities>
+                            <Suitability id="est:acsst_sfe_veheq_trne_LP01_11_02">
+                              <MobilityNeed>wheelchair</MobilityNeed>
+                              <Suitable>suitable</Suitable>
+                            </Suitability>
+                          </suitabilities>
+                        </AccessibilityAssessment>
+                        <NumberOfWheelchairAreas>1</NumberOfWheelchairAreas>
+                        <WidthOfAccessArea>1.0</WidthOfAccessArea>
+                        <CompanionSeat>true</CompanionSeat>
+                      </WheelchairVehicleEquipment>
                     </equipments>
                   </TrainElement>
                 </TrainComponent>

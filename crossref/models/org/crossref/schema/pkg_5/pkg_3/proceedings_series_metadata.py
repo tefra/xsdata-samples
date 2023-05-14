@@ -45,7 +45,7 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 32,
-            "sequence": 236,
+            "sequence": 1,
         }
     )
     proceedings_subject: List[str] = field(

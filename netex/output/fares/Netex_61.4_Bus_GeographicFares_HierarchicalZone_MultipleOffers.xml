@@ -123,6 +123,16 @@
                     <TypeOfAccessRightAssignmentRef version="ntx:v1.0" ref="ntx:condition_of_use"/>
                     <LimitationGroupingType>AND</LimitationGroupingType>
                     <limitations>
+                      <RoundTrip id="myfares:Nested_Zone@conditions_of_travel@direction" version="1.0">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse id="myfares:Nested_Zone@conditions_of_travel@frequency" version="1.0">
+                        <Name>One trip  </Name>
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                        <MinimalFrequency>1</MinimalFrequency>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
                       <Interchanging id="myfares:Nested_Zone@conditions_of_travel@interchanging" version="1.0">
                         <CanInterchange>true</CanInterchange>
                         <CanBreakJourney>false</CanBreakJourney>
@@ -131,16 +141,6 @@
                         <Name>Valid untile ride complete</Name>
                         <UsageEnd>endOfRide</UsageEnd>
                       </UsageValidityPeriod>
-                      <FrequencyOfUse id="myfares:Nested_Zone@conditions_of_travel@frequency" version="1.0">
-                        <Name>One trip  </Name>
-                        <FrequencyOfUseType>single</FrequencyOfUseType>
-                        <MinimalFrequency>1</MinimalFrequency>
-                        <MaximalFrequency>1</MaximalFrequency>
-                      </FrequencyOfUse>
-                      <RoundTrip id="myfares:Nested_Zone@conditions_of_travel@direction" version="1.0">
-                        <Name>Single Trip</Name>
-                        <TripType>single</TripType>
-                      </RoundTrip>
                     </limitations>
                   </GenericParameterAssignment>
                 </FareStructureElement>

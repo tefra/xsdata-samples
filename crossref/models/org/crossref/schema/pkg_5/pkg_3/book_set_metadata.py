@@ -65,7 +65,7 @@ class BookSetMetadata:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 32,
-            "sequence": 382,
+            "sequence": 1,
         }
     )
     edition_number: Optional[str] = field(

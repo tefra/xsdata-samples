@@ -27,7 +27,7 @@ class Institution:
         default_factory=list,
         metadata={
             "type": "Element",
-            "sequence": 832,
+            "sequence": 1,
         }
     )
     institution_acronym: List[str] = field(

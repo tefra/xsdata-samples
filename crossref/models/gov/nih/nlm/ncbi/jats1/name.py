@@ -31,7 +31,7 @@ class Name:
             "name": "given-names",
             "type": "Element",
             "max_occurs": 2,
-            "sequence": 2550,
+            "sequence": 1,
         }
     )
     prefix: Optional[Prefix] = field(
