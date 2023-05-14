@@ -21,19 +21,21 @@ class AccessRightInProductVersionedChildStructure(FareElementInSequenceVersioned
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_product_ref: Optional[SupplementProductRef] = field(
+    supplement_product_ref_or_preassigned_fare_product_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "SupplementProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    preassigned_fare_product_ref: Optional[PreassignedFareProductRef] = field(
-        default=None,
-        metadata={
-            "name": "PreassignedFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SupplementProductRef",
+                    "type": SupplementProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PreassignedFareProductRef",
+                    "type": PreassignedFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -23,27 +23,26 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "required": True,
         }
     )
-    hail_and_ride_area_ref: Optional[HailAndRideAreaRef] = field(
+    hail_and_ride_area_ref_or_flexible_area_ref_or_flexible_quay_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "HailAndRideAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_area_ref: Optional[FlexibleAreaRef] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    flexible_quay_ref: Optional[FlexibleQuayRef] = field(
-        default=None,
-        metadata={
-            "name": "FlexibleQuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "HailAndRideAreaRef",
+                    "type": HailAndRideAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleAreaRef",
+                    "type": FlexibleAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleQuayRef",
+                    "type": FlexibleQuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

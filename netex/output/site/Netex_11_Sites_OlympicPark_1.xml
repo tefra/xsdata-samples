@@ -61,6 +61,153 @@
         <DefaultCodespaceRef ref="oda"/>
       </FrameDefaults>
       <frames>
+        <ServiceCalendarFrame id="oda:CAL_01" version="any">
+          <Name>Olympic Park2 2012  </Name>
+          <ServiceCalendar id="oda:CAL_01" version="any">
+            <FromDate>2012-07-27</FromDate>
+            <ToDate>2012-08-07</ToDate>
+          </ServiceCalendar>
+          <dayTypes>
+            <DayType id="oda:DT01_Very_Busy" version="any">
+              <Name>Busy Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                  <Crowding>veryBusy</Crowding>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <TimebandRef version="any" ref="oda:TM01_ingress"/>
+                <TimebandRef version="any" ref="oda:TM02_during"/>
+                <TimebandRef version="any" ref="oda:TM03_egress"/>
+              </timebands>
+            </DayType>
+            <DayType id="oda:DT02_Busy" version="any">
+              <Name>Busy Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                  <Crowding>busy</Crowding>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <TimebandRef version="any" ref="oda:TM01_ingress"/>
+                <TimebandRef version="any" ref="oda:TM02_during"/>
+                <TimebandRef version="any" ref="oda:TM03_egress"/>
+              </timebands>
+            </DayType>
+            <DayType id="oda:DT03_Normal" version="any">
+              <Name>Busy Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                  <Crowding>normal</Crowding>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <TimebandRef version="any" ref="oda:TM01_ingress"/>
+                <TimebandRef version="any" ref="oda:TM02_during"/>
+                <TimebandRef version="any" ref="oda:TM03_egress"/>
+              </timebands>
+            </DayType>
+            <DayType id="oda:DT04_QUIET" version="any">
+              <Name>Quiet Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                  <Crowding>quiet</Crowding>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <TimebandRef version="any" ref="oda:TM01_ingress"/>
+                <TimebandRef version="any" ref="oda:TM02_during"/>
+                <TimebandRef version="any" ref="oda:TM03_egress"/>
+              </timebands>
+            </DayType>
+          </dayTypes>
+          <timebands>
+            <Timeband id="oda:TM01_ingress" version="any">
+              <StartTime>09:00:00</StartTime>
+              <EndTime>10:00:00</EndTime>
+            </Timeband>
+            <Timeband id="oda:TM02_during" version="any">
+              <StartTime>11:00:00</StartTime>
+              <EndTime>15:00:00</EndTime>
+            </Timeband>
+            <Timeband id="oda:TM03_egress" version="any">
+              <StartTime>15:00:00</StartTime>
+              <EndTime>19:00:00</EndTime>
+            </Timeband>
+          </timebands>
+          <dayTypeAssignments>
+            <DayTypeAssignment id="oda:DTA_2012-07-27" version="any" order="1">
+              <Description>Friday 2012-07-27 Opening</Description>
+              <Date>2012-07-27</Date>
+              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-07-28" version="any" order="1">
+              <Description>Saturday 2012-07-28</Description>
+              <Date>2012-07-28</Date>
+              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-07-29" version="any" order="1">
+              <Description>Sunday 2012-07-29</Description>
+              <Date>2012-07-29</Date>
+              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-07-30" version="any" order="1">
+              <Description>Monday 2012-07-30</Description>
+              <Date>2012-07-30</Date>
+              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-07-31" version="any" order="1">
+              <Description>Tuesday 2012-07-31</Description>
+              <Date>2012-07-31</Date>
+              <DayTypeRef version="any" ref="oda:DT03_Normal"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-08-01" version="any" order="1">
+              <Description>Wednesday 2012-08-01</Description>
+              <Date>2012-08-01</Date>
+              <DayTypeRef version="any" ref="oda:DT03_Normal"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-08-02" version="any" order="1">
+              <Description>Thusday 2012-08-02</Description>
+              <Date>2012-08-02</Date>
+              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-08-03" version="any" order="1">
+              <Description>Friday 2012-08-03</Description>
+              <Date>2012-08-03</Date>
+              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-08-04" version="any" order="1">
+              <Description>Saturday2012-08-04</Description>
+              <Date>2012-08-04</Date>
+              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="oda:DTA_2012-08-05" version="any" order="1">
+              <Description>Sunday 2012-08-05</Description>
+              <Date>2012-08-05</Date>
+              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
         <SiteFrame id="oda:OPK_Fr001" version="any" responsibilitySetRef="noptis:9010001000000000">
           <validityConditions>
             <AvailabilityCondition id="nptg:OPK_Fr001" version="any">
@@ -4553,153 +4700,6 @@
             </ValueSet>
           </typesOfValue>
         </ResourceFrame>
-        <ServiceCalendarFrame id="oda:CAL_01" version="any">
-          <Name>Olympic Park2 2012  </Name>
-          <ServiceCalendar id="oda:CAL_01" version="any">
-            <FromDate>2012-07-27</FromDate>
-            <ToDate>2012-08-07</ToDate>
-          </ServiceCalendar>
-          <dayTypes>
-            <DayType id="oda:DT01_Very_Busy" version="any">
-              <Name>Busy Day</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                  <Crowding>veryBusy</Crowding>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <TimebandRef version="any" ref="oda:TM01_ingress"/>
-                <TimebandRef version="any" ref="oda:TM02_during"/>
-                <TimebandRef version="any" ref="oda:TM03_egress"/>
-              </timebands>
-            </DayType>
-            <DayType id="oda:DT02_Busy" version="any">
-              <Name>Busy Day</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                  <Crowding>busy</Crowding>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <TimebandRef version="any" ref="oda:TM01_ingress"/>
-                <TimebandRef version="any" ref="oda:TM02_during"/>
-                <TimebandRef version="any" ref="oda:TM03_egress"/>
-              </timebands>
-            </DayType>
-            <DayType id="oda:DT03_Normal" version="any">
-              <Name>Busy Day</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                  <Crowding>normal</Crowding>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <TimebandRef version="any" ref="oda:TM01_ingress"/>
-                <TimebandRef version="any" ref="oda:TM02_during"/>
-                <TimebandRef version="any" ref="oda:TM03_egress"/>
-              </timebands>
-            </DayType>
-            <DayType id="oda:DT04_QUIET" version="any">
-              <Name>Quiet Day</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                  <Crowding>quiet</Crowding>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <TimebandRef version="any" ref="oda:TM01_ingress"/>
-                <TimebandRef version="any" ref="oda:TM02_during"/>
-                <TimebandRef version="any" ref="oda:TM03_egress"/>
-              </timebands>
-            </DayType>
-          </dayTypes>
-          <timebands>
-            <Timeband id="oda:TM01_ingress" version="any">
-              <StartTime>09:00:00</StartTime>
-              <EndTime>10:00:00</EndTime>
-            </Timeband>
-            <Timeband id="oda:TM02_during" version="any">
-              <StartTime>11:00:00</StartTime>
-              <EndTime>15:00:00</EndTime>
-            </Timeband>
-            <Timeband id="oda:TM03_egress" version="any">
-              <StartTime>15:00:00</StartTime>
-              <EndTime>19:00:00</EndTime>
-            </Timeband>
-          </timebands>
-          <dayTypeAssignments>
-            <DayTypeAssignment id="oda:DTA_2012-07-27" version="any" order="1">
-              <Description>Friday 2012-07-27 Opening</Description>
-              <Date>2012-07-27</Date>
-              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-07-28" version="any" order="1">
-              <Description>Saturday 2012-07-28</Description>
-              <Date>2012-07-28</Date>
-              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-07-29" version="any" order="1">
-              <Description>Sunday 2012-07-29</Description>
-              <Date>2012-07-29</Date>
-              <DayTypeRef version="any" ref="oda:DT01_Very_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-07-30" version="any" order="1">
-              <Description>Monday 2012-07-30</Description>
-              <Date>2012-07-30</Date>
-              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-07-31" version="any" order="1">
-              <Description>Tuesday 2012-07-31</Description>
-              <Date>2012-07-31</Date>
-              <DayTypeRef version="any" ref="oda:DT03_Normal"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-08-01" version="any" order="1">
-              <Description>Wednesday 2012-08-01</Description>
-              <Date>2012-08-01</Date>
-              <DayTypeRef version="any" ref="oda:DT03_Normal"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-08-02" version="any" order="1">
-              <Description>Thusday 2012-08-02</Description>
-              <Date>2012-08-02</Date>
-              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-08-03" version="any" order="1">
-              <Description>Friday 2012-08-03</Description>
-              <Date>2012-08-03</Date>
-              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-08-04" version="any" order="1">
-              <Description>Saturday2012-08-04</Description>
-              <Date>2012-08-04</Date>
-              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="oda:DTA_2012-08-05" version="any" order="1">
-              <Description>Sunday 2012-08-05</Description>
-              <Date>2012-08-05</Date>
-              <DayTypeRef version="any" ref="oda:DT02_Busy"/>
-            </DayTypeAssignment>
-          </dayTypeAssignments>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

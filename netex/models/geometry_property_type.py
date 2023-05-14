@@ -10,28 +10,27 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryPropertyType:
-    polygon: Optional[Polygon] = field(
+    polygon_or_line_string_or_point: Optional[object] = field(
         default=None,
         metadata={
-            "name": "Polygon",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    line_string: Optional[LineString] = field(
-        default=None,
-        metadata={
-            "name": "LineString",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-        }
-    )
-    point: Optional[Point1] = field(
-        default=None,
-        metadata={
-            "name": "Point",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Polygon",
+                    "type": Polygon,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "LineString",
+                    "type": LineString,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "Point",
+                    "type": Point1,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+            ),
         }
     )
     nil_reason: Optional[Union[str, NilReasonEnumerationValue]] = field(

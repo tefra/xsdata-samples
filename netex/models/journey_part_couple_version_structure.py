@@ -87,20 +87,22 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         }
     )
-    train_block_ref: Optional[TrainBlockRef] = field(
+    train_block_ref_or_block_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "TrainBlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_ref: Optional[BlockRef] = field(
-        default=None,
-        metadata={
-            "name": "BlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockRef",
+                    "type": TrainBlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockRef",
+                    "type": BlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     journey_parts: Optional[JourneyPartRefsRelStructure] = field(

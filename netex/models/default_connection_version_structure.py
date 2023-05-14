@@ -69,195 +69,131 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    vehicle_stopping_position_ref: Optional[VehicleStoppingPositionRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "VehicleStoppingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_stopping_place_ref: Optional[VehicleStoppingPlaceRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleStoppingPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    boarding_position_ref: Optional[BoardingPositionRef] = field(
-        default=None,
-        metadata={
-            "name": "BoardingPositionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_space_ref: Optional[AccessSpaceRef] = field(
-        default=None,
-        metadata={
-            "name": "AccessSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quay_ref: Optional[QuayRef] = field(
-        default=None,
-        metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_space_ref: Optional[StopPlaceSpaceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_bay_ref: Optional[ParkingBayRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingBayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_space_ref: Optional[PointOfInterestSpaceRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestSpaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_vehicle_entrance_ref: Optional[StopPlaceVehicleEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_entrance_ref: Optional[StopPlaceEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_for_vehicles_ref: Optional[ParkingEntranceForVehiclesRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_passenger_entrance_ref: Optional[ParkingPassengerEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingPassengerEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_ref: Optional[ParkingEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_vehicle_entrance_ref: Optional[PointOfInterestVehicleEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_entrance_ref: Optional[PointOfInterestEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_entrance_ref: Optional[VehicleEntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entrance_ref: Optional[EntranceRef] = field(
-        default=None,
-        metadata={
-            "name": "EntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_component_ref: Optional[SiteComponentRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteComponentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_ref: Optional[StopPlaceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_ref: Optional[ParkingRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_ref: Optional[PointOfInterestRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_site_ref: Optional[ServiceSiteRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceSiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_ref: Optional[SiteRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_element_ref: Optional[SiteElementRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleStoppingPositionRef",
+                    "type": VehicleStoppingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleStoppingPlaceRef",
+                    "type": VehicleStoppingPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BoardingPositionRef",
+                    "type": BoardingPositionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessSpaceRef",
+                    "type": AccessSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceSpaceRef",
+                    "type": StopPlaceSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingBayRef",
+                    "type": ParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestSpaceRef",
+                    "type": PointOfInterestSpaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceVehicleEntranceRef",
+                    "type": StopPlaceVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceEntranceRef",
+                    "type": StopPlaceEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPassengerEntranceRef",
+                    "type": ParkingPassengerEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceRef",
+                    "type": ParkingEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestVehicleEntranceRef",
+                    "type": PointOfInterestVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestEntranceRef",
+                    "type": PointOfInterestEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEntranceRef",
+                    "type": VehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceRef",
+                    "type": EntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteComponentRef",
+                    "type": SiteComponentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingRef",
+                    "type": ParkingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestRef",
+                    "type": PointOfInterestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceSiteRef",
+                    "type": ServiceSiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteRef",
+                    "type": SiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteElementRef",
+                    "type": SiteElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

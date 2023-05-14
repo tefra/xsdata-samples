@@ -12,19 +12,21 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classRefs_RelStructure"
 
-    class_in_frame_ref: List[ClassInFrameRef] = field(
+    class_in_frame_ref_or_class_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ClassInFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    class_ref: List[ClassRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ClassRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ClassInFrameRef",
+                    "type": ClassInFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ClassRef",
+                    "type": ClassRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

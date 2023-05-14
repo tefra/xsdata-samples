@@ -14,35 +14,31 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"
 
-    availability_condition_ref: List[AvailabilityConditionRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AvailabilityConditionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_rule_parameter_ref: List[ValidityRuleParameterRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidityRuleParameterRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_trigger_ref: List[ValidityTriggerRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidityTriggerRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validity_condition_ref: List[ValidityConditionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ValidityConditionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AvailabilityConditionRef",
+                    "type": AvailabilityConditionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityRuleParameterRef",
+                    "type": ValidityRuleParameterRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityTriggerRef",
+                    "type": ValidityTriggerRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidityConditionRef",
+                    "type": ValidityConditionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

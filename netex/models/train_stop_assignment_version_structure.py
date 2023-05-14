@@ -18,28 +18,27 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "TrainStopAssignment_VersionStructure"
 
-    vehicle_journey_stop_assignment_ref: Optional[VehicleJourneyStopAssignmentRef] = field(
+    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "VehicleJourneyStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dynamic_stop_assignment_ref: Optional[DynamicStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "DynamicStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_stop_assignment_ref: Optional[PassengerStopAssignmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerStopAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehicleJourneyStopAssignmentRef",
+                    "type": VehicleJourneyStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignmentRef",
+                    "type": DynamicStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerStopAssignmentRef",
+                    "type": PassengerStopAssignmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     train_ref: Optional[TrainRef] = field(

@@ -12,19 +12,21 @@ class CommonSectionPointMembersRelStructure(StrictContainmentAggregationStructur
     class Meta:
         name = "commonSectionPointMembers_RelStructure"
 
-    line_section_point_member: List[LineSectionPointMember] = field(
+    line_section_point_member_or_common_section_point_member: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LineSectionPointMember",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    common_section_point_member: List[CommonSectionPointMember] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommonSectionPointMember",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LineSectionPointMember",
+                    "type": LineSectionPointMember,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommonSectionPointMember",
+                    "type": CommonSectionPointMember,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

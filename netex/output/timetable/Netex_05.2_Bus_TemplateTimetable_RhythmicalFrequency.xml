@@ -36,65 +36,49 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="mybus:svf_12" version="any">
-          <Name>Stops for Winter timetable for route 234 </Name>
-          <lines>
-            <Line id="mybus:LN_234" version="any">
-              <Name>Line 234 Alpha to Charley Green</Name>
-              <ShortName>Line 234</ShortName>
-              <TransportMode>bus</TransportMode>
-              <PublicCode>234</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="mybus:SSP_001" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <Location>
-                <Longitude>53.0000</Longitude>
-                <Latitude>0.1000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Alpha</ShortName>
-              <PublicCode>EANDC</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" version="any">
-              <Name>Bravo Arch</Name>
-              <Location>
-                <Longitude>53.2000</Longitude>
-                <Latitude>0.2000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Bravo Arch</ShortName>
-              <PublicCode>MARCH</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" version="any">
-              <Name>Charley Green</Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Charley</ShortName>
-              <PublicCode>KENG</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <timeDemandTypes>
-            <TimeDemandType id="hde:TDT_45" version="any">
-              <Name>Peak Time demand </Name>
-            </TimeDemandType>
-            <TimeDemandType id="hde:TDT_45_morning" version="any">
-              <Name>Time demand  off Peak</Name>
-            </TimeDemandType>
-          </timeDemandTypes>
-        </ServiceFrame>
+        <ServiceCalendarFrame id="hde:SCF01" version="any">
+          <Name/>
+          <ServiceCalendar id="hde:cal01" version="any">
+            <dayTypes>
+              <DayType id="hde:DT_01MTWTFSS" version="any">
+                <Name>Everyday</Name>
+                <properties>
+                  <PropertyOfDay>
+                    <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
+                  </PropertyOfDay>
+                </properties>
+              </DayType>
+              <DayType id="hde:DT_02MTWTF" version="any">
+                <Name>Weekdays</Name>
+                <properties>
+                  <PropertyOfDay>
+                    <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
+                  </PropertyOfDay>
+                </properties>
+              </DayType>
+            </dayTypes>
+            <timebands>
+              <Timeband id="hde:TM_20" version="any">
+                <Name>20 minutes past the hourt</Name>
+                <StartTime>10:20:00</StartTime>
+                <EndTime>10:20:00</EndTime>
+              </Timeband>
+              <Timeband id="hde:TM_45" version="any">
+                <Name>45 minutes past the hourt</Name>
+                <StartTime>10:45:00</StartTime>
+                <EndTime>10:45:00</EndTime>
+              </Timeband>
+            </timebands>
+          </ServiceCalendar>
+        </ServiceCalendarFrame>
         <TimetableFrame id="hde:TIM_23_O" version="001">
           <validityConditions>
             <AvailabilityCondition id="hde:Cnd001" version="any">
@@ -247,49 +231,65 @@
             </ServiceJourney>
           </vehicleJourneys>
         </TimetableFrame>
-        <ServiceCalendarFrame id="hde:SCF01" version="any">
-          <Name/>
-          <ServiceCalendar id="hde:cal01" version="any">
-            <dayTypes>
-              <DayType id="hde:DT_01MTWTFSS" version="any">
-                <Name>Everyday</Name>
-                <properties>
-                  <PropertyOfDay>
-                    <DaysOfWeek>Everyday</DaysOfWeek>
-                    <WeeksOfMonth/>
-                    <HolidayTypes/>
-                    <Seasons/>
-                    <Tides/>
-                  </PropertyOfDay>
-                </properties>
-              </DayType>
-              <DayType id="hde:DT_02MTWTF" version="any">
-                <Name>Weekdays</Name>
-                <properties>
-                  <PropertyOfDay>
-                    <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                    <WeeksOfMonth/>
-                    <HolidayTypes/>
-                    <Seasons/>
-                    <Tides/>
-                  </PropertyOfDay>
-                </properties>
-              </DayType>
-            </dayTypes>
-            <timebands>
-              <Timeband id="hde:TM_20" version="any">
-                <Name>20 minutes past the hourt</Name>
-                <StartTime>10:20:00</StartTime>
-                <EndTime>10:20:00</EndTime>
-              </Timeband>
-              <Timeband id="hde:TM_45" version="any">
-                <Name>45 minutes past the hourt</Name>
-                <StartTime>10:45:00</StartTime>
-                <EndTime>10:45:00</EndTime>
-              </Timeband>
-            </timebands>
-          </ServiceCalendar>
-        </ServiceCalendarFrame>
+        <ServiceFrame id="mybus:svf_12" version="any">
+          <Name>Stops for Winter timetable for route 234 </Name>
+          <lines>
+            <Line id="mybus:LN_234" version="any">
+              <Name>Line 234 Alpha to Charley Green</Name>
+              <ShortName>Line 234</ShortName>
+              <TransportMode>bus</TransportMode>
+              <PublicCode>234</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>EANDC</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
+              <Name>Bravo Arch</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo Arch</ShortName>
+              <PublicCode>MARCH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
+              <Name>Charley Green</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>KENG</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <timeDemandTypes>
+            <TimeDemandType id="hde:TDT_45" version="any">
+              <Name>Peak Time demand </Name>
+            </TimeDemandType>
+            <TimeDemandType id="hde:TDT_45_morning" version="any">
+              <Name>Time demand  off Peak</Name>
+            </TimeDemandType>
+          </timeDemandTypes>
+        </ServiceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

@@ -26,20 +26,22 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
     class Meta:
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
-    fare_scheduled_stop_point_ref: Optional[FareScheduledStopPointRef] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FareScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    scheduled_stop_point_ref: Optional[ScheduledStopPointRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduledStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareScheduledStopPointRef",
+                    "type": FareScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledStopPointRef",
+                    "type": ScheduledStopPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(

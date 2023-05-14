@@ -15,27 +15,26 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareTablesInFrame_RelStructure"
 
-    standard_fare_table: List[StandardFareTable] = field(
+    standard_fare_table_or_fare_table_in_context_or_fare_table: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StandardFareTable",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_table_in_context: List[FareTableInContext] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTableInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_table: List[FareTable] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTable",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTable",
+                    "type": StandardFareTable,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableInContext",
+                    "type": FareTableInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTable",
+                    "type": FareTable,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

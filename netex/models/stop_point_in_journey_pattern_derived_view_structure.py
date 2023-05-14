@@ -24,36 +24,32 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
-    fare_point_in_pattern_ref: Optional[FarePointInPatternRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FarePointInPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_point_in_journey_pattern_ref: Optional[StopPointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_point_in_journey_pattern_ref: Optional[TimingPointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "TimingPointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_in_journey_pattern_ref: Optional[PointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "PointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FarePointInPatternRef",
+                    "type": FarePointInPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPointInJourneyPatternRef",
+                    "type": StopPointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointInJourneyPatternRef",
+                    "type": TimingPointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointInJourneyPatternRef",
+                    "type": PointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     visit_number: Optional[int] = field(

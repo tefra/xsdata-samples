@@ -12,19 +12,21 @@ class NoticeAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignmentsInFrame_RelStructure"
 
-    sales_notice_assignment: List[SalesNoticeAssignment] = field(
+    sales_notice_assignment_or_notice_assignment: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SalesNoticeAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    notice_assignment: List[NoticeAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "NoticeAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SalesNoticeAssignment",
+                    "type": SalesNoticeAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NoticeAssignment",
+                    "type": NoticeAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

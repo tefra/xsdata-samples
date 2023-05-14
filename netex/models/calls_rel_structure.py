@@ -14,35 +14,31 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "calls_RelStructure"
 
-    dated_call_z: List[DatedCallZ] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DatedCall-Z",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dated_call: List[DatedCall] = field(
-        default_factory=list,
-        metadata={
-            "name": "DatedCall",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    call_z: List[CallZ] = field(
-        default_factory=list,
-        metadata={
-            "name": "Call-Z",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    call: List[Call] = field(
-        default_factory=list,
-        metadata={
-            "name": "Call",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedCall-Z",
+                    "type": DatedCallZ,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedCall",
+                    "type": DatedCall,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Call-Z",
+                    "type": CallZ,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Call",
+                    "type": Call,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

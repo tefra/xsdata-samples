@@ -43,6 +43,59 @@
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@Unit_zone@network" version="1.0">
+          <Name>Zones for Fare network </Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <Network id="mybus:DTA" version="any">
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="1.0" ref="mybus:DTA"/>
+            <tariffZones>
+              <TariffZoneRef version="any" ref="mybus:A"/>
+              <TariffZoneRef version="any" ref="mybus:B"/>
+              <TariffZoneRef version="any" ref="mybus:C"/>
+              <TariffZoneRef version="any" ref="mybus:D"/>
+              <TariffZoneRef version="any" ref="mybus:P"/>
+              <TariffZoneRef version="any" ref="mybus:Q"/>
+              <TariffZoneRef version="any" ref="mybus:X"/>
+              <TariffZoneRef version="any" ref="mybus:Y"/>
+            </tariffZones>
+          </Network>
+          <tariffZones>
+            <TariffZone id="mybus:A" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <ShortName>Alpha</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:B" version="any">
+              <Name>Bravo Street</Name>
+              <ShortName>Bravo</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:C" version="any">
+              <Name>Charley Crescent</Name>
+              <ShortName>Charley</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:D" version="any">
+              <Name>Delta </Name>
+              <ShortName>Delta</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:P" version="any">
+              <Name>Papa </Name>
+              <ShortName>Papa</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:Q" version="any">
+              <Name>Quebec </Name>
+              <ShortName>Quebec</ShortName>
+            </TariffZone>
+            <TariffZone id="mybus:X" version="any">
+              <Name>X Ray </Name>
+            </TariffZone>
+            <TariffZone id="mybus:Y" version="any">
+              <Name>Yankee </Name>
+            </TariffZone>
+          </tariffZones>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@Unit_zone@products" version="1.0">
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Unit_zone@network"/>
@@ -545,59 +598,6 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Unit_zone@network" version="1.0">
-          <Name>Zones for Fare network </Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
-          </prerequisites>
-          <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="1.0" ref="mybus:DTA"/>
-            <tariffZones>
-              <TariffZoneRef version="any" ref="mybus:A"/>
-              <TariffZoneRef version="any" ref="mybus:B"/>
-              <TariffZoneRef version="any" ref="mybus:C"/>
-              <TariffZoneRef version="any" ref="mybus:D"/>
-              <TariffZoneRef version="any" ref="mybus:P"/>
-              <TariffZoneRef version="any" ref="mybus:Q"/>
-              <TariffZoneRef version="any" ref="mybus:X"/>
-              <TariffZoneRef version="any" ref="mybus:Y"/>
-            </tariffZones>
-          </Network>
-          <tariffZones>
-            <TariffZone id="mybus:A" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <ShortName>Alpha</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:B" version="any">
-              <Name>Bravo Street</Name>
-              <ShortName>Bravo</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:C" version="any">
-              <Name>Charley Crescent</Name>
-              <ShortName>Charley</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:D" version="any">
-              <Name>Delta </Name>
-              <ShortName>Delta</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:P" version="any">
-              <Name>Papa </Name>
-              <ShortName>Papa</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:Q" version="any">
-              <Name>Quebec </Name>
-              <ShortName>Quebec</ShortName>
-            </TariffZone>
-            <TariffZone id="mybus:X" version="any">
-              <Name>X Ray </Name>
-            </TariffZone>
-            <TariffZone id="mybus:Y" version="any">
-              <Name>Yankee </Name>
-            </TariffZone>
-          </tariffZones>
-        </ServiceFrame>
         <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <codespaces>
             <Codespace id="ntx">

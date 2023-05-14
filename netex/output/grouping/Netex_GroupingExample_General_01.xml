@@ -38,10 +38,10 @@
           <Name>My Group</Name>
           <PurposeOfGroupingRef version="any" ref="mybus:My_Purpose"/>
           <members>
-            <ServiceLinkRef ref="mybus:SL_AtoB01"/>
             <ScheduledStopPointRef ref="mybus:SSP0001A" versionRef="EXTERNAL"/>
             <ScheduledStopPointRef ref="mybus:SSP0002B" versionRef="EXTERNAL"/>
             <ScheduledStopPointRef ref="mybus:SSP0003CA" versionRef="EXTERNAL"/>
+            <ServiceLinkRef ref="mybus:SL_AtoB01"/>
           </members>
         </GeneralGroupOfEntities>
       </groupsOfEntities>

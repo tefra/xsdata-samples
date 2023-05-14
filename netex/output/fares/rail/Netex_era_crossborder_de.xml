@@ -1393,6 +1393,64 @@ issued to DB ticket vending machines.</Description>
             </SalesOfferPackage>
           </salesOfferPackages>
         </FareFrame>
+        <ServiceCalendarFrame id="tlx:Trilex@Service_Calendar" version="any" responsibilitySetRef="tlx:products@TLX">
+          <Name>TLX   Specific  Calendar</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="tlx_data"/>
+            <DefaultDataSourceRef version="any" ref="tlx:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="tlx:products@TLX"/>
+          </FrameDefaults>
+          <dayTypes>
+            <FareDayType id="tlx::everyday" version="any">
+              <Name>Every day</Name>
+              <Description>ANy time</Description>
+              <EarliestTime>00:00:00</EarliestTime>
+              <DayLength>P1DT3H</DayLength>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+            <FareDayType id="tlx:working_day@off_peak" version="any">
+              <Name>Working day</Name>
+              <Description>After 9.00 end at 4.30 next day.</Description>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="tlx:working_day@off_peak" version="any">
+                  <StartTime>09:00:00</StartTime>
+                  <EndTime>15:00:00</EndTime>
+                </Timeband>
+              </timebands>
+            </FareDayType>
+            <FareDayType id="tlx:not_working_day" version="any">
+              <Name>Non Working day</Name>
+              <EarliestTime>00:00:00</EarliestTime>
+              <DayLength>P1DT3H</DayLength>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+          </dayTypes>
+        </ServiceCalendarFrame>
         <ResourceFrame id="tlx:Trilex@Common_Resources" version="any" responsibilitySetRef="tlx:products@TLX">
           <Name>Germany Specifc  code values</Name>
           <codespaces>
@@ -1479,64 +1537,6 @@ issued to DB ticket vending machines.</Description>
             </Operator>
           </organisations>
         </ResourceFrame>
-        <ServiceCalendarFrame id="tlx:Trilex@Service_Calendar" version="any" responsibilitySetRef="tlx:products@TLX">
-          <Name>TLX   Specific  Calendar</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="tlx_data"/>
-            <DefaultDataSourceRef version="any" ref="tlx:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="tlx:products@TLX"/>
-          </FrameDefaults>
-          <dayTypes>
-            <FareDayType id="tlx::everyday" version="any">
-              <Name>Every day</Name>
-              <Description>ANy time</Description>
-              <EarliestTime>00:00:00</EarliestTime>
-              <DayLength>P1DT3H</DayLength>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-            <FareDayType id="tlx:working_day@off_peak" version="any">
-              <Name>Working day</Name>
-              <Description>After 9.00 end at 4.30 next day.</Description>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="tlx:working_day@off_peak" version="any">
-                  <StartTime>09:00:00</StartTime>
-                  <EndTime>15:00:00</EndTime>
-                </Timeband>
-              </timebands>
-            </FareDayType>
-            <FareDayType id="tlx:not_working_day" version="any">
-              <Name>Non Working day</Name>
-              <EarliestTime>00:00:00</EarliestTime>
-              <DayLength>P1DT3H</DayLength>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>NotWorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-          </dayTypes>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
     <CompositeFrame id="vvo:VVO" version="any" responsibilitySetRef="vvo:products@VVO">
@@ -3065,252 +3065,6 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
         <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
       </FrameDefaults>
       <frames>
-        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
-          <Name>Common Country independent  fare component</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="eura_data"/>
-            <DefaultDataSourceRef version="any" ref="eura:common_example"/>
-            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
-            <DefaultCurrency>EUR</DefaultCurrency>
-          </FrameDefaults>
-          <PricingParameterSet id="eura:Common_Resources" version="any">
-            <priceUnits>
-              <PriceUnit id="eura:EUR" version="any">
-                <Name>Euro</Name>
-                <PrivateCode>€</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:GBP" version="any">
-                <Name>Pound Sterling</Name>
-                <PrivateCode>£</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:SFR" version="any">
-                <Name>Swiss Francs</Name>
-                <Precision>2</Precision>
-              </PriceUnit>
-            </priceUnits>
-          </PricingParameterSet>
-          <geographicalUnits>
-            <GeographicalUnit id="eura:km" version="any">
-              <Name>Distance Unit Kilometres</Name>
-            </GeographicalUnit>
-          </geographicalUnits>
-          <distributionChannels>
-            <DistributionChannel id="eura:online" version="01">
-              <ShortName>Internet sales</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:online_de" version="01" order="1">
-                  <Name lang="de">Internetverkauf</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:online_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par l'internet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>online</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:in_station" version="01">
-              <ShortName>Instation sale by machine, counter or payg</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
-              <ShortName>Automatic Ticket Machine</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:pay_as_you_go_device" version="01">
-              <ShortName>Automatic Ticket Machine</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:at_counter" version="01">
-              <ShortName>Ticket counter sale</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:at_counter_de" version="01" order="1">
-                  <Name lang="de">Schalter</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par le guichet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:onboard" version="01">
-              <ShortName>onboard</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:onboard_ro" version="01" order="1">
-                  <Name lang="en">in Tren</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>onBoard</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:call_centre" version="01">
-              <ShortName>Call Centre</ShortName>
-              <DistributionChannelType>telephone</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:travel_agent" version="01">
-              <ShortName>Travel Agent</ShortName>
-              <DistributionChannelType>agency</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:employee_organisation" version="01">
-              <ShortName>Employee Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:statutory_organisation" version="01">
-              <ShortName>Statutory Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-          </distributionChannels>
-          <fulfilmentMethods>
-            <FulfilmentMethod id="eura:post" version="01">
-              <Name>Send ticket by post</Name>
-              <FulfilmentMethodType>post</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:courier" version="01">
-              <Name>Send ticket by courier</Name>
-              <FulfilmentMethodType>other</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_at_counter" version="01">
-              <Name>Collect at counter</Name>
-              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_on_board" version="01">
-              <Name>Collect  on board</Name>
-              <FulfilmentMethodType>conductor</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_machine" version="01">
-              <Name>Collect   from machine</Name>
-              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
-              <RequiresBookingReference>true</RequiresBookingReference>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_agent" version="01">
-              <Name>Travel agent issues ticket directly</Name>
-              <FulfilmentMethodType>agent</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:mobile_app" version="01">
-              <Name>Mobile App</Name>
-              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:self_print" version="01">
-              <Name>Self Print</Name>
-              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:email" version="01">
-              <Name>EMAIL</Name>
-              <FulfilmentMethodType>email</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-          </fulfilmentMethods>
-          <typesOfTravelDocuments>
-            <TypeOfTravelDocument id="eura:distribution_channel_dependent" version="01">
-              <Name>Depends on channel used</Name>
-              <MediaType>other</MediaType>
-              <MachineReadable/>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
-              <Name>Printed Ticket</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
-              <Name>Hand written ticket</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable/>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
-              <Name>Printed Ticket with magnetic Stripe</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>magneticStrip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
-              <MediaType>selfPrintPaperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:pass" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>barCode</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
-              <MediaType>mobileApp</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:smart_card" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>chip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:electronic_document" version="01">
-              <MediaType>none</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-          </typesOfTravelDocuments>
-        </FareFrame>
         <ResourceFrame id="eura:EURA@Common_Resources" version="any" responsibilitySetRef="eura:code_sets">
           <Name>EURA Common Country independent  code values</Name>
           <codespaces>
@@ -3593,6 +3347,11 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
             </ValueSet>
           </typesOfValue>
           <organisations>
+            <GeneralOrganisation id="eura:EURA" version="any">
+              <Name>European Union Agency for Railways</Name>
+              <ShortName>EURA</ShortName>
+              <OrganisationType>statutoryBody</OrganisationType>
+            </GeneralOrganisation>
             <Operator id="uic:0051" version="any">
               <PublicCode>PKP</PublicCode>
               <Name lang="pl">PKP Polskie Linie Kolejowe S.A.</Name>
@@ -3664,13 +3423,254 @@ An overview of the validity of EURO-NEISSE tickets can be found here. Further in
               </ValidityPeriod>
               <OperatorActivities/>
             </Operator>
-            <GeneralOrganisation id="eura:EURA" version="any">
-              <Name>European Union Agency for Railways</Name>
-              <ShortName>EURA</ShortName>
-              <OrganisationType>statutoryBody</OrganisationType>
-            </GeneralOrganisation>
           </organisations>
         </ResourceFrame>
+        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
+          <Name>Common Country independent  fare component</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="eura_data"/>
+            <DefaultDataSourceRef version="any" ref="eura:common_example"/>
+            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <PricingParameterSet id="eura:Common_Resources" version="any">
+            <priceUnits>
+              <PriceUnit id="eura:EUR" version="any">
+                <Name>Euro</Name>
+                <PrivateCode>€</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:GBP" version="any">
+                <Name>Pound Sterling</Name>
+                <PrivateCode>£</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:SFR" version="any">
+                <Name>Swiss Francs</Name>
+                <Precision>2</Precision>
+              </PriceUnit>
+            </priceUnits>
+          </PricingParameterSet>
+          <geographicalUnits>
+            <GeographicalUnit id="eura:km" version="any">
+              <Name>Distance Unit Kilometres</Name>
+            </GeographicalUnit>
+          </geographicalUnits>
+          <distributionChannels>
+            <DistributionChannel id="eura:online" version="01">
+              <ShortName>Internet sales</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:online_de" version="01" order="1">
+                  <Name lang="de">Internetverkauf</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:online_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par l'internet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>online</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:in_station" version="01">
+              <ShortName>Instation sale by machine, counter or payg</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
+              <ShortName>Automatic Ticket Machine</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:pay_as_you_go_device" version="01">
+              <ShortName>Automatic Ticket Machine</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:at_counter" version="01">
+              <ShortName>Ticket counter sale</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:at_counter_de" version="01" order="1">
+                  <Name lang="de">Schalter</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par le guichet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:onboard" version="01">
+              <ShortName>onboard</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:onboard_ro" version="01" order="1">
+                  <Name lang="en">in Tren</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>onBoard</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:call_centre" version="01">
+              <ShortName>Call Centre</ShortName>
+              <DistributionChannelType>telephone</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:travel_agent" version="01">
+              <ShortName>Travel Agent</ShortName>
+              <DistributionChannelType>agency</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:employee_organisation" version="01">
+              <ShortName>Employee Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:statutory_organisation" version="01">
+              <ShortName>Statutory Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="eura:post" version="01">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:courier" version="01">
+              <Name>Send ticket by courier</Name>
+              <FulfilmentMethodType>other</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_at_counter" version="01">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_on_board" version="01">
+              <Name>Collect  on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_machine" version="01">
+              <Name>Collect   from machine</Name>
+              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+              <RequiresBookingReference>true</RequiresBookingReference>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_agent" version="01">
+              <Name>Travel agent issues ticket directly</Name>
+              <FulfilmentMethodType>agent</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:mobile_app" version="01">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:self_print" version="01">
+              <Name>Self Print</Name>
+              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:email" version="01">
+              <Name>EMAIL</Name>
+              <FulfilmentMethodType>email</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument id="eura:distribution_channel_dependent" version="01">
+              <Name>Depends on channel used</Name>
+              <MediaType>other</MediaType>
+              <MachineReadable/>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
+              <Name>Hand written ticket</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable/>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
+              <Name>Printed Ticket with magnetic Stripe</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>magneticStrip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
+              <MediaType>selfPrintPaperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:pass" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:smart_card" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>chip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:electronic_document" version="01">
+              <MediaType>none</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

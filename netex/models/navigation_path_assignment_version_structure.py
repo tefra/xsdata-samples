@@ -19,68 +19,60 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "NavigationPathAssignment_VersionStructure"
 
-    default_connection_ref: Optional[DefaultConnectionRef] = field(
+    default_connection_ref_or_site_connection_ref_or_connection_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "DefaultConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DefaultConnectionRef",
+                    "type": DefaultConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteConnectionRef",
+                    "type": SiteConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectionRef",
+                    "type": ConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    site_connection_ref: Optional[SiteConnectionRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "SiteConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connection_ref: Optional[ConnectionRef] = field(
-        default=None,
-        metadata={
-            "name": "ConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_ref: Optional[StopPlaceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_ref: Optional[ParkingRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_ref: Optional[PointOfInterestRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_site_ref: Optional[ServiceSiteRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceSiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_ref: Optional[SiteRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingRef",
+                    "type": ParkingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestRef",
+                    "type": PointOfInterestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceSiteRef",
+                    "type": ServiceSiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteRef",
+                    "type": SiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     navigation_path_ref: Optional[NavigationPathRef] = field(

@@ -43,6 +43,118 @@
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@Fare_Stage@network" version="1.0">
+          <Name>Stops for Fare network </Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <lines>
+            <Line id="mybus:line_5" version="1.0">
+              <Name>Line 5</Name>
+              <OperatorRef version="1.0" ref="mybus:DTA"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>ALPH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
+              <Name>Bravo Street</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>BRAV</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
+              <Name>Charley Crescent</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_078" version="any">
+              <Name>Delta Force</Name>
+              <Location>
+                <Longitude>53.4000</Longitude>
+                <Latitude>0.4000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Delta</ShortName>
+              <PublicCode>DELTA</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_101" version="any">
+              <Name>Echo Chambers </Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Echo</ShortName>
+              <PublicCode>ECHO</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_102" version="any">
+              <Name>Foxtrot Tango</Name>
+              <Location>
+                <Longitude>53.5000</Longitude>
+                <Latitude>0.5000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Foxtrot</ShortName>
+              <PublicCode>FOXTROT</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_103" version="any">
+              <Name>Golf Course </Name>
+              <Location>
+                <Longitude>53.6000</Longitude>
+                <Latitude>0.6000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Golf</ShortName>
+              <PublicCode>GOLF</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_104" version="any">
+              <Name>Hotel Bristol </Name>
+              <Location>
+                <Longitude>53.7000</Longitude>
+                <Latitude>0.7000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Hotel</ShortName>
+              <PublicCode>HOTEL</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@Fare_Stage@products" version="1.0">
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Fare_Stage@network"/>
@@ -203,118 +315,6 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Fare_Stage@network" version="1.0">
-          <Name>Stops for Fare network </Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
-          </prerequisites>
-          <lines>
-            <Line id="mybus:line_5" version="1.0">
-              <Name>Line 5</Name>
-              <OperatorRef version="1.0" ref="mybus:DTA"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="mybus:SSP_001" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <Location>
-                <Longitude>53.0000</Longitude>
-                <Latitude>0.1000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Alpha</ShortName>
-              <PublicCode>ALPH</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" version="any">
-              <Name>Bravo Street</Name>
-              <Location>
-                <Longitude>53.2000</Longitude>
-                <Latitude>0.2000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Bravo</ShortName>
-              <PublicCode>BRAV</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" version="any">
-              <Name>Charley Crescent</Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Charley</ShortName>
-              <PublicCode>CHAS</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_078" version="any">
-              <Name>Delta Force</Name>
-              <Location>
-                <Longitude>53.4000</Longitude>
-                <Latitude>0.4000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Delta</ShortName>
-              <PublicCode>DELTA</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_101" version="any">
-              <Name>Echo Chambers </Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Echo</ShortName>
-              <PublicCode>ECHO</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_102" version="any">
-              <Name>Foxtrot Tango</Name>
-              <Location>
-                <Longitude>53.5000</Longitude>
-                <Latitude>0.5000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Foxtrot</ShortName>
-              <PublicCode>FOXTROT</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_103" version="any">
-              <Name>Golf Course </Name>
-              <Location>
-                <Longitude>53.6000</Longitude>
-                <Latitude>0.6000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Golf</ShortName>
-              <PublicCode>GOLF</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_104" version="any">
-              <Name>Hotel Bristol </Name>
-              <Location>
-                <Longitude>53.7000</Longitude>
-                <Latitude>0.7000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Hotel</ShortName>
-              <PublicCode>HOTEL</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-        </ServiceFrame>
         <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <codespaces>
             <Codespace id="ntx">

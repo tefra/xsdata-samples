@@ -13,27 +13,26 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareElementInSequenceRefs_RelStructure"
 
-    controllable_element_in_sequence_ref: List[ControllableElementInSequenceRef] = field(
+    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ControllableElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_element_in_sequence_ref: List[FareStructureElementInSequenceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareStructureElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_right_in_product_ref: List[AccessRightInProductRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControllableElementInSequenceRef",
+                    "type": ControllableElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementInSequenceRef",
+                    "type": FareStructureElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessRightInProductRef",
+                    "type": AccessRightInProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

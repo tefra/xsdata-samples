@@ -138,151 +138,105 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    customer_purchase_package_price_ref: Optional[CustomerPurchasePackagePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "CustomerPurchasePackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_price_ref: Optional[ParkingPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_interval_price_ref: Optional[TimeIntervalPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    time_unit_price_ref: Optional[TimeUnitPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "TimeUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factor_price_ref: Optional[QualityStructureFactorPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "QualityStructureFactorPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    controllable_element_price_ref: Optional[ControllableElementPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "ControllableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    validable_element_price_ref: Optional[ValidableElementPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "ValidableElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_interval_price_ref: Optional[GeographicalIntervalPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "GeographicalIntervalPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    geographical_unit_price_ref: Optional[GeographicalUnitPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "GeographicalUnitPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_parameter_price_ref: Optional[UsageParameterPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "UsageParameterPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sales_offer_package_price_ref: Optional[SalesOfferPackagePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "SalesOfferPackagePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    distance_matrix_element_price_ref: Optional[DistanceMatrixElementPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "DistanceMatrixElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_element_price_ref: Optional[FareStructureElementPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareStructureElementPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fulfilment_method_price_ref: Optional[FulfilmentMethodPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FulfilmentMethodPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    series_constraint_price_ref: Optional[SeriesConstraintPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "SeriesConstraintPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    capping_rule_price_ref: Optional[CappingRulePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "CappingRulePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_product_price_ref: Optional[FareProductPriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareProductPriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_price_ref: Optional[FarePriceRef] = field(
-        default=None,
-        metadata={
-            "name": "FarePriceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     choice: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CustomerPurchasePackagePriceRef",
+                    "type": CustomerPurchasePackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPriceRef",
+                    "type": ParkingPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeIntervalPriceRef",
+                    "type": TimeIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimeUnitPriceRef",
+                    "type": TimeUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorPriceRef",
+                    "type": QualityStructureFactorPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ControllableElementPriceRef",
+                    "type": ControllableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ValidableElementPriceRef",
+                    "type": ValidableElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalIntervalPriceRef",
+                    "type": GeographicalIntervalPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeographicalUnitPriceRef",
+                    "type": GeographicalUnitPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageParameterPriceRef",
+                    "type": UsageParameterPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SalesOfferPackagePriceRef",
+                    "type": SalesOfferPackagePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DistanceMatrixElementPriceRef",
+                    "type": DistanceMatrixElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementPriceRef",
+                    "type": FareStructureElementPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FulfilmentMethodPriceRef",
+                    "type": FulfilmentMethodPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappingRulePriceRef",
+                    "type": CappingRulePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductPriceRef",
+                    "type": FareProductPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FarePriceRef",
+                    "type": FarePriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        }
+    )
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -18,52 +18,50 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    wire_link_ref: Optional[WireLinkRef] = field(
+    wire_link_ref_or_road_link_ref_or_railway_link_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "WireLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WireLinkRef",
+                    "type": WireLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadLinkRef",
+                    "type": RoadLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayLinkRef",
+                    "type": RailwayLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    road_link_ref: Optional[RoadLinkRef] = field(
+    wire_point_ref_or_road_point_ref_or_railway_point_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "RoadLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    railway_link_ref: Optional[RailwayLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "RailwayLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wire_point_ref: Optional[WirePointRef] = field(
-        default=None,
-        metadata={
-            "name": "WirePointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_point_ref: Optional[RoadPointRef] = field(
-        default=None,
-        metadata={
-            "name": "RoadPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    railway_point_ref: Optional[RailwayPointRef] = field(
-        default=None,
-        metadata={
-            "name": "RailwayPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WirePointRef",
+                    "type": WirePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadPointRef",
+                    "type": RoadPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayPointRef",
+                    "type": RailwayPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     vehicle_stopping_positions: Optional[VehicleStoppingPositionsRelStructure] = field(

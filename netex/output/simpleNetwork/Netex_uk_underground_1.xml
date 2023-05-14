@@ -58,6 +58,108 @@
         <DefaultCodespaceRef ref="lul_data"/>
       </FrameDefaults>
       <frames>
+        <ResourceFrame id="tfl:LU_RF001" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="001" derivedFromVersionRef="004">
+          <Name>Common resources for TfL Underground network</Name>
+          <responsibilitySets>
+            <ResponsibilitySet id="nptg:082" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="2.0">
+              <roles>
+                <ResponsibilityRoleAssignment id="nptg:082" created="2010-05-17T09:30:47Z" version="2.0">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                  <ResponsibleOrganisationRef version="any" ref="tfl:Old_01"/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="hde:RS_22" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="3.0">
+              <roles>
+                <ResponsibilityRoleAssignment id="nptg:RS_22" created="2010-05-17T09:30:47Z" version="2.0">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                  <ResponsibleOrganisationRef version="any" ref="tfl:Tfl"/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="gis:RS_31" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="1.1">
+              <roles>
+                <ResponsibilityRoleAssignment id="nptg:RS_31" created="2010-05-17T09:30:47Z" version="2.0">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                  <ResponsibleOrganisationRef ref="gis:Org_Gis003"/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="napt:Stop_types" version="any">
+              <Name>UK NaPTAN Stop Types</Name>
+              <values>
+                <TypeOfPoint id="napt:Type_of_point@TMU" version="any">
+                  <Name>Tram or Metro  stop</Name>
+                </TypeOfPoint>
+                <TypeOfPoint id="napt:Type_of_point@RSE" version="any">
+                  <Name>Rail Station Entrance</Name>
+                </TypeOfPoint>
+              </values>
+            </ValueSet>
+            <ValueSet id="napt:Stop_Area_types" version="any">
+              <Name>UK NaPTAN Stop  Area Types</Name>
+              <values>
+                <TypeOfZone id="napt:Type_of_zone@GTMU" version="any">
+                  <Name>Tram or Metro  station</Name>
+                </TypeOfZone>
+                <TypeOfZone id="napt:Type_of_zone@GRLS" version="any">
+                  <Name>Rail Station  </Name>
+                </TypeOfZone>
+              </values>
+            </ValueSet>
+            <ValueSet id="napt:Modes" version="any">
+              <Name>Mode Names</Name>
+              <values>
+                <OpenTransportMode id="napt:Metro" version="any">
+                  <Name>Metro</Name>
+                  <TransportMode>metro</TransportMode>
+                  <MetroSubmode>tube</MetroSubmode>
+                </OpenTransportMode>
+                <OpenTransportMode id="napt:Bus" version="any">
+                  <Name>Bus</Name>
+                  <TransportMode>bus</TransportMode>
+                  <BusSubmode>localBus</BusSubmode>
+                </OpenTransportMode>
+                <OpenTransportMode id="napt:NightBus" version="any">
+                  <Name>Bus</Name>
+                  <TransportMode>bus</TransportMode>
+                  <BusSubmode>nightBus</BusSubmode>
+                </OpenTransportMode>
+                <OpenTransportMode id="napt:Tram" version="any">
+                  <Name>Tram</Name>
+                  <TransportMode>tram</TransportMode>
+                  <TramSubmode>cityTram</TramSubmode>
+                </OpenTransportMode>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator id="tfl:Old_01" version="any">
+              <PublicCode>LUL</PublicCode>
+              <Name>London Underground Limited</Name>
+              <ShortName>London Underground </ShortName>
+              <TradingName>London Underground Limited</TradingName>
+              <Description>Responsible for Underground</Description>
+              <OrganisationType>operator</OrganisationType>
+              <OperatorActivities/>
+            </Operator>
+            <Authority id="tfl:Tfl" version="any">
+              <Name>Transport for London</Name>
+              <Description>Responsible for all London's Transport</Description>
+              <OrganisationType>authority</OrganisationType>
+            </Authority>
+            <GeneralOrganisation id="nptg:Org_G001" version="any">
+              <Name>Depart of Transport</Name>
+              <Description>Responsible for NaPTAN and NPTG data coordination</Description>
+              <OrganisationType>other</OrganisationType>
+            </GeneralOrganisation>
+          </organisations>
+        </ResourceFrame>
         <ServiceFrame id="lul:LU_SF001" version="any">
           <Name>TfL Underground network Lines &amp; Directions</Name>
           <Network id="lul:Network:all" version="any">
@@ -458,6 +560,9 @@
             </GroupOfLines>
           </groupsOfLines>
         </ServiceFrame>
+        <SiteFrame id="tfl:LU_SITF001" version="any" responsibilitySetRef="nptg:082">
+          <Name>Stop Places  on the London Underground</Name>
+        </SiteFrame>
         <ServiceFrame id="tfl:LU_SF001" version="any" responsibilitySetRef="napt:082">
           <Name>Stops  or the London Underground</Name>
           <FrameDefaults>
@@ -19775,111 +19880,6 @@
             </StopArea>
           </stopAreas>
         </ServiceFrame>
-        <SiteFrame id="tfl:LU_SITF001" version="any" responsibilitySetRef="nptg:082">
-          <Name>Stop Places  on the London Underground</Name>
-        </SiteFrame>
-        <ResourceFrame id="tfl:LU_RF001" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="001" derivedFromVersionRef="004">
-          <Name>Common resources for TfL Underground network</Name>
-          <responsibilitySets>
-            <ResponsibilitySet id="nptg:082" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="2.0">
-              <roles>
-                <ResponsibilityRoleAssignment id="nptg:082" created="2010-05-17T09:30:47Z" version="2.0">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                  <ResponsibleOrganisationRef version="any" ref="tfl:Old_01"/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="hde:RS_22" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="3.0">
-              <roles>
-                <ResponsibilityRoleAssignment id="nptg:RS_22" created="2010-05-17T09:30:47Z" version="2.0">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                  <ResponsibleOrganisationRef version="any" ref="tfl:Tfl"/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="gis:RS_31" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="1.1">
-              <roles>
-                <ResponsibilityRoleAssignment id="nptg:RS_31" created="2010-05-17T09:30:47Z" version="2.0">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                  <ResponsibleOrganisationRef ref="gis:Org_Gis003"/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-          </responsibilitySets>
-          <typesOfValue>
-            <ValueSet id="napt:Stop_types" version="any">
-              <Name>UK NaPTAN Stop Types</Name>
-              <values>
-                <TypeOfPoint id="napt:Type_of_point@TMU" version="any">
-                  <Name>Tram or Metro  stop</Name>
-                </TypeOfPoint>
-                <TypeOfPoint id="napt:Type_of_point@RSE" version="any">
-                  <Name>Rail Station Entrance</Name>
-                </TypeOfPoint>
-              </values>
-            </ValueSet>
-            <ValueSet id="napt:Stop_Area_types" version="any">
-              <Name>UK NaPTAN Stop  Area Types</Name>
-              <values>
-                <TypeOfZone id="napt:Type_of_zone@GTMU" version="any">
-                  <Name>Tram or Metro  station</Name>
-                </TypeOfZone>
-                <TypeOfZone id="napt:Type_of_zone@GRLS" version="any">
-                  <Name>Rail Station  </Name>
-                </TypeOfZone>
-              </values>
-            </ValueSet>
-            <ValueSet id="napt:Modes" version="any">
-              <Name>Mode Names</Name>
-              <values>
-                <OpenTransportMode id="napt:Metro" version="any">
-                  <Name>Metro</Name>
-                  <TransportMode>metro</TransportMode>
-                  <MetroSubmode>tube</MetroSubmode>
-                </OpenTransportMode>
-                <OpenTransportMode id="napt:Bus" version="any">
-                  <Name>Bus</Name>
-                  <TransportMode>bus</TransportMode>
-                  <BusSubmode>localBus</BusSubmode>
-                </OpenTransportMode>
-                <OpenTransportMode id="napt:NightBus" version="any">
-                  <Name>Bus</Name>
-                  <TransportMode>bus</TransportMode>
-                  <BusSubmode>nightBus</BusSubmode>
-                </OpenTransportMode>
-                <OpenTransportMode id="napt:Tram" version="any">
-                  <Name>Tram</Name>
-                  <TransportMode>tram</TransportMode>
-                  <TramSubmode>cityTram</TramSubmode>
-                </OpenTransportMode>
-              </values>
-            </ValueSet>
-          </typesOfValue>
-          <organisations>
-            <Authority id="tfl:Tfl" version="any">
-              <Name>Transport for London</Name>
-              <Description>Responsible for all London's Transport</Description>
-              <OrganisationType>authority</OrganisationType>
-            </Authority>
-            <Operator id="tfl:Old_01" version="any">
-              <PublicCode>LUL</PublicCode>
-              <Name>London Underground Limited</Name>
-              <ShortName>London Underground </ShortName>
-              <TradingName>London Underground Limited</TradingName>
-              <Description>Responsible for Underground</Description>
-              <OrganisationType>operator</OrganisationType>
-              <OperatorActivities/>
-            </Operator>
-            <GeneralOrganisation id="nptg:Org_G001" version="any">
-              <Name>Depart of Transport</Name>
-              <Description>Responsible for NaPTAN and NPTG data coordination</Description>
-              <OrganisationType>other</OrganisationType>
-            </GeneralOrganisation>
-          </organisations>
-        </ResourceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

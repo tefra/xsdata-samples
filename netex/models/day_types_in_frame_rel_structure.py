@@ -15,27 +15,26 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    fare_day_type: List[FareDayType] = field(
+    fare_day_type_or_organisation_day_type_or_day_type: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareDayType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_day_type: List[OrganisationDayType] = field(
-        default_factory=list,
-        metadata={
-            "name": "OrganisationDayType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_type: List[DayType] = field(
-        default_factory=list,
-        metadata={
-            "name": "DayType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareDayType",
+                    "type": FareDayType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationDayType",
+                    "type": OrganisationDayType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayType",
+                    "type": DayType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

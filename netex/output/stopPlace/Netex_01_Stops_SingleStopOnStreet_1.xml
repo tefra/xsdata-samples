@@ -58,36 +58,6 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="frtop:SVF004" version="any">
-          <FrameDefaults>
-            <DefaultResponsibilitySetRef version="3.0" ref="frtop:RS_24"/>
-          </FrameDefaults>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="frtop:SSP0042A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
-              <Name>Poste, St Jean</Name>
-              <PrivateCode>legacy3452</PrivateCode>
-              <VehicleModes>bus</VehicleModes>
-              <ForAlighting>true</ForAlighting>
-              <ForBoarding>true</ForBoarding>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <tariffZones>
-            <TariffZone id="frtop:TZ_0010" version="001">
-              <Name lang="fr">Zone A</Name>
-              <members>
-                <ScheduledStopPointRef version="032" ref="frtop:SSP0042A"/>
-              </members>
-            </TariffZone>
-          </tariffZones>
-          <stopAssignments>
-            <PassengerStopAssignment id="frtop:PSA_40016_A1" version="any" order="1">
-              <Description lang="en">Assigns Timetable timetable ref to physical stop</Description>
-              <ScheduledStopPointRef version="032" ref="frtop:SSP0042A"/>
-              <StopPlaceRef version="any" ref="mybus:SSP_02456A"/>
-              <QuayRef version="any" ref="mybus:Q_SSP_02456A_1"/>
-            </PassengerStopAssignment>
-          </stopAssignments>
-        </ServiceFrame>
         <SiteFrame id="frtop:SF005" version="any">
           <validityConditions>
             <AvailabilityCondition id="frtop:SF005" version="any">
@@ -222,6 +192,36 @@
             </StopPlace>
           </stopPlaces>
         </SiteFrame>
+        <ServiceFrame id="frtop:SVF004" version="any">
+          <FrameDefaults>
+            <DefaultResponsibilitySetRef version="3.0" ref="frtop:RS_24"/>
+          </FrameDefaults>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="frtop:SSP0042A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
+              <Name>Poste, St Jean</Name>
+              <PrivateCode>legacy3452</PrivateCode>
+              <VehicleModes>bus</VehicleModes>
+              <ForAlighting>true</ForAlighting>
+              <ForBoarding>true</ForBoarding>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <tariffZones>
+            <TariffZone id="frtop:TZ_0010" version="001">
+              <Name lang="fr">Zone A</Name>
+              <members>
+                <ScheduledStopPointRef version="032" ref="frtop:SSP0042A"/>
+              </members>
+            </TariffZone>
+          </tariffZones>
+          <stopAssignments>
+            <PassengerStopAssignment id="frtop:PSA_40016_A1" version="any" order="1">
+              <Description lang="en">Assigns Timetable timetable ref to physical stop</Description>
+              <ScheduledStopPointRef version="032" ref="frtop:SSP0042A"/>
+              <StopPlaceRef version="any" ref="mybus:SSP_02456A"/>
+              <QuayRef version="any" ref="mybus:Q_SSP_02456A_1"/>
+            </PassengerStopAssignment>
+          </stopAssignments>
+        </ServiceFrame>
         <ResourceFrame id="frtop:RF01" version="any">
           <responsibilitySets>
             <ResponsibilitySet id="frtop:RS_22" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="3.0">

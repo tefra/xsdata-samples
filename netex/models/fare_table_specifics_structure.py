@@ -45,76 +45,73 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref: Optional[NetworkRef] = field(
+    network_ref_or_group_of_lines_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "NetworkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "NetworkRef",
+                    "type": NetworkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfLinesRef",
+                    "type": GroupOfLinesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    group_of_lines_ref: Optional[GroupOfLinesRef] = field(
+    flexible_line_ref_or_line_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "GroupOfLinesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    flexible_line_ref: Optional[FlexibleLineRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_ref: Optional[StopPlaceRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_ref: Optional[ParkingRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_ref: Optional[PointOfInterestRef] = field(
-        default=None,
-        metadata={
-            "name": "PointOfInterestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_site_ref: Optional[ServiceSiteRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceSiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_ref: Optional[SiteRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingRef",
+                    "type": ParkingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestRef",
+                    "type": PointOfInterestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceSiteRef",
+                    "type": ServiceSiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteRef",
+                    "type": SiteRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     tariff_zone_ref: Optional[TariffZoneRef] = field(
@@ -165,28 +162,27 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_facility_set_ref: Optional[ServiceFacilitySetRef] = field(
+    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ServiceFacilitySetRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_facility_set_ref: Optional[SiteFacilitySetRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteFacilitySetRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    facility_set_ref: Optional[FacilitySetRef] = field(
-        default=None,
-        metadata={
-            "name": "FacilitySetRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceFacilitySetRef",
+                    "type": ServiceFacilitySetRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteFacilitySetRef",
+                    "type": SiteFacilitySetRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FacilitySetRef",
+                    "type": FacilitySetRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
@@ -205,7 +201,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
             "type": "Elements",

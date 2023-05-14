@@ -37,6 +37,347 @@
         <DefaultCodespaceRef ref="spq"/>
       </FrameDefaults>
       <frames>
+        <ResourceFrame id="spq:Fr1234" version="any">
+          <responsibilitySets>
+            <ResponsibilitySet id="spq:RS_01" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="2.0">
+              <Name>Responsible for STOP PLACEs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="spq:RS_01_01" created="2010-05-17T09:30:47Z" version="2.0">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="spq:RS_02" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="3.0">
+              <Name>Responsible for SERVICE PATTERN.</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="spq:RS_02_01" created="2010-05-17T09:30:47Z" version="3.0">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="spq:RS_03" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="1.1">
+              <Name>Responsible for TIMING PATTERN.</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="spq:RS_03_01" created="2010-05-17T09:30:47Z" version="1.1">
+                  <DataRoleType>collects</DataRoleType>
+                  <StakeholderRoleType/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+        </ResourceFrame>
+        <SiteFrame id="spq:Fr1234" version="any">
+          <FrameDefaults>
+            <DefaultResponsibilitySetRef ref="spq:RS_02"/>
+          </FrameDefaults>
+          <stopPlaces>
+            <StopPlace id="spq:SP1" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 1</Name>
+              <ShortName>Stop 1 Rue de Paris</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP1_01" version="any">
+                <RoadName>Rue de Paris</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP1" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 1</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 1</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP2" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 2</Name>
+              <ShortName>Stop 2 Eue de l'est</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP2_01" version="any">
+                <RoadName>Rue de Paris</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP2" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 2</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 2</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP3" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 3</Name>
+              <ShortName>Stop 3 Rue Galieni</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP3_01" version="any">
+                <RoadName>Rue Thiere</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP3" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 3</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 3</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP4" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 4</Name>
+              <ShortName>Stop 4 Rue du Dome</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP4_04" version="any">
+                <RoadName>Rue Thiere</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP4" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 4</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 4</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP5" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 5</Name>
+              <ShortName>Stop 5 Rue d'Issy</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP5_01" version="any">
+                <RoadName>Rue d'Issy</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP5" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 5</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 5</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP6" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 6</Name>
+              <ShortName>Stop 6 Boulevard Jean Juares</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP6_01" version="any">
+                <RoadName>Boulevard Jean Juares</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP6" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 6</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop6</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP7" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 7</Name>
+              <ShortName>Stop 7 Boulogne Billancourt</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP7_01" version="any">
+                <RoadName>Avenue de General Leclerc</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP7" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 7</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 7</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP8" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 8</Name>
+              <ShortName>Stop 8</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP8_01" version="any">
+                <RoadName>Avenue de General Leclerc</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP8" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 8</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 8</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP9" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 9</Name>
+              <ShortName>Stop 9 Pont de Sevres</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="spq:Addr_SP9_01" version="any">
+                <RoadName>Avenue de General Leclerc</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="spq:SSP9" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Stop 9</Name>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop 9</Label>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="spq:SP10" created="2006-09-11T15:42:00" version="any">
+              <Name>Stop 10</Name>
+              <ShortName>Stop 10</ShortName>
+              <AccessModes/>
+              <OtherTransportModes/>
+            </StopPlace>
+          </stopPlaces>
+        </SiteFrame>
         <ServiceFrame id="spq:Fr1234" version="any">
           <routePoints>
             <RoutePoint id="spq:Rtpt1" version="any"/>
@@ -872,316 +1213,6 @@
             </TimeDemandType>
           </timeDemandTypes>
         </ServiceFrame>
-        <SiteFrame id="spq:Fr1234" version="any">
-          <FrameDefaults>
-            <DefaultResponsibilitySetRef ref="spq:RS_02"/>
-          </FrameDefaults>
-          <stopPlaces>
-            <StopPlace id="spq:SP1" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 1</Name>
-              <ShortName>Stop 1 Rue de Paris</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP1_01" version="any">
-                <RoadName>Rue de Paris</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP1" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 1</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 1</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP2" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 2</Name>
-              <ShortName>Stop 2 Eue de l'est</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP2_01" version="any">
-                <RoadName>Rue de Paris</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP2" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 2</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 2</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP3" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 3</Name>
-              <ShortName>Stop 3 Rue Galieni</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP3_01" version="any">
-                <RoadName>Rue Thiere</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP3" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 3</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 3</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP4" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 4</Name>
-              <ShortName>Stop 4 Rue du Dome</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP4_04" version="any">
-                <RoadName>Rue Thiere</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP4" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 4</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 4</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP5" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 5</Name>
-              <ShortName>Stop 5 Rue d'Issy</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP5_01" version="any">
-                <RoadName>Rue d'Issy</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP5" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 5</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 5</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP6" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 6</Name>
-              <ShortName>Stop 6 Boulevard Jean Juares</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP6_01" version="any">
-                <RoadName>Boulevard Jean Juares</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP6" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 6</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop6</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP7" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 7</Name>
-              <ShortName>Stop 7 Boulogne Billancourt</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP7_01" version="any">
-                <RoadName>Avenue de General Leclerc</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP7" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 7</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 7</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP8" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 8</Name>
-              <ShortName>Stop 8</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP8_01" version="any">
-                <RoadName>Avenue de General Leclerc</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP8" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 8</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 8</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP9" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 9</Name>
-              <ShortName>Stop 9 Pont de Sevres</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="EPSG:9801">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="spq:Addr_SP9_01" version="any">
-                <RoadName>Avenue de General Leclerc</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="spq:SSP9" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Stop 9</Name>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop 9</Label>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="spq:SP10" created="2006-09-11T15:42:00" version="any">
-              <Name>Stop 10</Name>
-              <ShortName>Stop 10</ShortName>
-              <AccessModes/>
-              <OtherTransportModes/>
-            </StopPlace>
-          </stopPlaces>
-        </SiteFrame>
         <InfrastructureFrame id="spq:InfrastructureFrame:Fr1234" version="any">
           <spatialFeatures>
             <ComplexFeature id="gis:Road_RueDeParis1" version="any">
@@ -1383,37 +1414,6 @@
             </RoadElement>
           </elements>
         </InfrastructureFrame>
-        <ResourceFrame id="spq:Fr1234" version="any">
-          <responsibilitySets>
-            <ResponsibilitySet id="spq:RS_01" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="2.0">
-              <Name>Responsible for STOP PLACEs</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="spq:RS_01_01" created="2010-05-17T09:30:47Z" version="2.0">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="spq:RS_02" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="3.0">
-              <Name>Responsible for SERVICE PATTERN.</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="spq:RS_02_01" created="2010-05-17T09:30:47Z" version="3.0">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="spq:RS_03" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="1.1">
-              <Name>Responsible for TIMING PATTERN.</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="spq:RS_03_01" created="2010-05-17T09:30:47Z" version="1.1">
-                  <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-          </responsibilitySets>
-        </ResourceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

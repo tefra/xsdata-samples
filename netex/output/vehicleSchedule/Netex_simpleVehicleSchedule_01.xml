@@ -51,172 +51,56 @@
         <DefaultCodespaceRef ref="kx"/>
       </FrameDefaults>
       <frames>
-        <DriverScheduleFrame id="xj:dtf_01" version="any">
-          <Name>Driver Scheudles for Line 1</Name>
-          <duties>
-            <Duty id="ops:Duty:dty_01" version="any">
-              <Description/>
-              <dutyParts>
-                <DutyPart id="ops:DutyPart:dtypt_01_01" version="any">
-                  <StartTime>06:00:00Z</StartTime>
-                  <EndTime>16:30:00Z</EndTime>
-                  <StartPointRef version="any" ref="mybus:grgpt1"/>
-                  <EndPointRef version="any" ref="mybus:pkgpt1"/>
-                </DutyPart>
-                <DutyPart id="ops:DutyPart:dtypt_01_02" version="any">
-                  <StartTime>16:30:00Z</StartTime>
-                  <EndTime>18:00:00Z</EndTime>
-                  <StartPointRef version="any" ref="mybus:pkgpt1"/>
-                  <EndPointRef version="any" ref="mybus:grgpt1"/>
-                </DutyPart>
-                <DutyPart id="ops:DutyPart:dtypt_01_03" version="any">
-                  <StartTime>19:00:00Z</StartTime>
-                  <EndTime>22:00:00Z</EndTime>
-                  <StartPointRef version="any" ref="mybus:grgpt1"/>
-                  <EndPointRef version="any" ref="mybus:grgpt1"/>
-                </DutyPart>
-              </dutyParts>
-            </Duty>
-          </duties>
-        </DriverScheduleFrame>
-        <VehicleScheduleFrame id="ops:VSF_23_O" version="any">
-          <Name>BLOCKS Winter timetable for VS Line 12 Example</Name>
-          <blocks>
-            <Block id="ops:blk_L24_01" version="any">
-              <Description>First Block G1 out to  P1</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT10H</FinishingDuration>
-              <VehicleTypeRef version="any" ref="xj:vt-447"/>
-              <StartPointRef ref="mybus:grgpt1"/>
-              <EndPointRef ref="mybus:pkgpt1"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj_L24_01" version="any">
-                  <Description>&gt;Run for Block 1  3 journeys  </Description>
-                  <PreparationDuration>PT10M</PreparationDuration>
-                  <StartTimeInBlock>11:10:00</StartTimeInBlock>
-                  <FinishingDuration>PT0M</FinishingDuration>
-                  <BlockRef version="any" ref="ops:blk_L24_01"/>
-                  <LineRef version="any" ref="mybus:LN_24"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_01o"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_02i"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_03o"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-              <blockParts>
-                <BlockPart id="ops:BlockPart:blkpt_L24_01_01" version="any" order="1">
-                  <Description>Block Part</Description>
-                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
-                </BlockPart>
-              </blockParts>
-            </Block>
-            <Block id="ops:blk_L24_02" version="any">
-              <Description>Parking to Parking</Description>
-              <PreparationDuration>PT0M</PreparationDuration>
-              <FinishingDuration>PT0M</FinishingDuration>
-              <VehicleTypeRef version="any" ref="xj:vt-447"/>
-              <StartPointRef ref="mybus:pkgpt1"/>
-              <EndPointRef ref="mybus:pkgpt1"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj_L24_02" version="any">
-                  <Description>Run for Block 2  + 4 journeys   </Description>
-                  <PreparationDuration>PT20M</PreparationDuration>
-                  <StartTimeInBlock>13:10:00</StartTimeInBlock>
-                  <FinishingDuration>PT0M</FinishingDuration>
-                  <BlockRef version="any" ref="ops:blk_L24_02"/>
-                  <LineRef version="any" ref="mybus:LN_24"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_04i"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_05o"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_06i"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_07o"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-              <blockParts>
-                <BlockPart id="ops:BlockPart:blkpt_L24_02_01r" version="any" order="1">
-                  <Description>P1 to P1</Description>
-                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
-                </BlockPart>
-              </blockParts>
-            </Block>
-            <Block id="ops:blk_L24_03" version="any">
-              <Description>Parking back to G1</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT0M</FinishingDuration>
-              <VehicleTypeRef version="any" ref="xj:vt-447"/>
-              <StartPointRef ref="mybus:pkgpt1"/>
-              <EndPointRef ref="mybus:grgpt1"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj_L24_03" version="any">
-                  <Description>Run for Block 3 + 3 journeys </Description>
-                  <PreparationDuration>PT0M</PreparationDuration>
-                  <StartTimeInBlock>16:55:00</StartTimeInBlock>
-                  <FinishingDuration>PT10M</FinishingDuration>
-                  <BlockRef version="any" ref="ops:blk_L24_03"/>
-                  <LineRef version="any" ref="mybus:LN_24"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_08i"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_09o"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24_10i"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-              <blockParts>
-                <BlockPart id="ops:BlockPart:blkpt_L24_03_01r" version="any" order="1">
-                  <Description>P1  back to to G1</Description>
-                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
-                </BlockPart>
-              </blockParts>
-            </Block>
-            <Block id="ops:blk_L24N_04" version="any">
-              <Description>G1 Night back to G1</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT0M</FinishingDuration>
-              <VehicleTypeRef version="any" ref="xj:vt-447"/>
-              <StartPointRef ref="mybus:grgpt1"/>
-              <EndPointRef ref="mybus:grgpt1"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj_L24N_04" version="any">
-                  <Description>Run for Block 4 +2  journeys </Description>
-                  <PreparationDuration>PT0M</PreparationDuration>
-                  <StartTimeInBlock>20:00:00</StartTimeInBlock>
-                  <FinishingDuration>PT10M</FinishingDuration>
-                  <BlockRef version="any" ref="ops:blk_L24N_04"/>
-                  <LineRef version="any" ref="mybus:LN_24N"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24N_11o"/>
-                    <VehicleJourneyRef version="any" ref="xj:vj_L24N_12i"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-              <blockParts>
-                <BlockPart id="ops:BlockPart:blkpt_L24_04_01r" version="any" order="1">
-                  <Description>G1 Night   back to to G1</Description>
-                  <VehicleTypeRef version="any" ref="xj:vt-450"/>
-                </BlockPart>
-              </blockParts>
-            </Block>
-          </blocks>
-          <vehicleServices>
-            <VehicleService id="ops:VehicleService:VS_L24_1" version="any">
-              <Description>Line 12 Vehicle service</Description>
-              <vehicleServiceParts>
-                <VehicleServicePart id="ops:VehicleService:VS_L24_1_01" version="any">
-                  <Description>Vehicle service for  Line 12 Part 1 (Blocks 1 &amp; 2 )</Description>
-                  <StartPointRef ref="mybus:grgpt1"/>
-                  <EndPointRef ref="mybus:grgpt1"/>
-                </VehicleServicePart>
-                <VehicleServicePart id="ops:VehicleService:VS_L24_1_02" version="any">
-                  <Description>Night Vehicle service for Line 12 Part 2 ( Block 4) </Description>
-                  <StartPointRef ref="mybus:grgpt1"/>
-                  <EndPointRef ref="mybus:grgpt1"/>
-                </VehicleServicePart>
-              </vehicleServiceParts>
-            </VehicleService>
-          </vehicleServices>
-        </VehicleScheduleFrame>
+        <ServiceCalendarFrame id="xj:scf_01" version="any">
+          <Name>Servicie calendar  01  to 03 2011</Name>
+          <ServiceCalendar id="xj:sc_01" version="any">
+            <FromDate>2010-11-01</FromDate>
+            <ToDate>2011-03-31</ToDate>
+            <dayTypes>
+              <DayType id="xj:DT_01" version="any">
+                <alternativeTexts>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="fr">
+                    <Text lang="fr">Tous les jours sauf pour les jours fériés</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="de">
+                    <Text lang="de">Jeden Tag außer an Feiertagen</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="it">
+                    <Text lang="it">Tutti i giorni eccetto i giorni festivi</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="se">
+                    <Text lang="se">Varje dag utom helgdagar</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="fr">
+                    <Text lang="fr">Tous les jours</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="de">
+                    <Text lang="de">Jeden Tag</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="it">
+                    <Text lang="it">Ogni giorno</Text>
+                  </AlternativeText>
+                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="se">
+                    <Text lang="se">Varje dag</Text>
+                  </AlternativeText>
+                </alternativeTexts>
+                <Name lang="en">Everyday except for public holidays</Name>
+                <ShortName lang="en">Every day</ShortName>
+                <EarliestTime>00:00:00Z</EarliestTime>
+                <DayLength>PT24H</DayLength>
+                <properties>
+                  <PropertyOfDay>
+                    <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes>NotHoliday</HolidayTypes>
+                    <Seasons/>
+                    <Tides/>
+                  </PropertyOfDay>
+                </properties>
+              </DayType>
+            </dayTypes>
+          </ServiceCalendar>
+        </ServiceCalendarFrame>
         <ServiceFrame id="kx:svf_12" version="any">
           <Name>Winter timetable for route 12  </Name>
           <routeLinks>
@@ -1571,6 +1455,172 @@
             </DeadRun>
           </vehicleJourneys>
         </TimetableFrame>
+        <VehicleScheduleFrame id="ops:VSF_23_O" version="any">
+          <Name>BLOCKS Winter timetable for VS Line 12 Example</Name>
+          <blocks>
+            <Block id="ops:blk_L24_01" version="any">
+              <Description>First Block G1 out to  P1</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT10H</FinishingDuration>
+              <VehicleTypeRef version="any" ref="xj:vt-447"/>
+              <StartPointRef ref="mybus:grgpt1"/>
+              <EndPointRef ref="mybus:pkgpt1"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj_L24_01" version="any">
+                  <Description>&gt;Run for Block 1  3 journeys  </Description>
+                  <PreparationDuration>PT10M</PreparationDuration>
+                  <StartTimeInBlock>11:10:00</StartTimeInBlock>
+                  <FinishingDuration>PT0M</FinishingDuration>
+                  <BlockRef version="any" ref="ops:blk_L24_01"/>
+                  <LineRef version="any" ref="mybus:LN_24"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_01o"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_02i"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_03o"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+              <blockParts>
+                <BlockPart id="ops:BlockPart:blkpt_L24_01_01" version="any" order="1">
+                  <Description>Block Part</Description>
+                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
+                </BlockPart>
+              </blockParts>
+            </Block>
+            <Block id="ops:blk_L24_02" version="any">
+              <Description>Parking to Parking</Description>
+              <PreparationDuration>PT0M</PreparationDuration>
+              <FinishingDuration>PT0M</FinishingDuration>
+              <VehicleTypeRef version="any" ref="xj:vt-447"/>
+              <StartPointRef ref="mybus:pkgpt1"/>
+              <EndPointRef ref="mybus:pkgpt1"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj_L24_02" version="any">
+                  <Description>Run for Block 2  + 4 journeys   </Description>
+                  <PreparationDuration>PT20M</PreparationDuration>
+                  <StartTimeInBlock>13:10:00</StartTimeInBlock>
+                  <FinishingDuration>PT0M</FinishingDuration>
+                  <BlockRef version="any" ref="ops:blk_L24_02"/>
+                  <LineRef version="any" ref="mybus:LN_24"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_04i"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_05o"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_06i"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_07o"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+              <blockParts>
+                <BlockPart id="ops:BlockPart:blkpt_L24_02_01r" version="any" order="1">
+                  <Description>P1 to P1</Description>
+                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
+                </BlockPart>
+              </blockParts>
+            </Block>
+            <Block id="ops:blk_L24_03" version="any">
+              <Description>Parking back to G1</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT0M</FinishingDuration>
+              <VehicleTypeRef version="any" ref="xj:vt-447"/>
+              <StartPointRef ref="mybus:pkgpt1"/>
+              <EndPointRef ref="mybus:grgpt1"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj_L24_03" version="any">
+                  <Description>Run for Block 3 + 3 journeys </Description>
+                  <PreparationDuration>PT0M</PreparationDuration>
+                  <StartTimeInBlock>16:55:00</StartTimeInBlock>
+                  <FinishingDuration>PT10M</FinishingDuration>
+                  <BlockRef version="any" ref="ops:blk_L24_03"/>
+                  <LineRef version="any" ref="mybus:LN_24"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_08i"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_09o"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24_10i"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+              <blockParts>
+                <BlockPart id="ops:BlockPart:blkpt_L24_03_01r" version="any" order="1">
+                  <Description>P1  back to to G1</Description>
+                  <VehicleTypeRef version="any" ref="xj:vt-447"/>
+                </BlockPart>
+              </blockParts>
+            </Block>
+            <Block id="ops:blk_L24N_04" version="any">
+              <Description>G1 Night back to G1</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT0M</FinishingDuration>
+              <VehicleTypeRef version="any" ref="xj:vt-447"/>
+              <StartPointRef ref="mybus:grgpt1"/>
+              <EndPointRef ref="mybus:grgpt1"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj_L24N_04" version="any">
+                  <Description>Run for Block 4 +2  journeys </Description>
+                  <PreparationDuration>PT0M</PreparationDuration>
+                  <StartTimeInBlock>20:00:00</StartTimeInBlock>
+                  <FinishingDuration>PT10M</FinishingDuration>
+                  <BlockRef version="any" ref="ops:blk_L24N_04"/>
+                  <LineRef version="any" ref="mybus:LN_24N"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24N_11o"/>
+                    <VehicleJourneyRef version="any" ref="xj:vj_L24N_12i"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+              <blockParts>
+                <BlockPart id="ops:BlockPart:blkpt_L24_04_01r" version="any" order="1">
+                  <Description>G1 Night   back to to G1</Description>
+                  <VehicleTypeRef version="any" ref="xj:vt-450"/>
+                </BlockPart>
+              </blockParts>
+            </Block>
+          </blocks>
+          <vehicleServices>
+            <VehicleService id="ops:VehicleService:VS_L24_1" version="any">
+              <Description>Line 12 Vehicle service</Description>
+              <vehicleServiceParts>
+                <VehicleServicePart id="ops:VehicleService:VS_L24_1_01" version="any">
+                  <Description>Vehicle service for  Line 12 Part 1 (Blocks 1 &amp; 2 )</Description>
+                  <StartPointRef ref="mybus:grgpt1"/>
+                  <EndPointRef ref="mybus:grgpt1"/>
+                </VehicleServicePart>
+                <VehicleServicePart id="ops:VehicleService:VS_L24_1_02" version="any">
+                  <Description>Night Vehicle service for Line 12 Part 2 ( Block 4) </Description>
+                  <StartPointRef ref="mybus:grgpt1"/>
+                  <EndPointRef ref="mybus:grgpt1"/>
+                </VehicleServicePart>
+              </vehicleServiceParts>
+            </VehicleService>
+          </vehicleServices>
+        </VehicleScheduleFrame>
+        <DriverScheduleFrame id="xj:dtf_01" version="any">
+          <Name>Driver Scheudles for Line 1</Name>
+          <duties>
+            <Duty id="ops:Duty:dty_01" version="any">
+              <Description/>
+              <dutyParts>
+                <DutyPart id="ops:DutyPart:dtypt_01_01" version="any">
+                  <StartTime>06:00:00Z</StartTime>
+                  <EndTime>16:30:00Z</EndTime>
+                  <StartPointRef version="any" ref="mybus:grgpt1"/>
+                  <EndPointRef version="any" ref="mybus:pkgpt1"/>
+                </DutyPart>
+                <DutyPart id="ops:DutyPart:dtypt_01_02" version="any">
+                  <StartTime>16:30:00Z</StartTime>
+                  <EndTime>18:00:00Z</EndTime>
+                  <StartPointRef version="any" ref="mybus:pkgpt1"/>
+                  <EndPointRef version="any" ref="mybus:grgpt1"/>
+                </DutyPart>
+                <DutyPart id="ops:DutyPart:dtypt_01_03" version="any">
+                  <StartTime>19:00:00Z</StartTime>
+                  <EndTime>22:00:00Z</EndTime>
+                  <StartPointRef version="any" ref="mybus:grgpt1"/>
+                  <EndPointRef version="any" ref="mybus:grgpt1"/>
+                </DutyPart>
+              </dutyParts>
+            </Duty>
+          </duties>
+        </DriverScheduleFrame>
         <InfrastructureFrame id="xif:InfrastructureFrame:iff_01" version="any">
           <Name>Infra  Frame with garage def</Name>
           <garages>
@@ -1583,12 +1633,12 @@
             </Garage>
           </garages>
           <vehicleAndCrewPoints>
-            <ParkingPoint id="mybus:pkgpt1" version="any">
-              <Name>Parking Point P1 (Also a relief point)</Name>
-            </ParkingPoint>
             <GaragePoint id="mybus:grgpt1" version="any">
               <Name>Garage Point in G1 (also a parking and relief point)</Name>
             </GaragePoint>
+            <ParkingPoint id="mybus:pkgpt1" version="any">
+              <Name>Parking Point P1 (Also a relief point)</Name>
+            </ParkingPoint>
           </vehicleAndCrewPoints>
           <vehicleTypes>
             <VehicleType id="xj:vt-447" created="2010-12-17T09:30:47Z" version="any">
@@ -1611,56 +1661,6 @@
             </VehicleType>
           </vehicleTypes>
         </InfrastructureFrame>
-        <ServiceCalendarFrame id="xj:scf_01" version="any">
-          <Name>Servicie calendar  01  to 03 2011</Name>
-          <ServiceCalendar id="xj:sc_01" version="any">
-            <FromDate>2010-11-01</FromDate>
-            <ToDate>2011-03-31</ToDate>
-            <dayTypes>
-              <DayType id="xj:DT_01" version="any">
-                <alternativeTexts>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="fr">
-                    <Text lang="fr">Tous les jours sauf pour les jours fériés</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="de">
-                    <Text lang="de">Jeden Tag außer an Feiertagen</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="it">
-                    <Text lang="it">Tutti i giorni eccetto i giorni festivi</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="Name" useForLanguage="se">
-                    <Text lang="se">Varje dag utom helgdagar</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="fr">
-                    <Text lang="fr">Tous les jours</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="de">
-                    <Text lang="de">Jeden Tag</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="it">
-                    <Text lang="it">Ogni giorno</Text>
-                  </AlternativeText>
-                  <AlternativeText id="xj:DT_01" version="any" attributeName="ShortName" useForLanguage="se">
-                    <Text lang="se">Varje dag</Text>
-                  </AlternativeText>
-                </alternativeTexts>
-                <Name lang="en">Everyday except for public holidays</Name>
-                <ShortName lang="en">Every day</ShortName>
-                <EarliestTime>00:00:00Z</EarliestTime>
-                <DayLength>PT24H</DayLength>
-                <properties>
-                  <PropertyOfDay>
-                    <DaysOfWeek>Everyday</DaysOfWeek>
-                    <WeeksOfMonth/>
-                    <HolidayTypes>NotHoliday</HolidayTypes>
-                    <Seasons/>
-                    <Tides/>
-                  </PropertyOfDay>
-                </properties>
-              </DayType>
-            </dayTypes>
-          </ServiceCalendar>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

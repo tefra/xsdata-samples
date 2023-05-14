@@ -19,75 +19,56 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entranceRefs_RelStructure"
 
-    stop_place_vehicle_entrance_ref: List[StopPlaceVehicleEntranceRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StopPlaceVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_place_entrance_ref: List[StopPlaceEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "StopPlaceEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_for_vehicles_ref: List[ParkingEntranceForVehiclesRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingEntranceForVehiclesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_passenger_entrance_ref: List[ParkingPassengerEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingPassengerEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_entrance_ref: List[ParkingEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ParkingEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_vehicle_entrance_ref: List[PointOfInterestVehicleEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestVehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_of_interest_entrance_ref: List[PointOfInterestEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOfInterestEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_entrance_ref: List[VehicleEntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleEntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entrance_ref: List[EntranceRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntranceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopPlaceVehicleEntranceRef",
+                    "type": StopPlaceVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceEntranceRef",
+                    "type": StopPlaceEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceForVehiclesRef",
+                    "type": ParkingEntranceForVehiclesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingPassengerEntranceRef",
+                    "type": ParkingPassengerEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingEntranceRef",
+                    "type": ParkingEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestVehicleEntranceRef",
+                    "type": PointOfInterestVehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOfInterestEntranceRef",
+                    "type": PointOfInterestEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEntranceRef",
+                    "type": VehicleEntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceRef",
+                    "type": EntranceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

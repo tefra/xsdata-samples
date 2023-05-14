@@ -42,6 +42,61 @@
         <DefaultCodespaceRef ref="myfares"/>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@Line_1@network" version="1.0">
+          <Name>Stops for Line 1 Tariff</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="mybus"/>
+          </FrameDefaults>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <lines>
+            <Line id="mybus:Line_1" version="any">
+              <Name>Line 1</Name>
+              <OperatorRef version="any" ref="mybus:DTA"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>ALPH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
+              <Name>Bravo Street</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>BRAV</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
+              <Name>Charley Crescent</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@Line_1@products" version="1.0">
           <Name>Fare Products  for Line 1 </Name>
           <prerequisites>
@@ -188,61 +243,6 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Line_1@network" version="1.0">
-          <Name>Stops for Line 1 Tariff</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="mybus"/>
-          </FrameDefaults>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
-          </prerequisites>
-          <lines>
-            <Line id="mybus:Line_1" version="any">
-              <Name>Line 1</Name>
-              <OperatorRef version="any" ref="mybus:DTA"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="mybus:SSP_001" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <Location>
-                <Longitude>53.0000</Longitude>
-                <Latitude>0.1000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Alpha</ShortName>
-              <PublicCode>ALPH</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" version="any">
-              <Name>Bravo Street</Name>
-              <Location>
-                <Longitude>53.2000</Longitude>
-                <Latitude>0.2000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Bravo</ShortName>
-              <PublicCode>BRAV</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" version="any">
-              <Name>Charley Crescent</Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Charley</ShortName>
-              <PublicCode>CHAS</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-        </ServiceFrame>
         <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <Name>Common resources</Name>
           <codespaces>

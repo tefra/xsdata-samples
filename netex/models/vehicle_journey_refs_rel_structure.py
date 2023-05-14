@@ -12,19 +12,21 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleJourneyRefs_RelStructure"
 
-    dead_run_ref: List[DeadRunRef] = field(
+    dead_run_ref_or_vehicle_journey_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_ref: List[VehicleJourneyRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -15,43 +15,36 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    travel_document_security_listing: List[TravelDocumentSecurityListing] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TravelDocumentSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_device_security_listing: List[RetailDeviceSecurityListing] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailDeviceSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_contract_security_listing: List[FareContractSecurityListing] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareContractSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_security_listing: List[CustomerSecurityListing] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_account_security_listing: List[CustomerAccountSecurityListing] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerAccountSecurityListing",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TravelDocumentSecurityListing",
+                    "type": TravelDocumentSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailDeviceSecurityListing",
+                    "type": RetailDeviceSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareContractSecurityListing",
+                    "type": FareContractSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerSecurityListing",
+                    "type": CustomerSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerAccountSecurityListing",
+                    "type": CustomerAccountSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

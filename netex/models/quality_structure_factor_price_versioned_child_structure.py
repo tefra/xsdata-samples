@@ -13,27 +13,26 @@ class QualityStructureFactorPriceVersionedChildStructure(FarePriceVersionedChild
     class Meta:
         name = "QualityStructureFactorPrice_VersionedChildStructure"
 
-    fare_quota_factor_ref: Optional[FareQuotaFactorRef] = field(
+    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FareQuotaFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_demand_factor_ref: Optional[FareDemandFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "FareDemandFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    quality_structure_factor_ref: Optional[QualityStructureFactorRef] = field(
-        default=None,
-        metadata={
-            "name": "QualityStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareQuotaFactorRef",
+                    "type": FareQuotaFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareDemandFactorRef",
+                    "type": FareDemandFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QualityStructureFactorRef",
+                    "type": QualityStructureFactorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

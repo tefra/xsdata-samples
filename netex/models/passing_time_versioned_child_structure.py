@@ -21,60 +21,47 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PassingTime_VersionedChildStructure"
 
-    dated_vehicle_journey_ref: Optional[DatedVehicleJourneyRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "DatedVehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dated_special_service_ref: Optional[DatedSpecialServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "DatedSpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service_ref: Optional[SpecialServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "SpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    template_service_journey_ref: Optional[TemplateServiceJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "TemplateServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_journey_ref: Optional[ServiceJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "ServiceJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dead_run_ref: Optional[DeadRunRef] = field(
-        default=None,
-        metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedVehicleJourneyRef",
+                    "type": DatedVehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DatedSpecialServiceRef",
+                    "type": DatedSpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialServiceRef",
+                    "type": SpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TemplateServiceJourneyRef",
+                    "type": TemplateServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceJourneyRef",
+                    "type": ServiceJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     alight_and_reboard: Optional[bool] = field(
@@ -85,35 +72,31 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_point_in_pattern_ref: Optional[FarePointInPatternRef] = field(
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FarePointInPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_point_in_journey_pattern_ref: Optional[StopPointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "StopPointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_point_in_journey_pattern_ref: Optional[TimingPointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "TimingPointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_in_journey_pattern_ref: Optional[PointInJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "PointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FarePointInPatternRef",
+                    "type": FarePointInPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPointInJourneyPatternRef",
+                    "type": StopPointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingPointInJourneyPatternRef",
+                    "type": TimingPointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointInJourneyPatternRef",
+                    "type": PointInJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

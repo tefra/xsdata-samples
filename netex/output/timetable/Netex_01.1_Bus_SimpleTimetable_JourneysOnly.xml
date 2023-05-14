@@ -137,8 +137,8 @@
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:ACS@Line_24@Network"/>
             <ServiceFrameRef ref="mybus:ACS@Line_24@Routes_and_JourneyPatterns" versionRef="EXTERNAL"/>
-            <VehicleScheduleFrameRef ref="mybus:ACS@Line_24@Schedule" versionRef="EXTERNAL"/>
             <ServiceCalendarFrameRef version="1.0" ref="acs:ACS@Winter_2010"/>
+            <VehicleScheduleFrameRef ref="mybus:ACS@Line_24@Schedule" versionRef="EXTERNAL"/>
           </prerequisites>
           <VehicleModes>bus</VehicleModes>
           <vehicleJourneys>
@@ -282,32 +282,6 @@
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
-        <ResourceFrame id="acs:ACS@Common_Resources" version="1.0">
-          <codespaces>
-            <Codespace id="acs">
-              <Xmlns>acs</Xmlns>
-              <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
-              <Description>Service data </Description>
-            </Codespace>
-          </codespaces>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="acs"/>
-          </FrameDefaults>
-          <organisations>
-            <Operator id="acs:ACS" version="1.0">
-              <Name>Autocars superbe</Name>
-              <Locale>
-                <DefaultLanguage>fr</DefaultLanguage>
-              </Locale>
-              <ContactDetails>
-                <Phone>+33-1-675-9876</Phone>
-                <Url>http://autocarssuperbe.fr</Url>
-              </ContactDetails>
-              <OrganisationType/>
-              <OperatorActivities/>
-            </Operator>
-          </organisations>
-        </ResourceFrame>
         <ServiceCalendarFrame id="acs:ACS@Winter_2010" version="1.0">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
           <ServiceCalendar id="acs:ACS@Winter_2010" version="any">
@@ -437,6 +411,32 @@
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
+        <ResourceFrame id="acs:ACS@Common_Resources" version="1.0">
+          <codespaces>
+            <Codespace id="acs">
+              <Xmlns>acs</Xmlns>
+              <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
+              <Description>Service data </Description>
+            </Codespace>
+          </codespaces>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="acs"/>
+          </FrameDefaults>
+          <organisations>
+            <Operator id="acs:ACS" version="1.0">
+              <Name>Autocars superbe</Name>
+              <Locale>
+                <DefaultLanguage>fr</DefaultLanguage>
+              </Locale>
+              <ContactDetails>
+                <Phone>+33-1-675-9876</Phone>
+                <Url>http://autocarssuperbe.fr</Url>
+              </ContactDetails>
+              <OrganisationType/>
+              <OperatorActivities/>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

@@ -16,51 +16,41 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAssignmentsInFrame_RelStructure"
 
-    flexible_stop_assignment: List[FlexibleStopAssignment] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_stop_assignment: List[VehicleJourneyStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleJourneyStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    navigation_path_assignment: List[NavigationPathAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "NavigationPathAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_stop_assignment: List[TrainStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrainStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dynamic_stop_assignment: List[DynamicStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "DynamicStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_stop_assignment: List[PassengerStopAssignment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerStopAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleStopAssignment",
+                    "type": FlexibleStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyStopAssignment",
+                    "type": VehicleJourneyStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NavigationPathAssignment",
+                    "type": NavigationPathAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainStopAssignment",
+                    "type": TrainStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DynamicStopAssignment",
+                    "type": DynamicStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerStopAssignment",
+                    "type": PassengerStopAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

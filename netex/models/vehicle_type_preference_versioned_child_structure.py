@@ -21,20 +21,22 @@ class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildSt
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_day_type_ref: Optional[FareDayTypeRef] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FareDayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_type_ref: Optional[DayTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "DayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareDayTypeRef",
+                    "type": FareDayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayTypeRef",
+                    "type": DayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     vehicle_type_preference_ref: Optional[VehicleTypePreferenceRef] = field(

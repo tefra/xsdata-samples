@@ -54,63 +54,50 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    repeated_trip_fare_request_ref: Optional[RepeatedTripFareRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "RepeatedTripFareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    single_trip_fare_request_ref: Optional[SingleTripFareRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "SingleTripFareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_request_ref: Optional[FareRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "FareRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_finder_request_ref: Optional[StopFinderRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "StopFinderRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    stop_event_request_ref: Optional[StopEventRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "StopEventRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    schedule_request_ref: Optional[ScheduleRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "ScheduleRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    trip_plan_request_ref: Optional[TripPlanRequestRef] = field(
-        default=None,
-        metadata={
-            "name": "TripPlanRequestRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
     choice: Optional[object] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RepeatedTripFareRequestRef",
+                    "type": RepeatedTripFareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SingleTripFareRequestRef",
+                    "type": SingleTripFareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareRequestRef",
+                    "type": FareRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopFinderRequestRef",
+                    "type": StopFinderRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopEventRequestRef",
+                    "type": StopEventRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduleRequestRef",
+                    "type": ScheduleRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TripPlanRequestRef",
+                    "type": TripPlanRequestRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        }
+    )
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -42,61 +42,102 @@
         <DefaultCodespaceRef ref="zbt"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="zbt:SF0023b" version="any">
+        <ServiceCalendarFrame id="zbt:SFC0021" version="any">
           <FrameDefaults>
-            <DefaultResponsibilitySetRef version="01" ref="zbt:Resp02"/>
+            <DefaultResponsibilitySetRef version="01" ref="zbt:Resp01"/>
           </FrameDefaults>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="ztb:ssa_bh0023" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
-              <Name lang="de">Bahnhof Ried</Name>
-              <VehicleModes>rail</VehicleModes>
-              <ForAlighting>true</ForAlighting>
-              <ForBoarding>true</ForBoarding>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="ztb:ssa_bh0026" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="002">
-              <Name lang="de">Bahnhof Ried Haltstelle</Name>
-              <VehicleModes>bus</VehicleModes>
-              <ForAlighting>true</ForAlighting>
-              <ForBoarding>true</ForBoarding>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <connections>
-            <Connection id="ztb:ssa_bh0023" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
-              <Name>Bahnhof Ried Bus to Train</Name>
-              <TransferDuration>
-                <DefaultDuration>PT3M</DefaultDuration>
-              </TransferDuration>
-              <BothWays>true</BothWays>
-              <From>
-                <TransportMode>bus</TransportMode>
-                <ScheduledStopPointRef version="002" ref="ztb:ssa_bh0026"/>
-              </From>
-              <To>
-                <TransportMode>rail</TransportMode>
-                <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
-              </To>
-            </Connection>
-          </connections>
-          <stopAssignments>
-            <PassengerStopAssignment id="ztb:psa_bh0023" version="any" order="1">
-              <Description>Rail Assignment regardless of Platform </Description>
-              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
-              <StopPlaceRef version="01" ref="ztb:bh0023"/>
-            </PassengerStopAssignment>
-            <PassengerStopAssignment id="ztb:psa_bh0023@Rail@Q1" version="any" order="2">
-              <Description>Rail Assignment Platform 1</Description>
-              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
-              <StopPlaceRef version="01" ref="ztb:bh0023"/>
-              <QuayRef version="01" ref="ztb:bh0023@Rail@Q1"/>
-            </PassengerStopAssignment>
-            <PassengerStopAssignment id="ztb:psa_bh0023@Rail@Q2" version="any" order="3">
-              <Description>Rail Assignment Platform 2 </Description>
-              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
-              <StopPlaceRef version="01" ref="ztb:bh0023"/>
-              <QuayRef version="01" ref="ztb:bh0023@Rail@Q2"/>
-            </PassengerStopAssignment>
-          </stopAssignments>
-        </ServiceFrame>
+          <ServiceCalendar id="zbt:SFC0021" version="any">
+            <FromDate>2010-12-17</FromDate>
+            <ToDate>2011-12-17</ToDate>
+          </ServiceCalendar>
+          <dayTypes>
+            <DayType id="zbt:DT001Open_MF" version="any">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="zbt:DT001Open_MF@TMB01" version="any">
+                  <StartTime>05:00:00</StartTime>
+                  <Duration>PT19H30M</Duration>
+                </Timeband>
+              </timebands>
+            </DayType>
+            <DayType id="zbt:DT002Open_Sat" version="any">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="zbt:DT002Open_Sat@TMB01" version="any">
+                  <StartTime>06:00:00</StartTime>
+                  <Duration>PT18H30M</Duration>
+                </Timeband>
+              </timebands>
+            </DayType>
+            <DayType id="zbt:DT003Open_Sun" version="any">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="zbt:DT003Open_Sun@TMB01" version="any">
+                  <StartTime>08:00:00</StartTime>
+                  <Duration>PT17H30M</Duration>
+                </Timeband>
+              </timebands>
+            </DayType>
+            <DayType id="zbt:DT004Open_MFS" version="any">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="zbt:DT004Open_MFS" version="any">
+                  <StartTime>08:30:00</StartTime>
+                  <EndTime>20:00:00</EndTime>
+                </Timeband>
+              </timebands>
+            </DayType>
+            <DayType id="zbt:DT005Open_Sun" version="any">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+              <timebands>
+                <Timeband id="zbt:DT005Open_Sun" version="any">
+                  <StartTime>10:30:00</StartTime>
+                  <EndTime>18:00:00</EndTime>
+                </Timeband>
+              </timebands>
+            </DayType>
+          </dayTypes>
+        </ServiceCalendarFrame>
         <SiteFrame id="zbt:SF0023" version="any">
           <FrameDefaults>
             <DefaultResponsibilitySetRef version="01" ref="zbt:Resp02"/>
@@ -996,6 +1037,61 @@
             </StopPlace>
           </stopPlaces>
         </SiteFrame>
+        <ServiceFrame id="zbt:SF0023b" version="any">
+          <FrameDefaults>
+            <DefaultResponsibilitySetRef version="01" ref="zbt:Resp02"/>
+          </FrameDefaults>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="ztb:ssa_bh0023" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
+              <Name lang="de">Bahnhof Ried</Name>
+              <VehicleModes>rail</VehicleModes>
+              <ForAlighting>true</ForAlighting>
+              <ForBoarding>true</ForBoarding>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="ztb:ssa_bh0026" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="002">
+              <Name lang="de">Bahnhof Ried Haltstelle</Name>
+              <VehicleModes>bus</VehicleModes>
+              <ForAlighting>true</ForAlighting>
+              <ForBoarding>true</ForBoarding>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <connections>
+            <Connection id="ztb:ssa_bh0023" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
+              <Name>Bahnhof Ried Bus to Train</Name>
+              <TransferDuration>
+                <DefaultDuration>PT3M</DefaultDuration>
+              </TransferDuration>
+              <BothWays>true</BothWays>
+              <From>
+                <TransportMode>bus</TransportMode>
+                <ScheduledStopPointRef version="002" ref="ztb:ssa_bh0026"/>
+              </From>
+              <To>
+                <TransportMode>rail</TransportMode>
+                <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
+              </To>
+            </Connection>
+          </connections>
+          <stopAssignments>
+            <PassengerStopAssignment id="ztb:psa_bh0023" version="any" order="1">
+              <Description>Rail Assignment regardless of Platform </Description>
+              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
+              <StopPlaceRef version="01" ref="ztb:bh0023"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="ztb:psa_bh0023@Rail@Q1" version="any" order="2">
+              <Description>Rail Assignment Platform 1</Description>
+              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
+              <StopPlaceRef version="01" ref="ztb:bh0023"/>
+              <QuayRef version="01" ref="ztb:bh0023@Rail@Q1"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="ztb:psa_bh0023@Rail@Q2" version="any" order="3">
+              <Description>Rail Assignment Platform 2 </Description>
+              <ScheduledStopPointRef version="032" ref="ztb:ssa_bh0023"/>
+              <StopPlaceRef version="01" ref="ztb:bh0023"/>
+              <QuayRef version="01" ref="ztb:bh0023@Rail@Q2"/>
+            </PassengerStopAssignment>
+          </stopAssignments>
+        </ServiceFrame>
         <ResourceFrame id="zbt:Resp01" version="any" responsibilitySetRef="zbt:Resp01">
           <responsibilitySets>
             <ResponsibilitySet id="zbt:Resp01" created="2010-05-17T09:30:47Z" changed="2010-05-17T09:30:47Z" modification="revise" version="01" responsibilitySetRef="zbt:Resp01">
@@ -1033,102 +1129,6 @@
             </Operator>
           </organisations>
         </ResourceFrame>
-        <ServiceCalendarFrame id="zbt:SFC0021" version="any">
-          <FrameDefaults>
-            <DefaultResponsibilitySetRef version="01" ref="zbt:Resp01"/>
-          </FrameDefaults>
-          <ServiceCalendar id="zbt:SFC0021" version="any">
-            <FromDate>2010-12-17</FromDate>
-            <ToDate>2011-12-17</ToDate>
-          </ServiceCalendar>
-          <dayTypes>
-            <DayType id="zbt:DT001Open_MF" version="any">
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="zbt:DT001Open_MF@TMB01" version="any">
-                  <StartTime>05:00:00</StartTime>
-                  <Duration>PT19H30M</Duration>
-                </Timeband>
-              </timebands>
-            </DayType>
-            <DayType id="zbt:DT002Open_Sat" version="any">
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="zbt:DT002Open_Sat@TMB01" version="any">
-                  <StartTime>06:00:00</StartTime>
-                  <Duration>PT18H30M</Duration>
-                </Timeband>
-              </timebands>
-            </DayType>
-            <DayType id="zbt:DT003Open_Sun" version="any">
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="zbt:DT003Open_Sun@TMB01" version="any">
-                  <StartTime>08:00:00</StartTime>
-                  <Duration>PT17H30M</Duration>
-                </Timeband>
-              </timebands>
-            </DayType>
-            <DayType id="zbt:DT004Open_MFS" version="any">
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="zbt:DT004Open_MFS" version="any">
-                  <StartTime>08:30:00</StartTime>
-                  <EndTime>20:00:00</EndTime>
-                </Timeband>
-              </timebands>
-            </DayType>
-            <DayType id="zbt:DT005Open_Sun" version="any">
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-              <timebands>
-                <Timeband id="zbt:DT005Open_Sun" version="any">
-                  <StartTime>10:30:00</StartTime>
-                  <EndTime>18:00:00</EndTime>
-                </Timeband>
-              </timebands>
-            </DayType>
-          </dayTypes>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

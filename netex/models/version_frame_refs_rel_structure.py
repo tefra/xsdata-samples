@@ -22,99 +22,71 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"
 
-    sales_transaction_frame_ref: List[SalesTransactionFrameRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "SalesTransactionFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_frame_ref: List[FareFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_frame_ref: List[ServiceFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    driver_schedule_frame_ref: List[DriverScheduleFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DriverScheduleFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_schedule_frame_ref: List[VehicleScheduleFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleScheduleFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timetable_frame_ref: List[TimetableFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TimetableFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_frame_ref: List[SiteFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    infrastructure_frame_ref: List[InfrastructureFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "InfrastructureFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_frame_ref: List[GeneralFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeneralFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    resource_frame_ref: List[ResourceFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ResourceFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_calendar_frame_ref: List[ServiceCalendarFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServiceCalendarFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    composite_frame_ref: List[CompositeFrameRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CompositeFrameRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SalesTransactionFrameRef",
+                    "type": SalesTransactionFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareFrameRef",
+                    "type": FareFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceFrameRef",
+                    "type": ServiceFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DriverScheduleFrameRef",
+                    "type": DriverScheduleFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleScheduleFrameRef",
+                    "type": VehicleScheduleFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimetableFrameRef",
+                    "type": TimetableFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteFrameRef",
+                    "type": SiteFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "InfrastructureFrameRef",
+                    "type": InfrastructureFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralFrameRef",
+                    "type": GeneralFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ResourceFrameRef",
+                    "type": ResourceFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceCalendarFrameRef",
+                    "type": ServiceCalendarFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompositeFrameRef",
+                    "type": CompositeFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

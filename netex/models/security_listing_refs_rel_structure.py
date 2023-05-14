@@ -15,43 +15,36 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "SecurityListingRefs_RelStructure"
 
-    travel_document_security_listing_ref: List[TravelDocumentSecurityListingRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "TravelDocumentSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_device_security_listing_ref: List[RetailDeviceSecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailDeviceSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_account_security_listing_ref: List[CustomerAccountSecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerAccountSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_contract_security_listing_ref: List[FareContractSecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareContractSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_security_listing_ref: List[CustomerSecurityListingRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerSecurityListingRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TravelDocumentSecurityListingRef",
+                    "type": TravelDocumentSecurityListingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailDeviceSecurityListingRef",
+                    "type": RetailDeviceSecurityListingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerAccountSecurityListingRef",
+                    "type": CustomerAccountSecurityListingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareContractSecurityListingRef",
+                    "type": FareContractSecurityListingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerSecurityListingRef",
+                    "type": CustomerSecurityListingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -31,28 +31,27 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    complex_feature_ref: Optional[ComplexFeatureRef] = field(
+    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ComplexFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    simple_feature_ref: Optional[SimpleFeatureRef] = field(
-        default=None,
-        metadata={
-            "name": "SimpleFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    spatial_feature_ref: Optional[SpatialFeatureRef] = field(
-        default=None,
-        metadata={
-            "name": "SpatialFeatureRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ComplexFeatureRef",
+                    "type": ComplexFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SimpleFeatureRef",
+                    "type": SimpleFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpatialFeatureRef",
+                    "type": SpatialFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     order: Optional[int] = field(

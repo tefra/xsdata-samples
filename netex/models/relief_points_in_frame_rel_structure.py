@@ -13,27 +13,26 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefPointsInFrame_RelStructure"
 
-    parking_point: List[ParkingPoint] = field(
+    parking_point_or_garage_point_or_relief_point: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    garage_point: List[GaragePoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "GaragePoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    relief_point: List[ReliefPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReliefPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingPoint",
+                    "type": ParkingPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GaragePoint",
+                    "type": GaragePoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ReliefPoint",
+                    "type": ReliefPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

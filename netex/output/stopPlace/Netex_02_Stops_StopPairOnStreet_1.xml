@@ -53,37 +53,6 @@
         <DefaultCodespaceRef ref="jqx"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="jqx:SV0021" version="any">
-          <FrameDefaults>
-            <DefaultResponsibilitySetRef ref="jqx:RS_22">EXTERNAL</DefaultResponsibilitySetRef>
-          </FrameDefaults>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="jqx:SSP0021A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
-              <Name>Stadtmuseum</Name>
-              <Label>Stadmuseum Zum Bahnhof</Label>
-              <VehicleModes/>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <stopAssignments>
-            <PassengerStopAssignment id="jqx:PSA_20012_A" version="any" order="1">
-              <Description lang="en">Assigns Museum timetable ref to physical stop - regardless of quay </Description>
-              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
-              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
-            </PassengerStopAssignment>
-            <PassengerStopAssignment id="jqx:PSA_20012_A1" version="any" order="2">
-              <Description lang="en">Assigns Eastbound Museum timetable ref to physical stop</Description>
-              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
-              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
-              <QuayRef version="01" ref="mybus:Q_SP_0751A_1"/>
-            </PassengerStopAssignment>
-            <PassengerStopAssignment id="jqx:PSA_20012_A2" version="any" order="3">
-              <Description lang="en">Assigns Westbound Museum timetable ref to physical stop</Description>
-              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
-              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
-              <QuayRef version="01" ref="mybus:Q_SP_0751A_2"/>
-            </PassengerStopAssignment>
-          </stopAssignments>
-        </ServiceFrame>
         <SiteFrame id="detop:SF00121" version="any">
           <FrameDefaults>
             <DefaultResponsibilitySetRef ref="detop:RS_24">EXTERNAL</DefaultResponsibilitySetRef>
@@ -199,6 +168,37 @@
             </StopPlace>
           </stopPlaces>
         </SiteFrame>
+        <ServiceFrame id="jqx:SV0021" version="any">
+          <FrameDefaults>
+            <DefaultResponsibilitySetRef ref="jqx:RS_22">EXTERNAL</DefaultResponsibilitySetRef>
+          </FrameDefaults>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="jqx:SSP0021A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
+              <Name>Stadtmuseum</Name>
+              <Label>Stadmuseum Zum Bahnhof</Label>
+              <VehicleModes/>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <stopAssignments>
+            <PassengerStopAssignment id="jqx:PSA_20012_A" version="any" order="1">
+              <Description lang="en">Assigns Museum timetable ref to physical stop - regardless of quay </Description>
+              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
+              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="jqx:PSA_20012_A1" version="any" order="2">
+              <Description lang="en">Assigns Eastbound Museum timetable ref to physical stop</Description>
+              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
+              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
+              <QuayRef version="01" ref="mybus:Q_SP_0751A_1"/>
+            </PassengerStopAssignment>
+            <PassengerStopAssignment id="jqx:PSA_20012_A2" version="any" order="3">
+              <Description lang="en">Assigns Westbound Museum timetable ref to physical stop</Description>
+              <ScheduledStopPointRef version="032" ref="jqx:SSP0021A"/>
+              <StopPlaceRef version="01" ref="mybus:SP_0751A"/>
+              <QuayRef version="01" ref="mybus:Q_SP_0751A_2"/>
+            </PassengerStopAssignment>
+          </stopAssignments>
+        </ServiceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

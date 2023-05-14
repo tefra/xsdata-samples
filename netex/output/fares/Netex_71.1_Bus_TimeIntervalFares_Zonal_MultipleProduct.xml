@@ -43,6 +43,25 @@
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@Time_Interval@network" version="1.0">
+          <Name>Fares  for Winter timetable for Network</Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <Network id="mybus:DTA" version="any">
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="mybus:DTA"/>
+            <tariffZones>
+              <TariffZoneRef version="any" ref="myfares:1"/>
+            </tariffZones>
+          </Network>
+          <tariffZones>
+            <TariffZone id="myfares:1" version="any">
+              <Name>Zone 1</Name>
+            </TariffZone>
+          </tariffZones>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@Time_Interval@products" version="1.0">
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Time_Interval@network"/>
@@ -236,25 +255,6 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Time_Interval@network" version="1.0">
-          <Name>Fares  for Winter timetable for Network</Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
-          </prerequisites>
-          <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="mybus:DTA"/>
-            <tariffZones>
-              <TariffZoneRef version="any" ref="myfares:1"/>
-            </tariffZones>
-          </Network>
-          <tariffZones>
-            <TariffZone id="myfares:1" version="any">
-              <Name>Zone 1</Name>
-            </TariffZone>
-          </tariffZones>
-        </ServiceFrame>
         <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <codespaces>
             <Codespace id="ntx">

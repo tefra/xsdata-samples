@@ -56,307 +56,201 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_retail_device: Optional[TypeOfRetailDevice] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "TypeOfRetailDevice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_account_status: Optional[CustomerAccountStatus] = field(
-        default=None,
-        metadata={
-            "name": "CustomerAccountStatus",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_customer_account: Optional[TypeOfCustomerAccount] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfCustomerAccount",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_contract_entry: Optional[TypeOfFareContractEntry] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFareContractEntry",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_contract: Optional[TypeOfFareContract] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFareContract",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_travel_document: Optional[TypeOfTravelDocument] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfTravelDocument",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_sales_offer_package: Optional[TypeOfSalesOfferPackage] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfSalesOfferPackage",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_product: Optional[TypeOfFareProduct] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFareProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_structure_element: Optional[TypeOfFareStructureElement] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFareStructureElement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_tariff: Optional[TypeOfTariff] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfTariff",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_access_right_assignment: Optional[TypeOfAccessRightAssignment] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfAccessRightAssignment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_fare_structure_factor: Optional[TypeOfFareStructureFactor] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFareStructureFactor",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_flexible_service: Optional[TypeOfFlexibleService] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFlexibleService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_time_demand_type: Optional[TypeOfTimeDemandType] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfTimeDemandType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_passenger_information_equipment: Optional[TypeOfPassengerInformationEquipment] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfPassengerInformationEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_congestion: Optional[TypeOfCongestion] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfCongestion",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_journey_pattern: Optional[TypeOfJourneyPattern] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfJourneyPattern",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_line: Optional[TypeOfLine] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfLine",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_activation: Optional[TypeOfActivation] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfActivation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_delivery_variant: Optional[TypeOfDeliveryVariant] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfDeliveryVariant",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_notice: Optional[TypeOfNotice] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfNotice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_facility: Optional[TypeOfFacility] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFacility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_service: Optional[TypeOfService] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_equipment: Optional[TypeOfEquipment] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_feature: Optional[TypeOfFeature] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFeature",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_link_sequence: Optional[TypeOfLinkSequence] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfLinkSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_place: Optional[TypeOfPlace] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfPlace",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_transfer: Optional[TypeOfTransfer] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfTransfer",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_operation: Optional[TypeOfOperation] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfOperation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_organisation_part: Optional[TypeOfOrganisationPart] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfOrganisationPart",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_organisation: Optional[TypeOfOrganisation] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfOrganisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_zone: Optional[TypeOfZone] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_link: Optional[TypeOfLink] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfLink",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_point: Optional[TypeOfPoint] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_projection: Optional[TypeOfProjection] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfProjection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_frame: Optional[TypeOfFrame] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFrame",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_responsibility_role: Optional[TypeOfResponsibilityRole] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfResponsibilityRole",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    type_of_entity: Optional[TypeOfEntity] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfEntity",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TypeOfRetailDevice",
+                    "type": TypeOfRetailDevice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerAccountStatus",
+                    "type": CustomerAccountStatus,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfCustomerAccount",
+                    "type": TypeOfCustomerAccount,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareContractEntry",
+                    "type": TypeOfFareContractEntry,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareContract",
+                    "type": TypeOfFareContract,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfTravelDocument",
+                    "type": TypeOfTravelDocument,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfSalesOfferPackage",
+                    "type": TypeOfSalesOfferPackage,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareProduct",
+                    "type": TypeOfFareProduct,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareStructureElement",
+                    "type": TypeOfFareStructureElement,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfTariff",
+                    "type": TypeOfTariff,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfAccessRightAssignment",
+                    "type": TypeOfAccessRightAssignment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFareStructureFactor",
+                    "type": TypeOfFareStructureFactor,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFlexibleService",
+                    "type": TypeOfFlexibleService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfTimeDemandType",
+                    "type": TypeOfTimeDemandType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPassengerInformationEquipment",
+                    "type": TypeOfPassengerInformationEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfCongestion",
+                    "type": TypeOfCongestion,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfJourneyPattern",
+                    "type": TypeOfJourneyPattern,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfLine",
+                    "type": TypeOfLine,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfActivation",
+                    "type": TypeOfActivation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfDeliveryVariant",
+                    "type": TypeOfDeliveryVariant,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfNotice",
+                    "type": TypeOfNotice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFacility",
+                    "type": TypeOfFacility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfService",
+                    "type": TypeOfService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfEquipment",
+                    "type": TypeOfEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFeature",
+                    "type": TypeOfFeature,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfLinkSequence",
+                    "type": TypeOfLinkSequence,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPlace",
+                    "type": TypeOfPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfTransfer",
+                    "type": TypeOfTransfer,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfOperation",
+                    "type": TypeOfOperation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfOrganisationPart",
+                    "type": TypeOfOrganisationPart,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfOrganisation",
+                    "type": TypeOfOrganisation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfZone",
+                    "type": TypeOfZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfLink",
+                    "type": TypeOfLink,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPoint",
+                    "type": TypeOfPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfProjection",
+                    "type": TypeOfProjection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfFrame",
+                    "type": TypeOfFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfResponsibilityRole",
+                    "type": TypeOfResponsibilityRole,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfEntity",
+                    "type": TypeOfEntity,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

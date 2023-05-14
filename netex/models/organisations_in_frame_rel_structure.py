@@ -18,67 +18,51 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"
 
-    retail_consortium: List[RetailConsortium] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "RetailConsortium",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    authority: List[Authority] = field(
-        default_factory=list,
-        metadata={
-            "name": "Authority",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    operator: List[Operator] = field(
-        default_factory=list,
-        metadata={
-            "name": "Operator",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    serviced_organisation: List[ServicedOrganisation] = field(
-        default_factory=list,
-        metadata={
-            "name": "ServicedOrganisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_organisation: List[GeneralOrganisation] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeneralOrganisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    management_agent: List[ManagementAgent] = field(
-        default_factory=list,
-        metadata={
-            "name": "ManagementAgent",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_agent: List[TravelAgent] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelAgent",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    other_organisation: List[OtherOrganisation] = field(
-        default_factory=list,
-        metadata={
-            "name": "OtherOrganisation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailConsortium",
+                    "type": RetailConsortium,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Authority",
+                    "type": Authority,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Operator",
+                    "type": Operator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicedOrganisation",
+                    "type": ServicedOrganisation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralOrganisation",
+                    "type": GeneralOrganisation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ManagementAgent",
+                    "type": ManagementAgent,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelAgent",
+                    "type": TravelAgent,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OtherOrganisation",
+                    "type": OtherOrganisation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

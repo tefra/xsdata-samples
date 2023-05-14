@@ -42,36 +42,32 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    control_centre_ref: Optional[ControlCentreRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ControlCentreRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisational_unit_ref: Optional[OrganisationalUnitRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationalUnitRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    department_ref: Optional[DepartmentRef] = field(
-        default=None,
-        metadata={
-            "name": "DepartmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    organisation_part_ref: Optional[OrganisationPartRef] = field(
-        default=None,
-        metadata={
-            "name": "OrganisationPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControlCentreRef",
+                    "type": ControlCentreRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationalUnitRef",
+                    "type": OrganisationalUnitRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DepartmentRef",
+                    "type": DepartmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationPartRef",
+                    "type": OrganisationPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(

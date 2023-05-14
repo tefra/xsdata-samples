@@ -36,57 +36,37 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="mybus:svf_12" version="any">
-          <Name>Stops for Winter timetable for route 234 </Name>
-          <lines>
-            <Line id="mybus:LN_234" version="any">
-              <Name>Line 234 Alpha to Charley Green</Name>
-              <ShortName>Line 234</ShortName>
-              <TransportMode>bus</TransportMode>
-              <PublicCode>234</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="mybus:SSP_001" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <Location>
-                <Longitude>53.0000</Longitude>
-                <Latitude>0.1000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Alpha</ShortName>
-              <PublicCode>EANDC</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" version="any">
-              <Name>Bravo Arch</Name>
-              <Location>
-                <Longitude>53.2000</Longitude>
-                <Latitude>0.2000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Bravo Arch</ShortName>
-              <PublicCode>BRAV</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" version="any">
-              <Name>Charley Green</Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <ShortName>Charley</ShortName>
-              <PublicCode>CHAS</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-        </ServiceFrame>
+        <ServiceCalendarFrame id="hde:TIM_24o_FS_Outbound" version="any">
+          <Name/>
+          <ServiceCalendar id="hde:TIM_24o_FS_Outbound" version="any">
+            <dayTypes>
+              <DayType id="hde:DT_01MTWTFSS" version="any">
+                <Name>Everyday</Name>
+                <properties>
+                  <PropertyOfDay>
+                    <DaysOfWeek>Everyday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
+                  </PropertyOfDay>
+                </properties>
+              </DayType>
+              <DayType id="hde:DT_01MTWTF" version="any">
+                <Name>Weekdays</Name>
+                <properties>
+                  <PropertyOfDay>
+                    <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                    <WeeksOfMonth/>
+                    <HolidayTypes/>
+                    <Seasons/>
+                    <Tides/>
+                  </PropertyOfDay>
+                </properties>
+              </DayType>
+            </dayTypes>
+          </ServiceCalendar>
+        </ServiceCalendarFrame>
         <TimetableFrame id="hde:TIM_24o_FS_Outbound" version="001">
           <validityConditions>
             <AvailabilityCondition id="hde:TIM_24o_FS_Outbound" version="any">
@@ -156,37 +136,57 @@
             </TemplateServiceJourney>
           </vehicleJourneys>
         </TimetableFrame>
-        <ServiceCalendarFrame id="hde:TIM_24o_FS_Outbound" version="any">
-          <Name/>
-          <ServiceCalendar id="hde:TIM_24o_FS_Outbound" version="any">
-            <dayTypes>
-              <DayType id="hde:DT_01MTWTFSS" version="any">
-                <Name>Everyday</Name>
-                <properties>
-                  <PropertyOfDay>
-                    <DaysOfWeek>Everyday</DaysOfWeek>
-                    <WeeksOfMonth/>
-                    <HolidayTypes/>
-                    <Seasons/>
-                    <Tides/>
-                  </PropertyOfDay>
-                </properties>
-              </DayType>
-              <DayType id="hde:DT_01MTWTF" version="any">
-                <Name>Weekdays</Name>
-                <properties>
-                  <PropertyOfDay>
-                    <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                    <WeeksOfMonth/>
-                    <HolidayTypes/>
-                    <Seasons/>
-                    <Tides/>
-                  </PropertyOfDay>
-                </properties>
-              </DayType>
-            </dayTypes>
-          </ServiceCalendar>
-        </ServiceCalendarFrame>
+        <ServiceFrame id="mybus:svf_12" version="any">
+          <Name>Stops for Winter timetable for route 234 </Name>
+          <lines>
+            <Line id="mybus:LN_234" version="any">
+              <Name>Line 234 Alpha to Charley Green</Name>
+              <ShortName>Line 234</ShortName>
+              <TransportMode>bus</TransportMode>
+              <PublicCode>234</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>EANDC</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
+              <Name>Bravo Arch</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Bravo Arch</ShortName>
+              <PublicCode>BRAV</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
+              <Name>Charley Green</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <ShortName>Charley</ShortName>
+              <PublicCode>CHAS</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

@@ -79,69 +79,6 @@ The Calendar is shown coded as
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
-        <ServiceFrame id="mybus:svf_24" version="1">
-          <Name>Lines for Winter timetable for route 24 </Name>
-          <lines>
-            <FlexibleLine id="mybus:FL_24" version="any">
-              <Name>Line 24 Sigma  to Tau FLEXIBLE SERVICE </Name>
-              <ShortName>Line 24</ShortName>
-              <TransportMode>bus</TransportMode>
-              <TransportSubmode>
-                <BusSubmode>demandAndResponseBus</BusSubmode>
-              </TransportSubmode>
-              <PublicCode>24</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-              <FlexibleLineType>flexibleAreasOnly</FlexibleLineType>
-              <BookingMethods/>
-              <BookingAccess>public</BookingAccess>
-              <BuyWhen/>
-              <LatestBookingTime>16:30:00</LatestBookingTime>
-              <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
-            </FlexibleLine>
-          </lines>
-        </ServiceFrame>
-        <TimetableFrame id="hde:TIM_02" version="1">
-          <validityConditions>
-            <AvailabilityCondition id="hde:AC_runs_02" version="any">
-              <Description>Operating  times for DRT service 24</Description>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
-              </dayTypes>
-              <timebands>
-                <Timeband id="hde:AC_runs_01" version="any">
-                  <StartTime>09:00:00</StartTime>
-                  <EndTime>17:00:00</EndTime>
-                </Timeband>
-              </timebands>
-            </AvailabilityCondition>
-          </validityConditions>
-          <Name>TimetableNov to Jan 2011   </Name>
-          <VehicleModes>bus</VehicleModes>
-          <LineView>
-            <FlexibleLineRef version="any" ref="mybus:FL_24"/>
-          </LineView>
-          <bookingTimes>
-            <AvailabilityCondition id="hde:AC_booking_01" version="any">
-              <Description>Booking times for service</Description>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
-              </dayTypes>
-              <timebands>
-                <Timeband id="hde:AC_booking_01" version="any">
-                  <StartTime>08:30:00</StartTime>
-                  <EndTime>12:00:00</EndTime>
-                </Timeband>
-                <Timeband id="hde:AC_booking_02" version="any">
-                  <StartTime>13:00:00</StartTime>
-                  <EndTime>16:30:00</EndTime>
-                </Timeband>
-              </timebands>
-            </AvailabilityCondition>
-          </bookingTimes>
-        </TimetableFrame>
         <SiteFrame id="mybus:svf_24" version="1">
           <Name>Geometry of Zones  for Winter timetable for Flexible Route 24 </Name>
           <flexibleStopPlaces>
@@ -248,6 +185,69 @@ The Calendar is shown coded as
             </FlexibleStopPlace>
           </flexibleStopPlaces>
         </SiteFrame>
+        <ServiceFrame id="mybus:svf_24" version="1">
+          <Name>Lines for Winter timetable for route 24 </Name>
+          <lines>
+            <FlexibleLine id="mybus:FL_24" version="any">
+              <Name>Line 24 Sigma  to Tau FLEXIBLE SERVICE </Name>
+              <ShortName>Line 24</ShortName>
+              <TransportMode>bus</TransportMode>
+              <TransportSubmode>
+                <BusSubmode>demandAndResponseBus</BusSubmode>
+              </TransportSubmode>
+              <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+              <FlexibleLineType>flexibleAreasOnly</FlexibleLineType>
+              <BookingMethods/>
+              <BookingAccess>public</BookingAccess>
+              <BuyWhen/>
+              <LatestBookingTime>16:30:00</LatestBookingTime>
+              <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
+            </FlexibleLine>
+          </lines>
+        </ServiceFrame>
+        <TimetableFrame id="hde:TIM_02" version="1">
+          <validityConditions>
+            <AvailabilityCondition id="hde:AC_runs_02" version="any">
+              <Description>Operating  times for DRT service 24</Description>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+              </dayTypes>
+              <timebands>
+                <Timeband id="hde:AC_runs_01" version="any">
+                  <StartTime>09:00:00</StartTime>
+                  <EndTime>17:00:00</EndTime>
+                </Timeband>
+              </timebands>
+            </AvailabilityCondition>
+          </validityConditions>
+          <Name>TimetableNov to Jan 2011   </Name>
+          <VehicleModes>bus</VehicleModes>
+          <LineView>
+            <FlexibleLineRef version="any" ref="mybus:FL_24"/>
+          </LineView>
+          <bookingTimes>
+            <AvailabilityCondition id="hde:AC_booking_01" version="any">
+              <Description>Booking times for service</Description>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <DayTypeRef version="any" ref="hde:DT_01-MF-NotHoliday"/>
+              </dayTypes>
+              <timebands>
+                <Timeband id="hde:AC_booking_01" version="any">
+                  <StartTime>08:30:00</StartTime>
+                  <EndTime>12:00:00</EndTime>
+                </Timeband>
+                <Timeband id="hde:AC_booking_02" version="any">
+                  <StartTime>13:00:00</StartTime>
+                  <EndTime>16:30:00</EndTime>
+                </Timeband>
+              </timebands>
+            </AvailabilityCondition>
+          </bookingTimes>
+        </TimetableFrame>
         <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov to Jan 2011   </Name>
           <ServiceCalendar id="hde:CAL_02" version="any">

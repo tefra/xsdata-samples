@@ -42,6 +42,128 @@
         <DefaultCodespaceRef ref="myfares"/>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@z2Z@network" version="1">
+          <Name>Stops for Winter timetable for Network</Name>
+          <Network id="mybus:DTA" version="any">
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <groupsOfLines>
+              <GroupOfLines id="mybus:DTA@lines" version="any">
+                <members>
+                  <LineRef version="any" ref="mybus:Line_24"/>
+                  <LineRef version="any" ref="mybus:Line_48"/>
+                </members>
+                <PaymentMethods/>
+                <PurchaseMoment/>
+              </GroupOfLines>
+            </groupsOfLines>
+            <tariffZones>
+              <TariffZoneRef version="any" ref="myfares:1"/>
+              <TariffZoneRef version="any" ref="myfares:2"/>
+              <TariffZoneRef version="any" ref="myfares:3"/>
+            </tariffZones>
+          </Network>
+          <lines>
+            <Line id="mybus:Line_24" version="any">
+              <Name>Line  24</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="mybus:Line_48" version="any">
+              <Name>Line  48</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="mybus:SSP_001" version="any">
+              <Name>Alpha &amp; Castle</Name>
+              <Location>
+                <Longitude>53.0000</Longitude>
+                <Latitude>0.1000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="myfares:1"/>
+              </tariffZones>
+              <ShortName>Alpha</ShortName>
+              <PublicCode>EANDC</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_002" version="any">
+              <Name>Bravo</Name>
+              <Location>
+                <Longitude>53.2000</Longitude>
+                <Latitude>0.2000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="myfares:2"/>
+              </tariffZones>
+              <ShortName>Bravo</ShortName>
+              <PublicCode>MARCH</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_077" version="any">
+              <Name>Charley</Name>
+              <Location>
+                <Longitude>53.3000</Longitude>
+                <Latitude>0.3000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="myfares:2"/>
+              </tariffZones>
+              <ShortName>Charley</ShortName>
+              <PublicCode>KENG</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_021" version="any">
+              <Name>Romeo</Name>
+              <Location>
+                <Longitude>53.34000</Longitude>
+                <Latitude>0.34000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="myfares:3"/>
+              </tariffZones>
+              <ShortName>Romeo</ShortName>
+              <PublicCode>ROM</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="mybus:SSP_022" version="any">
+              <Name>Quebec Street</Name>
+              <Location>
+                <Longitude>53.34000</Longitude>
+                <Latitude>0.34000</Latitude>
+              </Location>
+              <TimingPointStatus>timingPoint</TimingPointStatus>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="myfares:3"/>
+              </tariffZones>
+              <ShortName>Quebec</ShortName>
+              <PublicCode>QBC</PublicCode>
+              <StopType>onstreetBus</StopType>
+              <VehicleModes>bus</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <tariffZones>
+            <TariffZone id="myfares:1" version="any">
+              <Name>Zone 1</Name>
+            </TariffZone>
+            <TariffZone id="myfares:2" version="any">
+              <Name>Zone 2</Name>
+            </TariffZone>
+            <TariffZone id="myfares:3" version="any">
+              <Name>Zone 3</Name>
+            </TariffZone>
+          </tariffZones>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@z2Z@products" version="1.0">
           <FrameDefaults>
             <DefaultCurrency>EUR</DefaultCurrency>
@@ -282,128 +404,6 @@
             </FareTable>
           </fareTables>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@z2Z@network" version="1">
-          <Name>Stops for Winter timetable for Network</Name>
-          <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <groupsOfLines>
-              <GroupOfLines id="mybus:DTA@lines" version="any">
-                <members>
-                  <LineRef version="any" ref="mybus:Line_24"/>
-                  <LineRef version="any" ref="mybus:Line_48"/>
-                </members>
-                <PaymentMethods/>
-                <PurchaseMoment/>
-              </GroupOfLines>
-            </groupsOfLines>
-            <tariffZones>
-              <TariffZoneRef version="any" ref="myfares:1"/>
-              <TariffZoneRef version="any" ref="myfares:2"/>
-              <TariffZoneRef version="any" ref="myfares:3"/>
-            </tariffZones>
-          </Network>
-          <lines>
-            <Line id="mybus:Line_24" version="any">
-              <Name>Line  24</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="mybus:Line_48" version="any">
-              <Name>Line  48</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="mybus:SSP_001" version="any">
-              <Name>Alpha &amp; Castle</Name>
-              <Location>
-                <Longitude>53.0000</Longitude>
-                <Latitude>0.1000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="myfares:1"/>
-              </tariffZones>
-              <ShortName>Alpha</ShortName>
-              <PublicCode>EANDC</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_002" version="any">
-              <Name>Bravo</Name>
-              <Location>
-                <Longitude>53.2000</Longitude>
-                <Latitude>0.2000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="myfares:2"/>
-              </tariffZones>
-              <ShortName>Bravo</ShortName>
-              <PublicCode>MARCH</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_077" version="any">
-              <Name>Charley</Name>
-              <Location>
-                <Longitude>53.3000</Longitude>
-                <Latitude>0.3000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="myfares:2"/>
-              </tariffZones>
-              <ShortName>Charley</ShortName>
-              <PublicCode>KENG</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_021" version="any">
-              <Name>Romeo</Name>
-              <Location>
-                <Longitude>53.34000</Longitude>
-                <Latitude>0.34000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="myfares:3"/>
-              </tariffZones>
-              <ShortName>Romeo</ShortName>
-              <PublicCode>ROM</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="mybus:SSP_022" version="any">
-              <Name>Quebec Street</Name>
-              <Location>
-                <Longitude>53.34000</Longitude>
-                <Latitude>0.34000</Latitude>
-              </Location>
-              <TimingPointStatus>timingPoint</TimingPointStatus>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="myfares:3"/>
-              </tariffZones>
-              <ShortName>Quebec</ShortName>
-              <PublicCode>QBC</PublicCode>
-              <StopType>onstreetBus</StopType>
-              <VehicleModes>bus</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <tariffZones>
-            <TariffZone id="myfares:1" version="any">
-              <Name>Zone 1</Name>
-            </TariffZone>
-            <TariffZone id="myfares:2" version="any">
-              <Name>Zone 2</Name>
-            </TariffZone>
-            <TariffZone id="myfares:3" version="any">
-              <Name>Zone 3</Name>
-            </TariffZone>
-          </tariffZones>
-        </ServiceFrame>
         <ResourceFrame id="myfares:DTA@Common Resources" version="any">
           <Name>Common resources</Name>
           <codespaces>

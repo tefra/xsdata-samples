@@ -12,7 +12,7 @@ class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildS
     class Meta:
         name = "ObservedPassingTime_VersionedChildStructure"
 
-    choice: List[object] = field(
+    choice_2: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

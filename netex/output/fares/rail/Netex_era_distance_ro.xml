@@ -27,8 +27,8 @@
             <DefaultResponsibilitySetRef version="any" ref="tfc_products:TFC"/>
           </FrameDefaults>
           <prerequisites>
-            <FareFrameRef version="01" ref="tfc:TFC@Network@ODs"/>
             <ServiceFrameRef version="01" ref="tfc:TFC@Network@Lines"/>
+            <FareFrameRef version="01" ref="tfc:TFC@Network@ODs"/>
           </prerequisites>
           <PricingParameterSet id="tfc:TFC@Common" version="any">
             <priceUnits>
@@ -38,21 +38,12 @@
               </PriceUnit>
             </priceUnits>
             <pricingRules>
-              <LimitingRule id="tfc:TFC@Common@rate@student_maximum_distance" version="any">
-                <Name>Student fare Distance is maximum of 300 km</Name>
-                <PriceUnitRef version="any" ref="eura:kilometeres"/>
-                <MaximumLimitPrice>300</MaximumLimitPrice>
-              </LimitingRule>
-              <LimitingRule id="tfc:TFC@Common@rate@distance_more than_50km" version="any">
-                <Name>Reservation requited over 50 km</Name>
-                <PriceUnitRef version="any" ref="eura:kilometeres"/>
-                <MinimumLimitPrice>50</MinimumLimitPrice>
-              </LimitingRule>
-              <LimitingRule id="tfc:TFC@Common@rate@distance_more than_70km" version="any">
-                <Name>Reservation requited over 70 km</Name>
-                <PriceUnitRef version="any" ref="eura:kilometeres"/>
-                <MinimumLimitPrice>70</MinimumLimitPrice>
-              </LimitingRule>
+              <PricingRule id="tfc:TFC@Common@rate@route" version="any">
+                <Name>Distance based pricing</Name>
+              </PricingRule>
+              <PricingRule id="tfc:TFC@Tariff@General@geographic_intervals@distance" version="any">
+                <Name>Distance based pricing</Name>
+              </PricingRule>
               <DiscountingRule id="tfc:TFC@Common@rate@student" version="any">
                 <DiscountAsPercentage>0.5</DiscountAsPercentage>
               </DiscountingRule>
@@ -84,12 +75,21 @@
                 <Name>Surcharge for on-board purchase</Name>
                 <DiscountAsValue>-2.00</DiscountAsValue>
               </DiscountingRule>
-              <PricingRule id="tfc:TFC@Common@rate@route" version="any">
-                <Name>Distance based pricing</Name>
-              </PricingRule>
-              <PricingRule id="tfc:TFC@Tariff@General@geographic_intervals@distance" version="any">
-                <Name>Distance based pricing</Name>
-              </PricingRule>
+              <LimitingRule id="tfc:TFC@Common@rate@student_maximum_distance" version="any">
+                <Name>Student fare Distance is maximum of 300 km</Name>
+                <PriceUnitRef version="any" ref="eura:kilometeres"/>
+                <MaximumLimitPrice>300</MaximumLimitPrice>
+              </LimitingRule>
+              <LimitingRule id="tfc:TFC@Common@rate@distance_more than_50km" version="any">
+                <Name>Reservation requited over 50 km</Name>
+                <PriceUnitRef version="any" ref="eura:kilometeres"/>
+                <MinimumLimitPrice>50</MinimumLimitPrice>
+              </LimitingRule>
+              <LimitingRule id="tfc:TFC@Common@rate@distance_more than_70km" version="any">
+                <Name>Reservation requited over 70 km</Name>
+                <PriceUnitRef version="any" ref="eura:kilometeres"/>
+                <MinimumLimitPrice>70</MinimumLimitPrice>
+              </LimitingRule>
             </pricingRules>
             <RoundingRef version="any" ref="tfc:split"/>
             <roundings>
@@ -832,19 +832,6 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <Name>Cannot give  to someone else</Name>
               <CanTransfer>false</CanTransfer>
             </Transferability>
-            <Refunding id="tfc:TFC@Common@condition@can_refund" version="any">
-              <Name>Can Refund</Name>
-              <Allowed>full</Allowed>
-              <UnusedTicketsOnly>true</UnusedTicketsOnly>
-              <ResellWhen>beforeStartOfValidity</ResellWhen>
-              <ExchangableFromDuration>P91D</ExchangableFromDuration>
-              <ExchangableUntilDuration>-P1D</ExchangableUntilDuration>
-              <HasFee>true</HasFee>
-              <RefundBasis>perPerson</RefundBasis>
-              <PaymentMethods/>
-              <RefundPolicy/>
-              <PaymentMethod/>
-            </Refunding>
             <Exchanging id="tfc:TFC@Common@condition@can_exchange_for_free" version="any">
               <Name>Can Exchange</Name>
               <Allowed>full</Allowed>
@@ -871,6 +858,19 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <RefundBasis>perOffer</RefundBasis>
               <PaymentMethods/>
             </Exchanging>
+            <Refunding id="tfc:TFC@Common@condition@can_refund" version="any">
+              <Name>Can Refund</Name>
+              <Allowed>full</Allowed>
+              <UnusedTicketsOnly>true</UnusedTicketsOnly>
+              <ResellWhen>beforeStartOfValidity</ResellWhen>
+              <ExchangableFromDuration>P91D</ExchangableFromDuration>
+              <ExchangableUntilDuration>-P1D</ExchangableUntilDuration>
+              <HasFee>true</HasFee>
+              <RefundBasis>perPerson</RefundBasis>
+              <PaymentMethods/>
+              <RefundPolicy/>
+              <PaymentMethod/>
+            </Refunding>
           </usageParameters>
           <distributionChannels>
             <DistributionChannel id="tfc:TFC@Common@self_service_ticket_machine" version="01">
@@ -1842,10 +1842,10 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <InfoLink typeOfInfoLink="fareSheet">https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html</InfoLink>
               </infoLinks>
               <pricesFor>
+                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
+                <SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_single-SOP"/>
                 <RoundTripRef version="any" ref="tfc:TFC@Tariff@Trip@trip_type@single"/>
                 <PurchaseWindowRef ref="tfc:TFC@Common@condition"/>
-                <SalesOfferPackageRef version="01" ref="tfc:TFC@Trip_single-SOP"/>
-                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
               </pricesFor>
               <specifics>
                 <TypeOfProductCategoryRef version="any" ref="eura:local"/>
@@ -1860,29 +1860,29 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <FareTableColumn id="tfc:Single@preboard@R" version="01" order="2">
                   <Name lang="ro">Clasa 1</Name>
                   <representing>
-                    <TypeOfConcessionRef version="any" ref="eura:adult"/>
                     <ClassOfUseRef version="any" ref="eura:first"/>
+                    <TypeOfConcessionRef version="any" ref="eura:adult"/>
                   </representing>
                 </FareTableColumn>
                 <FareTableColumn id="tfc:Single@preboard@R" version="01" order="3">
                   <Name lang="ro">50 % Clasa 1</Name>
                   <representing>
-                    <TypeOfConcessionRef version="any" ref="eura:discounted"/>
                     <ClassOfUseRef version="any" ref="eura:first"/>
+                    <TypeOfConcessionRef version="any" ref="eura:discounted"/>
                   </representing>
                 </FareTableColumn>
                 <FareTableColumn id="tfc:Single@preboard@R" version="01" order="4">
                   <Name lang="ro">Clasa 2</Name>
                   <representing>
-                    <TypeOfConcessionRef version="any" ref="eura:adult"/>
                     <ClassOfUseRef version="any" ref="eura:second"/>
+                    <TypeOfConcessionRef version="any" ref="eura:adult"/>
                   </representing>
                 </FareTableColumn>
                 <FareTableColumn id="tfc:Single@preboard@R" version="01" order="5">
                   <Name lang="ro">50 % Clasa 2</Name>
                   <representing>
-                    <TypeOfConcessionRef version="any" ref="eura:discounted"/>
                     <ClassOfUseRef version="any" ref="eura:second"/>
+                    <TypeOfConcessionRef version="any" ref="eura:discounted"/>
                   </representing>
                 </FareTableColumn>
               </columns>
@@ -3184,9 +3184,9 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <InfoLink typeOfInfoLink="fareSheet">https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html</InfoLink>
               </infoLinks>
               <pricesFor>
+                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
                 <RoundTripRef version="any" ref="tfc:TFC@Tariff@Trip@trip_type@single"/>
                 <PurchaseWindowRef ref="tfc:TFC@Common@condition"/>
-                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
               </pricesFor>
               <specifics>
                 <TypeOfProductCategoryRef version="any" ref="eura:local"/>
@@ -3569,9 +3569,9 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <InfoLink typeOfInfoLink="fareSheet">https://www.transferoviarcalatori.ro/tarife/tarife-tfc.html</InfoLink>
               </infoLinks>
               <pricesFor>
+                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
                 <RoundTripRef version="any" ref="tfc:TFC@Tariff@Trip@trip_type@single"/>
                 <PurchaseWindowRef ref="tfc:TFC@Tariff@General@buy_onboard"/>
-                <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_single"/>
               </pricesFor>
               <specifics>
                 <TypeOfProductCategoryRef version="any" ref="eura:local"/>
@@ -4119,9 +4119,9 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
                 <InfoLink typeOfInfoLink="fareSheet">https://www.transferoviarcalatori.ro/tarife/oferta-dus-intors.html</InfoLink>
               </infoLinks>
               <pricesFor>
-                <PurchaseWindowRef ref="tfc:TFC@Common@condition@preboard"/>
-                <FareStructureElementRef version="01" ref="tfc:TFC@Tariff@Trip@composition@period_return"/>
                 <PreassignedFareProductRef version="01" ref="tfc:TFC@Trip_period_return"/>
+                <FareStructureElementRef version="01" ref="tfc:TFC@Tariff@Trip@composition@period_return"/>
+                <PurchaseWindowRef ref="tfc:TFC@Common@condition@preboard"/>
               </pricesFor>
               <specifics>
                 <TypeOfProductCategoryRef version="any" ref="eura:interregional"/>
@@ -5528,8 +5528,8 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
               <Name lang="ro">Tarife Abonament lunar</Name>
               <Description>Monthly season pass</Description>
               <pricesFor>
-                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
                 <PreassignedFareProductRef version="01" ref="tfc:TFC@Season_pass"/>
+                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
               </pricesFor>
               <columns>
                 <FareTableColumn id="tfc:Pass@Season@adult@1M" version="01" order="1">
@@ -5834,8 +5834,8 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
               <Name lang="ro">Tarife Abonament lunar elevi</Name>
               <Description>Monthly season pass</Description>
               <pricesFor>
-                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@student"/>
                 <PreassignedFareProductRef version="01" ref="tfc:TFC@Season_pass"/>
+                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@student"/>
               </pricesFor>
               <columns>
                 <FareTableColumn id="tfc:Pass@Season@student@1M" version="01" order="1">
@@ -6140,8 +6140,8 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
               <Name lang="ro">Tarife Abonament saptamanal</Name>
               <Description>Weekly season pass</Description>
               <pricesFor>
-                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
                 <PreassignedFareProductRef version="01" ref="tfc:TFC@Season_pass"/>
+                <UserProfileRef ref="tfc:TFC@Tariff@General@eligibilities@adult"/>
               </pricesFor>
               <columns>
                 <FareTableColumn id="tfc:Pass@Season@adult@1W" version="01" order="1">
@@ -6617,6 +6617,192 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             </SalesOfferPackage>
           </salesOfferPackages>
         </FareFrame>
+        <ServiceFrame id="tfc:TFC@Network@Lines" modification="revise" version="01" responsibilitySetRef="tfc_products:TFC">
+          <BrandingRef version="any" ref="tfc:TFC@brand"/>
+          <Name>TFC routes </Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="tfc_data"/>
+            <DefaultDataSourceRef version="any" ref="tfc:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="tfc_products:TFC"/>
+          </FrameDefaults>
+          <prerequisites>
+            <ResourceFrameRef version="01" ref="tfc:TFC@Common_Resources@codes"/>
+          </prerequisites>
+          <Network id="tfc:TFC@Lines@Network" version="01">
+            <BrandingRef version="any" ref="tfc:TFC@brand"/>
+            <Name>TFC Network</Name>
+            <members>
+              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest+Buzau"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Cluj_Napoca+Oradea"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Titan_South_hm+Oltenita"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Buzau+Nehoiasu"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Galati+Barlad"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Slanic"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest_North+Galati"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Maneciu"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Targoviste"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa"/>
+              <LineRef version="01" ref="tfc:TFC@Lines@Roşiori+Costeşti"/>
+            </members>
+            <TransportMode>rail</TransportMode>
+            <GroupOfLinesType>marketing</GroupOfLinesType>
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="uic:3181">TFC</OperatorRef>
+          </Network>
+          <lines>
+            <Line id="tfc:TFC@Lines@Bucharest+Buzau" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Bucharest+Buzau@en" attributeName="Name" order="1">
+                  <Text lang="en">Bucharest North - Buzau</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Bucuresti Nord - Buzau</Name>
+              <TransportMode>rail</TransportMode>
+              <Url>https://www.transferoviarcalatori.ro/mersul-trenurilor/239-buzau-bucuresti-nord.html</Url>
+              <LineType>longDistance</LineType>
+              <Presentation>
+                <ColourName>Mauve</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Cluj_Napoca+Oradea" version="01">
+              <Name lang="ro">Cluj Napoca - Oradea</Name>
+              <TransportMode>rail</TransportMode>
+              <Url>https://www.transferoviarcalatori.ro/mersul-trenurilor/174-cluj-oradea.html</Url>
+              <LineType>local</LineType>
+              <Presentation>
+                <ColourName>Green</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Titan_South_hm+Oltenita" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Titan_South_hm+Oltenita@en" attributeName="Name" order="1">
+                  <Text lang="en">Titan Sud hm - Oltenita</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Titan Sud hm - Oltenita</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Green</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Buzau+Nehoiasu" version="01">
+              <Name lang="ro">Buzau - Nehoiasu</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Light Blue</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Galati+Barlad" version="01">
+              <Name lang="ro">Galati - Barlad</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Pale Green</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Ploiesti_South+Slanic" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Targoviste@en" attributeName="Name" order="1">
+                  <Text lang="en">Ploiesti South - Targoviste</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Ploiesti Sud - Slanic</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Dark Brown</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Bucharest_North+Galati" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Bucharest_North+Galati@en" attributeName="Name" order="1">
+                  <Text lang="en">Bucharest North - Galati</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Bucuresti Nord - Galati</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Scarlet</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Ploiesti_South+Maneciu" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Maneciu@en" attributeName="Name" order="1">
+                  <Text lang="en">Ploiesti South - Maneciu</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Ploiesti Sud - Maneciu</Name>
+              <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste@en" attributeName="Name" order="1">
+                  <Text lang="en">Bucharest North - Targoviste</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name>Bucuresti Nord - Titu - Targoviste</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Scarlet</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Ploiesti_South+Targoviste" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Targoviste@en" attributeName="Name" order="1">
+                  <Text lang="en">Ploiesti South - Targoviste</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Ploiesti Sud - Targoviste</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Brown</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01">
+              <Name lang="ro">Târgovişte - Pietroşiţa</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Mauve</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="tfc:TFC@Lines@Roşiori+Costeşti" version="01">
+              <alternativeTexts>
+                <AlternativeText id="tfc:TFC@Lines@Roşiori+Costeşti@en" attributeName="Name" order="1">
+                  <Text lang="en">Roşiori - Costeşti</Text>
+                </AlternativeText>
+              </alternativeTexts>
+              <Name lang="ro">Roşiori  Nord- Costeşti</Name>
+              <TransportMode>rail</TransportMode>
+              <Presentation>
+                <ColourName>Tan</ColourName>
+              </Presentation>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+        </ServiceFrame>
         <FareFrame id="tfc:TFC@Network@ODs" version="01" responsibilitySetRef="tfc_products:TFC">
           <Name>This frame holds stop  point  and distance matrix elements referenced by other frames</Name>
           <FrameDefaults>
@@ -7186,192 +7372,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             </Tariff>
           </tariffs>
         </FareFrame>
-        <ServiceFrame id="tfc:TFC@Network@Lines" modification="revise" version="01" responsibilitySetRef="tfc_products:TFC">
-          <BrandingRef version="any" ref="tfc:TFC@brand"/>
-          <Name>TFC routes </Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="tfc_data"/>
-            <DefaultDataSourceRef version="any" ref="tfc:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="tfc_products:TFC"/>
-          </FrameDefaults>
-          <prerequisites>
-            <ResourceFrameRef version="01" ref="tfc:TFC@Common_Resources@codes"/>
-          </prerequisites>
-          <Network id="tfc:TFC@Lines@Network" version="01">
-            <BrandingRef version="any" ref="tfc:TFC@brand"/>
-            <Name>TFC Network</Name>
-            <members>
-              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest+Buzau"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Cluj_Napoca+Oradea"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Titan_South_hm+Oltenita"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Buzau+Nehoiasu"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Galati+Barlad"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Slanic"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest_North+Galati"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Maneciu"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Ploiesti_South+Targoviste"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa"/>
-              <LineRef version="01" ref="tfc:TFC@Lines@Roşiori+Costeşti"/>
-            </members>
-            <TransportMode>rail</TransportMode>
-            <GroupOfLinesType>marketing</GroupOfLinesType>
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="uic:3181">TFC</OperatorRef>
-          </Network>
-          <lines>
-            <Line id="tfc:TFC@Lines@Bucharest+Buzau" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Bucharest+Buzau@en" attributeName="Name" order="1">
-                  <Text lang="en">Bucharest North - Buzau</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Bucuresti Nord - Buzau</Name>
-              <TransportMode>rail</TransportMode>
-              <Url>https://www.transferoviarcalatori.ro/mersul-trenurilor/239-buzau-bucuresti-nord.html</Url>
-              <LineType>longDistance</LineType>
-              <Presentation>
-                <ColourName>Mauve</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Cluj_Napoca+Oradea" version="01">
-              <Name lang="ro">Cluj Napoca - Oradea</Name>
-              <TransportMode>rail</TransportMode>
-              <Url>https://www.transferoviarcalatori.ro/mersul-trenurilor/174-cluj-oradea.html</Url>
-              <LineType>local</LineType>
-              <Presentation>
-                <ColourName>Green</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Titan_South_hm+Oltenita" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Titan_South_hm+Oltenita@en" attributeName="Name" order="1">
-                  <Text lang="en">Titan Sud hm - Oltenita</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Titan Sud hm - Oltenita</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Green</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Buzau+Nehoiasu" version="01">
-              <Name lang="ro">Buzau - Nehoiasu</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Light Blue</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Galati+Barlad" version="01">
-              <Name lang="ro">Galati - Barlad</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Pale Green</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Ploiesti_South+Slanic" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Targoviste@en" attributeName="Name" order="1">
-                  <Text lang="en">Ploiesti South - Targoviste</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Ploiesti Sud - Slanic</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Dark Brown</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Bucharest_North+Galati" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Bucharest_North+Galati@en" attributeName="Name" order="1">
-                  <Text lang="en">Bucharest North - Galati</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Bucuresti Nord - Galati</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Scarlet</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Ploiesti_South+Maneciu" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Maneciu@en" attributeName="Name" order="1">
-                  <Text lang="en">Ploiesti South - Maneciu</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Ploiesti Sud - Maneciu</Name>
-              <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste@en" attributeName="Name" order="1">
-                  <Text lang="en">Bucharest North - Targoviste</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name>Bucuresti Nord - Titu - Targoviste</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Scarlet</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Ploiesti_South+Targoviste" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Ploiesti_South+Targoviste@en" attributeName="Name" order="1">
-                  <Text lang="en">Ploiesti South - Targoviste</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Ploiesti Sud - Targoviste</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Brown</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01">
-              <Name lang="ro">Târgovişte - Pietroşiţa</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Mauve</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="tfc:TFC@Lines@Roşiori+Costeşti" version="01">
-              <alternativeTexts>
-                <AlternativeText id="tfc:TFC@Lines@Roşiori+Costeşti@en" attributeName="Name" order="1">
-                  <Text lang="en">Roşiori - Costeşti</Text>
-                </AlternativeText>
-              </alternativeTexts>
-              <Name lang="ro">Roşiori  Nord- Costeşti</Name>
-              <TransportMode>rail</TransportMode>
-              <Presentation>
-                <ColourName>Tan</ColourName>
-              </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-        </ServiceFrame>
         <ResourceFrame id="tfc:TFC@Common_Resources@codes" version="01" responsibilitySetRef="tfc_products:TFC">
           <Name>TFC specific  common  resources </Name>
           <codespaces>
@@ -7769,11 +7769,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <FirstName>Boris</FirstName>
               <DateOfBirth>1958-11-01</DateOfBirth>
               <customerEligibilities>
-                <ResidentialQualificationEligibility id="tfc_cd:Customer55678@minority_region" version="01">
-                  <ResidentialQualificationRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@ethnic_victim@minority_area_blah"/>
-                  <ResidencyType>born</ResidencyType>
-                  <StartDate>1958-11-01</StartDate>
-                </ResidentialQualificationEligibility>
                 <UserProfileEligibility id="tfc_cd:Customer55678@veteran" version="01">
                   <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@veteran"/>
                 </UserProfileEligibility>
@@ -7789,6 +7784,11 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                 <UserProfileEligibility id="tfc_cd:Customer55678@member_of_parliament" version="01">
                   <UserProfileRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@member_of_parliament"/>
                 </UserProfileEligibility>
+                <ResidentialQualificationEligibility id="tfc_cd:Customer55678@minority_region" version="01">
+                  <ResidentialQualificationRef version="any" ref="tfc:TFC@Tariff@General@eligibilities@ethnic_victim@minority_area_blah"/>
+                  <ResidencyType>born</ResidencyType>
+                  <StartDate>1958-11-01</StartDate>
+                </ResidentialQualificationEligibility>
               </customerEligibilities>
               <customerAccounts>
                 <CustomerAccount id="tfc_cd:Customer55678@personal" version="01">
@@ -8027,238 +8027,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
         <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
       </FrameDefaults>
       <frames>
-        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
-          <Name>Common Country independent  fare component </Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="eura_data"/>
-            <DefaultDataSourceRef version="any" ref="eura:common"/>
-            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
-            <DefaultCurrency>EUR</DefaultCurrency>
-          </FrameDefaults>
-          <PricingParameterSet id="eura:Common_Resources" version="any">
-            <priceUnits>
-              <PriceUnit id="eura:EUR" version="any">
-                <Name>Euro</Name>
-                <PrivateCode>€</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:GBP" version="any">
-                <Name>Pound Sterling</Name>
-                <PrivateCode>£</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:SFR" version="any">
-                <Name>Swiss Francs</Name>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:kilometeres" version="any">
-                <Name>Kilometers</Name>
-                <Precision>2</Precision>
-              </PriceUnit>
-            </priceUnits>
-          </PricingParameterSet>
-          <geographicalUnits>
-            <GeographicalUnit id="eura:km" version="any">
-              <Name>Distance Unit Kilometres</Name>
-            </GeographicalUnit>
-          </geographicalUnits>
-          <distributionChannels>
-            <DistributionChannel id="eura:online" version="01">
-              <ShortName>Internet sales</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:online_de" version="01" order="1">
-                  <Name lang="de">Internetverkauf</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:online_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par l'internet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>online</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
-              <ShortName>Automatic Ticket Machine</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:at_counter" version="01">
-              <ShortName>Ticket counter sale</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:at_counter_de" version="01" order="1">
-                  <Name lang="de">Schalter</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par le guichet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:onboard" version="01">
-              <ShortName>onboard</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:onboard_ro" version="01" order="1">
-                  <Name lang="en">in Tren</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>onBoard</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:call_centre" version="01">
-              <ShortName>Call Centre</ShortName>
-              <DistributionChannelType>telephone</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:travel_agent" version="01">
-              <ShortName>Travel Agent</ShortName>
-              <DistributionChannelType>agency</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:employee_organisation" version="01">
-              <ShortName>Employee Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:statutory_organisation" version="01">
-              <ShortName>Statutory Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-          </distributionChannels>
-          <fulfilmentMethods>
-            <FulfilmentMethod id="eura:post" version="01">
-              <Name>Send ticket by post</Name>
-              <FulfilmentMethodType>post</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:courier" version="01">
-              <Name>Send ticket by courier</Name>
-              <FulfilmentMethodType>other</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_at_counter" version="01">
-              <Name>Collect at counter </Name>
-              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_on_board" version="01">
-              <Name>Collect  on board</Name>
-              <FulfilmentMethodType>conductor</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_machine" version="01">
-              <Name>Collect   from machine</Name>
-              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
-              <RequiresBookingReference>true</RequiresBookingReference>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_agent" version="01">
-              <Name>Travel agent issues ticket directly </Name>
-              <FulfilmentMethodType>agent</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:mobile_app" version="01">
-              <Name>Mobile App</Name>
-              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:self_print" version="01">
-              <Name>Self Print </Name>
-              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:email" version="01">
-              <Name>EMAIL </Name>
-              <FulfilmentMethodType>email</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-          </fulfilmentMethods>
-          <typesOfTravelDocuments>
-            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
-              <Name>Printed Ticket  </Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
-              <Name>Hand written ticket </Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable/>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
-              <Name>Printed Ticket with magnetic Stripe</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>magneticStrip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
-              <MediaType>selfPrintPaperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:pass" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>barCode</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
-              <MediaType>mobileApp</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:smart_card" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>chip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:electronic_document" version="01">
-              <MediaType>none</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-          </typesOfTravelDocuments>
-        </FareFrame>
         <ResourceFrame id="eura:EURA@Common_Resources" version="any" responsibilitySetRef="eura:code_sets">
           <Name>EURA Common Country independent  code values </Name>
           <codespaces>
@@ -8564,6 +8332,11 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             </ValueSet>
           </typesOfValue>
           <organisations>
+            <GeneralOrganisation id="eura:EURA" version="any">
+              <Name>European Union Agency for Railways</Name>
+              <ShortName>ERA</ShortName>
+              <OrganisationType>statutoryBody</OrganisationType>
+            </GeneralOrganisation>
             <Operator id="uic:1170" version="any">
               <PublicCode>ATOC</PublicCode>
               <Name>Association of Train Operating Companies Limited</Name>
@@ -8599,13 +8372,240 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               </ValidityPeriod>
               <OperatorActivities/>
             </Operator>
-            <GeneralOrganisation id="eura:EURA" version="any">
-              <Name>European Union Agency for Railways</Name>
-              <ShortName>ERA</ShortName>
-              <OrganisationType>statutoryBody</OrganisationType>
-            </GeneralOrganisation>
           </organisations>
         </ResourceFrame>
+        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
+          <Name>Common Country independent  fare component </Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="eura_data"/>
+            <DefaultDataSourceRef version="any" ref="eura:common"/>
+            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <PricingParameterSet id="eura:Common_Resources" version="any">
+            <priceUnits>
+              <PriceUnit id="eura:EUR" version="any">
+                <Name>Euro</Name>
+                <PrivateCode>€</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:GBP" version="any">
+                <Name>Pound Sterling</Name>
+                <PrivateCode>£</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:SFR" version="any">
+                <Name>Swiss Francs</Name>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:kilometeres" version="any">
+                <Name>Kilometers</Name>
+                <Precision>2</Precision>
+              </PriceUnit>
+            </priceUnits>
+          </PricingParameterSet>
+          <geographicalUnits>
+            <GeographicalUnit id="eura:km" version="any">
+              <Name>Distance Unit Kilometres</Name>
+            </GeographicalUnit>
+          </geographicalUnits>
+          <distributionChannels>
+            <DistributionChannel id="eura:online" version="01">
+              <ShortName>Internet sales</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:online_de" version="01" order="1">
+                  <Name lang="de">Internetverkauf</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:online_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par l'internet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>online</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
+              <ShortName>Automatic Ticket Machine</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:at_counter" version="01">
+              <ShortName>Ticket counter sale</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:at_counter_de" version="01" order="1">
+                  <Name lang="de">Schalter</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par le guichet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:onboard" version="01">
+              <ShortName>onboard</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:onboard_ro" version="01" order="1">
+                  <Name lang="en">in Tren</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>onBoard</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:call_centre" version="01">
+              <ShortName>Call Centre</ShortName>
+              <DistributionChannelType>telephone</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:travel_agent" version="01">
+              <ShortName>Travel Agent</ShortName>
+              <DistributionChannelType>agency</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:employee_organisation" version="01">
+              <ShortName>Employee Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:statutory_organisation" version="01">
+              <ShortName>Statutory Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="eura:post" version="01">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:courier" version="01">
+              <Name>Send ticket by courier</Name>
+              <FulfilmentMethodType>other</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_at_counter" version="01">
+              <Name>Collect at counter </Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_on_board" version="01">
+              <Name>Collect  on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_machine" version="01">
+              <Name>Collect   from machine</Name>
+              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+              <RequiresBookingReference>true</RequiresBookingReference>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_agent" version="01">
+              <Name>Travel agent issues ticket directly </Name>
+              <FulfilmentMethodType>agent</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:mobile_app" version="01">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:self_print" version="01">
+              <Name>Self Print </Name>
+              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:email" version="01">
+              <Name>EMAIL </Name>
+              <FulfilmentMethodType>email</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
+              <Name>Printed Ticket  </Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
+              <Name>Hand written ticket </Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable/>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
+              <Name>Printed Ticket with magnetic Stripe</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>magneticStrip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
+              <MediaType>selfPrintPaperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:pass" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:smart_card" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>chip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:electronic_document" version="01">
+              <MediaType>none</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

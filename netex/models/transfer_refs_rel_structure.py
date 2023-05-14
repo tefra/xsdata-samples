@@ -14,35 +14,31 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transferRefs_RelStructure"
 
-    default_connection_ref: List[DefaultConnectionRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "DefaultConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_connection_ref: List[SiteConnectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    connection_ref: List[ConnectionRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ConnectionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_ref: List[AccessRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DefaultConnectionRef",
+                    "type": DefaultConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteConnectionRef",
+                    "type": SiteConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ConnectionRef",
+                    "type": ConnectionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessRef",
+                    "type": AccessRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

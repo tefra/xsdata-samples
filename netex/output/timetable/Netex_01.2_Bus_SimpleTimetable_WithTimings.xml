@@ -934,32 +934,6 @@ The Calendar is shown coded as
             </ServiceFacilitySet>
           </serviceFacilitySets>
         </TimetableFrame>
-        <ResourceFrame id="acs:ACS@Common_resources" version="1.0">
-          <codespaces>
-            <Codespace id="acs">
-              <Xmlns>acs</Xmlns>
-              <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
-              <Description>Service data </Description>
-            </Codespace>
-          </codespaces>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="acs"/>
-          </FrameDefaults>
-          <organisations>
-            <Operator id="acs:ACS" version="1.0">
-              <Name>Autocars superbe</Name>
-              <Locale>
-                <DefaultLanguage>fr</DefaultLanguage>
-              </Locale>
-              <ContactDetails>
-                <Phone>+33-1-675-9876</Phone>
-                <Url>http://autocarssuperbe.fr</Url>
-              </ContactDetails>
-              <OrganisationType/>
-              <OperatorActivities/>
-            </Operator>
-          </organisations>
-        </ResourceFrame>
         <ServiceCalendarFrame id="hde:Calendar@2010" version="1.0">
           <Name>Service Calendar Nov to April 2010  (Compact Coding) </Name>
           <ServiceCalendar id="hde:Calendar@2010" version="any">
@@ -1292,6 +1266,32 @@ The Calendar is shown coded as
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
+        <ResourceFrame id="acs:ACS@Common_resources" version="1.0">
+          <codespaces>
+            <Codespace id="acs">
+              <Xmlns>acs</Xmlns>
+              <XmlnsUrl>http://autocarssuperbe.fr</XmlnsUrl>
+              <Description>Service data </Description>
+            </Codespace>
+          </codespaces>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="acs"/>
+          </FrameDefaults>
+          <organisations>
+            <Operator id="acs:ACS" version="1.0">
+              <Name>Autocars superbe</Name>
+              <Locale>
+                <DefaultLanguage>fr</DefaultLanguage>
+              </Locale>
+              <ContactDetails>
+                <Phone>+33-1-675-9876</Phone>
+                <Url>http://autocarssuperbe.fr</Url>
+              </ContactDetails>
+              <OrganisationType/>
+              <OperatorActivities/>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

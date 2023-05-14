@@ -114,36 +114,32 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey_pattern_ref: Optional[ServiceJourneyPatternRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ServiceJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    service_pattern_ref: Optional[ServicePatternRef] = field(
-        default=None,
-        metadata={
-            "name": "ServicePatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    dead_run_journey_pattern_ref: Optional[DeadRunJourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "DeadRunJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_pattern_ref: Optional[JourneyPatternRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceJourneyPatternRef",
+                    "type": ServiceJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServicePatternRef",
+                    "type": ServicePatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DeadRunJourneyPatternRef",
+                    "type": DeadRunJourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyPatternRef",
+                    "type": JourneyPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     time_demand_type_ref: Optional[TimeDemandTypeRefStructure] = field(
@@ -162,52 +158,50 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    rhythmical_journey_group_ref: Optional[RhythmicalJourneyGroupRef] = field(
+    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "RhythmicalJourneyGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RhythmicalJourneyGroupRef",
+                    "type": RhythmicalJourneyGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadwayJourneyGroupRef",
+                    "type": HeadwayJourneyGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "JourneyFrequencyGroupRef",
+                    "type": JourneyFrequencyGroupRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    headway_journey_group_ref: Optional[HeadwayJourneyGroupRef] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "HeadwayJourneyGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    journey_frequency_group_ref: Optional[JourneyFrequencyGroupRef] = field(
-        default=None,
-        metadata={
-            "name": "JourneyFrequencyGroupRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    compound_train_ref: Optional[CompoundTrainRef] = field(
-        default=None,
-        metadata={
-            "name": "CompoundTrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    train_ref: Optional[TrainRef] = field(
-        default=None,
-        metadata={
-            "name": "TrainRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_type_ref: Optional[VehicleTypeRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
@@ -218,20 +212,22 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref: Optional[TrainBlockRef] = field(
+    train_block_ref_or_block_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "TrainBlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_ref: Optional[BlockRef] = field(
-        default=None,
-        metadata={
-            "name": "BlockRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockRef",
+                    "type": TrainBlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockRef",
+                    "type": BlockRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     course_of_journeys_ref: Optional[CourseOfJourneysRef] = field(
@@ -268,7 +264,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
             "type": "Elements",

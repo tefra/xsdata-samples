@@ -21,20 +21,22 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    whitelist_ref: Optional[WhitelistRef] = field(
+    whitelist_ref_or_blacklist_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "WhitelistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    blacklist_ref: Optional[BlacklistRef] = field(
-        default=None,
-        metadata={
-            "name": "BlacklistRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "WhitelistRef",
+                    "type": WhitelistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlacklistRef",
+                    "type": BlacklistRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     order: Optional[int] = field(

@@ -25,6 +25,9 @@
           </FrameDefaults>
           <PricingParameterSet id="atc:ATOC@Common" version="any">
             <pricingRules>
+              <PricingRule id="atc:route" version="any">
+                <Name>Point to pointicing</Name>
+              </PricingRule>
               <DiscountingRule id="atc:ATOC@Common@rate@student" version="any">
                 <DiscountAsPercentage>0.5</DiscountAsPercentage>
               </DiscountingRule>
@@ -52,9 +55,6 @@
                 <Name>VAT</Name>
                 <DiscountAsPercentage>0.0</DiscountAsPercentage>
               </DiscountingRule>
-              <PricingRule id="atc:route" version="any">
-                <Name>Point to pointicing</Name>
-              </PricingRule>
             </pricingRules>
             <RoundingRef version="any" ref="atc:split"/>
             <roundings>
@@ -5094,6 +5094,32 @@ IThe ticket may be issued anytime up to seven days in advance.</Description>
             </ValidableElement>
           </validableElements>
           <fareProducts>
+            <SaleDiscountRight id="atc:ATOC@Products@Pass@Photocard" version="01">
+              <Name>Rail Photocard</Name>
+              <Description>
+These are obtainable, free of charge, from any staffed railway ticket office. The adult rate photocard (for those aged 16 or over)  is the pink sample shown. All you need to get one of these is a passport size photograph. The child rate photocard (for those aged 5-15 when the term starts) is the yellow sample shown. To get one of these you must present a passport size photograph and a copy of the childs birth certificate to a staffed railway ticket office.
+
+***THE PHOTOCARD NUMBER***
+
+This is combination of numbers and letters in black on the photocard. On the newer photocards this will be shown underneath the barcode (as in the samples shown).
+
+
+***CHILD PHOTOCARDS-MAKE SURE THEY ARE IN DATE***
+Please make sure that your child rate photocard is in date (not past the "Valid Until" date shown on the card). Children who are aged 15 at the start fo the term but then turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)					
+					</Description>
+              <Url>https://public.greenrailtravel.co.uk/scholars/photocard-information.html</Url>
+              <OperatorRef version="any" ref="uic:1170">ATOC</OperatorRef>
+              <ConditionSummary>
+                <FareStructureType>networkFlatFare</FareStructureType>
+                <TariffBasis>flat</TariffBasis>
+                <RequiresPhoto>true</RequiresPhoto>
+                <MustCarry>true</MustCarry>
+                <GivesEntitlement>true</GivesEntitlement>
+              </ConditionSummary>
+              <validableElements>
+                <ValidableElementRef ref="atc:ATOC@Products@Pass@Photocard@holder"/>
+              </validableElements>
+            </SaleDiscountRight>
             <PreassignedFareProduct id="atc:ATOC@Products@Pass@Season" version="01">
               <Name>Season pass - rail</Name>
               <Description>Season pass - paily trip between origin and destination
@@ -5320,32 +5346,6 @@ Southeastern offers discounted 7 day or monthly Season Tickets for travel on ear
               </accessRightsInProduct>
               <ProductType>periodPass</ProductType>
             </PreassignedFareProduct>
-            <SaleDiscountRight id="atc:ATOC@Products@Pass@Photocard" version="01">
-              <Name>Rail Photocard</Name>
-              <Description>
-These are obtainable, free of charge, from any staffed railway ticket office. The adult rate photocard (for those aged 16 or over)  is the pink sample shown. All you need to get one of these is a passport size photograph. The child rate photocard (for those aged 5-15 when the term starts) is the yellow sample shown. To get one of these you must present a passport size photograph and a copy of the childs birth certificate to a staffed railway ticket office.
-
-***THE PHOTOCARD NUMBER***
-
-This is combination of numbers and letters in black on the photocard. On the newer photocards this will be shown underneath the barcode (as in the samples shown).
-
-
-***CHILD PHOTOCARDS-MAKE SURE THEY ARE IN DATE***
-Please make sure that your child rate photocard is in date (not past the "Valid Until" date shown on the card). Children who are aged 15 at the start fo the term but then turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)					
-					</Description>
-              <Url>https://public.greenrailtravel.co.uk/scholars/photocard-information.html</Url>
-              <OperatorRef version="any" ref="uic:1170">ATOC</OperatorRef>
-              <ConditionSummary>
-                <FareStructureType>networkFlatFare</FareStructureType>
-                <TariffBasis>flat</TariffBasis>
-                <RequiresPhoto>true</RequiresPhoto>
-                <MustCarry>true</MustCarry>
-                <GivesEntitlement>true</GivesEntitlement>
-              </ConditionSummary>
-              <validableElements>
-                <ValidableElementRef ref="atc:ATOC@Products@Pass@Photocard@holder"/>
-              </validableElements>
-            </SaleDiscountRight>
           </fareProducts>
           <distributionChannels>
             <DistributionChannel id="atc:gold_card@online" version="01">
@@ -6678,6 +6678,471 @@ A: Yes. You will, however, need to complete a new mature student application for
         <DefaultResponsibilitySetRef version="any" ref="abga:products:LT"/>
       </FrameDefaults>
       <frames>
+        <ResourceFrame id="abga:LE@Operator_Specific_Resources" version="any" responsibilitySetRef="abga:products:LT">
+          <Name>Operator  Specifc  code values</Name>
+          <codespaces>
+            <Codespace id="abga">
+              <Xmlns>abga</Xmlns>
+              <XmlnsUrl>https://www.greateranglia.co.uk/</XmlnsUrl>
+              <Description>Abelio Greater Anglia</Description>
+            </Codespace>
+          </codespaces>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="abga"/>
+            <DefaultDataSourceRef version="any" ref="abga:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="abga:products:LT"/>
+          </FrameDefaults>
+          <dataSources>
+            <DataSource id="abga:example" version="any">
+              <Email>info@www.plusbus.co.uk</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet id="abga:products:LT" version="any">
+              <Name>Greater Anglia products</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="abga:products:LT" version="any">
+                  <DataRoleType/>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="atc:LT"/>
+                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="abga:sales:LT" version="any">
+              <Name>Greater Anglia sales data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="abga:sales:LT" version="any">
+                  <DataRoleType/>
+                  <StakeholderRoleType>Operation</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="atc:LT"/>
+                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="abga:ABGA@Branding" version="any" classOfValues="Branding">
+              <Name>Branding</Name>
+              <values>
+                <Branding id="abga:Greater_Anglia@brand" version="any">
+                  <Name>Greater Anglia</Name>
+                  <Url>https://www.greateranglia.co.uk/logo.png</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+        </ResourceFrame>
+        <ServiceCalendarFrame id="abga:LE@Operator_Specific_Calendar" version="any" responsibilitySetRef="abga:products:LT">
+          <Name>Greater Anglia  Service Calendar</Name>
+          <Description>Defines day types specific to Greater Anglia  eg Suffolk day types</Description>
+          <dayTypes>
+            <FareDayType id="abga:suffolk_school_day" version="any">
+              <Name>Suffolk School    Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
+                  <HolidayTypes>SchoolDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+            <FareDayType id="abga:suffolk_school_holiday" version="any">
+              <Name>Suffolk School    Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
+                  <HolidayTypes>NotSchoolDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+          </dayTypes>
+          <operatingPeriods>
+            <OperatingPeriod id="abga:academic_year@short@2018" version="01">
+              <Name>Academic Year (Short)</Name>
+              <FromDate>2017-08-20T00:00:00</FromDate>
+              <ToDate>2018-05-31T00:00:00</ToDate>
+              <Season>Perennially</Season>
+            </OperatingPeriod>
+            <OperatingPeriod id="abga:academic_year@full@2018" version="01">
+              <Name>Academic Year (full)</Name>
+              <FromDate>2017-08-20T00:00:00</FromDate>
+              <ToDate>2018-07-31T00:00:00</ToDate>
+              <Season>Perennially</Season>
+            </OperatingPeriod>
+            <OperatingPeriod id="abga:term@spring@2018" version="01">
+              <Name>Spring Term</Name>
+              <FromDate>2018-01-01T00:00:00</FromDate>
+              <ToDate>2018-03-31T00:00:00</ToDate>
+              <HolidayType>SchoolDay</HolidayType>
+              <Season>Spring</Season>
+            </OperatingPeriod>
+            <OperatingPeriod id="abga:term@summer@short@2018" version="01">
+              <Name>Summer term (Short)</Name>
+              <FromDate>2018-04-01T00:00:00</FromDate>
+              <ToDate>2018-06-01T00:00:00</ToDate>
+              <HolidayType>SchoolDay</HolidayType>
+              <Season>Summer</Season>
+            </OperatingPeriod>
+            <OperatingPeriod id="abga:term@summer@full@2018" version="01">
+              <Name>Summer term (Full)</Name>
+              <FromDate>2018-04-01T00:00:00</FromDate>
+              <ToDate>2018-07-31T00:00:00</ToDate>
+              <HolidayType>SchoolDay</HolidayType>
+              <Season>Summer</Season>
+            </OperatingPeriod>
+            <OperatingPeriod id="abga:term@autumn@2018" version="01">
+              <Name>Autumn term</Name>
+              <FromDate>2018-08-20T00:00:00</FromDate>
+              <ToDate>2018-12-23T00:00:00</ToDate>
+              <HolidayType>SchoolDay</HolidayType>
+              <Season>Autumn</Season>
+            </OperatingPeriod>
+          </operatingPeriods>
+          <dayTypeAssignments>
+            <DayTypeAssignment id="abga:term@spring@2018" version="01" order="1">
+              <Name>Spring Term</Name>
+              <OperatingPeriodRef version="01" ref="abga:term@spring@2018"/>
+              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="abga:term@summer@2018" version="01" order="1">
+              <Name>summer Term</Name>
+              <OperatingPeriodRef version="01" ref="abga:term@summer@full@2018"/>
+              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
+            </DayTypeAssignment>
+            <DayTypeAssignment id="abga:term@autumn@2018" version="01" order="1">
+              <Name>autumn Term</Name>
+              <OperatingPeriodRef version="01" ref="abga:term@autumn@2018"/>
+              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <ServiceFrame id="abga:LE@Operator_Specific_Network" version="any" responsibilitySetRef="abga:products:LT">
+          <Name>Greater Anglia Routes</Name>
+          <Network id="abga:Network" version="01">
+            <Name>Greater Anglia Network</Name>
+            <members>
+              <LineRef version="01" ref="abga:ln_London-to-Braintree"/>
+              <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
+              <LineRef version="01" ref="abga:ln_London-to-Great-Yarmouth"/>
+              <LineRef version="01" ref="abga:ln_London-to-Kings_Lynn"/>
+              <LineRef version="01" ref="abga:ln_London-to-Lowestoft"/>
+              <LineRef version="01" ref="abga:ln_London-to-Norwich"/>
+              <LineRef version="01" ref="abga:ln_London-to-Sudbury"/>
+              <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
+              <LineRef version="01" ref="abga:ln_Stansted Express"/>
+              <LineRef version="01" ref="abga:ln_Stansted_Airport-to-Ely"/>
+              <LineRef version="01" ref="abga:ln_Ely-to-Norwich"/>
+            </members>
+            <TransportMode>rail</TransportMode>
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="atc:LE">Greater Anglia</OperatorRef>
+            <tariffZones>
+              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:IPSWICH"/>
+            </tariffZones>
+          </Network>
+          <additionalNetworks>
+            <Network id="abga:LW@Network@carnet_routes" version="01">
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Network>
+            <Network id="abga:LE@Network@Rover" version="01">
+              <Name>Greater Anglia Rover Zones</Name>
+              <infoLinks>
+                <InfoLink typeOfInfoLink="map">https://www.greateranglia.co.uk/tickets-fares/discounts/rangers-rovers/anglia-plus</InfoLink>
+              </infoLinks>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+              <tariffZones>
+                <TariffZoneRef version="any" ref="abga:LE@Rover@Norfolk"/>
+                <TariffZoneRef version="any" ref="abga:LE@Rover@Suffolk"/>
+                <TariffZoneRef version="any" ref="abga:LE@Rover@Cambridge"/>
+              </tariffZones>
+            </Network>
+          </additionalNetworks>
+          <lines>
+            <Line id="abga:ln_Ely-to-Norwich" version="01">
+              <Name>Ely to Norwich</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Braintree" version="01">
+              <Name>London to Braintree""</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Felixstowe" version="01">
+              <Name>London to Felixstowe""</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Great-Yarmouth" version="01">
+              <Name>London to Great Yarmouth"</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Kings_Lynn" version="01">
+              <Name>London to King's_Lynn"</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>local</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Lowestoft" version="01">
+              <Name>London to Lowestoft"</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Norwich" version="01">
+              <Name>London to Norwich</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Sudbury" version="01">
+              <Name>London to Sudbury""</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_London-to-Walton_on_the_Naze" version="01">
+              <Name>London to Walton-on-the-Naze"</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_Stansted Express" version="01">
+              <Name>Stansted Express</Name>
+              <Description>London to standsted</Description>
+              <TransportMode>rail</TransportMode>
+              <TransportSubmode>
+                <RailSubmode>airportLinkRail</RailSubmode>
+              </TransportSubmode>
+              <Url>https://www.stanstedexpress.com/</Url>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <LineType>express</LineType>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="abga:ln_Stansted_Airport-to-Ely" version="01">
+              <Name>London to Stansted Airport-to-Ely"</Name>
+              <TransportMode>rail</TransportMode>
+              <OperatorRef version="any" ref="atc:LE"/>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <groupsOfLines>
+            <GroupOfLines id="abga:LE@allow_mobile_app@walk_up" version="01">
+              <Name>Lines allowing mobile tickets</Name>
+              <Description>For which routes can I select m-tickets?
+You can now buy One Way and Day Return tickets up to 10 minutes before your train departure.  
+
+This convenient way to buy tickets is currently available for journeys to and from Tottenham Hale and Bishops Stortford from Roydon, Harlow Mill, Sawbridgeworth, Stansted Mountfitchet, Stansted Airport, Elsenham, Newport, Audley End, Great Chesterford, Whittlesford Parkway and Shelford.  
+ 
+</Description>
+              <members>
+                <LineRef ref="abga:Tottenham_Hale-to-Shelford" versionRef="TODO"/>
+              </members>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </GroupOfLines>
+            <GroupOfLines id="abga:LE@allow_mobile_app@advance" version="01">
+              <Name>Lines allowing mobile tickets</Name>
+              <Description>For which routes can I select m-tickets? 
+In addition Advance Purchase tickets are available on selected routes. Currently, you are able to take advantage of a mobile ticket if you are opting for an Advance ticket on:
+
+ - the Mainline service between Norwich and London Liverpool Street,
+ - connecting stations on branch lines from Great Yarmouth, Cromer/Sheringham, Lowestoft, Felixstowe and Harwich, Clacton on Sea and Walton on Naze, as well as Ely via Cambridge to London.
+</Description>
+              <members>
+                <LineRef version="01" ref="abga:ln_London-to-Norwich"/>
+                <LineRef version="01" ref="abga:ln_London-to-Lowestoft"/>
+                <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
+                <LineRef version="01" ref="abga:ln_London-to-Great-Yarmouth"/>
+                <LineRef ref="abga:ln_London-to-Sheringham" versionRef="TODO"/>
+                <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
+                <LineRef ref="abga:ln_London-to-Clacton_on_Sea" versionRef="TODO"/>
+                <LineRef ref="abga:ln_London-to-Ely" versionRef="TODO"/>
+              </members>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </GroupOfLines>
+          </groupsOfLines>
+          <tariffZones>
+            <TariffZone id="abga:LE@Rover@Norfolk" version="any">
+              <Name>Norfolk Rover Zone</Name>
+              <members>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:NRW">Norwich</FareScheduledStopPointRef>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:GYM">Great Yarmouth</FareScheduledStopPointRef>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:LWT">Lowestoft</FareScheduledStopPointRef>
+              </members>
+            </TariffZone>
+            <TariffZone id="abga:LE@Rover@Suffolk" version="any">
+              <Name>Suffolk Rover Zone</Name>
+              <members>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:BTR">Braintree</FareScheduledStopPointRef>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:IPS">Ipswich</FareScheduledStopPointRef>
+                <FareScheduledStopPointRef version="01" ref="atc:Station:LWT">Lowestoft</FareScheduledStopPointRef>
+              </members>
+            </TariffZone>
+            <TariffZone id="abga:LE@Rover@Cambridge" version="any">
+              <Name>Cambridge Rover Zone</Name>
+              <members>
+                <FareScheduledStopPointRef ref="atc:Station:ELY" versionRef="TODO">Ely</FareScheduledStopPointRef>
+              </members>
+            </TariffZone>
+          </tariffZones>
+        </ServiceFrame>
+        <TimetableFrame id="abga:LE@Operator_Specific_Timetables" version="any" responsibilitySetRef="abga:products:LT">
+          <Name>Services excluded or referenced in fare conditions</Name>
+          <VehicleModes/>
+          <groupsOfServices>
+            <GroupOfServices id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01">
+              <Name>Off-Peak and Off-Peak Day: from London Included services</Name>
+              <Description>Off-Peak and Off-Peak Day: From London: Valid on the following services:
+https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
+09:28 to Cambridge (to Cheshunt and beyond). 
+09:02 to Ipswich (Stratford, 09:09) (to stations on the Sudbury branch only).
+09:18 to Clacton-on-Sea (Stratford, 09:25) (to Wivenhoe and beyond, including to Walton-on-the-Naze)..</Description>
+              <members>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="1">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:CBG">Cambridge</ToPointRef>
+                    <DepartureTime>09:28:00</DepartureTime>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="2">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:IPS">Ipswich</ToPointRef>
+                    <DepartureTime>09:02:00</DepartureTime>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="3">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:CLT">Clacton-on-Sea</ToPointRef>
+                    <DepartureTime>09:18:00</DepartureTime>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+              </members>
+            </GroupOfServices>
+            <GroupOfServices id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01">
+              <Name>Off-Peak and Off-Peak Day: into London Included services</Name>
+              <Description>Off-Peak and Off-Peak Day: To London: Valid on the following services:
+https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
+08:11 from Clacton-on-Sea and intermediate stations to Wivenhoe, including the 08:00 from Walton-on-the-Naze by changing at Thorpe-le-Soken.
+08:28 from Harwich Town and intermediate stations to Mistley.</Description>
+              <members>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="1">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:CLT">Clacton-on-Sea</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:LST">London Liverpool Street</ToPointRef>
+                    <DepartureTime>08:11:00</DepartureTime>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="2">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:HWC">Harwich Town</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:LST">London Liverpool Street</ToPointRef>
+                    <DepartureTime>08:28:00</DepartureTime>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+              </members>
+            </GroupOfServices>
+            <GroupOfServices id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01">
+              <Name>Off-Peak Day: from  London Included services</Name>
+              <Description>Off-Peak Day Return:
+https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
+ Off-Peak period returns are also valid at all times on the following services from Liverpool St:
+
+16:30, 16:32 and 18:30 (to stations on the Felixstowe branch only. Includes Off-Peak Day Travelcards and Off-Peak Singles).
+16:34 (Stratford, 16:42) (to stations on the Braintree branch only).
+18:12 (Stratford, 18:20) (to stations on the Sudbury branch only).
+18:32 (Stratford, 18:40) (to Hatfield Peverel, Kelvedon, Alresford and stations to Walton-on-the-Naze only)..</Description>
+              <members>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="1">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
+                    <DepartureTime>16:30:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="2">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
+                    <DepartureTime>16:32:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="3">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
+                    <DepartureTime>18:30:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="4">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:BTR">Braintree</ToPointRef>
+                    <DepartureTime>18:34:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Braintree"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="5">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:SUY">Sudbury</ToPointRef>
+                    <DepartureTime>18:12:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Sudbury"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="6">
+                  <ServiceDesignator>
+                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
+                    <ToPointRef version="01" ref="atc:Station:WON">Walton-on-the-Naze</ToPointRef>
+                    <DepartureTime>18:32:00</DepartureTime>
+                    <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
+                  </ServiceDesignator>
+                </GroupOfServicesMember>
+              </members>
+            </GroupOfServices>
+          </groupsOfServices>
+        </TimetableFrame>
         <FareFrame id="abga:LE@Operator_Specific_Trip_Products" version="01" responsibilitySetRef="abga:products:LT">
           <Name>Abelio Greater Anglia Specific  Trip Products</Name>
           <Description>Greater Anglia Additional Trip  products and product specialisations</Description>
@@ -7780,471 +8245,6 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
             </SalesOfferPackage>
           </salesOfferPackages>
         </FareFrame>
-        <ServiceFrame id="abga:LE@Operator_Specific_Network" version="any" responsibilitySetRef="abga:products:LT">
-          <Name>Greater Anglia Routes</Name>
-          <Network id="abga:Network" version="01">
-            <Name>Greater Anglia Network</Name>
-            <members>
-              <LineRef version="01" ref="abga:ln_London-to-Braintree"/>
-              <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
-              <LineRef version="01" ref="abga:ln_London-to-Great-Yarmouth"/>
-              <LineRef version="01" ref="abga:ln_London-to-Kings_Lynn"/>
-              <LineRef version="01" ref="abga:ln_London-to-Lowestoft"/>
-              <LineRef version="01" ref="abga:ln_London-to-Norwich"/>
-              <LineRef version="01" ref="abga:ln_London-to-Sudbury"/>
-              <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
-              <LineRef version="01" ref="abga:ln_Stansted Express"/>
-              <LineRef version="01" ref="abga:ln_Stansted_Airport-to-Ely"/>
-              <LineRef version="01" ref="abga:ln_Ely-to-Norwich"/>
-            </members>
-            <TransportMode>rail</TransportMode>
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="atc:LE">Greater Anglia</OperatorRef>
-            <tariffZones>
-              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:IPSWICH"/>
-            </tariffZones>
-          </Network>
-          <additionalNetworks>
-            <Network id="abga:LW@Network@carnet_routes" version="01">
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Network>
-            <Network id="abga:LE@Network@Rover" version="01">
-              <Name>Greater Anglia Rover Zones</Name>
-              <infoLinks>
-                <InfoLink typeOfInfoLink="map">https://www.greateranglia.co.uk/tickets-fares/discounts/rangers-rovers/anglia-plus</InfoLink>
-              </infoLinks>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-              <tariffZones>
-                <TariffZoneRef version="any" ref="abga:LE@Rover@Norfolk"/>
-                <TariffZoneRef version="any" ref="abga:LE@Rover@Suffolk"/>
-                <TariffZoneRef version="any" ref="abga:LE@Rover@Cambridge"/>
-              </tariffZones>
-            </Network>
-          </additionalNetworks>
-          <lines>
-            <Line id="abga:ln_Ely-to-Norwich" version="01">
-              <Name>Ely to Norwich</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>local</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Braintree" version="01">
-              <Name>London to Braintree""</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Felixstowe" version="01">
-              <Name>London to Felixstowe""</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Great-Yarmouth" version="01">
-              <Name>London to Great Yarmouth"</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Kings_Lynn" version="01">
-              <Name>London to King's_Lynn"</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>local</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Lowestoft" version="01">
-              <Name>London to Lowestoft"</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Norwich" version="01">
-              <Name>London to Norwich</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Sudbury" version="01">
-              <Name>London to Sudbury""</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_London-to-Walton_on_the_Naze" version="01">
-              <Name>London to Walton-on-the-Naze"</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_Stansted Express" version="01">
-              <Name>Stansted Express</Name>
-              <Description>London to standsted</Description>
-              <TransportMode>rail</TransportMode>
-              <TransportSubmode>
-                <RailSubmode>airportLinkRail</RailSubmode>
-              </TransportSubmode>
-              <Url>https://www.stanstedexpress.com/</Url>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <LineType>express</LineType>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="abga:ln_Stansted_Airport-to-Ely" version="01">
-              <Name>London to Stansted Airport-to-Ely"</Name>
-              <TransportMode>rail</TransportMode>
-              <OperatorRef version="any" ref="atc:LE"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <groupsOfLines>
-            <GroupOfLines id="abga:LE@allow_mobile_app@walk_up" version="01">
-              <Name>Lines allowing mobile tickets</Name>
-              <Description>For which routes can I select m-tickets?
-You can now buy One Way and Day Return tickets up to 10 minutes before your train departure.  
-
-This convenient way to buy tickets is currently available for journeys to and from Tottenham Hale and Bishops Stortford from Roydon, Harlow Mill, Sawbridgeworth, Stansted Mountfitchet, Stansted Airport, Elsenham, Newport, Audley End, Great Chesterford, Whittlesford Parkway and Shelford.  
- 
-</Description>
-              <members>
-                <LineRef ref="abga:Tottenham_Hale-to-Shelford" versionRef="TODO"/>
-              </members>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </GroupOfLines>
-            <GroupOfLines id="abga:LE@allow_mobile_app@advance" version="01">
-              <Name>Lines allowing mobile tickets</Name>
-              <Description>For which routes can I select m-tickets? 
-In addition Advance Purchase tickets are available on selected routes. Currently, you are able to take advantage of a mobile ticket if you are opting for an Advance ticket on:
-
- - the Mainline service between Norwich and London Liverpool Street,
- - connecting stations on branch lines from Great Yarmouth, Cromer/Sheringham, Lowestoft, Felixstowe and Harwich, Clacton on Sea and Walton on Naze, as well as Ely via Cambridge to London.
-</Description>
-              <members>
-                <LineRef version="01" ref="abga:ln_London-to-Norwich"/>
-                <LineRef version="01" ref="abga:ln_London-to-Lowestoft"/>
-                <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
-                <LineRef version="01" ref="abga:ln_London-to-Great-Yarmouth"/>
-                <LineRef ref="abga:ln_London-to-Sheringham" versionRef="TODO"/>
-                <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
-                <LineRef ref="abga:ln_London-to-Clacton_on_Sea" versionRef="TODO"/>
-                <LineRef ref="abga:ln_London-to-Ely" versionRef="TODO"/>
-              </members>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </GroupOfLines>
-          </groupsOfLines>
-          <tariffZones>
-            <TariffZone id="abga:LE@Rover@Norfolk" version="any">
-              <Name>Norfolk Rover Zone</Name>
-              <members>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:NRW">Norwich</FareScheduledStopPointRef>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:GYM">Great Yarmouth</FareScheduledStopPointRef>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:LWT">Lowestoft</FareScheduledStopPointRef>
-              </members>
-            </TariffZone>
-            <TariffZone id="abga:LE@Rover@Suffolk" version="any">
-              <Name>Suffolk Rover Zone</Name>
-              <members>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:BTR">Braintree</FareScheduledStopPointRef>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:IPS">Ipswich</FareScheduledStopPointRef>
-                <FareScheduledStopPointRef version="01" ref="atc:Station:LWT">Lowestoft</FareScheduledStopPointRef>
-              </members>
-            </TariffZone>
-            <TariffZone id="abga:LE@Rover@Cambridge" version="any">
-              <Name>Cambridge Rover Zone</Name>
-              <members>
-                <FareScheduledStopPointRef ref="atc:Station:ELY" versionRef="TODO">Ely</FareScheduledStopPointRef>
-              </members>
-            </TariffZone>
-          </tariffZones>
-        </ServiceFrame>
-        <TimetableFrame id="abga:LE@Operator_Specific_Timetables" version="any" responsibilitySetRef="abga:products:LT">
-          <Name>Services excluded or referenced in fare conditions</Name>
-          <VehicleModes/>
-          <groupsOfServices>
-            <GroupOfServices id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01">
-              <Name>Off-Peak and Off-Peak Day: from London Included services</Name>
-              <Description>Off-Peak and Off-Peak Day: From London: Valid on the following services:
-https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
-09:28 to Cambridge (to Cheshunt and beyond). 
-09:02 to Ipswich (Stratford, 09:09) (to stations on the Sudbury branch only).
-09:18 to Clacton-on-Sea (Stratford, 09:25) (to Wivenhoe and beyond, including to Walton-on-the-Naze)..</Description>
-              <members>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="1">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:CBG">Cambridge</ToPointRef>
-                    <DepartureTime>09:28:00</DepartureTime>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="2">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:IPS">Ipswich</ToPointRef>
-                    <DepartureTime>09:02:00</DepartureTime>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@inclusions" version="01" order="3">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:CLT">Clacton-on-Sea</ToPointRef>
-                    <DepartureTime>09:18:00</DepartureTime>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-              </members>
-            </GroupOfServices>
-            <GroupOfServices id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01">
-              <Name>Off-Peak and Off-Peak Day: into London Included services</Name>
-              <Description>Off-Peak and Off-Peak Day: To London: Valid on the following services:
-https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
-08:11 from Clacton-on-Sea and intermediate stations to Wivenhoe, including the 08:00 from Walton-on-the-Naze by changing at Thorpe-le-Soken.
-08:28 from Harwich Town and intermediate stations to Mistley.</Description>
-              <members>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="1">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:CLT">Clacton-on-Sea</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:LST">London Liverpool Street</ToPointRef>
-                    <DepartureTime>08:11:00</DepartureTime>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@arriving_into@inclusions" version="01" order="2">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:HWC">Harwich Town</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:LST">London Liverpool Street</ToPointRef>
-                    <DepartureTime>08:28:00</DepartureTime>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-              </members>
-            </GroupOfServices>
-            <GroupOfServices id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01">
-              <Name>Off-Peak Day: from  London Included services</Name>
-              <Description>Off-Peak Day Return:
-https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-off-peak-tickets
- Off-Peak period returns are also valid at all times on the following services from Liverpool St:
-
-16:30, 16:32 and 18:30 (to stations on the Felixstowe branch only. Includes Off-Peak Day Travelcards and Off-Peak Singles).
-16:34 (Stratford, 16:42) (to stations on the Braintree branch only).
-18:12 (Stratford, 18:20) (to stations on the Sudbury branch only).
-18:32 (Stratford, 18:40) (to Hatfield Peverel, Kelvedon, Alresford and stations to Walton-on-the-Naze only)..</Description>
-              <members>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="1">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
-                    <DepartureTime>16:30:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="2">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
-                    <DepartureTime>16:32:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="3">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:FLX">Felixstowe</ToPointRef>
-                    <DepartureTime>18:30:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Felixstowe"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="4">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:BTR">Braintree</ToPointRef>
-                    <DepartureTime>18:34:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Braintree"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="5">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:SUY">Sudbury</ToPointRef>
-                    <DepartureTime>18:12:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Sudbury"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-                <GroupOfServicesMember id="abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions" version="01" order="6">
-                  <ServiceDesignator>
-                    <FromPointRef version="01" ref="atc:Station:LST">London Liverpool Street</FromPointRef>
-                    <ToPointRef version="01" ref="atc:Station:WON">Walton-on-the-Naze</ToPointRef>
-                    <DepartureTime>18:32:00</DepartureTime>
-                    <LineRef version="01" ref="abga:ln_London-to-Walton_on_the_Naze"/>
-                  </ServiceDesignator>
-                </GroupOfServicesMember>
-              </members>
-            </GroupOfServices>
-          </groupsOfServices>
-        </TimetableFrame>
-        <ResourceFrame id="abga:LE@Operator_Specific_Resources" version="any" responsibilitySetRef="abga:products:LT">
-          <Name>Operator  Specifc  code values</Name>
-          <codespaces>
-            <Codespace id="abga">
-              <Xmlns>abga</Xmlns>
-              <XmlnsUrl>https://www.greateranglia.co.uk/</XmlnsUrl>
-              <Description>Abelio Greater Anglia</Description>
-            </Codespace>
-          </codespaces>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="abga"/>
-            <DefaultDataSourceRef version="any" ref="abga:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="abga:products:LT"/>
-          </FrameDefaults>
-          <dataSources>
-            <DataSource id="abga:example" version="any">
-              <Email>info@www.plusbus.co.uk</Email>
-            </DataSource>
-          </dataSources>
-          <responsibilitySets>
-            <ResponsibilitySet id="abga:products:LT" version="any">
-              <Name>Greater Anglia products</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="abga:products:LT" version="any">
-                  <DataRoleType/>
-                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="atc:LT"/>
-                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="abga:sales:LT" version="any">
-              <Name>Greater Anglia sales data</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="abga:sales:LT" version="any">
-                  <DataRoleType/>
-                  <StakeholderRoleType>Operation</StakeholderRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="atc:LT"/>
-                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-          </responsibilitySets>
-          <typesOfValue>
-            <ValueSet id="abga:ABGA@Branding" version="any" classOfValues="Branding">
-              <Name>Branding</Name>
-              <values>
-                <Branding id="abga:Greater_Anglia@brand" version="any">
-                  <Name>Greater Anglia</Name>
-                  <Url>https://www.greateranglia.co.uk/logo.png</Url>
-                </Branding>
-              </values>
-            </ValueSet>
-          </typesOfValue>
-        </ResourceFrame>
-        <ServiceCalendarFrame id="abga:LE@Operator_Specific_Calendar" version="any" responsibilitySetRef="abga:products:LT">
-          <Name>Greater Anglia  Service Calendar</Name>
-          <Description>Defines day types specific to Greater Anglia  eg Suffolk day types</Description>
-          <dayTypes>
-            <FareDayType id="abga:suffolk_school_day" version="any">
-              <Name>Suffolk School    Day</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
-                  <HolidayTypes>SchoolDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-            <FareDayType id="abga:suffolk_school_holiday" version="any">
-              <Name>Suffolk School    Holiday</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
-                  <HolidayTypes>NotSchoolDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-          </dayTypes>
-          <operatingPeriods>
-            <OperatingPeriod id="abga:academic_year@short@2018" version="01">
-              <Name>Academic Year (Short)</Name>
-              <FromDate>2017-08-20T00:00:00</FromDate>
-              <ToDate>2018-05-31T00:00:00</ToDate>
-              <Season>Perennially</Season>
-            </OperatingPeriod>
-            <OperatingPeriod id="abga:academic_year@full@2018" version="01">
-              <Name>Academic Year (full)</Name>
-              <FromDate>2017-08-20T00:00:00</FromDate>
-              <ToDate>2018-07-31T00:00:00</ToDate>
-              <Season>Perennially</Season>
-            </OperatingPeriod>
-            <OperatingPeriod id="abga:term@spring@2018" version="01">
-              <Name>Spring Term</Name>
-              <FromDate>2018-01-01T00:00:00</FromDate>
-              <ToDate>2018-03-31T00:00:00</ToDate>
-              <HolidayType>SchoolDay</HolidayType>
-              <Season>Spring</Season>
-            </OperatingPeriod>
-            <OperatingPeriod id="abga:term@summer@short@2018" version="01">
-              <Name>Summer term (Short)</Name>
-              <FromDate>2018-04-01T00:00:00</FromDate>
-              <ToDate>2018-06-01T00:00:00</ToDate>
-              <HolidayType>SchoolDay</HolidayType>
-              <Season>Summer</Season>
-            </OperatingPeriod>
-            <OperatingPeriod id="abga:term@summer@full@2018" version="01">
-              <Name>Summer term (Full)</Name>
-              <FromDate>2018-04-01T00:00:00</FromDate>
-              <ToDate>2018-07-31T00:00:00</ToDate>
-              <HolidayType>SchoolDay</HolidayType>
-              <Season>Summer</Season>
-            </OperatingPeriod>
-            <OperatingPeriod id="abga:term@autumn@2018" version="01">
-              <Name>Autumn term</Name>
-              <FromDate>2018-08-20T00:00:00</FromDate>
-              <ToDate>2018-12-23T00:00:00</ToDate>
-              <HolidayType>SchoolDay</HolidayType>
-              <Season>Autumn</Season>
-            </OperatingPeriod>
-          </operatingPeriods>
-          <dayTypeAssignments>
-            <DayTypeAssignment id="abga:term@spring@2018" version="01" order="1">
-              <Name>Spring Term</Name>
-              <OperatingPeriodRef version="01" ref="abga:term@spring@2018"/>
-              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="abga:term@summer@2018" version="01" order="1">
-              <Name>summer Term</Name>
-              <OperatingPeriodRef version="01" ref="abga:term@summer@full@2018"/>
-              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
-            </DayTypeAssignment>
-            <DayTypeAssignment id="abga:term@autumn@2018" version="01" order="1">
-              <Name>autumn Term</Name>
-              <OperatingPeriodRef version="01" ref="abga:term@autumn@2018"/>
-              <FareDayTypeRef version="any" ref="abga:suffolk_school_day"/>
-            </DayTypeAssignment>
-          </dayTypeAssignments>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
     <CompositeFrame id="jsp:JSP@PlusBus" version="any" responsibilitySetRef="jsp:products:JSP">
@@ -8270,6 +8270,363 @@ https://www.greateranglia.co.uk/tickets-fares/daily-tickets/off-peak-and-super-o
         <DefaultResponsibilitySetRef version="any" ref="jsp:products:JSP"/>
       </FrameDefaults>
       <frames>
+        <ResourceFrame id="jsp:JSP@PlusBus@Common_Resources" version="any" responsibilitySetRef="jsp:products:JSP">
+          <Name>Plus Bus  Specific  code values</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="jsp_data"/>
+            <DefaultDataSourceRef version="any" ref="jsp:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="jsp:products:JSP"/>
+          </FrameDefaults>
+          <dataSources>
+            <DataSource id="jsp:example" version="any">
+              <Email>info@www.plusbus.co.uk</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet id="jsp:products:JSP" version="any">
+              <Name>Plus Bus Products</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="jsp:products" version="any">
+                  <DataRoleType/>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="jsp:JSP"/>
+                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="nptg:tariff_zones" version="any">
+              <Name>Plus Bus Tarff Zones</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="nptg:tariff_zones" version="any">
+                  <DataRoleType/>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="nptg:DfT"/>
+                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="nptg:TypeOfZone" version="any" classOfValues="TypeOfZone">
+              <Name>Types of Plusbus Zone</Name>
+              <values>
+                <TypeOfZone id="nptg:PlusBus_zone" version="any">
+                  <Name>Plusbus Zone</Name>
+                </TypeOfZone>
+                <TypeOfZone id="nptg:PlusBus_region" version="any">
+                  <Name>Plusbus Region</Name>
+                </TypeOfZone>
+              </values>
+            </ValueSet>
+            <ValueSet id="jsp:Branding" version="any" classOfValues="Branding">
+              <Name>Branding</Name>
+              <values>
+                <Branding id="jsp:PlusBus@brand" version="any">
+                  <Name>PlusBus</Name>
+                  <Url>http://www.plusbus.info/logo.png</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator id="jsp:JSP" version="any">
+              <PublicCode>JSP</PublicCode>
+              <CompanyNumber>07861414</CompanyNumber>
+              <Name>Journey Solutions partnership</Name>
+              <LegalName>Journey Solutions partnership</LegalName>
+              <OrganisationType>retailConsortium</OrganisationType>
+              <PrimaryMode>bus</PrimaryMode>
+              <OperatorActivities>passenger</OperatorActivities>
+            </Operator>
+            <GeneralOrganisation id="nptg:DfT" version="any">
+              <Name>Department Of Transport</Name>
+              <Description>Responsible for NPTG data including</Description>
+              <OrganisationType/>
+            </GeneralOrganisation>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame id="nptg:JSP@PlusBus@Zones" version="any" responsibilitySetRef="nptg:tariff_zones">
+          <Name>Plusbus zones</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="jsp_data"/>
+            <DefaultDataSourceRef version="any" ref="jsp:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="nptg:tariff_zones"/>
+          </FrameDefaults>
+          <Network id="nptg:JSP@PlusBus@Zones@network" version="01">
+            <Name>Plusbus Network</Name>
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="jsp:JSP"/>
+            <tariffZones>
+              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:IPSWICH"/>
+              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:NORWICH"/>
+              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:LOWESTOFT"/>
+            </tariffZones>
+          </Network>
+          <additionalNetworks>
+            <Network id="nptg:JSP@PlusBus@Zones@network@excluded" version="01" responsibilitySetRef="jsp:products:JSP">
+              <PaymentMethods/>
+              <PurchaseMoment/>
+              <groupsOfLines>
+                <GroupOfLines id="jsp:excluded_plusbus" version="01">
+                  <Name>routes excluded from Plusbus</Name>
+                  <infoLinks>
+                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/norwich</InfoLink>
+                    <InfoLink typeOfInfoLink="info">https://www.merseytravel.gov.uk/Tickets/compare-tickets/Pages/Plusbus.aspx</InfoLink>
+                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/shenfield</InfoLink>
+                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/meadowhl</InfoLink>
+                  </infoLinks>
+                  <members>
+                    <LineRef ref="jsp:Norwich@100">Norwich route 100</LineRef>
+                    <LineRef ref="jsp:Mersey@500">Arriva: route 500 (City Centre - John Lennon Airport shuttle service).</LineRef>
+                    <LineRef ref="jsp:York@197">197 York Race Day</LineRef>
+                    <LineRef ref="jsp:York@TransDev_Sighseeing">Transdev York  City Sighseeing tour</LineRef>
+                    <LineRef ref="jsp:Sheffield@101">Sheffield Route 101</LineRef>
+                  </members>
+                  <TransportMode>bus</TransportMode>
+                  <GroupOfLinesType>marketing</GroupOfLinesType>
+                  <PaymentMethods/>
+                  <PurchaseMoment/>
+                </GroupOfLines>
+                <GroupOfLines id="jsp:excluded_plusbus_night" version="01">
+                  <Name>routes excluded from Plusbus after midnight</Name>
+                  <infoLinks>
+                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/norwich</InfoLink>
+                  </infoLinks>
+                  <members>
+                    <LineRef ref="jsp:Norwich@25">Norwich route 25 after midnight</LineRef>
+                    <LineRef ref="jsp:Brentwood@N1">Night Bus N1</LineRef>
+                    <LineRef ref="jsp:Brentwood@N2">Night Bus N2</LineRef>
+                    <LineRef ref="jsp:Sheffield@Night">Services departing after mid-night (2400hrs and up to 0501hrs)</LineRef>
+                  </members>
+                  <TransportMode>bus</TransportMode>
+                  <TransportSubmode>
+                    <BusSubmode>nightBus</BusSubmode>
+                  </TransportSubmode>
+                  <GroupOfLinesType>marketing</GroupOfLinesType>
+                  <PaymentMethods/>
+                  <PurchaseMoment/>
+                </GroupOfLines>
+                <GroupOfLines id="jsp:excluded_plusbus_school" version="01">
+                  <Name>routes excluded from Plusbus because school services</Name>
+                  <infoLinks>
+                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/meadowhl</InfoLink>
+                  </infoLinks>
+                  <members>
+                    <LineRef ref="jsp:Sheffield@S">schools services ('S' prefixed</LineRef>
+                  </members>
+                  <TransportMode>bus</TransportMode>
+                  <TransportSubmode>
+                    <BusSubmode>schoolBus</BusSubmode>
+                  </TransportSubmode>
+                  <GroupOfLinesType>marketing</GroupOfLinesType>
+                  <PaymentMethods/>
+                  <PurchaseMoment/>
+                </GroupOfLines>
+              </groupsOfLines>
+            </Network>
+          </additionalNetworks>
+          <tariffZones>
+            <TariffZone id="nptg:PlusBus:All_Zones" version="01">
+              <Name lang="en">All Zones</Name>
+              <PrivateCode>PlusBus</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
+              </types>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-UKM"/>
+                </TopographicProjection>
+              </projections>
+            </TariffZone>
+            <TariffZone id="nptg:PlusBus:South_East_Region" version="01">
+              <Name lang="en">South East Region</Name>
+              <PrivateCode>SE</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
+              </types>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-ENG"/>
+                </TopographicProjection>
+              </projections>
+              <ParentZoneRef version="01" ref="nptg:PlusBus:All_Zones"/>
+            </TariffZone>
+            <TariffZone id="nptg:PlusBus:Outside_South_East_Region" version="01">
+              <Name lang="en">South East Region</Name>
+              <PrivateCode>SE</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
+              </types>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-ENG"/>
+                </TopographicProjection>
+              </projections>
+              <ParentZoneRef version="01" ref="nptg:PlusBus:All_Zones"/>
+            </TariffZone>
+            <TariffZone id="nptg:PlusBus_zone:IPSWICH" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
+              <Name lang="en">IPSWICH</Name>
+              <PrivateCode>IPSWICH</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
+              </types>
+              <gml:Polygon gml:id="IPSWICH" srsName="UKOS">
+                <gml:exterior>
+                  <gml:LinearRing>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
+                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
+                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                  </gml:LinearRing>
+                </gml:exterior>
+              </gml:Polygon>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
+                </TopographicProjection>
+              </projections>
+              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
+            </TariffZone>
+            <TariffZone id="nptg:PlusBus_zone:NORWICH" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
+              <Name lang="en">NORWICH</Name>
+              <PrivateCode>NORWICH</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
+              </types>
+              <gml:Polygon gml:id="NORWICH" srsName="UKOS">
+                <gml:exterior>
+                  <gml:LinearRing>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
+                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
+                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                  </gml:LinearRing>
+                </gml:exterior>
+              </gml:Polygon>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-NFK">Norfolk</CountryRef>
+                </TopographicProjection>
+              </projections>
+              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
+            </TariffZone>
+            <TariffZone id="nptg:PlusBus_zone:LOWESTOFT" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
+              <Name lang="en">LOWESTOFT</Name>
+              <PrivateCode>LOWESTOFT</PrivateCode>
+              <types>
+                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
+              </types>
+              <gml:Polygon gml:id="LOWESTOFT" srsName="UKOS">
+                <gml:exterior>
+                  <gml:LinearRing>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
+                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
+                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
+                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
+                  </gml:LinearRing>
+                </gml:exterior>
+              </gml:Polygon>
+              <projections>
+                <TopographicProjection>
+                  <CountryRef ref="uk" refPrincipality="GB-NFK">Norfolk</CountryRef>
+                </TopographicProjection>
+              </projections>
+              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
+            </TariffZone>
+          </tariffZones>
+        </ServiceFrame>
+        <ServiceCalendarFrame id="jsp:JSP@PlusBus@Service_Calendar" version="any" responsibilitySetRef="jsp:products:JSP">
+          <Name>Plusbus  Specific  Calendar</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="jsp_data"/>
+            <DefaultDataSourceRef version="any" ref="jsp:example"/>
+            <DefaultResponsibilitySetRef version="any" ref="jsp:products:JSP"/>
+          </FrameDefaults>
+          <contentValidityConditions>
+            <AvailabilityCondition id="jsp:anytime@anyday" version="01">
+              <Name>Any time</Name>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <FareDayTypeRef version="any" ref="jsp:everyday"/>
+              </dayTypes>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="jsp:working_day_after_9.30" version="01">
+              <Name>Any time weekends and public holidays</Name>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <FareDayTypeRef version="any" ref="atc:weekend"/>
+                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
+                <FareDayTypeRef version="any" ref="jsp:working_day_after_9.30"/>
+              </dayTypes>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="jsp:working_day_after_10.00" version="01">
+              <Name>Any time weekends and public holidays after 10</Name>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <FareDayTypeRef version="any" ref="atc:weekend"/>
+                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
+                <FareDayTypeRef version="any" ref="jsp:working_day_after_10.00"/>
+              </dayTypes>
+            </AvailabilityCondition>
+            <AvailabilityCondition id="jsp:working_day_offpeak" version="01">
+              <Name>Any time weekends and public holidays after 10</Name>
+              <IsAvailable>true</IsAvailable>
+              <dayTypes>
+                <FareDayTypeRef version="any" ref="atc:weekend"/>
+                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
+                <FareDayTypeRef version="any" ref="jsp:working_day_after_10.00"/>
+              </dayTypes>
+            </AvailabilityCondition>
+          </contentValidityConditions>
+          <dayTypes>
+            <FareDayType id="jsp:everyday" version="any">
+              <Name>Every day</Name>
+              <Description>ANy time</Description>
+              <EarliestTime>00:00:00</EarliestTime>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Everyday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>AnyDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+            <FareDayType id="jsp:working_day_after_9.30" version="any">
+              <Name>Working day</Name>
+              <Description>After 9.30 end at 4.30 next day.</Description>
+              <EarliestTime>09:30:00</EarliestTime>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+            <FareDayType id="jsp:working_day_after_10.00" version="any">
+              <Name>Working day</Name>
+              <Description>After 9.30 end at 4.30 next day.</Description>
+              <EarliestTime>10:10:00</EarliestTime>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek/>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+          </dayTypes>
+        </ServiceCalendarFrame>
         <FareFrame id="jsp:JSP@Products@Pass@Plusbus" version="any" responsibilitySetRef="jsp:products:JSP">
           <Name>Plusbus 1 day add_on</Name>
           <FrameDefaults>
@@ -9068,363 +9425,6 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
             </GroupOfSalesOfferPackages>
           </groupsOfSalesOfferPackages>
         </FareFrame>
-        <ServiceFrame id="nptg:JSP@PlusBus@Zones" version="any" responsibilitySetRef="nptg:tariff_zones">
-          <Name>Plusbus zones</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="jsp_data"/>
-            <DefaultDataSourceRef version="any" ref="jsp:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="nptg:tariff_zones"/>
-          </FrameDefaults>
-          <Network id="nptg:JSP@PlusBus@Zones@network" version="01">
-            <Name>Plusbus Network</Name>
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="jsp:JSP"/>
-            <tariffZones>
-              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:IPSWICH"/>
-              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:NORWICH"/>
-              <TariffZoneRef version="01" ref="nptg:PlusBus_zone:LOWESTOFT"/>
-            </tariffZones>
-          </Network>
-          <additionalNetworks>
-            <Network id="nptg:JSP@PlusBus@Zones@network@excluded" version="01" responsibilitySetRef="jsp:products:JSP">
-              <PaymentMethods/>
-              <PurchaseMoment/>
-              <groupsOfLines>
-                <GroupOfLines id="jsp:excluded_plusbus" version="01">
-                  <Name>routes excluded from Plusbus</Name>
-                  <infoLinks>
-                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/norwich</InfoLink>
-                    <InfoLink typeOfInfoLink="info">https://www.merseytravel.gov.uk/Tickets/compare-tickets/Pages/Plusbus.aspx</InfoLink>
-                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/shenfield</InfoLink>
-                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/meadowhl</InfoLink>
-                  </infoLinks>
-                  <members>
-                    <LineRef ref="jsp:Norwich@100">Norwich route 100</LineRef>
-                    <LineRef ref="jsp:Mersey@500">Arriva: route 500 (City Centre - John Lennon Airport shuttle service).</LineRef>
-                    <LineRef ref="jsp:York@197">197 York Race Day</LineRef>
-                    <LineRef ref="jsp:York@TransDev_Sighseeing">Transdev York  City Sighseeing tour</LineRef>
-                    <LineRef ref="jsp:Sheffield@101">Sheffield Route 101</LineRef>
-                  </members>
-                  <TransportMode>bus</TransportMode>
-                  <GroupOfLinesType>marketing</GroupOfLinesType>
-                  <PaymentMethods/>
-                  <PurchaseMoment/>
-                </GroupOfLines>
-                <GroupOfLines id="jsp:excluded_plusbus_night" version="01">
-                  <Name>routes excluded from Plusbus after midnight</Name>
-                  <infoLinks>
-                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/norwich</InfoLink>
-                  </infoLinks>
-                  <members>
-                    <LineRef ref="jsp:Norwich@25">Norwich route 25 after midnight</LineRef>
-                    <LineRef ref="jsp:Brentwood@N1">Night Bus N1</LineRef>
-                    <LineRef ref="jsp:Brentwood@N2">Night Bus N2</LineRef>
-                    <LineRef ref="jsp:Sheffield@Night">Services departing after mid-night (2400hrs and up to 0501hrs)</LineRef>
-                  </members>
-                  <TransportMode>bus</TransportMode>
-                  <TransportSubmode>
-                    <BusSubmode>nightBus</BusSubmode>
-                  </TransportSubmode>
-                  <GroupOfLinesType>marketing</GroupOfLinesType>
-                  <PaymentMethods/>
-                  <PurchaseMoment/>
-                </GroupOfLines>
-                <GroupOfLines id="jsp:excluded_plusbus_school" version="01">
-                  <Name>routes excluded from Plusbus because school services</Name>
-                  <infoLinks>
-                    <InfoLink typeOfInfoLink="info">http://www.plusbus.info/meadowhl</InfoLink>
-                  </infoLinks>
-                  <members>
-                    <LineRef ref="jsp:Sheffield@S">schools services ('S' prefixed</LineRef>
-                  </members>
-                  <TransportMode>bus</TransportMode>
-                  <TransportSubmode>
-                    <BusSubmode>schoolBus</BusSubmode>
-                  </TransportSubmode>
-                  <GroupOfLinesType>marketing</GroupOfLinesType>
-                  <PaymentMethods/>
-                  <PurchaseMoment/>
-                </GroupOfLines>
-              </groupsOfLines>
-            </Network>
-          </additionalNetworks>
-          <tariffZones>
-            <TariffZone id="nptg:PlusBus:All_Zones" version="01">
-              <Name lang="en">All Zones</Name>
-              <PrivateCode>PlusBus</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
-              </types>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-UKM"/>
-                </TopographicProjection>
-              </projections>
-            </TariffZone>
-            <TariffZone id="nptg:PlusBus:South_East_Region" version="01">
-              <Name lang="en">South East Region</Name>
-              <PrivateCode>SE</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
-              </types>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-ENG"/>
-                </TopographicProjection>
-              </projections>
-              <ParentZoneRef version="01" ref="nptg:PlusBus:All_Zones"/>
-            </TariffZone>
-            <TariffZone id="nptg:PlusBus:Outside_South_East_Region" version="01">
-              <Name lang="en">South East Region</Name>
-              <PrivateCode>SE</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_region"/>
-              </types>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-ENG"/>
-                </TopographicProjection>
-              </projections>
-              <ParentZoneRef version="01" ref="nptg:PlusBus:All_Zones"/>
-            </TariffZone>
-            <TariffZone id="nptg:PlusBus_zone:IPSWICH" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
-              <Name lang="en">IPSWICH</Name>
-              <PrivateCode>IPSWICH</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
-              </types>
-              <gml:Polygon gml:id="IPSWICH" srsName="UKOS">
-                <gml:exterior>
-                  <gml:LinearRing>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
-                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
-                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                  </gml:LinearRing>
-                </gml:exterior>
-              </gml:Polygon>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-SFK">Suffolk</CountryRef>
-                </TopographicProjection>
-              </projections>
-              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
-            </TariffZone>
-            <TariffZone id="nptg:PlusBus_zone:NORWICH" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
-              <Name lang="en">NORWICH</Name>
-              <PrivateCode>NORWICH</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
-              </types>
-              <gml:Polygon gml:id="NORWICH" srsName="UKOS">
-                <gml:exterior>
-                  <gml:LinearRing>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
-                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
-                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                  </gml:LinearRing>
-                </gml:exterior>
-              </gml:Polygon>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-NFK">Norfolk</CountryRef>
-                </TopographicProjection>
-              </projections>
-              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
-            </TariffZone>
-            <TariffZone id="nptg:PlusBus_zone:LOWESTOFT" created="2013-10-11T12:27:13" changed="2013-10-11T12:27:13" version="01">
-              <Name lang="en">LOWESTOFT</Name>
-              <PrivateCode>LOWESTOFT</PrivateCode>
-              <types>
-                <TypeOfZoneRef version="any" ref="nptg:PlusBus_zone"/>
-              </types>
-              <gml:Polygon gml:id="LOWESTOFT" srsName="UKOS">
-                <gml:exterior>
-                  <gml:LinearRing>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815255.0</gml:pos>
-                    <gml:pos srsName="UKOS">389200.0 815272.0</gml:pos>
-                    <gml:pos srsName="UKOS">389478.0 815222.0</gml:pos>
-                    <gml:pos srsName="UKOS">388908.0 815257.0</gml:pos>
-                  </gml:LinearRing>
-                </gml:exterior>
-              </gml:Polygon>
-              <projections>
-                <TopographicProjection>
-                  <CountryRef ref="uk" refPrincipality="GB-NFK">Norfolk</CountryRef>
-                </TopographicProjection>
-              </projections>
-              <ParentZoneRef version="01" ref="nptg:PlusBus:South_East_Region"/>
-            </TariffZone>
-          </tariffZones>
-        </ServiceFrame>
-        <ResourceFrame id="jsp:JSP@PlusBus@Common_Resources" version="any" responsibilitySetRef="jsp:products:JSP">
-          <Name>Plus Bus  Specific  code values</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="jsp_data"/>
-            <DefaultDataSourceRef version="any" ref="jsp:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="jsp:products:JSP"/>
-          </FrameDefaults>
-          <dataSources>
-            <DataSource id="jsp:example" version="any">
-              <Email>info@www.plusbus.co.uk</Email>
-            </DataSource>
-          </dataSources>
-          <responsibilitySets>
-            <ResponsibilitySet id="jsp:products:JSP" version="any">
-              <Name>Plus Bus Products</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="jsp:products" version="any">
-                  <DataRoleType/>
-                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="jsp:JSP"/>
-                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-            <ResponsibilitySet id="nptg:tariff_zones" version="any">
-              <Name>Plus Bus Tarff Zones</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="nptg:tariff_zones" version="any">
-                  <DataRoleType/>
-                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="nptg:DfT"/>
-                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-          </responsibilitySets>
-          <typesOfValue>
-            <ValueSet id="nptg:TypeOfZone" version="any" classOfValues="TypeOfZone">
-              <Name>Types of Plusbus Zone</Name>
-              <values>
-                <TypeOfZone id="nptg:PlusBus_zone" version="any">
-                  <Name>Plusbus Zone</Name>
-                </TypeOfZone>
-                <TypeOfZone id="nptg:PlusBus_region" version="any">
-                  <Name>Plusbus Region</Name>
-                </TypeOfZone>
-              </values>
-            </ValueSet>
-            <ValueSet id="jsp:Branding" version="any" classOfValues="Branding">
-              <Name>Branding</Name>
-              <values>
-                <Branding id="jsp:PlusBus@brand" version="any">
-                  <Name>PlusBus</Name>
-                  <Url>http://www.plusbus.info/logo.png</Url>
-                </Branding>
-              </values>
-            </ValueSet>
-          </typesOfValue>
-          <organisations>
-            <Operator id="jsp:JSP" version="any">
-              <PublicCode>JSP</PublicCode>
-              <CompanyNumber>07861414</CompanyNumber>
-              <Name>Journey Solutions partnership</Name>
-              <LegalName>Journey Solutions partnership</LegalName>
-              <OrganisationType>retailConsortium</OrganisationType>
-              <PrimaryMode>bus</PrimaryMode>
-              <OperatorActivities>passenger</OperatorActivities>
-            </Operator>
-            <GeneralOrganisation id="nptg:DfT" version="any">
-              <Name>Department Of Transport</Name>
-              <Description>Responsible for NPTG data including</Description>
-              <OrganisationType/>
-            </GeneralOrganisation>
-          </organisations>
-        </ResourceFrame>
-        <ServiceCalendarFrame id="jsp:JSP@PlusBus@Service_Calendar" version="any" responsibilitySetRef="jsp:products:JSP">
-          <Name>Plusbus  Specific  Calendar</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="jsp_data"/>
-            <DefaultDataSourceRef version="any" ref="jsp:example"/>
-            <DefaultResponsibilitySetRef version="any" ref="jsp:products:JSP"/>
-          </FrameDefaults>
-          <contentValidityConditions>
-            <AvailabilityCondition id="jsp:anytime@anyday" version="01">
-              <Name>Any time</Name>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <FareDayTypeRef version="any" ref="jsp:everyday"/>
-              </dayTypes>
-            </AvailabilityCondition>
-            <AvailabilityCondition id="jsp:working_day_after_9.30" version="01">
-              <Name>Any time weekends and public holidays</Name>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <FareDayTypeRef version="any" ref="atc:weekend"/>
-                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
-                <FareDayTypeRef version="any" ref="jsp:working_day_after_9.30"/>
-              </dayTypes>
-            </AvailabilityCondition>
-            <AvailabilityCondition id="jsp:working_day_after_10.00" version="01">
-              <Name>Any time weekends and public holidays after 10</Name>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <FareDayTypeRef version="any" ref="atc:weekend"/>
-                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
-                <FareDayTypeRef version="any" ref="jsp:working_day_after_10.00"/>
-              </dayTypes>
-            </AvailabilityCondition>
-            <AvailabilityCondition id="jsp:working_day_offpeak" version="01">
-              <Name>Any time weekends and public holidays after 10</Name>
-              <IsAvailable>true</IsAvailable>
-              <dayTypes>
-                <FareDayTypeRef version="any" ref="atc:weekend"/>
-                <FareDayTypeRef version="any" ref="atc:public_holiday_UK"/>
-                <FareDayTypeRef version="any" ref="jsp:working_day_after_10.00"/>
-              </dayTypes>
-            </AvailabilityCondition>
-          </contentValidityConditions>
-          <dayTypes>
-            <FareDayType id="jsp:everyday" version="any">
-              <Name>Every day</Name>
-              <Description>ANy time</Description>
-              <EarliestTime>00:00:00</EarliestTime>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>AnyDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-            <FareDayType id="jsp:working_day_after_9.30" version="any">
-              <Name>Working day</Name>
-              <Description>After 9.30 end at 4.30 next day.</Description>
-              <EarliestTime>09:30:00</EarliestTime>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-            <FareDayType id="jsp:working_day_after_10.00" version="any">
-              <Name>Working day</Name>
-              <Description>After 9.30 end at 4.30 next day.</Description>
-              <EarliestTime>10:10:00</EarliestTime>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </FareDayType>
-          </dayTypes>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
     <CompositeFrame id="atc:ATOC@Network" version="any" responsibilitySetRef="atc:products:NRE">
@@ -9439,6 +9439,141 @@ C2C, Chiltern Railways, Great Western Railway, Great Northern rail, London Midla
         <DefaultResponsibilitySetRef version="any" ref="atc:products:NRE"/>
       </FrameDefaults>
       <frames>
+        <SiteFrame id="atc:ATOC@Common_Site" version="any" responsibilitySetRef="atc:products:NRE">
+          <Name>UK Common Site</Name>
+          <siteFacilitySets>
+            <SiteFacilitySet id="atc:first_class_lounge" version="01">
+              <Description>First class Lounge</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses>firstClass</FareClasses>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <AccessFacilityList/>
+              <EmergencyServiceList/>
+              <HireFacilityList/>
+              <LuggageLockerFacilityList/>
+              <LuggageServiceFacilityList/>
+              <MoneyFacilityList/>
+              <ParkingFacilityList/>
+            </SiteFacilitySet>
+          </siteFacilitySets>
+        </SiteFrame>
+        <ServiceFrame id="atc:ATOC@Lines" version="any" responsibilitySetRef="atc:products:NRE">
+          <Name>UK Rail Network  and Lines</Name>
+          <Network id="atc:ATOC@Lines@Network" version="01">
+            <Name>UK Rail Network</Name>
+            <TransportMode>rail</TransportMode>
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="uic:1170">ATOC</OperatorRef>
+          </Network>
+        </ServiceFrame>
+        <TimetableFrame id="atc:ATOC@Services" version="any" responsibilitySetRef="atc:products:NRE">
+          <VehicleModes/>
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="atc:allows_bicycles@reservation" version="any">
+              <Description>allows Bicycles</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList>cyclesAllowedWithReservation</LuggageCarriageFacilityList>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="atc:allows_bicycles@no_reservation" version="any">
+              <Description>allows Bicycles</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList>cyclesAllowed</LuggageCarriageFacilityList>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="atc:no_bicyles" version="any">
+              <Description>allows Bicycles</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList>noCycles</LuggageCarriageFacilityList>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+        </TimetableFrame>
         <FareFrame id="atc:ATOC@ODs" version="01" responsibilitySetRef="atc:products:NRE">
           <Name>This frame holds stop points and distance matrix elements referenced by other frames</Name>
           <codespaces>
@@ -10382,463 +10517,6 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
             </Tariff>
           </tariffs>
         </FareFrame>
-        <ServiceFrame id="atc:ATOC@Lines" version="any" responsibilitySetRef="atc:products:NRE">
-          <Name>UK Rail Network  and Lines</Name>
-          <Network id="atc:ATOC@Lines@Network" version="01">
-            <Name>UK Rail Network</Name>
-            <TransportMode>rail</TransportMode>
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="uic:1170">ATOC</OperatorRef>
-          </Network>
-        </ServiceFrame>
-        <TimetableFrame id="atc:ATOC@Services" version="any" responsibilitySetRef="atc:products:NRE">
-          <VehicleModes/>
-          <serviceFacilitySets>
-            <ServiceFacilitySet id="atc:allows_bicycles@reservation" version="any">
-              <Description>allows Bicycles</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList>cyclesAllowedWithReservation</LuggageCarriageFacilityList>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
-            </ServiceFacilitySet>
-            <ServiceFacilitySet id="atc:allows_bicycles@no_reservation" version="any">
-              <Description>allows Bicycles</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList>cyclesAllowed</LuggageCarriageFacilityList>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
-            </ServiceFacilitySet>
-            <ServiceFacilitySet id="atc:no_bicyles" version="any">
-              <Description>allows Bicycles</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList>noCycles</LuggageCarriageFacilityList>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
-            </ServiceFacilitySet>
-          </serviceFacilitySets>
-        </TimetableFrame>
-        <SiteFrame id="atc:ATOC@Common_Site" version="any" responsibilitySetRef="atc:products:NRE">
-          <Name>UK Common Site</Name>
-          <siteFacilitySets>
-            <SiteFacilitySet id="atc:first_class_lounge" version="01">
-              <Description>First class Lounge</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses>firstClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <AccessFacilityList/>
-              <EmergencyServiceList/>
-              <HireFacilityList/>
-              <LuggageLockerFacilityList/>
-              <LuggageServiceFacilityList/>
-              <MoneyFacilityList/>
-              <ParkingFacilityList/>
-            </SiteFacilitySet>
-          </siteFacilitySets>
-        </SiteFrame>
-        <ResourceFrame id="atc:ATOC@Common_Resources" version="any" responsibilitySetRef="atc:products:NRE">
-          <Name>UK Specifc  code values</Name>
-          <codespaces>
-            <Codespace id="atc:atoc_data">
-              <Xmlns>atoc</Xmlns>
-              <XmlnsUrl>https://www.nationalrail.co.uk/</XmlnsUrl>
-              <Description>Uk common rail</Description>
-            </Codespace>
-            <Codespace id="atc:operator_data">
-              <Xmlns>atc:operator</Xmlns>
-              <XmlnsUrl>https://www.nationalrail.co.uk/</XmlnsUrl>
-              <Description>Uk operators</Description>
-            </Codespace>
-          </codespaces>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="atc:atoc_data"/>
-            <DefaultDataSourceRef version="any" ref="atc:example"/>
-            <DefaultLocale>
-              <TimeZone>BST</TimeZone>
-              <DefaultLanguage>en</DefaultLanguage>
-              <languages>
-                <LanguageUsage>
-                  <Language>en</Language>
-                  <LanguageUse>normallyUsed</LanguageUse>
-                </LanguageUsage>
-                <LanguageUsage>
-                  <Language>cy</Language>
-                  <LanguageUse>spoken</LanguageUse>
-                </LanguageUsage>
-                <LanguageUsage>
-                  <Language>gd</Language>
-                  <LanguageUse>spoken</LanguageUse>
-                </LanguageUsage>
-              </languages>
-            </DefaultLocale>
-            <DefaultLocationSystem>WGS84</DefaultLocationSystem>
-            <DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
-            <DefaultCurrency>GBP</DefaultCurrency>
-          </FrameDefaults>
-          <dataSources>
-            <DataSource id="atc:example" version="any">
-              <Email>info@atoc.org.uk</Email>
-            </DataSource>
-          </dataSources>
-          <responsibilitySets>
-            <ResponsibilitySet id="atc:products:NRE" version="any">
-              <Name>National Rail Products</Name>
-              <roles>
-                <ResponsibilityRoleAssignment id="atc:products:NRE" version="any">
-                  <DataRoleType/>
-                  <StakeholderRoleType>Other</StakeholderRoleType>
-                  <ResponsibleOrganisationRef version="any" ref="atc:Consortium:NRE"/>
-                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
-                </ResponsibilityRoleAssignment>
-              </roles>
-            </ResponsibilitySet>
-          </responsibilitySets>
-          <typesOfValue>
-            <ValueSet id="atc:Types_of_ProductCategory_class" version="any" classOfValues="TypeOfProductCategory">
-              <Name>Fare Table Types</Name>
-              <values>
-                <TypeOfProductCategory id="atc:no_high_speed" version="any">
-                  <Name>Can use rail transfer</Name>
-                </TypeOfProductCategory>
-                <TypeOfProductCategory id="atc:plus_high_speed" version="any">
-                  <Name>Can use rail transfer</Name>
-                </TypeOfProductCategory>
-                <TypeOfProductCategory id="atc:london_terminals" version="any">
-                  <Name>Free newspaper</Name>
-                </TypeOfProductCategory>
-              </values>
-            </ValueSet>
-            <ValueSet id="atc:Types_of_Facility@first_class" version="any" classOfValues="TypeOfFacility">
-              <Name>Fare Table Types</Name>
-              <values>
-                <TypeOfFacility id="atc:first_class_lounge" version="any">
-                  <Name>First class lounge</Name>
-                </TypeOfFacility>
-                <TypeOfFacility id="atc:free_newspaper" version="any">
-                  <Name>Free newspaper</Name>
-                </TypeOfFacility>
-              </values>
-            </ValueSet>
-            <ValueSet id="atc:Types_of_Service@named" version="any" classOfValues="TypeOfService">
-              <Name>Types of named service</Name>
-              <values>
-                <TypeOfService id="atc:Night_Riviera" version="any">
-                  <Name>Night Variety</Name>
-                </TypeOfService>
-                <TypeOfService id="atc:allows_bicycles" version="any">
-                  <Name>Night Variety</Name>
-                </TypeOfService>
-              </values>
-            </ValueSet>
-            <ValueSet id="atc:Types_of_FareContract" version="any" classOfValues="TypeOfFareContract">
-              <Name>Types of Fare Contract</Name>
-              <values>
-                <TypeOfFareContract id="atc:contract@pass@season" version="any">
-                  <Name>Season Pass</Name>
-                </TypeOfFareContract>
-                <TypeOfFareContract id="atc:contract@trip" version="any">
-                  <Name>Trip contract</Name>
-                </TypeOfFareContract>
-                <TypeOfFareContract id="atc:contract@railcard" version="any">
-                  <Name>Railcard contract</Name>
-                </TypeOfFareContract>
-              </values>
-            </ValueSet>
-          </typesOfValue>
-          <organisations>
-            <RetailConsortium id="atc:Consortium:NRE" version="any">
-              <PublicCode>nre</PublicCode>
-              <Name>National Rail Enquiries</Name>
-              <LegalName>National Rail Enquiries</LegalName>
-              <ContactDetails>
-                <Email>info@nationalrail.co.uk</Email>
-                <Phone>0345 748 49 50</Phone>
-                <Url>https://www.nationalrail.co.uk/</Url>
-              </ContactDetails>
-              <OrganisationType>retailConsortium</OrganisationType>
-              <members>
-                <OperatorRef ref="atc:AR">Alliance Rail</OperatorRef>
-                <OperatorRef ref="atc:NT">Arriva Trains Northern</OperatorRef>
-                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
-                <OperatorRef ref="atc:CC">c2c</OperatorRef>
-                <OperatorRef ref="atc:CS">Caledonian Sleeper</OperatorRef>
-                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
-                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
-                <OperatorRef ref="atc:ZZ">Devon and Cornwall Railways</OperatorRef>
-                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
-                <OperatorRef ref="atc:ES">Eurostar</OperatorRef>
-                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
-                <OperatorRef ref="atc:HT">First Hull Trains</OperatorRef>
-                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
-                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
-                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
-                <OperatorRef ref="atc:GC">Grand Central</OperatorRef>
-                <OperatorRef ref="atc:LN">Great North Western Railway</OperatorRef>
-                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
-                <OperatorRef version="any" ref="atc:LE"/>
-                <OperatorRef ref="atc:HC">Heathrow Connect</OperatorRef>
-                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
-                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
-                <OperatorRef ref="atc:LS">Locomotive Services</OperatorRef>
-                <OperatorRef ref="atc:LM">London Midland</OperatorRef>
-                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
-                <OperatorRef ref="atc:LT">LUL Bakerloo Line</OperatorRef>
-                <OperatorRef ref="atc:LT">LUL District Line - Richmond</OperatorRef>
-                <OperatorRef ref="atc:LT">LUL District Line - Wimbledon</OperatorRef>
-                <OperatorRef ref="atc:ME">Merseyrail</OperatorRef>
-                <OperatorRef ref="atc:TW">Nexus (Tyne  &amp; Wear Metro)</OperatorRef>
-                <OperatorRef ref="atc:NR">Network Rail</OperatorRef>
-                <OperatorRef ref="atc:NT">Northern</OperatorRef>
-                <OperatorRef ref="atc:NY">North Yorkshire Moors Railway</OperatorRef>
-                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
-                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
-                <OperatorRef ref="atc:SJ">South Yorkshire Supertram</OperatorRef>
-                <OperatorRef ref="atc:SE">Southeastern</OperatorRef>
-                <OperatorRef ref="atc:SN">Southern</OperatorRef>
-                <OperatorRef ref="atc:SP">Swanage Railway</OperatorRef>
-                <OperatorRef ref="atc:SX">Stansted Express</OperatorRef>
-                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
-                <OperatorRef ref="atc:TP">TransPennine Express</OperatorRef>
-                <OperatorRef ref="atc:VT">Virgin Trains</OperatorRef>
-                <OperatorRef ref="atc:GR">Virgin Trains East Coast</OperatorRef>
-                <OperatorRef ref="atc:WR">West Coast Railway Co.</OperatorRef>
-                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
-              </members>
-            </RetailConsortium>
-            <Operator id="atc:NR" version="any">
-              <PublicCode>NR</PublicCode>
-              <Name>Network Rail</Name>
-              <OrganisationType/>
-              <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities>infrastructure</OperatorActivities>
-            </Operator>
-            <Operator id="atc:ANY" version="any">
-              <PublicCode>Any</PublicCode>
-              <Name>Any  Rail Operator</Name>
-              <OrganisationType/>
-              <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities>passenger</OperatorActivities>
-            </Operator>
-            <Operator id="atc:LE" version="any">
-              <PublicCode>GA</PublicCode>
-              <CompanyNumber>07861414</CompanyNumber>
-              <Name>Greater Anglia</Name>
-              <LegalName>Abellio East Anglia Limited</LegalName>
-              <ContactDetails>
-                <Email>contactcentre@greateranglia.co.uk</Email>
-                <Phone>0345 600 7245</Phone>
-                <Url>https://www.greateranglia.co.uk/contact-us/contact-directory</Url>
-              </ContactDetails>
-              <OrganisationType>operator</OrganisationType>
-              <Status>true</Status>
-              <CountryRef ref="uk"/>
-              <Address>
-                <HouseNumber>18-20</HouseNumber>
-                <Street>St Andrew's Street</Street>
-                <Town>London</Town>
-                <PostCode>EC4A 3AG</PostCode>
-              </Address>
-              <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities>passenger</OperatorActivities>
-            </Operator>
-            <Operator id="atc:LT" version="any">
-              <PublicCode>LT</PublicCode>
-              <Name>TfL Customer Service</Name>
-              <LegalName>Transport for London</LegalName>
-              <ContactDetails>
-                <Email>contactcentre@greateranglia.co.uk</Email>
-                <Phone>0343 222 1234</Phone>
-                <Url>https://www.greateranglia.co.uk/contact-us/contact-directory</Url>
-              </ContactDetails>
-              <OrganisationType>operator</OrganisationType>
-              <CountryRef ref="uk" refPrincipality="GB-ENG"/>
-              <Address>
-                <HouseNumber>14</HouseNumber>
-                <BuildingName>4th Floor</BuildingName>
-                <Street>Pier Walk</Street>
-                <Town>London</Town>
-                <PostCode>SE10 0ES</PostCode>
-              </Address>
-              <PrimaryMode>metro</PrimaryMode>
-              <OperatorActivities>passenger</OperatorActivities>
-            </Operator>
-          </organisations>
-          <groupsOfOperators>
-            <GroupOfOperators id="atc:operatorGroup:Tfl" version="01">
-              <members>
-                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
-                <OperatorRef ref="atc:LT">LUL Bakerloo Line</OperatorRef>
-                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
-              </members>
-            </GroupOfOperators>
-            <GroupOfOperators id="atc:operatorGroup:gold_card" version="01">
-              <Name>Gold card scheme Operators</Name>
-              <Description>Where can I travel?
-Annual Gold Card discounted tickets are valid for travel on journeys wholly within the Annual Gold Card area on the following participating train companies services:
-
-Arriva Trains Wales	c2c
-Chiltern Railways	CrossCountry ++
-East Midlands Trains	Gatwick Express
-Great Northern	Great Western Railway* 
-Greater Anglia	Heathrow Express
-Island Line	London Overground
-London Northwestern Railway	Southeastern
-Southern	South Western Railway
-Stansted Express	
-Thameslink             
-West Midlands Railway	
-</Description>
-              <members>
-                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
-                <OperatorRef ref="atc:CC">c2c</OperatorRef>
-                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
-                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
-                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
-                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
-                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
-                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
-                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
-                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
-                <OperatorRef version="any" ref="atc:LE">Grreater Anglia</OperatorRef>
-                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
-                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
-                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
-                <OperatorRef ref="atc:NT">Northern</OperatorRef>
-                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
-                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
-                <OperatorRef ref="atc:SN">Southern</OperatorRef>
-                <OperatorRef ref="atc:SX">Stansted Express</OperatorRef>
-                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
-              </members>
-            </GroupOfOperators>
-            <GroupOfOperators id="atc:operatorGroup:mobile_app" version="01">
-              <members>
-                <OperatorRef ref="atc:AR">Alliance Rail</OperatorRef>
-                <OperatorRef ref="atc:NT">Arriva Trains Northern</OperatorRef>
-                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
-                <OperatorRef ref="atc:CC">c2c</OperatorRef>
-                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
-                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
-                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
-                <OperatorRef ref="atc:ES">Eurostar</OperatorRef>
-                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
-                <OperatorRef ref="atc:HT">First Hull Trains</OperatorRef>
-                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
-                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
-                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
-                <OperatorRef ref="atc:GC">Grand Central</OperatorRef>
-                <OperatorRef ref="atc:LN">Great North Western Railway</OperatorRef>
-                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
-                <OperatorRef version="any" ref="atc:LE">Grreater Anglia</OperatorRef>
-                <OperatorRef ref="atc:HC">Heathrow Connect</OperatorRef>
-                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
-                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
-                <OperatorRef ref="atc:LS">Locomotive Services</OperatorRef>
-                <OperatorRef ref="atc:LM">London Midland</OperatorRef>
-                <OperatorRef ref="atc:ME">Merseyrail</OperatorRef>
-                <OperatorRef ref="atc:TW">Nexus (Tyne  &amp; Wear Metro)</OperatorRef>
-                <OperatorRef ref="atc:NT">Northern</OperatorRef>
-                <OperatorRef ref="atc:NY">North Yorkshire Moors Railway</OperatorRef>
-                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
-                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
-                <OperatorRef ref="atc:SE">Southeastern</OperatorRef>
-                <OperatorRef ref="atc:SN">Southern</OperatorRef>
-                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
-                <OperatorRef ref="atc:TP">TransPennine Express</OperatorRef>
-                <OperatorRef ref="atc:VT">Virgin Trains</OperatorRef>
-                <OperatorRef ref="atc:GR">Virgin Trains East Coast</OperatorRef>
-                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
-                <OperatorRef ref="atc:WR">West Coast Railway Co.</OperatorRef>
-              </members>
-            </GroupOfOperators>
-            <GroupOfOperators id="atc:operatorGroup:buy_onboard" version="01">
-              <members>
-                <OperatorRef version="any" ref="atc:LE">Greater Anglia</OperatorRef>
-              </members>
-            </GroupOfOperators>
-          </groupsOfOperators>
-        </ResourceFrame>
         <ServiceCalendarFrame id="atc:ATOC@Common_Service_Calendar_2018" version="any" responsibilitySetRef="atc:products:NRE">
           <Name>UK Specific  Calendar</Name>
           <contentValidityConditions>
@@ -11230,6 +10908,328 @@ West Midlands Railway
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
+        <ResourceFrame id="atc:ATOC@Common_Resources" version="any" responsibilitySetRef="atc:products:NRE">
+          <Name>UK Specifc  code values</Name>
+          <codespaces>
+            <Codespace id="atc:atoc_data">
+              <Xmlns>atoc</Xmlns>
+              <XmlnsUrl>https://www.nationalrail.co.uk/</XmlnsUrl>
+              <Description>Uk common rail</Description>
+            </Codespace>
+            <Codespace id="atc:operator_data">
+              <Xmlns>atc:operator</Xmlns>
+              <XmlnsUrl>https://www.nationalrail.co.uk/</XmlnsUrl>
+              <Description>Uk operators</Description>
+            </Codespace>
+          </codespaces>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="atc:atoc_data"/>
+            <DefaultDataSourceRef version="any" ref="atc:example"/>
+            <DefaultLocale>
+              <TimeZone>BST</TimeZone>
+              <DefaultLanguage>en</DefaultLanguage>
+              <languages>
+                <LanguageUsage>
+                  <Language>en</Language>
+                  <LanguageUse>normallyUsed</LanguageUse>
+                </LanguageUsage>
+                <LanguageUsage>
+                  <Language>cy</Language>
+                  <LanguageUse>spoken</LanguageUse>
+                </LanguageUsage>
+                <LanguageUsage>
+                  <Language>gd</Language>
+                  <LanguageUse>spoken</LanguageUse>
+                </LanguageUsage>
+              </languages>
+            </DefaultLocale>
+            <DefaultLocationSystem>WGS84</DefaultLocationSystem>
+            <DefaultSystemOfUnits>SiKilometresAndMetres</DefaultSystemOfUnits>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <dataSources>
+            <DataSource id="atc:example" version="any">
+              <Email>info@atoc.org.uk</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet id="atc:products:NRE" version="any">
+              <Name>National Rail Products</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="atc:products:NRE" version="any">
+                  <DataRoleType/>
+                  <StakeholderRoleType>Other</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="atc:Consortium:NRE"/>
+                  <ResponsibleAreaRef ref="atc:uk">TODO</ResponsibleAreaRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="atc:Types_of_ProductCategory_class" version="any" classOfValues="TypeOfProductCategory">
+              <Name>Fare Table Types</Name>
+              <values>
+                <TypeOfProductCategory id="atc:no_high_speed" version="any">
+                  <Name>Can use rail transfer</Name>
+                </TypeOfProductCategory>
+                <TypeOfProductCategory id="atc:plus_high_speed" version="any">
+                  <Name>Can use rail transfer</Name>
+                </TypeOfProductCategory>
+                <TypeOfProductCategory id="atc:london_terminals" version="any">
+                  <Name>Free newspaper</Name>
+                </TypeOfProductCategory>
+              </values>
+            </ValueSet>
+            <ValueSet id="atc:Types_of_Facility@first_class" version="any" classOfValues="TypeOfFacility">
+              <Name>Fare Table Types</Name>
+              <values>
+                <TypeOfFacility id="atc:first_class_lounge" version="any">
+                  <Name>First class lounge</Name>
+                </TypeOfFacility>
+                <TypeOfFacility id="atc:free_newspaper" version="any">
+                  <Name>Free newspaper</Name>
+                </TypeOfFacility>
+              </values>
+            </ValueSet>
+            <ValueSet id="atc:Types_of_Service@named" version="any" classOfValues="TypeOfService">
+              <Name>Types of named service</Name>
+              <values>
+                <TypeOfService id="atc:Night_Riviera" version="any">
+                  <Name>Night Variety</Name>
+                </TypeOfService>
+                <TypeOfService id="atc:allows_bicycles" version="any">
+                  <Name>Night Variety</Name>
+                </TypeOfService>
+              </values>
+            </ValueSet>
+            <ValueSet id="atc:Types_of_FareContract" version="any" classOfValues="TypeOfFareContract">
+              <Name>Types of Fare Contract</Name>
+              <values>
+                <TypeOfFareContract id="atc:contract@pass@season" version="any">
+                  <Name>Season Pass</Name>
+                </TypeOfFareContract>
+                <TypeOfFareContract id="atc:contract@trip" version="any">
+                  <Name>Trip contract</Name>
+                </TypeOfFareContract>
+                <TypeOfFareContract id="atc:contract@railcard" version="any">
+                  <Name>Railcard contract</Name>
+                </TypeOfFareContract>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator id="atc:NR" version="any">
+              <PublicCode>NR</PublicCode>
+              <Name>Network Rail</Name>
+              <OrganisationType/>
+              <PrimaryMode>rail</PrimaryMode>
+              <OperatorActivities>infrastructure</OperatorActivities>
+            </Operator>
+            <Operator id="atc:ANY" version="any">
+              <PublicCode>Any</PublicCode>
+              <Name>Any  Rail Operator</Name>
+              <OrganisationType/>
+              <PrimaryMode>rail</PrimaryMode>
+              <OperatorActivities>passenger</OperatorActivities>
+            </Operator>
+            <Operator id="atc:LE" version="any">
+              <PublicCode>GA</PublicCode>
+              <CompanyNumber>07861414</CompanyNumber>
+              <Name>Greater Anglia</Name>
+              <LegalName>Abellio East Anglia Limited</LegalName>
+              <ContactDetails>
+                <Email>contactcentre@greateranglia.co.uk</Email>
+                <Phone>0345 600 7245</Phone>
+                <Url>https://www.greateranglia.co.uk/contact-us/contact-directory</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Status>true</Status>
+              <CountryRef ref="uk"/>
+              <Address>
+                <HouseNumber>18-20</HouseNumber>
+                <Street>St Andrew's Street</Street>
+                <Town>London</Town>
+                <PostCode>EC4A 3AG</PostCode>
+              </Address>
+              <PrimaryMode>rail</PrimaryMode>
+              <OperatorActivities>passenger</OperatorActivities>
+            </Operator>
+            <Operator id="atc:LT" version="any">
+              <PublicCode>LT</PublicCode>
+              <Name>TfL Customer Service</Name>
+              <LegalName>Transport for London</LegalName>
+              <ContactDetails>
+                <Email>contactcentre@greateranglia.co.uk</Email>
+                <Phone>0343 222 1234</Phone>
+                <Url>https://www.greateranglia.co.uk/contact-us/contact-directory</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <CountryRef ref="uk" refPrincipality="GB-ENG"/>
+              <Address>
+                <HouseNumber>14</HouseNumber>
+                <BuildingName>4th Floor</BuildingName>
+                <Street>Pier Walk</Street>
+                <Town>London</Town>
+                <PostCode>SE10 0ES</PostCode>
+              </Address>
+              <PrimaryMode>metro</PrimaryMode>
+              <OperatorActivities>passenger</OperatorActivities>
+            </Operator>
+            <RetailConsortium id="atc:Consortium:NRE" version="any">
+              <PublicCode>nre</PublicCode>
+              <Name>National Rail Enquiries</Name>
+              <LegalName>National Rail Enquiries</LegalName>
+              <ContactDetails>
+                <Email>info@nationalrail.co.uk</Email>
+                <Phone>0345 748 49 50</Phone>
+                <Url>https://www.nationalrail.co.uk/</Url>
+              </ContactDetails>
+              <OrganisationType>retailConsortium</OrganisationType>
+              <members>
+                <OperatorRef ref="atc:AR">Alliance Rail</OperatorRef>
+                <OperatorRef ref="atc:NT">Arriva Trains Northern</OperatorRef>
+                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
+                <OperatorRef ref="atc:CC">c2c</OperatorRef>
+                <OperatorRef ref="atc:CS">Caledonian Sleeper</OperatorRef>
+                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
+                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
+                <OperatorRef ref="atc:ZZ">Devon and Cornwall Railways</OperatorRef>
+                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
+                <OperatorRef ref="atc:ES">Eurostar</OperatorRef>
+                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
+                <OperatorRef ref="atc:HT">First Hull Trains</OperatorRef>
+                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
+                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
+                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
+                <OperatorRef ref="atc:GC">Grand Central</OperatorRef>
+                <OperatorRef ref="atc:LN">Great North Western Railway</OperatorRef>
+                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
+                <OperatorRef version="any" ref="atc:LE"/>
+                <OperatorRef ref="atc:HC">Heathrow Connect</OperatorRef>
+                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
+                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
+                <OperatorRef ref="atc:LS">Locomotive Services</OperatorRef>
+                <OperatorRef ref="atc:LM">London Midland</OperatorRef>
+                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
+                <OperatorRef ref="atc:LT">LUL Bakerloo Line</OperatorRef>
+                <OperatorRef ref="atc:LT">LUL District Line - Richmond</OperatorRef>
+                <OperatorRef ref="atc:LT">LUL District Line - Wimbledon</OperatorRef>
+                <OperatorRef ref="atc:ME">Merseyrail</OperatorRef>
+                <OperatorRef ref="atc:TW">Nexus (Tyne  &amp; Wear Metro)</OperatorRef>
+                <OperatorRef ref="atc:NR">Network Rail</OperatorRef>
+                <OperatorRef ref="atc:NT">Northern</OperatorRef>
+                <OperatorRef ref="atc:NY">North Yorkshire Moors Railway</OperatorRef>
+                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
+                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
+                <OperatorRef ref="atc:SJ">South Yorkshire Supertram</OperatorRef>
+                <OperatorRef ref="atc:SE">Southeastern</OperatorRef>
+                <OperatorRef ref="atc:SN">Southern</OperatorRef>
+                <OperatorRef ref="atc:SP">Swanage Railway</OperatorRef>
+                <OperatorRef ref="atc:SX">Stansted Express</OperatorRef>
+                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
+                <OperatorRef ref="atc:TP">TransPennine Express</OperatorRef>
+                <OperatorRef ref="atc:VT">Virgin Trains</OperatorRef>
+                <OperatorRef ref="atc:GR">Virgin Trains East Coast</OperatorRef>
+                <OperatorRef ref="atc:WR">West Coast Railway Co.</OperatorRef>
+                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
+              </members>
+            </RetailConsortium>
+          </organisations>
+          <groupsOfOperators>
+            <GroupOfOperators id="atc:operatorGroup:Tfl" version="01">
+              <members>
+                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
+                <OperatorRef ref="atc:LT">LUL Bakerloo Line</OperatorRef>
+                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
+              </members>
+            </GroupOfOperators>
+            <GroupOfOperators id="atc:operatorGroup:gold_card" version="01">
+              <Name>Gold card scheme Operators</Name>
+              <Description>Where can I travel?
+Annual Gold Card discounted tickets are valid for travel on journeys wholly within the Annual Gold Card area on the following participating train companies services:
+
+Arriva Trains Wales	c2c
+Chiltern Railways	CrossCountry ++
+East Midlands Trains	Gatwick Express
+Great Northern	Great Western Railway* 
+Greater Anglia	Heathrow Express
+Island Line	London Overground
+London Northwestern Railway	Southeastern
+Southern	South Western Railway
+Stansted Express	
+Thameslink             
+West Midlands Railway	
+</Description>
+              <members>
+                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
+                <OperatorRef ref="atc:CC">c2c</OperatorRef>
+                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
+                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
+                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
+                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
+                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
+                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
+                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
+                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
+                <OperatorRef version="any" ref="atc:LE">Grreater Anglia</OperatorRef>
+                <OperatorRef ref="atc:LO">London Overground</OperatorRef>
+                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
+                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
+                <OperatorRef ref="atc:NT">Northern</OperatorRef>
+                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
+                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
+                <OperatorRef ref="atc:SN">Southern</OperatorRef>
+                <OperatorRef ref="atc:SX">Stansted Express</OperatorRef>
+                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
+              </members>
+            </GroupOfOperators>
+            <GroupOfOperators id="atc:operatorGroup:mobile_app" version="01">
+              <members>
+                <OperatorRef ref="atc:AR">Alliance Rail</OperatorRef>
+                <OperatorRef ref="atc:NT">Arriva Trains Northern</OperatorRef>
+                <OperatorRef ref="atc:AW">Arriva Trains Wales</OperatorRef>
+                <OperatorRef ref="atc:CC">c2c</OperatorRef>
+                <OperatorRef ref="atc:CH">Chiltern Railway</OperatorRef>
+                <OperatorRef ref="atc:XC">CrossCountry</OperatorRef>
+                <OperatorRef ref="atc:EM">East Midlands Trains</OperatorRef>
+                <OperatorRef ref="atc:ES">Eurostar</OperatorRef>
+                <OperatorRef ref="atc:FC">First Capital Connect (defunct)</OperatorRef>
+                <OperatorRef ref="atc:HT">First Hull Trains</OperatorRef>
+                <OperatorRef ref="atc:GX">Gatwick Express</OperatorRef>
+                <OperatorRef ref="atc:GN">Govia Thameslink Railway (Great Northern)</OperatorRef>
+                <OperatorRef ref="atc:TL">Govia Thameslink Railway (Thameslink)</OperatorRef>
+                <OperatorRef ref="atc:GC">Grand Central</OperatorRef>
+                <OperatorRef ref="atc:LN">Great North Western Railway</OperatorRef>
+                <OperatorRef ref="atc:GW">Great Western Railway</OperatorRef>
+                <OperatorRef version="any" ref="atc:LE">Grreater Anglia</OperatorRef>
+                <OperatorRef ref="atc:HC">Heathrow Connect</OperatorRef>
+                <OperatorRef ref="atc:HX">Heathrow Express</OperatorRef>
+                <OperatorRef ref="atc:IL">Island Lines</OperatorRef>
+                <OperatorRef ref="atc:LS">Locomotive Services</OperatorRef>
+                <OperatorRef ref="atc:LM">London Midland</OperatorRef>
+                <OperatorRef ref="atc:ME">Merseyrail</OperatorRef>
+                <OperatorRef ref="atc:TW">Nexus (Tyne  &amp; Wear Metro)</OperatorRef>
+                <OperatorRef ref="atc:NT">Northern</OperatorRef>
+                <OperatorRef ref="atc:NY">North Yorkshire Moors Railway</OperatorRef>
+                <OperatorRef ref="atc:SR">ScotRail</OperatorRef>
+                <OperatorRef ref="atc:SW">South Western Railway</OperatorRef>
+                <OperatorRef ref="atc:SE">Southeastern</OperatorRef>
+                <OperatorRef ref="atc:SN">Southern</OperatorRef>
+                <OperatorRef ref="atc:XR">TfL Rail</OperatorRef>
+                <OperatorRef ref="atc:TP">TransPennine Express</OperatorRef>
+                <OperatorRef ref="atc:VT">Virgin Trains</OperatorRef>
+                <OperatorRef ref="atc:GR">Virgin Trains East Coast</OperatorRef>
+                <OperatorRef ref="atc:WM">West Midlands.</OperatorRef>
+                <OperatorRef ref="atc:WR">West Coast Railway Co.</OperatorRef>
+              </members>
+            </GroupOfOperators>
+            <GroupOfOperators id="atc:operatorGroup:buy_onboard" version="01">
+              <members>
+                <OperatorRef version="any" ref="atc:LE">Greater Anglia</OperatorRef>
+              </members>
+            </GroupOfOperators>
+          </groupsOfOperators>
+        </ResourceFrame>
       </frames>
     </CompositeFrame>
     <CompositeFrame id="abga-t:Sample_Transactions" version="any" responsibilitySetRef="abga:sales:LT">
@@ -11392,252 +11392,6 @@ West Midlands Railway
         <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
       </FrameDefaults>
       <frames>
-        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
-          <Name>Common Country independent  fare component</Name>
-          <FrameDefaults>
-            <DefaultCodespaceRef ref="eura_data"/>
-            <DefaultDataSourceRef version="any" ref="eura:common_example"/>
-            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
-            <DefaultCurrency>EUR</DefaultCurrency>
-          </FrameDefaults>
-          <PricingParameterSet id="eura:Common_Resources" version="any">
-            <priceUnits>
-              <PriceUnit id="eura:EUR" version="any">
-                <Name>Euro</Name>
-                <PrivateCode>€</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:GBP" version="any">
-                <Name>Pound Sterling</Name>
-                <PrivateCode>£</PrivateCode>
-                <Precision>2</Precision>
-              </PriceUnit>
-              <PriceUnit id="eura:SFR" version="any">
-                <Name>Swiss Francs</Name>
-                <Precision>2</Precision>
-              </PriceUnit>
-            </priceUnits>
-          </PricingParameterSet>
-          <geographicalUnits>
-            <GeographicalUnit id="eura:km" version="any">
-              <Name>Distance Unit Kilometres</Name>
-            </GeographicalUnit>
-          </geographicalUnits>
-          <distributionChannels>
-            <DistributionChannel id="eura:online" version="01">
-              <ShortName>Internet sales</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:online_de" version="01" order="1">
-                  <Name lang="de">Internetverkauf</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:online_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par l'internet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>online</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:in_station" version="01">
-              <ShortName>Instation sale by machine, counter or payg </ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
-              <ShortName>Automatic Ticket Machine</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:pay_as_you_go_device" version="01">
-              <ShortName>Automatic Ticket Machine</ShortName>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:at_counter" version="01">
-              <ShortName>Ticket counter sale</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:at_counter_de" version="01" order="1">
-                  <Name lang="de">Schalter</Name>
-                </AlternativeName>
-                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
-                  <Name lang="fr">A vendre par le guichet</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>atStop</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:onboard" version="01">
-              <ShortName>onboard</ShortName>
-              <alternativeNames>
-                <AlternativeName id="eura:onboard_ro" version="01" order="1">
-                  <Name lang="en">in Tren</Name>
-                </AlternativeName>
-              </alternativeNames>
-              <DistributionChannelType>onBoard</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:call_centre" version="01">
-              <ShortName>Call Centre</ShortName>
-              <DistributionChannelType>telephone</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:travel_agent" version="01">
-              <ShortName>Travel Agent</ShortName>
-              <DistributionChannelType>agency</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:employee_organisation" version="01">
-              <ShortName>Employee Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-            <DistributionChannel id="eura:statutory_organisation" version="01">
-              <ShortName>Statutory Organisation</ShortName>
-              <DistributionChannelType>other</DistributionChannelType>
-              <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
-            </DistributionChannel>
-          </distributionChannels>
-          <fulfilmentMethods>
-            <FulfilmentMethod id="eura:post" version="01">
-              <Name>Send ticket by post</Name>
-              <FulfilmentMethodType>post</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:courier" version="01">
-              <Name>Send ticket by courier</Name>
-              <FulfilmentMethodType>other</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_at_counter" version="01">
-              <Name>Collect at counter</Name>
-              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_on_board" version="01">
-              <Name>Collect  on board</Name>
-              <FulfilmentMethodType>conductor</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_machine" version="01">
-              <Name>Collect   from machine</Name>
-              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
-              <RequiresBookingReference>true</RequiresBookingReference>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:collect_from_agent" version="01">
-              <Name>Travel agent issues ticket directly</Name>
-              <FulfilmentMethodType>agent</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:mobile_app" version="01">
-              <Name>Mobile App</Name>
-              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:self_print" version="01">
-              <Name>Self Print</Name>
-              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-            <FulfilmentMethod id="eura:email" version="01">
-              <Name>EMAIL</Name>
-              <FulfilmentMethodType>email</FulfilmentMethodType>
-              <typesOfTravelDocument>
-                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
-              </typesOfTravelDocument>
-            </FulfilmentMethod>
-          </fulfilmentMethods>
-          <typesOfTravelDocuments>
-            <TypeOfTravelDocument id="eura:distribution_channel_dependent" version="01">
-              <Name>Depends on channel used</Name>
-              <MediaType>other</MediaType>
-              <MachineReadable/>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
-              <Name>Printed Ticket</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
-              <Name>Hand written ticket</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable/>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
-              <Name>Printed Ticket with magnetic Stripe</Name>
-              <MediaType>paperTicket</MediaType>
-              <MachineReadable>magneticStrip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
-              <MediaType>selfPrintPaperTicket</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:pass" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>barCode</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
-              <MediaType>mobileApp</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:smart_card" version="01">
-              <MediaType>card</MediaType>
-              <MachineReadable>chip</MachineReadable>
-            </TypeOfTravelDocument>
-            <TypeOfTravelDocument id="eura:electronic_document" version="01">
-              <MediaType>none</MediaType>
-              <MachineReadable>ocr</MachineReadable>
-            </TypeOfTravelDocument>
-          </typesOfTravelDocuments>
-        </FareFrame>
         <ResourceFrame id="eura:EURA@Common_Resources" version="any" responsibilitySetRef="eura:code_sets">
           <Name>EURA Common Country independent  code values</Name>
           <codespaces>
@@ -11920,6 +11674,11 @@ West Midlands Railway
             </ValueSet>
           </typesOfValue>
           <organisations>
+            <GeneralOrganisation id="eura:EURA" version="any">
+              <Name>European Union Agency for Railways</Name>
+              <ShortName>EURA</ShortName>
+              <OrganisationType>statutoryBody</OrganisationType>
+            </GeneralOrganisation>
             <Operator id="uic:1170" version="any">
               <PublicCode>ATOC</PublicCode>
               <Name>Association of Train Operating Companies Limited</Name>
@@ -11955,13 +11714,254 @@ West Midlands Railway
               </ValidityPeriod>
               <OperatorActivities/>
             </Operator>
-            <GeneralOrganisation id="eura:EURA" version="any">
-              <Name>European Union Agency for Railways</Name>
-              <ShortName>EURA</ShortName>
-              <OrganisationType>statutoryBody</OrganisationType>
-            </GeneralOrganisation>
           </organisations>
         </ResourceFrame>
+        <FareFrame id="eura:EURA@Common_Fare_Components" version="any" responsibilitySetRef="eura:code_sets">
+          <Name>Common Country independent  fare component</Name>
+          <FrameDefaults>
+            <DefaultCodespaceRef ref="eura_data"/>
+            <DefaultDataSourceRef version="any" ref="eura:common_example"/>
+            <DefaultResponsibilitySetRef version="any" ref="eura:code_sets"/>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <PricingParameterSet id="eura:Common_Resources" version="any">
+            <priceUnits>
+              <PriceUnit id="eura:EUR" version="any">
+                <Name>Euro</Name>
+                <PrivateCode>€</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:GBP" version="any">
+                <Name>Pound Sterling</Name>
+                <PrivateCode>£</PrivateCode>
+                <Precision>2</Precision>
+              </PriceUnit>
+              <PriceUnit id="eura:SFR" version="any">
+                <Name>Swiss Francs</Name>
+                <Precision>2</Precision>
+              </PriceUnit>
+            </priceUnits>
+          </PricingParameterSet>
+          <geographicalUnits>
+            <GeographicalUnit id="eura:km" version="any">
+              <Name>Distance Unit Kilometres</Name>
+            </GeographicalUnit>
+          </geographicalUnits>
+          <distributionChannels>
+            <DistributionChannel id="eura:online" version="01">
+              <ShortName>Internet sales</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:online_de" version="01" order="1">
+                  <Name lang="de">Internetverkauf</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:online_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par l'internet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>online</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:in_station" version="01">
+              <ShortName>Instation sale by machine, counter or payg </ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:self_service_ticket_machine" version="01">
+              <ShortName>Automatic Ticket Machine</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:pay_as_you_go_device" version="01">
+              <ShortName>Automatic Ticket Machine</ShortName>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:at_counter" version="01">
+              <ShortName>Ticket counter sale</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:at_counter_de" version="01" order="1">
+                  <Name lang="de">Schalter</Name>
+                </AlternativeName>
+                <AlternativeName id="eura:at_counter_fr" version="01" order="1">
+                  <Name lang="fr">A vendre par le guichet</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>atStop</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:onboard" version="01">
+              <ShortName>onboard</ShortName>
+              <alternativeNames>
+                <AlternativeName id="eura:onboard_ro" version="01" order="1">
+                  <Name lang="en">in Tren</Name>
+                </AlternativeName>
+              </alternativeNames>
+              <DistributionChannelType>onBoard</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:call_centre" version="01">
+              <ShortName>Call Centre</ShortName>
+              <DistributionChannelType>telephone</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:travel_agent" version="01">
+              <ShortName>Travel Agent</ShortName>
+              <DistributionChannelType>agency</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:employee_organisation" version="01">
+              <ShortName>Employee Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+            <DistributionChannel id="eura:statutory_organisation" version="01">
+              <ShortName>Statutory Organisation</ShortName>
+              <DistributionChannelType>other</DistributionChannelType>
+              <IsObligatory>false</IsObligatory>
+              <PaymentMethods/>
+              <DistributionRights/>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="eura:post" version="01">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:courier" version="01">
+              <Name>Send ticket by courier</Name>
+              <FulfilmentMethodType>other</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_at_counter" version="01">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:pass"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:smart_card"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_on_board" version="01">
+              <Name>Collect  on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:hand_written_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_machine" version="01">
+              <Name>Collect   from machine</Name>
+              <FulfilmentMethodType>ticketMachine</FulfilmentMethodType>
+              <RequiresBookingReference>true</RequiresBookingReference>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:magstripe_printed_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:collect_from_agent" version="01">
+              <Name>Travel agent issues ticket directly</Name>
+              <FulfilmentMethodType>agent</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:printed_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:mobile_app" version="01">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:mobile_app_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:self_print" version="01">
+              <Name>Self Print</Name>
+              <FulfilmentMethodType>selfprint</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+                <TypeOfTravelDocumentRef version="01" ref="eura:electronic_document"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+            <FulfilmentMethod id="eura:email" version="01">
+              <Name>EMAIL</Name>
+              <FulfilmentMethodType>email</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="01" ref="eura:self_print_ticket"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument id="eura:distribution_channel_dependent" version="01">
+              <Name>Depends on channel used</Name>
+              <MediaType>other</MediaType>
+              <MachineReadable/>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:printed_ticket" version="01">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
+              <Name>Hand written ticket</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable/>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
+              <Name>Printed Ticket with magnetic Stripe</Name>
+              <MediaType>paperTicket</MediaType>
+              <MachineReadable>magneticStrip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:self_print_ticket" version="01">
+              <MediaType>selfPrintPaperTicket</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:pass" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:mobile_app_ticket" version="01">
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:smart_card" version="01">
+              <MediaType>card</MediaType>
+              <MachineReadable>chip</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument id="eura:electronic_document" version="01">
+              <MediaType>none</MediaType>
+              <MachineReadable>ocr</MachineReadable>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

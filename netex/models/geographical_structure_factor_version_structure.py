@@ -16,20 +16,22 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    parking_tariff_ref: Optional[ParkingTariffRef] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ParkingTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_ref: Optional[TariffRef] = field(
-        default=None,
-        metadata={
-            "name": "TariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingTariffRef",
+                    "type": ParkingTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffRef",
+                    "type": TariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     geographical_interval_ref: Optional[GeographicalIntervalRef] = field(

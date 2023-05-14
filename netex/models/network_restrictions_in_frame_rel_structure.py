@@ -14,35 +14,31 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "networkRestrictionsInFrame_RelStructure"
 
-    overtaking_possibility: List[OvertakingPossibility] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OvertakingPossibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    meeting_restriction: List[MeetingRestriction] = field(
-        default_factory=list,
-        metadata={
-            "name": "MeetingRestriction",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    restricted_manoeuvre: List[RestrictedManoeuvre] = field(
-        default_factory=list,
-        metadata={
-            "name": "RestrictedManoeuvre",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_type_at_point: List[VehicleTypeAtPoint] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleTypeAtPoint",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OvertakingPossibility",
+                    "type": OvertakingPossibility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingRestriction",
+                    "type": MeetingRestriction,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RestrictedManoeuvre",
+                    "type": RestrictedManoeuvre,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeAtPoint",
+                    "type": VehicleTypeAtPoint,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

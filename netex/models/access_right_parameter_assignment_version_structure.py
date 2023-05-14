@@ -80,84 +80,70 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_product_ref: Optional[SupplementProductRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "SupplementProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SupplementProductRef",
+                    "type": SupplementProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PreassignedFareProductRef",
+                    "type": PreassignedFareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AmountOfPriceUnitProductRef",
+                    "type": AmountOfPriceUnitProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UsageDiscountRightRef",
+                    "type": UsageDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ThirdPartyProductRef",
+                    "type": ThirdPartyProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CappedDiscountRightRef",
+                    "type": CappedDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SaleDiscountRightRef",
+                    "type": SaleDiscountRightRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareProductRef",
+                    "type": FareProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
-    preassigned_fare_product_ref: Optional[PreassignedFareProductRef] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "PreassignedFareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    amount_of_price_unit_product_ref: Optional[AmountOfPriceUnitProductRef] = field(
-        default=None,
-        metadata={
-            "name": "AmountOfPriceUnitProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    usage_discount_right_ref: Optional[UsageDiscountRightRef] = field(
-        default=None,
-        metadata={
-            "name": "UsageDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    third_party_product_ref: Optional[ThirdPartyProductRef] = field(
-        default=None,
-        metadata={
-            "name": "ThirdPartyProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    capped_discount_right_ref: Optional[CappedDiscountRightRef] = field(
-        default=None,
-        metadata={
-            "name": "CappedDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sale_discount_right_ref: Optional[SaleDiscountRightRef] = field(
-        default=None,
-        metadata={
-            "name": "SaleDiscountRightRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_product_ref: Optional[FareProductRef] = field(
-        default=None,
-        metadata={
-            "name": "FareProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    parking_tariff_ref: Optional[ParkingTariffRef] = field(
-        default=None,
-        metadata={
-            "name": "ParkingTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_ref: Optional[TariffRef] = field(
-        default=None,
-        metadata={
-            "name": "TariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingTariffRef",
+                    "type": ParkingTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffRef",
+                    "type": TariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     fare_structure_element_ref: Optional[FareStructureElementRef] = field(
@@ -168,28 +154,27 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    controllable_element_in_sequence_ref: Optional[ControllableElementInSequenceRef] = field(
+    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ControllableElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_structure_element_in_sequence_ref: Optional[FareStructureElementInSequenceRef] = field(
-        default=None,
-        metadata={
-            "name": "FareStructureElementInSequenceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_right_in_product_ref: Optional[AccessRightInProductRef] = field(
-        default=None,
-        metadata={
-            "name": "AccessRightInProductRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ControllableElementInSequenceRef",
+                    "type": ControllableElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareStructureElementInSequenceRef",
+                    "type": FareStructureElementInSequenceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessRightInProductRef",
+                    "type": AccessRightInProductRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(

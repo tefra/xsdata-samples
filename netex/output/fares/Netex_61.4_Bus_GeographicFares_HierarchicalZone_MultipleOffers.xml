@@ -43,6 +43,44 @@
         <DefaultCurrency>EUR</DefaultCurrency>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="mybus:DTA@Nested_Zone@network" version="1.0">
+          <Name>Stops for Fare network </Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
+          </prerequisites>
+          <Network id="mybus:DTA" version="any">
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="mybus:DTA"/>
+            <tariffZones>
+              <TariffZoneRef version="any" ref="mybus:A"/>
+              <TariffZoneRef version="any" ref="mybus:B"/>
+              <TariffZoneRef version="any" ref="mybus:C"/>
+            </tariffZones>
+          </Network>
+          <tariffZones>
+            <FareZone id="mybus:A" version="any">
+              <Name>Alpha </Name>
+              <ShortName>A</ShortName>
+              <ParentZoneRef version="any" ref="mybus:B"/>
+            </FareZone>
+            <FareZone id="mybus:B" version="any">
+              <Name>Bravo  </Name>
+              <ShortName>B</ShortName>
+              <ParentZoneRef version="any" ref="mybus:C"/>
+              <contains>
+                <TariffZoneRef version="any" ref="mybus:A"/>
+              </contains>
+            </FareZone>
+            <FareZone id="mybus:C" version="any">
+              <Name>Charley  </Name>
+              <ShortName>C</ShortName>
+              <contains>
+                <TariffZoneRef version="any" ref="mybus:B"/>
+              </contains>
+            </FareZone>
+          </tariffZones>
+        </ServiceFrame>
         <FareFrame id="myfares:DTA@Nested_Zone@products" version="1.0">
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="mybus:DTA@Nested_Zone@network"/>
@@ -259,44 +297,6 @@
             </PriceGroup>
           </priceGroups>
         </FareFrame>
-        <ServiceFrame id="mybus:DTA@Nested_Zone@network" version="1.0">
-          <Name>Stops for Fare network </Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
-          </prerequisites>
-          <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="mybus:DTA"/>
-            <tariffZones>
-              <TariffZoneRef version="any" ref="mybus:A"/>
-              <TariffZoneRef version="any" ref="mybus:B"/>
-              <TariffZoneRef version="any" ref="mybus:C"/>
-            </tariffZones>
-          </Network>
-          <tariffZones>
-            <FareZone id="mybus:A" version="any">
-              <Name>Alpha </Name>
-              <ShortName>A</ShortName>
-              <ParentZoneRef version="any" ref="mybus:B"/>
-            </FareZone>
-            <FareZone id="mybus:B" version="any">
-              <Name>Bravo  </Name>
-              <ShortName>B</ShortName>
-              <ParentZoneRef version="any" ref="mybus:C"/>
-              <contains>
-                <TariffZoneRef version="any" ref="mybus:A"/>
-              </contains>
-            </FareZone>
-            <FareZone id="mybus:C" version="any">
-              <Name>Charley  </Name>
-              <ShortName>C</ShortName>
-              <contains>
-                <TariffZoneRef version="any" ref="mybus:B"/>
-              </contains>
-            </FareZone>
-          </tariffZones>
-        </ServiceFrame>
         <ResourceFrame id="mybus:DTA@Common_Resources" version="1.0">
           <codespaces>
             <Codespace id="ntx">

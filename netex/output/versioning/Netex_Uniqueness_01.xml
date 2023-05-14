@@ -13,328 +13,27 @@
         </Codespace>
       </codespaces>
       <frames>
-        <ServiceFrame id="bar:foo" version="001">
-          <Name>FRAME </Name>
-          <lines>
-            <FlexibleLine id="bar:foo1" version="001">
-              <Name>LINE</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-              <BookingMethods/>
-              <BuyWhen/>
-            </FlexibleLine>
-            <Line id="bar:foo" version="001">
-              <Name>LINE</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <groupsOfLines>
-            <GroupOfLines id="bar:foo" version="001">
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </GroupOfLines>
-          </groupsOfLines>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="bar:foo5" version="001">
-              <Name>POINT</Name>
-              <VehicleModes/>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <serviceLinks>
-            <ServiceLink id="bar:foo3" version="001">
-              <Name>LINK</Name>
-              <FromPointRef version="001" ref="bar:foo5"/>
-              <ToPointRef version="001" ref="bar:foo5"/>
-            </ServiceLink>
-          </serviceLinks>
-          <servicePatterns>
-            <ServicePattern id="bar:foo" version="001">
-              <Name>JOURNEY PATTERN</Name>
-              <pointsInSequence>
-                <StopPointInJourneyPattern id="bar:foo" version="001" order="1">
-                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bar:foo" version="001" order="2">
-                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
-                </StopPointInJourneyPattern>
-              </pointsInSequence>
-            </ServicePattern>
-            <ServicePattern id="bar:foo-bis" version="001"/>
-          </servicePatterns>
-          <stopAreas>
-            <StopArea id="bar:foo" version="001"/>
-          </stopAreas>
-          <journeyPatterns>
-            <JourneyPattern id="bar:foo2" version="001">
-              <Name>JOURNEY PATTERN</Name>
-              <pointsInSequence>
-                <TimingPointInJourneyPattern id="bar:foo2" version="001" order="1">
-                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
-                </TimingPointInJourneyPattern>
-                <TimingPointInJourneyPattern id="bar:foo2" version="001" order="2">
-                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
-                </TimingPointInJourneyPattern>
-              </pointsInSequence>
-            </JourneyPattern>
-          </journeyPatterns>
-        </ServiceFrame>
-        <TimetableFrame id="bar:foo" version="001">
-          <Name>FRAME </Name>
-          <VehicleModes/>
-          <vehicleJourneys>
-            <VehicleJourney id="bar:foo" version="001">
-              <Name>JOURNEY</Name>
-            </VehicleJourney>
-            <ServiceJourney id="bar:foo1" version="001">
-              <Name>JOURNEY</Name>
-            </ServiceJourney>
-            <TemplateServiceJourney id="bar:foo2" version="001">
-              <Name>JOURNEY</Name>
-            </TemplateServiceJourney>
-            <SpecialService id="bar:foo3" version="001">
-              <Name>JOURNEY</Name>
-              <BookingMethods/>
-              <BuyWhen/>
-            </SpecialService>
-            <DatedServiceJourney id="bar:foo4" version="001">
-              <Name>JOURNEY</Name>
-            </DatedServiceJourney>
-            <DeadRun id="bar:foo5" version="001">
-              <Name>JOURNEY</Name>
-            </DeadRun>
-          </vehicleJourneys>
-          <serviceFacilitySets>
-            <ServiceFacilitySet id="bar:foo2" version="001">
-              <Description>FACILITY SET</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList/>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
-            </ServiceFacilitySet>
-          </serviceFacilitySets>
-        </TimetableFrame>
-        <SiteFrame id="bar:foo" version="001">
-          <topographicPlaces>
-            <TopographicPlace id="bar:foo1" version="001">
-              <Descriptor>
-                <Name>ZONE</Name>
-              </Descriptor>
-            </TopographicPlace>
-          </topographicPlaces>
-          <groupsOfStopPlaces>
-            <GroupOfStopPlaces id="bar:foo" version="001"/>
-          </groupsOfStopPlaces>
-          <stopPlaces>
-            <StopPlace id="bar:foo2" version="001">
-              <Name>ZONE</Name>
-              <AccessModes/>
-              <equipmentPlaces>
-                <EquipmentPlace id="bar:foo2-x" version="001">
-                  <Name>ZONE</Name>
-                  <placeEquipments>
-                    <HeadingSign id="bar:foo2" version="001">
-                      <PlaceName>SIGN</PlaceName>
-                    </HeadingSign>
-                    <PlaceLighting id="bar:foo2" version="001"/>
-                  </placeEquipments>
-                </EquipmentPlace>
-              </equipmentPlaces>
-              <OtherTransportModes/>
-              <quays>
-                <Quay id="bar:foo2-a" version="001">
-                  <Name>ZONE</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="bar:foo2-bis" version="001">
-              <Name>ZONE</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
-            </StopPlace>
-          </stopPlaces>
-          <flexibleStopPlaces>
-            <FlexibleStopPlace id="bar:foo3" version="001">
-              <Name>ZONE</Name>
-            </FlexibleStopPlace>
-          </flexibleStopPlaces>
-          <pointsOfInterest>
-            <PointOfInterest id="bar:foo4" version="001">
-              <Name>ZONE</Name>
-              <AccessModes/>
-            </PointOfInterest>
-          </pointsOfInterest>
-          <parkings>
-            <Parking id="bar:foo5" version="001">
-              <Name>ZONE</Name>
-              <AccessModes/>
-              <entrances>
-                <ParkingPassengerEntrance id="bar:foo5-a" version="001">
-                  <AccessModes/>
-                </ParkingPassengerEntrance>
-                <ParkingPassengerEntrance id="bar:foo5-b" version="001">
-                  <AccessModes/>
-                </ParkingPassengerEntrance>
-              </entrances>
-              <ParkingVehicleTypes/>
-              <ParkingPaymentProcess/>
-              <PaymentMethods/>
-              <CurrenciesAccepted/>
-              <CardsAccepted/>
-              <parkingProperties>
-                <ParkingProperties id="bar:foo" version="001">
-                  <ParkingUserTypes/>
-                  <ParkingVehicleTypes/>
-                  <ParkingStayList/>
-                  <spaces>
-                    <ParkingCapacity id="bar:foo" version="001"/>
-                  </spaces>
-                </ParkingProperties>
-              </parkingProperties>
-              <parkingAreas>
-                <ParkingArea id="bar:foo7" version="001">
-                  <Name>ZONE</Name>
-                  <AccessModes/>
-                  <bays>
-                    <ParkingBay id="bar:foo8" version="001">
-                      <Name>ZONE</Name>
-                      <AccessModes/>
-                    </ParkingBay>
-                  </bays>
-                </ParkingArea>
-              </parkingAreas>
-              <vehicleEntrances>
-                <ParkingEntranceForVehicles id="bar:foo" version="001">
-                  <AccessModes/>
-                </ParkingEntranceForVehicles>
-                <ParkingEntranceForVehicles id="bar:foo1" version="001">
-                  <AccessModes/>
-                </ParkingEntranceForVehicles>
-              </vehicleEntrances>
-            </Parking>
-          </parkings>
-          <pointOfInterestClassifications>
-            <PointOfInterestClassification id="bar:foo" version="001"/>
-          </pointOfInterestClassifications>
-          <tariffZones>
-            <FareZone id="bar:foo10" version="001">
-              <Name>ZONE</Name>
-            </FareZone>
-            <TariffZone id="bar:foo9" version="001">
-              <Name>ZONE</Name>
-            </TariffZone>
-          </tariffZones>
-          <siteFacilitySets>
-            <SiteFacilitySet id="bar:foo" version="001">
-              <Description>FACILITY SET</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <AccessFacilityList/>
-              <EmergencyServiceList/>
-              <HireFacilityList/>
-              <LuggageLockerFacilityList/>
-              <LuggageServiceFacilityList/>
-              <MoneyFacilityList/>
-              <ParkingFacilityList/>
-            </SiteFacilitySet>
-          </siteFacilitySets>
-        </SiteFrame>
-        <InfrastructureFrame id="bar:foo" version="001">
-          <Name>My Network  (V1) </Name>
-          <junctions>
-            <WireJunction id="bar:foo" version="001">
-              <Name>POINT</Name>
-            </WireJunction>
-            <RailwayJunction id="bar:foo1" version="001">
-              <Name>POINT</Name>
-            </RailwayJunction>
-            <RoadJunction id="bar:foo2" version="001">
-              <Name>POINT</Name>
-            </RoadJunction>
-          </junctions>
-          <elements>
-            <WireElement id="bar:foo" version="001">
-              <Name>LINK</Name>
-              <FromPointRef version="001" ref="bar:foo"/>
-              <ToPointRef version="001" ref="bar:foo"/>
-            </WireElement>
-            <RailwayElement id="bar:foo1" version="001">
-              <Name>LINK</Name>
-              <FromPointRef version="001" ref="bar:foo1"/>
-              <ToPointRef version="001" ref="bar:foo1"/>
-            </RailwayElement>
-            <RoadElement id="bar:foo2" version="001">
-              <Name>LINK</Name>
-              <FromPointRef version="001" ref="bar:foo2"/>
-              <ToPointRef version="001" ref="bar:foo2"/>
-            </RoadElement>
-          </elements>
-          <activationPoints>
-            <BeaconPoint id="bar:foo4" version="001"/>
-            <ActivationPoint id="bar:foo3" version="001"/>
-          </activationPoints>
-        </InfrastructureFrame>
         <ResourceFrame id="bar:foo" version="001">
           <versions>
             <Version id="bar:foo" version="001"/>
           </versions>
           <organisations>
-            <Authority id="bar:foo2" version="001">
-              <OrganisationType/>
-            </Authority>
             <Operator id="bar:foo" version="001">
               <OrganisationType/>
               <OperatorActivities/>
             </Operator>
+            <Authority id="bar:foo2" version="001">
+              <OrganisationType/>
+            </Authority>
             <ServicedOrganisation id="bar:foo3" version="001">
               <OrganisationType/>
             </ServicedOrganisation>
-            <ManagementAgent id="bar:foo5" version="001">
-              <OrganisationType/>
-            </ManagementAgent>
             <TravelAgent id="bar:foo4" version="001">
               <OrganisationType/>
             </TravelAgent>
+            <ManagementAgent id="bar:foo5" version="001">
+              <OrganisationType/>
+            </ManagementAgent>
             <OtherOrganisation id="bar:foo5" version="001">
               <validityConditions>
                 <ValidityCondition id="bar:foo" version="001"/>
@@ -469,10 +168,10 @@
             </SchematicMap>
           </schematicMaps>
           <groupsOfEntities>
+            <Zone id="bar:foo6" version="001"/>
             <Entrance id="bar:foo6" version="001">
               <AccessModes/>
             </Entrance>
-            <Zone id="bar:foo6" version="001"/>
           </groupsOfEntities>
           <zones>
             <GeneralZone id="bar:foo3" version="001">
@@ -496,6 +195,307 @@
             <Whitelist id="bar:foo" version="001"/>
           </whitelists>
         </ResourceFrame>
+        <InfrastructureFrame id="bar:foo" version="001">
+          <Name>My Network  (V1) </Name>
+          <junctions>
+            <WireJunction id="bar:foo" version="001">
+              <Name>POINT</Name>
+            </WireJunction>
+            <RailwayJunction id="bar:foo1" version="001">
+              <Name>POINT</Name>
+            </RailwayJunction>
+            <RoadJunction id="bar:foo2" version="001">
+              <Name>POINT</Name>
+            </RoadJunction>
+          </junctions>
+          <elements>
+            <WireElement id="bar:foo" version="001">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo"/>
+              <ToPointRef version="001" ref="bar:foo"/>
+            </WireElement>
+            <RailwayElement id="bar:foo1" version="001">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo1"/>
+              <ToPointRef version="001" ref="bar:foo1"/>
+            </RailwayElement>
+            <RoadElement id="bar:foo2" version="001">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo2"/>
+              <ToPointRef version="001" ref="bar:foo2"/>
+            </RoadElement>
+          </elements>
+          <activationPoints>
+            <ActivationPoint id="bar:foo3" version="001"/>
+            <BeaconPoint id="bar:foo4" version="001"/>
+          </activationPoints>
+        </InfrastructureFrame>
+        <SiteFrame id="bar:foo" version="001">
+          <topographicPlaces>
+            <TopographicPlace id="bar:foo1" version="001">
+              <Descriptor>
+                <Name>ZONE</Name>
+              </Descriptor>
+            </TopographicPlace>
+          </topographicPlaces>
+          <groupsOfStopPlaces>
+            <GroupOfStopPlaces id="bar:foo" version="001"/>
+          </groupsOfStopPlaces>
+          <stopPlaces>
+            <StopPlace id="bar:foo2" version="001">
+              <Name>ZONE</Name>
+              <AccessModes/>
+              <equipmentPlaces>
+                <EquipmentPlace id="bar:foo2-x" version="001">
+                  <Name>ZONE</Name>
+                  <placeEquipments>
+                    <HeadingSign id="bar:foo2" version="001">
+                      <PlaceName>SIGN</PlaceName>
+                    </HeadingSign>
+                    <PlaceLighting id="bar:foo2" version="001"/>
+                  </placeEquipments>
+                </EquipmentPlace>
+              </equipmentPlaces>
+              <OtherTransportModes/>
+              <quays>
+                <Quay id="bar:foo2-a" version="001">
+                  <Name>ZONE</Name>
+                  <AccessModes/>
+                  <OtherTransportModes/>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="bar:foo2-bis" version="001">
+              <Name>ZONE</Name>
+              <AccessModes/>
+              <OtherTransportModes/>
+            </StopPlace>
+          </stopPlaces>
+          <flexibleStopPlaces>
+            <FlexibleStopPlace id="bar:foo3" version="001">
+              <Name>ZONE</Name>
+            </FlexibleStopPlace>
+          </flexibleStopPlaces>
+          <pointsOfInterest>
+            <PointOfInterest id="bar:foo4" version="001">
+              <Name>ZONE</Name>
+              <AccessModes/>
+            </PointOfInterest>
+          </pointsOfInterest>
+          <parkings>
+            <Parking id="bar:foo5" version="001">
+              <Name>ZONE</Name>
+              <AccessModes/>
+              <entrances>
+                <ParkingPassengerEntrance id="bar:foo5-a" version="001">
+                  <AccessModes/>
+                </ParkingPassengerEntrance>
+                <ParkingPassengerEntrance id="bar:foo5-b" version="001">
+                  <AccessModes/>
+                </ParkingPassengerEntrance>
+              </entrances>
+              <ParkingVehicleTypes/>
+              <ParkingPaymentProcess/>
+              <PaymentMethods/>
+              <CurrenciesAccepted/>
+              <CardsAccepted/>
+              <parkingProperties>
+                <ParkingProperties id="bar:foo" version="001">
+                  <ParkingUserTypes/>
+                  <ParkingVehicleTypes/>
+                  <ParkingStayList/>
+                  <spaces>
+                    <ParkingCapacity id="bar:foo" version="001"/>
+                  </spaces>
+                </ParkingProperties>
+              </parkingProperties>
+              <parkingAreas>
+                <ParkingArea id="bar:foo7" version="001">
+                  <Name>ZONE</Name>
+                  <AccessModes/>
+                  <bays>
+                    <ParkingBay id="bar:foo8" version="001">
+                      <Name>ZONE</Name>
+                      <AccessModes/>
+                    </ParkingBay>
+                  </bays>
+                </ParkingArea>
+              </parkingAreas>
+              <vehicleEntrances>
+                <ParkingEntranceForVehicles id="bar:foo" version="001">
+                  <AccessModes/>
+                </ParkingEntranceForVehicles>
+                <ParkingEntranceForVehicles id="bar:foo1" version="001">
+                  <AccessModes/>
+                </ParkingEntranceForVehicles>
+              </vehicleEntrances>
+            </Parking>
+          </parkings>
+          <pointOfInterestClassifications>
+            <PointOfInterestClassification id="bar:foo" version="001"/>
+          </pointOfInterestClassifications>
+          <tariffZones>
+            <TariffZone id="bar:foo9" version="001">
+              <Name>ZONE</Name>
+            </TariffZone>
+            <FareZone id="bar:foo10" version="001">
+              <Name>ZONE</Name>
+            </FareZone>
+          </tariffZones>
+          <siteFacilitySets>
+            <SiteFacilitySet id="bar:foo" version="001">
+              <Description>FACILITY SET</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <AccessFacilityList/>
+              <EmergencyServiceList/>
+              <HireFacilityList/>
+              <LuggageLockerFacilityList/>
+              <LuggageServiceFacilityList/>
+              <MoneyFacilityList/>
+              <ParkingFacilityList/>
+            </SiteFacilitySet>
+          </siteFacilitySets>
+        </SiteFrame>
+        <ServiceFrame id="bar:foo" version="001">
+          <Name>FRAME </Name>
+          <lines>
+            <Line id="bar:foo" version="001">
+              <Name>LINE</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <FlexibleLine id="bar:foo1" version="001">
+              <Name>LINE</Name>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+              <BookingMethods/>
+              <BuyWhen/>
+            </FlexibleLine>
+          </lines>
+          <groupsOfLines>
+            <GroupOfLines id="bar:foo" version="001">
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </GroupOfLines>
+          </groupsOfLines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="bar:foo5" version="001">
+              <Name>POINT</Name>
+              <VehicleModes/>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <serviceLinks>
+            <ServiceLink id="bar:foo3" version="001">
+              <Name>LINK</Name>
+              <FromPointRef version="001" ref="bar:foo5"/>
+              <ToPointRef version="001" ref="bar:foo5"/>
+            </ServiceLink>
+          </serviceLinks>
+          <servicePatterns>
+            <ServicePattern id="bar:foo" version="001">
+              <Name>JOURNEY PATTERN</Name>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bar:foo" version="001" order="1">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bar:foo" version="001" order="2">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServicePattern>
+            <ServicePattern id="bar:foo-bis" version="001"/>
+          </servicePatterns>
+          <stopAreas>
+            <StopArea id="bar:foo" version="001"/>
+          </stopAreas>
+          <journeyPatterns>
+            <JourneyPattern id="bar:foo2" version="001">
+              <Name>JOURNEY PATTERN</Name>
+              <pointsInSequence>
+                <TimingPointInJourneyPattern id="bar:foo2" version="001" order="1">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </TimingPointInJourneyPattern>
+                <TimingPointInJourneyPattern id="bar:foo2" version="001" order="2">
+                  <ScheduledStopPointRef version="001" ref="bar:foo5"/>
+                </TimingPointInJourneyPattern>
+              </pointsInSequence>
+            </JourneyPattern>
+          </journeyPatterns>
+        </ServiceFrame>
+        <TimetableFrame id="bar:foo" version="001">
+          <Name>FRAME </Name>
+          <VehicleModes/>
+          <vehicleJourneys>
+            <VehicleJourney id="bar:foo" version="001">
+              <Name>JOURNEY</Name>
+            </VehicleJourney>
+            <ServiceJourney id="bar:foo1" version="001">
+              <Name>JOURNEY</Name>
+            </ServiceJourney>
+            <TemplateServiceJourney id="bar:foo2" version="001">
+              <Name>JOURNEY</Name>
+            </TemplateServiceJourney>
+            <SpecialService id="bar:foo3" version="001">
+              <Name>JOURNEY</Name>
+              <BookingMethods/>
+              <BuyWhen/>
+            </SpecialService>
+            <DatedServiceJourney id="bar:foo4" version="001">
+              <Name>JOURNEY</Name>
+            </DatedServiceJourney>
+            <DeadRun id="bar:foo5" version="001">
+              <Name>JOURNEY</Name>
+            </DeadRun>
+          </vehicleJourneys>
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="bar:foo2" version="001">
+              <Description>FACILITY SET</Description>
+              <AccessibilityInfoFacilityList/>
+              <AssistanceFacilityList/>
+              <AccessibilityToolList/>
+              <CarServiceFacilityList/>
+              <CateringFacilityList/>
+              <FamilyFacilityList/>
+              <FareClasses/>
+              <MealFacilityList/>
+              <MedicalFacilityList/>
+              <MobilityFacilityList/>
+              <NuisanceFacilityList/>
+              <PassengerCommsFacilityList/>
+              <PassengerInformationFacilityList/>
+              <RetailFacilityList/>
+              <SafetyFacilityList/>
+              <SanitaryFacilityList/>
+              <TicketingFacilityList/>
+              <TicketingServiceFacilityList/>
+              <VehicleAccessFacilityList/>
+              <AccommodationAccessList/>
+              <AccommodationFacilityList/>
+              <BookingProcessFacilityList/>
+              <CouchetteFacilityList/>
+              <LuggageCarriageFacilityList/>
+              <ServiceReservationFacilityList/>
+              <UicProductCharacteristicList/>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+        </TimetableFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

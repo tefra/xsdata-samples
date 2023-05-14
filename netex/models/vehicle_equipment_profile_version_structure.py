@@ -73,428 +73,277 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    retail_device_ref: Optional[RetailDeviceRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "RetailDeviceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_booking_service_ref: Optional[AssistanceBookingServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "AssistanceBookingServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    catering_service_ref: Optional[CateringServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "CateringServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_service_ref: Optional[RetailServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "RetailServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    money_service_ref: Optional[MoneyServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "MoneyServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    hire_service_ref: Optional[HireServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "HireServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    communication_service_ref: Optional[CommunicationServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "CommunicationServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    meeting_point_service_ref: Optional[MeetingPointServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "MeetingPointServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    left_luggage_service_ref: Optional[LeftLuggageServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "LeftLuggageServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_service_ref: Optional[LuggageServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "LuggageServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lost_property_service_ref: Optional[LostPropertyServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "LostPropertyServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complaints_service_ref: Optional[ComplaintsServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "ComplaintsServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_service_ref: Optional[CustomerServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "CustomerServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_service_ref: Optional[AssistanceServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "AssistanceServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_service_ref: Optional[TicketingServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "TicketingServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    local_service_ref: Optional[LocalServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "LocalServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_charging_equipment_ref: Optional[VehicleChargingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleChargingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cycle_storage_equipment_ref: Optional[CycleStorageEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "CycleStorageEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticket_validator_equipment_ref: Optional[TicketValidatorEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "TicketValidatorEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_equipment_ref: Optional[TicketingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "TicketingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    trolley_stand_equipment_ref: Optional[TrolleyStandEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "TrolleyStandEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    seating_equipment_ref: Optional[SeatingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "SeatingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    shelter_equipment_ref: Optional[ShelterEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "ShelterEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_locker_equipment_ref: Optional[LuggageLockerEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "LuggageLockerEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    waiting_room_equipment_ref: Optional[WaitingRoomEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "WaitingRoomEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    waiting_equipment_ref: Optional[WaitingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "WaitingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_equipment_ref: Optional[SiteEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "SiteEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    heading_sign_ref: Optional[HeadingSignRef] = field(
-        default=None,
-        metadata={
-            "name": "HeadingSignRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_sign_ref: Optional[GeneralSignRef] = field(
-        default=None,
-        metadata={
-            "name": "GeneralSignRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place_sign_ref: Optional[PlaceSignRef] = field(
-        default=None,
-        metadata={
-            "name": "PlaceSignRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sign_equipment_ref: Optional[SignEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "SignEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place_lighting_equipment_ref: Optional[PlaceLightingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PlaceLightingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rough_surface_ref: Optional[RoughSurfaceRef] = field(
-        default=None,
-        metadata={
-            "name": "RoughSurfaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    staircase_equipment_ref: Optional[StaircaseEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "StaircaseEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    queueing_equipment_ref: Optional[QueueingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "QueueingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travelator_equipment_ref: Optional[TravelatorEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "TravelatorEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    escalator_equipment_ref: Optional[EscalatorEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "EscalatorEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lift_equipment_ref: Optional[LiftEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "LiftEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    crossing_equipment_ref: Optional[CrossingEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "CrossingEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ramp_equipment_ref: Optional[RampEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "RampEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entrance_equipment_ref: Optional[EntranceEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "EntranceEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_equipment_ref: Optional[AccessEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "AccessEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    activated_equipment_ref: Optional[ActivatedEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "ActivatedEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_equipment_ref: Optional[PassengerInformationEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerInformationEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rubbish_disposal_equipment_ref: Optional[RubbishDisposalEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "RubbishDisposalEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    help_point_equipment_ref: Optional[HelpPointEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "HelpPointEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_safety_equipment_ref: Optional[PassengerSafetyEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerSafetyEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sanitary_equipment_ref: Optional[SanitaryEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "SanitaryEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wheelchair_vehicle_ref: Optional[WheelchairVehicleRef] = field(
-        default=None,
-        metadata={
-            "name": "WheelchairVehicleRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_vehicle_equipment_ref: Optional[AccessVehicleEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "AccessVehicleEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_equipment_ref: Optional[VehicleEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_equipment_ref: Optional[PassengerEquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "PassengerEquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    equipment_ref: Optional[EquipmentRef] = field(
-        default=None,
-        metadata={
-            "name": "EquipmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailDeviceRef",
+                    "type": RetailDeviceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceBookingServiceRef",
+                    "type": AssistanceBookingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringServiceRef",
+                    "type": CateringServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailServiceRef",
+                    "type": RetailServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyServiceRef",
+                    "type": MoneyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireServiceRef",
+                    "type": HireServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationServiceRef",
+                    "type": CommunicationServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointServiceRef",
+                    "type": MeetingPointServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageServiceRef",
+                    "type": LeftLuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageServiceRef",
+                    "type": LuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyServiceRef",
+                    "type": LostPropertyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsServiceRef",
+                    "type": ComplaintsServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerServiceRef",
+                    "type": CustomerServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceServiceRef",
+                    "type": AssistanceServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingServiceRef",
+                    "type": TicketingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LocalServiceRef",
+                    "type": LocalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleChargingEquipmentRef",
+                    "type": VehicleChargingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipmentRef",
+                    "type": CycleStorageEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketValidatorEquipmentRef",
+                    "type": TicketValidatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingEquipmentRef",
+                    "type": TicketingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrolleyStandEquipmentRef",
+                    "type": TrolleyStandEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeatingEquipmentRef",
+                    "type": SeatingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ShelterEquipmentRef",
+                    "type": ShelterEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipmentRef",
+                    "type": LuggageLockerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingRoomEquipmentRef",
+                    "type": WaitingRoomEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingEquipmentRef",
+                    "type": WaitingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteEquipmentRef",
+                    "type": SiteEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadingSignRef",
+                    "type": HeadingSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSignRef",
+                    "type": GeneralSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceSignRef",
+                    "type": PlaceSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SignEquipmentRef",
+                    "type": SignEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceLightingEquipmentRef",
+                    "type": PlaceLightingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoughSurfaceRef",
+                    "type": RoughSurfaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StaircaseEquipmentRef",
+                    "type": StaircaseEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QueueingEquipmentRef",
+                    "type": QueueingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelatorEquipmentRef",
+                    "type": TravelatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EscalatorEquipmentRef",
+                    "type": EscalatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LiftEquipmentRef",
+                    "type": LiftEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CrossingEquipmentRef",
+                    "type": CrossingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RampEquipmentRef",
+                    "type": RampEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceEquipmentRef",
+                    "type": EntranceEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessEquipmentRef",
+                    "type": AccessEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivatedEquipmentRef",
+                    "type": ActivatedEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationEquipmentRef",
+                    "type": PassengerInformationEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RubbishDisposalEquipmentRef",
+                    "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HelpPointEquipmentRef",
+                    "type": HelpPointEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerSafetyEquipmentRef",
+                    "type": PassengerSafetyEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SanitaryEquipmentRef",
+                    "type": SanitaryEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleRef",
+                    "type": WheelchairVehicleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipmentRef",
+                    "type": AccessVehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEquipmentRef",
+                    "type": VehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerEquipmentRef",
+                    "type": PassengerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EquipmentRef",
+                    "type": EquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     units: Optional[int] = field(

@@ -41,53 +41,6 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
-        <VehicleScheduleFrame id="ops:VSF_23_O" version="1">
-          <Name>BLOCKS Winter timetable for VS Line 12 Example</Name>
-          <blocks>
-            <Block id="ops:blk_42c@A+E" version="any">
-              <Description>Clockwise block</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT10H</FinishingDuration>
-              <VehicleTypeRef ref="xj:vt-447">EXTERNAL</VehicleTypeRef>
-              <StartPointRef ref="mybus:Alpha"/>
-              <EndPointRef ref="mybus:Alpha"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj_42c@A+E" version="any">
-                  <Description>&gt;Run forClockwise  Block 1  2 journeys  </Description>
-                  <PreparationDuration>PT10M</PreparationDuration>
-                  <StartTimeInBlock>14:00:00</StartTimeInBlock>
-                  <FinishingDuration>PT0M</FinishingDuration>
-                  <LineRef version="any" ref="mybus:LN_42"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="hde:sj_42c@A+E@01"/>
-                    <VehicleJourneyRef version="any" ref="hde:sj_42c@A+E@02"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-            </Block>
-            <Block id="ops:blk_42a@E+A" version="any">
-              <Description>Clockwise block</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT10H</FinishingDuration>
-              <VehicleTypeRef ref="xj:vt-447">EXTERNAL</VehicleTypeRef>
-              <StartPointRef ref="mybus:Alpha"/>
-              <EndPointRef ref="mybus:Alpha"/>
-              <coursesOfJourneys>
-                <CourseOfJourneys id="ops:coj__42a@E+A" version="any">
-                  <Description>&gt;Run for Block 1  3 journeys  </Description>
-                  <PreparationDuration>PT10M</PreparationDuration>
-                  <StartTimeInBlock>14:30:00</StartTimeInBlock>
-                  <FinishingDuration>PT0M</FinishingDuration>
-                  <LineRef version="any" ref="mybus:LN_42"/>
-                  <journeys>
-                    <VehicleJourneyRef version="any" ref="hde:sj_42a@E+A@03"/>
-                    <VehicleJourneyRef version="any" ref="hde:sj_42a@E+A@04"/>
-                  </journeys>
-                </CourseOfJourneys>
-              </coursesOfJourneys>
-            </Block>
-          </blocks>
-        </VehicleScheduleFrame>
         <ServiceFrame id="hde:svf_42" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
           <lines>
@@ -1168,16 +1121,53 @@
             </ServiceJourneyInterchange>
           </journeyInterchanges>
         </TimetableFrame>
-        <SiteFrame id="hde:CAL_02" version="1">
-          <topographicPlaces>
-            <TopographicPlace id="hde:TP_1" version="any">
-              <Name>Western Area</Name>
-              <Descriptor id="hde:TP_1" version="any">
-                <Name>Area West</Name>
-              </Descriptor>
-            </TopographicPlace>
-          </topographicPlaces>
-        </SiteFrame>
+        <VehicleScheduleFrame id="ops:VSF_23_O" version="1">
+          <Name>BLOCKS Winter timetable for VS Line 12 Example</Name>
+          <blocks>
+            <Block id="ops:blk_42c@A+E" version="any">
+              <Description>Clockwise block</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT10H</FinishingDuration>
+              <VehicleTypeRef ref="xj:vt-447">EXTERNAL</VehicleTypeRef>
+              <StartPointRef ref="mybus:Alpha"/>
+              <EndPointRef ref="mybus:Alpha"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj_42c@A+E" version="any">
+                  <Description>&gt;Run forClockwise  Block 1  2 journeys  </Description>
+                  <PreparationDuration>PT10M</PreparationDuration>
+                  <StartTimeInBlock>14:00:00</StartTimeInBlock>
+                  <FinishingDuration>PT0M</FinishingDuration>
+                  <LineRef version="any" ref="mybus:LN_42"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="hde:sj_42c@A+E@01"/>
+                    <VehicleJourneyRef version="any" ref="hde:sj_42c@A+E@02"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+            </Block>
+            <Block id="ops:blk_42a@E+A" version="any">
+              <Description>Clockwise block</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT10H</FinishingDuration>
+              <VehicleTypeRef ref="xj:vt-447">EXTERNAL</VehicleTypeRef>
+              <StartPointRef ref="mybus:Alpha"/>
+              <EndPointRef ref="mybus:Alpha"/>
+              <coursesOfJourneys>
+                <CourseOfJourneys id="ops:coj__42a@E+A" version="any">
+                  <Description>&gt;Run for Block 1  3 journeys  </Description>
+                  <PreparationDuration>PT10M</PreparationDuration>
+                  <StartTimeInBlock>14:30:00</StartTimeInBlock>
+                  <FinishingDuration>PT0M</FinishingDuration>
+                  <LineRef version="any" ref="mybus:LN_42"/>
+                  <journeys>
+                    <VehicleJourneyRef version="any" ref="hde:sj_42a@E+A@03"/>
+                    <VehicleJourneyRef version="any" ref="hde:sj_42a@E+A@04"/>
+                  </journeys>
+                </CourseOfJourneys>
+              </coursesOfJourneys>
+            </Block>
+          </blocks>
+        </VehicleScheduleFrame>
         <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
           <ServiceCalendar id="hde:CAL_02" version="any">
@@ -1236,6 +1226,16 @@
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
+        <SiteFrame id="hde:CAL_02" version="1">
+          <topographicPlaces>
+            <TopographicPlace id="hde:TP_1" version="any">
+              <Name>Western Area</Name>
+              <Descriptor id="hde:TP_1" version="any">
+                <Name>Area West</Name>
+              </Descriptor>
+            </TopographicPlace>
+          </topographicPlaces>
+        </SiteFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

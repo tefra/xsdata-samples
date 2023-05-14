@@ -42,6 +42,65 @@
         </Version>
       </versions>
       <frames>
+        <ServiceCalendarFrame id="mybus:ntwkf001@calendar" version="002">
+          <versions>
+            <Version id="mybus:ntwkf001@calendar" created="2010-05-17T09:30:47Z" version="002">
+              <Status>versioned</Status>
+              <Description>Version 2 of Service Calendar Frame: ntwkf001</Description>
+              <DerivedFromVersionRef version="001" ref="mybus:ntwkf001"/>
+            </Version>
+            <Version id="mybus:DT001_MF" created="2010-05-17T09:30:47Z" version="001">
+              <Status>versioned</Status>
+              <Description>Version 1 of Day Type  DT001_MF</Description>
+            </Version>
+            <Version id="mybus:DT002_MFHols" created="2010-05-17T09:30:47Z" version="001">
+              <Status>versioned</Status>
+              <Description>Version 1 of Day Type DT002_MFHols</Description>
+            </Version>
+            <Version id="mybus:DT002_WE" created="2010-05-17T09:30:47Z" version="001">
+              <Status>versioned</Status>
+              <Description>Version 1 of Day Type DT002_WE</Description>
+            </Version>
+          </versions>
+          <dayTypes>
+            <DayType id="mybus:DT001_MF" created="2010-05-18T10:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
+              <Name>Monday to Friday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="mybus:DT002_MFHols" created="2010-05-18T10:30:47Z" version="001">
+              <Name>Monday to Friday, Holidays</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType id="mybus:DT002_WE" created="2010-05-18T10:30:47Z" version="001">
+              <Name>Weekend </Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday Sunday</DaysOfWeek>
+                  <WeeksOfMonth/>
+                  <HolidayTypes/>
+                  <Seasons/>
+                  <Tides/>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+        </ServiceCalendarFrame>
         <ServiceFrame id="mybus:ntwkf001@service" created="2010-05-17T09:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="003" derivedFromVersionRef="002">
           <validityConditions>
             <AvailabilityCondition id="mybus:VC002_mf" created="2010-05-18T10:30:47Z" modification="revise" version="002" responsibilitySetRef="mybus:RS_10">
@@ -111,65 +170,6 @@
             </ServiceLink>
           </serviceLinks>
         </ServiceFrame>
-        <ServiceCalendarFrame id="mybus:ntwkf001@calendar" version="002">
-          <versions>
-            <Version id="mybus:ntwkf001@calendar" created="2010-05-17T09:30:47Z" version="002">
-              <Status>versioned</Status>
-              <Description>Version 2 of Service Calendar Frame: ntwkf001</Description>
-              <DerivedFromVersionRef version="001" ref="mybus:ntwkf001"/>
-            </Version>
-            <Version id="mybus:DT001_MF" created="2010-05-17T09:30:47Z" version="001">
-              <Status>versioned</Status>
-              <Description>Version 1 of Day Type  DT001_MF</Description>
-            </Version>
-            <Version id="mybus:DT002_MFHols" created="2010-05-17T09:30:47Z" version="001">
-              <Status>versioned</Status>
-              <Description>Version 1 of Day Type DT002_MFHols</Description>
-            </Version>
-            <Version id="mybus:DT002_WE" created="2010-05-17T09:30:47Z" version="001">
-              <Status>versioned</Status>
-              <Description>Version 1 of Day Type DT002_WE</Description>
-            </Version>
-          </versions>
-          <dayTypes>
-            <DayType id="mybus:DT001_MF" created="2010-05-18T10:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
-              <Name>Monday to Friday</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>WorkingDay</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </DayType>
-            <DayType id="mybus:DT002_MFHols" created="2010-05-18T10:30:47Z" version="001">
-              <Name>Monday to Friday, Holidays</Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes>AnyHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </DayType>
-            <DayType id="mybus:DT002_WE" created="2010-05-18T10:30:47Z" version="001">
-              <Name>Weekend </Name>
-              <properties>
-                <PropertyOfDay>
-                  <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
-                </PropertyOfDay>
-              </properties>
-            </DayType>
-          </dayTypes>
-        </ServiceCalendarFrame>
       </frames>
     </CompositeFrame>
   </dataObjects>

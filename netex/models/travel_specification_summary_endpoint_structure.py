@@ -22,28 +22,27 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address_ref: Optional[PostalAddressRef] = field(
+    postal_address_ref_or_road_address_ref_or_address_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "PostalAddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_address_ref: Optional[RoadAddressRef] = field(
-        default=None,
-        metadata={
-            "name": "RoadAddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    address_ref: Optional[AddressRef] = field(
-        default=None,
-        metadata={
-            "name": "AddressRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddressRef",
+                    "type": PostalAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddressRef",
+                    "type": RoadAddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AddressRef",
+                    "type": AddressRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(

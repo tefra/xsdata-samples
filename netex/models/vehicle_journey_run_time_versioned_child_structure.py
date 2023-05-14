@@ -12,19 +12,21 @@ class VehicleJourneyRunTimeVersionedChildStructure(JourneyRunTimeVersionedChildS
     class Meta:
         name = "VehicleJourneyRunTime_VersionedChildStructure"
 
-    dead_run_ref: Optional[DeadRunRef] = field(
+    dead_run_ref_or_vehicle_journey_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "DeadRunRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_journey_ref: Optional[VehicleJourneyRef] = field(
-        default=None,
-        metadata={
-            "name": "VehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

@@ -17,59 +17,46 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupMembershipRefs_RelStructure"
 
-    stop_area_ref: List[StopAreaRef] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StopAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_zone_ref: List[AccessZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    transport_administrative_zone_ref: List[TransportAdministrativeZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TransportAdministrativeZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    administrative_zone_ref: List[AdministrativeZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "AdministrativeZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_zone_ref: List[FareZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_zone_ref: List[TariffZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    zone_ref: List[ZoneRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "ZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StopAreaRef",
+                    "type": StopAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessZoneRef",
+                    "type": AccessZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportAdministrativeZoneRef",
+                    "type": TransportAdministrativeZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdministrativeZoneRef",
+                    "type": AdministrativeZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareZoneRef",
+                    "type": FareZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffZoneRef",
+                    "type": TariffZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ZoneRef",
+                    "type": ZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

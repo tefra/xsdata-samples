@@ -14,35 +14,31 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transfersInFrame_RelStructure"
 
-    connection: List[Connection] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "Connection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    default_connection: List[DefaultConnection] = field(
-        default_factory=list,
-        metadata={
-            "name": "DefaultConnection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    site_connection: List[SiteConnection] = field(
-        default_factory=list,
-        metadata={
-            "name": "SiteConnection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access: List[Access] = field(
-        default_factory=list,
-        metadata={
-            "name": "Access",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Connection",
+                    "type": Connection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DefaultConnection",
+                    "type": DefaultConnection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteConnection",
+                    "type": SiteConnection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Access",
+                    "type": Access,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

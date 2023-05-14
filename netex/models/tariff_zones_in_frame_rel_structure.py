@@ -12,19 +12,21 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    fare_zone: List[FareZone] = field(
+    fare_zone_or_tariff_zone: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_zone: List[TariffZone] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffZone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareZone",
+                    "type": FareZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffZone",
+                    "type": TariffZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

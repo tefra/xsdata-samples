@@ -12,19 +12,21 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dayTypeRefs_RelStructure"
 
-    fare_day_type_ref: List[FareDayTypeRef] = field(
+    fare_day_type_ref_or_day_type_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FareDayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    day_type_ref: List[DayTypeRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "DayTypeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareDayTypeRef",
+                    "type": FareDayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DayTypeRef",
+                    "type": DayTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

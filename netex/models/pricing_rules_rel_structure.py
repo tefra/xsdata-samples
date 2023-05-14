@@ -14,35 +14,31 @@ class PricingRulesRelStructure(FrameContainmentStructure):
     class Meta:
         name = "pricingRules_RelStructure"
 
-    limiting_rule_in_context: List[LimitingRuleInContext] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "LimitingRuleInContext",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    limiting_rule: List[LimitingRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "LimitingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    discounting_rule: List[DiscountingRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "DiscountingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    pricing_rule: List[PricingRule] = field(
-        default_factory=list,
-        metadata={
-            "name": "PricingRule",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "LimitingRuleInContext",
+                    "type": LimitingRuleInContext,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LimitingRule",
+                    "type": LimitingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "DiscountingRule",
+                    "type": DiscountingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PricingRule",
+                    "type": PricingRule,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

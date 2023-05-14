@@ -13,27 +13,26 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "travelSpecificationRefs_RelStructure"
 
-    offered_travel_specification_ref: List[OfferedTravelSpecificationRef] = field(
+    offered_travel_specification_ref_or_requested_travel_specification_ref_or_travel_specification_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "OfferedTravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    requested_travel_specification_ref: List[RequestedTravelSpecificationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "RequestedTravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travel_specification_ref: List[TravelSpecificationRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelSpecificationRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OfferedTravelSpecificationRef",
+                    "type": OfferedTravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RequestedTravelSpecificationRef",
+                    "type": RequestedTravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelSpecificationRef",
+                    "type": TravelSpecificationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

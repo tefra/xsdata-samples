@@ -17,20 +17,22 @@ class LineDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Line_DerivedViewStructure"
 
-    flexible_line_ref: Optional[FlexibleLineRef] = field(
+    flexible_line_ref_or_line_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "FlexibleLineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_ref: Optional[LineRef] = field(
-        default=None,
-        metadata={
-            "name": "LineRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLineRef",
+                    "type": FlexibleLineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineRef",
+                    "type": LineRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     public_code: Optional[str] = field(

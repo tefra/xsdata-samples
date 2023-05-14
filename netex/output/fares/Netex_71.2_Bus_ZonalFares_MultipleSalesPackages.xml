@@ -37,6 +37,139 @@
         <DefaultCodespaceRef ref="cdla"/>
       </FrameDefaults>
       <frames>
+        <ServiceFrame id="cdla:CDLA@Multiple_packages@network" version="1.0">
+          <Name>Farezones  for 2012 fares </Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="cdla:CDLA@Common_resources"/>
+          </prerequisites>
+          <Network id="cdla:Northern_England" version="1.0">
+            <PaymentMethods/>
+            <PurchaseMoment/>
+            <OperatorRef version="any" ref="mybus:CDLA"/>
+            <tariffZones>
+              <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
+              <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+            </tariffZones>
+          </Network>
+          <tariffZones>
+            <FareZone id="cdla:Midlands_Area" version="any">
+              <Name>Midlands Area</Name>
+              <contains>
+                <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
+                <TariffZoneRef version="any" ref="cdla:Cannock"/>
+                <TariffZoneRef version="any" ref="cdla:Coalville"/>
+                <TariffZoneRef version="any" ref="cdla:Derby"/>
+                <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
+                <TariffZoneRef version="any" ref="cdla:Midlands"/>
+                <TariffZoneRef version="any" ref="cdla:Shrewsbury"/>
+                <TariffZoneRef version="any" ref="cdla:Stafford"/>
+                <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
+                <TariffZoneRef version="any" ref="cdla:Tamworth"/>
+                <TariffZoneRef version="any" ref="cdla:Telford"/>
+              </contains>
+            </FareZone>
+            <FareZone id="cdla:Burton_And_Swadlincote" version="any">
+              <Name>Burton &amp; Swadlincote</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Cannock" version="any">
+              <Name>Cannock</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Coalville" version="any">
+              <Name>Coalville</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Derby" version="any">
+              <Name>Derby</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Leicester_City_Plus" version="any">
+              <Name>Leicester City Plus</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Midlands" version="any">
+              <Name>Midlands</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Shrewsbury" version="any">
+              <Name>Shrewsbury</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Stafford" version="any">
+              <Name>Stafford</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Sutton_And_Birmingham" version="any">
+              <Name>Sutton &amp; Birmingham</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Tamworth" version="any">
+              <Name>Tamworth</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Telford" version="any">
+              <Name>Telford</Name>
+              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
+            </FareZone>
+            <FareZone id="cdla:North_East_Area" version="any">
+              <Name>North East Area</Name>
+              <contains>
+                <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
+                <TariffZoneRef version="any" ref="cdla:North_East"/>
+                <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Morpeth_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Blyth_plus_TandW_Triple"/>
+                <TariffZoneRef version="any" ref="cdla:Brandon"/>
+                <TariffZoneRef version="any" ref="cdla:County_Durham"/>
+                <TariffZoneRef version="any" ref="cdla:Cramlington"/>
+              </contains>
+            </FareZone>
+            <FareZone id="cdla:North_East" version="any">
+              <Name>North East Zone</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Ashington_Triple" version="any">
+              <Name>Ashington Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Bishop_Auckland" version="any">
+              <Name>Bishop Auckland</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_Triple" version="any">
+              <Name>Blyth Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_Ashington_Triple" version="any">
+              <Name>Blyth plus Ashington Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_Morpeth_Triple" version="any">
+              <Name>Blyth plus Morpeth Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Blyth_plus_TandW_Triple" version="any">
+              <Name>Blyth plus T &amp; W Triple</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Brandon" version="any">
+              <Name>Brandon</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:County_Durham" version="any">
+              <Name>County Durham</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+            <FareZone id="cdla:Cramlington" version="any">
+              <Name>Cramlington</Name>
+              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
+            </FareZone>
+          </tariffZones>
+        </ServiceFrame>
         <FareFrame id="cdla:CDLA@Multiple_packages@products@standard" version="1.0">
           <prerequisites>
             <ServiceFrameRef version="1.0" ref="cdla:CDLA@Multiple_packages@network"/>
@@ -725,9 +858,9 @@
                     <Name>Midlands Adult full fare day</Name>
                     <Amount>5.20</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
                 <Cell id="cdla:Midlands@family@day" version="any" order="2">
@@ -735,8 +868,8 @@
                     <Name>Midlands Adult full fare day</Name>
                     <Amount>8.00</Amount>
                   </CellPrice>
-                  <GroupTicketRef version="any" ref="cdla:family"/>
                   <FareProductRef version="1.0" ref="cdla:Day_pass@family"/>
+                  <GroupTicketRef version="any" ref="cdla:family"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
@@ -745,9 +878,9 @@
                     <Name>Midlands Adult full fare weekly</Name>
                     <Amount>21</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
                 <Cell id="cdla:Midlands@adult@4weekly" version="any" order="4">
@@ -755,9 +888,9 @@
                     <Name>Midlands Adult full fare 4 weekly</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
                 <Cell id="cdla:Midlands@adult@annual" version="any" order="5">
@@ -765,9 +898,9 @@
                     <Name>Midlands Adult full fare Annual</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
                 <Cell id="cdla:Midlands@student@term_autumn" version="any" order="6">
@@ -777,9 +910,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>140</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
@@ -790,9 +923,9 @@
                     <EndDate>2012-03-30</EndDate>
                     <Amount>140</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
@@ -803,9 +936,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>140</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
@@ -816,9 +949,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>400</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@360"/>
                   <TariffZoneRef version="any" ref="cdla:Midlands"/>
                 </Cell>
@@ -827,9 +960,9 @@
                     <Name>Burton and Swadlincote Adult full fare weekly</Name>
                     <Amount>3.6</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
                 </Cell>
                 <Cell id="cdla:Burton_And_Swadlincote@adult@weekly" version="any" order="2">
@@ -837,9 +970,9 @@
                     <Name>Burton and Swadlincote Adult full fare weekly</Name>
                     <Amount>15</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
                 </Cell>
                 <Cell id="cdla:Burton_And_Swadlincote@adult@4weekly" version="any" order="3">
@@ -847,9 +980,9 @@
                     <Name>Burton and Swadlincote Adult full fare 4 weekly</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
                 </Cell>
                 <Cell id="cdla:Burton_And_Swadlincote@adult@annual" version="any" order="4">
@@ -857,9 +990,9 @@
                     <Name>Burton and Swadlincote Adult full fare</Name>
                     <Amount>490</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
                 </Cell>
                 <Cell id="cdla:Cannock@adult@day" version="any" order="1">
@@ -867,9 +1000,9 @@
                     <Name>Cannock Adult full fare day</Name>
                     <Amount>3.80</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Cannock"/>
                 </Cell>
                 <Cell id="cdla:Cannock@adult@weekly" version="any" order="2">
@@ -877,9 +1010,9 @@
                     <Name>Cannock Adult full fare weekly</Name>
                     <Amount>15</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Cannock"/>
                 </Cell>
                 <Cell id="cdla:Cannock@adult@4weekly" version="any" order="3">
@@ -887,9 +1020,9 @@
                     <Name>Cannock Adult full fare 4 weekly</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Cannock"/>
                 </Cell>
                 <Cell id="cdla:Cannock@adult@annual" version="any" order="4">
@@ -897,9 +1030,9 @@
                     <Name>Cannock Adult full fare Annual</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Cannock"/>
                 </Cell>
                 <Cell id="cdla:Leicester_City_Plus@adult@day" version="any" order="1">
@@ -907,9 +1040,9 @@
                     <Name>Leicester_City_Plus Adult full fare day</Name>
                     <Amount>3.60</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
                 <Cell id="cdla:Leicester_City_Plus@adult@weekly" version="any" order="2">
@@ -917,9 +1050,9 @@
                     <Name>Leicester_City_Plus Adult full fare weekly</Name>
                     <Amount>15</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
                 <Cell id="cdla:Leicester_City_Plus@adult@4weekly" version="any" order="3">
@@ -927,9 +1060,9 @@
                     <Name>Leicester_City_Plus Adult full fare 4 weekly</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
                 <Cell id="cdla:Leicester_City_Plus@adult@annual" version="any" order="4">
@@ -937,9 +1070,9 @@
                     <Name>Leicester_City_Plus Adult full fare Annual</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
                 <Cell id="cdla:Leicester_City_Plus@student@academic_year" version="any" order="5">
@@ -949,9 +1082,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>320</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@288"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
@@ -965,9 +1098,9 @@
                       <DiscountAsValue>288</DiscountAsValue>
                     </DiscountingRule>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@288"/>
                   <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
                 </Cell>
@@ -976,9 +1109,9 @@
                     <Name>Stafford Adult full fare day</Name>
                     <Amount>3.80</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
                 <Cell id="cdla:Stafford@adult@weekly" version="any" order="2">
@@ -986,9 +1119,9 @@
                     <Name>Stafford Adult full fare weekly</Name>
                     <Amount>15</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
                 <Cell id="cdla:Stafford@adult@4weekly" version="any" order="3">
@@ -996,9 +1129,9 @@
                     <Name>Stafford Adult full fare 4 weekly</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
                 <Cell id="cdla:Stafford@adult@annual" version="any" order="4">
@@ -1006,9 +1139,9 @@
                     <Name>Stafford Adult full fare Annual</Name>
                     <Amount>45</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
                 <Cell id="cdla:Stafford@student@term_autumn" version="any" order="5">
@@ -1018,9 +1151,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>115</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@autumn"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
@@ -1031,9 +1164,9 @@
                     <EndDate>2012-03-30</EndDate>
                     <Amount>115</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@spring"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
@@ -1044,9 +1177,9 @@
                     <EndDate>2012-07-31</EndDate>
                     <Amount>115</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_term@summer"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@103.5"/>
                   <TariffZoneRef version="any" ref="cdla:Stafford"/>
                 </Cell>
@@ -1060,9 +1193,9 @@
                     <Name>North East All zones Triple adult   fare Day</Name>
                     <Amount>6.00</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
                 </Cell>
                 <Cell id="cdla:North_East_Area@adult@weekly" version="any" order="2">
@@ -1070,9 +1203,9 @@
                     <Name>North East All zones Triple adult   fare Weekly</Name>
                     <Amount>20.70</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
                 </Cell>
                 <Cell id="cdla:North_East@adult@day" version="any" order="1">
@@ -1080,9 +1213,9 @@
                     <Name>North East Adult full fare weekly</Name>
                     <Amount>6.5</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
                 <Cell id="cdla:North_East@family@day" version="any" order="2">
@@ -1090,8 +1223,8 @@
                     <Name>North East Adult full fare weekly</Name>
                     <Amount>12</Amount>
                   </CellPrice>
-                  <GroupTicketRef version="any" ref="cdla:family"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
+                  <GroupTicketRef version="any" ref="cdla:family"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1100,9 +1233,9 @@
                     <Name>North East Adult full fare weekly</Name>
                     <Amount>21.6</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
                 <Cell id="cdla:North_East@adult@4weekly" version="any" order="4">
@@ -1110,9 +1243,9 @@
                     <Name>North East Adult full fare 4 weekly</Name>
                     <Amount>82.8</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
                 <Cell id="cdla:North_East@adult@annual" version="any" order="5">
@@ -1120,9 +1253,9 @@
                     <Name>North East Adult full fare Annual</Name>
                     <Amount>900</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
                 <Cell id="cdla:North_East@student@15Week@unfunded" version="any" order="6">
@@ -1132,9 +1265,9 @@
                     <Amount>250</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£0-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@225"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
@@ -1146,9 +1279,9 @@
                     <Amount>170</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£80-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@80"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1159,9 +1292,9 @@
                     <Amount>135</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@115"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1172,9 +1305,9 @@
                     <Amount>115</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@135"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1184,9 +1317,9 @@
                     <StartDate>2011-08-08</StartDate>
                     <Amount>50</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1197,9 +1330,9 @@
                     <EndDate>2012-07-27</EndDate>
                     <Amount>720</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@648"/>
                   <TariffZoneRef version="any" ref="cdla:North_East"/>
                 </Cell>
@@ -1208,9 +1341,9 @@
                     <Name>Ashington Triple  adult   fare Day</Name>
                     <Amount>3.80</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
                 </Cell>
                 <Cell id="cdla:Ashington_Triple@adult@weekly" version="any" order="2">
@@ -1218,9 +1351,9 @@
                     <Name>Ashington Triple  adult   fare Weekly</Name>
                     <Amount>15.5</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
                 </Cell>
                 <Cell id="cdla:Bishop_Auckland@adult@day" version="any" order="1">
@@ -1228,9 +1361,9 @@
                     <Name>Bishop Auckland Adult full fare day</Name>
                     <Amount>3.80</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
                 </Cell>
                 <Cell id="cdla:Bishop_Auckland@adult@weekly" version="any" order="2">
@@ -1238,9 +1371,9 @@
                     <Name>Bishop Auckland Adult full fare weekly</Name>
                     <Amount>15</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
                 </Cell>
                 <Cell id="cdla:Bishop_Auckland@adult@4weekly" version="any" order="3">
@@ -1248,9 +1381,9 @@
                     <Name>Bishop Auckland Adult full fare 4 weekly</Name>
                     <Amount>55.8</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:4week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
                 </Cell>
                 <Cell id="cdla:Bishop_Auckland@adult@annual" version="any" order="4">
@@ -1258,9 +1391,9 @@
                     <Name>Bishop Auckland Adult full fare Annual</Name>
                     <Amount>500</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1year"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
                 </Cell>
                 <Cell id="cdla:Blyth_Triple@adult@day" version="any" order="5">
@@ -1268,9 +1401,9 @@
                     <Name>Blyth Triple  adult   fare Day</Name>
                     <Amount>3.80</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
                 </Cell>
                 <Cell id="cdla:Blyth_Triple@adult@weekly" version="any" order="6">
@@ -1278,9 +1411,9 @@
                     <Name>Blyth Triple  adult   fare Weekly</Name>
                     <Amount>15.5</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
                 </Cell>
                 <Cell id="cdla:Blyth_plus_Ashington_Triple@adult@day" version="any" order="7">
@@ -1288,9 +1421,9 @@
                     <Name>Blyth plus Ashington Triple  adult   fare Day</Name>
                     <Amount>5</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1day"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
                 </Cell>
                 <Cell id="cdla:Blyth_plus_Ashington_Triple@adult@weekly" version="any" order="8">
@@ -1298,9 +1431,9 @@
                     <Name>Blyth plus Ashington Triple  adult   fare Weekly</Name>
                     <Amount>20.0</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@standard"/>
                   <TimeIntervalRef version="1.0" ref="cdla:1week"/>
+                  <UserProfileRef version="any" ref="cdla:adult"/>
                   <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
                 </Cell>
                 <Cell id="cdla:County_Durham@student@15Week@unfunded" version="any" order="1">
@@ -1310,9 +1443,9 @@
                     <Amount>220</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£0-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1323,9 +1456,9 @@
                     <Amount>140</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£80-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@80"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1336,9 +1469,9 @@
                     <Amount>105</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£115-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@115"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1349,9 +1482,9 @@
                     <Amount>85</Amount>
                     <DiscountingRuleRef version="any" ref="cdla:£135-Off"/>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@funded@135"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1361,9 +1494,9 @@
                     <StartDate>2011-08-08</StartDate>
                     <Amount>35</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:15week"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@unfunded"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1374,9 +1507,9 @@
                     <EndDate>2012-07-27</EndDate>
                     <Amount>640</Amount>
                   </CellPrice>
-                  <UserProfileRef version="any" ref="cdla:student"/>
                   <FareProductRef version="1.0" ref="cdla:Period_pass@student"/>
                   <TimeIntervalRef version="1.0" ref="cdla:academic_year"/>
+                  <UserProfileRef version="any" ref="cdla:student"/>
                   <QualityStructureFactorRef version="1.0" ref="cdla:Time_interval@student@promo@576"/>
                   <TariffZoneRef version="any" ref="cdla:County_Durham"/>
                 </Cell>
@@ -1384,139 +1517,6 @@
             </FareTable>
           </fareTables>
         </FareFrame>
-        <ServiceFrame id="cdla:CDLA@Multiple_packages@network" version="1.0">
-          <Name>Farezones  for 2012 fares </Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="cdla:CDLA@Common_resources"/>
-          </prerequisites>
-          <Network id="cdla:Northern_England" version="1.0">
-            <PaymentMethods/>
-            <PurchaseMoment/>
-            <OperatorRef version="any" ref="mybus:CDLA"/>
-            <tariffZones>
-              <TariffZoneRef version="any" ref="cdla:Midlands_Area"/>
-              <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
-            </tariffZones>
-          </Network>
-          <tariffZones>
-            <FareZone id="cdla:Midlands_Area" version="any">
-              <Name>Midlands Area</Name>
-              <contains>
-                <TariffZoneRef version="any" ref="cdla:Burton_And_Swadlincote"/>
-                <TariffZoneRef version="any" ref="cdla:Cannock"/>
-                <TariffZoneRef version="any" ref="cdla:Coalville"/>
-                <TariffZoneRef version="any" ref="cdla:Derby"/>
-                <TariffZoneRef version="any" ref="cdla:Leicester_City_Plus"/>
-                <TariffZoneRef version="any" ref="cdla:Midlands"/>
-                <TariffZoneRef version="any" ref="cdla:Shrewsbury"/>
-                <TariffZoneRef version="any" ref="cdla:Stafford"/>
-                <TariffZoneRef version="any" ref="cdla:Sutton_And_Birmingham"/>
-                <TariffZoneRef version="any" ref="cdla:Tamworth"/>
-                <TariffZoneRef version="any" ref="cdla:Telford"/>
-              </contains>
-            </FareZone>
-            <FareZone id="cdla:Burton_And_Swadlincote" version="any">
-              <Name>Burton &amp; Swadlincote</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Cannock" version="any">
-              <Name>Cannock</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Coalville" version="any">
-              <Name>Coalville</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Derby" version="any">
-              <Name>Derby</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Leicester_City_Plus" version="any">
-              <Name>Leicester City Plus</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Midlands" version="any">
-              <Name>Midlands</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Shrewsbury" version="any">
-              <Name>Shrewsbury</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Stafford" version="any">
-              <Name>Stafford</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Sutton_And_Birmingham" version="any">
-              <Name>Sutton &amp; Birmingham</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Tamworth" version="any">
-              <Name>Tamworth</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Telford" version="any">
-              <Name>Telford</Name>
-              <ParentZoneRef version="any" ref="cdla:Midlands_Area"/>
-            </FareZone>
-            <FareZone id="cdla:North_East_Area" version="any">
-              <Name>North East Area</Name>
-              <contains>
-                <TariffZoneRef version="any" ref="cdla:North_East_Area"/>
-                <TariffZoneRef version="any" ref="cdla:North_East"/>
-                <TariffZoneRef version="any" ref="cdla:Ashington_Triple"/>
-                <TariffZoneRef version="any" ref="cdla:Bishop_Auckland"/>
-                <TariffZoneRef version="any" ref="cdla:Blyth_Triple"/>
-                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Ashington_Triple"/>
-                <TariffZoneRef version="any" ref="cdla:Blyth_plus_Morpeth_Triple"/>
-                <TariffZoneRef version="any" ref="cdla:Blyth_plus_TandW_Triple"/>
-                <TariffZoneRef version="any" ref="cdla:Brandon"/>
-                <TariffZoneRef version="any" ref="cdla:County_Durham"/>
-                <TariffZoneRef version="any" ref="cdla:Cramlington"/>
-              </contains>
-            </FareZone>
-            <FareZone id="cdla:North_East" version="any">
-              <Name>North East Zone</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Ashington_Triple" version="any">
-              <Name>Ashington Triple</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Bishop_Auckland" version="any">
-              <Name>Bishop Auckland</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Blyth_Triple" version="any">
-              <Name>Blyth Triple</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Blyth_plus_Ashington_Triple" version="any">
-              <Name>Blyth plus Ashington Triple</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Blyth_plus_Morpeth_Triple" version="any">
-              <Name>Blyth plus Morpeth Triple</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Blyth_plus_TandW_Triple" version="any">
-              <Name>Blyth plus T &amp; W Triple</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Brandon" version="any">
-              <Name>Brandon</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:County_Durham" version="any">
-              <Name>County Durham</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-            <FareZone id="cdla:Cramlington" version="any">
-              <Name>Cramlington</Name>
-              <ParentZoneRef version="any" ref="cdla:North_East_Area"/>
-            </FareZone>
-          </tariffZones>
-        </ServiceFrame>
         <ResourceFrame id="cdla:CDLA@Common_resources" version="1.0">
           <codespaces>
             <Codespace id="ntx">

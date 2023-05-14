@@ -26,28 +26,27 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address: Optional[PostalAddress] = field(
+    postal_address_or_road_address_or_address: Optional[object] = field(
         default=None,
         metadata={
-            "name": "PostalAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_address: Optional[RoadAddress] = field(
-        default=None,
-        metadata={
-            "name": "RoadAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    address: Optional[PostalAddressVersionStructure] = field(
-        default=None,
-        metadata={
-            "name": "Address",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddress",
+                    "type": PostalAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddress",
+                    "type": RoadAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Address",
+                    "type": PostalAddressVersionStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     primary_mode: Optional[VehicleModeEnumeration] = field(

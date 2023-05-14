@@ -12,19 +12,21 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"
 
-    dated_special_service_ref: Optional[DatedSpecialServiceRef] = field(
+    dated_special_service_ref_or_special_service_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "DatedSpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    special_service_ref: Optional[SpecialServiceRef] = field(
-        default=None,
-        metadata={
-            "name": "SpecialServiceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DatedSpecialServiceRef",
+                    "type": DatedSpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SpecialServiceRef",
+                    "type": SpecialServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

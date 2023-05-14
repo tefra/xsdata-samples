@@ -28,7 +28,7 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
     class Meta:
         name = "LinkOnSection_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice_1: Optional[object] = field(
         default=None,
         metadata={
             "type": "Elements",

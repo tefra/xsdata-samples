@@ -12,19 +12,21 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"
 
-    flexible_line: List[FlexibleLine] = field(
+    flexible_line_or_line: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleLine",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line: List[Line] = field(
-        default_factory=list,
-        metadata={
-            "name": "Line",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleLine",
+                    "type": FlexibleLine,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Line",
+                    "type": Line,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

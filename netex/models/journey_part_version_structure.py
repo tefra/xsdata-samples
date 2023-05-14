@@ -63,20 +63,22 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_part_ref: Optional[TrainBlockPartRef] = field(
+    train_block_part_ref_or_block_part_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "TrainBlockPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    block_part_ref: Optional[BlockPartRef] = field(
-        default=None,
-        metadata={
-            "name": "BlockPartRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TrainBlockPartRef",
+                    "type": TrainBlockPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BlockPartRef",
+                    "type": BlockPartRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     from_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(

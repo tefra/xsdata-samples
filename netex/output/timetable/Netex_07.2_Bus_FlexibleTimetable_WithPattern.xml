@@ -110,6 +110,71 @@ The Calendar is shown coded as
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
+        <SiteFrame id="mybus:svf_24" version="1">
+          <Name>Stops for Winter timetable for Flexible Route 12 </Name>
+          <flexibleStopPlaces>
+            <FlexibleStopPlace id="mybus:fsp_Tau" version="any">
+              <Name>Flexible Zone Tau</Name>
+              <ShortName>Tau</ShortName>
+              <Description>Area around Beta ville</Description>
+              <Centroid>
+                <Location>
+                  <Longitude>53.0000</Longitude>
+                  <Latitude>0.1000</Latitude>
+                </Location>
+              </Centroid>
+              <areas>
+                <FlexibleArea id="mybus:fa_Tau_01" version="any">
+                  <Name>ZONE Tau    Area 1 -   </Name>
+                  <ShortName>Sigma 1</ShortName>
+                  <Centroid>
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="b1234" srsName="wgs84">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos>12355.78</gml:pos>
+                        <gml:pos>12355.76</gml:pos>
+                        <gml:pos>12356.88</gml:pos>
+                        <gml:pos>12356.18</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                  </gml:Polygon>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </FlexibleArea>
+                <FlexibleArea id="mybus:fa_Tau_02" version="any">
+                  <Name>ZONE Tau    Area 2 -   </Name>
+                  <ShortName>Sigma 2</ShortName>
+                  <Centroid>
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <gml:Polygon gml:id="c1234" srsName="wgs84">
+                    <gml:exterior>
+                      <gml:LinearRing>
+                        <gml:pos>12356.77</gml:pos>
+                        <gml:pos>12357.75</gml:pos>
+                        <gml:pos>12357.88</gml:pos>
+                        <gml:pos>12356.18</gml:pos>
+                        <gml:pos>12354.18</gml:pos>
+                      </gml:LinearRing>
+                    </gml:exterior>
+                  </gml:Polygon>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </FlexibleArea>
+              </areas>
+            </FlexibleStopPlace>
+          </flexibleStopPlaces>
+        </SiteFrame>
         <ServiceFrame id="mybus:svf_24" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
           <directions>
@@ -674,71 +739,6 @@ The Calendar is shown coded as
             </Notice>
           </notices>
         </TimetableFrame>
-        <SiteFrame id="mybus:svf_24" version="1">
-          <Name>Stops for Winter timetable for Flexible Route 12 </Name>
-          <flexibleStopPlaces>
-            <FlexibleStopPlace id="mybus:fsp_Tau" version="any">
-              <Name>Flexible Zone Tau</Name>
-              <ShortName>Tau</ShortName>
-              <Description>Area around Beta ville</Description>
-              <Centroid>
-                <Location>
-                  <Longitude>53.0000</Longitude>
-                  <Latitude>0.1000</Latitude>
-                </Location>
-              </Centroid>
-              <areas>
-                <FlexibleArea id="mybus:fa_Tau_01" version="any">
-                  <Name>ZONE Tau    Area 1 -   </Name>
-                  <ShortName>Sigma 1</ShortName>
-                  <Centroid>
-                    <Location>
-                      <gml:pos>12345.76</gml:pos>
-                      <Precision>12</Precision>
-                    </Location>
-                  </Centroid>
-                  <gml:Polygon gml:id="b1234" srsName="wgs84">
-                    <gml:exterior>
-                      <gml:LinearRing>
-                        <gml:pos>12355.78</gml:pos>
-                        <gml:pos>12355.76</gml:pos>
-                        <gml:pos>12356.88</gml:pos>
-                        <gml:pos>12356.18</gml:pos>
-                      </gml:LinearRing>
-                    </gml:exterior>
-                  </gml:Polygon>
-                  <TransportMode>bus</TransportMode>
-                  <BoardingUse>true</BoardingUse>
-                  <AlightingUse>true</AlightingUse>
-                </FlexibleArea>
-                <FlexibleArea id="mybus:fa_Tau_02" version="any">
-                  <Name>ZONE Tau    Area 2 -   </Name>
-                  <ShortName>Sigma 2</ShortName>
-                  <Centroid>
-                    <Location>
-                      <gml:pos>12345.76</gml:pos>
-                      <Precision>12</Precision>
-                    </Location>
-                  </Centroid>
-                  <gml:Polygon gml:id="c1234" srsName="wgs84">
-                    <gml:exterior>
-                      <gml:LinearRing>
-                        <gml:pos>12356.77</gml:pos>
-                        <gml:pos>12357.75</gml:pos>
-                        <gml:pos>12357.88</gml:pos>
-                        <gml:pos>12356.18</gml:pos>
-                        <gml:pos>12354.18</gml:pos>
-                      </gml:LinearRing>
-                    </gml:exterior>
-                  </gml:Polygon>
-                  <TransportMode>bus</TransportMode>
-                  <BoardingUse>true</BoardingUse>
-                  <AlightingUse>true</AlightingUse>
-                </FlexibleArea>
-              </areas>
-            </FlexibleStopPlace>
-          </flexibleStopPlaces>
-        </SiteFrame>
         <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov to Jan 2011   </Name>
           <ServiceCalendar id="hde:CAL_02" version="any">

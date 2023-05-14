@@ -12,19 +12,21 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffRefs_RelStructure"
 
-    parking_tariff_ref: List[ParkingTariffRef] = field(
+    parking_tariff_ref_or_tariff_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ParkingTariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    tariff_ref: List[TariffRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "TariffRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ParkingTariffRef",
+                    "type": ParkingTariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffRef",
+                    "type": TariffRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

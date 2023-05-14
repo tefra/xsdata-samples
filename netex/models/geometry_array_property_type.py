@@ -9,31 +9,27 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryArrayPropertyType:
-    polygon: List[Polygon] = field(
+    polygon_or_line_string_or_point: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "Polygon",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-            "sequence": 1,
-        }
-    )
-    line_string: List[LineString] = field(
-        default_factory=list,
-        metadata={
-            "name": "LineString",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-            "sequence": 1,
-        }
-    )
-    point: List[Point1] = field(
-        default_factory=list,
-        metadata={
-            "name": "Point",
-            "type": "Element",
-            "namespace": "http://www.opengis.net/gml/3.2",
-            "sequence": 1,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "Polygon",
+                    "type": Polygon,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "LineString",
+                    "type": LineString,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+                {
+                    "name": "Point",
+                    "type": Point1,
+                    "namespace": "http://www.opengis.net/gml/3.2",
+                },
+            ),
         }
     )
     owns: bool = field(

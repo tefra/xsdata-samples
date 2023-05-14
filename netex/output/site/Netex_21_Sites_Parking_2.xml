@@ -536,11 +536,11 @@
                 </spaces>
               </ParkingProperties>
               <entrances>
+                <ParkingEntranceRef version="any" ref="mypark:PP01@EP01"/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV11@Entrance"/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV12@Exit"/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV01+02"/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+01"/>
-                <ParkingEntranceRef version="any" ref="mypark:PP01@EP01"/>
               </entrances>
             </ParkingArea>
             <ParkingArea id="mypark:PP01@A02" version="any">
@@ -609,9 +609,9 @@
                 </spaces>
               </ParkingProperties>
               <entrances>
+                <ParkingEntranceRef version="any" ref="mypark:PP01@EP02 "/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV02+03"/>
                 <ParkingEntranceForVehiclesRef version="any" ref="mypark:PP01@EV03+02"/>
-                <ParkingEntranceRef version="any" ref="mypark:PP01@EP02 "/>
               </entrances>
             </ParkingArea>
           </parkingAreas>

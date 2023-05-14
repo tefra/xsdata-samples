@@ -12,19 +12,21 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnSection_RelStructure"
 
-    point_on_line_section: List[PointOnLineSection] = field(
+    point_on_line_section_or_point_on_section: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PointOnLineSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    point_on_section: List[PointOnSection] = field(
-        default_factory=list,
-        metadata={
-            "name": "PointOnSection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointOnLineSection",
+                    "type": PointOnLineSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOnSection",
+                    "type": PointOnSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

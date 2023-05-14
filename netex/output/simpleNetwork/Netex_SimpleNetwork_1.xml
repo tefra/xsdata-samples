@@ -38,6 +38,353 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
+        <SiteFrame id="mybus:SVC_01@site" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="024" derivedFromVersionRef="0023">
+          <FrameDefaults>
+            <DefaultResponsibilitySetRef ref="mybus:RS_10"/>
+          </FrameDefaults>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:SVC_01@resources"/>
+          </prerequisites>
+          <stopPlaces>
+            <StopPlace id="mybus:SP001A" created="2006-09-11T15:42:00" version="any">
+              <Name>St George's Road (SW19)</Name>
+              <ShortName>Place A </ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="mybus:RAd_SP001A@01" version="any">
+                <RoadName>Alexandra Road</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="mybus:Q_SP001A@1" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>PlaceA</Name>
+                  <Description>Stop A is termiuis serves both directions</Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>indoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop A</Label>
+                  <PublicCode>1-3454 </PublicCode>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="mybus:SP002B" created="2006-09-11T15:42:00" version="any">
+              <Name>St George's Road (SW19)</Name>
+              <ShortName>Place B</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="mybus:RAd_SP002B@01" version="any">
+                <RoadName>Alexandra Road</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="mybus:Q_SP002B@1" version="any">
+                  <Name>Place B, Northbound</Name>
+                  <Description>Stop Ba  is paired with Stop Bb  </Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop Ba</Label>
+                  <PublicCode>1-3456 </PublicCode>
+                  <CompassOctant>S</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+                <Quay id="mybus:Q_SP002B@2" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Place B,  SOuthbound</Name>
+                  <Description>Stop Ba  is paired with Stop Bb  </Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop Bb</Label>
+                  <PublicCode>1-3457 </PublicCode>
+                  <CompassOctant>N</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="mybus:SP003C" created="2006-09-11T15:42:00" version="any">
+              <Name>Place C</Name>
+              <ShortName>Place C</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="mybus:RAd_SP002C@01" version="any">
+                <RoadName>Foo Road</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="mybus:Q_SP002C@1" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Place C</Name>
+                  <Description>StopCa  is paired with Stop Cb  </Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop Ca</Label>
+                  <PublicCode>1-3454 </PublicCode>
+                  <CompassOctant>NE</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+                <Quay id="mybus:Q_SP002C@2" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>Place C</Name>
+                  <Description>Stop Cb  is paired with Stop Ca </Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop Cb</Label>
+                  <PublicCode>1-3454 </PublicCode>
+                  <CompassOctant>SE</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="mybus:SP004D" created="2006-09-11T15:42:00" version="any">
+              <Name>Place D</Name>
+              <ShortName>Place D</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="mybus:RAd_SP004D_01" version="any">
+                <RoadName>Bar Road</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="mybus:Q_SP004D_1" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>PlaceD</Name>
+                  <Description>Stop D is termiuis serves both directions</Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop D</Label>
+                  <PublicCode>1-3454 </PublicCode>
+                  <CompassOctant>W</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="mybus:SP005E" created="2006-09-11T15:42:00" version="any">
+              <Name>Place E</Name>
+              <ShortName>Place E</ShortName>
+              <Centroid>
+                <Location>
+                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
+                </Location>
+              </Centroid>
+              <RoadAddress id="mybus:RAd_SP005E_01" version="any">
+                <RoadName>Bar Road</RoadName>
+              </RoadAddress>
+              <AccessModes/>
+              <TransportMode>bus</TransportMode>
+              <OtherTransportModes/>
+              <StopPlaceType>onstreetBus</StopPlaceType>
+              <quays>
+                <Quay id="mybus:Q_SP005E_1" created="2010-04-17T09:30:47Z" version="any">
+                  <Name>PlaceE</Name>
+                  <Description>Stop Es termiuis serves both directions</Description>
+                  <Centroid>
+                    <Location>
+                      <Longitude>-0.2071397147</Longitude>
+                      <Latitude>51.4217482061</Latitude>
+                    </Location>
+                  </Centroid>
+                  <AccessModes/>
+                  <Covered>outdoors</Covered>
+                  <OtherTransportModes/>
+                  <Label>Stop E</Label>
+                  <PublicCode>1-3454 </PublicCode>
+                  <CompassOctant>W</CompassOctant>
+                  <QuayType>busStop</QuayType>
+                </Quay>
+              </quays>
+            </StopPlace>
+          </stopPlaces>
+        </SiteFrame>
+        <InfrastructureFrame id="mybus:SVC_01@infrastructure" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="1.0" derivedFromVersionRef="004" responsibilitySetRef="mybus:RS_10">
+          <Name>My Infrastructure   Version 5 with three stops in it </Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="mybus:SVC_01@resources"/>
+          </prerequisites>
+          <junctions>
+            <RoadJunction id="gis:rdJ001" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 1</Name>
+              <Location>
+                <Longitude>-0.2071397147</Longitude>
+                <Latitude>51.4217482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ002" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 2</Name>
+              <Location>
+                <Longitude>-0.2071397147</Longitude>
+                <Latitude>51.4217482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ003" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 3</Name>
+              <Location>
+                <Longitude>-0.2171397147</Longitude>
+                <Latitude>51.4217482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ004" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 4</Name>
+              <Location>
+                <Longitude>-0.2371397147</Longitude>
+                <Latitude>51.4217482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ005" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc</Name>
+              <Location>
+                <Longitude>-0.2471397147</Longitude>
+                <Latitude>51.4317482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ006" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc</Name>
+              <Location>
+                <Longitude>-0.2571397147</Longitude>
+                <Latitude>51.4363482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ021" created="2010-12-17T09:30:47Z" version="1.0">
+              <Name>Vehicle of type VT001 Cannot pass  here</Name>
+              <Location>
+                <Longitude>-0.2071397147</Longitude>
+                <Latitude>51.4217482061</Latitude>
+              </Location>
+            </RoadJunction>
+            <RoadJunction id="gis:rdJ022" created="2010-12-17T09:30:47Z" version="1.0">
+              <Name>Vehicle of type VT001 Cannot pass  here</Name>
+              <Location>
+                <Longitude>-0.2071397147</Longitude>
+                <Latitude>51.4317482061</Latitude>
+              </Location>
+            </RoadJunction>
+          </junctions>
+          <elements>
+            <RoadElement id="gis:rdJ001+rdJ003" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Link between Junc 1 -2</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ001"/>
+              <ToPointRef version="1.0" ref="gis:rdJ003"/>
+            </RoadElement>
+            <RoadElement id="gis:rdJ003+rdJ004" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Link  3 -4</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ003"/>
+              <ToPointRef version="1.0" ref="gis:rdJ004"/>
+            </RoadElement>
+            <RoadElement id="gis:rdJ004+rdJ005" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Link 4-5</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ004"/>
+              <ToPointRef version="1.0" ref="gis:rdJ005"/>
+            </RoadElement>
+            <RoadElement id="gis:rdJ005+rdJ006" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Road between Junc 2 -3</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ005"/>
+              <ToPointRef version="1.0" ref="gis:rdJ006"/>
+            </RoadElement>
+            <RoadElement id="gis:rdJ021+rdJ022" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 21-22</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ021"/>
+              <ToPointRef version="1.0" ref="gis:rdJ022"/>
+            </RoadElement>
+            <RoadElement id="gis:rdJ022+rdJ021" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
+              <Name>Junc 22-21</Name>
+              <FromPointRef version="1.0" ref="gis:rdJ022"/>
+              <ToPointRef version="1.0" ref="gis:rdJ021"/>
+            </RoadElement>
+          </elements>
+          <restrictions>
+            <RestrictedManoeuvre id="hde:RM_01" created="2010-12-17T09:30:47Z" version="1.0" order="1">
+              <Restricted>false</Restricted>
+              <FromLinkRef version="1.0" ref="gis:rdJ001+rdJ003"/>
+              <ToLinkRef version="1.0" ref="gis:rdJ003+rdJ004"/>
+              <VehicleTypeRef version="1.0" ref="hde:VT001"/>
+            </RestrictedManoeuvre>
+            <MeetingRestriction id="hde:RMT_02" created="2010-12-17T09:30:47Z" version="1.0" order="1">
+              <Restricted>true</Restricted>
+              <FromLinkRef version="1.0" ref="gis:rrdJ022+rdJ021"/>
+              <ToLinkRef version="1.0" ref="gis:rdJ021+rdJ022"/>
+              <ForVehicleTypeRef version="1.0" ref="hde:VT001"/>
+              <AgainstVehicleTypeRef version="1.0" ref="hde:VT001"/>
+            </MeetingRestriction>
+            <OvertakingPossibility id="hde:ROP_03" created="2010-12-17T09:30:47Z" version="1.0" order="1">
+              <Restricted>false</Restricted>
+              <OvertakingOnLinkRef version="1.0" ref="gis:rdJ021+rdJ022"/>
+              <OvertakingAtPointRef version="1.0" ref="gis:rdJ021"/>
+              <OvertakingVehicleTypeRef version="1.0" ref="hde:VT001"/>
+              <OvertakenVehicleTypeRef version="1.0" ref="hde:VT001"/>
+            </OvertakingPossibility>
+          </restrictions>
+          <vehicleTypes>
+            <VehicleType id="hde:VT001" created="2010-12-17T09:30:47Z" version="1.0">
+              <Name>Big red bus</Name>
+              <PassengerCapacity>
+                <SeatingCapacity>50</SeatingCapacity>
+                <StandingCapacity>20</StandingCapacity>
+                <WheelchairPlaceCapacity>2</WheelchairPlaceCapacity>
+              </PassengerCapacity>
+              <Length>20</Length>
+            </VehicleType>
+          </vehicleTypes>
+        </InfrastructureFrame>
         <ServiceFrame id="mybus:SVC_01@routes" version="1.0">
           <FrameDefaults>
             <DefaultResponsibilitySetRef version="3.0" ref="hde:RS_22"/>
@@ -1045,353 +1392,6 @@
             </TimeDemandType>
           </timeDemandTypes>
         </ServiceFrame>
-        <SiteFrame id="mybus:SVC_01@site" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="024" derivedFromVersionRef="0023">
-          <FrameDefaults>
-            <DefaultResponsibilitySetRef ref="mybus:RS_10"/>
-          </FrameDefaults>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:SVC_01@resources"/>
-          </prerequisites>
-          <stopPlaces>
-            <StopPlace id="mybus:SP001A" created="2006-09-11T15:42:00" version="any">
-              <Name>St George's Road (SW19)</Name>
-              <ShortName>Place A </ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="mybus:RAd_SP001A@01" version="any">
-                <RoadName>Alexandra Road</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="mybus:Q_SP001A@1" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>PlaceA</Name>
-                  <Description>Stop A is termiuis serves both directions</Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>indoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop A</Label>
-                  <PublicCode>1-3454 </PublicCode>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="mybus:SP002B" created="2006-09-11T15:42:00" version="any">
-              <Name>St George's Road (SW19)</Name>
-              <ShortName>Place B</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="mybus:RAd_SP002B@01" version="any">
-                <RoadName>Alexandra Road</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="mybus:Q_SP002B@1" version="any">
-                  <Name>Place B, Northbound</Name>
-                  <Description>Stop Ba  is paired with Stop Bb  </Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop Ba</Label>
-                  <PublicCode>1-3456 </PublicCode>
-                  <CompassOctant>S</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-                <Quay id="mybus:Q_SP002B@2" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Place B,  SOuthbound</Name>
-                  <Description>Stop Ba  is paired with Stop Bb  </Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop Bb</Label>
-                  <PublicCode>1-3457 </PublicCode>
-                  <CompassOctant>N</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="mybus:SP003C" created="2006-09-11T15:42:00" version="any">
-              <Name>Place C</Name>
-              <ShortName>Place C</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="mybus:RAd_SP002C@01" version="any">
-                <RoadName>Foo Road</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="mybus:Q_SP002C@1" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Place C</Name>
-                  <Description>StopCa  is paired with Stop Cb  </Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop Ca</Label>
-                  <PublicCode>1-3454 </PublicCode>
-                  <CompassOctant>NE</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-                <Quay id="mybus:Q_SP002C@2" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>Place C</Name>
-                  <Description>Stop Cb  is paired with Stop Ca </Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop Cb</Label>
-                  <PublicCode>1-3454 </PublicCode>
-                  <CompassOctant>SE</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="mybus:SP004D" created="2006-09-11T15:42:00" version="any">
-              <Name>Place D</Name>
-              <ShortName>Place D</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="mybus:RAd_SP004D_01" version="any">
-                <RoadName>Bar Road</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="mybus:Q_SP004D_1" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>PlaceD</Name>
-                  <Description>Stop D is termiuis serves both directions</Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop D</Label>
-                  <PublicCode>1-3454 </PublicCode>
-                  <CompassOctant>W</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-            <StopPlace id="mybus:SP005E" created="2006-09-11T15:42:00" version="any">
-              <Name>Place E</Name>
-              <ShortName>Place E</ShortName>
-              <Centroid>
-                <Location>
-                  <gml:pos srsName="UKOS">524811.0 170666.0</gml:pos>
-                </Location>
-              </Centroid>
-              <RoadAddress id="mybus:RAd_SP005E_01" version="any">
-                <RoadName>Bar Road</RoadName>
-              </RoadAddress>
-              <AccessModes/>
-              <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
-              <StopPlaceType>onstreetBus</StopPlaceType>
-              <quays>
-                <Quay id="mybus:Q_SP005E_1" created="2010-04-17T09:30:47Z" version="any">
-                  <Name>PlaceE</Name>
-                  <Description>Stop Es termiuis serves both directions</Description>
-                  <Centroid>
-                    <Location>
-                      <Longitude>-0.2071397147</Longitude>
-                      <Latitude>51.4217482061</Latitude>
-                    </Location>
-                  </Centroid>
-                  <AccessModes/>
-                  <Covered>outdoors</Covered>
-                  <OtherTransportModes/>
-                  <Label>Stop E</Label>
-                  <PublicCode>1-3454 </PublicCode>
-                  <CompassOctant>W</CompassOctant>
-                  <QuayType>busStop</QuayType>
-                </Quay>
-              </quays>
-            </StopPlace>
-          </stopPlaces>
-        </SiteFrame>
-        <InfrastructureFrame id="mybus:SVC_01@infrastructure" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="1.0" derivedFromVersionRef="004" responsibilitySetRef="mybus:RS_10">
-          <Name>My Infrastructure   Version 5 with three stops in it </Name>
-          <prerequisites>
-            <ResourceFrameRef version="1.0" ref="mybus:SVC_01@resources"/>
-          </prerequisites>
-          <junctions>
-            <RoadJunction id="gis:rdJ001" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 1</Name>
-              <Location>
-                <Longitude>-0.2071397147</Longitude>
-                <Latitude>51.4217482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ002" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 2</Name>
-              <Location>
-                <Longitude>-0.2071397147</Longitude>
-                <Latitude>51.4217482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ003" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 3</Name>
-              <Location>
-                <Longitude>-0.2171397147</Longitude>
-                <Latitude>51.4217482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ004" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 4</Name>
-              <Location>
-                <Longitude>-0.2371397147</Longitude>
-                <Latitude>51.4217482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ005" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc</Name>
-              <Location>
-                <Longitude>-0.2471397147</Longitude>
-                <Latitude>51.4317482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ006" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc</Name>
-              <Location>
-                <Longitude>-0.2571397147</Longitude>
-                <Latitude>51.4363482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ021" created="2010-12-17T09:30:47Z" version="1.0">
-              <Name>Vehicle of type VT001 Cannot pass  here</Name>
-              <Location>
-                <Longitude>-0.2071397147</Longitude>
-                <Latitude>51.4217482061</Latitude>
-              </Location>
-            </RoadJunction>
-            <RoadJunction id="gis:rdJ022" created="2010-12-17T09:30:47Z" version="1.0">
-              <Name>Vehicle of type VT001 Cannot pass  here</Name>
-              <Location>
-                <Longitude>-0.2071397147</Longitude>
-                <Latitude>51.4317482061</Latitude>
-              </Location>
-            </RoadJunction>
-          </junctions>
-          <elements>
-            <RoadElement id="gis:rdJ001+rdJ003" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Link between Junc 1 -2</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ001"/>
-              <ToPointRef version="1.0" ref="gis:rdJ003"/>
-            </RoadElement>
-            <RoadElement id="gis:rdJ003+rdJ004" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Link  3 -4</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ003"/>
-              <ToPointRef version="1.0" ref="gis:rdJ004"/>
-            </RoadElement>
-            <RoadElement id="gis:rdJ004+rdJ005" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Link 4-5</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ004"/>
-              <ToPointRef version="1.0" ref="gis:rdJ005"/>
-            </RoadElement>
-            <RoadElement id="gis:rdJ005+rdJ006" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Road between Junc 2 -3</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ005"/>
-              <ToPointRef version="1.0" ref="gis:rdJ006"/>
-            </RoadElement>
-            <RoadElement id="gis:rdJ021+rdJ022" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 21-22</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ021"/>
-              <ToPointRef version="1.0" ref="gis:rdJ022"/>
-            </RoadElement>
-            <RoadElement id="gis:rdJ022+rdJ021" created="2010-12-17T09:30:47Z" version="1.0" responsibilitySetRef="gis:RS_31">
-              <Name>Junc 22-21</Name>
-              <FromPointRef version="1.0" ref="gis:rdJ022"/>
-              <ToPointRef version="1.0" ref="gis:rdJ021"/>
-            </RoadElement>
-          </elements>
-          <restrictions>
-            <OvertakingPossibility id="hde:ROP_03" created="2010-12-17T09:30:47Z" version="1.0" order="1">
-              <Restricted>false</Restricted>
-              <OvertakingOnLinkRef version="1.0" ref="gis:rdJ021+rdJ022"/>
-              <OvertakingAtPointRef version="1.0" ref="gis:rdJ021"/>
-              <OvertakingVehicleTypeRef version="1.0" ref="hde:VT001"/>
-              <OvertakenVehicleTypeRef version="1.0" ref="hde:VT001"/>
-            </OvertakingPossibility>
-            <MeetingRestriction id="hde:RMT_02" created="2010-12-17T09:30:47Z" version="1.0" order="1">
-              <Restricted>true</Restricted>
-              <FromLinkRef version="1.0" ref="gis:rrdJ022+rdJ021"/>
-              <ToLinkRef version="1.0" ref="gis:rdJ021+rdJ022"/>
-              <ForVehicleTypeRef version="1.0" ref="hde:VT001"/>
-              <AgainstVehicleTypeRef version="1.0" ref="hde:VT001"/>
-            </MeetingRestriction>
-            <RestrictedManoeuvre id="hde:RM_01" created="2010-12-17T09:30:47Z" version="1.0" order="1">
-              <Restricted>false</Restricted>
-              <FromLinkRef version="1.0" ref="gis:rdJ001+rdJ003"/>
-              <ToLinkRef version="1.0" ref="gis:rdJ003+rdJ004"/>
-              <VehicleTypeRef version="1.0" ref="hde:VT001"/>
-            </RestrictedManoeuvre>
-          </restrictions>
-          <vehicleTypes>
-            <VehicleType id="hde:VT001" created="2010-12-17T09:30:47Z" version="1.0">
-              <Name>Big red bus</Name>
-              <PassengerCapacity>
-                <SeatingCapacity>50</SeatingCapacity>
-                <StandingCapacity>20</StandingCapacity>
-                <WheelchairPlaceCapacity>2</WheelchairPlaceCapacity>
-              </PassengerCapacity>
-              <Length>20</Length>
-            </VehicleType>
-          </vehicleTypes>
-        </InfrastructureFrame>
         <ResourceFrame id="mybus:SVC_01@resources" created="2010-05-17T09:30:47Z" changed="2010-05-22T10:30:51Z" modification="revise" version="1.0" derivedFromVersionRef="004" responsibilitySetRef="mybus:RS_10">
           <Name>Common resources </Name>
           <responsibilitySets>
@@ -1424,17 +1424,17 @@
             </ResponsibilitySet>
           </responsibilitySets>
           <organisations>
-            <Authority id="hde:Org_Hd001" version="any">
-              <Name>Town Authority </Name>
-              <Description>Responsible for network schedules</Description>
-              <OrganisationType/>
-            </Authority>
             <Operator id="mybus:Org_TL001" version="any">
               <Name>Big red Bus Co</Name>
               <Description>Responsible just  for STOP PLACEs</Description>
               <OrganisationType/>
               <OperatorActivities/>
             </Operator>
+            <Authority id="hde:Org_Hd001" version="any">
+              <Name>Town Authority </Name>
+              <Description>Responsible for network schedules</Description>
+              <OrganisationType/>
+            </Authority>
             <GeneralOrganisation id="gis:Org_G001" version="any">
               <Name>Infrastucture  data Co </Name>
               <Description>Responsible for Infrastructure elements</Description>

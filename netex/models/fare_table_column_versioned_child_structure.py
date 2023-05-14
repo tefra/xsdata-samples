@@ -32,20 +32,22 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref: Optional[StandardFareTableRef] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[object] = field(
         default=None,
         metadata={
-            "name": "StandardFareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_table_ref: Optional[FareTableRef] = field(
-        default=None,
-        metadata={
-            "name": "FareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(

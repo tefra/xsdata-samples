@@ -12,19 +12,21 @@ class FareTableRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareTableRefs_RelStructure"
 
-    standard_fare_table_ref: List[StandardFareTableRef] = field(
+    standard_fare_table_ref_or_fare_table_ref: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "StandardFareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    fare_table_ref: List[FareTableRef] = field(
-        default_factory=list,
-        metadata={
-            "name": "FareTableRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

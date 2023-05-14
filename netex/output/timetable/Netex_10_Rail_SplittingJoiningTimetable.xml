@@ -47,264 +47,6 @@
         <DefaultCodespaceRef ref="ops_data"/>
       </FrameDefaults>
       <frames>
-        <VehicleScheduleFrame id="ops:VSF_23_O" version="any">
-          <Name>BLOCKS Winter timetable for Asmterdam Example</Name>
-          <blocks>
-            <TrainBlock id="ops:blk_447_amsterdam-warsaw" version="any">
-              <Description>Amsterdam - Hannover - Berrlin  Warsaw</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT10H</FinishingDuration>
-              <TrainRef version="any" ref="bbd:trn_447"/>
-              <StartPointRef ref="uic:nl_amsterdam"/>
-              <EndPointRef ref="uic:pl_warsaw"/>
-              <blockParts>
-                <TrainBlockPart id="ops:blkpt_447_01_amsterdam-hannover" version="any" order="1">
-                  <Description>Amsterdam to Hannover (447+ 457 +40447)</Description>
-                  <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
-                  <JourneyPartCoupleRef version="any" ref="bbd:jpc_01_amsterdam-hannover"/>
-                </TrainBlockPart>
-                <TrainBlockPart id="ops:blkpt_447_02_hannover-berlin" version="any" order="2">
-                  <Description>Hannover to Berlin (447+ 457)</Description>
-                  <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
-                  <JourneyPartCoupleRef version="any" ref="bbd:jpc_02_hannover-berlin"/>
-                </TrainBlockPart>
-                <TrainBlockPart id="ops:blkpt_447_03_berlin-warsaw" version="any" order="3">
-                  <Description>Berlin to Warsaw (447)</Description>
-                  <TrainRef version="any" ref="bbd:trn_447"/>
-                  <journeyParts>
-                    <JourneyPartRef version="any" ref="bbd:jpt_447_03"/>
-                  </journeyParts>
-                </TrainBlockPart>
-              </blockParts>
-            </TrainBlock>
-            <TrainBlock id="ops:blk_40447_amsterdam-copenhagen" version="any">
-              <Description>Amsterdam to  Copenhagen (40447)</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT7H</FinishingDuration>
-              <TrainRef version="any" ref="bbd:trn_40447"/>
-              <StartPointRef ref="uic:de_hannover"/>
-              <EndPointRef ref="uic:dk_copenhagen"/>
-              <blockParts>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
-                <TrainBlockPart id="ops:blkpt_40447_02_hannover-copenhagen" version="any" order="2">
-                  <Description>Hannover to  Copenhagen</Description>
-                  <TrainRef version="any" ref="bbd:trn_40447"/>
-                  <journeyParts>
-                    <JourneyPartRef version="any" ref="bbd:jpt_40447_02"/>
-                  </journeyParts>
-                </TrainBlockPart>
-              </blockParts>
-            </TrainBlock>
-            <TrainBlock id="ops:blk_457_amsterdam-prague" version="any">
-              <Description>Amsterdam to Prague</Description>
-              <PreparationDuration>PT10M</PreparationDuration>
-              <FinishingDuration>PT10H</FinishingDuration>
-              <TrainRef version="any" ref="bbd:trn_457"/>
-              <StartPointRef ref="uic:de_berlin"/>
-              <EndPointRef ref="uic:cz_prague"/>
-              <blockParts>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
-                <TrainBlockPart id="ops:blkpt_457_03_berlin-prague" version="any" order="3">
-                  <Description>Berlin to Prague</Description>
-                  <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
-                </TrainBlockPart>
-              </blockParts>
-            </TrainBlock>
-            <CompoundBlock id="bbd:XX-447_amsterdam-hannover" version="any">
-              <Description>Amsterdam to Hannover</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
-              <parts>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
-              </parts>
-            </CompoundBlock>
-            <CompoundBlock id="bbd:YY-447_hannover-berlin" version="any">
-              <Description>Hannover to Berlin</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
-              <parts>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
-              </parts>
-            </CompoundBlock>
-            <CompoundBlock id="bbd:cmpblk_ZZ-457_berlin-prague" version="any">
-              <Description>Berlin to Prague</Description>
-              <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
-              <parts>
-                <TrainBlockPartRef version="any" ref="ops:blkpt_457_03_berlin-prague"/>
-              </parts>
-            </CompoundBlock>
-          </blocks>
-        </VehicleScheduleFrame>
-        <ServiceFrame id="myrail:svf_12" version="any">
-          <Name>Stops for Winter timetable for Splitting timnetable  Amsterdamn to Warsaw  </Name>
-          <routes>
-            <Route id="myrail:RT_447" version="any">
-              <Name>amsterdam-warsaw</Name>
-              <ShortName>Route 447</ShortName>
-            </Route>
-            <Route id="myrail:RT_40447" version="any">
-              <Name>amsterdam-copenhagen</Name>
-              <ShortName>Route 40447</ShortName>
-            </Route>
-            <Route id="myrail:RT_457" version="any">
-              <Name>amsterdam-prague</Name>
-              <ShortName>Route 457</ShortName>
-            </Route>
-            <Route id="myrail:RT_60457" version="any">
-              <Name>berlin-prague</Name>
-              <ShortName>Route 60457</ShortName>
-            </Route>
-          </routes>
-          <lines>
-            <Line id="myrail:LN_nl_amsterdam-cz_prague" version="any">
-              <Name>LN_amsterdam-cz_prague</Name>
-              <ShortName>Line 24</ShortName>
-              <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="myrail:LN_nl_amsterdam-pl_warsaw" version="any">
-              <Name>LN_amsterdam-pl_warsaw</Name>
-              <ShortName>Line 25</ShortName>
-              <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-            <Line id="myrail:LN_nl_amsterdam-dk_copenhagen" version="any">
-              <Name>LN_amsterdam-pl_warsaw</Name>
-              <ShortName>Line 31</ShortName>
-              <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
-          </lines>
-          <destinationDisplays>
-            <DestinationDisplay id="bbd:DST_berlin" version="any">
-              <Name lang="de">Berlin  Hochbahnhof</Name>
-              <ShortName>Berlin HBF</ShortName>
-            </DestinationDisplay>
-            <DestinationDisplay id="bbd:DST_copenhagen" version="any">
-              <Name>Copenhagen Main Station</Name>
-              <ShortName>Hannover HBF</ShortName>
-            </DestinationDisplay>
-            <DestinationDisplay id="bbd:DST_hannover" version="any">
-              <Name lang="de">Hannover  Hochbahnhof</Name>
-              <ShortName>Hannover HBF</ShortName>
-            </DestinationDisplay>
-            <DestinationDisplay id="bbd:DST_prague" version="any">
-              <Name>Prague</Name>
-              <ShortName>Prague</ShortName>
-            </DestinationDisplay>
-            <DestinationDisplay id="bbd:DST_warsaw" version="any">
-              <Name>Warsaw</Name>
-              <ShortName>Warsaw</ShortName>
-            </DestinationDisplay>
-          </destinationDisplays>
-          <scheduledStopPoints>
-            <ScheduledStopPoint id="uic:nl_amsterdam" version="any">
-              <Name>Amsterdamn</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="uic:de_hannover" version="any">
-              <Name>Hannover</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="uic:de_berlin" version="any">
-              <Name>Berlin</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="uic:cz_prague" version="any">
-              <Name>Prague HBF</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="uic:dk_copenhagen" version="any">
-              <Name>Copenhagen HBF</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-            <ScheduledStopPoint id="uic:pl_warsaw" version="any">
-              <Name>Berlin</Name>
-              <VehicleModes>rail</VehicleModes>
-            </ScheduledStopPoint>
-          </scheduledStopPoints>
-          <connections>
-            <Connection id="uic:cx_de_hannover_01" version="any">
-              <Name>Connection at Hannover for berlin</Name>
-            </Connection>
-            <Connection id="uic:cx_de_hannover_02" version="any">
-              <Name>Connection at Hannover for Copenhagen</Name>
-            </Connection>
-            <Connection id="uic:cx_de_berlin_01" version="any">
-              <Name>Connection at Berlin for Warsaw</Name>
-            </Connection>
-            <Connection id="uic:cx_de_berlin_02" version="any">
-              <Name>Connection at Berlin for Prague</Name>
-            </Connection>
-          </connections>
-          <journeyPatterns>
-            <ServiceJourneyPattern id="bbd:JP_447_amsterdam_warsaw" version="any">
-              <Name>Amsterdam  to Warsaw</Name>
-              <DirectionType>outbound</DirectionType>
-              <pointsInSequence>
-                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_01" version="any" order="1">
-                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_02" version="any" order="2">
-                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_03" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_04" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:pl_warsaw"/>
-                </StopPointInJourneyPattern>
-              </pointsInSequence>
-            </ServiceJourneyPattern>
-            <ServiceJourneyPattern id="bbd:JP_40447_amsterdam-copenhagen" version="any">
-              <Name>Amsterdamn to Copenhagen</Name>
-              <DirectionType>outbound</DirectionType>
-              <pointsInSequence>
-                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_01" version="any" order="1">
-                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_02" version="any" order="2">
-                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_03" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:dk_copenhagen"/>
-                </StopPointInJourneyPattern>
-              </pointsInSequence>
-            </ServiceJourneyPattern>
-            <ServiceJourneyPattern id="bbd:JP_457_amsterdam-prague" version="any">
-              <Name>Amsterdam to prague</Name>
-              <DirectionType>outbound</DirectionType>
-              <pointsInSequence>
-                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_01" version="any" order="1">
-                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_02" version="any" order="2">
-                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_03" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_04" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:cz_prague"/>
-                </StopPointInJourneyPattern>
-              </pointsInSequence>
-            </ServiceJourneyPattern>
-            <ServiceJourneyPattern id="bbd:JP_60457_berlin-prague" version="any">
-              <Name>Berlin to Prague</Name>
-              <DirectionType>outbound</DirectionType>
-              <pointsInSequence>
-                <StopPointInJourneyPattern id="bbd:JP_60457_berlin_prague_01" version="any" order="3">
-                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
-                </StopPointInJourneyPattern>
-                <StopPointInJourneyPattern id="bbd:JP_60457_berlin_prague_02" version="any" order="2">
-                  <ScheduledStopPointRef version="any" ref="uic:cz_prague"/>
-                </StopPointInJourneyPattern>
-              </pointsInSequence>
-            </ServiceJourneyPattern>
-          </journeyPatterns>
-        </ServiceFrame>
         <TimetableFrame id="bbd:TIM_23_O" version="any">
           <Name>Winter timetable for route 23 Outbound</Name>
           <VehicleModes>rail</VehicleModes>
@@ -1580,6 +1322,264 @@
             </Train>
           </vehicleTypes>
         </TimetableFrame>
+        <VehicleScheduleFrame id="ops:VSF_23_O" version="any">
+          <Name>BLOCKS Winter timetable for Asmterdam Example</Name>
+          <blocks>
+            <TrainBlock id="ops:blk_447_amsterdam-warsaw" version="any">
+              <Description>Amsterdam - Hannover - Berrlin  Warsaw</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT10H</FinishingDuration>
+              <TrainRef version="any" ref="bbd:trn_447"/>
+              <StartPointRef ref="uic:nl_amsterdam"/>
+              <EndPointRef ref="uic:pl_warsaw"/>
+              <blockParts>
+                <TrainBlockPart id="ops:blkpt_447_01_amsterdam-hannover" version="any" order="1">
+                  <Description>Amsterdam to Hannover (447+ 457 +40447)</Description>
+                  <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
+                  <JourneyPartCoupleRef version="any" ref="bbd:jpc_01_amsterdam-hannover"/>
+                </TrainBlockPart>
+                <TrainBlockPart id="ops:blkpt_447_02_hannover-berlin" version="any" order="2">
+                  <Description>Hannover to Berlin (447+ 457)</Description>
+                  <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
+                  <JourneyPartCoupleRef version="any" ref="bbd:jpc_02_hannover-berlin"/>
+                </TrainBlockPart>
+                <TrainBlockPart id="ops:blkpt_447_03_berlin-warsaw" version="any" order="3">
+                  <Description>Berlin to Warsaw (447)</Description>
+                  <TrainRef version="any" ref="bbd:trn_447"/>
+                  <journeyParts>
+                    <JourneyPartRef version="any" ref="bbd:jpt_447_03"/>
+                  </journeyParts>
+                </TrainBlockPart>
+              </blockParts>
+            </TrainBlock>
+            <TrainBlock id="ops:blk_40447_amsterdam-copenhagen" version="any">
+              <Description>Amsterdam to  Copenhagen (40447)</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT7H</FinishingDuration>
+              <TrainRef version="any" ref="bbd:trn_40447"/>
+              <StartPointRef ref="uic:de_hannover"/>
+              <EndPointRef ref="uic:dk_copenhagen"/>
+              <blockParts>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
+                <TrainBlockPart id="ops:blkpt_40447_02_hannover-copenhagen" version="any" order="2">
+                  <Description>Hannover to  Copenhagen</Description>
+                  <TrainRef version="any" ref="bbd:trn_40447"/>
+                  <journeyParts>
+                    <JourneyPartRef version="any" ref="bbd:jpt_40447_02"/>
+                  </journeyParts>
+                </TrainBlockPart>
+              </blockParts>
+            </TrainBlock>
+            <TrainBlock id="ops:blk_457_amsterdam-prague" version="any">
+              <Description>Amsterdam to Prague</Description>
+              <PreparationDuration>PT10M</PreparationDuration>
+              <FinishingDuration>PT10H</FinishingDuration>
+              <TrainRef version="any" ref="bbd:trn_457"/>
+              <StartPointRef ref="uic:de_berlin"/>
+              <EndPointRef ref="uic:cz_prague"/>
+              <blockParts>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
+                <TrainBlockPart id="ops:blkpt_457_03_berlin-prague" version="any" order="3">
+                  <Description>Berlin to Prague</Description>
+                  <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
+                </TrainBlockPart>
+              </blockParts>
+            </TrainBlock>
+            <CompoundBlock id="bbd:XX-447_amsterdam-hannover" version="any">
+              <Description>Amsterdam to Hannover</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_XX-447"/>
+              <parts>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_01_amsterdam-hannover"/>
+              </parts>
+            </CompoundBlock>
+            <CompoundBlock id="bbd:YY-447_hannover-berlin" version="any">
+              <Description>Hannover to Berlin</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_YY-447"/>
+              <parts>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_447_02_hannover-berlin"/>
+              </parts>
+            </CompoundBlock>
+            <CompoundBlock id="bbd:cmpblk_ZZ-457_berlin-prague" version="any">
+              <Description>Berlin to Prague</Description>
+              <CompoundTrainRef version="any" ref="bbd:ctrn_ZZ-457"/>
+              <parts>
+                <TrainBlockPartRef version="any" ref="ops:blkpt_457_03_berlin-prague"/>
+              </parts>
+            </CompoundBlock>
+          </blocks>
+        </VehicleScheduleFrame>
+        <ServiceFrame id="myrail:svf_12" version="any">
+          <Name>Stops for Winter timetable for Splitting timnetable  Amsterdamn to Warsaw  </Name>
+          <routes>
+            <Route id="myrail:RT_447" version="any">
+              <Name>amsterdam-warsaw</Name>
+              <ShortName>Route 447</ShortName>
+            </Route>
+            <Route id="myrail:RT_40447" version="any">
+              <Name>amsterdam-copenhagen</Name>
+              <ShortName>Route 40447</ShortName>
+            </Route>
+            <Route id="myrail:RT_457" version="any">
+              <Name>amsterdam-prague</Name>
+              <ShortName>Route 457</ShortName>
+            </Route>
+            <Route id="myrail:RT_60457" version="any">
+              <Name>berlin-prague</Name>
+              <ShortName>Route 60457</ShortName>
+            </Route>
+          </routes>
+          <lines>
+            <Line id="myrail:LN_nl_amsterdam-cz_prague" version="any">
+              <Name>LN_amsterdam-cz_prague</Name>
+              <ShortName>Line 24</ShortName>
+              <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="myrail:LN_nl_amsterdam-pl_warsaw" version="any">
+              <Name>LN_amsterdam-pl_warsaw</Name>
+              <ShortName>Line 25</ShortName>
+              <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+            <Line id="myrail:LN_nl_amsterdam-dk_copenhagen" version="any">
+              <Name>LN_amsterdam-pl_warsaw</Name>
+              <ShortName>Line 31</ShortName>
+              <TransportMode>rail</TransportMode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
+          </lines>
+          <destinationDisplays>
+            <DestinationDisplay id="bbd:DST_berlin" version="any">
+              <Name lang="de">Berlin  Hochbahnhof</Name>
+              <ShortName>Berlin HBF</ShortName>
+            </DestinationDisplay>
+            <DestinationDisplay id="bbd:DST_copenhagen" version="any">
+              <Name>Copenhagen Main Station</Name>
+              <ShortName>Hannover HBF</ShortName>
+            </DestinationDisplay>
+            <DestinationDisplay id="bbd:DST_hannover" version="any">
+              <Name lang="de">Hannover  Hochbahnhof</Name>
+              <ShortName>Hannover HBF</ShortName>
+            </DestinationDisplay>
+            <DestinationDisplay id="bbd:DST_prague" version="any">
+              <Name>Prague</Name>
+              <ShortName>Prague</ShortName>
+            </DestinationDisplay>
+            <DestinationDisplay id="bbd:DST_warsaw" version="any">
+              <Name>Warsaw</Name>
+              <ShortName>Warsaw</ShortName>
+            </DestinationDisplay>
+          </destinationDisplays>
+          <scheduledStopPoints>
+            <ScheduledStopPoint id="uic:nl_amsterdam" version="any">
+              <Name>Amsterdamn</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="uic:de_hannover" version="any">
+              <Name>Hannover</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="uic:de_berlin" version="any">
+              <Name>Berlin</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="uic:cz_prague" version="any">
+              <Name>Prague HBF</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="uic:dk_copenhagen" version="any">
+              <Name>Copenhagen HBF</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint id="uic:pl_warsaw" version="any">
+              <Name>Berlin</Name>
+              <VehicleModes>rail</VehicleModes>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+          <connections>
+            <Connection id="uic:cx_de_hannover_01" version="any">
+              <Name>Connection at Hannover for berlin</Name>
+            </Connection>
+            <Connection id="uic:cx_de_hannover_02" version="any">
+              <Name>Connection at Hannover for Copenhagen</Name>
+            </Connection>
+            <Connection id="uic:cx_de_berlin_01" version="any">
+              <Name>Connection at Berlin for Warsaw</Name>
+            </Connection>
+            <Connection id="uic:cx_de_berlin_02" version="any">
+              <Name>Connection at Berlin for Prague</Name>
+            </Connection>
+          </connections>
+          <journeyPatterns>
+            <ServiceJourneyPattern id="bbd:JP_447_amsterdam_warsaw" version="any">
+              <Name>Amsterdam  to Warsaw</Name>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_01" version="any" order="1">
+                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_02" version="any" order="2">
+                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_03" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_447_amsterdam_warsaw_04" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:pl_warsaw"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServiceJourneyPattern>
+            <ServiceJourneyPattern id="bbd:JP_40447_amsterdam-copenhagen" version="any">
+              <Name>Amsterdamn to Copenhagen</Name>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_01" version="any" order="1">
+                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_02" version="any" order="2">
+                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_40447_amsterdam_copenhagen_03" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:dk_copenhagen"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServiceJourneyPattern>
+            <ServiceJourneyPattern id="bbd:JP_457_amsterdam-prague" version="any">
+              <Name>Amsterdam to prague</Name>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_01" version="any" order="1">
+                  <ScheduledStopPointRef version="any" ref="uic:nl_amsterdam"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_02" version="any" order="2">
+                  <ScheduledStopPointRef version="any" ref="uic:de_hannover"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_03" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_457_amsterdam_prague_04" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:cz_prague"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServiceJourneyPattern>
+            <ServiceJourneyPattern id="bbd:JP_60457_berlin-prague" version="any">
+              <Name>Berlin to Prague</Name>
+              <DirectionType>outbound</DirectionType>
+              <pointsInSequence>
+                <StopPointInJourneyPattern id="bbd:JP_60457_berlin_prague_01" version="any" order="3">
+                  <ScheduledStopPointRef version="any" ref="uic:de_berlin"/>
+                </StopPointInJourneyPattern>
+                <StopPointInJourneyPattern id="bbd:JP_60457_berlin_prague_02" version="any" order="2">
+                  <ScheduledStopPointRef version="any" ref="uic:cz_prague"/>
+                </StopPointInJourneyPattern>
+              </pointsInSequence>
+            </ServiceJourneyPattern>
+          </journeyPatterns>
+        </ServiceFrame>
         <SiteFrame id="mybus:svf_12" version="any">
           <Name>Stop Places for Winter timetable for route 24 </Name>
           <stopPlaces>

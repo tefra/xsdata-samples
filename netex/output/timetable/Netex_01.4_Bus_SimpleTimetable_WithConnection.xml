@@ -41,6 +41,55 @@
         <DefaultCodespaceRef ref="mybus"/>
       </FrameDefaults>
       <frames>
+        <SiteFrame id="mybus:svf_12" version="1">
+          <Name>Geometry of HAIL AND RIDE stop for   24 </Name>
+          <flexibleStopPlaces>
+            <FlexibleStopPlace id="mybus:fsp_Quebec" version="any">
+              <Name>Hail and Ride area Zone Quebec</Name>
+              <ShortName>Quebec H and R</ShortName>
+              <Description>Qbece road</Description>
+              <Centroid>
+                <Location>
+                  <gml:pos>12354.78 2342.2</gml:pos>
+                </Location>
+              </Centroid>
+              <areas>
+                <HailAndRideArea id="mybus:HailAndRideArea:hara_Quebec_EW" version="any">
+                  <Name>Quebec hail and ride area - East bound</Name>
+                  <ShortName>Quebec HR Eastbound</ShortName>
+                  <Centroid>
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                  <BearingCompass>E</BearingCompass>
+                  <StartPointRef ref="gis:Point:hara_Quebec_01">EXTERNAL</StartPointRef>
+                  <EndPointRef ref="gis:Point:hara_Quebec_02">EXTERNAL</EndPointRef>
+                </HailAndRideArea>
+                <HailAndRideArea id="mybus:HailAndRideArea:hara_Quebec_WE" version="any">
+                  <Name>Quebec hail and ride area - West bound</Name>
+                  <ShortName>Quebec HR Westbound</ShortName>
+                  <Centroid>
+                    <Location>
+                      <gml:pos>12345.76</gml:pos>
+                      <Precision>12</Precision>
+                    </Location>
+                  </Centroid>
+                  <TransportMode>bus</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                  <BearingCompass>W</BearingCompass>
+                  <StartPointRef ref="gis:Point:hara_Quebec_02">EXTERNAL</StartPointRef>
+                  <EndPointRef ref="gis:Point:hara_Quebec_01">EXTERNAL</EndPointRef>
+                </HailAndRideArea>
+              </areas>
+            </FlexibleStopPlace>
+          </flexibleStopPlaces>
+        </SiteFrame>
         <ServiceFrame id="mybus:svf_12" version="1">
           <Name>Stops for Winter timetable for route 24 </Name>
           <directions>
@@ -64,6 +113,14 @@
             </Route>
           </routes>
           <lines>
+            <Line id="mybus:LN_24" version="any">
+              <Name>Line 24 Alpha to Charley</Name>
+              <ShortName>Line 24</ShortName>
+              <TransportMode>bus</TransportMode>
+              <PublicCode>24</PublicCode>
+              <PaymentMethods/>
+              <PurchaseMoment/>
+            </Line>
             <FlexibleLine id="mybus:LN_46" version="any">
               <Name>Line 46 Park Lane to Quebec</Name>
               <ShortName>Line 46</ShortName>
@@ -75,14 +132,6 @@
               <BookingMethods/>
               <BuyWhen/>
             </FlexibleLine>
-            <Line id="mybus:LN_24" version="any">
-              <Name>Line 24 Alpha to Charley</Name>
-              <ShortName>Line 24</ShortName>
-              <TransportMode>bus</TransportMode>
-              <PublicCode>24</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
-            </Line>
           </lines>
           <destinationDisplays>
             <DestinationDisplay id="hde:DST_Bravo" version="any">
@@ -994,70 +1043,6 @@
             </ServiceJourneyInterchange>
           </journeyInterchanges>
         </TimetableFrame>
-        <SiteFrame id="mybus:svf_12" version="1">
-          <Name>Geometry of HAIL AND RIDE stop for   24 </Name>
-          <flexibleStopPlaces>
-            <FlexibleStopPlace id="mybus:fsp_Quebec" version="any">
-              <Name>Hail and Ride area Zone Quebec</Name>
-              <ShortName>Quebec H and R</ShortName>
-              <Description>Qbece road</Description>
-              <Centroid>
-                <Location>
-                  <gml:pos>12354.78 2342.2</gml:pos>
-                </Location>
-              </Centroid>
-              <areas>
-                <HailAndRideArea id="mybus:HailAndRideArea:hara_Quebec_EW" version="any">
-                  <Name>Quebec hail and ride area - East bound</Name>
-                  <ShortName>Quebec HR Eastbound</ShortName>
-                  <Centroid>
-                    <Location>
-                      <gml:pos>12345.76</gml:pos>
-                      <Precision>12</Precision>
-                    </Location>
-                  </Centroid>
-                  <TransportMode>bus</TransportMode>
-                  <BoardingUse>true</BoardingUse>
-                  <AlightingUse>true</AlightingUse>
-                  <BearingCompass>E</BearingCompass>
-                  <StartPointRef ref="gis:Point:hara_Quebec_01">EXTERNAL</StartPointRef>
-                  <EndPointRef ref="gis:Point:hara_Quebec_02">EXTERNAL</EndPointRef>
-                </HailAndRideArea>
-                <HailAndRideArea id="mybus:HailAndRideArea:hara_Quebec_WE" version="any">
-                  <Name>Quebec hail and ride area - West bound</Name>
-                  <ShortName>Quebec HR Westbound</ShortName>
-                  <Centroid>
-                    <Location>
-                      <gml:pos>12345.76</gml:pos>
-                      <Precision>12</Precision>
-                    </Location>
-                  </Centroid>
-                  <TransportMode>bus</TransportMode>
-                  <BoardingUse>true</BoardingUse>
-                  <AlightingUse>true</AlightingUse>
-                  <BearingCompass>W</BearingCompass>
-                  <StartPointRef ref="gis:Point:hara_Quebec_02">EXTERNAL</StartPointRef>
-                  <EndPointRef ref="gis:Point:hara_Quebec_01">EXTERNAL</EndPointRef>
-                </HailAndRideArea>
-              </areas>
-            </FlexibleStopPlace>
-          </flexibleStopPlaces>
-        </SiteFrame>
-        <ResourceFrame id="hde:RS_01" version="any">
-          <organisations>
-            <ServicedOrganisation id="dth:Dotheboys" version="1">
-              <Name>Dotheboys Hall,</Name>
-              <ShortName>Dotheboys</ShortName>
-              <ContactDetails>
-                <ContactPerson>Wackford Squeers  </ContactPerson>
-                <Email>enquiries@Dotheboys.ac.uk</Email>
-              </ContactDetails>
-              <OrganisationType/>
-              <ServiceCalendarRef version="any" ref="dth:DTH_01"/>
-              <ServicedOrganisationType>school</ServicedOrganisationType>
-            </ServicedOrganisation>
-          </organisations>
-        </ResourceFrame>
         <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
           <ServiceCalendar id="hde:CAL_02" version="any">
@@ -1065,10 +1050,6 @@
             <ToDate>2010-11-14</ToDate>
           </ServiceCalendar>
           <dayTypes>
-            <OrganisationDayType id="hde:DotheboysTerm" version="any">
-              <IsServiceDay>true</IsServiceDay>
-              <ServicedOrganisationRef version="1" ref="dth:Dotheboys"/>
-            </OrganisationDayType>
             <DayType id="hde:DT_01-MF-NH" version="any">
               <Name>Weekdays unless a holiday</Name>
               <properties>
@@ -1117,6 +1098,10 @@
                 </PropertyOfDay>
               </properties>
             </DayType>
+            <OrganisationDayType id="hde:DotheboysTerm" version="any">
+              <IsServiceDay>true</IsServiceDay>
+              <ServicedOrganisationRef version="1" ref="dth:Dotheboys"/>
+            </OrganisationDayType>
           </dayTypes>
           <dayTypeAssignments>
             <DayTypeAssignment id="hde:DayAsgn_2010-11-01" version="any" order="1">
@@ -1191,6 +1176,21 @@
             </DayTypeAssignment>
           </dayTypeAssignments>
         </ServiceCalendarFrame>
+        <ResourceFrame id="hde:RS_01" version="any">
+          <organisations>
+            <ServicedOrganisation id="dth:Dotheboys" version="1">
+              <Name>Dotheboys Hall,</Name>
+              <ShortName>Dotheboys</ShortName>
+              <ContactDetails>
+                <ContactPerson>Wackford Squeers  </ContactPerson>
+                <Email>enquiries@Dotheboys.ac.uk</Email>
+              </ContactDetails>
+              <OrganisationType/>
+              <ServiceCalendarRef version="any" ref="dth:DTH_01"/>
+              <ServicedOrganisationType>school</ServicedOrganisationType>
+            </ServicedOrganisation>
+          </organisations>
+        </ResourceFrame>
         <ServiceCalendarFrame id="dth:DTH_01" version="1">
           <Name>Dotheboys Hall School Terms   </Name>
           <ServiceCalendar id="dth:DTH_01" version="any">

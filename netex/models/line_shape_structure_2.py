@@ -36,76 +36,57 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_link_ref: Optional[ServiceLinkRef] = field(
+    choice: Optional[object] = field(
         default=None,
         metadata={
-            "name": "ServiceLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    line_link_ref: Optional[LineLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "LineLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    path_link_ref: Optional[PathLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "PathLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    timing_link_ref: Optional[TimingLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "TimingLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    route_link_ref: Optional[RouteLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "RouteLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wire_link_ref: Optional[WireLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "WireLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_link_ref: Optional[RoadLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "RoadLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    railway_link_ref: Optional[RailwayLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "RailwayLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    activation_link_ref: Optional[ActivationLinkRef] = field(
-        default=None,
-        metadata={
-            "name": "ActivationLinkRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ServiceLinkRef",
+                    "type": ServiceLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LineLinkRef",
+                    "type": LineLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TimingLinkRef",
+                    "type": TimingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteLinkRef",
+                    "type": RouteLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WireLinkRef",
+                    "type": WireLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadLinkRef",
+                    "type": RoadLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayLinkRef",
+                    "type": RailwayLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationLinkRef",
+                    "type": ActivationLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
     locating_system_ref: Optional[str] = field(

@@ -950,6 +950,202 @@
             </TimeDemandType>
           </timeDemandTypes>
         </ServiceFrame>
+        <InfrastructureFrame id="hde:InfrastructureFrame:INF_02" version="1">
+          <Name>Activation Elements  </Name>
+          <trafficControlPoints>
+            <TrafficControlPoint id="hde:tcp_01" version="any">
+              <Name>TCP Between Alpha and Bravo at TP1 </Name>
+              <Location>
+                <Longitude>0.35</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <projections>
+                <PointProjection id="hde:ppj_tcp_01_pj01" version="any">
+                  <Name>Project onto Service link between A  and Charley</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <Distance>900</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_tcp_01_pj02" version="any">
+                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
+                  <ProjectToPointRef version="any" ref="mybus:SSP_001_t1"/>
+                </PointProjection>
+              </projections>
+            </TrafficControlPoint>
+            <TrafficControlPoint id="hde:tcp_02" version="any">
+              <Name>TCP Between Alpha and Bravo   aafter tp5</Name>
+              <Location>
+                <Longitude>0.35</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <projections>
+                <PointProjection id="hde:ppj_tcp_02_pj01" version="any">
+                  <Name>Project onto Service link between Bravo  and Charley</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <Distance>400</Distance>
+                </PointProjection>
+              </projections>
+            </TrafficControlPoint>
+          </trafficControlPoints>
+          <activationPoints>
+            <ActivationPoint id="hde:ap_01" version="any">
+              <Name>AP 1   before Bravo  start of activation link al1</Name>
+              <Location>
+                <Longitude>0.3</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <types>
+                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
+              </types>
+              <projections>
+                <PointProjection id="hde:ppj_01_pj01" version="any">
+                  <Name>Project onto Service link between Alpha and Bravo</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <Distance>10050</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_01_pj02" version="any">
+                  <Name>Project onto Timing Link  2 between Alpha and Bravo</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                  <Distance>50</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_01_pj03" version="any">
+                  <Name>Project onto Route  Link 3 between Alpha 3@ and 4@ on way to and Bravo</Name>
+                  <ProjectToPointRef version="any" ref=""/>
+                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_3_to_RT_24_4"/>
+                  <Distance>80</Distance>
+                </PointProjection>
+              </projections>
+              <PrivateCode>MyPoint23</PrivateCode>
+            </ActivationPoint>
+            <ActivationPoint id="hde:ap_02" version="any">
+              <Name>AP2 at  Bravo  end of activation link</Name>
+              <Location>
+                <Longitude>0.35</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <types>
+                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
+              </types>
+              <projections>
+                <PointProjection id="hde:ppj_02_pj01" version="any">
+                  <Name>Project onto   Bravo  </Name>
+                  <ProjectToPointRef version="any" ref="mybus:SSP_002"/>
+                  <Distance>2000</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_02_pj03" version="any">
+                  <Name>Project onto Route  Poinbt 5 for   Bravo  </Name>
+                  <ProjectToPointRef version="any" ref="mybus:Rtpt_RT_002@"/>
+                </PointProjection>
+              </projections>
+              <PrivateCode>MyPoint24</PrivateCode>
+            </ActivationPoint>
+            <ActivationPoint id="hde:ap_03" version="any">
+              <Name>AP2  Between Bravo and Charlwey </Name>
+              <Location>
+                <Longitude>0.35</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <types>
+                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
+              </types>
+              <projections>
+                <PointProjection id="hde:ppj_ap03_pj01" version="any">
+                  <Name>Project onto Service link between Bravo  and Charley</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <Distance>2000</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_ap03_pj02" version="any">
+                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
+                  <ProjectToPointRef version="any" ref="mybus:SSP_002_t1"/>
+                </PointProjection>
+                <PointProjection id="hde:ppj_ap03_pj03" version="any">
+                  <Name>Project onto Route  Point 5 between  Bravo  and Charley</Name>
+                  <ProjectToPointRef version="any" ref="mybus:Rtpt_RT_24_5"/>
+                </PointProjection>
+              </projections>
+              <PrivateCode>MyPoint25</PrivateCode>
+            </ActivationPoint>
+            <BeaconPoint id="hde:BeaconPoint:bp_01" version="any">
+              <Name>BeaconP1 Between Alpha and Bravo and Charlwey </Name>
+              <Location>
+                <Longitude>0.35</Longitude>
+                <Latitude>52.00</Latitude>
+              </Location>
+              <projections>
+                <PointProjection id="hde:ppj_bp_01_pj01" version="any">
+                  <Name>Project onto Service link between A  and Charley</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <Distance>900</Distance>
+                </PointProjection>
+                <PointProjection id="hde:ppj_bp_01_pj02" version="any">
+                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
+                  <ProjectToPointRef version="any" ref="mybus:SSP_001_t1"/>
+                </PointProjection>
+              </projections>
+            </BeaconPoint>
+          </activationPoints>
+          <activationLinks>
+            <ActivationLink id="hde:ActivationLink:al_01" version="any">
+              <Name>AL  1  same as TimingLink   tl3   just before Bravo </Name>
+              <types>
+                <TypeOfLinkRef ref="hde:TypeOLink:ActLinkType21"/>
+              </types>
+              <projections>
+                <LinkProjection id="hde:ppj_aL01_pj01" version="any">
+                  <Name>Project onto Service link between Alpha and Bravo</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
+                  <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"/>
+                </LinkProjection>
+                <LinkProjection id="hde:ppj_aL01_pj02" version="any">
+                  <Name>Project onto timing img link 3 just before Bravo</Name>
+                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
+                </LinkProjection>
+              </projections>
+              <passingThrough>
+                <PointOnLink id="mybus:pol_al_01_SSP_001_t2" version="any" order="5">
+                  <Name>Goes through timing poit SSP_001_t2   </Name>
+                  <DistanceFromStart>500</DistanceFromStart>
+                  <RoutePointRef version="any" ref="mybus:SSP_001_t2"/>
+                </PointOnLink>
+                <PointOnLink id="mybus:pol_al_01_rtpt_03" version="any" order="6">
+                  <Name>Goes through rtpt  </Name>
+                  <DistanceFromStart>600</DistanceFromStart>
+                  <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_3"/>
+                </PointOnLink>
+                <PointOnLink id="mybus:pol_al_01_rtp_SSP_002@" version="any" order="8">
+                  <Name>Goes through rtpt 11 </Name>
+                  <DistanceFromStart>1500</DistanceFromStart>
+                  <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_002@"/>
+                </PointOnLink>
+              </passingThrough>
+              <FromPointRef version="any" ref="hde:ap_01"/>
+              <ToPointRef version="any" ref="hde:ap_02"/>
+            </ActivationLink>
+          </activationLinks>
+          <activatedEquipments>
+            <ActivatedEquipment id="hde:ActivatedEquipment:aeq_01" version="any">
+              <Name>Equipment at TCP1</Name>
+              <OutOfService>false</OutOfService>
+              <TrafficControlPointRef ref="hde:tcp_01"/>
+              <assignments>
+                <ActivationAssignment id="hde:aeq_01" version="any" order="1">
+                  <LinkRef version="any" ref="hde:ActivationLink:al_01"/>
+                  <PointRef version="any" ref="hde:tcp_01"/>
+                </ActivationAssignment>
+              </assignments>
+            </ActivatedEquipment>
+            <ActivatedEquipment id="hde:ActivatedEquipment:aeq_02" version="any">
+              <Name>Equipment at AP3</Name>
+              <OutOfService>false</OutOfService>
+              <TrafficControlPointRef ref="hde:tcp_02"/>
+              <assignments>
+                <ActivationAssignment id="hde:aeq_02" version="any" order="1">
+                  <LinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
+                  <PointRef version="any" ref="hde:ap_03"/>
+                </ActivationAssignment>
+              </assignments>
+            </ActivatedEquipment>
+          </activatedEquipments>
+        </InfrastructureFrame>
         <TimetableFrame id="hde:TIM_23_O" version="1">
           <validityConditions>
             <AvailabilityCondition id="hde:Cnd001" version="any">
@@ -1154,202 +1350,6 @@
             </ServiceJourney>
           </vehicleJourneys>
         </TimetableFrame>
-        <InfrastructureFrame id="hde:InfrastructureFrame:INF_02" version="1">
-          <Name>Activation Elements  </Name>
-          <trafficControlPoints>
-            <TrafficControlPoint id="hde:tcp_01" version="any">
-              <Name>TCP Between Alpha and Bravo at TP1 </Name>
-              <Location>
-                <Longitude>0.35</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <projections>
-                <PointProjection id="hde:ppj_tcp_01_pj01" version="any">
-                  <Name>Project onto Service link between A  and Charley</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
-                  <Distance>900</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_tcp_01_pj02" version="any">
-                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
-                  <ProjectToPointRef version="any" ref="mybus:SSP_001_t1"/>
-                </PointProjection>
-              </projections>
-            </TrafficControlPoint>
-            <TrafficControlPoint id="hde:tcp_02" version="any">
-              <Name>TCP Between Alpha and Bravo   aafter tp5</Name>
-              <Location>
-                <Longitude>0.35</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <projections>
-                <PointProjection id="hde:ppj_tcp_02_pj01" version="any">
-                  <Name>Project onto Service link between Bravo  and Charley</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
-                  <Distance>400</Distance>
-                </PointProjection>
-              </projections>
-            </TrafficControlPoint>
-          </trafficControlPoints>
-          <activationPoints>
-            <BeaconPoint id="hde:BeaconPoint:bp_01" version="any">
-              <Name>BeaconP1 Between Alpha and Bravo and Charlwey </Name>
-              <Location>
-                <Longitude>0.35</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <projections>
-                <PointProjection id="hde:ppj_bp_01_pj01" version="any">
-                  <Name>Project onto Service link between A  and Charley</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
-                  <Distance>900</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_bp_01_pj02" version="any">
-                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
-                  <ProjectToPointRef version="any" ref="mybus:SSP_001_t1"/>
-                </PointProjection>
-              </projections>
-            </BeaconPoint>
-            <ActivationPoint id="hde:ap_01" version="any">
-              <Name>AP 1   before Bravo  start of activation link al1</Name>
-              <Location>
-                <Longitude>0.3</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <types>
-                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
-              </types>
-              <projections>
-                <PointProjection id="hde:ppj_01_pj01" version="any">
-                  <Name>Project onto Service link between Alpha and Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
-                  <Distance>10050</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_01_pj02" version="any">
-                  <Name>Project onto Timing Link  2 between Alpha and Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
-                  <Distance>50</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_01_pj03" version="any">
-                  <Name>Project onto Route  Link 3 between Alpha 3@ and 4@ on way to and Bravo</Name>
-                  <ProjectToPointRef version="any" ref=""/>
-                  <ProjectToLinkRef version="any" ref="mybus:RL_24o_RT_24_3_to_RT_24_4"/>
-                  <Distance>80</Distance>
-                </PointProjection>
-              </projections>
-              <PrivateCode>MyPoint23</PrivateCode>
-            </ActivationPoint>
-            <ActivationPoint id="hde:ap_02" version="any">
-              <Name>AP2 at  Bravo  end of activation link</Name>
-              <Location>
-                <Longitude>0.35</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <types>
-                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
-              </types>
-              <projections>
-                <PointProjection id="hde:ppj_02_pj01" version="any">
-                  <Name>Project onto   Bravo  </Name>
-                  <ProjectToPointRef version="any" ref="mybus:SSP_002"/>
-                  <Distance>2000</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_02_pj03" version="any">
-                  <Name>Project onto Route  Poinbt 5 for   Bravo  </Name>
-                  <ProjectToPointRef version="any" ref="mybus:Rtpt_RT_002@"/>
-                </PointProjection>
-              </projections>
-              <PrivateCode>MyPoint24</PrivateCode>
-            </ActivationPoint>
-            <ActivationPoint id="hde:ap_03" version="any">
-              <Name>AP2  Between Bravo and Charlwey </Name>
-              <Location>
-                <Longitude>0.35</Longitude>
-                <Latitude>52.00</Latitude>
-              </Location>
-              <types>
-                <TypeOfPointRef ref="hde:Type_of_point@ActPoint1"/>
-              </types>
-              <projections>
-                <PointProjection id="hde:ppj_ap03_pj01" version="any">
-                  <Name>Project onto Service link between Bravo  and Charley</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
-                  <Distance>2000</Distance>
-                </PointProjection>
-                <PointProjection id="hde:ppj_ap03_pj02" version="any">
-                  <Name>Project onto Timing Point2 between  Bravo  and Charley</Name>
-                  <ProjectToPointRef version="any" ref="mybus:SSP_002_t1"/>
-                </PointProjection>
-                <PointProjection id="hde:ppj_ap03_pj03" version="any">
-                  <Name>Project onto Route  Point 5 between  Bravo  and Charley</Name>
-                  <ProjectToPointRef version="any" ref="mybus:Rtpt_RT_24_5"/>
-                </PointProjection>
-              </projections>
-              <PrivateCode>MyPoint25</PrivateCode>
-            </ActivationPoint>
-          </activationPoints>
-          <activationLinks>
-            <ActivationLink id="hde:ActivationLink:al_01" version="any">
-              <Name>AL  1  same as TimingLink   tl3   just before Bravo </Name>
-              <types>
-                <TypeOfLinkRef ref="hde:TypeOLink:ActLinkType21"/>
-              </types>
-              <projections>
-                <LinkProjection id="hde:ppj_aL01_pj01" version="any">
-                  <Name>Project onto Service link between Alpha and Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_to_SSP_002"/>
-                  <StartPointOnLinkRef version="any" ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"/>
-                </LinkProjection>
-                <LinkProjection id="hde:ppj_aL01_pj02" version="any">
-                  <Name>Project onto timing img link 3 just before Bravo</Name>
-                  <ProjectToLinkRef version="any" ref="mybus:SSP_001_t2_to_SSP_002"/>
-                </LinkProjection>
-              </projections>
-              <passingThrough>
-                <PointOnLink id="mybus:pol_al_01_SSP_001_t2" version="any" order="5">
-                  <Name>Goes through timing poit SSP_001_t2   </Name>
-                  <DistanceFromStart>500</DistanceFromStart>
-                  <RoutePointRef version="any" ref="mybus:SSP_001_t2"/>
-                </PointOnLink>
-                <PointOnLink id="mybus:pol_al_01_rtpt_03" version="any" order="6">
-                  <Name>Goes through rtpt  </Name>
-                  <DistanceFromStart>600</DistanceFromStart>
-                  <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_3"/>
-                </PointOnLink>
-                <PointOnLink id="mybus:pol_al_01_rtp_SSP_002@" version="any" order="8">
-                  <Name>Goes through rtpt 11 </Name>
-                  <DistanceFromStart>1500</DistanceFromStart>
-                  <RoutePointRef version="any" ref="mybus:Rtpt_RT_24_SSP_002@"/>
-                </PointOnLink>
-              </passingThrough>
-              <FromPointRef version="any" ref="hde:ap_01"/>
-              <ToPointRef version="any" ref="hde:ap_02"/>
-            </ActivationLink>
-          </activationLinks>
-          <activatedEquipments>
-            <ActivatedEquipment id="hde:ActivatedEquipment:aeq_01" version="any">
-              <Name>Equipment at TCP1</Name>
-              <OutOfService>false</OutOfService>
-              <TrafficControlPointRef ref="hde:tcp_01"/>
-              <assignments>
-                <ActivationAssignment id="hde:aeq_01" version="any" order="1">
-                  <LinkRef version="any" ref="hde:ActivationLink:al_01"/>
-                  <PointRef version="any" ref="hde:tcp_01"/>
-                </ActivationAssignment>
-              </assignments>
-            </ActivatedEquipment>
-            <ActivatedEquipment id="hde:ActivatedEquipment:aeq_02" version="any">
-              <Name>Equipment at AP3</Name>
-              <OutOfService>false</OutOfService>
-              <TrafficControlPointRef ref="hde:tcp_02"/>
-              <assignments>
-                <ActivationAssignment id="hde:aeq_02" version="any" order="1">
-                  <LinkRef version="any" ref="mybus:SSP_002_to_SSP_077"/>
-                  <PointRef version="any" ref="hde:ap_03"/>
-                </ActivationAssignment>
-              </assignments>
-            </ActivatedEquipment>
-          </activatedEquipments>
-        </InfrastructureFrame>
         <ServiceCalendarFrame id="hde:CAL_02" version="1">
           <Name>Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  </Name>
           <ServiceCalendar id="hde:CAL_02" version="any">

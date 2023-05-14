@@ -12,19 +12,21 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "addressesInFrame_RelStructure"
 
-    postal_address: List[PostalAddress] = field(
+    postal_address_or_road_address: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "PostalAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    road_address: List[RoadAddress] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoadAddress",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PostalAddress",
+                    "type": PostalAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadAddress",
+                    "type": RoadAddress,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

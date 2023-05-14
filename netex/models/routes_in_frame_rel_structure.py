@@ -12,19 +12,21 @@ class RoutesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routesInFrame_RelStructure"
 
-    flexible_route: List[FlexibleRoute] = field(
+    flexible_route_or_route: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "FlexibleRoute",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    route: List[Route] = field(
-        default_factory=list,
-        metadata={
-            "name": "Route",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FlexibleRoute",
+                    "type": FlexibleRoute,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Route",
+                    "type": Route,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

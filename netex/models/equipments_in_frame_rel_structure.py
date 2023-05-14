@@ -55,363 +55,236 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipmentsInFrame_RelStructure"
 
-    assistance_booking_service: List[AssistanceBookingService] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "AssistanceBookingService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    catering_service: List[CateringService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CateringService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_service: List[RetailService] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    money_service: List[MoneyService] = field(
-        default_factory=list,
-        metadata={
-            "name": "MoneyService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    hire_service: List[HireService] = field(
-        default_factory=list,
-        metadata={
-            "name": "HireService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    communication_service: List[CommunicationService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommunicationService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    meeting_point_service: List[MeetingPointService] = field(
-        default_factory=list,
-        metadata={
-            "name": "MeetingPointService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lost_property_service: List[LostPropertyService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LostPropertyService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    left_luggage_service: List[LeftLuggageService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LeftLuggageService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    complaints_service: List[ComplaintsService] = field(
-        default_factory=list,
-        metadata={
-            "name": "ComplaintsService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_service: List[CustomerService] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    luggage_service: List[LuggageService] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    assistance_service: List[AssistanceService] = field(
-        default_factory=list,
-        metadata={
-            "name": "AssistanceService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_service: List[TicketingService] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketingService",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    retail_device: List[RetailDevice] = field(
-        default_factory=list,
-        metadata={
-            "name": "RetailDevice",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticket_validator_equipment: List[TicketValidatorEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketValidatorEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ticketing_equipment: List[TicketingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TicketingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    seating_equipment: List[SeatingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SeatingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    shelter_equipment: List[ShelterEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "ShelterEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    trolley_stand_equipment: List[TrolleyStandEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TrolleyStandEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    waiting_room_equipment: List[WaitingRoomEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "WaitingRoomEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    crossing_equipment: List[CrossingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "CrossingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    queueing_equipment: List[QueueingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "QueueingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    entrance_equipment: List[EntranceEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "EntranceEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    ramp_equipment: List[RampEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "RampEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    lift_equipment: List[LiftEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "LiftEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    travelator_equipment: List[TravelatorEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "TravelatorEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    staircase_equipment: List[StaircaseEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "StaircaseEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    escalator_equipment: List[EscalatorEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "EscalatorEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place_lighting: List[PlaceLighting] = field(
-        default_factory=list,
-        metadata={
-            "name": "PlaceLighting",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rough_surface: List[RoughSurface] = field(
-        default_factory=list,
-        metadata={
-            "name": "RoughSurface",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_equipment: List[AccessEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    general_sign: List[GeneralSign] = field(
-        default_factory=list,
-        metadata={
-            "name": "GeneralSign",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    heading_sign: List[HeadingSign] = field(
-        default_factory=list,
-        metadata={
-            "name": "HeadingSign",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    place_sign: List[PlaceSign] = field(
-        default_factory=list,
-        metadata={
-            "name": "PlaceSign",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sign_equipment: List[SignEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SignEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    wheelchair_vehicle_equipment: List[WheelchairVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "WheelchairVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    access_vehicle_equipment: List[AccessVehicleEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "AccessVehicleEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    vehicle_charging_equipment: List[VehicleChargingEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "VehicleChargingEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    cycle_storage_equipment: List[CycleStorageEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "CycleStorageEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_information_equipment: List[PassengerInformationEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerInformationEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    rubbish_disposal_equipment: List[RubbishDisposalEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "RubbishDisposalEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    help_point_equipment: List[HelpPointEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "HelpPointEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    passenger_safety_equipment: List[PassengerSafetyEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "PassengerSafetyEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    sanitary_equipment: List[SanitaryEquipment] = field(
-        default_factory=list,
-        metadata={
-            "name": "SanitaryEquipment",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AssistanceBookingService",
+                    "type": AssistanceBookingService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringService",
+                    "type": CateringService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailService",
+                    "type": RetailService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyService",
+                    "type": MoneyService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireService",
+                    "type": HireService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationService",
+                    "type": CommunicationService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointService",
+                    "type": MeetingPointService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyService",
+                    "type": LostPropertyService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageService",
+                    "type": LeftLuggageService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsService",
+                    "type": ComplaintsService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerService",
+                    "type": CustomerService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageService",
+                    "type": LuggageService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceService",
+                    "type": AssistanceService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingService",
+                    "type": TicketingService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailDevice",
+                    "type": RetailDevice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketValidatorEquipment",
+                    "type": TicketValidatorEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingEquipment",
+                    "type": TicketingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeatingEquipment",
+                    "type": SeatingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ShelterEquipment",
+                    "type": ShelterEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrolleyStandEquipment",
+                    "type": TrolleyStandEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingRoomEquipment",
+                    "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CrossingEquipment",
+                    "type": CrossingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QueueingEquipment",
+                    "type": QueueingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceEquipment",
+                    "type": EntranceEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RampEquipment",
+                    "type": RampEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LiftEquipment",
+                    "type": LiftEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelatorEquipment",
+                    "type": TravelatorEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StaircaseEquipment",
+                    "type": StaircaseEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EscalatorEquipment",
+                    "type": EscalatorEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceLighting",
+                    "type": PlaceLighting,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoughSurface",
+                    "type": RoughSurface,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessEquipment",
+                    "type": AccessEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSign",
+                    "type": GeneralSign,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadingSign",
+                    "type": HeadingSign,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceSign",
+                    "type": PlaceSign,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SignEquipment",
+                    "type": SignEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleEquipment",
+                    "type": WheelchairVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipment",
+                    "type": AccessVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleChargingEquipment",
+                    "type": VehicleChargingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipment",
+                    "type": CycleStorageEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationEquipment",
+                    "type": PassengerInformationEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RubbishDisposalEquipment",
+                    "type": RubbishDisposalEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HelpPointEquipment",
+                    "type": HelpPointEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerSafetyEquipment",
+                    "type": PassengerSafetyEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SanitaryEquipment",
+                    "type": SanitaryEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )

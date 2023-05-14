@@ -14,35 +14,31 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    residential_qualification_eligibility: List[ResidentialQualificationEligibility] = field(
+    choice: List[object] = field(
         default_factory=list,
         metadata={
-            "name": "ResidentialQualificationEligibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    commercial_profile_eligibility: List[CommercialProfileEligibility] = field(
-        default_factory=list,
-        metadata={
-            "name": "CommercialProfileEligibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    user_profile_eligibility: List[UserProfileEligibility] = field(
-        default_factory=list,
-        metadata={
-            "name": "UserProfileEligibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        }
-    )
-    customer_eligibility: List[CustomerEligibility] = field(
-        default_factory=list,
-        metadata={
-            "name": "CustomerEligibility",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "ResidentialQualificationEligibility",
+                    "type": ResidentialQualificationEligibility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommercialProfileEligibility",
+                    "type": CommercialProfileEligibility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "UserProfileEligibility",
+                    "type": UserProfileEligibility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerEligibility",
+                    "type": CustomerEligibility,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         }
     )
