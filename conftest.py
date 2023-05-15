@@ -3,6 +3,7 @@ from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers import JsonParser
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import JsonSerializer
+from xsdata.formats.dataclass.serializers import PycodeSerializer
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
@@ -40,6 +41,11 @@ def xml_parser(xml_context):
 @pytest.fixture
 def xml_serializer(xml_context, serializer_config):
     return XmlSerializer(context=xml_context, config=serializer_config)
+
+
+@pytest.fixture
+def code_serializer(xml_context, serializer_config):
+    return PycodeSerializer(context=xml_context, config=serializer_config)
 
 
 @pytest.fixture
