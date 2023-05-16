@@ -59,9 +59,9 @@ def init_config(suite: str, *args):
     subprocess.run(f"xsdata init-config {suite}/.xsdata.xml", shell=True)
 
 
-def all(suite: str, output_format: str):
-    build(suite, output_format)
-    test(suite, output_format)
+def all(suite: str, output_format: str, *args):
+    build(suite, output_format, *args)
+    test(suite, output_format, *args)
     mypy(suite)
 
 
