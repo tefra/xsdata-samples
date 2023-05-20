@@ -7,7 +7,7 @@ from ..core.datatypes import (
 )
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Bl,
     Cd,
     Ce,
@@ -1246,7 +1246,7 @@ class CoctMt530000UvCriterion:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2716,7 +2716,7 @@ class CoctMt530000UvObservationRange:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5556,7 +5556,7 @@ class CoctMt530000UvObservation:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

@@ -12,7 +12,7 @@
     <UnnestClasses>false</UnnestClasses>
   </Output>
   <Conventions>
-    <ClassName case="pascalCase" safePrefix="type"/>
+    <ClassName case="pascalCase" safePrefix="model"/>
     <FieldName case="snakeCase" safePrefix="value"/>
     <ConstantName case="screamingSnakeCase" safePrefix="value"/>
     <ModuleName case="snakeCase" safePrefix="mod"/>

@@ -3,7 +3,7 @@ from typing import List, Optional, Union
 from ..core.datatypes import IvlInt
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Cd,
     Ce,
     Cs,
@@ -921,7 +921,7 @@ class CoctMt290000Uv06PresentingIndication:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

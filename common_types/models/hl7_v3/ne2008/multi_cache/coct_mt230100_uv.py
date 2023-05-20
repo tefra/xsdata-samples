@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Cd,
     Ce,
     Cs,
@@ -173,7 +173,7 @@ class CoctMt230100UvCharacteristic:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -403,7 +403,7 @@ class CoctMt230100UvObservationGoal:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

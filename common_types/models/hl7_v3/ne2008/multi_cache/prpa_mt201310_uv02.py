@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Bl,
     Cd,
     Ce,
@@ -123,7 +123,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1173,7 +1173,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "required": True,
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

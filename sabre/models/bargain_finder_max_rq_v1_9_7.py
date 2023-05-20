@@ -10611,47 +10611,6 @@ class OtaAirLowFareSearchRq:
                     }
                 )
 
-                @dataclass
-                class Carriers:
-                    """
-                    Attributes
-                        include_vendor_pref:
-                        exclude_vendor_pref: Do not consider these
-                            carriers for this leg.
-                    """
-                    include_vendor_pref: List[IncludeVendorPrefType] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "IncludeVendorPref",
-                            "type": "Element",
-                        }
-                    )
-                    exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Origins.Origin.Carriers.ExcludeVendorPref"] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ExcludeVendorPref",
-                            "type": "Element",
-                        }
-                    )
-
-                    @dataclass
-                    class ExcludeVendorPref:
-                        """
-                        Attributes
-                            code: Identifies a company by the company
-                                code.
-                        """
-                        code: Optional[str] = field(
-                            default=None,
-                            metadata={
-                                "name": "Code",
-                                "type": "Attribute",
-                                "required": True,
-                                "min_length": 1,
-                                "max_length": 8,
-                            }
-                        )
-
         @dataclass
         class Destinations:
             destination: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination"] = field(
@@ -10687,47 +10646,6 @@ class OtaAirLowFareSearchRq:
                         "type": "Attribute",
                     }
                 )
-
-                @dataclass
-                class Carriers:
-                    """
-                    Attributes
-                        include_vendor_pref:
-                        exclude_vendor_pref: Do not consider these
-                            carriers for this leg.
-                    """
-                    include_vendor_pref: List[IncludeVendorPrefType] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "IncludeVendorPref",
-                            "type": "Element",
-                        }
-                    )
-                    exclude_vendor_pref: List["OtaAirLowFareSearchRq.Leg.Destinations.Destination.Carriers.ExcludeVendorPref"] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ExcludeVendorPref",
-                            "type": "Element",
-                        }
-                    )
-
-                    @dataclass
-                    class ExcludeVendorPref:
-                        """
-                        Attributes
-                            code: Identifies a company by the company
-                                code.
-                        """
-                        code: Optional[str] = field(
-                            default=None,
-                            metadata={
-                                "name": "Code",
-                                "type": "Attribute",
-                                "required": True,
-                                "min_length": 1,
-                                "max_length": 8,
-                            }
-                        )
 
         @dataclass
         class Carriers:

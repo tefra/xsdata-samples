@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from ..core.datatypes_base import (
-    Any,
+    AnyType,
     Cs,
     EdExplicit,
     EnExplicit,
@@ -63,7 +63,7 @@ class McciMt000100Uv01AttentionLine:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

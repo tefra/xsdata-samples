@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Any
 from .voc import (
     AddressPartType,
     CompressionAlgorithm,
@@ -62,7 +62,7 @@ class AdxpExplicit:
 
 
 @dataclass
-class Any:
+class AnyType:
     """Defines the basic properties of every data value.
 
     This is an abstract type, meaning that no value can be just a data
@@ -235,7 +235,7 @@ class TsExplicit:
 
 
 @dataclass
-class AnynonNull(Any):
+class AnynonNull(AnyType):
     """The BooleanNonNull type is used where a Boolean cannot have a null value.
 
     A Boolean value can be either true or false.
@@ -245,7 +245,7 @@ class AnynonNull(Any):
 
 
 @dataclass
-class Bin(Any):
+class Bin(AnyType):
     """Binary data is a raw block of bits.
 
     Binary data is a protected type that MUST not be used outside the
@@ -275,7 +275,7 @@ class Bin(Any):
 
 
 @dataclass
-class Bl(Any):
+class Bl(AnyType):
     """The Boolean type stands for the values of two-valued logic.
 
     A Boolean value can be either true or false, or, as any other value
@@ -294,7 +294,7 @@ class Bl(Any):
 
 
 @dataclass
-class Cr(Any):
+class Cr(AnyType):
     """A concept qualifier code with optionally named role.
 
     Both qualifier role and value codes must be defined by the coding
@@ -348,7 +348,7 @@ class Cr(Any):
 
 
 @dataclass
-class Ii(Any):
+class Ii(AnyType):
     """An identifier that uniquely identifies a thing or object.
 
     Examples are object identifier for HL7 RIM objects, medical record
@@ -406,7 +406,7 @@ class Ii(Any):
 
 
 @dataclass
-class Qty(Any):
+class Qty(AnyType):
     """Is an abstract generalization for all data types (1) whose value set has an
     order relation (less-or-equal) and (2) where difference is defined in all of
     the data type's totally ordered value subsets.
@@ -475,7 +475,7 @@ class TelExplicit:
 
 
 @dataclass
-class Url(Any):
+class Url(AnyType):
     """A telecommunications address  specified according to Internet standard RFC
     1738 [http://www.ietf.org/rfc/rfc1738.txt].
 
@@ -1487,7 +1487,7 @@ class ThumbnailExplicit:
 
 
 @dataclass
-class Cd(Any):
+class Cd(AnyType):
     """A concept descriptor represents any kind of concept usually by giving a code
     defined in a code system.
 
@@ -1921,6 +1921,12 @@ class St(Ed):
             "pattern": r"[^\s]+",
         }
     )
+    integrity_check_algorithm: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
 
 
 @dataclass
@@ -2080,7 +2086,7 @@ class Adxp(St):
 
 
 @dataclass
-class CdExplicit(Any):
+class CdExplicit(AnyType):
     """A concept descriptor represents any kind of concept usually by giving a code
     defined in a code system.
 
@@ -3009,7 +3015,7 @@ class EnSuffix(Enxp):
 
 
 @dataclass
-class Ad(Any):
+class Ad(AnyType):
     """Mailing and home or office addresses.
 
     A sequence of address parts, such as street or post office Box,
@@ -3627,7 +3633,7 @@ class IvlTs(SxcmTs):
 
 
 @dataclass
-class En(Any):
+class En(AnyType):
     """A name for a person, organization, place or thing.
 
     A sequence of name parts, such as given name or family name, prefix,

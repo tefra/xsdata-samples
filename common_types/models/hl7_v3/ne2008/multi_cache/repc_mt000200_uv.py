@@ -6,7 +6,7 @@ from ..core.datatypes import (
     RtoPqPq,
 )
 from ..core.datatypes_base import (
-    Any,
+    AnyType,
     Bl,
     Cd,
     Ce,
@@ -856,7 +856,7 @@ class RepcMt000200UvObservationGoal:
             "required": True,
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1502,7 +1502,7 @@ class RepcMt000200UvCriterion:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2832,7 +2832,7 @@ class RepcMt000200UvObservationDefinition:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4080,7 +4080,7 @@ class RepcMt000200UvObservationIntent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

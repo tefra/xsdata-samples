@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from ..core.datatypes_base import (
-    Any,
+    AnyType,
     Cd,
     Ce,
     Cs,
@@ -470,7 +470,7 @@ class CoctMt600000Uv06VisionPrescriptionObservationEvent:
             "required": True,
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

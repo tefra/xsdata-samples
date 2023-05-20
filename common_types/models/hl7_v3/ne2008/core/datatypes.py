@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .datatypes_base import (
-    Any,
+    AnyType,
     Cd,
     Ce,
     EivlEvent,
@@ -42,7 +42,7 @@ class BxitCd(Cd):
 
 
 @dataclass
-class GlistPq(Any):
+class GlistPq(AnyType):
     """
     :ivar head: This is the start-value of the generated list.
     :ivar increment: The difference between one value and its previous
@@ -96,7 +96,7 @@ class GlistPq(Any):
 
 
 @dataclass
-class GlistTs(Any):
+class GlistTs(AnyType):
     """
     :ivar head: This is the start-value of the generated list.
     :ivar increment: The difference between one value and its previous
@@ -459,7 +459,7 @@ class RtoPqPq(Qty):
 
 
 @dataclass
-class SlistPq(Any):
+class SlistPq(AnyType):
     """
     :ivar origin: The origin of the list item value scale, i.e., the
         physical quantity that a zero-digit in the sequence would
@@ -500,7 +500,7 @@ class SlistPq(Any):
 
 
 @dataclass
-class SlistTs(Any):
+class SlistTs(AnyType):
     """
     :ivar origin: The origin of the list item value scale, i.e., the
         physical quantity that a zero-digit in the sequence would

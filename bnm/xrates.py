@@ -8,7 +8,6 @@ from typing import List
 import requests
 from xsdata.formats.dataclass.parsers import XmlParser
 
-
 """https://bnm.md/en/content/official-exchange-rates"""
 
 

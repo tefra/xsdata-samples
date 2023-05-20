@@ -7,7 +7,7 @@ from ..core.datatypes import (
 )
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Bl,
     Cd,
     Ce,
@@ -1543,7 +1543,7 @@ class RepcMt000100Uv01Criterion:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2210,7 +2210,7 @@ class RepcMt000100Uv01ObservationRange:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2988,7 +2988,7 @@ class RepcMt000100Uv01Observation:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",

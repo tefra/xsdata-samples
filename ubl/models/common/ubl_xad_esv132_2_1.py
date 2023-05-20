@@ -229,8 +229,9 @@ class SignatureProductionPlaceType:
 
 
 @dataclass(frozen=True)
-class Any(AnyType):
+class AnyModel(AnyType):
     class Meta:
+        name = "Any"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
 

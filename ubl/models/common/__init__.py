@@ -2419,7 +2419,7 @@ from ubl.models.common.ubl_unqualified_data_types_2_1 import (
 )
 from ubl.models.common.ubl_xad_esv132_2_1 import (
     AllDataObjectsTimeStamp,
-    Any,
+    AnyModel,
     AnyType,
     ArchiveTimeStamp,
     AttrAuthoritiesCertValues,
@@ -4963,7 +4963,7 @@ __all__ = [
     "UnqualifiedDataTypesValueType",
     "VideoType",
     "AllDataObjectsTimeStamp",
-    "Any",
+    "AnyModel",
     "AnyType",
     "ArchiveTimeStamp",
     "AttrAuthoritiesCertValues",

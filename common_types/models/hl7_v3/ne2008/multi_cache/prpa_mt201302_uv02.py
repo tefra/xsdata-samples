@@ -3,7 +3,7 @@ from enum import Enum
 from typing import List, Optional, Union
 from ..core.datatypes_base import (
     AdExplicit,
-    Any,
+    AnyType,
     Bl,
     Cd,
     Ce,
@@ -830,7 +830,7 @@ class PrpaMt201302Uv02AdministrativeObservation:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    value: Optional[Any] = field(
+    value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
