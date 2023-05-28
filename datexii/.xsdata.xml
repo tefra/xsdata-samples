@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Config xmlns="http://pypi.org/project/xsdata" version="22.11">
+<Config xmlns="http://pypi.org/project/xsdata" version="23.5">
   <Output maxLineLength="79">
     <Package>datexii.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
@@ -10,6 +10,8 @@
     <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
     <PostponedAnnotations>false</PostponedAnnotations>
     <UnnestClasses>false</UnnestClasses>
+    <IgnorePatterns>false</IgnorePatterns>
+    <IncludeHeader>false</IncludeHeader>
   </Output>
   <Conventions>
     <ClassName case="mixedPascalCase" safePrefix="type"/>
@@ -21,4 +23,5 @@
   <Substitutions>
     <Substitution type="package" search="http://datex2.eu/schema/2/2_0" replace="eu.datexii.v2"/>
   </Substitutions>
+  <Extensions/>
 </Config>

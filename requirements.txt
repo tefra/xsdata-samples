@@ -3,4 +3,6 @@ types-dataclasses
 pytest
 pre-commit
 requests
+typed_dataclass
+dataclasses-jsonschema
 git+https://github.com/tefra/xsdata@master#egg=xsdata[cli,lxml]

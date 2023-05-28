@@ -1,10 +1,13 @@
 from dataclasses import dataclass, field
+from dataclasses_jsonschema import JsonSchemaMixin
+from typed_dataclass import typed_dataclass
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 
 
 @dataclass
-class Cores:
+@typed_dataclass
+class Cores(JsonSchemaMixin):
     class Meta:
         name = "cores"
 
@@ -74,7 +77,8 @@ class Cores:
 
 
 @dataclass
-class Failures:
+@typed_dataclass
+class Failures(JsonSchemaMixin):
     class Meta:
         name = "failures"
 
@@ -102,7 +106,8 @@ class Failures:
 
 
 @dataclass
-class Fairings:
+@typed_dataclass
+class Fairings(JsonSchemaMixin):
     class Meta:
         name = "fairings"
 
@@ -137,7 +142,8 @@ class Fairings:
 
 
 @dataclass
-class Flickr:
+@typed_dataclass
+class Flickr(JsonSchemaMixin):
     class Meta:
         name = "flickr"
 
@@ -158,7 +164,8 @@ class Flickr:
 
 
 @dataclass
-class Patch:
+@typed_dataclass
+class Patch(JsonSchemaMixin):
     class Meta:
         name = "patch"
 
@@ -179,7 +186,8 @@ class Patch:
 
 
 @dataclass
-class Reddit:
+@typed_dataclass
+class Reddit(JsonSchemaMixin):
     class Meta:
         name = "reddit"
 
@@ -214,7 +222,8 @@ class Reddit:
 
 
 @dataclass
-class Links:
+@typed_dataclass
+class Links(JsonSchemaMixin):
     class Meta:
         name = "links"
 
@@ -277,7 +286,8 @@ class Links:
 
 
 @dataclass
-class Launches:
+@typed_dataclass
+class Launches(JsonSchemaMixin):
     class Meta:
         name = "launches"
 
