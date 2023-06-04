@@ -33,7 +33,7 @@ parser.add_argument("--output-format", default="dataclasses")
 
 def build(suite: str, output_format: str, *cli_args):
     print(f"**** Generating models: {suite} ****")
-    subprocess.run(f"rm -rf {suite}/models", shell=True)
+    subprocess.run(f"rm -rf {suite}/models", shell=True, check=True)
     schema = config[suite]
     popenargs = [
         f"xsdata {schema}",
@@ -42,21 +42,23 @@ def build(suite: str, output_format: str, *cli_args):
     ]
     popenargs.extend(cli_args)
 
-    subprocess.run(" ".join(popenargs), shell=True)
+    subprocess.run(" ".join(popenargs), shell=True, check=True)
 
 
 def test(suite: str, output_format: str, *args):
     print(f"**** Running tests: {suite} ****")
-    subprocess.run(f"pytest --output-format {output_format} {suite}/", shell=True)
+    subprocess.run(
+        f"pytest --output-format {output_format} {suite}/", shell=True, check=True
+    )
 
 
 def mypy(suite: str, *args):
     print(f"**** Running static analysis: {suite} ****")
-    subprocess.run(f"mypy {suite}/models", shell=True)
+    subprocess.run(f"mypy {suite}/models", shell=True, check=True)
 
 
 def init_config(suite: str, *args):
-    subprocess.run(f"xsdata init-config {suite}/.xsdata.xml", shell=True)
+    subprocess.run(f"xsdata init-config {suite}/.xsdata.xml", shell=True, check=True)
 
 
 def all(suite: str, output_format: str, *args):
