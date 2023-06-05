@@ -17,7 +17,7 @@ Test with pypy against output validate serializer output.
 ## Makefile commands
 
 ```console
-$ make build-reqif
-$ make test-reqif
-$ make mypy-reqif
+$ ./run.py build reqif
+$ ./run.py test reqif
+$ ./run.py mypy reqif
 ```

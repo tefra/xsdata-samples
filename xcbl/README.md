@@ -10,7 +10,7 @@ This suite is testing the dtd code generator against the official xml samples.
 ## Makefile commands
 
 ```console
-$ make build-xcbl
-$ make test-xcbl
-$ make mypy-xcbl
+$ ./run.py build xcbl
+$ ./run.py test xcbl
+$ ./run.py mypy xcbl
 ```

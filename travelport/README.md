@@ -11,7 +11,7 @@ and mixing namespaces.
 ## Makefile commands
 
 ```console
-$ make build-travelport
-$ make test-travelport
-$ make mypy-travelport
+$ ./run.py build travelport
+$ ./run.py test travelport
+$ ./run.py mypy travelport
 ```

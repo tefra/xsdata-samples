@@ -7,7 +7,7 @@
 ## Makefile commands
 
 ```console
-$ make build-generali
-$ make test-generali
-$ make mypy-generali
+$ ./run.py build generali
+$ ./run.py test generali
+$ ./run.py mypy generali
 ```

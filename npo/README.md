@@ -14,7 +14,7 @@ check the lookup capabilities of the xml parser.
 ## Makefile commands
 
 ```console
-$ make build-npo
-$ make test-npo
-$ make mypy-npo
+$ ./run.py build npo
+$ ./run.py test npo
+$ ./run.py mypy npo
 ```

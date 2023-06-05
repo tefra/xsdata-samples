@@ -10,6 +10,7 @@
 ## Makefile commands
 
 ```console
-$ make build-amadeus
-$ make test-amadeus
+$ ./run.py build amadeus
+$ ./run.py test amadeus
+$ ./run.py mypy amadeus
 ```
