@@ -10,7 +10,7 @@
 ## Makefile commands
 
 ```console
-$ make build-spacex
-$ make test-spacex
-$ make mypy-spacex
+$ ./run.py build spacex
+$ ./run.py test spacex
+$ ./run.py mypy spacex
 ```

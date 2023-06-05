@@ -10,7 +10,7 @@
 ## Makefile commands
 
 ```console
-$ make build-netex
-$ make test-netex
-$ make mypy-netex
+$ ./run.py build netex
+$ ./run.py test netex
+$ ./run.py mypy netex
 ```

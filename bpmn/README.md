@@ -13,7 +13,7 @@ different namespaces and conflicting global elements with substitution groups.
 ## Makefile commands
 
 ```console
-$ make build-bpmn
-$ make test-bpmn
-$ make mypy-bpmn
+$ ./run.py build bpmn
+$ ./run.py test bpmn
+$ ./run.py mypy bpmn
 ```

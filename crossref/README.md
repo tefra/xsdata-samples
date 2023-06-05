@@ -8,7 +8,7 @@
 ## Makefile commands
 
 ```console
-$ make build-crossref
-$ make test-crossref
-$ make mypy-crossref
+$ ./run.py build crossref
+$ ./run.py test crossref
+$ ./run.py mypy crossref
 ```

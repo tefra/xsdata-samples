@@ -9,6 +9,6 @@
 ## Makefile commands
 
 ```console
-$ make build-ubl
-$ make test-ubl
+$ ./run.py build ubl
+$ ./run.py test ubl
 ```

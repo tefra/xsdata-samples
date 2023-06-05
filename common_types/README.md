@@ -10,6 +10,6 @@ This suite is an exceptional sample for complex definitions with edge cases.
 ## Makefile commands
 
 ```console
-$ make build-common
-$ make mypy-common
+$ ./run.py build common
+$ ./run.py mypy common
 ```

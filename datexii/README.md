@@ -6,7 +6,7 @@ characteristics with multi-level extensible elements.
 ## Makefile commands
 
 ```console
-$ make build-datexii
-$ make mypy-datexii
-$ make test-datexii
+$ ./run.py build datexii
+$ ./run.py mypy datexii
+$ ./run.py test datexii
 ```

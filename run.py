@@ -19,6 +19,7 @@ config = {
     "spacex": "spacex/launches.json",
     "travelport": "travelport/schemas/air_v48_0/Air.wsdl",
     "ubl": "ubl/schemas/maindoc",
+    "voko": "voko/dtd",
     "xcbl": "xcbl/schemas",
 }
 

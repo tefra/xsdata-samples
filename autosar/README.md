@@ -13,6 +13,7 @@ an outer class sharing the same name with an inner class.
 ## Makefile commands
 
 ```console
-$ make build-autosar
-$ make test-autosar
+$ ./run.py build autosar
+$ ./run.py test autosar
+$ ./run.py mypy autosar
 ```

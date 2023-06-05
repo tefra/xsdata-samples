@@ -3,6 +3,6 @@
 ## Makefile commands
 
 ```console
-$ make build-ewp
-$ make test-ewp
+$ ./run.py build ewp
+$ ./run.py test ewp
 ```

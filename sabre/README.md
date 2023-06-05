@@ -11,6 +11,6 @@ The given definitions have a good balance between reusability and readability.
 ## Makefile commands
 
 ```console
-$ make build-sabre
-$ make test-sabre
+$ ./run.py build sabre
+$ ./run.py test sabre
 ```

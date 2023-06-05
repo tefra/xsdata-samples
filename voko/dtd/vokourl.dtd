@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY KompLeks "https://www.esperanto.mv.ru/ESP/kframe.html">
+<!ENTITY Bib "../dok/bibliogr.html#">
+<!ENTITY Monato "https://www.monato.be">
+<!ENTITY CRI "http://esperanto.cri.cn/">
+<!ENTITY Mondediplo "https://eo.mondediplo.com/">
+<!ENTITY Viki "https://eo.wikipedia.org/wiki">
+<!ENTITY Vikio "https://eo.wikipedia.org/w/index.php?title=">
+<!ENTITY dbp "https://dbpedia.org/">
+<!ENTITY dbpr "https://dbpedia.org/resource/">
+<!ENTITY SCE "https://groups.google.com/g/soc.culture.esperanto?hl=eo">
+<!ENTITY UEA "https://uea.org/">
+<!ENTITY ViVo "http://kono.be/cgi-bin/vivo/">
+<!ENTITY ViVoTrd "http://kono.be/cgi-bin/vivo/ViVo.cgi?pagxo=">
+<!ENTITY AdE "https://www.akademio-de-esperanto.org">
+<!ENTITY PMEG "https://bertilow.com/pmeg/">
+<!ENTITY STEB "https://www.eventoj.hu/steb/">
+<!ENTITY DonH "http://literaturo.org/HARLOW-Don/Esperanto/Literaturo/">
+<!-- INKO eLibrejo Franko Luin: http://verkoj.com/dn/inko/ | http://verkoj.com/lauteme/klasika/inko/ -->
+<!ENTITY EduInf "https://eduinf.waw.pl/esp/">
+<!ENTITY LOdE "https://esperanto-ondo.ru/">
+<!ENTITY Sezonoj "https://sezonoj.ru/">
+<!ENTITY Gutenberg "https://www.gutenberg.org/">
+<!ENTITY Steloj "https://www.steloj.de/esperanto/">
+<!ENTITY Tekstaro "https://tekstaro.com/t">
+
+<!ENTITY WCU "https://upload.wikimedia.org/wikipedia/commons">
+<!ENTITY WCW "https://commons.wikimedia.org/wiki">
+<!ENTITY WA "https://web.archive.org/web">
