@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -9,14 +9,14 @@ class GenreType1:
     class Meta:
         name = "genreType"
 
-    term: List[str] = field(
+    term: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    id: Optional[str] = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

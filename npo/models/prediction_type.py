@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.prediction_state_enum import PredictionStateEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -17,20 +17,20 @@ class PredictionType:
             "required": True,
         }
     )
-    state: Optional[PredictionStateEnum] = field(
+    state: None | PredictionStateEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",

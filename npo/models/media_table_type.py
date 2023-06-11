@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.group_table_type import GroupTableType
 from npo.models.location_table_type import LocationTableType
 from npo.models.program_table_type import ProgramTableType
@@ -14,7 +14,7 @@ class MediaTableType:
     class Meta:
         name = "mediaTableType"
 
-    program_table: Optional[ProgramTableType] = field(
+    program_table: None | ProgramTableType = field(
         default=None,
         metadata={
             "name": "programTable",
@@ -23,7 +23,7 @@ class MediaTableType:
             "doc": "A table with all program objects in this container",
         }
     )
-    group_table: Optional[GroupTableType] = field(
+    group_table: None | GroupTableType = field(
         default=None,
         metadata={
             "name": "groupTable",
@@ -32,7 +32,7 @@ class MediaTableType:
             "doc": "A table with all group objects in this container",
         }
     )
-    location_table: Optional[LocationTableType] = field(
+    location_table: None | LocationTableType = field(
         default=None,
         metadata={
             "name": "locationTable",
@@ -40,7 +40,7 @@ class MediaTableType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    schedule: Optional[Schedule] = field(
+    schedule: None | Schedule = field(
         default=None,
         metadata={
             "type": "Element",
@@ -48,20 +48,20 @@ class MediaTableType:
             "doc": "A table with all schedule information in this container",
         }
     )
-    publisher: Optional[str] = field(
+    publisher: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publication_time: Optional[XmlDateTime] = field(
+    publication_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publicationTime",
             "type": "Attribute",
         }
     )
-    version: Optional[int] = field(
+    version: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -16,7 +16,7 @@ class NationalIdType:
             "required": True,
         }
     )
-    type: Optional[CodeType] = field(
+    type_value: Optional[CodeType] = field(
         default=None,
         metadata={
             "name": "Type",

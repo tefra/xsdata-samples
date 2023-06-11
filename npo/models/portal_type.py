@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.section_type import SectionType
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
@@ -10,7 +10,7 @@ class PortalType:
     class Meta:
         name = "portalType"
 
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -18,21 +18,21 @@ class PortalType:
             "required": True,
         }
     )
-    section: Optional[SectionType] = field(
+    section: None | SectionType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    id: Optional[str] = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    url: Optional[str] = field(
+    url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

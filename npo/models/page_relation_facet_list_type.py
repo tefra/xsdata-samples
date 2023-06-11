@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.page_relation_facet_type import PageRelationFacetType
 from npo.models.page_relation_search_type import PageRelationSearchType
@@ -13,14 +13,14 @@ class PageRelationFacetListType(AbstractFacetType):
     class Meta:
         name = "pageRelationFacetListType"
 
-    filter: Optional[PagesSearchType] = field(
+    filter: None | PagesSearchType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sub_search: Optional[PageRelationSearchType] = field(
+    sub_search: None | PageRelationSearchType = field(
         default=None,
         metadata={
             "name": "subSearch",
@@ -28,7 +28,7 @@ class PageRelationFacetListType(AbstractFacetType):
             "namespace": "urn:vpro:api:2013",
         }
     )
-    facet: List[PageRelationFacetType] = field(
+    facet: list[PageRelationFacetType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

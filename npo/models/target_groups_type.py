@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.owner_type_enum import OwnerTypeEnum
 from npo.models.target_group_enum import TargetGroupEnum
 
@@ -11,7 +11,7 @@ class TargetGroupsType:
     class Meta:
         name = "targetGroupsType"
 
-    target_group: List[TargetGroupEnum] = field(
+    target_group: list[TargetGroupEnum] = field(
         default_factory=list,
         metadata={
             "name": "targetGroup",
@@ -19,7 +19,7 @@ class TargetGroupsType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",

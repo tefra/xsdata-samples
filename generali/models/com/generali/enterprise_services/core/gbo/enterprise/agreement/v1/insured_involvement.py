@@ -17,7 +17,7 @@ class InsuredInvolvement:
             "required": True,
         }
     )
-    type: Optional[InsuredInvolvementType] = field(
+    type_value: Optional[InsuredInvolvementType] = field(
         default=None,
         metadata={
             "name": "Type",

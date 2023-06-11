@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.owner_type_enum import OwnerTypeEnum
 from npo.models.textual_type_enum import TextualTypeEnum
 
@@ -17,16 +17,17 @@ class ScheduleEventDescription:
             "required": True,
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    type: Optional[TextualTypeEnum] = field(
+    type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

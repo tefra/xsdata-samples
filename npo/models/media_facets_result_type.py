@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.date_facet_result_item_type import DateFacetResultItemType
 from npo.models.duration_facet_result_item_type import DurationFacetResultItemType
 from npo.models.media_genre_facet_result_item_type import MediaGenreFacetResultItemType
@@ -16,7 +16,7 @@ class MediaFacetsResultType:
     class Meta:
         name = "mediaFacetsResultType"
 
-    titles: List[TermFacetResultItemType] = field(
+    titles: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -24,7 +24,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    types: List[TermFacetResultItemType] = field(
+    types: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -32,7 +32,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    av_types: List[TermFacetResultItemType] = field(
+    av_types: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "avTypes",
@@ -41,7 +41,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    sort_dates: List[DateFacetResultItemType] = field(
+    sort_dates: list[DateFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "sortDates",
@@ -50,7 +50,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    broadcasters: List[TermFacetResultItemType] = field(
+    broadcasters: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -58,7 +58,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    genres: List[MediaGenreFacetResultItemType] = field(
+    genres: list[MediaGenreFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -66,7 +66,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    geo_locations: List[MediaGeoLocationFacetResultItemType] = field(
+    geo_locations: list[MediaGeoLocationFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "geoLocations",
@@ -75,7 +75,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    tags: List[TermFacetResultItemType] = field(
+    tags: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -83,7 +83,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    durations: List[DurationFacetResultItemType] = field(
+    durations: list[DurationFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -91,7 +91,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    descendant_of: List[MemberRefFacetResultItemType] = field(
+    descendant_of: list[MemberRefFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "descendantOf",
@@ -100,7 +100,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    episode_of: List[MemberRefFacetResultItemType] = field(
+    episode_of: list[MemberRefFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "episodeOf",
@@ -109,7 +109,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    member_of: List[MemberRefFacetResultItemType] = field(
+    member_of: list[MemberRefFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "memberOf",
@@ -118,7 +118,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    relations: List[NamedTermFacetResultItemType] = field(
+    relations: list[NamedTermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -126,7 +126,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    age_ratings: List[TermFacetResultItemType] = field(
+    age_ratings: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "ageRatings",
@@ -135,7 +135,7 @@ class MediaFacetsResultType:
             "nillable": True,
         }
     )
-    content_ratings: List[TermFacetResultItemType] = field(
+    content_ratings: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "contentRatings",

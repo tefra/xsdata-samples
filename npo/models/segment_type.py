@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from npo.models.base_media_type import BaseMediaType
 from npo.models.recursive_member_ref import RecursiveMemberRef
@@ -13,7 +13,7 @@ class SegmentType(BaseMediaType):
     class Meta:
         name = "segmentType"
 
-    segment_of: Optional[RecursiveMemberRef] = field(
+    segment_of: None | RecursiveMemberRef = field(
         default=None,
         metadata={
             "name": "segmentOf",
@@ -21,7 +21,7 @@ class SegmentType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         }
     )
-    start: Optional[XmlDuration] = field(
+    start: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
@@ -29,7 +29,7 @@ class SegmentType(BaseMediaType):
             "required": True,
         }
     )
-    mid_ref: Optional[str] = field(
+    mid_ref: None | str = field(
         default=None,
         metadata={
             "name": "midRef",
@@ -40,7 +40,7 @@ class SegmentType(BaseMediaType):
             "pattern": r"[ \.a-zA-Z0-9_-]+",
         }
     )
-    urn_ref: Optional[str] = field(
+    urn_ref: None | str = field(
         default=None,
         metadata={
             "name": "urnRef",
@@ -48,9 +48,10 @@ class SegmentType(BaseMediaType):
             "required": True,
         }
     )
-    type: Optional[SegmentTypeEnum] = field(
+    type_value: None | SegmentTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

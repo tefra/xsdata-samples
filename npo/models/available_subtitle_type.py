@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -9,15 +9,16 @@ class AvailableSubtitleType:
     class Meta:
         name = "availableSubtitleType"
 
-    language: Optional[str] = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

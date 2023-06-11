@@ -16,8 +16,8 @@ class Update:
     "Updates" should not include minor changes to spelling, punctuation,
     formatting, etc.
 
-    :ivar type: This attribute should be used to list the update type.
-        Allowed update types are: <ul
+    :ivar type_value: This attribute should be used to list the update
+        type. Allowed update types are: <ul
         xmlns=""><li>addendum</li><li>clarification</li><li>correction</li><li>corrigendum</li><li>erratum</li><li>expression_of_concern</li><li>new_edition</li><li>new_version</li><li>partial_retraction</li><li>removal</li><li>retraction</li><li>withdrawal</li></ul>
     :ivar date: The date of the update will be displayed in the
         CrossMark dialog and can help the researcher easily tell whether
@@ -28,9 +28,10 @@ class Update:
         name = "update"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    type: Optional[CmUpdateType] = field(
+    type_value: Optional[CmUpdateType] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

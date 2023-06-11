@@ -16,7 +16,7 @@ class MaintenanceType:
             "required": True,
         }
     )
-    type: Optional[MaintenanceTypeEnum] = field(
+    type_value: Optional[MaintenanceTypeEnum] = field(
         default=None,
         metadata={
             "name": "Type",

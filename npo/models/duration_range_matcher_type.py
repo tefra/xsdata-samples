@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from npo.models.range_matcher_type import RangeMatcherType
 
@@ -11,14 +11,14 @@ class DurationRangeMatcherType(RangeMatcherType):
     class Meta:
         name = "durationRangeMatcherType"
 
-    begin: Optional[XmlDuration] = field(
+    begin: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDuration] = field(
+    end: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",

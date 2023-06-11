@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:api:2013"
 
@@ -9,7 +9,7 @@ class FacetResultItem:
     class Meta:
         name = "facetResultItem"
 
-    count: Optional[int] = field(
+    count: None | int = field(
         default=None,
         metadata={
             "type": "Element",
@@ -17,7 +17,7 @@ class FacetResultItem:
             "required": True,
         }
     )
-    selected: Optional[bool] = field(
+    selected: None | bool = field(
         default=None,
         metadata={
             "type": "Element",

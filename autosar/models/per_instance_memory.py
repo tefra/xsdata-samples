@@ -57,7 +57,7 @@ class PerInstanceMemory:
     :ivar sw_data_def_props: This represents the ability to to allocate
         RAM at specific memory sections, for example, to support the RAM
         Block recovery strategy by mapping to uninitialized RAM.
-    :ivar type: The name of the "C"-type
+    :ivar type_value: The name of the "C"-type
     :ivar type_definition: A definition of the type with the syntax of a
         'C' typedef.
     :ivar variation_point: This element was generated/modified due to an
@@ -174,7 +174,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type: Optional[CIdentifier] = field(
+    type_value: Optional[CIdentifier] = field(
         default=None,
         metadata={
             "name": "TYPE",

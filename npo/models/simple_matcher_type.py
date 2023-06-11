@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.match import Match
 from npo.models.simple_match_type import SimpleMatchType
 
@@ -17,20 +17,20 @@ class SimpleMatcherType:
             "required": True,
         }
     )
-    fuzziness: Optional[str] = field(
+    fuzziness: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    match_type: Optional[SimpleMatchType] = field(
+    match_type: None | SimpleMatchType = field(
         default=None,
         metadata={
             "name": "matchType",
             "type": "Attribute",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

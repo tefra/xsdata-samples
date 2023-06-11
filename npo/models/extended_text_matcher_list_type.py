@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.extended_matcher_type import ExtendedMatcherType
 from npo.models.matcher_list import MatcherList
 
@@ -11,7 +11,7 @@ class ExtendedTextMatcherListType(MatcherList):
     class Meta:
         name = "extendedTextMatcherListType"
 
-    matcher: List[ExtendedMatcherType] = field(
+    matcher: list[ExtendedMatcherType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

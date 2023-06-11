@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_type_enum import MediaTypeEnum
 from npo.models.term_facet_result_item_type import TermFacetResultItemType
 
@@ -11,9 +11,10 @@ class MemberRefFacetResultItemType(TermFacetResultItemType):
     class Meta:
         name = "memberRefFacetResultItemType"
 
-    type: Optional[MediaTypeEnum] = field(
+    type_value: None | MediaTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }

@@ -426,9 +426,10 @@ class XhtmlParamType:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -4788,9 +4789,10 @@ class XhtmlObjectType:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -5113,9 +5115,10 @@ class XhtmlAType:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

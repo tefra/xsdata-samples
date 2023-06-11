@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
-from xsdata.models.datatype import XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.age_rating_type import AgeRatingType
 from npo.models.av_attributes_type import AvAttributesType
 from npo.models.av_type_enum import AvTypeEnum
@@ -42,7 +42,7 @@ class BaseMediaType:
     class Meta:
         name = "baseMediaType"
 
-    crid: List[str] = field(
+    crid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -61,7 +61,7 @@ class BaseMediaType:
             ),
         }
     )
-    broadcaster: List[BroadcasterType] = field(
+    broadcaster: list[BroadcasterType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -76,7 +76,7 @@ class BaseMediaType:
             ),
         }
     )
-    portal: List[OrganizationType] = field(
+    portal: list[OrganizationType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -89,7 +89,7 @@ class BaseMediaType:
             ),
         }
     )
-    exclusive: List[PortalRestrictionType] = field(
+    exclusive: list[PortalRestrictionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -103,7 +103,7 @@ class BaseMediaType:
             ),
         }
     )
-    region: List[GeoRestrictionType] = field(
+    region: list[GeoRestrictionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -116,7 +116,7 @@ class BaseMediaType:
             ),
         }
     )
-    title: List[TitleType] = field(
+    title: list[TitleType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -135,7 +135,7 @@ class BaseMediaType:
             ),
         }
     )
-    description: List[DescriptionType] = field(
+    description: list[DescriptionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -146,28 +146,28 @@ class BaseMediaType:
             ),
         }
     )
-    genre: List[GenreType1] = field(
+    genre: list[GenreType1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    tag: List[TagType] = field(
+    tag: list[TagType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    intentions: List[IntentionType] = field(
+    intentions: list[IntentionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    target_groups: List[TargetGroupsType] = field(
+    target_groups: list[TargetGroupsType] = field(
         default_factory=list,
         metadata={
             "name": "targetGroups",
@@ -175,7 +175,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    geo_locations: List[GeoLocationsType] = field(
+    geo_locations: list[GeoLocationsType] = field(
         default_factory=list,
         metadata={
             "name": "geoLocations",
@@ -183,35 +183,35 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    topics: List[TopicsType] = field(
+    topics: list[TopicsType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    country: List[CountryType] = field(
+    country: list[CountryType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    language: List[LanguageType] = field(
+    language: list[LanguageType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    is_dubbed: Optional[bool] = field(
+    is_dubbed: None | bool = field(
         default=None,
         metadata={
             "name": "isDubbed",
@@ -219,7 +219,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    available_subtitles: List[AvailableSubtitleType] = field(
+    available_subtitles: list[AvailableSubtitleType] = field(
         default_factory=list,
         metadata={
             "name": "availableSubtitles",
@@ -227,7 +227,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    av_attributes: Optional[AvAttributesType] = field(
+    av_attributes: None | AvAttributesType = field(
         default=None,
         metadata={
             "name": "avAttributes",
@@ -235,7 +235,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    release_year: Optional[int] = field(
+    release_year: None | int = field(
         default=None,
         metadata={
             "name": "releaseYear",
@@ -243,28 +243,28 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[XmlDuration] = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    credits: Optional[CreditsType] = field(
+    credits: None | CreditsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    award: List[str] = field(
+    award: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    descendant_of: List[DescendantRefType] = field(
+    descendant_of: list[DescendantRefType] = field(
         default_factory=list,
         metadata={
             "name": "descendantOf",
@@ -272,7 +272,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    member_of: List[MemberRefType] = field(
+    member_of: list[MemberRefType] = field(
         default_factory=list,
         metadata={
             "name": "memberOf",
@@ -280,7 +280,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    age_rating: Optional[AgeRatingType] = field(
+    age_rating: None | AgeRatingType = field(
         default=None,
         metadata={
             "name": "ageRating",
@@ -288,7 +288,7 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    content_rating: List[ContentRatingType] = field(
+    content_rating: list[ContentRatingType] = field(
         default_factory=list,
         metadata={
             "name": "contentRating",
@@ -296,14 +296,14 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    email: List[str] = field(
+    email: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    website: List[str] = field(
+    website: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -312,49 +312,49 @@ class BaseMediaType:
             "max_length": 255,
         }
     )
-    twitter: List[TwitterType] = field(
+    twitter: list[TwitterType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    teletext: Optional[int] = field(
+    teletext: None | int = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    prediction: List[PredictionType] = field(
+    prediction: list[PredictionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    locations: Optional[LocationsType] = field(
+    locations: None | LocationsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    relation: List[RelationType1] = field(
+    relation: list[RelationType1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    images: Optional[ImagesType] = field(
+    images: None | ImagesType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    mid: Optional[str] = field(
+    mid: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -363,7 +363,7 @@ class BaseMediaType:
             "pattern": r"[ \.a-zA-Z0-9_-]+",
         }
     )
-    av_type: Optional[AvTypeEnum] = field(
+    av_type: None | AvTypeEnum = field(
         default=None,
         metadata={
             "name": "avType",
@@ -371,7 +371,7 @@ class BaseMediaType:
             "required": True,
         }
     )
-    sort_date: Optional[XmlDateTime] = field(
+    sort_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "sortDate",
@@ -391,54 +391,54 @@ class BaseMediaType:
             "type": "Attribute",
         }
     )
-    urn: Optional[str] = field(
+    urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[XmlDateTime] = field(
+    publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[XmlDateTime] = field(
+    last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    workflow: Optional[WorkflowEnumType] = field(
+    workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    merged_to: Optional[str] = field(
+    merged_to: None | str = field(
         default=None,
         metadata={
             "name": "mergedTo",

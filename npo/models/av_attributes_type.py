@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.audio_attributes_type import AudioAttributesType
 from npo.models.av_file_format_enum import AvFileFormatEnum
 from npo.models.video_attributes_type import VideoAttributesType
@@ -12,14 +12,14 @@ class AvAttributesType:
     class Meta:
         name = "avAttributesType"
 
-    bitrate: Optional[int] = field(
+    bitrate: None | int = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    byte_size: Optional[int] = field(
+    byte_size: None | int = field(
         default=None,
         metadata={
             "name": "byteSize",
@@ -27,7 +27,7 @@ class AvAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    av_file_format: Optional[AvFileFormatEnum] = field(
+    av_file_format: None | AvFileFormatEnum = field(
         default=None,
         metadata={
             "name": "avFileFormat",
@@ -35,7 +35,7 @@ class AvAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    video_attributes: Optional[VideoAttributesType] = field(
+    video_attributes: None | VideoAttributesType = field(
         default=None,
         metadata={
             "name": "videoAttributes",
@@ -43,7 +43,7 @@ class AvAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    audio_attributes: Optional[AudioAttributesType] = field(
+    audio_attributes: None | AudioAttributesType = field(
         default=None,
         metadata={
             "name": "audioAttributes",

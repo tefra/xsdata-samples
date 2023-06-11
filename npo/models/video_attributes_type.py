@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.aspect_ratio_enum import AspectRatioEnum
 from npo.models.color_type import ColorType
 
@@ -11,14 +11,14 @@ class VideoAttributesType:
     class Meta:
         name = "videoAttributesType"
 
-    color: Optional[ColorType] = field(
+    color: None | ColorType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    video_coding: Optional[str] = field(
+    video_coding: None | str = field(
         default=None,
         metadata={
             "name": "videoCoding",
@@ -26,7 +26,7 @@ class VideoAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    aspect_ratio: Optional[AspectRatioEnum] = field(
+    aspect_ratio: None | AspectRatioEnum = field(
         default=None,
         metadata={
             "name": "aspectRatio",
@@ -34,20 +34,20 @@ class VideoAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    height: Optional[int] = field(
+    height: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    heigth: Optional[int] = field(
+    heigth: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
             "doc": "This obviously is a typo.",
         }
     )
-    width: Optional[int] = field(
+    width: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

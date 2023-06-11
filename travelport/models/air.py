@@ -1,7 +1,7 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from travelport.models.common import (
     AccountCode,
@@ -173,224 +173,224 @@ class Advtype:
     class Meta:
         name = "ADVType"
 
-    adv_rsvn_only_if_tk: Optional[bool] = field(
+    adv_rsvn_only_if_tk: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnOnlyIfTk",
             "type": "Attribute",
         }
     )
-    adv_rsvn_any_tm: Optional[bool] = field(
+    adv_rsvn_any_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnAnyTm",
             "type": "Attribute",
         }
     )
-    adv_rsvn_hrs: Optional[bool] = field(
+    adv_rsvn_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnHrs",
             "type": "Attribute",
         }
     )
-    adv_rsvn_days: Optional[bool] = field(
+    adv_rsvn_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnDays",
             "type": "Attribute",
         }
     )
-    adv_rsvn_months: Optional[bool] = field(
+    adv_rsvn_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnMonths",
             "type": "Attribute",
         }
     )
-    adv_rsvn_earliest_tm: Optional[bool] = field(
+    adv_rsvn_earliest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnEarliestTm",
             "type": "Attribute",
         }
     )
-    adv_rsvn_latest_tm: Optional[bool] = field(
+    adv_rsvn_latest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnLatestTm",
             "type": "Attribute",
         }
     )
-    adv_rsvn_waived: Optional[bool] = field(
+    adv_rsvn_waived: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnWaived",
             "type": "Attribute",
         }
     )
-    adv_rsvn_data_exists: Optional[bool] = field(
+    adv_rsvn_data_exists: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnDataExists",
             "type": "Attribute",
         }
     )
-    adv_rsvn_end_item: Optional[bool] = field(
+    adv_rsvn_end_item: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnEndItem",
             "type": "Attribute",
         }
     )
-    adv_tk_earliest_tm: Optional[bool] = field(
+    adv_tk_earliest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkEarliestTm",
             "type": "Attribute",
         }
     )
-    adv_tk_latest_tm: Optional[bool] = field(
+    adv_tk_latest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkLatestTm",
             "type": "Attribute",
         }
     )
-    adv_tk_rsvn_hrs: Optional[bool] = field(
+    adv_tk_rsvn_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnHrs",
             "type": "Attribute",
         }
     )
-    adv_tk_rsvn_days: Optional[bool] = field(
+    adv_tk_rsvn_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnDays",
             "type": "Attribute",
         }
     )
-    adv_tk_rsvn_months: Optional[bool] = field(
+    adv_tk_rsvn_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnMonths",
             "type": "Attribute",
         }
     )
-    adv_tk_start_hrs: Optional[bool] = field(
+    adv_tk_start_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartHrs",
             "type": "Attribute",
         }
     )
-    adv_tk_start_days: Optional[bool] = field(
+    adv_tk_start_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartDays",
             "type": "Attribute",
         }
     )
-    adv_tk_start_months: Optional[bool] = field(
+    adv_tk_start_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartMonths",
             "type": "Attribute",
         }
     )
-    adv_tk_waived: Optional[bool] = field(
+    adv_tk_waived: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkWaived",
             "type": "Attribute",
         }
     )
-    adv_tk_any_tm: Optional[bool] = field(
+    adv_tk_any_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkAnyTm",
             "type": "Attribute",
         }
     )
-    adv_tk_end_item: Optional[bool] = field(
+    adv_tk_end_item: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkEndItem",
             "type": "Attribute",
         }
     )
-    adv_rsvn_tm: Optional[int] = field(
+    adv_rsvn_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvRsvnTm",
             "type": "Attribute",
         }
     )
-    adv_tk_rsvn_tm: Optional[int] = field(
+    adv_tk_rsvn_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnTm",
             "type": "Attribute",
         }
     )
-    adv_tk_start_tm: Optional[int] = field(
+    adv_tk_start_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvTkStartTm",
             "type": "Attribute",
         }
     )
-    earliest_rsvn_dt_present: Optional[bool] = field(
+    earliest_rsvn_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "EarliestRsvnDtPresent",
             "type": "Attribute",
         }
     )
-    earliest_tk_dt_present: Optional[bool] = field(
+    earliest_tk_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "EarliestTkDtPresent",
             "type": "Attribute",
         }
     )
-    latest_rsvn_dt_present: Optional[bool] = field(
+    latest_rsvn_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "LatestRsvnDtPresent",
             "type": "Attribute",
         }
     )
-    latest_tk_dt_present: Optional[bool] = field(
+    latest_tk_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "LatestTkDtPresent",
             "type": "Attribute",
         }
     )
-    earliest_rsvn_dt: Optional[XmlDate] = field(
+    earliest_rsvn_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EarliestRsvnDt",
             "type": "Attribute",
         }
     )
-    earliest_tk_dt: Optional[XmlDate] = field(
+    earliest_tk_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EarliestTkDt",
             "type": "Attribute",
         }
     )
-    latest_rsvn_dt: Optional[XmlDate] = field(
+    latest_rsvn_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LatestRsvnDt",
             "type": "Attribute",
         }
     )
-    latest_tk_dt: Optional[XmlDate] = field(
+    latest_tk_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LatestTkDt",
@@ -418,7 +418,7 @@ class ActionDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: None | str = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -427,28 +427,28 @@ class ActionDetails:
             "max_length": 10,
         }
     )
-    agent_sine: Optional[str] = field(
+    agent_sine: None | str = field(
         default=None,
         metadata={
             "name": "AgentSine",
             "type": "Attribute",
         }
     )
-    event_date: Optional[XmlDate] = field(
+    event_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EventDate",
             "type": "Attribute",
         }
     )
-    event_time: Optional[XmlTime] = field(
+    event_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EventTime",
             "type": "Attribute",
         }
     )
-    text: Optional[str] = field(
+    text: None | str = field(
         default=None,
         metadata={
             "name": "Text",
@@ -468,7 +468,7 @@ class AdditionalInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
@@ -519,21 +519,21 @@ class Adjustment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Element",
         }
     )
-    percent: Optional[float] = field(
+    percent: None | float = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Element",
         }
     )
-    adjusted_total_price: Optional[str] = field(
+    adjusted_total_price: None | str = field(
         default=None,
         metadata={
             "name": "AdjustedTotalPrice",
@@ -541,14 +541,14 @@ class Adjustment:
             "required": True,
         }
     )
-    approximate_adjusted_total_price: Optional[str] = field(
+    approximate_adjusted_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateAdjustedTotalPrice",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -576,7 +576,7 @@ class AirFareDisplayRuleKey:
             "white_space": "collapse",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -595,7 +595,7 @@ class AirItinerarySolutionRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -619,7 +619,7 @@ class AirPricingInfoRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -647,21 +647,21 @@ class AirRefundModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    refund_date: Optional[str] = field(
+    refund_date: None | str = field(
         default=None,
         metadata={
             "name": "RefundDate",
             "type": "Attribute",
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignator",
@@ -698,7 +698,7 @@ class AirSearchAsynchModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    initial_asynch_result: Optional["AirSearchAsynchModifiers.InitialAsynchResult"] = field(
+    initial_asynch_result: None | AirSearchAsynchModifiers.InitialAsynchResult = field(
         default=None,
         metadata={
             "name": "InitialAsynchResult",
@@ -713,7 +713,7 @@ class AirSearchAsynchModifiers:
         ----------
         max_wait: Max wait time in seconds.
         """
-        max_wait: Optional[int] = field(
+        max_wait: None | int = field(
             default=None,
             metadata={
                 "name": "MaxWait",
@@ -736,7 +736,7 @@ class AirSegmentRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -761,14 +761,14 @@ class AirSegmentTicketingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: Optional[str] = field(
+    air_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
         }
     )
-    brand_tier: Optional[str] = field(
+    brand_tier: None | str = field(
         default=None,
         metadata={
             "name": "BrandTier",
@@ -799,7 +799,7 @@ class Alliance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -817,7 +817,7 @@ class AlternateLocationDistanceRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -835,7 +835,7 @@ class BookingCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -864,14 +864,14 @@ class BookingCodeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    booking_counts: Optional[str] = field(
+    booking_counts: None | str = field(
         default=None,
         metadata={
             "name": "BookingCounts",
@@ -901,7 +901,7 @@ class BookingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_code: Optional[str] = field(
+    booking_code: None | str = field(
         default=None,
         metadata={
             "name": "BookingCode",
@@ -909,21 +909,21 @@ class BookingInfo:
             "required": True,
         }
     )
-    booking_count: Optional[str] = field(
+    booking_count: None | str = field(
         default=None,
         metadata={
             "name": "BookingCount",
             "type": "Attribute",
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -931,28 +931,28 @@ class BookingInfo:
             "required": True,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
         }
     )
-    coupon_ref: Optional[str] = field(
+    coupon_ref: None | str = field(
         default=None,
         metadata={
             "name": "CouponRef",
             "type": "Attribute",
         }
     )
-    air_itinerary_solution_ref: Optional[str] = field(
+    air_itinerary_solution_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirItinerarySolutionRef",
             "type": "Attribute",
         }
     )
-    host_token_ref: Optional[str] = field(
+    host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
@@ -976,7 +976,7 @@ class BookingRulesFareReference:
             "required": True,
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -985,7 +985,7 @@ class BookingRulesFareReference:
             "max_length": 2,
         }
     )
-    ticket_designator_code: Optional[str] = field(
+    ticket_designator_code: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignatorCode",
@@ -994,21 +994,21 @@ class BookingRulesFareReference:
             "max_length": 20,
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
         }
     )
-    upgrage_allowed: Optional[bool] = field(
+    upgrage_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "UpgrageAllowed",
             "type": "Attribute",
         }
     )
-    upgrade_class_of_service: Optional[str] = field(
+    upgrade_class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "UpgradeClassOfService",
@@ -1028,7 +1028,7 @@ class BrandId:
         name = "BrandID"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    id: Optional[str] = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "Id",
@@ -1055,14 +1055,14 @@ class BrandInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    brand_id: Optional[str] = field(
+    brand_id: None | str = field(
         default=None,
         metadata={
             "name": "BrandID",
@@ -1072,14 +1072,14 @@ class BrandInfo:
             "max_length": 19,
         }
     )
-    air_pricing_info_ref: Optional[str] = field(
+    air_pricing_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingInfoRef",
             "type": "Attribute",
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -1101,14 +1101,14 @@ class BrandModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_family_display: Optional["BrandModifiers.FareFamilyDisplay"] = field(
+    fare_family_display: None | BrandModifiers.FareFamilyDisplay = field(
         default=None,
         metadata={
             "name": "FareFamilyDisplay",
             "type": "Element",
         }
     )
-    basic_details_only: Optional["BrandModifiers.BasicDetailsOnly"] = field(
+    basic_details_only: None | BrandModifiers.BasicDetailsOnly = field(
         default=None,
         metadata={
             "name": "BasicDetailsOnly",
@@ -1129,7 +1129,7 @@ class BrandModifiers:
             fare returned. "LowestFareInBrand" returns the lowest fare
             within each branded fare in a fare family display.
         """
-        modifier_type: Optional[str] = field(
+        modifier_type: None | str = field(
             default=None,
             metadata={
                 "name": "ModifierType",
@@ -1140,7 +1140,7 @@ class BrandModifiers:
 
     @dataclass
     class BasicDetailsOnly:
-        return_basic_details: Optional[bool] = field(
+        return_basic_details: None | bool = field(
             default=None,
             metadata={
                 "name": "ReturnBasicDetails",
@@ -1164,14 +1164,14 @@ class Co2Emission:
         name = "CO2Emission"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: Optional[str] = field(
+    air_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
         }
     )
-    value: Optional[float] = field(
+    value: None | float = field(
         default=None,
         metadata={
             "name": "Value",
@@ -1199,7 +1199,7 @@ class CarrierList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier_code: List[str] = field(
+    carrier_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "CarrierCode",
@@ -1209,7 +1209,7 @@ class CarrierList:
             "length": 2,
         }
     )
-    include_carrier: Optional[bool] = field(
+    include_carrier: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeCarrier",
@@ -1241,7 +1241,7 @@ class CodeshareInfo:
             "required": True,
         }
     )
-    operating_carrier: Optional[str] = field(
+    operating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "OperatingCarrier",
@@ -1249,7 +1249,7 @@ class CodeshareInfo:
             "length": 2,
         }
     )
-    operating_flight_number: Optional[str] = field(
+    operating_flight_number: None | str = field(
         default=None,
         metadata={
             "name": "OperatingFlightNumber",
@@ -1267,7 +1267,7 @@ class CompanyName:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -1294,7 +1294,7 @@ class ContractCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -1304,14 +1304,14 @@ class ContractCode:
             "max_length": 64,
         }
     )
-    company_name: Optional[str] = field(
+    company_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyName",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -1320,7 +1320,7 @@ class ContractCode:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -1339,7 +1339,7 @@ class CreditSummary:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    currency_code: Optional[str] = field(
+    currency_code: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyCode",
@@ -1347,7 +1347,7 @@ class CreditSummary:
             "length": 3,
         }
     )
-    current_balance: Optional[Decimal] = field(
+    current_balance: None | Decimal = field(
         default=None,
         metadata={
             "name": "CurrentBalance",
@@ -1355,7 +1355,7 @@ class CreditSummary:
             "required": True,
         }
     )
-    initial_credit: Optional[Decimal] = field(
+    initial_credit: None | Decimal = field(
         default=None,
         metadata={
             "name": "InitialCredit",
@@ -1380,7 +1380,7 @@ class CustomerReceiptInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -1388,7 +1388,7 @@ class CustomerReceiptInfo:
             "required": True,
         }
     )
-    email_ref: Optional[str] = field(
+    email_ref: None | str = field(
         default=None,
         metadata={
             "name": "EmailRef",
@@ -1420,28 +1420,28 @@ class Document:
     Parameters
     ----------
     sequence: Sequence number for the document.
-    type: Type of the Document. Visa, Passport, DriverLicense etc.
+    type_value: Type of the Document. Visa, Passport, DriverLicense etc.
     level: Applicability level of the Document. Required, Supported,
         API_Supported or Unknown.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    sequence: Optional[int] = field(
+    sequence: None | int = field(
         default=None,
         metadata={
             "name": "Sequence",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
         }
     )
-    level: Optional[str] = field(
+    level: None | str = field(
         default=None,
         metadata={
             "name": "Level",
@@ -1497,7 +1497,7 @@ class DocumentOptions:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    passenger_receipt_override: Optional[str] = field(
+    passenger_receipt_override: None | str = field(
         default=None,
         metadata={
             "name": "PassengerReceiptOverride",
@@ -1506,7 +1506,7 @@ class DocumentOptions:
             "white_space": "collapse",
         }
     )
-    override_option: List[str] = field(
+    override_option: list[str] = field(
         default_factory=list,
         metadata={
             "name": "OverrideOption",
@@ -1515,14 +1515,14 @@ class DocumentOptions:
             "max_length": 50,
         }
     )
-    suppress_itinerary_remarks: Optional[bool] = field(
+    suppress_itinerary_remarks: None | bool = field(
         default=None,
         metadata={
             "name": "SuppressItineraryRemarks",
             "type": "Attribute",
         }
     )
-    generate_itin_numbers: Optional[bool] = field(
+    generate_itin_numbers: None | bool = field(
         default=None,
         metadata={
             "name": "GenerateItinNumbers",
@@ -1539,28 +1539,28 @@ class DocumentRequired:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    doc_type: Optional[str] = field(
+    doc_type: None | str = field(
         default=None,
         metadata={
             "name": "DocType",
             "type": "Attribute",
         }
     )
-    include_exclude_use_ind: Optional[bool] = field(
+    include_exclude_use_ind: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeExcludeUseInd",
             "type": "Attribute",
         }
     )
-    doc_id: Optional[str] = field(
+    doc_id: None | str = field(
         default=None,
         metadata={
             "name": "DocId",
             "type": "Attribute",
         }
     )
-    allowed_ids: Optional[str] = field(
+    allowed_ids: None | str = field(
         default=None,
         metadata={
             "name": "AllowedIds",
@@ -1606,7 +1606,7 @@ class EmdtravelerInfo:
         name = "EMDTravelerInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    name_info: Optional["EmdtravelerInfo.NameInfo"] = field(
+    name_info: None | EmdtravelerInfo.NameInfo = field(
         default=None,
         metadata={
             "name": "NameInfo",
@@ -1614,7 +1614,7 @@ class EmdtravelerInfo:
             "required": True,
         }
     )
-    traveler_type: Optional[str] = field(
+    traveler_type: None | str = field(
         default=None,
         metadata={
             "name": "TravelerType",
@@ -1623,7 +1623,7 @@ class EmdtravelerInfo:
             "max_length": 5,
         }
     )
-    age: Optional[int] = field(
+    age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
@@ -1642,7 +1642,7 @@ class EmdtravelerInfo:
         last: Last Name.
         suffix: Name suffix.
         """
-        prefix: Optional[str] = field(
+        prefix: None | str = field(
             default=None,
             metadata={
                 "name": "Prefix",
@@ -1651,7 +1651,7 @@ class EmdtravelerInfo:
                 "max_length": 20,
             }
         )
-        first: Optional[str] = field(
+        first: None | str = field(
             default=None,
             metadata={
                 "name": "First",
@@ -1661,7 +1661,7 @@ class EmdtravelerInfo:
                 "max_length": 256,
             }
         )
-        middle: Optional[str] = field(
+        middle: None | str = field(
             default=None,
             metadata={
                 "name": "Middle",
@@ -1670,7 +1670,7 @@ class EmdtravelerInfo:
                 "max_length": 256,
             }
         )
-        last: Optional[str] = field(
+        last: None | str = field(
             default=None,
             metadata={
                 "name": "Last",
@@ -1680,7 +1680,7 @@ class EmdtravelerInfo:
                 "max_length": 256,
             }
         )
-        suffix: Optional[str] = field(
+        suffix: None | str = field(
             default=None,
             metadata={
                 "name": "Suffix",
@@ -1721,8 +1721,8 @@ class Embargo:
     text: Brief description of the embargo. Provider: 1G, 1V, 1P, 1J
     secondary_type: The secondary type of the optional service on which
         the embargo applies.  Provider: 1G, 1V, 1P, 1J
-    type: The type of optional service on which the embargo applies.
-        Provider: 1G, 1V, 1P, 1J
+    type_value: The type of optional service on which the embargo
+        applies.  Provider: 1G, 1V, 1P, 1J
     url: Website of the operating carrier. Provider: 1G, 1V, 1P, 1J
     service_sub_code: The service sub code of the optional service on
         which the embargo applies.  Provider: 1G, 1V, 1P, 1J
@@ -1730,14 +1730,14 @@ class Embargo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -1745,14 +1745,14 @@ class Embargo:
             "length": 2,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -1760,21 +1760,21 @@ class Embargo:
             "max_length": 30,
         }
     )
-    text: Optional[str] = field(
+    text: None | str = field(
         default=None,
         metadata={
             "name": "Text",
             "type": "Attribute",
         }
     )
-    secondary_type: Optional[str] = field(
+    secondary_type: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryType",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -1783,14 +1783,14 @@ class Embargo:
             "max_length": 128,
         }
     )
-    url: Optional[str] = field(
+    url: None | str = field(
         default=None,
         metadata={
             "name": "Url",
             "type": "Attribute",
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
@@ -1812,7 +1812,7 @@ class ExchangedTicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -1837,7 +1837,7 @@ class ExcludeTicketing:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_traveler_ref: List[str] = field(
+    booking_traveler_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -1857,7 +1857,7 @@ class ExemptObfee:
         name = "ExemptOBFee"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    sub_code: List[str] = field(
+    sub_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SubCode",
@@ -1888,7 +1888,7 @@ class ExemptTaxes:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    country_code: List[str] = field(
+    country_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "CountryCode",
@@ -1897,7 +1897,7 @@ class ExemptTaxes:
             "length": 2,
         }
     )
-    tax_category: List[str] = field(
+    tax_category: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TaxCategory",
@@ -1905,14 +1905,14 @@ class ExemptTaxes:
             "max_occurs": 999,
         }
     )
-    all_taxes: Optional[bool] = field(
+    all_taxes: None | bool = field(
         default=None,
         metadata={
             "name": "AllTaxes",
             "type": "Attribute",
         }
     )
-    tax_territory: Optional[str] = field(
+    tax_territory: None | str = field(
         default=None,
         metadata={
             "name": "TaxTerritory",
@@ -1920,7 +1920,7 @@ class ExemptTaxes:
             "length": 2,
         }
     )
-    company_name: Optional[str] = field(
+    company_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyName",
@@ -1945,7 +1945,7 @@ class FareBasis:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -1953,7 +1953,7 @@ class FareBasis:
             "required": True,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
@@ -1986,7 +1986,7 @@ class FareDetailsRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2008,7 +2008,7 @@ class FareInfoMessage:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2026,7 +2026,7 @@ class FareInfoRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2061,7 +2061,7 @@ class FareNoteRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2097,7 +2097,7 @@ class FarePricing:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    passenger_type: Optional[str] = field(
+    passenger_type: None | str = field(
         default=None,
         metadata={
             "name": "PassengerType",
@@ -2106,56 +2106,56 @@ class FarePricing:
             "max_length": 5,
         }
     )
-    total_fare_amount: Optional[str] = field(
+    total_fare_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalFareAmount",
             "type": "Attribute",
         }
     )
-    private_fare: Optional[bool] = field(
+    private_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PrivateFare",
             "type": "Attribute",
         }
     )
-    negotiated_fare: Optional[bool] = field(
+    negotiated_fare: None | bool = field(
         default=None,
         metadata={
             "name": "NegotiatedFare",
             "type": "Attribute",
         }
     )
-    auto_priceable: Optional[bool] = field(
+    auto_priceable: None | bool = field(
         default=None,
         metadata={
             "name": "AutoPriceable",
             "type": "Attribute",
         }
     )
-    total_net_fare_amount: Optional[str] = field(
+    total_net_fare_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalNetFareAmount",
             "type": "Attribute",
         }
     )
-    base_fare: Optional[str] = field(
+    base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    mmid: Optional[str] = field(
+    mmid: None | str = field(
         default=None,
         metadata={
             "name": "MMid",
@@ -2169,7 +2169,7 @@ class FareRemarkRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2192,14 +2192,14 @@ class FareRestrictionSaleDate:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    start_date: Optional[XmlDate] = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
         }
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -2220,56 +2220,56 @@ class FareRestrictionSeasonal:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    comment: Optional[str] = field(
+    comment: None | str = field(
         default=None,
         metadata={
             "name": "Comment",
             "type": "Attribute",
         }
     )
-    variation_by_travel_dates: Optional[str] = field(
+    variation_by_travel_dates: None | str = field(
         default=None,
         metadata={
             "name": "VariationByTravelDates",
             "type": "Attribute",
         }
     )
-    seasonal_range1_ind: Optional[str] = field(
+    seasonal_range1_ind: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange1Ind",
             "type": "Attribute",
         }
     )
-    seasonal_range1_start_date: Optional[str] = field(
+    seasonal_range1_start_date: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange1StartDate",
             "type": "Attribute",
         }
     )
-    seasonal_range1_end_date: Optional[str] = field(
+    seasonal_range1_end_date: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange1EndDate",
             "type": "Attribute",
         }
     )
-    seasonal_range2_ind: Optional[str] = field(
+    seasonal_range2_ind: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange2Ind",
             "type": "Attribute",
         }
     )
-    seasonal_range2_start_date: Optional[str] = field(
+    seasonal_range2_start_date: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange2StartDate",
             "type": "Attribute",
         }
     )
-    seasonal_range2_end_date: Optional[str] = field(
+    seasonal_range2_end_date: None | str = field(
         default=None,
         metadata={
             "name": "SeasonalRange2EndDate",
@@ -2302,7 +2302,7 @@ class FareRuleCategory:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    category: Optional[int] = field(
+    category: None | int = field(
         default=None,
         metadata={
             "name": "Category",
@@ -2322,7 +2322,7 @@ class FareRuleFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    reason: List[str] = field(
+    reason: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Reason",
@@ -2358,7 +2358,7 @@ class FareRuleKey:
             "white_space": "collapse",
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -2366,7 +2366,7 @@ class FareRuleKey:
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -2392,7 +2392,7 @@ class FareRuleLong:
             "required": True,
         }
     )
-    category: Optional[int] = field(
+    category: None | int = field(
         default=None,
         metadata={
             "name": "Category",
@@ -2400,7 +2400,7 @@ class FareRuleLong:
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -2417,7 +2417,7 @@ class FareRuleLongRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2435,7 +2435,7 @@ class FareRuleNameValue:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2443,7 +2443,7 @@ class FareRuleNameValue:
             "required": True,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -2461,7 +2461,7 @@ class FareRuleShortRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2488,7 +2488,7 @@ class FareRulesFilterCategory:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    category_code: List[str] = field(
+    category_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "CategoryCode",
@@ -2497,7 +2497,7 @@ class FareRulesFilterCategory:
             "max_occurs": 35,
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -2519,7 +2519,7 @@ class FareStatusFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -2527,7 +2527,7 @@ class FareStatusFailureInfo:
             "required": True,
         }
     )
-    reason: Optional[str] = field(
+    reason: None | str = field(
         default=None,
         metadata={
             "name": "Reason",
@@ -2544,7 +2544,7 @@ class FareTicketDesignator:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -2563,7 +2563,7 @@ class FareType:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -2593,7 +2593,7 @@ class FeeApplication:
             "required": True,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -2623,7 +2623,7 @@ class FlightDetailsRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2655,7 +2655,7 @@ class FlightInfoCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2663,7 +2663,7 @@ class FlightInfoCriteria:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -2672,7 +2672,7 @@ class FlightInfoCriteria:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -2681,7 +2681,7 @@ class FlightInfoCriteria:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -2690,7 +2690,7 @@ class FlightInfoCriteria:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -2699,7 +2699,7 @@ class FlightInfoCriteria:
             "white_space": "collapse",
         }
     )
-    departure_date: Optional[XmlDate] = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -2707,7 +2707,7 @@ class FlightInfoCriteria:
             "required": True,
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -2767,56 +2767,56 @@ class FlightType:
             "max_inclusive": 3,
         }
     )
-    non_stop_directs: Optional[bool] = field(
+    non_stop_directs: None | bool = field(
         default=None,
         metadata={
             "name": "NonStopDirects",
             "type": "Attribute",
         }
     )
-    stop_directs: Optional[bool] = field(
+    stop_directs: None | bool = field(
         default=None,
         metadata={
             "name": "StopDirects",
             "type": "Attribute",
         }
     )
-    single_online_con: Optional[bool] = field(
+    single_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "SingleOnlineCon",
             "type": "Attribute",
         }
     )
-    double_online_con: Optional[bool] = field(
+    double_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "DoubleOnlineCon",
             "type": "Attribute",
         }
     )
-    triple_online_con: Optional[bool] = field(
+    triple_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "TripleOnlineCon",
             "type": "Attribute",
         }
     )
-    single_interline_con: Optional[bool] = field(
+    single_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "SingleInterlineCon",
             "type": "Attribute",
         }
     )
-    double_interline_con: Optional[bool] = field(
+    double_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "DoubleInterlineCon",
             "type": "Attribute",
         }
     )
-    triple_interline_con: Optional[bool] = field(
+    triple_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "TripleInterlineCon",
@@ -2837,7 +2837,7 @@ class GroupedOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    optional_service_ref: Optional[str] = field(
+    optional_service_ref: None | str = field(
         default=None,
         metadata={
             "name": "OptionalServiceRef",
@@ -2873,7 +2873,7 @@ class HostReservation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -2882,7 +2882,7 @@ class HostReservation:
             "length": 2,
         }
     )
-    carrier_locator_code: Optional[str] = field(
+    carrier_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "CarrierLocatorCode",
@@ -2892,7 +2892,7 @@ class HostReservation:
             "max_length": 8,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -2902,7 +2902,7 @@ class HostReservation:
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -2911,7 +2911,7 @@ class HostReservation:
             "max_length": 15,
         }
     )
-    universal_locator_code: Optional[str] = field(
+    universal_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalLocatorCode",
@@ -2935,7 +2935,7 @@ class ImageLocation:
     Parameters
     ----------
     value:
-    type: Type of Image Location. E.g., "Agent", "Consumer".
+    type_value: Type of Image Location. E.g., "Agent", "Consumer".
     image_width: The width of the image
     image_height: The height of the image
     """
@@ -2948,7 +2948,7 @@ class ImageLocation:
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -2956,7 +2956,7 @@ class ImageLocation:
             "required": True,
         }
     )
-    image_width: Optional[int] = field(
+    image_width: None | int = field(
         default=None,
         metadata={
             "name": "ImageWidth",
@@ -2964,7 +2964,7 @@ class ImageLocation:
             "required": True,
         }
     )
-    image_height: Optional[int] = field(
+    image_height: None | int = field(
         default=None,
         metadata={
             "name": "ImageHeight",
@@ -3004,7 +3004,7 @@ class LanguageOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    language: Optional[str] = field(
+    language: None | str = field(
         default=None,
         metadata={
             "name": "Language",
@@ -3013,7 +3013,7 @@ class LanguageOption:
             "length": 2,
         }
     )
-    country: Optional[str] = field(
+    country: None | str = field(
         default=None,
         metadata={
             "name": "Country",
@@ -3042,7 +3042,7 @@ class LegDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -3050,7 +3050,7 @@ class LegDetail:
             "required": True,
         }
     )
-    origin_airport: Optional[str] = field(
+    origin_airport: None | str = field(
         default=None,
         metadata={
             "name": "OriginAirport",
@@ -3060,7 +3060,7 @@ class LegDetail:
             "white_space": "collapse",
         }
     )
-    destination_airport: Optional[str] = field(
+    destination_airport: None | str = field(
         default=None,
         metadata={
             "name": "DestinationAirport",
@@ -3070,7 +3070,7 @@ class LegDetail:
             "white_space": "collapse",
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -3079,14 +3079,14 @@ class LegDetail:
             "length": 2,
         }
     )
-    travel_date: Optional[str] = field(
+    travel_date: None | str = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -3104,7 +3104,7 @@ class LegRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -3127,7 +3127,7 @@ class LoyaltyCardDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -3136,7 +3136,7 @@ class LoyaltyCardDetails:
             "length": 2,
         }
     )
-    priority_code: Optional[str] = field(
+    priority_code: None | str = field(
         default=None,
         metadata={
             "name": "PriorityCode",
@@ -3173,63 +3173,63 @@ class Maxtype:
     class Meta:
         name = "MAXType"
 
-    hours_max: Optional[bool] = field(
+    hours_max: None | bool = field(
         default=None,
         metadata={
             "name": "HoursMax",
             "type": "Attribute",
         }
     )
-    days_max: Optional[bool] = field(
+    days_max: None | bool = field(
         default=None,
         metadata={
             "name": "DaysMax",
             "type": "Attribute",
         }
     )
-    months_max: Optional[bool] = field(
+    months_max: None | bool = field(
         default=None,
         metadata={
             "name": "MonthsMax",
             "type": "Attribute",
         }
     )
-    occur_ind_max: Optional[bool] = field(
+    occur_ind_max: None | bool = field(
         default=None,
         metadata={
             "name": "OccurIndMax",
             "type": "Attribute",
         }
     )
-    same_day_max: Optional[bool] = field(
+    same_day_max: None | bool = field(
         default=None,
         metadata={
             "name": "SameDayMax",
             "type": "Attribute",
         }
     )
-    start_ind_max: Optional[bool] = field(
+    start_ind_max: None | bool = field(
         default=None,
         metadata={
             "name": "StartIndMax",
             "type": "Attribute",
         }
     )
-    completion_ind: Optional[bool] = field(
+    completion_ind: None | bool = field(
         default=None,
         metadata={
             "name": "CompletionInd",
             "type": "Attribute",
         }
     )
-    tm_dowmax: Optional[int] = field(
+    tm_dowmax: None | int = field(
         default=None,
         metadata={
             "name": "TmDOWMax",
             "type": "Attribute",
         }
     )
-    num_occur_max: Optional[int] = field(
+    num_occur_max: None | int = field(
         default=None,
         metadata={
             "name": "NumOccurMax",
@@ -3262,56 +3262,56 @@ class Mintype:
     class Meta:
         name = "MINType"
 
-    hours_min: Optional[bool] = field(
+    hours_min: None | bool = field(
         default=None,
         metadata={
             "name": "HoursMin",
             "type": "Attribute",
         }
     )
-    days_min: Optional[bool] = field(
+    days_min: None | bool = field(
         default=None,
         metadata={
             "name": "DaysMin",
             "type": "Attribute",
         }
     )
-    months_min: Optional[bool] = field(
+    months_min: None | bool = field(
         default=None,
         metadata={
             "name": "MonthsMin",
             "type": "Attribute",
         }
     )
-    occur_ind_min: Optional[bool] = field(
+    occur_ind_min: None | bool = field(
         default=None,
         metadata={
             "name": "OccurIndMin",
             "type": "Attribute",
         }
     )
-    same_day_min: Optional[bool] = field(
+    same_day_min: None | bool = field(
         default=None,
         metadata={
             "name": "SameDayMin",
             "type": "Attribute",
         }
     )
-    tm_dowmin: Optional[int] = field(
+    tm_dowmin: None | int = field(
         default=None,
         metadata={
             "name": "TmDOWMin",
             "type": "Attribute",
         }
     )
-    fare_component: Optional[int] = field(
+    fare_component: None | int = field(
         default=None,
         metadata={
             "name": "FareComponent",
             "type": "Attribute",
         }
     )
-    num_occur_min: Optional[int] = field(
+    num_occur_min: None | int = field(
         default=None,
         metadata={
             "name": "NumOccurMin",
@@ -3335,7 +3335,7 @@ class MaxLayoverDurationType:
     international: It will be applied for all International-to-
         International connections.
     """
-    domestic: Optional[int] = field(
+    domestic: None | int = field(
         default=None,
         metadata={
             "name": "Domestic",
@@ -3344,7 +3344,7 @@ class MaxLayoverDurationType:
             "max_inclusive": 9999,
         }
     )
-    gateway: Optional[int] = field(
+    gateway: None | int = field(
         default=None,
         metadata={
             "name": "Gateway",
@@ -3353,7 +3353,7 @@ class MaxLayoverDurationType:
             "max_inclusive": 9999,
         }
     )
-    international: Optional[int] = field(
+    international: None | int = field(
         default=None,
         metadata={
             "name": "International",
@@ -3371,11 +3371,11 @@ class MultiGdssearchIndicator:
 
     Parameters
     ----------
-    type: Indicates whether only public fares or both public and private
-        fares should be returned or a specific type of private fares.
-        Examples of valid values are PublicFaresOnly, PrivateFaresOnly,
-        AirlinePrivateFaresOnly, AgencyPrivateFaresOnly,
-        PublicandPrivateFares, and NetFaresOnly.
+    type_value: Indicates whether only public fares or both public and
+        private fares should be returned or a specific type of private
+        fares. Examples of valid values are PublicFaresOnly,
+        PrivateFaresOnly, AirlinePrivateFaresOnly,
+        AgencyPrivateFaresOnly, PublicandPrivateFares, and NetFaresOnly.
     provider_code:
     default_provider: Use the value “true” if the provider is the
         default (primary) provider.  Use the value “false” if the
@@ -3394,14 +3394,14 @@ class MultiGdssearchIndicator:
         name = "MultiGDSSearchIndicator"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -3410,21 +3410,21 @@ class MultiGdssearchIndicator:
             "max_length": 5,
         }
     )
-    default_provider: Optional[bool] = field(
+    default_provider: None | bool = field(
         default=None,
         metadata={
             "name": "DefaultProvider",
             "type": "Attribute",
         }
     )
-    private_fare_code: Optional[str] = field(
+    private_fare_code: None | str = field(
         default=None,
         metadata={
             "name": "PrivateFareCode",
             "type": "Attribute",
         }
     )
-    private_fare_code_only: Optional[bool] = field(
+    private_fare_code_only: None | bool = field(
         default=None,
         metadata={
             "name": "PrivateFareCodeOnly",
@@ -3513,252 +3513,252 @@ class Othtype:
     class Meta:
         name = "OTHType"
 
-    cat0: Optional[bool] = field(
+    cat0: None | bool = field(
         default=None,
         metadata={
             "name": "Cat0",
             "type": "Attribute",
         }
     )
-    cat1: Optional[bool] = field(
+    cat1: None | bool = field(
         default=None,
         metadata={
             "name": "Cat1",
             "type": "Attribute",
         }
     )
-    cat2: Optional[bool] = field(
+    cat2: None | bool = field(
         default=None,
         metadata={
             "name": "Cat2",
             "type": "Attribute",
         }
     )
-    cat3: Optional[bool] = field(
+    cat3: None | bool = field(
         default=None,
         metadata={
             "name": "Cat3",
             "type": "Attribute",
         }
     )
-    cat4: Optional[bool] = field(
+    cat4: None | bool = field(
         default=None,
         metadata={
             "name": "Cat4",
             "type": "Attribute",
         }
     )
-    cat5: Optional[bool] = field(
+    cat5: None | bool = field(
         default=None,
         metadata={
             "name": "Cat5",
             "type": "Attribute",
         }
     )
-    cat6: Optional[bool] = field(
+    cat6: None | bool = field(
         default=None,
         metadata={
             "name": "Cat6",
             "type": "Attribute",
         }
     )
-    cat7: Optional[bool] = field(
+    cat7: None | bool = field(
         default=None,
         metadata={
             "name": "Cat7",
             "type": "Attribute",
         }
     )
-    cat8: Optional[bool] = field(
+    cat8: None | bool = field(
         default=None,
         metadata={
             "name": "Cat8",
             "type": "Attribute",
         }
     )
-    cat9: Optional[bool] = field(
+    cat9: None | bool = field(
         default=None,
         metadata={
             "name": "Cat9",
             "type": "Attribute",
         }
     )
-    cat10: Optional[bool] = field(
+    cat10: None | bool = field(
         default=None,
         metadata={
             "name": "Cat10",
             "type": "Attribute",
         }
     )
-    cat11: Optional[bool] = field(
+    cat11: None | bool = field(
         default=None,
         metadata={
             "name": "Cat11",
             "type": "Attribute",
         }
     )
-    cat12: Optional[bool] = field(
+    cat12: None | bool = field(
         default=None,
         metadata={
             "name": "Cat12",
             "type": "Attribute",
         }
     )
-    cat13: Optional[bool] = field(
+    cat13: None | bool = field(
         default=None,
         metadata={
             "name": "Cat13",
             "type": "Attribute",
         }
     )
-    cat14: Optional[bool] = field(
+    cat14: None | bool = field(
         default=None,
         metadata={
             "name": "Cat14",
             "type": "Attribute",
         }
     )
-    cat15: Optional[bool] = field(
+    cat15: None | bool = field(
         default=None,
         metadata={
             "name": "Cat15",
             "type": "Attribute",
         }
     )
-    cat16: Optional[bool] = field(
+    cat16: None | bool = field(
         default=None,
         metadata={
             "name": "Cat16",
             "type": "Attribute",
         }
     )
-    cat17: Optional[bool] = field(
+    cat17: None | bool = field(
         default=None,
         metadata={
             "name": "Cat17",
             "type": "Attribute",
         }
     )
-    cat18: Optional[bool] = field(
+    cat18: None | bool = field(
         default=None,
         metadata={
             "name": "Cat18",
             "type": "Attribute",
         }
     )
-    cat19: Optional[bool] = field(
+    cat19: None | bool = field(
         default=None,
         metadata={
             "name": "Cat19",
             "type": "Attribute",
         }
     )
-    cat20: Optional[bool] = field(
+    cat20: None | bool = field(
         default=None,
         metadata={
             "name": "Cat20",
             "type": "Attribute",
         }
     )
-    cat21: Optional[bool] = field(
+    cat21: None | bool = field(
         default=None,
         metadata={
             "name": "Cat21",
             "type": "Attribute",
         }
     )
-    cat22: Optional[bool] = field(
+    cat22: None | bool = field(
         default=None,
         metadata={
             "name": "Cat22",
             "type": "Attribute",
         }
     )
-    cat23: Optional[bool] = field(
+    cat23: None | bool = field(
         default=None,
         metadata={
             "name": "Cat23",
             "type": "Attribute",
         }
     )
-    cat24: Optional[bool] = field(
+    cat24: None | bool = field(
         default=None,
         metadata={
             "name": "Cat24",
             "type": "Attribute",
         }
     )
-    cat25: Optional[bool] = field(
+    cat25: None | bool = field(
         default=None,
         metadata={
             "name": "Cat25",
             "type": "Attribute",
         }
     )
-    cat26: Optional[bool] = field(
+    cat26: None | bool = field(
         default=None,
         metadata={
             "name": "Cat26",
             "type": "Attribute",
         }
     )
-    cat27: Optional[bool] = field(
+    cat27: None | bool = field(
         default=None,
         metadata={
             "name": "Cat27",
             "type": "Attribute",
         }
     )
-    cat28: Optional[bool] = field(
+    cat28: None | bool = field(
         default=None,
         metadata={
             "name": "Cat28",
             "type": "Attribute",
         }
     )
-    cat29: Optional[bool] = field(
+    cat29: None | bool = field(
         default=None,
         metadata={
             "name": "Cat29",
             "type": "Attribute",
         }
     )
-    cat30: Optional[bool] = field(
+    cat30: None | bool = field(
         default=None,
         metadata={
             "name": "Cat30",
             "type": "Attribute",
         }
     )
-    cat31: Optional[bool] = field(
+    cat31: None | bool = field(
         default=None,
         metadata={
             "name": "Cat31",
             "type": "Attribute",
         }
     )
-    restrictive_dt: Optional[XmlDate] = field(
+    restrictive_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "RestrictiveDt",
             "type": "Attribute",
         }
     )
-    surcharge_amt: Optional[Decimal] = field(
+    surcharge_amt: None | Decimal = field(
         default=None,
         metadata={
             "name": "SurchargeAmt",
             "type": "Attribute",
         }
     )
-    not_usacity: Optional[bool] = field(
+    not_usacity: None | bool = field(
         default=None,
         metadata={
             "name": "NotUSACity",
             "type": "Attribute",
         }
     )
-    missing_rules: Optional[bool] = field(
+    missing_rules: None | bool = field(
         default=None,
         metadata={
             "name": "MissingRules",
@@ -3781,7 +3781,7 @@ class OfferAvailabilityModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    service_type: List[str] = field(
+    service_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "ServiceType",
@@ -3791,7 +3791,7 @@ class OfferAvailabilityModifiers:
             "max_length": 128,
         }
     )
-    carrier: List[str] = field(
+    carrier: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Carrier",
@@ -3800,7 +3800,7 @@ class OfferAvailabilityModifiers:
             "length": 2,
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -3817,7 +3817,7 @@ class OptionalServiceModifier:
 
     Parameters
     ----------
-    type: Optional service type
+    type_value: Optional service type
     secondary_type: Secondary optional service type
     supplier_code: Optional service supplier code
     service_sub_code: As published by ATPCO
@@ -3829,7 +3829,7 @@ class OptionalServiceModifier:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -3839,7 +3839,7 @@ class OptionalServiceModifier:
             "max_length": 128,
         }
     )
-    secondary_type: Optional[str] = field(
+    secondary_type: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryType",
@@ -3848,7 +3848,7 @@ class OptionalServiceModifier:
             "max_length": 128,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -3858,7 +3858,7 @@ class OptionalServiceModifier:
             "max_length": 5,
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
@@ -3866,7 +3866,7 @@ class OptionalServiceModifier:
             "required": True,
         }
     )
-    travel_date: Optional[XmlDate] = field(
+    travel_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TravelDate",
@@ -3874,7 +3874,7 @@ class OptionalServiceModifier:
             "required": True,
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
@@ -3925,7 +3925,7 @@ class PassengerDetailsRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -3962,7 +3962,7 @@ class PassengerSeatPrice:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -3970,7 +3970,7 @@ class PassengerSeatPrice:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -3994,7 +3994,7 @@ class PassengerTicketNumber:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -4003,7 +4003,7 @@ class PassengerTicketNumber:
             "max_length": 13,
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -4020,7 +4020,7 @@ class PaymentRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -4062,95 +4062,95 @@ class PenFeeType:
         to deposit.
     amt: Amount of penalty.  If XXX.XX then it is an amount.  If it is
         XX then is is a percenatge.  Eg 100.00 or 000100.
-    type: Type of penalty.  If it is D then dollar.  If it is P then
-        percentage.
+    type_value: Type of penalty.  If it is D then dollar.  If it is P
+        then percentage.
     currency: Currency code of penalty (e.g. USD).
     """
-    dep_required: Optional[bool] = field(
+    dep_required: None | bool = field(
         default=None,
         metadata={
             "name": "DepRequired",
             "type": "Attribute",
         }
     )
-    dep_non_ref: Optional[bool] = field(
+    dep_non_ref: None | bool = field(
         default=None,
         metadata={
             "name": "DepNonRef",
             "type": "Attribute",
         }
     )
-    tk_non_ref: Optional[bool] = field(
+    tk_non_ref: None | bool = field(
         default=None,
         metadata={
             "name": "TkNonRef",
             "type": "Attribute",
         }
     )
-    air_vfee: Optional[bool] = field(
+    air_vfee: None | bool = field(
         default=None,
         metadata={
             "name": "AirVFee",
             "type": "Attribute",
         }
     )
-    cancellation: Optional[bool] = field(
+    cancellation: None | bool = field(
         default=None,
         metadata={
             "name": "Cancellation",
             "type": "Attribute",
         }
     )
-    fail_confirm_space: Optional[bool] = field(
+    fail_confirm_space: None | bool = field(
         default=None,
         metadata={
             "name": "FailConfirmSpace",
             "type": "Attribute",
         }
     )
-    itin_chg: Optional[bool] = field(
+    itin_chg: None | bool = field(
         default=None,
         metadata={
             "name": "ItinChg",
             "type": "Attribute",
         }
     )
-    replace_tk: Optional[bool] = field(
+    replace_tk: None | bool = field(
         default=None,
         metadata={
             "name": "ReplaceTk",
             "type": "Attribute",
         }
     )
-    applicable: Optional[bool] = field(
+    applicable: None | bool = field(
         default=None,
         metadata={
             "name": "Applicable",
             "type": "Attribute",
         }
     )
-    applicable_to: Optional[bool] = field(
+    applicable_to: None | bool = field(
         default=None,
         metadata={
             "name": "ApplicableTo",
             "type": "Attribute",
         }
     )
-    amt: Optional[Decimal] = field(
+    amt: None | Decimal = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -4170,14 +4170,14 @@ class Penalty:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    penalty_type: Optional[str] = field(
+    penalty_type: None | str = field(
         default=None,
         metadata={
             "name": "PenaltyType",
@@ -4224,7 +4224,7 @@ class PenaltyInformation:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -4232,28 +4232,28 @@ class PenaltyInformation:
             "length": 2,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
         }
     )
-    fare_component: Optional[int] = field(
+    fare_component: None | int = field(
         default=None,
         metadata={
             "name": "FareComponent",
             "type": "Attribute",
         }
     )
-    priceable_unit: Optional[int] = field(
+    priceable_unit: None | int = field(
         default=None,
         metadata={
             "name": "PriceableUnit",
             "type": "Attribute",
         }
     )
-    board_point: Optional[str] = field(
+    board_point: None | str = field(
         default=None,
         metadata={
             "name": "BoardPoint",
@@ -4262,7 +4262,7 @@ class PenaltyInformation:
             "white_space": "collapse",
         }
     )
-    off_point: Optional[str] = field(
+    off_point: None | str = field(
         default=None,
         metadata={
             "name": "OffPoint",
@@ -4271,21 +4271,21 @@ class PenaltyInformation:
             "white_space": "collapse",
         }
     )
-    minimum_change_fee: Optional[str] = field(
+    minimum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MinimumChangeFee",
             "type": "Attribute",
         }
     )
-    maximum_change_fee: Optional[str] = field(
+    maximum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MaximumChangeFee",
             "type": "Attribute",
         }
     )
-    filed_currency: Optional[str] = field(
+    filed_currency: None | str = field(
         default=None,
         metadata={
             "name": "FiledCurrency",
@@ -4293,21 +4293,21 @@ class PenaltyInformation:
             "length": 3,
         }
     )
-    conversion_rate: Optional[Decimal] = field(
+    conversion_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "ConversionRate",
             "type": "Attribute",
         }
     )
-    refundable: Optional[bool] = field(
+    refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
         }
     )
-    change_fee_application_code: Optional[str] = field(
+    change_fee_application_code: None | str = field(
         default=None,
         metadata={
             "name": "ChangeFeeApplicationCode",
@@ -4331,7 +4331,7 @@ class PersonName:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    first: Optional[str] = field(
+    first: None | str = field(
         default=None,
         metadata={
             "name": "First",
@@ -4340,7 +4340,7 @@ class PersonName:
             "max_length": 64,
         }
     )
-    last: Optional[str] = field(
+    last: None | str = field(
         default=None,
         metadata={
             "name": "Last",
@@ -4350,7 +4350,7 @@ class PersonName:
             "max_length": 64,
         }
     )
-    prefix: Optional[str] = field(
+    prefix: None | str = field(
         default=None,
         metadata={
             "name": "Prefix",
@@ -4373,7 +4373,7 @@ class PersonNameSearch:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    last: Optional[str] = field(
+    last: None | str = field(
         default=None,
         metadata={
             "name": "Last",
@@ -4396,7 +4396,7 @@ class PolicyCodesList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    policy_code: List[int] = field(
+    policy_code: list[int] = field(
         default_factory=list,
         metadata={
             "name": "PolicyCode",
@@ -4429,7 +4429,7 @@ class PriceChangeType:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -4437,14 +4437,14 @@ class PriceChangeType:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
             "type": "Attribute",
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
@@ -4466,21 +4466,21 @@ class PriceRange:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    default_currency: Optional[bool] = field(
+    default_currency: None | bool = field(
         default=None,
         metadata={
             "name": "DefaultCurrency",
             "type": "Attribute",
         }
     )
-    start_price: Optional[str] = field(
+    start_price: None | str = field(
         default=None,
         metadata={
             "name": "StartPrice",
             "type": "Attribute",
         }
     )
-    end_price: Optional[str] = field(
+    end_price: None | str = field(
         default=None,
         metadata={
             "name": "EndPrice",
@@ -4504,7 +4504,7 @@ class PrintBlankFormItinerary:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    include_description: Optional[bool] = field(
+    include_description: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeDescription",
@@ -4512,7 +4512,7 @@ class PrintBlankFormItinerary:
             "required": True,
         }
     )
-    include_header: Optional[bool] = field(
+    include_header: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeHeader",
@@ -4536,7 +4536,7 @@ class PromoCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -4546,7 +4546,7 @@ class PromoCode:
             "max_length": 64,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -4556,7 +4556,7 @@ class PromoCode:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -4582,21 +4582,21 @@ class RailCoachDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    rail_coach_number: Optional[str] = field(
+    rail_coach_number: None | str = field(
         default=None,
         metadata={
             "name": "RailCoachNumber",
             "type": "Attribute",
         }
     )
-    available_rail_seats: Optional[str] = field(
+    available_rail_seats: None | str = field(
         default=None,
         metadata={
             "name": "AvailableRailSeats",
             "type": "Attribute",
         }
     )
-    rail_seat_map_availability: Optional[bool] = field(
+    rail_seat_map_availability: None | bool = field(
         default=None,
         metadata={
             "name": "RailSeatMapAvailability",
@@ -4620,7 +4620,7 @@ class Restriction:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    days_of_week_restriction: List["Restriction.DaysOfWeekRestriction"] = field(
+    days_of_week_restriction: list[Restriction.DaysOfWeekRestriction] = field(
         default_factory=list,
         metadata={
             "name": "DaysOfWeekRestriction",
@@ -4628,7 +4628,7 @@ class Restriction:
             "max_occurs": 3,
         }
     )
-    restriction_passenger_types: List["Restriction.RestrictionPassengerTypes"] = field(
+    restriction_passenger_types: list[Restriction.RestrictionPassengerTypes] = field(
         default_factory=list,
         metadata={
             "name": "RestrictionPassengerTypes",
@@ -4639,70 +4639,70 @@ class Restriction:
 
     @dataclass
     class DaysOfWeekRestriction:
-        mon: Optional[bool] = field(
+        mon: None | bool = field(
             default=None,
             metadata={
                 "name": "Mon",
                 "type": "Attribute",
             }
         )
-        tue: Optional[bool] = field(
+        tue: None | bool = field(
             default=None,
             metadata={
                 "name": "Tue",
                 "type": "Attribute",
             }
         )
-        wed: Optional[bool] = field(
+        wed: None | bool = field(
             default=None,
             metadata={
                 "name": "Wed",
                 "type": "Attribute",
             }
         )
-        thu: Optional[bool] = field(
+        thu: None | bool = field(
             default=None,
             metadata={
                 "name": "Thu",
                 "type": "Attribute",
             }
         )
-        fri: Optional[bool] = field(
+        fri: None | bool = field(
             default=None,
             metadata={
                 "name": "Fri",
                 "type": "Attribute",
             }
         )
-        sat: Optional[bool] = field(
+        sat: None | bool = field(
             default=None,
             metadata={
                 "name": "Sat",
                 "type": "Attribute",
             }
         )
-        sun: Optional[bool] = field(
+        sun: None | bool = field(
             default=None,
             metadata={
                 "name": "Sun",
                 "type": "Attribute",
             }
         )
-        restriction_exists_ind: Optional[bool] = field(
+        restriction_exists_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "RestrictionExistsInd",
                 "type": "Attribute",
             }
         )
-        application: Optional[str] = field(
+        application: None | str = field(
             default=None,
             metadata={
                 "name": "Application",
                 "type": "Attribute",
             }
         )
-        include_exclude_use_ind: Optional[bool] = field(
+        include_exclude_use_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "IncludeExcludeUseInd",
@@ -4712,14 +4712,14 @@ class Restriction:
 
     @dataclass
     class RestrictionPassengerTypes:
-        max_nbr_travelers: Optional[str] = field(
+        max_nbr_travelers: None | str = field(
             default=None,
             metadata={
                 "name": "MaxNbrTravelers",
                 "type": "Attribute",
             }
         )
-        total_nbr_ptc: Optional[str] = field(
+        total_nbr_ptc: None | str = field(
             default=None,
             metadata={
                 "name": "TotalNbrPTC",
@@ -4746,35 +4746,35 @@ class RuleCharges:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    penalty_type: Optional[str] = field(
+    penalty_type: None | str = field(
         default=None,
         metadata={
             "name": "PenaltyType",
             "type": "Attribute",
         }
     )
-    departure_status: Optional[str] = field(
+    departure_status: None | str = field(
         default=None,
         metadata={
             "name": "DepartureStatus",
             "type": "Attribute",
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    percent: Optional[Decimal] = field(
+    percent: None | Decimal = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Attribute",
         }
     )
-    more_rules_present: Optional[bool] = field(
+    more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
@@ -4793,7 +4793,7 @@ class Rules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    rules_text: Optional[str] = field(
+    rules_text: None | str = field(
         default=None,
         metadata={
             "name": "RulesText",
@@ -4822,7 +4822,7 @@ class SearchSpecificAirSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -4830,7 +4830,7 @@ class SearchSpecificAirSegment:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -4839,7 +4839,7 @@ class SearchSpecificAirSegment:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -4848,7 +4848,7 @@ class SearchSpecificAirSegment:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -4858,7 +4858,7 @@ class SearchSpecificAirSegment:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -4868,7 +4868,7 @@ class SearchSpecificAirSegment:
             "white_space": "collapse",
         }
     )
-    segment_index: Optional[int] = field(
+    segment_index: None | int = field(
         default=None,
         metadata={
             "name": "SegmentIndex",
@@ -4889,7 +4889,7 @@ class SeatInformation:
         example: No Power Providers: 1G, 1V, 1P, 1J
     video: Detail about any video components the seat might have. For
         example: No Video Providers: 1G, 1V, 1P, 1J
-    type: Detail about the type of seat. For example: Exit Row,
+    type_value: Detail about the type of seat. For example: Exit Row,
         Standard, etc. Providers: 1G, 1V, 1P, 1J
     description: Detailed description of the seat. Providers: 1G, 1V,
         1P, 1J
@@ -4899,7 +4899,7 @@ class SeatInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    power: Optional[str] = field(
+    power: None | str = field(
         default=None,
         metadata={
             "name": "Power",
@@ -4907,7 +4907,7 @@ class SeatInformation:
             "required": True,
         }
     )
-    video: Optional[str] = field(
+    video: None | str = field(
         default=None,
         metadata={
             "name": "Video",
@@ -4915,7 +4915,7 @@ class SeatInformation:
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -4923,7 +4923,7 @@ class SeatInformation:
             "required": True,
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
@@ -4931,7 +4931,7 @@ class SeatInformation:
             "required": True,
         }
     )
-    rating: Optional["SeatInformation.Rating"] = field(
+    rating: None | SeatInformation.Rating = field(
         default=None,
         metadata={
             "name": "Rating",
@@ -4939,7 +4939,7 @@ class SeatInformation:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -4963,7 +4963,7 @@ class SeatInformation:
                 "required": True,
             }
         )
-        number: Optional[int] = field(
+        number: None | int = field(
             default=None,
             metadata={
                 "name": "Number",
@@ -4981,7 +4981,7 @@ class SegmentIndex:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[int] = field(
+    value: None | int = field(
         default=None,
         metadata={
             "required": True,
@@ -5003,7 +5003,7 @@ class ServiceSubGroup:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -5031,7 +5031,7 @@ class SpecificSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -5039,7 +5039,7 @@ class SpecificSeatAssignment:
             "required": True,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
@@ -5047,14 +5047,14 @@ class SpecificSeatAssignment:
             "required": True,
         }
     )
-    flight_detail_ref: Optional[str] = field(
+    flight_detail_ref: None | str = field(
         default=None,
         metadata={
             "name": "FlightDetailRef",
             "type": "Attribute",
         }
     )
-    seat_id: Optional[str] = field(
+    seat_id: None | str = field(
         default=None,
         metadata={
             "name": "SeatId",
@@ -5062,7 +5062,7 @@ class SpecificSeatAssignment:
             "required": True,
         }
     )
-    rail_coach_number: Optional[str] = field(
+    rail_coach_number: None | str = field(
         default=None,
         metadata={
             "name": "RailCoachNumber",
@@ -5091,7 +5091,7 @@ class SplitTicketingSearch:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    round_trip: Optional[int] = field(
+    round_trip: None | int = field(
         default=None,
         metadata={
             "name": "RoundTrip",
@@ -5116,7 +5116,7 @@ class SponsoredFltInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    sponsored_lnb: Optional[int] = field(
+    sponsored_lnb: None | int = field(
         default=None,
         metadata={
             "name": "SponsoredLNB",
@@ -5124,7 +5124,7 @@ class SponsoredFltInfo:
             "required": True,
         }
     )
-    neutral_lnb: Optional[int] = field(
+    neutral_lnb: None | int = field(
         default=None,
         metadata={
             "name": "NeutralLNB",
@@ -5132,7 +5132,7 @@ class SponsoredFltInfo:
             "required": True,
         }
     )
-    flt_key: Optional[str] = field(
+    flt_key: None | str = field(
         default=None,
         metadata={
             "name": "FltKey",
@@ -5173,7 +5173,7 @@ class SvcSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -5181,7 +5181,7 @@ class SvcSegment:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -5189,21 +5189,21 @@ class SvcSegment:
             "length": 2,
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
         }
     )
-    number_of_items: Optional[int] = field(
+    number_of_items: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfItems",
             "type": "Attribute",
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -5212,7 +5212,7 @@ class SvcSegment:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -5221,56 +5221,56 @@ class SvcSegment:
             "white_space": "collapse",
         }
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
         }
     )
-    travel_order: Optional[int] = field(
+    travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
         }
     )
-    rfic: Optional[str] = field(
+    rfic: None | str = field(
         default=None,
         metadata={
             "name": "RFIC",
             "type": "Attribute",
         }
     )
-    rfisc: Optional[str] = field(
+    rfisc: None | str = field(
         default=None,
         metadata={
             "name": "RFISC",
             "type": "Attribute",
         }
     )
-    svc_description: Optional[str] = field(
+    svc_description: None | str = field(
         default=None,
         metadata={
             "name": "SvcDescription",
             "type": "Attribute",
         }
     )
-    fee: Optional[str] = field(
+    fee: None | str = field(
         default=None,
         metadata={
             "name": "Fee",
             "type": "Attribute",
         }
     )
-    emdnumber: Optional[str] = field(
+    emdnumber: None | str = field(
         default=None,
         metadata={
             "name": "EMDNumber",
@@ -5299,14 +5299,14 @@ class Tax:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -5324,7 +5324,7 @@ class TextInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    text: List[str] = field(
+    text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -5333,7 +5333,7 @@ class TextInfo:
             "max_length": 250,
         }
     )
-    title: Optional[str] = field(
+    title: None | str = field(
         default=None,
         metadata={
             "name": "Title",
@@ -5357,7 +5357,7 @@ class TicketAgency:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    provider_code: Optional[object] = field(
+    provider_code: None | object = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -5365,7 +5365,7 @@ class TicketAgency:
             "required": True,
         }
     )
-    pseudo_city_code: Optional[object] = field(
+    pseudo_city_code: None | object = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -5383,7 +5383,7 @@ class TicketDesignator:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -5400,7 +5400,7 @@ class TicketEndorsement:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -5425,14 +5425,14 @@ class TicketValidity:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    not_valid_before: Optional[XmlDate] = field(
+    not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[XmlDate] = field(
+    not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -5449,7 +5449,7 @@ class TicketingModifiersRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -5467,7 +5467,7 @@ class TourCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -5498,14 +5498,14 @@ class TravelArranger:
             "required": True,
         }
     )
-    company_short_name: Optional[str] = field(
+    company_short_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyShortName",
             "type": "Attribute",
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -5526,7 +5526,7 @@ class Url:
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -5544,7 +5544,7 @@ class Urlinfo:
         name = "URLInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    text: List[str] = field(
+    text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -5553,7 +5553,7 @@ class Urlinfo:
             "max_length": 250,
         }
     )
-    url: List[str] = field(
+    url: list[str] = field(
         default_factory=list,
         metadata={
             "name": "URL",
@@ -5571,14 +5571,14 @@ class UpsellBrand:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -5589,7 +5589,7 @@ class UpsellBrand:
 
 @dataclass
 class ValueDetails:
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -5597,7 +5597,7 @@ class ValueDetails:
             "required": True,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -5618,7 +5618,7 @@ class VoidFailureInfo:
             "required": True,
         }
     )
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -5626,7 +5626,7 @@ class VoidFailureInfo:
             "required": True,
         }
     )
-    code: Optional[int] = field(
+    code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
@@ -5649,7 +5649,7 @@ class WaiverCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    tour_code: Optional[str] = field(
+    tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
@@ -5657,7 +5657,7 @@ class WaiverCode:
             "max_length": 15,
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignator",
@@ -5666,7 +5666,7 @@ class WaiverCode:
             "max_length": 20,
         }
     )
-    endorsement: Optional[str] = field(
+    endorsement: None | str = field(
         default=None,
         metadata={
             "name": "Endorsement",
@@ -5694,14 +5694,14 @@ class Yield:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -5777,7 +5777,7 @@ class TypeAnchorFlightData:
     class Meta:
         name = "typeAnchorFlightData"
 
-    airline_code: Optional[str] = field(
+    airline_code: None | str = field(
         default=None,
         metadata={
             "name": "AirlineCode",
@@ -5786,7 +5786,7 @@ class TypeAnchorFlightData:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -5795,7 +5795,7 @@ class TypeAnchorFlightData:
             "max_length": 5,
         }
     )
-    connection_indicator: Optional[bool] = field(
+    connection_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "ConnectionIndicator",
@@ -5816,7 +5816,7 @@ class TypeApplicableSegment:
     class Meta:
         name = "typeApplicableSegment"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -5824,14 +5824,14 @@ class TypeApplicableSegment:
             "required": True,
         }
     )
-    air_itinerary_details_ref: Optional[str] = field(
+    air_itinerary_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirItineraryDetailsRef",
             "type": "Attribute",
         }
     )
-    booking_counts: Optional[str] = field(
+    booking_counts: None | str = field(
         default=None,
         metadata={
             "name": "BookingCounts",
@@ -5903,7 +5903,7 @@ class TypeBulkTicketModifierType:
     class Meta:
         name = "typeBulkTicketModifierType"
 
-    suppress_on_fare_calc: Optional[bool] = field(
+    suppress_on_fare_calc: None | bool = field(
         default=None,
         metadata={
             "name": "SuppressOnFareCalc",
@@ -5937,49 +5937,49 @@ class TypeDaysOfOperation:
     class Meta:
         name = "typeDaysOfOperation"
 
-    mon: Optional[bool] = field(
+    mon: None | bool = field(
         default=None,
         metadata={
             "name": "Mon",
             "type": "Attribute",
         }
     )
-    tue: Optional[bool] = field(
+    tue: None | bool = field(
         default=None,
         metadata={
             "name": "Tue",
             "type": "Attribute",
         }
     )
-    wed: Optional[bool] = field(
+    wed: None | bool = field(
         default=None,
         metadata={
             "name": "Wed",
             "type": "Attribute",
         }
     )
-    thu: Optional[bool] = field(
+    thu: None | bool = field(
         default=None,
         metadata={
             "name": "Thu",
             "type": "Attribute",
         }
     )
-    fri: Optional[bool] = field(
+    fri: None | bool = field(
         default=None,
         metadata={
             "name": "Fri",
             "type": "Attribute",
         }
     )
-    sat: Optional[bool] = field(
+    sat: None | bool = field(
         default=None,
         metadata={
             "name": "Sat",
             "type": "Attribute",
         }
     )
-    sun: Optional[bool] = field(
+    sun: None | bool = field(
         default=None,
         metadata={
             "name": "Sun",
@@ -6066,7 +6066,7 @@ class TypeFailureInfo:
     class Meta:
         name = "typeFailureInfo"
 
-    code: Optional[int] = field(
+    code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
@@ -6074,7 +6074,7 @@ class TypeFailureInfo:
             "required": True,
         }
     )
-    message: Optional[str] = field(
+    message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
@@ -6434,7 +6434,7 @@ class TypeNativeSearchModifier:
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -6451,7 +6451,7 @@ class TypeNonAirReservationRef:
     class Meta:
         name = "typeNonAirReservationRef"
 
-    locator_code: Optional[str] = field(
+    locator_code: None | str = field(
         default=None,
         metadata={
             "name": "LocatorCode",
@@ -6603,7 +6603,7 @@ class TypeSegmentRef:
     class Meta:
         name = "typeSegmentRef"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -6645,7 +6645,7 @@ class TypeTextElement:
     Parameters
     ----------
     value:
-    type:
+    type_value:
     language_code: ISO 639 two-character language codes are used to
         retrieve specific information in the requested language. For
         Rich Content and Branding, language codes ZH-HANT (Chinese
@@ -6664,7 +6664,7 @@ class TypeTextElement:
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -6672,7 +6672,7 @@ class TypeTextElement:
             "required": True,
         }
     )
-    language_code: Optional[str] = field(
+    language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
@@ -6688,7 +6688,7 @@ class TypeTicketModifierAccountingType:
     class Meta:
         name = "typeTicketModifierAccountingType"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -6712,7 +6712,7 @@ class TypeTicketModifierAmountType:
     class Meta:
         name = "typeTicketModifierAmountType"
 
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -6735,7 +6735,7 @@ class TypeTicketModifierPercentType:
     class Meta:
         name = "typeTicketModifierPercentType"
 
-    percent: Optional[str] = field(
+    percent: None | str = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -6759,7 +6759,7 @@ class TypeTicketModifierValueType:
     class Meta:
         name = "typeTicketModifierValueType"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -6768,7 +6768,7 @@ class TypeTicketModifierValueType:
             "required": True,
         }
     )
-    net_fare_value: Optional[bool] = field(
+    net_fare_value: None | bool = field(
         default=None,
         metadata={
             "name": "NetFareValue",
@@ -6803,14 +6803,14 @@ class TypeUnitOfMeasure:
     class Meta:
         name = "typeUnitOfMeasure"
 
-    value: Optional[float] = field(
+    value: None | float = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
         }
     )
-    unit: Optional[str] = field(
+    unit: None | str = field(
         default=None,
         metadata={
             "name": "Unit",
@@ -6868,7 +6868,7 @@ class Apisrequirements:
         name = "APISRequirements"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    document: List[Document] = field(
+    document: list[Document] = field(
         default_factory=list,
         metadata={
             "name": "Document",
@@ -6876,42 +6876,42 @@ class Apisrequirements:
             "max_occurs": 999,
         }
     )
-    key: Optional[object] = field(
+    key: None | object = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    level: Optional[str] = field(
+    level: None | str = field(
         default=None,
         metadata={
             "name": "Level",
             "type": "Attribute",
         }
     )
-    gender_required: Optional[bool] = field(
+    gender_required: None | bool = field(
         default=None,
         metadata={
             "name": "GenderRequired",
             "type": "Attribute",
         }
     )
-    date_of_birth_required: Optional[bool] = field(
+    date_of_birth_required: None | bool = field(
         default=None,
         metadata={
             "name": "DateOfBirthRequired",
             "type": "Attribute",
         }
     )
-    required_documents: Optional[str] = field(
+    required_documents: None | str = field(
         default=None,
         metadata={
             "name": "RequiredDocuments",
             "type": "Attribute",
         }
     )
-    nationality_required: Optional[bool] = field(
+    nationality_required: None | bool = field(
         default=None,
         metadata={
             "name": "NationalityRequired",
@@ -6928,7 +6928,7 @@ class Affiliations:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    travel_arranger: List[TravelArranger] = field(
+    travel_arranger: list[TravelArranger] = field(
         default_factory=list,
         metadata={
             "name": "TravelArranger",
@@ -6954,7 +6954,7 @@ class AirAvailInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_code_info: List[BookingCodeInfo] = field(
+    booking_code_info: list[BookingCodeInfo] = field(
         default_factory=list,
         metadata={
             "name": "BookingCodeInfo",
@@ -6962,7 +6962,7 @@ class AirAvailInfo:
             "max_occurs": 999,
         }
     )
-    fare_token_info: List["AirAvailInfo.FareTokenInfo"] = field(
+    fare_token_info: list[AirAvailInfo.FareTokenInfo] = field(
         default_factory=list,
         metadata={
             "name": "FareTokenInfo",
@@ -6970,7 +6970,7 @@ class AirAvailInfo:
             "max_occurs": 999,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -6979,7 +6979,7 @@ class AirAvailInfo:
             "max_length": 5,
         }
     )
-    host_token_ref: Optional[str] = field(
+    host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
@@ -6989,7 +6989,7 @@ class AirAvailInfo:
 
     @dataclass
     class FareTokenInfo:
-        fare_info_ref: Optional[str] = field(
+        fare_info_ref: None | str = field(
             default=None,
             metadata={
                 "name": "FareInfoRef",
@@ -6997,7 +6997,7 @@ class AirAvailInfo:
                 "required": True,
             }
         )
-        host_token_ref: Optional[str] = field(
+        host_token_ref: None | str = field(
             default=None,
             metadata={
                 "name": "HostTokenRef",
@@ -7027,7 +7027,7 @@ class AirExchangeBundleTotal:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_exchange_info: Optional[AirExchangeInfo] = field(
+    air_exchange_info: None | AirExchangeInfo = field(
         default=None,
         metadata={
             "name": "AirExchangeInfo",
@@ -7036,7 +7036,7 @@ class AirExchangeBundleTotal:
             "required": True,
         }
     )
-    penalty: List[CommonPenalty] = field(
+    penalty: list[CommonPenalty] = field(
         default_factory=list,
         metadata={
             "name": "Penalty",
@@ -7056,13 +7056,13 @@ class AirExchangeEligibilityReq(BaseReq):
     ----------
     provider_reservation_info: Provider:1P - Represents a valid Provider
         Reservation/PNR whose itinerary is to be exchanged
-    type: Type choices are "Detail" or "Summary"  Default will be
+    type_value: Type choices are "Detail" or "Summary"  Default will be
         Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    provider_reservation_info: Optional["AirExchangeEligibilityReq.ProviderReservationInfo"] = field(
+    provider_reservation_info: None | AirExchangeEligibilityReq.ProviderReservationInfo = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",
@@ -7070,7 +7070,7 @@ class AirExchangeEligibilityReq(BaseReq):
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -7080,7 +7080,7 @@ class AirExchangeEligibilityReq(BaseReq):
 
     @dataclass
     class ProviderReservationInfo:
-        provider_code: Optional[str] = field(
+        provider_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderCode",
@@ -7090,7 +7090,7 @@ class AirExchangeEligibilityReq(BaseReq):
                 "max_length": 5,
             }
         )
-        provider_locator_code: Optional[str] = field(
+        provider_locator_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderLocatorCode",
@@ -7125,35 +7125,35 @@ class AirExchangeModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    contract_codes: Optional["AirExchangeModifiers.ContractCodes"] = field(
+    contract_codes: None | AirExchangeModifiers.ContractCodes = field(
         default=None,
         metadata={
             "name": "ContractCodes",
             "type": "Element",
         }
     )
-    booking_date: Optional[str] = field(
+    booking_date: None | str = field(
         default=None,
         metadata={
             "name": "BookingDate",
             "type": "Attribute",
         }
     )
-    ticketing_date: Optional[str] = field(
+    ticketing_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketingDate",
             "type": "Attribute",
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignator",
@@ -7176,7 +7176,7 @@ class AirExchangeModifiers:
             "type": "Attribute",
         }
     )
-    universal_record_locator_code: Optional[str] = field(
+    universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
@@ -7185,7 +7185,7 @@ class AirExchangeModifiers:
             "max_length": 8,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -7194,7 +7194,7 @@ class AirExchangeModifiers:
             "max_length": 8,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -7204,7 +7204,7 @@ class AirExchangeModifiers:
 
     @dataclass
     class ContractCodes:
-        contract_code: List[ContractCode] = field(
+        contract_code: list[ContractCode] = field(
             default_factory=list,
             metadata={
                 "name": "ContractCode",
@@ -7220,7 +7220,7 @@ class AirExchangeTicketBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -7231,7 +7231,7 @@ class AirExchangeTicketBundle:
             "max_length": 13,
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -7240,7 +7240,7 @@ class AirExchangeTicketBundle:
             "max_occurs": 2,
         }
     )
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+    form_of_payment_ref: None | FormOfPaymentRef = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
@@ -7248,7 +7248,7 @@ class AirExchangeTicketBundle:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
@@ -7265,21 +7265,21 @@ class AirFareDiscount:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    percentage: Optional[float] = field(
+    percentage: None | float = field(
         default=None,
         metadata={
             "name": "Percentage",
             "type": "Attribute",
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    discount_method: Optional[TypeFareDiscount] = field(
+    discount_method: None | TypeFareDiscount = field(
         default=None,
         metadata={
             "name": "DiscountMethod",
@@ -7301,7 +7301,7 @@ class AirFareRuleCategory:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    category_code: List[TypeFareRuleCategoryCode] = field(
+    category_code: list[TypeFareRuleCategoryCode] = field(
         default_factory=list,
         metadata={
             "name": "CategoryCode",
@@ -7310,7 +7310,7 @@ class AirFareRuleCategory:
             "max_occurs": 10,
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -7332,14 +7332,14 @@ class AirPrePayReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    list_search: Optional["AirPrePayReq.ListSearch"] = field(
+    list_search: None | AirPrePayReq.ListSearch = field(
         default=None,
         metadata={
             "name": "ListSearch",
             "type": "Element",
         }
     )
-    pre_pay_retrieve: Optional["AirPrePayReq.PrePayRetrieve"] = field(
+    pre_pay_retrieve: None | AirPrePayReq.PrePayRetrieve = field(
         default=None,
         metadata={
             "name": "PrePayRetrieve",
@@ -7360,14 +7360,14 @@ class AirPrePayReq(BaseReq):
             numbers that is being requested.
         max_results: Max Number of Flight Passes being requested for.
         """
-        person_name_search: Optional[PersonNameSearch] = field(
+        person_name_search: None | PersonNameSearch = field(
             default=None,
             metadata={
                 "name": "PersonNameSearch",
                 "type": "Element",
             }
         )
-        loyalty_card: List[LoyaltyCard] = field(
+        loyalty_card: list[LoyaltyCard] = field(
             default_factory=list,
             metadata={
                 "name": "LoyaltyCard",
@@ -7376,7 +7376,7 @@ class AirPrePayReq(BaseReq):
                 "max_occurs": 999,
             }
         )
-        start_from_result: Optional[int] = field(
+        start_from_result: None | int = field(
             default=None,
             metadata={
                 "name": "StartFromResult",
@@ -7385,7 +7385,7 @@ class AirPrePayReq(BaseReq):
                 "min_inclusive": 1,
             }
         )
-        max_results: Optional[int] = field(
+        max_results: None | int = field(
             default=None,
             metadata={
                 "name": "MaxResults",
@@ -7402,9 +7402,9 @@ class AirPrePayReq(BaseReq):
         Parameters
         ----------
         id: Pre pay id to retrieved,example flight pass  number
-        type: Pre pay id type,example 'FlightPass'
+        type_value: Pre pay id type,example 'FlightPass'
         """
-        id: Optional[str] = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "name": "Id",
@@ -7414,7 +7414,7 @@ class AirPrePayReq(BaseReq):
                 "max_length": 36,
             }
         )
-        type: Optional[str] = field(
+        type_value: None | str = field(
             default=None,
             metadata={
                 "name": "Type",
@@ -7437,7 +7437,7 @@ class AirPricingAdjustment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    adjustment: Optional[Adjustment] = field(
+    adjustment: None | Adjustment = field(
         default=None,
         metadata={
             "name": "Adjustment",
@@ -7445,7 +7445,7 @@ class AirPricingAdjustment:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -7463,7 +7463,7 @@ class AirPricingPayment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -7472,7 +7472,7 @@ class AirPricingPayment:
             "max_occurs": 999,
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -7481,7 +7481,7 @@ class AirPricingPayment:
             "max_occurs": 999,
         }
     )
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+    form_of_payment_ref: None | FormOfPaymentRef = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
@@ -7489,7 +7489,7 @@ class AirPricingPayment:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -7528,7 +7528,7 @@ class AirRefundInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    refund_remark: List[RefundRemark] = field(
+    refund_remark: list[RefundRemark] = field(
         default_factory=list,
         metadata={
             "name": "RefundRemark",
@@ -7537,35 +7537,35 @@ class AirRefundInfo:
             "max_occurs": 999,
         }
     )
-    refund_amount: Optional[str] = field(
+    refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
         }
     )
-    retain_amount: Optional[str] = field(
+    retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
             "type": "Attribute",
         }
     )
-    refund_fee: Optional[str] = field(
+    refund_fee: None | str = field(
         default=None,
         metadata={
             "name": "RefundFee",
             "type": "Attribute",
         }
     )
-    refundable_taxes: Optional[str] = field(
+    refundable_taxes: None | str = field(
         default=None,
         metadata={
             "name": "RefundableTaxes",
             "type": "Attribute",
         }
     )
-    filed_currency: Optional[str] = field(
+    filed_currency: None | str = field(
         default=None,
         metadata={
             "name": "FiledCurrency",
@@ -7573,28 +7573,28 @@ class AirRefundInfo:
             "length": 3,
         }
     )
-    conversion_rate: Optional[Decimal] = field(
+    conversion_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "ConversionRate",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    original_ticket_total: Optional[str] = field(
+    original_ticket_total: None | str = field(
         default=None,
         metadata={
             "name": "OriginalTicketTotal",
             "type": "Attribute",
         }
     )
-    forfeit_amount: Optional[str] = field(
+    forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
@@ -7636,7 +7636,7 @@ class AirRefundQuoteReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -7647,7 +7647,7 @@ class AirRefundQuoteReq(BaseReq):
             "max_length": 13,
         }
     )
-    tcrnumber: List[str] = field(
+    tcrnumber: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TCRNumber",
@@ -7655,14 +7655,14 @@ class AirRefundQuoteReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_refund_modifiers: Optional[AirRefundModifiers] = field(
+    air_refund_modifiers: None | AirRefundModifiers = field(
         default=None,
         metadata={
             "name": "AirRefundModifiers",
             "type": "Element",
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -7671,7 +7671,7 @@ class AirRefundQuoteReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    provider_reservation_info: List["AirRefundQuoteReq.ProviderReservationInfo"] = field(
+    provider_reservation_info: list[AirRefundQuoteReq.ProviderReservationInfo] = field(
         default_factory=list,
         metadata={
             "name": "ProviderReservationInfo",
@@ -7689,7 +7689,7 @@ class AirRefundQuoteReq(BaseReq):
 
     @dataclass
     class ProviderReservationInfo:
-        provider_code: Optional[str] = field(
+        provider_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderCode",
@@ -7699,7 +7699,7 @@ class AirRefundQuoteReq(BaseReq):
                 "max_length": 5,
             }
         )
-        provider_locator_code: Optional[str] = field(
+        provider_locator_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderLocatorCode",
@@ -7740,7 +7740,7 @@ class AirRetrieveDocumentReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -7749,7 +7749,7 @@ class AirRetrieveDocumentReq(BaseReq):
             "max_length": 8,
         }
     )
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -7760,7 +7760,7 @@ class AirRetrieveDocumentReq(BaseReq):
             "max_length": 13,
         }
     )
-    tcrnumber: List[str] = field(
+    tcrnumber: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TCRNumber",
@@ -7768,28 +7768,28 @@ class AirRetrieveDocumentReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    return_restrictions: Optional[bool] = field(
+    return_restrictions: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnRestrictions",
             "type": "Attribute",
         }
     )
-    return_pricing: Optional[bool] = field(
+    return_pricing: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnPricing",
             "type": "Attribute",
         }
     )
-    retrieve_mco: Optional[bool] = field(
+    retrieve_mco: None | bool = field(
         default=None,
         metadata={
             "name": "RetrieveMCO",
             "type": "Attribute",
         }
     )
-    universal_record_locator_code: Optional[str] = field(
+    universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
@@ -7798,7 +7798,7 @@ class AirRetrieveDocumentReq(BaseReq):
             "max_length": 8,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -7807,7 +7807,7 @@ class AirRetrieveDocumentReq(BaseReq):
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -7849,7 +7849,7 @@ class AirSegmentDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    passenger_details_ref: List[PassengerDetailsRef] = field(
+    passenger_details_ref: list[PassengerDetailsRef] = field(
         default_factory=list,
         metadata={
             "name": "PassengerDetailsRef",
@@ -7858,7 +7858,7 @@ class AirSegmentDetails:
             "max_occurs": 999,
         }
     )
-    brand_id: List[BrandId] = field(
+    brand_id: list[BrandId] = field(
         default_factory=list,
         metadata={
             "name": "BrandID",
@@ -7866,14 +7866,14 @@ class AirSegmentDetails:
             "max_occurs": 99,
         }
     )
-    booking_code_list: Optional[str] = field(
+    booking_code_list: None | str = field(
         default=None,
         metadata={
             "name": "BookingCodeList",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -7881,7 +7881,7 @@ class AirSegmentDetails:
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -7891,7 +7891,7 @@ class AirSegmentDetails:
             "max_length": 5,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -7900,7 +7900,7 @@ class AirSegmentDetails:
             "length": 2,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -7910,7 +7910,7 @@ class AirSegmentDetails:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -7920,7 +7920,7 @@ class AirSegmentDetails:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[XmlDateTime] = field(
+    departure_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -7928,7 +7928,7 @@ class AirSegmentDetails:
             "required": True,
         }
     )
-    arrival_time: Optional[XmlDateTime] = field(
+    arrival_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
@@ -7936,7 +7936,7 @@ class AirSegmentDetails:
             "required": True,
         }
     )
-    equipment: Optional[str] = field(
+    equipment: None | str = field(
         default=None,
         metadata={
             "name": "Equipment",
@@ -7944,7 +7944,7 @@ class AirSegmentDetails:
             "length": 3,
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -7953,14 +7953,14 @@ class AirSegmentDetails:
             "max_length": 2,
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    operating_carrier: Optional[str] = field(
+    operating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "OperatingCarrier",
@@ -7968,7 +7968,7 @@ class AirSegmentDetails:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -8006,28 +8006,28 @@ class AirSegmentPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    permitted_booking_codes: Optional["AirSegmentPricingModifiers.PermittedBookingCodes"] = field(
+    permitted_booking_codes: None | AirSegmentPricingModifiers.PermittedBookingCodes = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",
             "type": "Element",
         }
     )
-    air_segment_ref: Optional[str] = field(
+    air_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -8055,28 +8055,28 @@ class AirSegmentPricingModifiers:
             "type": "Attribute",
         }
     )
-    fare_basis_code: Optional[str] = field(
+    fare_basis_code: None | str = field(
         default=None,
         metadata={
             "name": "FareBasisCode",
             "type": "Attribute",
         }
     )
-    fare_break: Optional[TypeFareBreak] = field(
+    fare_break: None | TypeFareBreak = field(
         default=None,
         metadata={
             "name": "FareBreak",
             "type": "Attribute",
         }
     )
-    connection_indicator: Optional[TypeConnectionIndicator] = field(
+    connection_indicator: None | TypeConnectionIndicator = field(
         default=None,
         metadata={
             "name": "ConnectionIndicator",
             "type": "Attribute",
         }
     )
-    brand_tier: Optional[str] = field(
+    brand_tier: None | str = field(
         default=None,
         metadata={
             "name": "BrandTier",
@@ -8088,7 +8088,7 @@ class AirSegmentPricingModifiers:
 
     @dataclass
     class PermittedBookingCodes:
-        booking_code: List[BookingCode] = field(
+        booking_code: list[BookingCode] = field(
             default_factory=list,
             metadata={
                 "name": "BookingCode",
@@ -8140,14 +8140,14 @@ class AirTicketingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    document_modifiers: Optional[DocumentModifiers] = field(
+    document_modifiers: None | DocumentModifiers = field(
         default=None,
         metadata={
             "name": "DocumentModifiers",
             "type": "Element",
         }
     )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -8155,14 +8155,14 @@ class AirTicketingModifiers:
             "max_occurs": 999,
         }
     )
-    tour_code: Optional[TourCode] = field(
+    tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
         }
     )
-    ticket_endorsement: List[TicketEndorsement] = field(
+    ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
         metadata={
             "name": "TicketEndorsement",
@@ -8170,7 +8170,7 @@ class AirTicketingModifiers:
             "max_occurs": 3,
         }
     )
-    commission: Optional[Commission] = field(
+    commission: None | Commission = field(
         default=None,
         metadata={
             "name": "Commission",
@@ -8178,7 +8178,7 @@ class AirTicketingModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -8187,7 +8187,7 @@ class AirTicketingModifiers:
             "max_occurs": 999,
         }
     )
-    credit_card_auth: List[CreditCardAuth] = field(
+    credit_card_auth: list[CreditCardAuth] = field(
         default_factory=list,
         metadata={
             "name": "CreditCardAuth",
@@ -8196,7 +8196,7 @@ class AirTicketingModifiers:
             "max_occurs": 999,
         }
     )
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -8205,7 +8205,7 @@ class AirTicketingModifiers:
             "max_occurs": 999,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -8253,7 +8253,7 @@ class AlternateLocationDistance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    distance: Optional[Distance] = field(
+    distance: None | Distance = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -8262,7 +8262,7 @@ class AlternateLocationDistance:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -8270,7 +8270,7 @@ class AlternateLocationDistance:
             "required": True,
         }
     )
-    search_location: Optional[str] = field(
+    search_location: None | str = field(
         default=None,
         metadata={
             "name": "SearchLocation",
@@ -8280,7 +8280,7 @@ class AlternateLocationDistance:
             "white_space": "collapse",
         }
     )
-    alternate_location: Optional[str] = field(
+    alternate_location: None | str = field(
         default=None,
         metadata={
             "name": "AlternateLocation",
@@ -8338,7 +8338,7 @@ class AutoSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
@@ -8352,7 +8352,7 @@ class AutoSeatAssignment:
             "type": "Attribute",
         }
     )
-    seat_type: Optional[TypeReqSeat] = field(
+    seat_type: None | TypeReqSeat = field(
         default=None,
         metadata={
             "name": "SeatType",
@@ -8367,7 +8367,7 @@ class AutoSeatAssignment:
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -8390,7 +8390,7 @@ class AvailableDiscount:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    loyalty_program: List[LoyaltyProgram] = field(
+    loyalty_program: list[LoyaltyProgram] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyProgram",
@@ -8399,14 +8399,14 @@ class AvailableDiscount:
             "max_occurs": 999,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    percent: Optional[str] = field(
+    percent: None | str = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -8414,14 +8414,14 @@ class AvailableDiscount:
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
         }
     )
-    discount_qualifier: Optional[str] = field(
+    discount_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "DiscountQualifier",
@@ -8445,7 +8445,7 @@ class AvailableSsr:
         name = "AvailableSSR"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ssr: List[Ssr] = field(
+    ssr: list[Ssr] = field(
         default_factory=list,
         metadata={
             "name": "SSR",
@@ -8454,7 +8454,7 @@ class AvailableSsr:
             "max_occurs": 999,
         }
     )
-    ssrrules: List[ServiceRuleType] = field(
+    ssrrules: list[ServiceRuleType] = field(
         default_factory=list,
         metadata={
             "name": "SSRRules",
@@ -8462,7 +8462,7 @@ class AvailableSsr:
             "max_occurs": 999,
         }
     )
-    industry_standard_ssr: List[IndustryStandardSsr] = field(
+    industry_standard_ssr: list[IndustryStandardSsr] = field(
         default_factory=list,
         metadata={
             "name": "IndustryStandardSSR",
@@ -8481,7 +8481,7 @@ class BackOfficeHandOff:
 
     Parameters
     ----------
-    type: The type of back office document,valid options are
+    type_value: The type of back office document,valid options are
         Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
     location: This is required for NonAccountingRemote,Dual and Global
         type back office.
@@ -8491,7 +8491,7 @@ class BackOfficeHandOff:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[TypeBackOffice] = field(
+    type_value: None | TypeBackOffice = field(
         default=None,
         metadata={
             "name": "Type",
@@ -8499,14 +8499,14 @@ class BackOfficeHandOff:
             "required": True,
         }
     )
-    location: Optional[str] = field(
+    location: None | str = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Attribute",
         }
     )
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: None | str = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -8533,7 +8533,7 @@ class BaseBaggageAllowanceInfo:
     destination:
     carrier:
     """
-    urlinfo: List[Urlinfo] = field(
+    urlinfo: list[Urlinfo] = field(
         default_factory=list,
         metadata={
             "name": "URLInfo",
@@ -8542,7 +8542,7 @@ class BaseBaggageAllowanceInfo:
             "max_occurs": 999,
         }
     )
-    text_info: List[TextInfo] = field(
+    text_info: list[TextInfo] = field(
         default_factory=list,
         metadata={
             "name": "TextInfo",
@@ -8551,7 +8551,7 @@ class BaseBaggageAllowanceInfo:
             "max_occurs": 999,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -8560,7 +8560,7 @@ class BaseBaggageAllowanceInfo:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -8569,7 +8569,7 @@ class BaseBaggageAllowanceInfo:
             "white_space": "collapse",
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -8597,7 +8597,7 @@ class BillingDetailItem:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    name: Optional[TypeBillingDetailsName] = field(
+    name: None | TypeBillingDetailsName = field(
         default=None,
         metadata={
             "name": "Name",
@@ -8605,7 +8605,7 @@ class BillingDetailItem:
             "required": True,
         }
     )
-    data_type: Optional[TypeBillingDetailsDataType] = field(
+    data_type: None | TypeBillingDetailsDataType = field(
         default=None,
         metadata={
             "name": "DataType",
@@ -8613,7 +8613,7 @@ class BillingDetailItem:
             "required": True,
         }
     )
-    min_length: Optional[str] = field(
+    min_length: None | str = field(
         default=None,
         metadata={
             "name": "MinLength",
@@ -8621,7 +8621,7 @@ class BillingDetailItem:
             "required": True,
         }
     )
-    max_length: Optional[str] = field(
+    max_length: None | str = field(
         default=None,
         metadata={
             "name": "MaxLength",
@@ -8629,7 +8629,7 @@ class BillingDetailItem:
             "required": True,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -8662,7 +8662,7 @@ class BundledService:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -8670,42 +8670,42 @@ class BundledService:
             "length": 2,
         }
     )
-    carrier_sub_code: Optional[bool] = field(
+    carrier_sub_code: None | bool = field(
         default=None,
         metadata={
             "name": "CarrierSubCode",
             "type": "Attribute",
         }
     )
-    service_type: Optional[str] = field(
+    service_type: None | str = field(
         default=None,
         metadata={
             "name": "ServiceType",
             "type": "Attribute",
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
         }
     )
-    booking: Optional[TypeBooking] = field(
+    booking: None | TypeBooking = field(
         default=None,
         metadata={
             "name": "Booking",
             "type": "Attribute",
         }
     )
-    occurrence: Optional[int] = field(
+    occurrence: None | int = field(
         default=None,
         metadata={
             "name": "Occurrence",
@@ -8722,7 +8722,7 @@ class Chgtype:
     class Meta:
         name = "CHGType"
 
-    pen_fee: List[PenFeeType] = field(
+    pen_fee: list[PenFeeType] = field(
         default_factory=list,
         metadata={
             "name": "PenFee",
@@ -8751,7 +8751,7 @@ class Co2Emissions:
         name = "CO2Emissions"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    co2_emission: List[Co2Emission] = field(
+    co2_emission: list[Co2Emission] = field(
         default_factory=list,
         metadata={
             "name": "CO2Emission",
@@ -8759,14 +8759,14 @@ class Co2Emissions:
             "max_occurs": 99,
         }
     )
-    total_value: Optional[float] = field(
+    total_value: None | float = field(
         default=None,
         metadata={
             "name": "TotalValue",
             "type": "Attribute",
         }
     )
-    unit: Optional[str] = field(
+    unit: None | str = field(
         default=None,
         metadata={
             "name": "Unit",
@@ -8775,7 +8775,7 @@ class Co2Emissions:
             "max_length": 64,
         }
     )
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
@@ -8784,7 +8784,7 @@ class Co2Emissions:
             "max_length": 64,
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
@@ -8803,7 +8803,7 @@ class CategoryDetailsType:
     category_details: For each category Details of Structured Fare Rules
     value:
     """
-    category_details: List[ValueDetails] = field(
+    category_details: list[ValueDetails] = field(
         default_factory=list,
         metadata={
             "name": "CategoryDetails",
@@ -8812,7 +8812,7 @@ class CategoryDetailsType:
             "max_occurs": 99,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -8836,7 +8836,7 @@ class Characteristic:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -8844,21 +8844,21 @@ class Characteristic:
             "required": True,
         }
     )
-    position: Optional[TypePosition] = field(
+    position: None | TypePosition = field(
         default=None,
         metadata={
             "name": "Position",
             "type": "Attribute",
         }
     )
-    row_location: Optional[TypeRowLocation] = field(
+    row_location: None | TypeRowLocation = field(
         default=None,
         metadata={
             "name": "RowLocation",
             "type": "Attribute",
         }
     )
-    padiscode: Optional[str] = field(
+    padiscode: None | str = field(
         default=None,
         metadata={
             "name": "PADISCode",
@@ -8877,7 +8877,7 @@ class ChargesRules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    voluntary_changes: List["ChargesRules.VoluntaryChanges"] = field(
+    voluntary_changes: list[ChargesRules.VoluntaryChanges] = field(
         default_factory=list,
         metadata={
             "name": "VoluntaryChanges",
@@ -8885,7 +8885,7 @@ class ChargesRules:
             "max_occurs": 999,
         }
     )
-    voluntary_refunds: List["ChargesRules.VoluntaryRefunds"] = field(
+    voluntary_refunds: list[ChargesRules.VoluntaryRefunds] = field(
         default_factory=list,
         metadata={
             "name": "VoluntaryRefunds",
@@ -8896,14 +8896,14 @@ class ChargesRules:
 
     @dataclass
     class VoluntaryChanges:
-        penalty: Optional[Penalty] = field(
+        penalty: None | Penalty = field(
             default=None,
             metadata={
                 "name": "Penalty",
                 "type": "Element",
             }
         )
-        vol_change_ind: Optional[bool] = field(
+        vol_change_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "VolChangeInd",
@@ -8913,14 +8913,14 @@ class ChargesRules:
 
     @dataclass
     class VoluntaryRefunds:
-        penalty: Optional[Penalty] = field(
+        penalty: None | Penalty = field(
             default=None,
             metadata={
                 "name": "Penalty",
                 "type": "Element",
             }
         )
-        vol_change_ind: Optional[bool] = field(
+        vol_change_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "VolChangeInd",
@@ -8944,7 +8944,7 @@ class ConjunctedTicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -8952,7 +8952,7 @@ class ConjunctedTicketInfo:
             "required": True,
         }
     )
-    iatanumber: Optional[str] = field(
+    iatanumber: None | str = field(
         default=None,
         metadata={
             "name": "IATANumber",
@@ -8960,14 +8960,14 @@ class ConjunctedTicketInfo:
             "max_length": 8,
         }
     )
-    ticket_issue_date: Optional[XmlDateTime] = field(
+    ticket_issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
             "type": "Attribute",
         }
     )
-    ticketing_agent_sign_on: Optional[str] = field(
+    ticketing_agent_sign_on: None | str = field(
         default=None,
         metadata={
             "name": "TicketingAgentSignOn",
@@ -8975,7 +8975,7 @@ class ConjunctedTicketInfo:
             "max_length": 8,
         }
     )
-    country_code: Optional[str] = field(
+    country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
@@ -8983,7 +8983,7 @@ class ConjunctedTicketInfo:
             "length": 2,
         }
     )
-    status: Optional[TypeTicketStatus] = field(
+    status: None | TypeTicketStatus = field(
         default=None,
         metadata={
             "name": "Status",
@@ -9050,7 +9050,7 @@ class Coupon:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_designator: List[TicketDesignator] = field(
+    ticket_designator: list[TicketDesignator] = field(
         default_factory=list,
         metadata={
             "name": "TicketDesignator",
@@ -9058,21 +9058,21 @@ class Coupon:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    coupon_number: Optional[int] = field(
+    coupon_number: None | int = field(
         default=None,
         metadata={
             "name": "CouponNumber",
             "type": "Attribute",
         }
     )
-    operating_carrier: Optional[str] = field(
+    operating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "OperatingCarrier",
@@ -9080,7 +9080,7 @@ class Coupon:
             "length": 2,
         }
     )
-    operating_flight_number: Optional[str] = field(
+    operating_flight_number: None | str = field(
         default=None,
         metadata={
             "name": "OperatingFlightNumber",
@@ -9088,7 +9088,7 @@ class Coupon:
             "max_length": 5,
         }
     )
-    marketing_carrier: Optional[str] = field(
+    marketing_carrier: None | str = field(
         default=None,
         metadata={
             "name": "MarketingCarrier",
@@ -9096,7 +9096,7 @@ class Coupon:
             "length": 2,
         }
     )
-    marketing_flight_number: Optional[str] = field(
+    marketing_flight_number: None | str = field(
         default=None,
         metadata={
             "name": "MarketingFlightNumber",
@@ -9104,7 +9104,7 @@ class Coupon:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -9114,7 +9114,7 @@ class Coupon:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -9124,21 +9124,21 @@ class Coupon:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    stopover_code: Optional[bool] = field(
+    stopover_code: None | bool = field(
         default=None,
         metadata={
             "name": "StopoverCode",
@@ -9146,7 +9146,7 @@ class Coupon:
             "required": True,
         }
     )
-    booking_class: Optional[str] = field(
+    booking_class: None | str = field(
         default=None,
         metadata={
             "name": "BookingClass",
@@ -9155,7 +9155,7 @@ class Coupon:
             "max_length": 2,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -9163,21 +9163,21 @@ class Coupon:
             "required": True,
         }
     )
-    not_valid_before: Optional[XmlDate] = field(
+    not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[XmlDate] = field(
+    not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -9186,28 +9186,28 @@ class Coupon:
             "max_length": 1,
         }
     )
-    segment_group: Optional[int] = field(
+    segment_group: None | int = field(
         default=None,
         metadata={
             "name": "SegmentGroup",
             "type": "Attribute",
         }
     )
-    marriage_group: Optional[int] = field(
+    marriage_group: None | int = field(
         default=None,
         metadata={
             "name": "MarriageGroup",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -9226,7 +9226,7 @@ class DestinationPurposeCode:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    destination: Optional[TypeDestinationCode] = field(
+    destination: None | TypeDestinationCode = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -9234,7 +9234,7 @@ class DestinationPurposeCode:
             "required": True,
         }
     )
-    purpose: Optional[TypePurposeCode] = field(
+    purpose: None | TypePurposeCode = field(
         default=None,
         metadata={
             "name": "Purpose",
@@ -9251,14 +9251,15 @@ class Dimension(TypeUnitOfMeasure):
 
     Parameters
     ----------
-    type: Type denotes Length,Height,Width of a baggage.
+    type_value: Type denotes Length,Height,Width of a baggage.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -9304,7 +9305,7 @@ class Emd:
         name = "EMD"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fulfillment_type: Optional[int] = field(
+    fulfillment_type: None | int = field(
         default=None,
         metadata={
             "name": "FulfillmentType",
@@ -9313,49 +9314,49 @@ class Emd:
             "max_inclusive": 5,
         }
     )
-    fulfillment_type_description: Optional[str] = field(
+    fulfillment_type_description: None | str = field(
         default=None,
         metadata={
             "name": "FulfillmentTypeDescription",
             "type": "Attribute",
         }
     )
-    associated_item: Optional[str] = field(
+    associated_item: None | str = field(
         default=None,
         metadata={
             "name": "AssociatedItem",
             "type": "Attribute",
         }
     )
-    availability_charge_indicator: Optional[EmdAvailabilityChargeIndicator] = field(
+    availability_charge_indicator: None | EmdAvailabilityChargeIndicator = field(
         default=None,
         metadata={
             "name": "AvailabilityChargeIndicator",
             "type": "Attribute",
         }
     )
-    refund_reissue_indicator: Optional[EmdRefundReissueIndicator] = field(
+    refund_reissue_indicator: None | EmdRefundReissueIndicator = field(
         default=None,
         metadata={
             "name": "RefundReissueIndicator",
             "type": "Attribute",
         }
     )
-    commissionable: Optional[bool] = field(
+    commissionable: None | bool = field(
         default=None,
         metadata={
             "name": "Commissionable",
             "type": "Attribute",
         }
     )
-    mileage_indicator: Optional[bool] = field(
+    mileage_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "MileageIndicator",
             "type": "Attribute",
         }
     )
-    location: Optional[str] = field(
+    location: None | str = field(
         default=None,
         metadata={
             "name": "Location",
@@ -9364,28 +9365,28 @@ class Emd:
             "white_space": "collapse",
         }
     )
-    date: Optional[XmlDateTime] = field(
+    date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Date",
             "type": "Attribute",
         }
     )
-    booking: Optional[TypeBooking] = field(
+    booking: None | TypeBooking = field(
         default=None,
         metadata={
             "name": "Booking",
             "type": "Attribute",
         }
     )
-    display_category: Optional[TypeDisplayCategory] = field(
+    display_category: None | TypeDisplayCategory = field(
         default=None,
         metadata={
             "name": "DisplayCategory",
             "type": "Attribute",
         }
     )
-    reusable: Optional[bool] = field(
+    reusable: None | bool = field(
         default=None,
         metadata={
             "name": "Reusable",
@@ -9402,7 +9403,7 @@ class Emdcommission:
 
     Parameters
     ----------
-    type: Type of the commission applied.One of Amount/Percentage
+    type_value: Type of the commission applied.One of Amount/Percentage
     value: Value of the commission applied for EMD issuance.Could
         represent amount or percentage depending on the type
     currency_code: Currency of the commission amount applied.Applicable
@@ -9412,7 +9413,7 @@ class Emdcommission:
         name = "EMDCommission"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[TypeAdjustmentType] = field(
+    type_value: None | TypeAdjustmentType = field(
         default=None,
         metadata={
             "name": "Type",
@@ -9420,7 +9421,7 @@ class Emdcommission:
             "required": True,
         }
     )
-    value: Optional[Decimal] = field(
+    value: None | Decimal = field(
         default=None,
         metadata={
             "name": "Value",
@@ -9428,7 +9429,7 @@ class Emdcommission:
             "required": True,
         }
     )
-    currency_code: Optional[str] = field(
+    currency_code: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyCode",
@@ -9481,7 +9482,7 @@ class Emdcoupon:
         name = "EMDCoupon"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    number: Optional[int] = field(
+    number: None | int = field(
         default=None,
         metadata={
             "name": "Number",
@@ -9489,7 +9490,7 @@ class Emdcoupon:
             "required": True,
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -9497,21 +9498,21 @@ class Emdcoupon:
             "required": True,
         }
     )
-    svc_description: Optional[str] = field(
+    svc_description: None | str = field(
         default=None,
         metadata={
             "name": "SvcDescription",
             "type": "Attribute",
         }
     )
-    consumed_at_issuance_ind: Optional[bool] = field(
+    consumed_at_issuance_ind: None | bool = field(
         default=None,
         metadata={
             "name": "ConsumedAtIssuanceInd",
             "type": "Attribute",
         }
     )
-    rfic: Optional[str] = field(
+    rfic: None | str = field(
         default=None,
         metadata={
             "name": "RFIC",
@@ -9520,14 +9521,14 @@ class Emdcoupon:
             "length": 1,
         }
     )
-    rfisc: Optional[str] = field(
+    rfisc: None | str = field(
         default=None,
         metadata={
             "name": "RFISC",
             "type": "Attribute",
         }
     )
-    rfidescription: Optional[str] = field(
+    rfidescription: None | str = field(
         default=None,
         metadata={
             "name": "RFIDescription",
@@ -9536,7 +9537,7 @@ class Emdcoupon:
             "max_length": 86,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -9545,7 +9546,7 @@ class Emdcoupon:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -9554,7 +9555,7 @@ class Emdcoupon:
             "white_space": "collapse",
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -9562,7 +9563,7 @@ class Emdcoupon:
             "max_length": 5,
         }
     )
-    present_to: Optional[str] = field(
+    present_to: None | str = field(
         default=None,
         metadata={
             "name": "PresentTo",
@@ -9571,7 +9572,7 @@ class Emdcoupon:
             "max_length": 71,
         }
     )
-    present_at: Optional[str] = field(
+    present_at: None | str = field(
         default=None,
         metadata={
             "name": "PresentAt",
@@ -9580,14 +9581,14 @@ class Emdcoupon:
             "max_length": 71,
         }
     )
-    non_refundable_ind: Optional[bool] = field(
+    non_refundable_ind: None | bool = field(
         default=None,
         metadata={
             "name": "NonRefundableInd",
             "type": "Attribute",
         }
     )
-    marketing_carrier: Optional[str] = field(
+    marketing_carrier: None | str = field(
         default=None,
         metadata={
             "name": "MarketingCarrier",
@@ -9595,21 +9596,21 @@ class Emdcoupon:
             "length": 2,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -9635,14 +9636,14 @@ class EmdretrieveReq(BaseReq):
         name = "EMDRetrieveReq"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    list_retrieve: Optional["EmdretrieveReq.ListRetrieve"] = field(
+    list_retrieve: None | EmdretrieveReq.ListRetrieve = field(
         default=None,
         metadata={
             "name": "ListRetrieve",
             "type": "Element",
         }
     )
-    detail_retrieve: Optional["EmdretrieveReq.DetailRetrieve"] = field(
+    detail_retrieve: None | EmdretrieveReq.DetailRetrieve = field(
         default=None,
         metadata={
             "name": "DetailRetrieve",
@@ -9658,7 +9659,7 @@ class EmdretrieveReq(BaseReq):
         provider_reservation_detail: Provider reservation details to be
             provided to fetch list of EMDs associated with it.
         """
-        provider_reservation_detail: Optional[ProviderReservationDetail] = field(
+        provider_reservation_detail: None | ProviderReservationDetail = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDetail",
@@ -9683,7 +9684,7 @@ class EmdretrieveReq(BaseReq):
             synchronization of that EMD is performed considering the
             same to be associated with the mentioned PNR.
         """
-        provider_reservation_detail: Optional[ProviderReservationDetail] = field(
+        provider_reservation_detail: None | ProviderReservationDetail = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDetail",
@@ -9691,7 +9692,7 @@ class EmdretrieveReq(BaseReq):
                 "namespace": "http://www.travelport.com/schema/common_v48_0",
             }
         )
-        emdnumber: Optional[str] = field(
+        emdnumber: None | str = field(
             default=None,
             metadata={
                 "name": "EMDNumber",
@@ -9711,7 +9712,7 @@ class EmbargoList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    embargo: List[Embargo] = field(
+    embargo: list[Embargo] = field(
         default_factory=list,
         metadata={
             "name": "Embargo",
@@ -9736,7 +9737,7 @@ class ExchangePenaltyInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    penalty_information: List[PenaltyInformation] = field(
+    penalty_information: list[PenaltyInformation] = field(
         default_factory=list,
         metadata={
             "name": "PenaltyInformation",
@@ -9744,7 +9745,7 @@ class ExchangePenaltyInfo:
             "max_occurs": 999,
         }
     )
-    ptc: Optional[str] = field(
+    ptc: None | str = field(
         default=None,
         metadata={
             "name": "PTC",
@@ -9753,14 +9754,14 @@ class ExchangePenaltyInfo:
             "max_length": 5,
         }
     )
-    minimum_change_fee: Optional[str] = field(
+    minimum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MinimumChangeFee",
             "type": "Attribute",
         }
     )
-    maximum_change_fee: Optional[str] = field(
+    maximum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MaximumChangeFee",
@@ -9784,14 +9785,14 @@ class FareDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_ticket_designator: Optional[FareTicketDesignator] = field(
+    fare_ticket_designator: None | FareTicketDesignator = field(
         default=None,
         metadata={
             "name": "FareTicketDesignator",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -9799,7 +9800,7 @@ class FareDetails:
             "required": True,
         }
     )
-    passenger_detail_ref: Optional[str] = field(
+    passenger_detail_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassengerDetailRef",
@@ -9807,7 +9808,7 @@ class FareDetails:
             "required": True,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -9831,14 +9832,14 @@ class FareGuaranteeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    guarantee_date: Optional[XmlDate] = field(
+    guarantee_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "GuaranteeDate",
             "type": "Attribute",
         }
     )
-    guarantee_type: Optional[TypeFareGuarantee] = field(
+    guarantee_type: None | TypeFareGuarantee = field(
         default=None,
         metadata={
             "name": "GuaranteeType",
@@ -9878,7 +9879,7 @@ class FareNote:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -9886,35 +9887,35 @@ class FareNote:
             "required": True,
         }
     )
-    precedence: Optional[int] = field(
+    precedence: None | int = field(
         default=None,
         metadata={
             "name": "Precedence",
             "type": "Attribute",
         }
     )
-    note_name: Optional[str] = field(
+    note_name: None | str = field(
         default=None,
         metadata={
             "name": "NoteName",
             "type": "Attribute",
         }
     )
-    fare_info_message_ref: Optional[str] = field(
+    fare_info_message_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoMessageRef",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -9928,7 +9929,7 @@ class FareRemark:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    text: List[str] = field(
+    text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -9936,7 +9937,7 @@ class FareRemark:
             "max_occurs": 999,
         }
     )
-    url: List[Url] = field(
+    url: list[Url] = field(
         default_factory=list,
         metadata={
             "name": "URL",
@@ -9944,14 +9945,14 @@ class FareRemark:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -9981,28 +9982,28 @@ class FareRestrictionDate:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    direction: Optional[TypeFareDirectionality] = field(
+    direction: None | TypeFareDirectionality = field(
         default=None,
         metadata={
             "name": "Direction",
             "type": "Attribute",
         }
     )
-    start_date: Optional[str] = field(
+    start_date: None | str = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
         }
     )
-    end_date: Optional[str] = field(
+    end_date: None | str = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
         }
     )
-    end_date_indicator: Optional[FareRestrictionDateEndDateIndicator] = field(
+    end_date_indicator: None | FareRestrictionDateEndDateIndicator = field(
         default=None,
         metadata={
             "name": "EndDateIndicator",
@@ -10019,63 +10020,63 @@ class FareRestrictionDaysOfWeek:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    direction: Optional[TypeFareDirectionality] = field(
+    direction: None | TypeFareDirectionality = field(
         default=None,
         metadata={
             "name": "Direction",
             "type": "Attribute",
         }
     )
-    trip_type: Optional[TypeFareTripType] = field(
+    trip_type: None | TypeFareTripType = field(
         default=None,
         metadata={
             "name": "TripType",
             "type": "Attribute",
         }
     )
-    monday: Optional[bool] = field(
+    monday: None | bool = field(
         default=None,
         metadata={
             "name": "Monday",
             "type": "Attribute",
         }
     )
-    tuesday: Optional[bool] = field(
+    tuesday: None | bool = field(
         default=None,
         metadata={
             "name": "Tuesday",
             "type": "Attribute",
         }
     )
-    wednesday: Optional[bool] = field(
+    wednesday: None | bool = field(
         default=None,
         metadata={
             "name": "Wednesday",
             "type": "Attribute",
         }
     )
-    thursday: Optional[bool] = field(
+    thursday: None | bool = field(
         default=None,
         metadata={
             "name": "Thursday",
             "type": "Attribute",
         }
     )
-    friday: Optional[bool] = field(
+    friday: None | bool = field(
         default=None,
         metadata={
             "name": "Friday",
             "type": "Attribute",
         }
     )
-    saturday: Optional[bool] = field(
+    saturday: None | bool = field(
         default=None,
         metadata={
             "name": "Saturday",
             "type": "Attribute",
         }
     )
-    sunday: Optional[bool] = field(
+    sunday: None | bool = field(
         default=None,
         metadata={
             "name": "Sunday",
@@ -10093,7 +10094,7 @@ class FareRuleLookup:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    account_code: Optional[AccountCode] = field(
+    account_code: None | AccountCode = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -10101,7 +10102,7 @@ class FareRuleLookup:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    point_of_sale: Optional[PointOfSale] = field(
+    point_of_sale: None | PointOfSale = field(
         default=None,
         metadata={
             "name": "PointOfSale",
@@ -10109,7 +10110,7 @@ class FareRuleLookup:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -10119,7 +10120,7 @@ class FareRuleLookup:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -10129,7 +10130,7 @@ class FareRuleLookup:
             "white_space": "collapse",
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -10138,7 +10139,7 @@ class FareRuleLookup:
             "length": 2,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -10146,7 +10147,7 @@ class FareRuleLookup:
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -10156,14 +10157,14 @@ class FareRuleLookup:
             "max_length": 5,
         }
     )
-    departure_date: Optional[XmlDate] = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    ticketing_date: Optional[XmlDate] = field(
+    ticketing_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketingDate",
@@ -10180,7 +10181,7 @@ class FareRuleShort:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_rule_name_value: List[FareRuleNameValue] = field(
+    fare_rule_name_value: list[FareRuleNameValue] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleNameValue",
@@ -10189,7 +10190,7 @@ class FareRuleShort:
             "max_occurs": 999,
         }
     )
-    category: Optional[int] = field(
+    category: None | int = field(
         default=None,
         metadata={
             "name": "Category",
@@ -10197,7 +10198,7 @@ class FareRuleShort:
             "required": True,
         }
     )
-    table_number: Optional[str] = field(
+    table_number: None | str = field(
         default=None,
         metadata={
             "name": "TableNumber",
@@ -10219,14 +10220,14 @@ class FareStatus:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_status_failure_info: Optional[FareStatusFailureInfo] = field(
+    fare_status_failure_info: None | FareStatusFailureInfo = field(
         default=None,
         metadata={
             "name": "FareStatusFailureInfo",
             "type": "Element",
         }
     )
-    code: Optional[TypeFareStatusCode] = field(
+    code: None | TypeFareStatusCode = field(
         default=None,
         metadata={
             "name": "Code",
@@ -10244,7 +10245,7 @@ class FareSurcharge:
     Parameters
     ----------
     key:
-    type:
+    type_value:
     amount:
     segment_ref:
     coupon_ref: The coupon to which that surcharge is relative (if
@@ -10260,14 +10261,14 @@ class FareSurcharge:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -10275,7 +10276,7 @@ class FareSurcharge:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -10283,28 +10284,28 @@ class FareSurcharge:
             "required": True,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
         }
     )
-    coupon_ref: Optional[str] = field(
+    coupon_ref: None | str = field(
         default=None,
         metadata={
             "name": "CouponRef",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -10336,7 +10337,7 @@ class FlexExploreModifiers:
     ----------
     destination: List of specific destinations for performing flex
         explore. Applicable only with flex explore type - Destination
-    type: Type of flex explore to be performed
+    type_value: Type of flex explore to be performed
     radius: Radius around the destination of actual itinerary in which
         the search would be performed. Supported only with types -
         DistanceInMiles and DistanceInKilometers
@@ -10347,7 +10348,7 @@ class FlexExploreModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    destination: List[str] = field(
+    destination: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Destination",
@@ -10357,7 +10358,7 @@ class FlexExploreModifiers:
             "white_space": "collapse",
         }
     )
-    type: Optional[FlexExploreModifiersType] = field(
+    type_value: None | FlexExploreModifiersType = field(
         default=None,
         metadata={
             "name": "Type",
@@ -10365,14 +10366,14 @@ class FlexExploreModifiers:
             "required": True,
         }
     )
-    radius: Optional[int] = field(
+    radius: None | int = field(
         default=None,
         metadata={
             "name": "Radius",
             "type": "Attribute",
         }
     )
-    group_name: Optional[str] = field(
+    group_name: None | str = field(
         default=None,
         metadata={
             "name": "GroupName",
@@ -10394,7 +10395,7 @@ class FlightInformationReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_info_criteria: List[FlightInfoCriteria] = field(
+    flight_info_criteria: list[FlightInfoCriteria] = field(
         default_factory=list,
         metadata={
             "name": "FlightInfoCriteria",
@@ -10423,14 +10424,14 @@ class GeneralTimeTable:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    days_of_operation: Optional[TypeDaysOfOperation] = field(
+    days_of_operation: None | TypeDaysOfOperation = field(
         default=None,
         metadata={
             "name": "DaysOfOperation",
             "type": "Element",
         }
     )
-    flight_origin: Optional[TypeLocation] = field(
+    flight_origin: None | TypeLocation = field(
         default=None,
         metadata={
             "name": "FlightOrigin",
@@ -10438,7 +10439,7 @@ class GeneralTimeTable:
             "required": True,
         }
     )
-    flight_destination: Optional[TypeLocation] = field(
+    flight_destination: None | TypeLocation = field(
         default=None,
         metadata={
             "name": "FlightDestination",
@@ -10446,14 +10447,14 @@ class GeneralTimeTable:
             "required": True,
         }
     )
-    carrier_list: Optional[CarrierList] = field(
+    carrier_list: None | CarrierList = field(
         default=None,
         metadata={
             "name": "CarrierList",
             "type": "Element",
         }
     )
-    start_date: Optional[str] = field(
+    start_date: None | str = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -10461,28 +10462,28 @@ class GeneralTimeTable:
             "required": True,
         }
     )
-    end_date: Optional[str] = field(
+    end_date: None | str = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
         }
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "StartTime",
             "type": "Attribute",
         }
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EndTime",
             "type": "Attribute",
         }
     )
-    include_connection: Optional[bool] = field(
+    include_connection: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeConnection",
@@ -10496,7 +10497,7 @@ class GroupedOptionInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    grouped_option: List[GroupedOption] = field(
+    grouped_option: list[GroupedOption] = field(
         default_factory=list,
         metadata={
             "name": "GroupedOption",
@@ -10514,7 +10515,7 @@ class HostTokenList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -10533,15 +10534,15 @@ class IncludeAddlBookingCodeInfo:
 
     Parameters
     ----------
-    type: The type defines that the booking code info is for primary or
-        secondary carrier.
+    type_value: The type defines that the booking code info is for
+        primary or secondary carrier.
     secondary_carrier: The secondary carrier code is required when type
         is secondary .
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[TypeCarrierCode] = field(
+    type_value: None | TypeCarrierCode = field(
         default=None,
         metadata={
             "name": "Type",
@@ -10549,7 +10550,7 @@ class IncludeAddlBookingCodeInfo:
             "required": True,
         }
     )
-    secondary_carrier: Optional[str] = field(
+    secondary_carrier: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryCarrier",
@@ -10567,7 +10568,7 @@ class InvoluntaryChange:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_endorsement: Optional[TicketEndorsement] = field(
+    ticket_endorsement: None | TicketEndorsement = field(
         default=None,
         metadata={
             "name": "TicketEndorsement",
@@ -10584,8 +10585,8 @@ class Itinerary:
 
     Parameters
     ----------
-    type: Specifies the type of itinenary option for ticket like Invoice
-        type or Pocket itinenary.
+    type_value: Specifies the type of itinenary option for ticket like
+        Invoice type or Pocket itinenary.
     option: Specifies the itinerary option like NoFare,NoAmount.
     separate_indicator: Set to true if one itinerary to be printed per
         passenger.
@@ -10593,21 +10594,21 @@ class Itinerary:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[TypeItinerary] = field(
+    type_value: None | TypeItinerary = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
         }
     )
-    option: Optional[TypeItineraryOption] = field(
+    option: None | TypeItineraryOption = field(
         default=None,
         metadata={
             "name": "Option",
             "type": "Attribute",
         }
     )
-    separate_indicator: Optional[bool] = field(
+    separate_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "SeparateIndicator",
@@ -10631,7 +10632,7 @@ class Journey:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -10639,7 +10640,7 @@ class Journey:
             "max_occurs": 999,
         }
     )
-    travel_time: Optional[XmlDuration] = field(
+    travel_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "TravelTime",
@@ -10656,7 +10657,7 @@ class LandCharges:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    tax: List[Tax] = field(
+    tax: list[Tax] = field(
         default_factory=list,
         metadata={
             "name": "Tax",
@@ -10664,35 +10665,35 @@ class LandCharges:
             "max_occurs": 3,
         }
     )
-    base: Optional[str] = field(
+    base: None | str = field(
         default=None,
         metadata={
             "name": "Base",
             "type": "Attribute",
         }
     )
-    total: Optional[str] = field(
+    total: None | str = field(
         default=None,
         metadata={
             "name": "Total",
             "type": "Attribute",
         }
     )
-    miscellaneous: Optional[str] = field(
+    miscellaneous: None | str = field(
         default=None,
         metadata={
             "name": "Miscellaneous",
             "type": "Attribute",
         }
     )
-    pre_paid: Optional[str] = field(
+    pre_paid: None | str = field(
         default=None,
         metadata={
             "name": "PrePaid",
             "type": "Attribute",
         }
     )
-    deposit: Optional[str] = field(
+    deposit: None | str = field(
         default=None,
         metadata={
             "name": "Deposit",
@@ -10718,7 +10719,7 @@ class Leg:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    leg_detail: List[LegDetail] = field(
+    leg_detail: list[LegDetail] = field(
         default_factory=list,
         metadata={
             "name": "LegDetail",
@@ -10726,7 +10727,7 @@ class Leg:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -10734,7 +10735,7 @@ class Leg:
             "required": True,
         }
     )
-    group: Optional[int] = field(
+    group: None | int = field(
         default=None,
         metadata={
             "name": "Group",
@@ -10742,7 +10743,7 @@ class Leg:
             "required": True,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -10753,7 +10754,7 @@ class Leg:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -10783,7 +10784,7 @@ class LegPrice:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    leg_detail: List[LegDetail] = field(
+    leg_detail: list[LegDetail] = field(
         default_factory=list,
         metadata={
             "name": "LegDetail",
@@ -10792,7 +10793,7 @@ class LegPrice:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -10800,7 +10801,7 @@ class LegPrice:
             "required": True,
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
@@ -10808,7 +10809,7 @@ class LegPrice:
             "required": True,
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
@@ -10840,7 +10841,7 @@ class ManualFareAdjustment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    applied_on: Optional[TypeAdjustmentTarget] = field(
+    applied_on: None | TypeAdjustmentTarget = field(
         default=None,
         metadata={
             "name": "AppliedOn",
@@ -10848,7 +10849,7 @@ class ManualFareAdjustment:
             "required": True,
         }
     )
-    adjustment_type: Optional[TypeAdjustmentType] = field(
+    adjustment_type: None | TypeAdjustmentType = field(
         default=None,
         metadata={
             "name": "AdjustmentType",
@@ -10856,7 +10857,7 @@ class ManualFareAdjustment:
             "required": True,
         }
     )
-    value: Optional[Decimal] = field(
+    value: None | Decimal = field(
         default=None,
         metadata={
             "name": "Value",
@@ -10864,14 +10865,14 @@ class ManualFareAdjustment:
             "required": True,
         }
     )
-    passenger_ref: Optional[str] = field(
+    passenger_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassengerRef",
             "type": "Attribute",
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignator",
@@ -10880,7 +10881,7 @@ class ManualFareAdjustment:
             "max_length": 20,
         }
     )
-    fare_type: Optional[str] = field(
+    fare_type: None | str = field(
         default=None,
         metadata={
             "name": "FareType",
@@ -10899,7 +10900,7 @@ class Meals:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    value: Optional[TypeMealService] = field(
+    value: None | TypeMealService = field(
         default=None,
         metadata={
             "required": True,
@@ -10918,7 +10919,7 @@ class MerchandisingPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    account_code: List[AccountCode] = field(
+    account_code: list[AccountCode] = field(
         default_factory=list,
         metadata={
             "name": "AccountCode",
@@ -10937,7 +10938,7 @@ class OptionalServiceModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    optional_service_modifier: List[OptionalServiceModifier] = field(
+    optional_service_modifier: list[OptionalServiceModifier] = field(
         default_factory=list,
         metadata={
             "name": "OptionalServiceModifier",
@@ -10971,7 +10972,7 @@ class OriginalItineraryDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    itinerary_type: Optional[TypeItineraryCode] = field(
+    itinerary_type: None | TypeItineraryCode = field(
         default=None,
         metadata={
             "name": "ItineraryType",
@@ -10985,7 +10986,7 @@ class OriginalItineraryDetails:
             "type": "Attribute",
         }
     )
-    ticketing_pcc: Optional[str] = field(
+    ticketing_pcc: None | str = field(
         default=None,
         metadata={
             "name": "TicketingPCC",
@@ -10994,7 +10995,7 @@ class OriginalItineraryDetails:
             "max_length": 10,
         }
     )
-    ticketing_iata: Optional[str] = field(
+    ticketing_iata: None | str = field(
         default=None,
         metadata={
             "name": "TicketingIATA",
@@ -11002,7 +11003,7 @@ class OriginalItineraryDetails:
             "max_length": 8,
         }
     )
-    ticketing_country: Optional[str] = field(
+    ticketing_country: None | str = field(
         default=None,
         metadata={
             "name": "TicketingCountry",
@@ -11010,7 +11011,7 @@ class OriginalItineraryDetails:
             "length": 2,
         }
     )
-    tour_code: Optional[str] = field(
+    tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
@@ -11018,7 +11019,7 @@ class OriginalItineraryDetails:
             "max_length": 15,
         }
     )
-    ticketing_date: Optional[XmlDate] = field(
+    ticketing_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketingDate",
@@ -11036,7 +11037,7 @@ class Pcc:
         name = "PCC"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    override_pcc: Optional[OverridePcc] = field(
+    override_pcc: None | OverridePcc = field(
         default=None,
         metadata={
             "name": "OverridePCC",
@@ -11044,7 +11045,7 @@ class Pcc:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    point_of_sale: List[PointOfSale] = field(
+    point_of_sale: list[PointOfSale] = field(
         default_factory=list,
         metadata={
             "name": "PointOfSale",
@@ -11053,7 +11054,7 @@ class Pcc:
             "max_occurs": 5,
         }
     )
-    ticket_agency: Optional[TicketAgency] = field(
+    ticket_agency: None | TicketAgency = field(
         default=None,
         metadata={
             "name": "TicketAgency",
@@ -11077,7 +11078,7 @@ class PassengerDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    loyalty_card_details: List[LoyaltyCardDetails] = field(
+    loyalty_card_details: list[LoyaltyCardDetails] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyCardDetails",
@@ -11085,7 +11086,7 @@ class PassengerDetails:
             "max_occurs": 9,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -11093,7 +11094,7 @@ class PassengerDetails:
             "required": True,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -11103,7 +11104,7 @@ class PassengerDetails:
             "max_length": 5,
         }
     )
-    age: Optional[int] = field(
+    age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
@@ -11117,7 +11118,7 @@ class PermittedCabins:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    cabin_class: List[CabinClass] = field(
+    cabin_class: list[CabinClass] = field(
         default_factory=list,
         metadata={
             "name": "CabinClass",
@@ -11134,7 +11135,7 @@ class PermittedCarriers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier: List[Carrier] = field(
+    carrier: list[Carrier] = field(
         default_factory=list,
         metadata={
             "name": "Carrier",
@@ -11161,20 +11162,20 @@ class PrePayId:
     ----------
     company_name: Supplier info that is specific to the pre pay Id
     id: This is the exact pre pay number. Example flight pass number
-    type: Type of pre pay unique identifier,presently only available
-        value is FlightPass.
+    type_value: Type of pre pay unique identifier,presently only
+        available value is FlightPass.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    company_name: Optional[CompanyName] = field(
+    company_name: None | CompanyName = field(
         default=None,
         metadata={
             "name": "CompanyName",
             "type": "Element",
         }
     )
-    id: Optional[str] = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "Id",
@@ -11184,7 +11185,7 @@ class PrePayId:
             "max_length": 36,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -11201,7 +11202,7 @@ class PreferredBookingCodes:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_code: List[BookingCode] = field(
+    booking_code: list[BookingCode] = field(
         default_factory=list,
         metadata={
             "name": "BookingCode",
@@ -11217,7 +11218,7 @@ class PreferredCabins:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    cabin_class: Optional[CabinClass] = field(
+    cabin_class: None | CabinClass = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -11233,7 +11234,7 @@ class PreferredCarriers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier: List[Carrier] = field(
+    carrier: list[Carrier] = field(
         default_factory=list,
         metadata={
             "name": "Carrier",
@@ -11279,7 +11280,7 @@ class PricingDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    advisory_message: List[str] = field(
+    advisory_message: list[str] = field(
         default_factory=list,
         metadata={
             "name": "AdvisoryMessage",
@@ -11287,7 +11288,7 @@ class PricingDetails:
             "max_occurs": 999,
         }
     )
-    endorsement_text: List[str] = field(
+    endorsement_text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "EndorsementText",
@@ -11295,7 +11296,7 @@ class PricingDetails:
             "max_occurs": 999,
         }
     )
-    waiver_text: Optional[str] = field(
+    waiver_text: None | str = field(
         default=None,
         metadata={
             "name": "WaiverText",
@@ -11330,14 +11331,14 @@ class PricingDetails:
             "type": "Attribute",
         }
     )
-    itinerary_type: Optional[TypeItineraryCode] = field(
+    itinerary_type: None | TypeItineraryCode = field(
         default=None,
         metadata={
             "name": "ItineraryType",
             "type": "Attribute",
         }
     )
-    validating_vendor_code: Optional[str] = field(
+    validating_vendor_code: None | str = field(
         default=None,
         metadata={
             "name": "ValidatingVendorCode",
@@ -11345,63 +11346,63 @@ class PricingDetails:
             "length": 2,
         }
     )
-    for_ticketing_on_date: Optional[XmlDate] = field(
+    for_ticketing_on_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ForTicketingOnDate",
             "type": "Attribute",
         }
     )
-    last_date_to_ticket: Optional[XmlDate] = field(
+    last_date_to_ticket: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LastDateToTicket",
             "type": "Attribute",
         }
     )
-    form_of_refund: Optional[TypeFormOfRefund] = field(
+    form_of_refund: None | TypeFormOfRefund = field(
         default=None,
         metadata={
             "name": "FormOfRefund",
             "type": "Attribute",
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
         }
     )
-    bankers_selling_rate: Optional[Decimal] = field(
+    bankers_selling_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "BankersSellingRate",
             "type": "Attribute",
         }
     )
-    pricing_type: Optional[TypePricingType] = field(
+    pricing_type: None | TypePricingType = field(
         default=None,
         metadata={
             "name": "PricingType",
             "type": "Attribute",
         }
     )
-    conversion_rate: Optional[Decimal] = field(
+    conversion_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "ConversionRate",
             "type": "Attribute",
         }
     )
-    rate_of_exchange: Optional[Decimal] = field(
+    rate_of_exchange: None | Decimal = field(
         default=None,
         metadata={
             "name": "RateOfExchange",
             "type": "Attribute",
         }
     )
-    original_ticket_currency: Optional[str] = field(
+    original_ticket_currency: None | str = field(
         default=None,
         metadata={
             "name": "OriginalTicketCurrency",
@@ -11416,7 +11417,7 @@ class ProhibitedCabins:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    cabin_class: List[CabinClass] = field(
+    cabin_class: list[CabinClass] = field(
         default_factory=list,
         metadata={
             "name": "CabinClass",
@@ -11433,7 +11434,7 @@ class ProhibitedCarriers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carrier: List[Carrier] = field(
+    carrier: list[Carrier] = field(
         default_factory=list,
         metadata={
             "name": "Carrier",
@@ -11463,7 +11464,7 @@ class RefundFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -11473,7 +11474,7 @@ class RefundFailureInfo:
             "max_length": 13,
         }
     )
-    name: Optional[Name] = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -11481,14 +11482,14 @@ class RefundFailureInfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
             "type": "Element",
         }
     )
-    booking_traveler_ref: List[str] = field(
+    booking_traveler_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -11497,7 +11498,7 @@ class RefundFailureInfo:
             "max_occurs": 999,
         }
     )
-    code: Optional[int] = field(
+    code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
@@ -11505,7 +11506,7 @@ class RefundFailureInfo:
             "required": True,
         }
     )
-    message: Optional[str] = field(
+    message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
@@ -11531,7 +11532,7 @@ class RelatedTraveler:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    loyalty_card: List[LoyaltyCard] = field(
+    loyalty_card: list[LoyaltyCard] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyCard",
@@ -11540,28 +11541,28 @@ class RelatedTraveler:
             "max_occurs": 999,
         }
     )
-    person_name: Optional[PersonName] = field(
+    person_name: None | PersonName = field(
         default=None,
         metadata={
             "name": "PersonName",
             "type": "Element",
         }
     )
-    credits_used: Optional["RelatedTraveler.CreditsUsed"] = field(
+    credits_used: None | RelatedTraveler.CreditsUsed = field(
         default=None,
         metadata={
             "name": "CreditsUsed",
             "type": "Element",
         }
     )
-    status_code: Optional[str] = field(
+    status_code: None | str = field(
         default=None,
         metadata={
             "name": "StatusCode",
             "type": "Attribute",
         }
     )
-    relation: Optional[str] = field(
+    relation: None | str = field(
         default=None,
         metadata={
             "name": "Relation",
@@ -11571,14 +11572,14 @@ class RelatedTraveler:
 
     @dataclass
     class CreditsUsed:
-        used_credit: Optional[Decimal] = field(
+        used_credit: None | Decimal = field(
             default=None,
             metadata={
                 "name": "UsedCredit",
                 "type": "Attribute",
             }
         )
-        currency_code: Optional[str] = field(
+        currency_code: None | str = field(
             default=None,
             metadata={
                 "name": "CurrencyCode",
@@ -11604,7 +11605,7 @@ class RetrieveLowFareSearchReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    search_id: Optional[str] = field(
+    search_id: None | str = field(
         default=None,
         metadata={
             "name": "SearchId",
@@ -11612,7 +11613,7 @@ class RetrieveLowFareSearchReq(BaseReq):
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -11632,7 +11633,7 @@ class RoutingRules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    routing: List["RoutingRules.Routing"] = field(
+    routing: list[RoutingRules.Routing] = field(
         default_factory=list,
         metadata={
             "name": "Routing",
@@ -11643,7 +11644,7 @@ class RoutingRules:
 
     @dataclass
     class Routing:
-        direction_info: List["RoutingRules.Routing.DirectionInfo"] = field(
+        direction_info: list[RoutingRules.Routing.DirectionInfo] = field(
             default_factory=list,
             metadata={
                 "name": "DirectionInfo",
@@ -11651,21 +11652,21 @@ class RoutingRules:
                 "max_occurs": 999,
             }
         )
-        routing_constructed_ind: Optional[bool] = field(
+        routing_constructed_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "RoutingConstructedInd",
                 "type": "Attribute",
             }
         )
-        number: Optional[str] = field(
+        number: None | str = field(
             default=None,
             metadata={
                 "name": "Number",
                 "type": "Attribute",
             }
         )
-        routing_restriction: Optional[str] = field(
+        routing_restriction: None | str = field(
             default=None,
             metadata={
                 "name": "RoutingRestriction",
@@ -11675,7 +11676,7 @@ class RoutingRules:
 
         @dataclass
         class DirectionInfo:
-            location_code: Optional[str] = field(
+            location_code: None | str = field(
                 default=None,
                 metadata={
                     "name": "LocationCode",
@@ -11684,7 +11685,7 @@ class RoutingRules:
                     "white_space": "collapse",
                 }
             )
-            direction: Optional[DirectionInfoDirection] = field(
+            direction: None | DirectionInfoDirection = field(
                 default=None,
                 metadata={
                     "name": "Direction",
@@ -11715,35 +11716,35 @@ class RuleAdvancedPurchase:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    reservation_latest_period: Optional[str] = field(
+    reservation_latest_period: None | str = field(
         default=None,
         metadata={
             "name": "ReservationLatestPeriod",
             "type": "Attribute",
         }
     )
-    reservation_latest_unit: Optional[TypeStayUnit] = field(
+    reservation_latest_unit: None | TypeStayUnit = field(
         default=None,
         metadata={
             "name": "ReservationLatestUnit",
             "type": "Attribute",
         }
     )
-    ticketing_earliest_date: Optional[str] = field(
+    ticketing_earliest_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketingEarliestDate",
             "type": "Attribute",
         }
     )
-    ticketing_latest_date: Optional[str] = field(
+    ticketing_latest_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketingLatestDate",
             "type": "Attribute",
         }
     )
-    more_rules_present: Optional[bool] = field(
+    more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
@@ -11757,7 +11758,7 @@ class SearchTraveler(TypePassengerType):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_seat_assignment: List[AirSeatAssignment] = field(
+    air_seat_assignment: list[AirSeatAssignment] = field(
         default_factory=list,
         metadata={
             "name": "AirSeatAssignment",
@@ -11766,7 +11767,7 @@ class SearchTraveler(TypePassengerType):
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -11805,7 +11806,7 @@ class SegmentSelect:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[TypeSegmentRef] = field(
+    air_segment_ref: list[TypeSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -11813,7 +11814,7 @@ class SegmentSelect:
             "max_occurs": 999,
         }
     )
-    hotel_reservation_ref: List[TypeNonAirReservationRef] = field(
+    hotel_reservation_ref: list[TypeNonAirReservationRef] = field(
         default_factory=list,
         metadata={
             "name": "HotelReservationRef",
@@ -11821,7 +11822,7 @@ class SegmentSelect:
             "max_occurs": 999,
         }
     )
-    vehicle_reservation_ref: List[TypeNonAirReservationRef] = field(
+    vehicle_reservation_ref: list[TypeNonAirReservationRef] = field(
         default_factory=list,
         metadata={
             "name": "VehicleReservationRef",
@@ -11829,7 +11830,7 @@ class SegmentSelect:
             "max_occurs": 999,
         }
     )
-    passive_segment_ref: List[TypeSegmentRef] = field(
+    passive_segment_ref: list[TypeSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "PassiveSegmentRef",
@@ -11837,35 +11838,35 @@ class SegmentSelect:
             "max_occurs": 999,
         }
     )
-    all_confirmed_air: Optional[bool] = field(
+    all_confirmed_air: None | bool = field(
         default=None,
         metadata={
             "name": "AllConfirmedAir",
             "type": "Attribute",
         }
     )
-    all_waitlisted_air: Optional[bool] = field(
+    all_waitlisted_air: None | bool = field(
         default=None,
         metadata={
             "name": "AllWaitlistedAir",
             "type": "Attribute",
         }
     )
-    all_hotel: Optional[bool] = field(
+    all_hotel: None | bool = field(
         default=None,
         metadata={
             "name": "AllHotel",
             "type": "Attribute",
         }
     )
-    all_vehicle: Optional[bool] = field(
+    all_vehicle: None | bool = field(
         default=None,
         metadata={
             "name": "AllVehicle",
             "type": "Attribute",
         }
     )
-    all_passive: Optional[bool] = field(
+    all_passive: None | bool = field(
         default=None,
         metadata={
             "name": "AllPassive",
@@ -11895,7 +11896,7 @@ class SelectionModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -11903,7 +11904,7 @@ class SelectionModifiers:
             "max_occurs": 999,
         }
     )
-    svc_segment_ref: List[str] = field(
+    svc_segment_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SvcSegmentRef",
@@ -11911,7 +11912,7 @@ class SelectionModifiers:
             "max_occurs": 999,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -11919,7 +11920,7 @@ class SelectionModifiers:
             "length": 2,
         }
     )
-    rfic: Optional[str] = field(
+    rfic: None | str = field(
         default=None,
         metadata={
             "name": "RFIC",
@@ -11940,7 +11941,7 @@ class ServiceAssociations:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    applicable_segment: List["ServiceAssociations.ApplicableSegment"] = field(
+    applicable_segment: list[ServiceAssociations.ApplicableSegment] = field(
         default_factory=list,
         metadata={
             "name": "ApplicableSegment",
@@ -11959,7 +11960,7 @@ class ServiceAssociations:
         optional_service_ref:
         key: Applicable air segment key
         """
-        response_message: Optional[ResponseMessage] = field(
+        response_message: None | ResponseMessage = field(
             default=None,
             metadata={
                 "name": "ResponseMessage",
@@ -11967,14 +11968,14 @@ class ServiceAssociations:
                 "namespace": "http://www.travelport.com/schema/common_v48_0",
             }
         )
-        optional_service_ref: Optional[str] = field(
+        optional_service_ref: None | str = field(
             default=None,
             metadata={
                 "name": "OptionalServiceRef",
                 "type": "Element",
             }
         )
-        key: Optional[str] = field(
+        key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
@@ -11998,7 +11999,7 @@ class ServiceGroup:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    service_sub_group: List[ServiceSubGroup] = field(
+    service_sub_group: list[ServiceSubGroup] = field(
         default_factory=list,
         metadata={
             "name": "ServiceSubGroup",
@@ -12006,7 +12007,7 @@ class ServiceGroup:
             "max_occurs": 15,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -12046,49 +12047,49 @@ class SolutionGroup:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    permitted_account_codes: Optional["SolutionGroup.PermittedAccountCodes"] = field(
+    permitted_account_codes: None | SolutionGroup.PermittedAccountCodes = field(
         default=None,
         metadata={
             "name": "PermittedAccountCodes",
             "type": "Element",
         }
     )
-    preferred_account_codes: Optional["SolutionGroup.PreferredAccountCodes"] = field(
+    preferred_account_codes: None | SolutionGroup.PreferredAccountCodes = field(
         default=None,
         metadata={
             "name": "PreferredAccountCodes",
             "type": "Element",
         }
     )
-    prohibited_account_codes: Optional["SolutionGroup.ProhibitedAccountCodes"] = field(
+    prohibited_account_codes: None | SolutionGroup.ProhibitedAccountCodes = field(
         default=None,
         metadata={
             "name": "ProhibitedAccountCodes",
             "type": "Element",
         }
     )
-    permitted_point_of_sales: Optional["SolutionGroup.PermittedPointOfSales"] = field(
+    permitted_point_of_sales: None | SolutionGroup.PermittedPointOfSales = field(
         default=None,
         metadata={
             "name": "PermittedPointOfSales",
             "type": "Element",
         }
     )
-    prohibited_point_of_sales: Optional["SolutionGroup.ProhibitedPointOfSales"] = field(
+    prohibited_point_of_sales: None | SolutionGroup.ProhibitedPointOfSales = field(
         default=None,
         metadata={
             "name": "ProhibitedPointOfSales",
             "type": "Element",
         }
     )
-    count: Optional[int] = field(
+    count: None | int = field(
         default=None,
         metadata={
             "name": "Count",
             "type": "Attribute",
         }
     )
-    trip_type: Optional[TypeTripType] = field(
+    trip_type: None | TypeTripType = field(
         default=None,
         metadata={
             "name": "TripType",
@@ -12096,14 +12097,14 @@ class SolutionGroup:
             "required": True,
         }
     )
-    diversification: Optional[TypeDiversity] = field(
+    diversification: None | TypeDiversity = field(
         default=None,
         metadata={
             "name": "Diversification",
             "type": "Attribute",
         }
     )
-    tag: Optional[str] = field(
+    tag: None | str = field(
         default=None,
         metadata={
             "name": "Tag",
@@ -12121,7 +12122,7 @@ class SolutionGroup:
 
     @dataclass
     class PermittedAccountCodes:
-        account_code: List[AccountCode] = field(
+        account_code: list[AccountCode] = field(
             default_factory=list,
             metadata={
                 "name": "AccountCode",
@@ -12134,7 +12135,7 @@ class SolutionGroup:
 
     @dataclass
     class PreferredAccountCodes:
-        account_code: List[AccountCode] = field(
+        account_code: list[AccountCode] = field(
             default_factory=list,
             metadata={
                 "name": "AccountCode",
@@ -12147,7 +12148,7 @@ class SolutionGroup:
 
     @dataclass
     class ProhibitedAccountCodes:
-        account_code: List[AccountCode] = field(
+        account_code: list[AccountCode] = field(
             default_factory=list,
             metadata={
                 "name": "AccountCode",
@@ -12160,7 +12161,7 @@ class SolutionGroup:
 
     @dataclass
     class PermittedPointOfSales:
-        point_of_sale: List[PointOfSale] = field(
+        point_of_sale: list[PointOfSale] = field(
             default_factory=list,
             metadata={
                 "name": "PointOfSale",
@@ -12173,7 +12174,7 @@ class SolutionGroup:
 
     @dataclass
     class ProhibitedPointOfSales:
-        point_of_sale: List[PointOfSale] = field(
+        point_of_sale: list[PointOfSale] = field(
             default_factory=list,
             metadata={
                 "name": "PointOfSale",
@@ -12190,21 +12191,21 @@ class SpecificTimeTable:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_origin: Optional["SpecificTimeTable.FlightOrigin"] = field(
+    flight_origin: None | SpecificTimeTable.FlightOrigin = field(
         default=None,
         metadata={
             "name": "FlightOrigin",
             "type": "Element",
         }
     )
-    flight_destination: Optional["SpecificTimeTable.FlightDestination"] = field(
+    flight_destination: None | SpecificTimeTable.FlightDestination = field(
         default=None,
         metadata={
             "name": "FlightDestination",
             "type": "Element",
         }
     )
-    start_date: Optional[str] = field(
+    start_date: None | str = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -12212,7 +12213,7 @@ class SpecificTimeTable:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -12221,7 +12222,7 @@ class SpecificTimeTable:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -12233,7 +12234,7 @@ class SpecificTimeTable:
 
     @dataclass
     class FlightOrigin:
-        airport: Optional[Airport] = field(
+        airport: None | Airport = field(
             default=None,
             metadata={
                 "name": "Airport",
@@ -12245,7 +12246,7 @@ class SpecificTimeTable:
 
     @dataclass
     class FlightDestination:
-        airport: Optional[Airport] = field(
+        airport: None | Airport = field(
             default=None,
             metadata={
                 "name": "Airport",
@@ -12270,7 +12271,7 @@ class Tcrinfo:
         name = "TCRInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    status: Optional[TypeTcrstatus] = field(
+    status: None | TypeTcrstatus = field(
         default=None,
         metadata={
             "name": "Status",
@@ -12278,14 +12279,14 @@ class Tcrinfo:
             "required": True,
         }
     )
-    date: Optional[XmlDateTime] = field(
+    date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Date",
             "type": "Attribute",
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
@@ -12293,7 +12294,7 @@ class Tcrinfo:
             "required": True,
         }
     )
-    provider_reservation_info_ref: Optional[str] = field(
+    provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
@@ -12326,7 +12327,7 @@ class TermConditions:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    language_option: List[LanguageOption] = field(
+    language_option: list[LanguageOption] = field(
         default_factory=list,
         metadata={
             "name": "LanguageOption",
@@ -12334,7 +12335,7 @@ class TermConditions:
             "max_occurs": 2,
         }
     )
-    include_term_conditions: Optional[bool] = field(
+    include_term_conditions: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeTermConditions",
@@ -12373,7 +12374,7 @@ class TicketFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -12382,7 +12383,7 @@ class TicketFailureInfo:
             "max_occurs": 999,
         }
     )
-    name: Optional[Name] = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -12391,7 +12392,7 @@ class TicketFailureInfo:
             "required": True,
         }
     )
-    code: Optional[int] = field(
+    code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
@@ -12399,14 +12400,14 @@ class TicketFailureInfo:
             "required": True,
         }
     )
-    message: Optional[str] = field(
+    message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -12433,8 +12434,8 @@ class Variance:
 
     Parameters
     ----------
-    type: Indicates type Variance, i.e. Actual, Estimated, Canceled and
-        Diversion.
+    type_value: Indicates type Variance, i.e. Actual, Estimated,
+        Canceled and Diversion.
     time: Indicates time for Variance.
     indicator: Indicates VAriance Indicator, i.e. Early, Late.
     reason: Reason for Variance
@@ -12442,7 +12443,7 @@ class Variance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: Optional[TypeVarianceType] = field(
+    type_value: None | TypeVarianceType = field(
         default=None,
         metadata={
             "name": "Type",
@@ -12450,21 +12451,21 @@ class Variance:
             "required": True,
         }
     )
-    time: Optional[str] = field(
+    time: None | str = field(
         default=None,
         metadata={
             "name": "Time",
             "type": "Attribute",
         }
     )
-    indicator: Optional[TypeVarianceIndicator] = field(
+    indicator: None | TypeVarianceIndicator = field(
         default=None,
         metadata={
             "name": "Indicator",
             "type": "Attribute",
         }
     )
-    reason: Optional[str] = field(
+    reason: None | str = field(
         default=None,
         metadata={
             "name": "Reason",
@@ -12488,7 +12489,7 @@ class VoidDocumentInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    document_number: Optional[str] = field(
+    document_number: None | str = field(
         default=None,
         metadata={
             "name": "DocumentNumber",
@@ -12497,7 +12498,7 @@ class VoidDocumentInfo:
             "max_length": 13,
         }
     )
-    document_type: Optional[VoidDocumentInfoDocumentType] = field(
+    document_type: None | VoidDocumentInfoDocumentType = field(
         default=None,
         metadata={
             "name": "DocumentType",
@@ -12523,14 +12524,14 @@ class VoidResultInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    failure_remark: Optional[str] = field(
+    failure_remark: None | str = field(
         default=None,
         metadata={
             "name": "FailureRemark",
             "type": "Element",
         }
     )
-    document_number: Optional[str] = field(
+    document_number: None | str = field(
         default=None,
         metadata={
             "name": "DocumentNumber",
@@ -12539,14 +12540,14 @@ class VoidResultInfo:
             "max_length": 13,
         }
     )
-    document_type: Optional[VoidResultInfoDocumentType] = field(
+    document_type: None | VoidResultInfoDocumentType = field(
         default=None,
         metadata={
             "name": "DocumentType",
             "type": "Attribute",
         }
     )
-    result_type: Optional[str] = field(
+    result_type: None | str = field(
         default=None,
         metadata={
             "name": "ResultType",
@@ -12573,7 +12574,7 @@ class TypeFarePenalty:
     class Meta:
         name = "typeFarePenalty"
 
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -12581,7 +12582,7 @@ class TypeFarePenalty:
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    percentage: Optional[str] = field(
+    percentage: None | str = field(
         default=None,
         metadata={
             "name": "Percentage",
@@ -12590,14 +12591,14 @@ class TypeFarePenalty:
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
         }
     )
-    penalty_applies: Optional[TypeFarePenaltyPenaltyApplies] = field(
+    penalty_applies: None | TypeFarePenaltyPenaltyApplies = field(
         default=None,
         metadata={
             "name": "PenaltyApplies",
             "type": "Attribute",
         }
     )
-    no_show: Optional[bool] = field(
+    no_show: None | bool = field(
         default=None,
         metadata={
             "name": "NoShow",
@@ -12622,28 +12623,28 @@ class TypeRestrictionLengthOfStay:
     class Meta:
         name = "typeRestrictionLengthOfStay"
 
-    length: Optional[int] = field(
+    length: None | int = field(
         default=None,
         metadata={
             "name": "Length",
             "type": "Attribute",
         }
     )
-    stay_unit: Optional[TypeStayUnit] = field(
+    stay_unit: None | TypeStayUnit = field(
         default=None,
         metadata={
             "name": "StayUnit",
             "type": "Attribute",
         }
     )
-    stay_date: Optional[XmlDate] = field(
+    stay_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StayDate",
             "type": "Attribute",
         }
     )
-    more_rules_present: Optional[bool] = field(
+    more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
@@ -12663,7 +12664,7 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
     class Meta:
         name = "typeTaxInfoWithPaymentRef"
 
-    payment_ref: List[PaymentRef] = field(
+    payment_ref: list[PaymentRef] = field(
         default_factory=list,
         metadata={
             "name": "PaymentRef",
@@ -12691,7 +12692,7 @@ class TypeTicketFailureInfo:
     class Meta:
         name = "typeTicketFailureInfo"
 
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -12701,7 +12702,7 @@ class TypeTicketFailureInfo:
             "max_length": 13,
         }
     )
-    name: Optional[Name] = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -12709,7 +12710,7 @@ class TypeTicketFailureInfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
@@ -12717,7 +12718,7 @@ class TypeTicketFailureInfo:
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    booking_traveler_ref: List[str] = field(
+    booking_traveler_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -12727,7 +12728,7 @@ class TypeTicketFailureInfo:
             "max_occurs": 999,
         }
     )
-    code: Optional[int] = field(
+    code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
@@ -12735,7 +12736,7 @@ class TypeTicketFailureInfo:
             "required": True,
         }
     )
-    message: Optional[str] = field(
+    message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
@@ -12749,7 +12750,7 @@ class TypeTicketingModifiersRef:
     class Meta:
         name = "typeTicketingModifiersRef"
 
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -12758,7 +12759,7 @@ class TypeTicketingModifiersRef:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -12773,14 +12774,14 @@ class TypeWeight:
     class Meta:
         name = "typeWeight"
 
-    value: Optional[int] = field(
+    value: None | int = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
         }
     )
-    unit: Optional[TypeUnitWeight] = field(
+    unit: None | TypeUnitWeight = field(
         default=None,
         metadata={
             "name": "Unit",
@@ -12798,7 +12799,7 @@ class ApisrequirementsList:
         name = "APISRequirementsList"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    apisrequirements: List[Apisrequirements] = field(
+    apisrequirements: list[Apisrequirements] = field(
         default_factory=list,
         metadata={
             "name": "APISRequirements",
@@ -12825,7 +12826,7 @@ class AirExchangeBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_exchange_info: Optional[AirExchangeInfo] = field(
+    air_exchange_info: None | AirExchangeInfo = field(
         default=None,
         metadata={
             "name": "AirExchangeInfo",
@@ -12834,7 +12835,7 @@ class AirExchangeBundle:
             "required": True,
         }
     )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -12842,7 +12843,7 @@ class AirExchangeBundle:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -12850,7 +12851,7 @@ class AirExchangeBundle:
             "max_occurs": 999,
         }
     )
-    penalty: List[CommonPenalty] = field(
+    penalty: list[CommonPenalty] = field(
         default_factory=list,
         metadata={
             "name": "Penalty",
@@ -12869,7 +12870,7 @@ class AirFareRulesModifier:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_fare_rule_category: List[AirFareRuleCategory] = field(
+    air_fare_rule_category: list[AirFareRuleCategory] = field(
         default_factory=list,
         metadata={
             "name": "AirFareRuleCategory",
@@ -12893,7 +12894,7 @@ class AirItineraryDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_details: List[AirSegmentDetails] = field(
+    air_segment_details: list[AirSegmentDetails] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentDetails",
@@ -12902,7 +12903,7 @@ class AirItineraryDetails:
             "max_occurs": 16,
         }
     )
-    passenger_details: List[PassengerDetails] = field(
+    passenger_details: list[PassengerDetails] = field(
         default_factory=list,
         metadata={
             "name": "PassengerDetails",
@@ -12911,7 +12912,7 @@ class AirItineraryDetails:
             "max_occurs": 15,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -12974,105 +12975,105 @@ class AirLegModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    permitted_cabins: Optional[PermittedCabins] = field(
+    permitted_cabins: None | PermittedCabins = field(
         default=None,
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
         }
     )
-    preferred_cabins: Optional[PreferredCabins] = field(
+    preferred_cabins: None | PreferredCabins = field(
         default=None,
         metadata={
             "name": "PreferredCabins",
             "type": "Element",
         }
     )
-    permitted_carriers: Optional[PermittedCarriers] = field(
+    permitted_carriers: None | PermittedCarriers = field(
         default=None,
         metadata={
             "name": "PermittedCarriers",
             "type": "Element",
         }
     )
-    prohibited_carriers: Optional[ProhibitedCarriers] = field(
+    prohibited_carriers: None | ProhibitedCarriers = field(
         default=None,
         metadata={
             "name": "ProhibitedCarriers",
             "type": "Element",
         }
     )
-    preferred_carriers: Optional[PreferredCarriers] = field(
+    preferred_carriers: None | PreferredCarriers = field(
         default=None,
         metadata={
             "name": "PreferredCarriers",
             "type": "Element",
         }
     )
-    permitted_connection_points: Optional["AirLegModifiers.PermittedConnectionPoints"] = field(
+    permitted_connection_points: None | AirLegModifiers.PermittedConnectionPoints = field(
         default=None,
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
         }
     )
-    prohibited_connection_points: Optional["AirLegModifiers.ProhibitedConnectionPoints"] = field(
+    prohibited_connection_points: None | AirLegModifiers.ProhibitedConnectionPoints = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",
             "type": "Element",
         }
     )
-    preferred_connection_points: Optional["AirLegModifiers.PreferredConnectionPoints"] = field(
+    preferred_connection_points: None | AirLegModifiers.PreferredConnectionPoints = field(
         default=None,
         metadata={
             "name": "PreferredConnectionPoints",
             "type": "Element",
         }
     )
-    permitted_booking_codes: Optional["AirLegModifiers.PermittedBookingCodes"] = field(
+    permitted_booking_codes: None | AirLegModifiers.PermittedBookingCodes = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",
             "type": "Element",
         }
     )
-    preferred_booking_codes: Optional[PreferredBookingCodes] = field(
+    preferred_booking_codes: None | PreferredBookingCodes = field(
         default=None,
         metadata={
             "name": "PreferredBookingCodes",
             "type": "Element",
         }
     )
-    preferred_alliances: Optional["AirLegModifiers.PreferredAlliances"] = field(
+    preferred_alliances: None | AirLegModifiers.PreferredAlliances = field(
         default=None,
         metadata={
             "name": "PreferredAlliances",
             "type": "Element",
         }
     )
-    prohibited_booking_codes: Optional["AirLegModifiers.ProhibitedBookingCodes"] = field(
+    prohibited_booking_codes: None | AirLegModifiers.ProhibitedBookingCodes = field(
         default=None,
         metadata={
             "name": "ProhibitedBookingCodes",
             "type": "Element",
         }
     )
-    disfavored_alliances: Optional["AirLegModifiers.DisfavoredAlliances"] = field(
+    disfavored_alliances: None | AirLegModifiers.DisfavoredAlliances = field(
         default=None,
         metadata={
             "name": "DisfavoredAlliances",
             "type": "Element",
         }
     )
-    flight_type: Optional[FlightType] = field(
+    flight_type: None | FlightType = field(
         default=None,
         metadata={
             "name": "FlightType",
             "type": "Element",
         }
     )
-    anchor_flight_data: Optional[TypeAnchorFlightData] = field(
+    anchor_flight_data: None | TypeAnchorFlightData = field(
         default=None,
         metadata={
             "name": "AnchorFlightData",
@@ -13086,14 +13087,14 @@ class AirLegModifiers:
             "type": "Attribute",
         }
     )
-    max_connection_time: Optional[int] = field(
+    max_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxConnectionTime",
             "type": "Attribute",
         }
     )
-    return_first_available_only: Optional[bool] = field(
+    return_first_available_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnFirstAvailableOnly",
@@ -13107,7 +13108,7 @@ class AirLegModifiers:
             "type": "Attribute",
         }
     )
-    prohibit_multi_airport_connection: Optional[bool] = field(
+    prohibit_multi_airport_connection: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitMultiAirportConnection",
@@ -13121,14 +13122,14 @@ class AirLegModifiers:
             "type": "Attribute",
         }
     )
-    order_by: Optional[AirLegModifiersOrderBy] = field(
+    order_by: None | AirLegModifiersOrderBy = field(
         default=None,
         metadata={
             "name": "OrderBy",
             "type": "Attribute",
         }
     )
-    max_journey_time: Optional[int] = field(
+    max_journey_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxJourneyTime",
@@ -13140,7 +13141,7 @@ class AirLegModifiers:
 
     @dataclass
     class PermittedConnectionPoints:
-        connection_point: List[ConnectionPoint] = field(
+        connection_point: list[ConnectionPoint] = field(
             default_factory=list,
             metadata={
                 "name": "ConnectionPoint",
@@ -13153,7 +13154,7 @@ class AirLegModifiers:
 
     @dataclass
     class ProhibitedConnectionPoints:
-        connection_point: List[ConnectionPoint] = field(
+        connection_point: list[ConnectionPoint] = field(
             default_factory=list,
             metadata={
                 "name": "ConnectionPoint",
@@ -13166,7 +13167,7 @@ class AirLegModifiers:
 
     @dataclass
     class PreferredConnectionPoints:
-        connection_point: List[ConnectionPoint] = field(
+        connection_point: list[ConnectionPoint] = field(
             default_factory=list,
             metadata={
                 "name": "ConnectionPoint",
@@ -13179,7 +13180,7 @@ class AirLegModifiers:
 
     @dataclass
     class PermittedBookingCodes:
-        booking_code: List[BookingCode] = field(
+        booking_code: list[BookingCode] = field(
             default_factory=list,
             metadata={
                 "name": "BookingCode",
@@ -13191,7 +13192,7 @@ class AirLegModifiers:
 
     @dataclass
     class PreferredAlliances:
-        alliance: List[Alliance] = field(
+        alliance: list[Alliance] = field(
             default_factory=list,
             metadata={
                 "name": "Alliance",
@@ -13203,7 +13204,7 @@ class AirLegModifiers:
 
     @dataclass
     class ProhibitedBookingCodes:
-        booking_code: List[BookingCode] = field(
+        booking_code: list[BookingCode] = field(
             default_factory=list,
             metadata={
                 "name": "BookingCode",
@@ -13215,7 +13216,7 @@ class AirLegModifiers:
 
     @dataclass
     class DisfavoredAlliances:
-        alliance: List[Alliance] = field(
+        alliance: list[Alliance] = field(
             default_factory=list,
             metadata={
                 "name": "Alliance",
@@ -13246,7 +13247,7 @@ class AirRefundBundle:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_refund_info: Optional[AirRefundInfo] = field(
+    air_refund_info: None | AirRefundInfo = field(
         default=None,
         metadata={
             "name": "AirRefundInfo",
@@ -13254,7 +13255,7 @@ class AirRefundBundle:
             "required": True,
         }
     )
-    name: List[Name] = field(
+    name: list[Name] = field(
         default_factory=list,
         metadata={
             "name": "Name",
@@ -13263,7 +13264,7 @@ class AirRefundBundle:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -13272,28 +13273,28 @@ class AirRefundBundle:
             "max_occurs": 999,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
         }
     )
-    ptc: Optional[object] = field(
+    ptc: None | object = field(
         default=None,
         metadata={
             "name": "PTC",
             "type": "Attribute",
         }
     )
-    refund_type: Optional[AirRefundBundleRefundType] = field(
+    refund_type: None | AirRefundBundleRefundType = field(
         default=None,
         metadata={
             "name": "RefundType",
@@ -13378,112 +13379,112 @@ class AirSearchModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    disfavored_providers: Optional["AirSearchModifiers.DisfavoredProviders"] = field(
+    disfavored_providers: None | AirSearchModifiers.DisfavoredProviders = field(
         default=None,
         metadata={
             "name": "DisfavoredProviders",
             "type": "Element",
         }
     )
-    preferred_providers: Optional["AirSearchModifiers.PreferredProviders"] = field(
+    preferred_providers: None | AirSearchModifiers.PreferredProviders = field(
         default=None,
         metadata={
             "name": "PreferredProviders",
             "type": "Element",
         }
     )
-    disfavored_carriers: Optional["AirSearchModifiers.DisfavoredCarriers"] = field(
+    disfavored_carriers: None | AirSearchModifiers.DisfavoredCarriers = field(
         default=None,
         metadata={
             "name": "DisfavoredCarriers",
             "type": "Element",
         }
     )
-    permitted_carriers: Optional[PermittedCarriers] = field(
+    permitted_carriers: None | PermittedCarriers = field(
         default=None,
         metadata={
             "name": "PermittedCarriers",
             "type": "Element",
         }
     )
-    prohibited_carriers: Optional[ProhibitedCarriers] = field(
+    prohibited_carriers: None | ProhibitedCarriers = field(
         default=None,
         metadata={
             "name": "ProhibitedCarriers",
             "type": "Element",
         }
     )
-    preferred_carriers: Optional[PreferredCarriers] = field(
+    preferred_carriers: None | PreferredCarriers = field(
         default=None,
         metadata={
             "name": "PreferredCarriers",
             "type": "Element",
         }
     )
-    permitted_cabins: Optional[PermittedCabins] = field(
+    permitted_cabins: None | PermittedCabins = field(
         default=None,
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
         }
     )
-    preferred_cabins: Optional[PreferredCabins] = field(
+    preferred_cabins: None | PreferredCabins = field(
         default=None,
         metadata={
             "name": "PreferredCabins",
             "type": "Element",
         }
     )
-    preferred_alliances: Optional["AirSearchModifiers.PreferredAlliances"] = field(
+    preferred_alliances: None | AirSearchModifiers.PreferredAlliances = field(
         default=None,
         metadata={
             "name": "PreferredAlliances",
             "type": "Element",
         }
     )
-    disfavored_alliances: Optional["AirSearchModifiers.DisfavoredAlliances"] = field(
+    disfavored_alliances: None | AirSearchModifiers.DisfavoredAlliances = field(
         default=None,
         metadata={
             "name": "DisfavoredAlliances",
             "type": "Element",
         }
     )
-    permitted_booking_codes: Optional["AirSearchModifiers.PermittedBookingCodes"] = field(
+    permitted_booking_codes: None | AirSearchModifiers.PermittedBookingCodes = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",
             "type": "Element",
         }
     )
-    preferred_booking_codes: Optional[PreferredBookingCodes] = field(
+    preferred_booking_codes: None | PreferredBookingCodes = field(
         default=None,
         metadata={
             "name": "PreferredBookingCodes",
             "type": "Element",
         }
     )
-    prohibited_booking_codes: Optional["AirSearchModifiers.ProhibitedBookingCodes"] = field(
+    prohibited_booking_codes: None | AirSearchModifiers.ProhibitedBookingCodes = field(
         default=None,
         metadata={
             "name": "ProhibitedBookingCodes",
             "type": "Element",
         }
     )
-    flight_type: Optional[FlightType] = field(
+    flight_type: None | FlightType = field(
         default=None,
         metadata={
             "name": "FlightType",
             "type": "Element",
         }
     )
-    max_layover_duration: Optional[MaxLayoverDurationType] = field(
+    max_layover_duration: None | MaxLayoverDurationType = field(
         default=None,
         metadata={
             "name": "MaxLayoverDuration",
             "type": "Element",
         }
     )
-    native_search_modifier: Optional[TypeNativeSearchModifier] = field(
+    native_search_modifier: None | TypeNativeSearchModifier = field(
         default=None,
         metadata={
             "name": "NativeSearchModifier",
@@ -13518,35 +13519,35 @@ class AirSearchModifiers:
             "type": "Attribute",
         }
     )
-    max_solutions: Optional[int] = field(
+    max_solutions: None | int = field(
         default=None,
         metadata={
             "name": "MaxSolutions",
             "type": "Attribute",
         }
     )
-    max_connection_time: Optional[int] = field(
+    max_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxConnectionTime",
             "type": "Attribute",
         }
     )
-    search_weekends: Optional[bool] = field(
+    search_weekends: None | bool = field(
         default=None,
         metadata={
             "name": "SearchWeekends",
             "type": "Attribute",
         }
     )
-    include_extra_solutions: Optional[bool] = field(
+    include_extra_solutions: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeExtraSolutions",
             "type": "Attribute",
         }
     )
-    prohibit_multi_airport_connection: Optional[bool] = field(
+    prohibit_multi_airport_connection: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitMultiAirportConnection",
@@ -13560,7 +13561,7 @@ class AirSearchModifiers:
             "type": "Attribute",
         }
     )
-    order_by: Optional[AirSearchModifiersOrderBy] = field(
+    order_by: None | AirSearchModifiersOrderBy = field(
         default=None,
         metadata={
             "name": "OrderBy",
@@ -13581,7 +13582,7 @@ class AirSearchModifiers:
             "type": "Attribute",
         }
     )
-    max_journey_time: Optional[int] = field(
+    max_journey_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxJourneyTime",
@@ -13590,7 +13591,7 @@ class AirSearchModifiers:
             "max_inclusive": 99,
         }
     )
-    jet_service_only: Optional[bool] = field(
+    jet_service_only: None | bool = field(
         default=None,
         metadata={
             "name": "JetServiceOnly",
@@ -13600,7 +13601,7 @@ class AirSearchModifiers:
 
     @dataclass
     class DisfavoredProviders:
-        provider: List[Provider] = field(
+        provider: list[Provider] = field(
             default_factory=list,
             metadata={
                 "name": "Provider",
@@ -13613,7 +13614,7 @@ class AirSearchModifiers:
 
     @dataclass
     class PreferredProviders:
-        provider: List[Provider] = field(
+        provider: list[Provider] = field(
             default_factory=list,
             metadata={
                 "name": "Provider",
@@ -13626,7 +13627,7 @@ class AirSearchModifiers:
 
     @dataclass
     class DisfavoredCarriers:
-        carrier: List[Carrier] = field(
+        carrier: list[Carrier] = field(
             default_factory=list,
             metadata={
                 "name": "Carrier",
@@ -13639,7 +13640,7 @@ class AirSearchModifiers:
 
     @dataclass
     class PreferredAlliances:
-        alliance: List[Alliance] = field(
+        alliance: list[Alliance] = field(
             default_factory=list,
             metadata={
                 "name": "Alliance",
@@ -13651,7 +13652,7 @@ class AirSearchModifiers:
 
     @dataclass
     class DisfavoredAlliances:
-        alliance: List[Alliance] = field(
+        alliance: list[Alliance] = field(
             default_factory=list,
             metadata={
                 "name": "Alliance",
@@ -13663,7 +13664,7 @@ class AirSearchModifiers:
 
     @dataclass
     class PermittedBookingCodes:
-        booking_code: List[BookingCode] = field(
+        booking_code: list[BookingCode] = field(
             default_factory=list,
             metadata={
                 "name": "BookingCode",
@@ -13675,7 +13676,7 @@ class AirSearchModifiers:
 
     @dataclass
     class ProhibitedBookingCodes:
-        booking_code: List[BookingCode] = field(
+        booking_code: list[BookingCode] = field(
             default_factory=list,
             metadata={
                 "name": "BookingCode",
@@ -13708,7 +13709,7 @@ class AirVoidDocumentReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -13717,7 +13718,7 @@ class AirVoidDocumentReq(BaseReq):
             "max_length": 8,
         }
     )
-    void_document_info: List[VoidDocumentInfo] = field(
+    void_document_info: list[VoidDocumentInfo] = field(
         default_factory=list,
         metadata={
             "name": "VoidDocumentInfo",
@@ -13732,7 +13733,7 @@ class AirVoidDocumentReq(BaseReq):
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -13741,7 +13742,7 @@ class AirVoidDocumentReq(BaseReq):
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -13766,7 +13767,7 @@ class AlternateLocationDistanceList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    alternate_location_distance: List[AlternateLocationDistance] = field(
+    alternate_location_distance: list[AlternateLocationDistance] = field(
         default_factory=list,
         metadata={
             "name": "AlternateLocationDistance",
@@ -13785,7 +13786,7 @@ class AlternateRoute:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    leg: List[Leg] = field(
+    leg: list[Leg] = field(
         default_factory=list,
         metadata={
             "name": "Leg",
@@ -13794,7 +13795,7 @@ class AlternateRoute:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -13837,7 +13838,7 @@ class AuditData:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -13845,77 +13846,77 @@ class AuditData:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
@@ -13932,14 +13933,14 @@ class BaggageAllowance:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    number_of_pieces: Optional[int] = field(
+    number_of_pieces: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfPieces",
             "type": "Element",
         }
     )
-    max_weight: Optional[TypeWeight] = field(
+    max_weight: None | TypeWeight = field(
         default=None,
         metadata={
             "name": "MaxWeight",
@@ -13956,7 +13957,7 @@ class BaggageRestriction:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    dimension: List[Dimension] = field(
+    dimension: list[Dimension] = field(
         default_factory=list,
         metadata={
             "name": "Dimension",
@@ -13964,7 +13965,7 @@ class BaggageRestriction:
             "max_occurs": 999,
         }
     )
-    max_weight: List[TypeUnitOfMeasure] = field(
+    max_weight: list[TypeUnitOfMeasure] = field(
         default_factory=list,
         metadata={
             "name": "MaxWeight",
@@ -13972,7 +13973,7 @@ class BaggageRestriction:
             "max_occurs": 999,
         }
     )
-    text_info: List[TextInfo] = field(
+    text_info: list[TextInfo] = field(
         default_factory=list,
         metadata={
             "name": "TextInfo",
@@ -14000,7 +14001,7 @@ class BookingRules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_rules_fare_reference: List[BookingRulesFareReference] = field(
+    booking_rules_fare_reference: list[BookingRulesFareReference] = field(
         default_factory=list,
         metadata={
             "name": "BookingRulesFareReference",
@@ -14008,7 +14009,7 @@ class BookingRules:
             "max_occurs": 999,
         }
     )
-    rule_info: List["BookingRules.RuleInfo"] = field(
+    rule_info: list[BookingRules.RuleInfo] = field(
         default_factory=list,
         metadata={
             "name": "RuleInfo",
@@ -14016,7 +14017,7 @@ class BookingRules:
             "max_occurs": 999,
         }
     )
-    restriction: List[Restriction] = field(
+    restriction: list[Restriction] = field(
         default_factory=list,
         metadata={
             "name": "Restriction",
@@ -14024,7 +14025,7 @@ class BookingRules:
             "max_occurs": 999,
         }
     )
-    document_required: List[DocumentRequired] = field(
+    document_required: list[DocumentRequired] = field(
         default_factory=list,
         metadata={
             "name": "DocumentRequired",
@@ -14032,7 +14033,7 @@ class BookingRules:
             "max_occurs": 999,
         }
     )
-    gender_dob_required: Optional[bool] = field(
+    gender_dob_required: None | bool = field(
         default=None,
         metadata={
             "name": "GenderDobRequired",
@@ -14042,7 +14043,7 @@ class BookingRules:
 
     @dataclass
     class RuleInfo:
-        charges_rules: Optional[ChargesRules] = field(
+        charges_rules: None | ChargesRules = field(
             default=None,
             metadata={
                 "name": "ChargesRules",
@@ -14084,7 +14085,7 @@ class BrandingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    price_range: List[PriceRange] = field(
+    price_range: list[PriceRange] = field(
         default_factory=list,
         metadata={
             "name": "PriceRange",
@@ -14092,7 +14093,7 @@ class BrandingInfo:
             "max_occurs": 5,
         }
     )
-    text: List[Text] = field(
+    text: list[Text] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -14100,7 +14101,7 @@ class BrandingInfo:
             "max_occurs": 99,
         }
     )
-    title: List[Title] = field(
+    title: list[Title] = field(
         default_factory=list,
         metadata={
             "name": "Title",
@@ -14108,7 +14109,7 @@ class BrandingInfo:
             "max_occurs": 2,
         }
     )
-    image_location: List[ImageLocation] = field(
+    image_location: list[ImageLocation] = field(
         default_factory=list,
         metadata={
             "name": "ImageLocation",
@@ -14116,14 +14117,14 @@ class BrandingInfo:
             "max_occurs": 3,
         }
     )
-    service_group: Optional[ServiceGroup] = field(
+    service_group: None | ServiceGroup = field(
         default=None,
         metadata={
             "name": "ServiceGroup",
             "type": "Element",
         }
     )
-    air_segment_ref: List[CommonTypeSegmentRef] = field(
+    air_segment_ref: list[CommonTypeSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -14132,35 +14133,35 @@ class BrandingInfo:
             "max_occurs": 99,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
         }
     )
-    external_service_name: Optional[str] = field(
+    external_service_name: None | str = field(
         default=None,
         metadata={
             "name": "ExternalServiceName",
             "type": "Attribute",
         }
     )
-    service_type: Optional[str] = field(
+    service_type: None | str = field(
         default=None,
         metadata={
             "name": "ServiceType",
             "type": "Attribute",
         }
     )
-    commercial_name: Optional[str] = field(
+    commercial_name: None | str = field(
         default=None,
         metadata={
             "name": "CommercialName",
@@ -14168,7 +14169,7 @@ class BrandingInfo:
             "required": True,
         }
     )
-    chargeable: Optional[str] = field(
+    chargeable: None | str = field(
         default=None,
         metadata={
             "name": "Chargeable",
@@ -14182,7 +14183,7 @@ class BundledServices:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    bundled_service: List[BundledService] = field(
+    bundled_service: list[BundledService] = field(
         default_factory=list,
         metadata={
             "name": "BundledService",
@@ -14222,7 +14223,7 @@ class Connection:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_note: Optional[FareNote] = field(
+    fare_note: None | FareNote = field(
         default=None,
         metadata={
             "name": "FareNote",
@@ -14257,35 +14258,35 @@ class Connection:
             "type": "Attribute",
         }
     )
-    min_connection_time: Optional[int] = field(
+    min_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MinConnectionTime",
             "type": "Attribute",
         }
     )
-    duration: Optional[int] = field(
+    duration: None | int = field(
         default=None,
         metadata={
             "name": "Duration",
             "type": "Attribute",
         }
     )
-    segment_index: Optional[int] = field(
+    segment_index: None | int = field(
         default=None,
         metadata={
             "name": "SegmentIndex",
             "type": "Attribute",
         }
     )
-    flight_details_index: Optional[int] = field(
+    flight_details_index: None | int = field(
         default=None,
         metadata={
             "name": "FlightDetailsIndex",
             "type": "Attribute",
         }
     )
-    include_stop_over_to_fare_quote: Optional[TypeIgnoreStopOver] = field(
+    include_stop_over_to_fare_quote: None | TypeIgnoreStopOver = field(
         default=None,
         metadata={
             "name": "IncludeStopOverToFareQuote",
@@ -14308,7 +14309,7 @@ class DetailedBillingInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+    form_of_payment_ref: None | FormOfPaymentRef = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
@@ -14316,7 +14317,7 @@ class DetailedBillingInformation:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -14325,7 +14326,7 @@ class DetailedBillingInformation:
             "max_occurs": 999,
         }
     )
-    billing_detail_item: List[BillingDetailItem] = field(
+    billing_detail_item: list[BillingDetailItem] = field(
         default_factory=list,
         metadata={
             "name": "BillingDetailItem",
@@ -14353,35 +14354,35 @@ class DocumentSelect:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    back_office_hand_off: Optional[BackOfficeHandOff] = field(
+    back_office_hand_off: None | BackOfficeHandOff = field(
         default=None,
         metadata={
             "name": "BackOfficeHandOff",
             "type": "Element",
         }
     )
-    itinerary: Optional[Itinerary] = field(
+    itinerary: None | Itinerary = field(
         default=None,
         metadata={
             "name": "Itinerary",
             "type": "Element",
         }
     )
-    issue_ticket_only: Optional[bool] = field(
+    issue_ticket_only: None | bool = field(
         default=None,
         metadata={
             "name": "IssueTicketOnly",
             "type": "Attribute",
         }
     )
-    issue_electronic_ticket: Optional[bool] = field(
+    issue_electronic_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "IssueElectronicTicket",
             "type": "Attribute",
         }
     )
-    fax_indicator: Optional[bool] = field(
+    fax_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "FaxIndicator",
@@ -14400,7 +14401,7 @@ class EmdpricingInfo:
         name = "EMDPricingInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -14408,28 +14409,28 @@ class EmdpricingInfo:
             "max_occurs": 999,
         }
     )
-    base_fare: Optional[str] = field(
+    base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
         }
     )
-    total_fare: Optional[str] = field(
+    total_fare: None | str = field(
         default=None,
         metadata={
             "name": "TotalFare",
             "type": "Attribute",
         }
     )
-    total_tax: Optional[str] = field(
+    total_tax: None | str = field(
         default=None,
         metadata={
             "name": "TotalTax",
             "type": "Attribute",
         }
     )
-    equiv_fare: Optional[str] = field(
+    equiv_fare: None | str = field(
         default=None,
         metadata={
             "name": "EquivFare",
@@ -14469,7 +14470,7 @@ class Emdsummary:
         name = "EMDSummary"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdcoupon: List[Emdcoupon] = field(
+    emdcoupon: list[Emdcoupon] = field(
         default_factory=list,
         metadata={
             "name": "EMDCoupon",
@@ -14477,7 +14478,7 @@ class Emdsummary:
             "max_occurs": 999,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -14486,14 +14487,14 @@ class Emdsummary:
             "length": 13,
         }
     )
-    primary_document_indicator: Optional[bool] = field(
+    primary_document_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "PrimaryDocumentIndicator",
             "type": "Attribute",
         }
     )
-    in_conjunction_with: Optional[str] = field(
+    in_conjunction_with: None | str = field(
         default=None,
         metadata={
             "name": "InConjunctionWith",
@@ -14501,7 +14502,7 @@ class Emdsummary:
             "length": 13,
         }
     )
-    associated_ticket_number: Optional[str] = field(
+    associated_ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "AssociatedTicketNumber",
@@ -14509,7 +14510,7 @@ class Emdsummary:
             "length": 13,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -14517,28 +14518,28 @@ class Emdsummary:
             "length": 2,
         }
     )
-    issue_date: Optional[XmlDateTime] = field(
+    issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -14581,7 +14582,7 @@ class ElectronicMiscDocument:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdcoupon: List[Emdcoupon] = field(
+    emdcoupon: list[Emdcoupon] = field(
         default_factory=list,
         metadata={
             "name": "EMDCoupon",
@@ -14590,7 +14591,7 @@ class ElectronicMiscDocument:
             "max_occurs": 999,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -14599,14 +14600,14 @@ class ElectronicMiscDocument:
             "length": 13,
         }
     )
-    primary_document_indicator: Optional[bool] = field(
+    primary_document_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "PrimaryDocumentIndicator",
             "type": "Attribute",
         }
     )
-    in_conjunction_with: Optional[str] = field(
+    in_conjunction_with: None | str = field(
         default=None,
         metadata={
             "name": "InConjunctionWith",
@@ -14614,7 +14615,7 @@ class ElectronicMiscDocument:
             "length": 13,
         }
     )
-    associated_ticket_number: Optional[str] = field(
+    associated_ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "AssociatedTicketNumber",
@@ -14622,7 +14623,7 @@ class ElectronicMiscDocument:
             "length": 13,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -14630,35 +14631,35 @@ class ElectronicMiscDocument:
             "length": 2,
         }
     )
-    issue_date: Optional[XmlDateTime] = field(
+    issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -14685,7 +14686,7 @@ class Enumeration:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    solution_group: List[SolutionGroup] = field(
+    solution_group: list[SolutionGroup] = field(
         default_factory=list,
         metadata={
             "name": "SolutionGroup",
@@ -14710,7 +14711,7 @@ class ExchangeEligibilityInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    exchange_penalty_info: List[ExchangePenaltyInfo] = field(
+    exchange_penalty_info: list[ExchangePenaltyInfo] = field(
         default_factory=list,
         metadata={
             "name": "ExchangePenaltyInfo",
@@ -14718,21 +14719,21 @@ class ExchangeEligibilityInfo:
             "max_occurs": 999,
         }
     )
-    eligible_fares: Optional[str] = field(
+    eligible_fares: None | str = field(
         default=None,
         metadata={
             "name": "EligibleFares",
             "type": "Attribute",
         }
     )
-    refundable_fares: Optional[str] = field(
+    refundable_fares: None | str = field(
         default=None,
         metadata={
             "name": "RefundableFares",
             "type": "Attribute",
         }
     )
-    passed_automation_checks: Optional[bool] = field(
+    passed_automation_checks: None | bool = field(
         default=None,
         metadata={
             "name": "PassedAutomationChecks",
@@ -14759,7 +14760,7 @@ class ExpertSolution:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    leg_price: List[LegPrice] = field(
+    leg_price: list[LegPrice] = field(
         default_factory=list,
         metadata={
             "name": "LegPrice",
@@ -14768,7 +14769,7 @@ class ExpertSolution:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -14776,21 +14777,21 @@ class ExpertSolution:
             "required": True,
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    created_date: Optional[XmlDate] = field(
+    created_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CreatedDate",
@@ -14816,7 +14817,7 @@ class Facility:
     emd:
     service_data:
     tour_code:
-    type: The type of facility
+    type_value: The type of facility
     seat_code: If a seat type, the seat identifier
     availability: If a seat type, the availability of the seat
     seat_price: The price of the seat, if applicable.
@@ -14853,7 +14854,7 @@ class Facility:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    characteristic: List[Characteristic] = field(
+    characteristic: list[Characteristic] = field(
         default_factory=list,
         metadata={
             "name": "Characteristic",
@@ -14861,7 +14862,7 @@ class Facility:
             "max_occurs": 999,
         }
     )
-    remark: List[Remark] = field(
+    remark: list[Remark] = field(
         default_factory=list,
         metadata={
             "name": "Remark",
@@ -14870,7 +14871,7 @@ class Facility:
             "max_occurs": 999,
         }
     )
-    passenger_seat_price: List[PassengerSeatPrice] = field(
+    passenger_seat_price: list[PassengerSeatPrice] = field(
         default_factory=list,
         metadata={
             "name": "PassengerSeatPrice",
@@ -14878,7 +14879,7 @@ class Facility:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -14886,14 +14887,14 @@ class Facility:
             "max_occurs": 999,
         }
     )
-    emd: Optional[Emd] = field(
+    emd: None | Emd = field(
         default=None,
         metadata={
             "name": "EMD",
             "type": "Element",
         }
     )
-    service_data: List[ServiceData] = field(
+    service_data: list[ServiceData] = field(
         default_factory=list,
         metadata={
             "name": "ServiceData",
@@ -14902,14 +14903,14 @@ class Facility:
             "max_occurs": 999,
         }
     )
-    tour_code: Optional[TourCode] = field(
+    tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
         }
     )
-    type: Optional[TypeFacility] = field(
+    type_value: None | TypeFacility = field(
         default=None,
         metadata={
             "name": "Type",
@@ -14917,35 +14918,35 @@ class Facility:
             "required": True,
         }
     )
-    seat_code: Optional[str] = field(
+    seat_code: None | str = field(
         default=None,
         metadata={
             "name": "SeatCode",
             "type": "Attribute",
         }
     )
-    availability: Optional[TypeSeatAvailability] = field(
+    availability: None | TypeSeatAvailability = field(
         default=None,
         metadata={
             "name": "Availability",
             "type": "Attribute",
         }
     )
-    seat_price: Optional[str] = field(
+    seat_price: None | str = field(
         default=None,
         metadata={
             "name": "SeatPrice",
             "type": "Attribute",
         }
     )
-    paid: Optional[bool] = field(
+    paid: None | bool = field(
         default=None,
         metadata={
             "name": "Paid",
             "type": "Attribute",
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
@@ -14953,7 +14954,7 @@ class Facility:
             "max_length": 3,
         }
     )
-    ssrcode: Optional[str] = field(
+    ssrcode: None | str = field(
         default=None,
         metadata={
             "name": "SSRCode",
@@ -14962,7 +14963,7 @@ class Facility:
             "max_length": 4,
         }
     )
-    issuance_reason: Optional[str] = field(
+    issuance_reason: None | str = field(
         default=None,
         metadata={
             "name": "IssuanceReason",
@@ -14971,70 +14972,70 @@ class Facility:
             "max_length": 1,
         }
     )
-    base_seat_price: Optional[str] = field(
+    base_seat_price: None | str = field(
         default=None,
         metadata={
             "name": "BaseSeatPrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    quantity: Optional[int] = field(
+    quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
         }
     )
-    sequence_number: Optional[int] = field(
+    sequence_number: None | int = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
         }
     )
-    inclusive_of_tax: Optional[bool] = field(
+    inclusive_of_tax: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveOfTax",
             "type": "Attribute",
         }
     )
-    interline_settlement_allowed: Optional[bool] = field(
+    interline_settlement_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "InterlineSettlementAllowed",
             "type": "Attribute",
         }
     )
-    geography_specification: Optional[str] = field(
+    geography_specification: None | str = field(
         default=None,
         metadata={
             "name": "GeographySpecification",
             "type": "Attribute",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
         }
     )
-    optional_service_ref: Optional[str] = field(
+    optional_service_ref: None | str = field(
         default=None,
         metadata={
             "name": "OptionalServiceRef",
             "type": "Attribute",
         }
     )
-    seat_information_ref: Optional[str] = field(
+    seat_information_ref: None | str = field(
         default=None,
         metadata={
             "name": "SeatInformationRef",
@@ -15051,7 +15052,7 @@ class FareNoteList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_note: List[FareNote] = field(
+    fare_note: list[FareNote] = field(
         default_factory=list,
         metadata={
             "name": "FareNote",
@@ -15069,7 +15070,7 @@ class FareRemarkList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_remark: List[FareRemark] = field(
+    fare_remark: list[FareRemark] = field(
         default_factory=list,
         metadata={
             "name": "FareRemark",
@@ -15088,7 +15089,7 @@ class FareRestriction:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_restriction_days_of_week: List[FareRestrictionDaysOfWeek] = field(
+    fare_restriction_days_of_week: list[FareRestrictionDaysOfWeek] = field(
         default_factory=list,
         metadata={
             "name": "FareRestrictionDaysOfWeek",
@@ -15096,7 +15097,7 @@ class FareRestriction:
             "max_occurs": 3,
         }
     )
-    fare_restriction_date: List[FareRestrictionDate] = field(
+    fare_restriction_date: list[FareRestrictionDate] = field(
         default_factory=list,
         metadata={
             "name": "FareRestrictionDate",
@@ -15104,14 +15105,14 @@ class FareRestriction:
             "max_occurs": 999,
         }
     )
-    fare_restriction_sale_date: Optional[FareRestrictionSaleDate] = field(
+    fare_restriction_sale_date: None | FareRestrictionSaleDate = field(
         default=None,
         metadata={
             "name": "FareRestrictionSaleDate",
             "type": "Element",
         }
     )
-    fare_restriction_seasonal: List[FareRestrictionSeasonal] = field(
+    fare_restriction_seasonal: list[FareRestrictionSeasonal] = field(
         default_factory=list,
         metadata={
             "name": "FareRestrictionSeasonal",
@@ -15119,7 +15120,7 @@ class FareRestriction:
             "max_occurs": 999,
         }
     )
-    fare_restrictiontype: Optional[TypeFareRestrictionType] = field(
+    fare_restrictiontype: None | TypeFareRestrictionType = field(
         default=None,
         metadata={
             "name": "FareRestrictiontype",
@@ -15138,7 +15139,7 @@ class FareRuleCategoryTypes:
         Fare Rules is of variable lenght
     value:
     """
-    category_details: List[ValueDetails] = field(
+    category_details: list[ValueDetails] = field(
         default_factory=list,
         metadata={
             "name": "CategoryDetails",
@@ -15147,7 +15148,7 @@ class FareRuleCategoryTypes:
             "max_occurs": 99,
         }
     )
-    variable_category_details: List[CategoryDetailsType] = field(
+    variable_category_details: list[CategoryDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "VariableCategoryDetails",
@@ -15156,7 +15157,7 @@ class FareRuleCategoryTypes:
             "max_occurs": 99,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
@@ -15186,49 +15187,49 @@ class FareRulesFilter:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    refundability: Optional["FareRulesFilter.Refundability"] = field(
+    refundability: None | FareRulesFilter.Refundability = field(
         default=None,
         metadata={
             "name": "Refundability",
             "type": "Element",
         }
     )
-    latest_ticketing_time: Optional[XmlDateTime] = field(
+    latest_ticketing_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LatestTicketingTime",
             "type": "Element",
         }
     )
-    chg: Optional[Chgtype] = field(
+    chg: None | Chgtype = field(
         default=None,
         metadata={
             "name": "CHG",
             "type": "Element",
         }
     )
-    min: Optional[Mintype] = field(
+    min: None | Mintype = field(
         default=None,
         metadata={
             "name": "MIN",
             "type": "Element",
         }
     )
-    max: Optional[Maxtype] = field(
+    max: None | Maxtype = field(
         default=None,
         metadata={
             "name": "MAX",
             "type": "Element",
         }
     )
-    adv: Optional[Advtype] = field(
+    adv: None | Advtype = field(
         default=None,
         metadata={
             "name": "ADV",
             "type": "Element",
         }
     )
-    oth: Optional[Othtype] = field(
+    oth: None | Othtype = field(
         default=None,
         metadata={
             "name": "OTH",
@@ -15245,7 +15246,7 @@ class FareRulesFilter:
             RefundableWithPenalty (1G,1V), Refundable (1P,1J),
             NonRefundable (1G,1V,1P,1J).Refundable.
         """
-        value: Optional[str] = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "name": "Value",
@@ -15275,7 +15276,7 @@ class FaxDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    phone_number: Optional[PhoneNumber] = field(
+    phone_number: None | PhoneNumber = field(
         default=None,
         metadata={
             "name": "PhoneNumber",
@@ -15284,14 +15285,14 @@ class FaxDetails:
             "required": True,
         }
     )
-    term_conditions: Optional[TermConditions] = field(
+    term_conditions: None | TermConditions = field(
         default=None,
         metadata={
             "name": "TermConditions",
             "type": "Element",
         }
     )
-    remark: List[Remark] = field(
+    remark: list[Remark] = field(
         default_factory=list,
         metadata={
             "name": "Remark",
@@ -15300,35 +15301,35 @@ class FaxDetails:
             "max_occurs": 999,
         }
     )
-    include_cover_sheet: Optional[bool] = field(
+    include_cover_sheet: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeCoverSheet",
             "type": "Attribute",
         }
     )
-    to: Optional[str] = field(
+    to: None | str = field(
         default=None,
         metadata={
             "name": "To",
             "type": "Attribute",
         }
     )
-    from_value: Optional[str] = field(
+    from_value: None | str = field(
         default=None,
         metadata={
             "name": "From",
             "type": "Attribute",
         }
     )
-    dept_billing_code: Optional[str] = field(
+    dept_billing_code: None | str = field(
         default=None,
         metadata={
             "name": "DeptBillingCode",
             "type": "Attribute",
         }
     )
-    invoice_number: Optional[str] = field(
+    invoice_number: None | str = field(
         default=None,
         metadata={
             "name": "InvoiceNumber",
@@ -15372,14 +15373,14 @@ class FlightInfoDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    codeshare_info: Optional[CodeshareInfo] = field(
+    codeshare_info: None | CodeshareInfo = field(
         default=None,
         metadata={
             "name": "CodeshareInfo",
             "type": "Element",
         }
     )
-    meals: List[TypeMealService] = field(
+    meals: list[TypeMealService] = field(
         default_factory=list,
         metadata={
             "name": "Meals",
@@ -15387,7 +15388,7 @@ class FlightInfoDetail:
             "max_occurs": 999,
         }
     )
-    in_flight_services: List[str] = field(
+    in_flight_services: list[str] = field(
         default_factory=list,
         metadata={
             "name": "InFlightServices",
@@ -15395,7 +15396,7 @@ class FlightInfoDetail:
             "max_occurs": 999,
         }
     )
-    variance: List[Variance] = field(
+    variance: list[Variance] = field(
         default_factory=list,
         metadata={
             "name": "Variance",
@@ -15403,7 +15404,7 @@ class FlightInfoDetail:
             "max_occurs": 999,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -15413,7 +15414,7 @@ class FlightInfoDetail:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -15423,35 +15424,35 @@ class FlightInfoDetail:
             "white_space": "collapse",
         }
     )
-    scheduled_departure_time: Optional[str] = field(
+    scheduled_departure_time: None | str = field(
         default=None,
         metadata={
             "name": "ScheduledDepartureTime",
             "type": "Attribute",
         }
     )
-    scheduled_arrival_time: Optional[str] = field(
+    scheduled_arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ScheduledArrivalTime",
             "type": "Attribute",
         }
     )
-    travel_time: Optional[int] = field(
+    travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
         }
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
         }
     )
-    equipment: Optional[str] = field(
+    equipment: None | str = field(
         default=None,
         metadata={
             "name": "Equipment",
@@ -15459,14 +15460,14 @@ class FlightInfoDetail:
             "length": 3,
         }
     )
-    origin_terminal: Optional[str] = field(
+    origin_terminal: None | str = field(
         default=None,
         metadata={
             "name": "OriginTerminal",
             "type": "Attribute",
         }
     )
-    origin_gate: Optional[str] = field(
+    origin_gate: None | str = field(
         default=None,
         metadata={
             "name": "OriginGate",
@@ -15474,14 +15475,14 @@ class FlightInfoDetail:
             "max_length": 6,
         }
     )
-    destination_terminal: Optional[str] = field(
+    destination_terminal: None | str = field(
         default=None,
         metadata={
             "name": "DestinationTerminal",
             "type": "Attribute",
         }
     )
-    destination_gate: Optional[str] = field(
+    destination_gate: None | str = field(
         default=None,
         metadata={
             "name": "DestinationGate",
@@ -15506,14 +15507,14 @@ class FlightTimeTableCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    general_time_table: Optional[GeneralTimeTable] = field(
+    general_time_table: None | GeneralTimeTable = field(
         default=None,
         metadata={
             "name": "GeneralTimeTable",
             "type": "Element",
         }
     )
-    specific_time_table: Optional[SpecificTimeTable] = field(
+    specific_time_table: None | SpecificTimeTable = field(
         default=None,
         metadata={
             "name": "SpecificTimeTable",
@@ -15542,7 +15543,7 @@ class IssuanceModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+    form_of_payment_ref: None | FormOfPaymentRef = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
@@ -15550,7 +15551,7 @@ class IssuanceModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    form_of_payment: Optional[FormOfPayment] = field(
+    form_of_payment: None | FormOfPayment = field(
         default=None,
         metadata={
             "name": "FormOfPayment",
@@ -15558,14 +15559,14 @@ class IssuanceModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    customer_receipt_info: Optional[CustomerReceiptInfo] = field(
+    customer_receipt_info: None | CustomerReceiptInfo = field(
         default=None,
         metadata={
             "name": "CustomerReceiptInfo",
             "type": "Element",
         }
     )
-    emdendorsement: Optional[str] = field(
+    emdendorsement: None | str = field(
         default=None,
         metadata={
             "name": "EMDEndorsement",
@@ -15574,14 +15575,14 @@ class IssuanceModifiers:
             "max_length": 255,
         }
     )
-    emdcommission: Optional[Emdcommission] = field(
+    emdcommission: None | Emdcommission = field(
         default=None,
         metadata={
             "name": "EMDCommission",
             "type": "Element",
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -15599,7 +15600,7 @@ class PassengerType(TypePassengerType):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_guarantee_info: Optional[FareGuaranteeInfo] = field(
+    fare_guarantee_info: None | FareGuaranteeInfo = field(
         default=None,
         metadata={
             "name": "FareGuaranteeInfo",
@@ -15620,14 +15621,14 @@ class PenaltyFareInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    penalty_info: Optional[TypeFarePenalty] = field(
+    penalty_info: None | TypeFarePenalty = field(
         default=None,
         metadata={
             "name": "PenaltyInfo",
             "type": "Element",
         }
     )
-    prohibit_penalty_fares: Optional[bool] = field(
+    prohibit_penalty_fares: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitPenaltyFares",
@@ -15653,14 +15654,14 @@ class PrePayCustomer:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    person_name: Optional[PersonName] = field(
+    person_name: None | PersonName = field(
         default=None,
         metadata={
             "name": "PersonName",
             "type": "Element",
         }
     )
-    email: List[Email] = field(
+    email: list[Email] = field(
         default_factory=list,
         metadata={
             "name": "Email",
@@ -15669,7 +15670,7 @@ class PrePayCustomer:
             "max_occurs": 999,
         }
     )
-    address: List[TypeStructuredAddress] = field(
+    address: list[TypeStructuredAddress] = field(
         default_factory=list,
         metadata={
             "name": "Address",
@@ -15677,7 +15678,7 @@ class PrePayCustomer:
             "max_occurs": 999,
         }
     )
-    related_traveler: List[RelatedTraveler] = field(
+    related_traveler: list[RelatedTraveler] = field(
         default_factory=list,
         metadata={
             "name": "RelatedTraveler",
@@ -15685,7 +15686,7 @@ class PrePayCustomer:
             "max_occurs": 999,
         }
     )
-    loyalty_card: List[LoyaltyCard] = field(
+    loyalty_card: list[LoyaltyCard] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyCard",
@@ -15711,7 +15712,7 @@ class PrePayPriceInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -15719,21 +15720,21 @@ class PrePayPriceInfo:
             "max_occurs": 999,
         }
     )
-    base_fare: Optional[str] = field(
+    base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
         }
     )
-    total_fare: Optional[str] = field(
+    total_fare: None | str = field(
         default=None,
         metadata={
             "name": "TotalFare",
             "type": "Attribute",
         }
     )
-    total_tax: Optional[str] = field(
+    total_tax: None | str = field(
         default=None,
         metadata={
             "name": "TotalTax",
@@ -15796,7 +15797,7 @@ class RepricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    private_fare_options: Optional[str] = field(
+    private_fare_options: None | str = field(
         default=None,
         metadata={
             "name": "PrivateFareOptions",
@@ -15804,7 +15805,7 @@ class RepricingModifiers:
             "max_length": 50,
         }
     )
-    fare_type: List[FareType] = field(
+    fare_type: list[FareType] = field(
         default_factory=list,
         metadata={
             "name": "FareType",
@@ -15812,21 +15813,21 @@ class RepricingModifiers:
             "max_occurs": 100,
         }
     )
-    fare_ticket_designator: Optional[FareTicketDesignator] = field(
+    fare_ticket_designator: None | FareTicketDesignator = field(
         default=None,
         metadata={
             "name": "FareTicketDesignator",
             "type": "Element",
         }
     )
-    override_currency: Optional["RepricingModifiers.OverrideCurrency"] = field(
+    override_currency: None | RepricingModifiers.OverrideCurrency = field(
         default=None,
         metadata={
             "name": "OverrideCurrency",
             "type": "Element",
         }
     )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+    air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentPricingModifiers",
@@ -15834,7 +15835,7 @@ class RepricingModifiers:
             "max_occurs": 999,
         }
     )
-    withhold_tax_code: List[str] = field(
+    withhold_tax_code: list[str] = field(
         default_factory=list,
         metadata={
             "name": "WithholdTaxCode",
@@ -15843,21 +15844,21 @@ class RepricingModifiers:
             "length": 2,
         }
     )
-    price_class_of_service: Optional[TypePriceClassOfService] = field(
+    price_class_of_service: None | TypePriceClassOfService = field(
         default=None,
         metadata={
             "name": "PriceClassOfService",
             "type": "Attribute",
         }
     )
-    create_date: Optional[XmlDate] = field(
+    create_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
         }
     )
-    reissue_loc_city_code: Optional[str] = field(
+    reissue_loc_city_code: None | str = field(
         default=None,
         metadata={
             "name": "ReissueLocCityCode",
@@ -15865,7 +15866,7 @@ class RepricingModifiers:
             "length": 3,
         }
     )
-    reissue_loc_country_code: Optional[str] = field(
+    reissue_loc_country_code: None | str = field(
         default=None,
         metadata={
             "name": "ReissueLocCountryCode",
@@ -15880,14 +15881,14 @@ class RepricingModifiers:
             "type": "Attribute",
         }
     )
-    account_code: Optional[str] = field(
+    account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
         }
     )
-    penalty_as_tax_code: Optional[str] = field(
+    penalty_as_tax_code: None | str = field(
         default=None,
         metadata={
             "name": "PenaltyAsTaxCode",
@@ -15895,14 +15896,14 @@ class RepricingModifiers:
             "length": 2,
         }
     )
-    air_pricing_solution_ref: Optional[str] = field(
+    air_pricing_solution_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingSolutionRef",
             "type": "Attribute",
         }
     )
-    penalty_to_fare: Optional[bool] = field(
+    penalty_to_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PenaltyToFare",
@@ -15923,7 +15924,7 @@ class RepricingModifiers:
             "type": "Attribute",
         }
     )
-    brand_modifier: Optional[str] = field(
+    brand_modifier: None | str = field(
         default=None,
         metadata={
             "name": "BrandModifier",
@@ -15937,7 +15938,7 @@ class RepricingModifiers:
             "type": "Attribute",
         }
     )
-    time_window: Optional[int] = field(
+    time_window: None | int = field(
         default=None,
         metadata={
             "name": "TimeWindow",
@@ -15960,7 +15961,7 @@ class RepricingModifiers:
             "type": "Attribute",
         }
     )
-    connection_point: Optional[str] = field(
+    connection_point: None | str = field(
         default=None,
         metadata={
             "name": "ConnectionPoint",
@@ -15972,7 +15973,7 @@ class RepricingModifiers:
 
     @dataclass
     class OverrideCurrency:
-        currency_code: Optional[str] = field(
+        currency_code: None | str = field(
             default=None,
             metadata={
                 "name": "CurrencyCode",
@@ -15980,7 +15981,7 @@ class RepricingModifiers:
                 "length": 3,
             }
         )
-        country_code: Optional[str] = field(
+        country_code: None | str = field(
             default=None,
             metadata={
                 "name": "CountryCode",
@@ -15998,7 +15999,7 @@ class Route:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    leg: List[Leg] = field(
+    leg: list[Leg] = field(
         default_factory=list,
         metadata={
             "name": "Leg",
@@ -16007,7 +16008,7 @@ class Route:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -16025,14 +16026,14 @@ class RuleLengthOfStay:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    minimum_stay: Optional[TypeRestrictionLengthOfStay] = field(
+    minimum_stay: None | TypeRestrictionLengthOfStay = field(
         default=None,
         metadata={
             "name": "MinimumStay",
             "type": "Element",
         }
     )
-    maximum_stay: Optional[TypeRestrictionLengthOfStay] = field(
+    maximum_stay: None | TypeRestrictionLengthOfStay = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -16060,7 +16061,7 @@ class TcrexchangeBundle:
         name = "TCRExchangeBundle"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_exchange_info: Optional[AirExchangeInfo] = field(
+    air_exchange_info: None | AirExchangeInfo = field(
         default=None,
         metadata={
             "name": "AirExchangeInfo",
@@ -16069,7 +16070,7 @@ class TcrexchangeBundle:
             "required": True,
         }
     )
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -16078,7 +16079,7 @@ class TcrexchangeBundle:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -16086,7 +16087,7 @@ class TcrexchangeBundle:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -16094,7 +16095,7 @@ class TcrexchangeBundle:
             "max_occurs": 999,
         }
     )
-    penalty: List[CommonPenalty] = field(
+    penalty: list[CommonPenalty] = field(
         default_factory=list,
         metadata={
             "name": "Penalty",
@@ -16103,7 +16104,7 @@ class TcrexchangeBundle:
             "max_occurs": 999,
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
@@ -16138,7 +16139,7 @@ class Ticket:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    coupon: List[Coupon] = field(
+    coupon: list[Coupon] = field(
         default_factory=list,
         metadata={
             "name": "Coupon",
@@ -16147,7 +16148,7 @@ class Ticket:
             "max_occurs": 4,
         }
     )
-    ticket_endorsement: List[TicketEndorsement] = field(
+    ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
         metadata={
             "name": "TicketEndorsement",
@@ -16155,7 +16156,7 @@ class Ticket:
             "max_occurs": 6,
         }
     )
-    tour_code: List[TourCode] = field(
+    tour_code: list[TourCode] = field(
         default_factory=list,
         metadata={
             "name": "TourCode",
@@ -16163,7 +16164,7 @@ class Ticket:
             "max_occurs": 999,
         }
     )
-    exchanged_ticket_info: List[ExchangedTicketInfo] = field(
+    exchanged_ticket_info: list[ExchangedTicketInfo] = field(
         default_factory=list,
         metadata={
             "name": "ExchangedTicketInfo",
@@ -16171,14 +16172,14 @@ class Ticket:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -16187,21 +16188,21 @@ class Ticket:
             "length": 13,
         }
     )
-    ticket_status: Optional[TypeTicketStatus] = field(
+    ticket_status: None | TypeTicketStatus = field(
         default=None,
         metadata={
             "name": "TicketStatus",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -16232,7 +16233,7 @@ class TicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    name: Optional[Name] = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -16241,7 +16242,7 @@ class TicketInfo:
             "required": True,
         }
     )
-    conjuncted_ticket_info: List[ConjunctedTicketInfo] = field(
+    conjuncted_ticket_info: list[ConjunctedTicketInfo] = field(
         default_factory=list,
         metadata={
             "name": "ConjunctedTicketInfo",
@@ -16249,7 +16250,7 @@ class TicketInfo:
             "max_occurs": 3,
         }
     )
-    exchanged_ticket_info: List[ExchangedTicketInfo] = field(
+    exchanged_ticket_info: list[ExchangedTicketInfo] = field(
         default_factory=list,
         metadata={
             "name": "ExchangedTicketInfo",
@@ -16257,7 +16258,7 @@ class TicketInfo:
             "max_occurs": 999,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -16265,7 +16266,7 @@ class TicketInfo:
             "required": True,
         }
     )
-    iatanumber: Optional[str] = field(
+    iatanumber: None | str = field(
         default=None,
         metadata={
             "name": "IATANumber",
@@ -16273,14 +16274,14 @@ class TicketInfo:
             "max_length": 8,
         }
     )
-    ticket_issue_date: Optional[XmlDateTime] = field(
+    ticket_issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
             "type": "Attribute",
         }
     )
-    ticketing_agent_sign_on: Optional[str] = field(
+    ticketing_agent_sign_on: None | str = field(
         default=None,
         metadata={
             "name": "TicketingAgentSignOn",
@@ -16288,7 +16289,7 @@ class TicketInfo:
             "max_length": 8,
         }
     )
-    country_code: Optional[str] = field(
+    country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
@@ -16296,7 +16297,7 @@ class TicketInfo:
             "length": 2,
         }
     )
-    status: Optional[TypeTicketStatus] = field(
+    status: None | TypeTicketStatus = field(
         default=None,
         metadata={
             "name": "Status",
@@ -16304,14 +16305,14 @@ class TicketInfo:
             "required": True,
         }
     )
-    bulk_ticket: Optional[bool] = field(
+    bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -16319,7 +16320,7 @@ class TicketInfo:
             "required": True,
         }
     )
-    air_pricing_info_ref: Optional[str] = field(
+    air_pricing_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingInfoRef",
@@ -16342,7 +16343,7 @@ class TypeDefaultBrandDetail:
     class Meta:
         name = "typeDefaultBrandDetail"
 
-    text: List[Text] = field(
+    text: list[Text] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -16351,7 +16352,7 @@ class TypeDefaultBrandDetail:
             "max_occurs": 4,
         }
     )
-    image_location: List[ImageLocation] = field(
+    image_location: list[ImageLocation] = field(
         default_factory=list,
         metadata={
             "name": "ImageLocation",
@@ -16360,7 +16361,7 @@ class TypeDefaultBrandDetail:
             "max_occurs": 3,
         }
     )
-    applicable_segment: List[ApplicableSegment] = field(
+    applicable_segment: list[ApplicableSegment] = field(
         default_factory=list,
         metadata={
             "name": "ApplicableSegment",
@@ -16369,7 +16370,7 @@ class TypeDefaultBrandDetail:
             "max_occurs": 99,
         }
     )
-    brand_id: Optional[str] = field(
+    brand_id: None | str = field(
         default=None,
         metadata={
             "name": "BrandID",
@@ -16385,7 +16386,7 @@ class AccountRelatedRules:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_rules: List[BookingRules] = field(
+    booking_rules: list[BookingRules] = field(
         default_factory=list,
         metadata={
             "name": "BookingRules",
@@ -16393,7 +16394,7 @@ class AccountRelatedRules:
             "max_occurs": 999,
         }
     )
-    routing_rules: Optional[RoutingRules] = field(
+    routing_rules: None | RoutingRules = field(
         default=None,
         metadata={
             "name": "RoutingRules",
@@ -16410,7 +16411,7 @@ class AirExchangeBundleList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_exchange_bundle: List[AirExchangeBundle] = field(
+    air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeBundle",
@@ -16426,7 +16427,7 @@ class AirExchangeEligibilityRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    exchange_eligibility_info: Optional[ExchangeEligibilityInfo] = field(
+    exchange_eligibility_info: None | ExchangeEligibilityInfo = field(
         default=None,
         metadata={
             "name": "ExchangeEligibilityInfo",
@@ -16465,7 +16466,7 @@ class AirExchangeTicketingReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -16475,7 +16476,7 @@ class AirExchangeTicketingReq(BaseReq):
             "max_length": 8,
         }
     )
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -16486,7 +16487,7 @@ class AirExchangeTicketingReq(BaseReq):
             "max_length": 13,
         }
     )
-    ticketing_modifiers_ref: List[TypeTicketingModifiersRef] = field(
+    ticketing_modifiers_ref: list[TypeTicketingModifiersRef] = field(
         default_factory=list,
         metadata={
             "name": "TicketingModifiersRef",
@@ -16494,14 +16495,14 @@ class AirExchangeTicketingReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    detailed_billing_information: List[DetailedBillingInformation] = field(
+    detailed_billing_information: list[DetailedBillingInformation] = field(
         default_factory=list,
         metadata={
             "name": "DetailedBillingInformation",
@@ -16509,7 +16510,7 @@ class AirExchangeTicketingReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_ticketing_modifiers: List[AirTicketingModifiers] = field(
+    air_ticketing_modifiers: list[AirTicketingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirTicketingModifiers",
@@ -16576,7 +16577,7 @@ class AirFareDisplayModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    trip_type: List[TypeFareTripType] = field(
+    trip_type: list[TypeFareTripType] = field(
         default_factory=list,
         metadata={
             "name": "TripType",
@@ -16584,7 +16585,7 @@ class AirFareDisplayModifiers:
             "max_occurs": 3,
         }
     )
-    cabin_class: Optional[CabinClass] = field(
+    cabin_class: None | CabinClass = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -16592,14 +16593,14 @@ class AirFareDisplayModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    penalty_fare_information: Optional[PenaltyFareInformation] = field(
+    penalty_fare_information: None | PenaltyFareInformation = field(
         default=None,
         metadata={
             "name": "PenaltyFareInformation",
             "type": "Element",
         }
     )
-    fare_search_option: List[TypeFareSearchOption] = field(
+    fare_search_option: list[TypeFareSearchOption] = field(
         default_factory=list,
         metadata={
             "name": "FareSearchOption",
@@ -16614,21 +16615,21 @@ class AirFareDisplayModifiers:
             "type": "Attribute",
         }
     )
-    departure_date: Optional[XmlDate] = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    ticketing_date: Optional[XmlDate] = field(
+    ticketing_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketingDate",
             "type": "Attribute",
         }
     )
-    return_date: Optional[XmlDate] = field(
+    return_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ReturnDate",
@@ -16649,14 +16650,14 @@ class AirFareDisplayModifiers:
             "type": "Attribute",
         }
     )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
+    fares_indicator: None | TypeFaresIndicator = field(
         default=None,
         metadata={
             "name": "FaresIndicator",
             "type": "Attribute",
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -16664,28 +16665,28 @@ class AirFareDisplayModifiers:
             "length": 3,
         }
     )
-    include_taxes: Optional[bool] = field(
+    include_taxes: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeTaxes",
             "type": "Attribute",
         }
     )
-    include_estimated_taxes: Optional[bool] = field(
+    include_estimated_taxes: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeEstimatedTaxes",
             "type": "Attribute",
         }
     )
-    include_surcharges: Optional[bool] = field(
+    include_surcharges: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeSurcharges",
             "type": "Attribute",
         }
     )
-    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
+    global_indicator: None | TypeAtpcoglobalIndicator = field(
         default=None,
         metadata={
             "name": "GlobalIndicator",
@@ -16720,7 +16721,7 @@ class AirFareDisplayModifiers:
             "type": "Attribute",
         }
     )
-    validated_fares_only: Optional[bool] = field(
+    validated_fares_only: None | bool = field(
         default=None,
         metadata={
             "name": "ValidatedFaresOnly",
@@ -16734,7 +16735,7 @@ class AirFareDisplayModifiers:
             "type": "Attribute",
         }
     )
-    filed_currency: Optional[str] = field(
+    filed_currency: None | str = field(
         default=None,
         metadata={
             "name": "FiledCurrency",
@@ -16769,21 +16770,21 @@ class AirFareRulesReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_selector: Optional["AirFareRulesReq.AirReservationSelector"] = field(
+    air_reservation_selector: None | AirFareRulesReq.AirReservationSelector = field(
         default=None,
         metadata={
             "name": "AirReservationSelector",
             "type": "Element",
         }
     )
-    fare_rule_lookup: Optional[FareRuleLookup] = field(
+    fare_rule_lookup: None | FareRuleLookup = field(
         default=None,
         metadata={
             "name": "FareRuleLookup",
             "type": "Element",
         }
     )
-    fare_rule_key: List[FareRuleKey] = field(
+    fare_rule_key: list[FareRuleKey] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleKey",
@@ -16791,21 +16792,21 @@ class AirFareRulesReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
+    air_fare_display_rule_key: None | AirFareDisplayRuleKey = field(
         default=None,
         metadata={
             "name": "AirFareDisplayRuleKey",
             "type": "Element",
         }
     )
-    air_fare_rules_modifier: Optional[AirFareRulesModifier] = field(
+    air_fare_rules_modifier: None | AirFareRulesModifier = field(
         default=None,
         metadata={
             "name": "AirFareRulesModifier",
             "type": "Element",
         }
     )
-    fare_rules_filter_category: List["AirFareRulesReq.FareRulesFilterCategory"] = field(
+    fare_rules_filter_category: list[AirFareRulesReq.FareRulesFilterCategory] = field(
         default_factory=list,
         metadata={
             "name": "FareRulesFilterCategory",
@@ -16830,7 +16831,7 @@ class AirFareRulesReq(BaseReq):
             "MIN", "MAX",  "STP", and "CHG".
         fare_info_ref: Key reference for multiple fare rule
         """
-        category_code: List[object] = field(
+        category_code: list[object] = field(
             default_factory=list,
             metadata={
                 "name": "CategoryCode",
@@ -16839,7 +16840,7 @@ class AirFareRulesReq(BaseReq):
                 "max_occurs": 35,
             }
         )
-        fare_info_ref: Optional[str] = field(
+        fare_info_ref: None | str = field(
             default=None,
             metadata={
                 "name": "FareInfoRef",
@@ -16856,7 +16857,7 @@ class AirFareRulesReq(BaseReq):
         air_reservation_locator_code: The Air Reservation locator code
             which is an unique identifier for the reservation
         """
-        fare_info_ref: List[FareInfoRef] = field(
+        fare_info_ref: list[FareInfoRef] = field(
             default_factory=list,
             metadata={
                 "name": "FareInfoRef",
@@ -16864,7 +16865,7 @@ class AirFareRulesReq(BaseReq):
                 "max_occurs": 999,
             }
         )
-        air_reservation_locator_code: Optional[str] = field(
+        air_reservation_locator_code: None | str = field(
             default=None,
             metadata={
                 "name": "AirReservationLocatorCode",
@@ -16884,7 +16885,7 @@ class AirItinerarySolution:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -16892,7 +16893,7 @@ class AirItinerarySolution:
             "max_occurs": 999,
         }
     )
-    connection: List[Connection] = field(
+    connection: list[Connection] = field(
         default_factory=list,
         metadata={
             "name": "Connection",
@@ -16900,7 +16901,7 @@ class AirItinerarySolution:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -16987,49 +16988,49 @@ class AirPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    prohibited_rule_categories: Optional["AirPricingModifiers.ProhibitedRuleCategories"] = field(
+    prohibited_rule_categories: None | AirPricingModifiers.ProhibitedRuleCategories = field(
         default=None,
         metadata={
             "name": "ProhibitedRuleCategories",
             "type": "Element",
         }
     )
-    account_codes: Optional["AirPricingModifiers.AccountCodes"] = field(
+    account_codes: None | AirPricingModifiers.AccountCodes = field(
         default=None,
         metadata={
             "name": "AccountCodes",
             "type": "Element",
         }
     )
-    permitted_cabins: Optional[PermittedCabins] = field(
+    permitted_cabins: None | PermittedCabins = field(
         default=None,
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
         }
     )
-    contract_codes: Optional["AirPricingModifiers.ContractCodes"] = field(
+    contract_codes: None | AirPricingModifiers.ContractCodes = field(
         default=None,
         metadata={
             "name": "ContractCodes",
             "type": "Element",
         }
     )
-    exempt_taxes: Optional[ExemptTaxes] = field(
+    exempt_taxes: None | ExemptTaxes = field(
         default=None,
         metadata={
             "name": "ExemptTaxes",
             "type": "Element",
         }
     )
-    penalty_fare_information: Optional[PenaltyFareInformation] = field(
+    penalty_fare_information: None | PenaltyFareInformation = field(
         default=None,
         metadata={
             "name": "PenaltyFareInformation",
             "type": "Element",
         }
     )
-    discount_card: List[DiscountCard] = field(
+    discount_card: list[DiscountCard] = field(
         default_factory=list,
         metadata={
             "name": "DiscountCard",
@@ -17038,14 +17039,14 @@ class AirPricingModifiers:
             "max_occurs": 9,
         }
     )
-    promo_codes: Optional["AirPricingModifiers.PromoCodes"] = field(
+    promo_codes: None | AirPricingModifiers.PromoCodes = field(
         default=None,
         metadata={
             "name": "PromoCodes",
             "type": "Element",
         }
     )
-    manual_fare_adjustment: List[ManualFareAdjustment] = field(
+    manual_fare_adjustment: list[ManualFareAdjustment] = field(
         default_factory=list,
         metadata={
             "name": "ManualFareAdjustment",
@@ -17053,7 +17054,7 @@ class AirPricingModifiers:
             "max_occurs": 999,
         }
     )
-    point_of_sale: Optional[PointOfSale] = field(
+    point_of_sale: None | PointOfSale = field(
         default=None,
         metadata={
             "name": "PointOfSale",
@@ -17061,14 +17062,14 @@ class AirPricingModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    brand_modifiers: Optional[BrandModifiers] = field(
+    brand_modifiers: None | BrandModifiers = field(
         default=None,
         metadata={
             "name": "BrandModifiers",
             "type": "Element",
         }
     )
-    multi_gdssearch_indicator: List[MultiGdssearchIndicator] = field(
+    multi_gdssearch_indicator: list[MultiGdssearchIndicator] = field(
         default_factory=list,
         metadata={
             "name": "MultiGDSSearchIndicator",
@@ -17076,7 +17077,7 @@ class AirPricingModifiers:
             "max_occurs": 999,
         }
     )
-    preferred_cabins: List[PreferredCabins] = field(
+    preferred_cabins: list[PreferredCabins] = field(
         default_factory=list,
         metadata={
             "name": "PreferredCabins",
@@ -17098,7 +17099,7 @@ class AirPricingModifiers:
             "type": "Attribute",
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -17127,14 +17128,14 @@ class AirPricingModifiers:
             "type": "Attribute",
         }
     )
-    fares_indicator: Optional[TypeFaresIndicator] = field(
+    fares_indicator: None | TypeFaresIndicator = field(
         default=None,
         metadata={
             "name": "FaresIndicator",
             "type": "Attribute",
         }
     )
-    filed_currency: Optional[str] = field(
+    filed_currency: None | str = field(
         default=None,
         metadata={
             "name": "FiledCurrency",
@@ -17142,7 +17143,7 @@ class AirPricingModifiers:
             "length": 3,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -17150,7 +17151,7 @@ class AirPricingModifiers:
             "length": 2,
         }
     )
-    override_carrier: Optional[str] = field(
+    override_carrier: None | str = field(
         default=None,
         metadata={
             "name": "OverrideCarrier",
@@ -17158,21 +17159,21 @@ class AirPricingModifiers:
             "length": 2,
         }
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
         }
     )
-    account_code_fares_only: Optional[bool] = field(
+    account_code_fares_only: None | bool = field(
         default=None,
         metadata={
             "name": "AccountCodeFaresOnly",
             "type": "Attribute",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -17193,7 +17194,7 @@ class AirPricingModifiers:
             "type": "Attribute",
         }
     )
-    inventory_request_type: Optional[TypeInventoryRequest] = field(
+    inventory_request_type: None | TypeInventoryRequest = field(
         default=None,
         metadata={
             "name": "InventoryRequestType",
@@ -17207,7 +17208,7 @@ class AirPricingModifiers:
             "type": "Attribute",
         }
     )
-    prohibit_unbundled_fare_types: Optional[bool] = field(
+    prohibit_unbundled_fare_types: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitUnbundledFareTypes",
@@ -17221,7 +17222,7 @@ class AirPricingModifiers:
             "type": "Attribute",
         }
     )
-    channel_id: Optional[str] = field(
+    channel_id: None | str = field(
         default=None,
         metadata={
             "name": "ChannelId",
@@ -17254,7 +17255,7 @@ class AirPricingModifiers:
 
     @dataclass
     class ProhibitedRuleCategories:
-        fare_rule_category: List[FareRuleCategory] = field(
+        fare_rule_category: list[FareRuleCategory] = field(
             default_factory=list,
             metadata={
                 "name": "FareRuleCategory",
@@ -17271,7 +17272,7 @@ class AirPricingModifiers:
         ----------
         account_code: Used to get negotiated pricing. Provider:ACH.
         """
-        account_code: List[AccountCode] = field(
+        account_code: list[AccountCode] = field(
             default_factory=list,
             metadata={
                 "name": "AccountCode",
@@ -17284,7 +17285,7 @@ class AirPricingModifiers:
 
     @dataclass
     class ContractCodes:
-        contract_code: List[ContractCode] = field(
+        contract_code: list[ContractCode] = field(
             default_factory=list,
             metadata={
                 "name": "ContractCode",
@@ -17296,7 +17297,7 @@ class AirPricingModifiers:
 
     @dataclass
     class PromoCodes:
-        promo_code: List[PromoCode] = field(
+        promo_code: list[PromoCode] = field(
             default_factory=list,
             metadata={
                 "name": "PromoCode",
@@ -17315,7 +17316,7 @@ class AlternateRouteList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    alternate_route: List[AlternateRoute] = field(
+    alternate_route: list[AlternateRoute] = field(
         default_factory=list,
         metadata={
             "name": "AlternateRoute",
@@ -17346,7 +17347,7 @@ class BagDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    baggage_restriction: List[BaggageRestriction] = field(
+    baggage_restriction: list[BaggageRestriction] = field(
         default_factory=list,
         metadata={
             "name": "BaggageRestriction",
@@ -17354,7 +17355,7 @@ class BagDetails:
             "max_occurs": 999,
         }
     )
-    available_discount: List[AvailableDiscount] = field(
+    available_discount: list[AvailableDiscount] = field(
         default_factory=list,
         metadata={
             "name": "AvailableDiscount",
@@ -17362,7 +17363,7 @@ class BagDetails:
             "max_occurs": 999,
         }
     )
-    applicable_bags: Optional[str] = field(
+    applicable_bags: None | str = field(
         default=None,
         metadata={
             "name": "ApplicableBags",
@@ -17370,35 +17371,35 @@ class BagDetails:
             "required": True,
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
@@ -17419,7 +17420,7 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    carry_on_details: List["CarryOnAllowanceInfo.CarryOnDetails"] = field(
+    carry_on_details: list[CarryOnAllowanceInfo.CarryOnDetails] = field(
         default_factory=list,
         metadata={
             "name": "CarryOnDetails",
@@ -17442,7 +17443,7 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
         total_price:
         approximate_total_price:
         """
-        baggage_restriction: List[BaggageRestriction] = field(
+        baggage_restriction: list[BaggageRestriction] = field(
             default_factory=list,
             metadata={
                 "name": "BaggageRestriction",
@@ -17450,42 +17451,42 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
                 "max_occurs": 99,
             }
         )
-        applicable_carry_on_bags: Optional[str] = field(
+        applicable_carry_on_bags: None | str = field(
             default=None,
             metadata={
                 "name": "ApplicableCarryOnBags",
                 "type": "Attribute",
             }
         )
-        base_price: Optional[str] = field(
+        base_price: None | str = field(
             default=None,
             metadata={
                 "name": "BasePrice",
                 "type": "Attribute",
             }
         )
-        approximate_base_price: Optional[str] = field(
+        approximate_base_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateBasePrice",
                 "type": "Attribute",
             }
         )
-        taxes: Optional[str] = field(
+        taxes: None | str = field(
             default=None,
             metadata={
                 "name": "Taxes",
                 "type": "Attribute",
             }
         )
-        total_price: Optional[str] = field(
+        total_price: None | str = field(
             default=None,
             metadata={
                 "name": "TotalPrice",
                 "type": "Attribute",
             }
         )
-        approximate_total_price: Optional[str] = field(
+        approximate_total_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateTotalPrice",
@@ -17511,7 +17512,7 @@ class DocumentInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_info: List[TicketInfo] = field(
+    ticket_info: list[TicketInfo] = field(
         default_factory=list,
         metadata={
             "name": "TicketInfo",
@@ -17519,7 +17520,7 @@ class DocumentInfo:
             "max_occurs": 999,
         }
     )
-    mcoinfo: List[Mcoinformation] = field(
+    mcoinfo: list[Mcoinformation] = field(
         default_factory=list,
         metadata={
             "name": "MCOInfo",
@@ -17527,7 +17528,7 @@ class DocumentInfo:
             "max_occurs": 999,
         }
     )
-    tcrinfo: List[Tcrinfo] = field(
+    tcrinfo: list[Tcrinfo] = field(
         default_factory=list,
         metadata={
             "name": "TCRInfo",
@@ -17578,7 +17579,7 @@ class Emdinfo:
         name = "EMDInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdtraveler_info: Optional[EmdtravelerInfo] = field(
+    emdtraveler_info: None | EmdtravelerInfo = field(
         default=None,
         metadata={
             "name": "EMDTravelerInfo",
@@ -17586,7 +17587,7 @@ class Emdinfo:
             "required": True,
         }
     )
-    supplier_locator: List[SupplierLocator] = field(
+    supplier_locator: list[SupplierLocator] = field(
         default_factory=list,
         metadata={
             "name": "SupplierLocator",
@@ -17595,7 +17596,7 @@ class Emdinfo:
             "max_occurs": 999,
         }
     )
-    electronic_misc_document: List[ElectronicMiscDocument] = field(
+    electronic_misc_document: list[ElectronicMiscDocument] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicMiscDocument",
@@ -17604,7 +17605,7 @@ class Emdinfo:
             "max_occurs": 999,
         }
     )
-    payment: Optional[Payment] = field(
+    payment: None | Payment = field(
         default=None,
         metadata={
             "name": "Payment",
@@ -17612,7 +17613,7 @@ class Emdinfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    form_of_payment: Optional[FormOfPayment] = field(
+    form_of_payment: None | FormOfPayment = field(
         default=None,
         metadata={
             "name": "FormOfPayment",
@@ -17620,14 +17621,14 @@ class Emdinfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    emdpricing_info: Optional[EmdpricingInfo] = field(
+    emdpricing_info: None | EmdpricingInfo = field(
         default=None,
         metadata={
             "name": "EMDPricingInfo",
             "type": "Element",
         }
     )
-    emdendorsement: List[str] = field(
+    emdendorsement: list[str] = field(
         default_factory=list,
         metadata={
             "name": "EMDEndorsement",
@@ -17637,21 +17638,21 @@ class Emdinfo:
             "max_length": 255,
         }
     )
-    fare_calc: Optional[str] = field(
+    fare_calc: None | str = field(
         default=None,
         metadata={
             "name": "FareCalc",
             "type": "Element",
         }
     )
-    emdcommission: Optional[Emdcommission] = field(
+    emdcommission: None | Emdcommission = field(
         default=None,
         metadata={
             "name": "EMDCommission",
             "type": "Element",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -17661,7 +17662,7 @@ class Emdinfo:
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -17670,21 +17671,21 @@ class Emdinfo:
             "max_length": 15,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -17722,7 +17723,7 @@ class EmdissuanceReq(BaseReq):
         name = "EMDIssuanceReq"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    provider_reservation_detail: Optional[ProviderReservationDetail] = field(
+    provider_reservation_detail: None | ProviderReservationDetail = field(
         default=None,
         metadata={
             "name": "ProviderReservationDetail",
@@ -17731,7 +17732,7 @@ class EmdissuanceReq(BaseReq):
             "required": True,
         }
     )
-    ticket_number: Optional[str] = field(
+    ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
@@ -17741,21 +17742,21 @@ class EmdissuanceReq(BaseReq):
             "max_length": 13,
         }
     )
-    issuance_modifiers: Optional[IssuanceModifiers] = field(
+    issuance_modifiers: None | IssuanceModifiers = field(
         default=None,
         metadata={
             "name": "IssuanceModifiers",
             "type": "Element",
         }
     )
-    selection_modifiers: Optional[SelectionModifiers] = field(
+    selection_modifiers: None | SelectionModifiers = field(
         default=None,
         metadata={
             "name": "SelectionModifiers",
             "type": "Element",
         }
     )
-    universal_record_locator_code: Optional[str] = field(
+    universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
@@ -17808,7 +17809,7 @@ class EmdsummaryInfo:
         name = "EMDSummaryInfo"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdsummary: List[Emdsummary] = field(
+    emdsummary: list[Emdsummary] = field(
         default_factory=list,
         metadata={
             "name": "EMDSummary",
@@ -17817,7 +17818,7 @@ class EmdsummaryInfo:
             "max_occurs": 999,
         }
     )
-    emdtraveler_info: Optional[EmdtravelerInfo] = field(
+    emdtraveler_info: None | EmdtravelerInfo = field(
         default=None,
         metadata={
             "name": "EMDTravelerInfo",
@@ -17825,7 +17826,7 @@ class EmdsummaryInfo:
             "required": True,
         }
     )
-    payment: Optional[Payment] = field(
+    payment: None | Payment = field(
         default=None,
         metadata={
             "name": "Payment",
@@ -17833,28 +17834,28 @@ class EmdsummaryInfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    provider_reservation_info_ref: Optional[str] = field(
+    provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -17871,7 +17872,7 @@ class ExpertSolutionList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    expert_solution: List[ExpertSolution] = field(
+    expert_solution: list[ExpertSolution] = field(
         default_factory=list,
         metadata={
             "name": "ExpertSolution",
@@ -17890,42 +17891,42 @@ class FareDisplayRule:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
+    rule_advanced_purchase: None | RuleAdvancedPurchase = field(
         default=None,
         metadata={
             "name": "RuleAdvancedPurchase",
             "type": "Element",
         }
     )
-    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
+    rule_length_of_stay: None | RuleLengthOfStay = field(
         default=None,
         metadata={
             "name": "RuleLengthOfStay",
             "type": "Element",
         }
     )
-    rule_charges: Optional[RuleCharges] = field(
+    rule_charges: None | RuleCharges = field(
         default=None,
         metadata={
             "name": "RuleCharges",
             "type": "Element",
         }
     )
-    rule_number: Optional[str] = field(
+    rule_number: None | str = field(
         default=None,
         metadata={
             "name": "RuleNumber",
             "type": "Attribute",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
         }
     )
-    tariff_number: Optional[str] = field(
+    tariff_number: None | str = field(
         default=None,
         metadata={
             "name": "TariffNumber",
@@ -17947,7 +17948,7 @@ class FaxDetailsInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -17956,7 +17957,7 @@ class FaxDetailsInformation:
             "max_occurs": 999,
         }
     )
-    fax_details: Optional[FaxDetails] = field(
+    fax_details: None | FaxDetails = field(
         default=None,
         metadata={
             "name": "FaxDetails",
@@ -18012,14 +18013,14 @@ class FlightDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    connection: Optional[Connection] = field(
+    connection: None | Connection = field(
         default=None,
         metadata={
             "name": "Connection",
             "type": "Element",
         }
     )
-    meals: List[TypeMealService] = field(
+    meals: list[TypeMealService] = field(
         default_factory=list,
         metadata={
             "name": "Meals",
@@ -18027,7 +18028,7 @@ class FlightDetails:
             "max_occurs": 999,
         }
     )
-    in_flight_services: List[str] = field(
+    in_flight_services: list[str] = field(
         default_factory=list,
         metadata={
             "name": "InFlightServices",
@@ -18035,7 +18036,7 @@ class FlightDetails:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -18043,7 +18044,7 @@ class FlightDetails:
             "required": True,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -18053,7 +18054,7 @@ class FlightDetails:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -18063,42 +18064,42 @@ class FlightDetails:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    flight_time: Optional[int] = field(
+    flight_time: None | int = field(
         default=None,
         metadata={
             "name": "FlightTime",
             "type": "Attribute",
         }
     )
-    travel_time: Optional[int] = field(
+    travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
         }
     )
-    distance: Optional[int] = field(
+    distance: None | int = field(
         default=None,
         metadata={
             "name": "Distance",
             "type": "Attribute",
         }
     )
-    equipment: Optional[str] = field(
+    equipment: None | str = field(
         default=None,
         metadata={
             "name": "Equipment",
@@ -18106,28 +18107,28 @@ class FlightDetails:
             "length": 3,
         }
     )
-    on_time_performance: Optional[int] = field(
+    on_time_performance: None | int = field(
         default=None,
         metadata={
             "name": "OnTimePerformance",
             "type": "Attribute",
         }
     )
-    origin_terminal: Optional[str] = field(
+    origin_terminal: None | str = field(
         default=None,
         metadata={
             "name": "OriginTerminal",
             "type": "Attribute",
         }
     )
-    destination_terminal: Optional[str] = field(
+    destination_terminal: None | str = field(
         default=None,
         metadata={
             "name": "DestinationTerminal",
             "type": "Attribute",
         }
     )
-    ground_time: Optional[int] = field(
+    ground_time: None | int = field(
         default=None,
         metadata={
             "name": "GroundTime",
@@ -18141,14 +18142,14 @@ class FlightDetails:
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -18182,7 +18183,7 @@ class FlightInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_info_detail: List[FlightInfoDetail] = field(
+    flight_info_detail: list[FlightInfoDetail] = field(
         default_factory=list,
         metadata={
             "name": "FlightInfoDetail",
@@ -18190,7 +18191,7 @@ class FlightInfo:
             "max_occurs": 999,
         }
     )
-    flight_info_error_message: List[TypeResultMessage] = field(
+    flight_info_error_message: list[TypeResultMessage] = field(
         default_factory=list,
         metadata={
             "name": "FlightInfoErrorMessage",
@@ -18198,7 +18199,7 @@ class FlightInfo:
             "max_occurs": 999,
         }
     )
-    criteria_key: Optional[str] = field(
+    criteria_key: None | str = field(
         default=None,
         metadata={
             "name": "CriteriaKey",
@@ -18206,7 +18207,7 @@ class FlightInfo:
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -18215,7 +18216,7 @@ class FlightInfo:
             "length": 2,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -18224,7 +18225,7 @@ class FlightInfo:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -18233,7 +18234,7 @@ class FlightInfo:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -18242,7 +18243,7 @@ class FlightInfo:
             "white_space": "collapse",
         }
     )
-    departure_date: Optional[XmlDate] = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
@@ -18250,7 +18251,7 @@ class FlightInfo:
             "required": True,
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -18300,21 +18301,21 @@ class FlightTimeDetail:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    days_of_operation: Optional[TypeDaysOfOperation] = field(
+    days_of_operation: None | TypeDaysOfOperation = field(
         default=None,
         metadata={
             "name": "DaysOfOperation",
             "type": "Element",
         }
     )
-    connection: Optional[Connection] = field(
+    connection: None | Connection = field(
         default=None,
         metadata={
             "name": "Connection",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -18322,14 +18323,14 @@ class FlightTimeDetail:
             "required": True,
         }
     )
-    vendor_code: Optional[str] = field(
+    vendor_code: None | str = field(
         default=None,
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -18337,7 +18338,7 @@ class FlightTimeDetail:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -18345,7 +18346,7 @@ class FlightTimeDetail:
             "length": 3,
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -18353,28 +18354,28 @@ class FlightTimeDetail:
             "length": 3,
         }
     )
-    departure_time: Optional[XmlTime] = field(
+    departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
         }
     )
-    arrival_time: Optional[XmlTime] = field(
+    arrival_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    stop_count: Optional[int] = field(
+    stop_count: None | int = field(
         default=None,
         metadata={
             "name": "StopCount",
             "type": "Attribute",
         }
     )
-    equipment: Optional[str] = field(
+    equipment: None | str = field(
         default=None,
         metadata={
             "name": "Equipment",
@@ -18382,70 +18383,70 @@ class FlightTimeDetail:
             "length": 3,
         }
     )
-    schedule_start_date: Optional[XmlDate] = field(
+    schedule_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ScheduleStartDate",
             "type": "Attribute",
         }
     )
-    schedule_end_date: Optional[XmlDate] = field(
+    schedule_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ScheduleEndDate",
             "type": "Attribute",
         }
     )
-    display_option: Optional[bool] = field(
+    display_option: None | bool = field(
         default=None,
         metadata={
             "name": "DisplayOption",
             "type": "Attribute",
         }
     )
-    on_time_performance: Optional[int] = field(
+    on_time_performance: None | int = field(
         default=None,
         metadata={
             "name": "OnTimePerformance",
             "type": "Attribute",
         }
     )
-    day_change: Optional[int] = field(
+    day_change: None | int = field(
         default=None,
         metadata={
             "name": "DayChange",
             "type": "Attribute",
         }
     )
-    journey_time: Optional[int] = field(
+    journey_time: None | int = field(
         default=None,
         metadata={
             "name": "JourneyTime",
             "type": "Attribute",
         }
     )
-    flight_time: Optional[int] = field(
+    flight_time: None | int = field(
         default=None,
         metadata={
             "name": "FlightTime",
             "type": "Attribute",
         }
     )
-    start_terminal: Optional[str] = field(
+    start_terminal: None | str = field(
         default=None,
         metadata={
             "name": "StartTerminal",
             "type": "Attribute",
         }
     )
-    end_terminal: Optional[str] = field(
+    end_terminal: None | str = field(
         default=None,
         metadata={
             "name": "EndTerminal",
             "type": "Attribute",
         }
     )
-    first_intermediate_stop: Optional[str] = field(
+    first_intermediate_stop: None | str = field(
         default=None,
         metadata={
             "name": "FirstIntermediateStop",
@@ -18454,7 +18455,7 @@ class FlightTimeDetail:
             "white_space": "collapse",
         }
     )
-    last_intermediate_stop: Optional[str] = field(
+    last_intermediate_stop: None | str = field(
         default=None,
         metadata={
             "name": "LastIntermediateStop",
@@ -18463,7 +18464,7 @@ class FlightTimeDetail:
             "white_space": "collapse",
         }
     )
-    inside_availability: Optional[str] = field(
+    inside_availability: None | str = field(
         default=None,
         metadata={
             "name": "InsideAvailability",
@@ -18472,7 +18473,7 @@ class FlightTimeDetail:
             "max_length": 1,
         }
     )
-    secure_sell: Optional[str] = field(
+    secure_sell: None | str = field(
         default=None,
         metadata={
             "name": "SecureSell",
@@ -18481,7 +18482,7 @@ class FlightTimeDetail:
             "max_length": 2,
         }
     )
-    availability_source: Optional[str] = field(
+    availability_source: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilitySource",
@@ -18503,7 +18504,7 @@ class FlightTimeTableReq(BaseSearchReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_time_table_criteria: Optional[FlightTimeTableCriteria] = field(
+    flight_time_table_criteria: None | FlightTimeTableCriteria = field(
         default=None,
         metadata={
             "name": "FlightTimeTableCriteria",
@@ -18521,7 +18522,7 @@ class MerchandisingAvailabilityDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_itinerary_details: Optional[AirItineraryDetails] = field(
+    air_itinerary_details: None | AirItineraryDetails = field(
         default=None,
         metadata={
             "name": "AirItineraryDetails",
@@ -18529,7 +18530,7 @@ class MerchandisingAvailabilityDetails:
             "required": True,
         }
     )
-    account_code: Optional[AccountCode] = field(
+    account_code: None | AccountCode = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -18547,7 +18548,7 @@ class MerchandisingDetails:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_itinerary_details: List[AirItineraryDetails] = field(
+    air_itinerary_details: list[AirItineraryDetails] = field(
         default_factory=list,
         metadata={
             "name": "AirItineraryDetails",
@@ -18556,7 +18557,7 @@ class MerchandisingDetails:
             "max_occurs": 99,
         }
     )
-    account_code: List[AccountCode] = field(
+    account_code: list[AccountCode] = field(
         default_factory=list,
         metadata={
             "name": "AccountCode",
@@ -18584,7 +18585,7 @@ class Option:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_info: List[BookingInfo] = field(
+    booking_info: list[BookingInfo] = field(
         default_factory=list,
         metadata={
             "name": "BookingInfo",
@@ -18592,7 +18593,7 @@ class Option:
             "max_occurs": 999,
         }
     )
-    connection: List[Connection] = field(
+    connection: list[Connection] = field(
         default_factory=list,
         metadata={
             "name": "Connection",
@@ -18600,7 +18601,7 @@ class Option:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -18608,7 +18609,7 @@ class Option:
             "required": True,
         }
     )
-    travel_time: Optional[XmlDuration] = field(
+    travel_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "TravelTime",
@@ -18643,8 +18644,8 @@ class OptionalService:
     supplier_code:
     optional_services_rule_ref: UniqueID to associate a rule to the
         Optional Service
-    type: Specify the type of service offered (e.g. seats, baggage,
-        etc.)
+    type_value: Specify the type of service offered (e.g. seats,
+        baggage, etc.)
     confirmation: Confirmation number provided by the supplier
     secondary_type: The secondary option code type required for certain
         options
@@ -18750,7 +18751,7 @@ class OptionalService:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    service_data: List[ServiceData] = field(
+    service_data: list[ServiceData] = field(
         default_factory=list,
         metadata={
             "name": "ServiceData",
@@ -18759,7 +18760,7 @@ class OptionalService:
             "max_occurs": 999,
         }
     )
-    service_info: Optional[ServiceInfo] = field(
+    service_info: None | ServiceInfo = field(
         default=None,
         metadata={
             "name": "ServiceInfo",
@@ -18767,7 +18768,7 @@ class OptionalService:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    remark: List[Remark] = field(
+    remark: list[Remark] = field(
         default_factory=list,
         metadata={
             "name": "Remark",
@@ -18776,7 +18777,7 @@ class OptionalService:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -18784,7 +18785,7 @@ class OptionalService:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -18792,21 +18793,21 @@ class OptionalService:
             "max_occurs": 999,
         }
     )
-    emd: Optional[Emd] = field(
+    emd: None | Emd = field(
         default=None,
         metadata={
             "name": "EMD",
             "type": "Element",
         }
     )
-    bundled_services: Optional[BundledServices] = field(
+    bundled_services: None | BundledServices = field(
         default=None,
         metadata={
             "name": "BundledServices",
             "type": "Element",
         }
     )
-    additional_info: List[AdditionalInfo] = field(
+    additional_info: list[AdditionalInfo] = field(
         default_factory=list,
         metadata={
             "name": "AdditionalInfo",
@@ -18814,14 +18815,14 @@ class OptionalService:
             "max_occurs": 16,
         }
     )
-    fee_application: Optional[FeeApplication] = field(
+    fee_application: None | FeeApplication = field(
         default=None,
         metadata={
             "name": "FeeApplication",
             "type": "Element",
         }
     )
-    text: List[Text] = field(
+    text: list[Text] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -18829,7 +18830,7 @@ class OptionalService:
             "max_occurs": 4,
         }
     )
-    price_range: List[PriceRange] = field(
+    price_range: list[PriceRange] = field(
         default_factory=list,
         metadata={
             "name": "PriceRange",
@@ -18837,21 +18838,21 @@ class OptionalService:
             "max_occurs": 5,
         }
     )
-    tour_code: Optional[TourCode] = field(
+    tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
         }
     )
-    branding_info: Optional[BrandingInfo] = field(
+    branding_info: None | BrandingInfo = field(
         default=None,
         metadata={
             "name": "BrandingInfo",
             "type": "Element",
         }
     )
-    title: List[Title] = field(
+    title: list[Title] = field(
         default_factory=list,
         metadata={
             "name": "Title",
@@ -18859,7 +18860,7 @@ class OptionalService:
             "max_occurs": 2,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -18868,7 +18869,7 @@ class OptionalService:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -18877,14 +18878,14 @@ class OptionalService:
             "max_length": 5,
         }
     )
-    optional_services_rule_ref: Optional[str] = field(
+    optional_services_rule_ref: None | str = field(
         default=None,
         metadata={
             "name": "OptionalServicesRuleRef",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -18894,42 +18895,42 @@ class OptionalService:
             "max_length": 128,
         }
     )
-    confirmation: Optional[str] = field(
+    confirmation: None | str = field(
         default=None,
         metadata={
             "name": "Confirmation",
             "type": "Attribute",
         }
     )
-    secondary_type: Optional[str] = field(
+    secondary_type: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryType",
             "type": "Attribute",
         }
     )
-    purchase_window: Optional[TypePurchaseWindow] = field(
+    purchase_window: None | TypePurchaseWindow = field(
         default=None,
         metadata={
             "name": "PurchaseWindow",
             "type": "Attribute",
         }
     )
-    priority: Optional[int] = field(
+    priority: None | int = field(
         default=None,
         metadata={
             "name": "Priority",
             "type": "Attribute",
         }
     )
-    available: Optional[bool] = field(
+    available: None | bool = field(
         default=None,
         metadata={
             "name": "Available",
             "type": "Attribute",
         }
     )
-    entitled: Optional[bool] = field(
+    entitled: None | bool = field(
         default=None,
         metadata={
             "name": "Entitled",
@@ -18943,42 +18944,42 @@ class OptionalService:
             "type": "Attribute",
         }
     )
-    create_date: Optional[XmlDateTime] = field(
+    create_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
         }
     )
-    payment_ref: Optional[str] = field(
+    payment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentRef",
             "type": "Attribute",
         }
     )
-    service_status: Optional[str] = field(
+    service_status: None | str = field(
         default=None,
         metadata={
             "name": "ServiceStatus",
             "type": "Attribute",
         }
     )
-    quantity: Optional[int] = field(
+    quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
         }
     )
-    sequence_number: Optional[int] = field(
+    sequence_number: None | int = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
         }
     )
-    service_sub_code: Optional[str] = field(
+    service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
@@ -18986,7 +18987,7 @@ class OptionalService:
             "max_length": 3,
         }
     )
-    ssrcode: Optional[str] = field(
+    ssrcode: None | str = field(
         default=None,
         metadata={
             "name": "SSRCode",
@@ -18995,7 +18996,7 @@ class OptionalService:
             "max_length": 4,
         }
     )
-    issuance_reason: Optional[str] = field(
+    issuance_reason: None | str = field(
         default=None,
         metadata={
             "name": "IssuanceReason",
@@ -19004,7 +19005,7 @@ class OptionalService:
             "max_length": 1,
         }
     )
-    provider_defined_type: Optional[str] = field(
+    provider_defined_type: None | str = field(
         default=None,
         metadata={
             "name": "ProviderDefinedType",
@@ -19013,98 +19014,98 @@ class OptionalService:
             "max_length": 16,
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    assess_indicator: Optional[TypeAssessIndicator] = field(
+    assess_indicator: None | TypeAssessIndicator = field(
         default=None,
         metadata={
             "name": "AssessIndicator",
             "type": "Attribute",
         }
     )
-    mileage: Optional[int] = field(
+    mileage: None | int = field(
         default=None,
         metadata={
             "name": "Mileage",
             "type": "Attribute",
         }
     )
-    applicable_fflevel: Optional[int] = field(
+    applicable_fflevel: None | int = field(
         default=None,
         metadata={
             "name": "ApplicableFFLevel",
@@ -19113,126 +19114,126 @@ class OptionalService:
             "max_inclusive": 9,
         }
     )
-    private: Optional[bool] = field(
+    private: None | bool = field(
         default=None,
         metadata={
             "name": "Private",
             "type": "Attribute",
         }
     )
-    ssrfree_text: Optional[str] = field(
+    ssrfree_text: None | str = field(
         default=None,
         metadata={
             "name": "SSRFreeText",
             "type": "Attribute",
         }
     )
-    is_pricing_approximate: Optional[bool] = field(
+    is_pricing_approximate: None | bool = field(
         default=None,
         metadata={
             "name": "IsPricingApproximate",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
         }
     )
-    chargeable: Optional[str] = field(
+    chargeable: None | str = field(
         default=None,
         metadata={
             "name": "Chargeable",
             "type": "Attribute",
         }
     )
-    inclusive_of_tax: Optional[bool] = field(
+    inclusive_of_tax: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveOfTax",
             "type": "Attribute",
         }
     )
-    interline_settlement_allowed: Optional[bool] = field(
+    interline_settlement_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "InterlineSettlementAllowed",
             "type": "Attribute",
         }
     )
-    geography_specification: Optional[str] = field(
+    geography_specification: None | str = field(
         default=None,
         metadata={
             "name": "GeographySpecification",
             "type": "Attribute",
         }
     )
-    excess_weight_rate: Optional[str] = field(
+    excess_weight_rate: None | str = field(
         default=None,
         metadata={
             "name": "ExcessWeightRate",
             "type": "Attribute",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
         }
     )
-    viewable_only: Optional[bool] = field(
+    viewable_only: None | bool = field(
         default=None,
         metadata={
             "name": "ViewableOnly",
             "type": "Attribute",
         }
     )
-    display_text: Optional[str] = field(
+    display_text: None | str = field(
         default=None,
         metadata={
             "name": "DisplayText",
             "type": "Attribute",
         }
     )
-    weight_in_excess: Optional[str] = field(
+    weight_in_excess: None | str = field(
         default=None,
         metadata={
             "name": "WeightInExcess",
             "type": "Attribute",
         }
     )
-    total_weight: Optional[str] = field(
+    total_weight: None | str = field(
         default=None,
         metadata={
             "name": "TotalWeight",
             "type": "Attribute",
         }
     )
-    baggage_unit_price: Optional[str] = field(
+    baggage_unit_price: None | str = field(
         default=None,
         metadata={
             "name": "BaggageUnitPrice",
             "type": "Attribute",
         }
     )
-    first_piece: Optional[int] = field(
+    first_piece: None | int = field(
         default=None,
         metadata={
             "name": "FirstPiece",
             "type": "Attribute",
         }
     )
-    last_piece: Optional[int] = field(
+    last_piece: None | int = field(
         default=None,
         metadata={
             "name": "LastPiece",
@@ -19253,21 +19254,21 @@ class OptionalService:
             "type": "Attribute",
         }
     )
-    booked_quantity: Optional[str] = field(
+    booked_quantity: None | str = field(
         default=None,
         metadata={
             "name": "BookedQuantity",
             "type": "Attribute",
         }
     )
-    group: Optional[str] = field(
+    group: None | str = field(
         default=None,
         metadata={
             "name": "Group",
             "type": "Attribute",
         }
     )
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: None | str = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -19276,7 +19277,7 @@ class OptionalService:
             "max_length": 10,
         }
     )
-    tag: Optional[str] = field(
+    tag: None | str = field(
         default=None,
         metadata={
             "name": "Tag",
@@ -19285,7 +19286,7 @@ class OptionalService:
             "max_length": 256,
         }
     )
-    display_order: Optional[int] = field(
+    display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
@@ -19314,49 +19315,49 @@ class PrePayAccount:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    credit_summary: Optional[CreditSummary] = field(
+    credit_summary: None | CreditSummary = field(
         default=None,
         metadata={
             "name": "CreditSummary",
             "type": "Element",
         }
     )
-    pre_pay_price_info: Optional[PrePayPriceInfo] = field(
+    pre_pay_price_info: None | PrePayPriceInfo = field(
         default=None,
         metadata={
             "name": "PrePayPriceInfo",
             "type": "Element",
         }
     )
-    program_title: Optional[str] = field(
+    program_title: None | str = field(
         default=None,
         metadata={
             "name": "ProgramTitle",
             "type": "Attribute",
         }
     )
-    certificate_number: Optional[str] = field(
+    certificate_number: None | str = field(
         default=None,
         metadata={
             "name": "CertificateNumber",
             "type": "Attribute",
         }
     )
-    program_name: Optional[str] = field(
+    program_name: None | str = field(
         default=None,
         metadata={
             "name": "ProgramName",
             "type": "Attribute",
         }
     )
-    effective_date: Optional[XmlDate] = field(
+    effective_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
         }
     )
-    expire_date: Optional[XmlDate] = field(
+    expire_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpireDate",
@@ -19373,7 +19374,7 @@ class RouteList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    route: List[Route] = field(
+    route: list[Route] = field(
         default_factory=list,
         metadata={
             "name": "Route",
@@ -19392,7 +19393,7 @@ class Row:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    facility: List[Facility] = field(
+    facility: list[Facility] = field(
         default_factory=list,
         metadata={
             "name": "Facility",
@@ -19400,7 +19401,7 @@ class Row:
             "max_occurs": 999,
         }
     )
-    characteristic: List[Characteristic] = field(
+    characteristic: list[Characteristic] = field(
         default_factory=list,
         metadata={
             "name": "Characteristic",
@@ -19408,7 +19409,7 @@ class Row:
             "max_occurs": 999,
         }
     )
-    number: Optional[int] = field(
+    number: None | int = field(
         default=None,
         metadata={
             "name": "Number",
@@ -19416,7 +19417,7 @@ class Row:
             "required": True,
         }
     )
-    search_traveler_ref: Optional[str] = field(
+    search_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "SearchTravelerRef",
@@ -19444,7 +19445,7 @@ class SearchAirLeg:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    search_origin: List[TypeSearchLocation] = field(
+    search_origin: list[TypeSearchLocation] = field(
         default_factory=list,
         metadata={
             "name": "SearchOrigin",
@@ -19453,7 +19454,7 @@ class SearchAirLeg:
             "max_occurs": 999,
         }
     )
-    search_destination: List[TypeSearchLocation] = field(
+    search_destination: list[TypeSearchLocation] = field(
         default_factory=list,
         metadata={
             "name": "SearchDestination",
@@ -19461,7 +19462,7 @@ class SearchAirLeg:
             "max_occurs": 999,
         }
     )
-    search_dep_time: List[TypeFlexibleTimeSpec] = field(
+    search_dep_time: list[TypeFlexibleTimeSpec] = field(
         default_factory=list,
         metadata={
             "name": "SearchDepTime",
@@ -19469,7 +19470,7 @@ class SearchAirLeg:
             "max_occurs": 999,
         }
     )
-    search_arv_time: List[TypeTimeSpec] = field(
+    search_arv_time: list[TypeTimeSpec] = field(
         default_factory=list,
         metadata={
             "name": "SearchArvTime",
@@ -19477,7 +19478,7 @@ class SearchAirLeg:
             "max_occurs": 999,
         }
     )
-    air_leg_modifiers: Optional[AirLegModifiers] = field(
+    air_leg_modifiers: None | AirLegModifiers = field(
         default=None,
         metadata={
             "name": "AirLegModifiers",
@@ -19501,7 +19502,7 @@ class SegmentModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: Optional[AirSegmentRef] = field(
+    air_segment_ref: None | AirSegmentRef = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
@@ -19509,21 +19510,21 @@ class SegmentModifiers:
             "required": True,
         }
     )
-    ticket_validity: Optional[TicketValidity] = field(
+    ticket_validity: None | TicketValidity = field(
         default=None,
         metadata={
             "name": "TicketValidity",
             "type": "Element",
         }
     )
-    baggage_allowance: Optional[BaggageAllowance] = field(
+    baggage_allowance: None | BaggageAllowance = field(
         default=None,
         metadata={
             "name": "BaggageAllowance",
             "type": "Element",
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "TicketDesignator",
@@ -19541,7 +19542,7 @@ class StructuredFareRulesType:
     ----------
     fare_rule_category_type: For FareRulesType element
     """
-    fare_rule_category_type: List[FareRuleCategoryTypes] = field(
+    fare_rule_category_type: list[FareRuleCategoryTypes] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleCategoryType",
@@ -19589,7 +19590,7 @@ class AirFareDisplayReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_type: List[FareType] = field(
+    fare_type: list[FareType] = field(
         default_factory=list,
         metadata={
             "name": "FareType",
@@ -19597,7 +19598,7 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 5,
         }
     )
-    passenger_type: List[TypePassengerType] = field(
+    passenger_type: list[TypePassengerType] = field(
         default_factory=list,
         metadata={
             "name": "PassengerType",
@@ -19605,7 +19606,7 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    booking_code: List[BookingCode] = field(
+    booking_code: list[BookingCode] = field(
         default_factory=list,
         metadata={
             "name": "BookingCode",
@@ -19613,21 +19614,21 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 5,
         }
     )
-    include_addl_booking_code_info: Optional[IncludeAddlBookingCodeInfo] = field(
+    include_addl_booking_code_info: None | IncludeAddlBookingCodeInfo = field(
         default=None,
         metadata={
             "name": "IncludeAddlBookingCodeInfo",
             "type": "Element",
         }
     )
-    fare_basis: Optional[FareBasis] = field(
+    fare_basis: None | FareBasis = field(
         default=None,
         metadata={
             "name": "FareBasis",
             "type": "Element",
         }
     )
-    carrier: List[Carrier] = field(
+    carrier: list[Carrier] = field(
         default_factory=list,
         metadata={
             "name": "Carrier",
@@ -19636,7 +19637,7 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 10,
         }
     )
-    account_code: List[AccountCode] = field(
+    account_code: list[AccountCode] = field(
         default_factory=list,
         metadata={
             "name": "AccountCode",
@@ -19645,21 +19646,21 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 5,
         }
     )
-    contract_code: Optional[ContractCode] = field(
+    contract_code: None | ContractCode = field(
         default=None,
         metadata={
             "name": "ContractCode",
             "type": "Element",
         }
     )
-    air_fare_display_modifiers: Optional[AirFareDisplayModifiers] = field(
+    air_fare_display_modifiers: None | AirFareDisplayModifiers = field(
         default=None,
         metadata={
             "name": "AirFareDisplayModifiers",
             "type": "Element",
         }
     )
-    point_of_sale: List[PointOfSale] = field(
+    point_of_sale: list[PointOfSale] = field(
         default_factory=list,
         metadata={
             "name": "PointOfSale",
@@ -19668,14 +19669,14 @@ class AirFareDisplayReq(BaseReq):
             "max_occurs": 5,
         }
     )
-    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
+    air_fare_display_rule_key: None | AirFareDisplayRuleKey = field(
         default=None,
         metadata={
             "name": "AirFareDisplayRuleKey",
             "type": "Element",
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -19685,7 +19686,7 @@ class AirFareDisplayReq(BaseReq):
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -19695,7 +19696,7 @@ class AirFareDisplayReq(BaseReq):
             "white_space": "collapse",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -19705,21 +19706,21 @@ class AirFareDisplayReq(BaseReq):
             "max_length": 5,
         }
     )
-    include_mile_route_information: Optional[TypeMileOrRouteBasedFare] = field(
+    include_mile_route_information: None | TypeMileOrRouteBasedFare = field(
         default=None,
         metadata={
             "name": "IncludeMileRouteInformation",
             "type": "Attribute",
         }
     )
-    un_saleable_fares_only: Optional[bool] = field(
+    un_saleable_fares_only: None | bool = field(
         default=None,
         metadata={
             "name": "UnSaleableFaresOnly",
             "type": "Attribute",
         }
     )
-    channel_id: Optional[str] = field(
+    channel_id: None | str = field(
         default=None,
         metadata={
             "name": "ChannelId",
@@ -19728,7 +19729,7 @@ class AirFareDisplayReq(BaseReq):
             "max_length": 4,
         }
     )
-    nscc: Optional[str] = field(
+    nscc: None | str = field(
         default=None,
         metadata={
             "name": "NSCC",
@@ -19754,21 +19755,21 @@ class AirMerchandisingDetailsReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    merchandising_details: Optional[MerchandisingDetails] = field(
+    merchandising_details: None | MerchandisingDetails = field(
         default=None,
         metadata={
             "name": "MerchandisingDetails",
             "type": "Element",
         }
     )
-    optional_service_modifiers: Optional[OptionalServiceModifiers] = field(
+    optional_service_modifiers: None | OptionalServiceModifiers = field(
         default=None,
         metadata={
             "name": "OptionalServiceModifiers",
             "type": "Element",
         }
     )
-    merchandising_availability_details: Optional[MerchandisingAvailabilityDetails] = field(
+    merchandising_availability_details: None | MerchandisingAvailabilityDetails = field(
         default=None,
         metadata={
             "name": "MerchandisingAvailabilityDetails",
@@ -19798,14 +19799,14 @@ class AirPricingCommand:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
             "type": "Element",
         }
     )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+    air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentPricingModifiers",
@@ -19813,7 +19814,7 @@ class AirPricingCommand:
             "max_occurs": 999,
         }
     )
-    command_key: Optional[str] = field(
+    command_key: None | str = field(
         default=None,
         metadata={
             "name": "CommandKey",
@@ -19821,7 +19822,7 @@ class AirPricingCommand:
             "max_length": 10,
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -19862,7 +19863,7 @@ class AirTicketingReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -19872,7 +19873,7 @@ class AirTicketingReq(AirBaseReq):
             "max_length": 8,
         }
     )
-    air_pricing_info_ref: List["AirTicketingReq.AirPricingInfoRef"] = field(
+    air_pricing_info_ref: list[AirTicketingReq.AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -19880,7 +19881,7 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 999,
         }
     )
-    ticketing_modifiers_ref: List[TypeTicketingModifiersRef] = field(
+    ticketing_modifiers_ref: list[TypeTicketingModifiersRef] = field(
         default_factory=list,
         metadata={
             "name": "TicketingModifiersRef",
@@ -19888,14 +19889,14 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 999,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    commission: List[Commission] = field(
+    commission: list[Commission] = field(
         default_factory=list,
         metadata={
             "name": "Commission",
@@ -19904,7 +19905,7 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 18,
         }
     )
-    detailed_billing_information: List[DetailedBillingInformation] = field(
+    detailed_billing_information: list[DetailedBillingInformation] = field(
         default_factory=list,
         metadata={
             "name": "DetailedBillingInformation",
@@ -19912,14 +19913,14 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 999,
         }
     )
-    fax_details_information: Optional[FaxDetailsInformation] = field(
+    fax_details_information: None | FaxDetailsInformation = field(
         default=None,
         metadata={
             "name": "FaxDetailsInformation",
             "type": "Element",
         }
     )
-    air_ticketing_modifiers: List[AirTicketingModifiers] = field(
+    air_ticketing_modifiers: list[AirTicketingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirTicketingModifiers",
@@ -19927,7 +19928,7 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 999,
         }
     )
-    air_segment_ticketing_modifiers: List[AirSegmentTicketingModifiers] = field(
+    air_segment_ticketing_modifiers: list[AirSegmentTicketingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentTicketingModifiers",
@@ -19959,7 +19960,7 @@ class AirTicketingReq(AirBaseReq):
 
     @dataclass
     class AirPricingInfoRef:
-        booking_traveler_ref: List[BookingTravelerRef] = field(
+        booking_traveler_ref: list[BookingTravelerRef] = field(
             default_factory=list,
             metadata={
                 "name": "BookingTravelerRef",
@@ -19968,7 +19969,7 @@ class AirTicketingReq(AirBaseReq):
                 "max_occurs": 9,
             }
         )
-        key: Optional[str] = field(
+        key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
@@ -20004,7 +20005,7 @@ class AutoPricingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -20012,7 +20013,7 @@ class AutoPricingInfo:
             "max_occurs": 100,
         }
     )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
+    booking_traveler_ref: list[BookingTravelerRef] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -20021,14 +20022,14 @@ class AutoPricingInfo:
             "max_occurs": 100,
         }
     )
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
             "type": "Element",
         }
     )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+    air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentPricingModifiers",
@@ -20036,7 +20037,7 @@ class AutoPricingInfo:
             "max_occurs": 100,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -20044,7 +20045,7 @@ class AutoPricingInfo:
             "required": True,
         }
     )
-    pricing_type: Optional[str] = field(
+    pricing_type: None | str = field(
         default=None,
         metadata={
             "name": "PricingType",
@@ -20052,7 +20053,7 @@ class AutoPricingInfo:
             "max_length": 25,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -20060,14 +20061,14 @@ class AutoPricingInfo:
             "length": 2,
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -20084,7 +20085,7 @@ class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    bag_details: List[BagDetails] = field(
+    bag_details: list[BagDetails] = field(
         default_factory=list,
         metadata={
             "name": "BagDetails",
@@ -20092,7 +20093,7 @@ class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
             "max_occurs": 999,
         }
     )
-    traveler_type: Optional[str] = field(
+    traveler_type: None | str = field(
         default=None,
         metadata={
             "name": "TravelerType",
@@ -20101,7 +20102,7 @@ class BaggageAllowanceInfo(BaseBaggageAllowanceInfo):
             "max_length": 5,
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
@@ -20128,7 +20129,7 @@ class EmdissuanceRsp(BaseRsp):
         name = "EMDIssuanceRsp"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdsummary_info: List[EmdsummaryInfo] = field(
+    emdsummary_info: list[EmdsummaryInfo] = field(
         default_factory=list,
         metadata={
             "name": "EMDSummaryInfo",
@@ -20136,7 +20137,7 @@ class EmdissuanceRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    emdinfo: List[Emdinfo] = field(
+    emdinfo: list[Emdinfo] = field(
         default_factory=list,
         metadata={
             "name": "EMDInfo",
@@ -20161,14 +20162,14 @@ class EmdretrieveRsp(BaseRsp):
         name = "EMDRetrieveRsp"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    emdinfo: Optional[Emdinfo] = field(
+    emdinfo: None | Emdinfo = field(
         default=None,
         metadata={
             "name": "EMDInfo",
             "type": "Element",
         }
     )
-    emdsummary_info: List[EmdsummaryInfo] = field(
+    emdsummary_info: list[EmdsummaryInfo] = field(
         default_factory=list,
         metadata={
             "name": "EMDSummaryInfo",
@@ -20225,7 +20226,7 @@ class FareDisplay:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_display_rule: Optional[FareDisplayRule] = field(
+    fare_display_rule: None | FareDisplayRule = field(
         default=None,
         metadata={
             "name": "FareDisplayRule",
@@ -20233,7 +20234,7 @@ class FareDisplay:
             "required": True,
         }
     )
-    fare_pricing: List[FarePricing] = field(
+    fare_pricing: list[FarePricing] = field(
         default_factory=list,
         metadata={
             "name": "FarePricing",
@@ -20242,7 +20243,7 @@ class FareDisplay:
             "max_occurs": 999,
         }
     )
-    fare_restriction: List[FareRestriction] = field(
+    fare_restriction: list[FareRestriction] = field(
         default_factory=list,
         metadata={
             "name": "FareRestriction",
@@ -20250,28 +20251,28 @@ class FareDisplay:
             "max_occurs": 99,
         }
     )
-    fare_routing_information: Optional[str] = field(
+    fare_routing_information: None | str = field(
         default=None,
         metadata={
             "name": "FareRoutingInformation",
             "type": "Element",
         }
     )
-    fare_mileage_information: Optional[str] = field(
+    fare_mileage_information: None | str = field(
         default=None,
         metadata={
             "name": "FareMileageInformation",
             "type": "Element",
         }
     )
-    air_fare_display_rule_key: Optional[AirFareDisplayRuleKey] = field(
+    air_fare_display_rule_key: None | AirFareDisplayRuleKey = field(
         default=None,
         metadata={
             "name": "AirFareDisplayRuleKey",
             "type": "Element",
         }
     )
-    booking_code: List[BookingCode] = field(
+    booking_code: list[BookingCode] = field(
         default_factory=list,
         metadata={
             "name": "BookingCode",
@@ -20279,7 +20280,7 @@ class FareDisplay:
             "max_occurs": 999,
         }
     )
-    account_code: List[AccountCode] = field(
+    account_code: list[AccountCode] = field(
         default_factory=list,
         metadata={
             "name": "AccountCode",
@@ -20288,7 +20289,7 @@ class FareDisplay:
             "max_occurs": 999,
         }
     )
-    addl_booking_code_information: Optional[str] = field(
+    addl_booking_code_information: None | str = field(
         default=None,
         metadata={
             "name": "AddlBookingCodeInformation",
@@ -20297,14 +20298,14 @@ class FareDisplay:
             "white_space": "collapse",
         }
     )
-    fare_rule_failure_info: Optional[FareRuleFailureInfo] = field(
+    fare_rule_failure_info: None | FareRuleFailureInfo = field(
         default=None,
         metadata={
             "name": "FareRuleFailureInfo",
             "type": "Element",
         }
     )
-    price_change: List[PriceChangeType] = field(
+    price_change: list[PriceChangeType] = field(
         default_factory=list,
         metadata={
             "name": "PriceChange",
@@ -20312,7 +20313,7 @@ class FareDisplay:
             "max_occurs": 99,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -20321,7 +20322,7 @@ class FareDisplay:
             "length": 2,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -20329,7 +20330,7 @@ class FareDisplay:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -20337,14 +20338,14 @@ class FareDisplay:
             "required": True,
         }
     )
-    trip_type: Optional[TypeFareTripType] = field(
+    trip_type: None | TypeFareTripType = field(
         default=None,
         metadata={
             "name": "TripType",
             "type": "Attribute",
         }
     )
-    fare_type_code: Optional[str] = field(
+    fare_type_code: None | str = field(
         default=None,
         metadata={
             "name": "FareTypeCode",
@@ -20353,77 +20354,77 @@ class FareDisplay:
             "max_length": 5,
         }
     )
-    special_fare: Optional[bool] = field(
+    special_fare: None | bool = field(
         default=None,
         metadata={
             "name": "SpecialFare",
             "type": "Attribute",
         }
     )
-    instant_purchase: Optional[bool] = field(
+    instant_purchase: None | bool = field(
         default=None,
         metadata={
             "name": "InstantPurchase",
             "type": "Attribute",
         }
     )
-    eligibility_restricted: Optional[bool] = field(
+    eligibility_restricted: None | bool = field(
         default=None,
         metadata={
             "name": "EligibilityRestricted",
             "type": "Attribute",
         }
     )
-    flight_restricted: Optional[bool] = field(
+    flight_restricted: None | bool = field(
         default=None,
         metadata={
             "name": "FlightRestricted",
             "type": "Attribute",
         }
     )
-    stopovers_restricted: Optional[bool] = field(
+    stopovers_restricted: None | bool = field(
         default=None,
         metadata={
             "name": "StopoversRestricted",
             "type": "Attribute",
         }
     )
-    transfers_restricted: Optional[bool] = field(
+    transfers_restricted: None | bool = field(
         default=None,
         metadata={
             "name": "TransfersRestricted",
             "type": "Attribute",
         }
     )
-    blackouts_exist: Optional[bool] = field(
+    blackouts_exist: None | bool = field(
         default=None,
         metadata={
             "name": "BlackoutsExist",
             "type": "Attribute",
         }
     )
-    accompanied_travel: Optional[bool] = field(
+    accompanied_travel: None | bool = field(
         default=None,
         metadata={
             "name": "AccompaniedTravel",
             "type": "Attribute",
         }
     )
-    mile_or_route_based_fare: Optional[TypeMileOrRouteBasedFare] = field(
+    mile_or_route_based_fare: None | TypeMileOrRouteBasedFare = field(
         default=None,
         metadata={
             "name": "MileOrRouteBasedFare",
             "type": "Attribute",
         }
     )
-    global_indicator: Optional[TypeAtpcoglobalIndicator] = field(
+    global_indicator: None | TypeAtpcoglobalIndicator = field(
         default=None,
         metadata={
             "name": "GlobalIndicator",
             "type": "Attribute",
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -20432,7 +20433,7 @@ class FareDisplay:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -20441,14 +20442,14 @@ class FareDisplay:
             "white_space": "collapse",
         }
     )
-    fare_ticketing_code: Optional[str] = field(
+    fare_ticketing_code: None | str = field(
         default=None,
         metadata={
             "name": "FareTicketingCode",
             "type": "Attribute",
         }
     )
-    fare_ticketing_designator: Optional[str] = field(
+    fare_ticketing_designator: None | str = field(
         default=None,
         metadata={
             "name": "FareTicketingDesignator",
@@ -20467,7 +20468,7 @@ class FareRule:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_rule_long: List[FareRuleLong] = field(
+    fare_rule_long: list[FareRuleLong] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleLong",
@@ -20475,7 +20476,7 @@ class FareRule:
             "max_occurs": 999,
         }
     )
-    fare_rule_short: List[FareRuleShort] = field(
+    fare_rule_short: list[FareRuleShort] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleShort",
@@ -20483,28 +20484,28 @@ class FareRule:
             "max_occurs": 999,
         }
     )
-    rule_advanced_purchase: Optional[RuleAdvancedPurchase] = field(
+    rule_advanced_purchase: None | RuleAdvancedPurchase = field(
         default=None,
         metadata={
             "name": "RuleAdvancedPurchase",
             "type": "Element",
         }
     )
-    rule_length_of_stay: Optional[RuleLengthOfStay] = field(
+    rule_length_of_stay: None | RuleLengthOfStay = field(
         default=None,
         metadata={
             "name": "RuleLengthOfStay",
             "type": "Element",
         }
     )
-    rule_charges: Optional[RuleCharges] = field(
+    rule_charges: None | RuleCharges = field(
         default=None,
         metadata={
             "name": "RuleCharges",
             "type": "Element",
         }
     )
-    fare_rule_result_message: List[TypeResultMessage] = field(
+    fare_rule_result_message: list[TypeResultMessage] = field(
         default_factory=list,
         metadata={
             "name": "FareRuleResultMessage",
@@ -20512,42 +20513,42 @@ class FareRule:
             "max_occurs": 999,
         }
     )
-    structured_fare_rules: Optional[StructuredFareRulesType] = field(
+    structured_fare_rules: None | StructuredFareRulesType = field(
         default=None,
         metadata={
             "name": "StructuredFareRules",
             "type": "Element",
         }
     )
-    fare_info_ref: Optional[str] = field(
+    fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
         }
     )
-    rule_number: Optional[str] = field(
+    rule_number: None | str = field(
         default=None,
         metadata={
             "name": "RuleNumber",
             "type": "Attribute",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
         }
     )
-    tariff_number: Optional[str] = field(
+    tariff_number: None | str = field(
         default=None,
         metadata={
             "name": "TariffNumber",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -20556,7 +20557,7 @@ class FareRule:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -20575,7 +20576,7 @@ class FlightDetailsList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_details: List[FlightDetails] = field(
+    flight_details: list[FlightDetails] = field(
         default_factory=list,
         metadata={
             "name": "FlightDetails",
@@ -20596,7 +20597,7 @@ class FlightInformationRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_info: List[FlightInfo] = field(
+    flight_info: list[FlightInfo] = field(
         default_factory=list,
         metadata={
             "name": "FlightInfo",
@@ -20623,7 +20624,7 @@ class FlightOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    option: List[Option] = field(
+    option: list[Option] = field(
         default_factory=list,
         metadata={
             "name": "Option",
@@ -20632,14 +20633,14 @@ class FlightOption:
             "max_occurs": 999,
         }
     )
-    leg_ref: Optional[str] = field(
+    leg_ref: None | str = field(
         default=None,
         metadata={
             "name": "LegRef",
             "type": "Attribute",
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -20649,7 +20650,7 @@ class FlightOption:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -20673,7 +20674,7 @@ class FlightTimeTableRsp(BaseSearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_time_table_list: Optional["FlightTimeTableRsp.FlightTimeTableList"] = field(
+    flight_time_table_list: None | FlightTimeTableRsp.FlightTimeTableList = field(
         default=None,
         metadata={
             "name": "FlightTimeTableList",
@@ -20683,7 +20684,7 @@ class FlightTimeTableRsp(BaseSearchRsp):
 
     @dataclass
     class FlightTimeTableList:
-        flight_time_detail: List[FlightTimeDetail] = field(
+        flight_time_detail: list[FlightTimeDetail] = field(
             default_factory=list,
             metadata={
                 "name": "FlightTimeDetail",
@@ -20712,14 +20713,14 @@ class OptionalServices:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    optional_services_total: Optional["OptionalServices.OptionalServicesTotal"] = field(
+    optional_services_total: None | OptionalServices.OptionalServicesTotal = field(
         default=None,
         metadata={
             "name": "OptionalServicesTotal",
             "type": "Element",
         }
     )
-    optional_service: List[OptionalService] = field(
+    optional_service: list[OptionalService] = field(
         default_factory=list,
         metadata={
             "name": "OptionalService",
@@ -20728,7 +20729,7 @@ class OptionalServices:
             "max_occurs": 999,
         }
     )
-    grouped_option_info: List[GroupedOptionInfo] = field(
+    grouped_option_info: list[GroupedOptionInfo] = field(
         default_factory=list,
         metadata={
             "name": "GroupedOptionInfo",
@@ -20736,7 +20737,7 @@ class OptionalServices:
             "max_occurs": 999,
         }
     )
-    optional_service_rules: List[ServiceRuleType] = field(
+    optional_service_rules: list[ServiceRuleType] = field(
         default_factory=list,
         metadata={
             "name": "OptionalServiceRules",
@@ -20774,7 +20775,7 @@ class OptionalServices:
         approximate_taxes: The Converted tax amount in Default Currency.
         approximate_fees: The Converted fee amount in Default Currency.
         """
-        tax_info: List[TaxInfo] = field(
+        tax_info: list[TaxInfo] = field(
             default_factory=list,
             metadata={
                 "name": "TaxInfo",
@@ -20782,7 +20783,7 @@ class OptionalServices:
                 "max_occurs": 999,
             }
         )
-        fee_info: List[FeeInfo] = field(
+        fee_info: list[FeeInfo] = field(
             default_factory=list,
             metadata={
                 "name": "FeeInfo",
@@ -20790,70 +20791,70 @@ class OptionalServices:
                 "max_occurs": 999,
             }
         )
-        total_price: Optional[str] = field(
+        total_price: None | str = field(
             default=None,
             metadata={
                 "name": "TotalPrice",
                 "type": "Attribute",
             }
         )
-        base_price: Optional[str] = field(
+        base_price: None | str = field(
             default=None,
             metadata={
                 "name": "BasePrice",
                 "type": "Attribute",
             }
         )
-        approximate_total_price: Optional[str] = field(
+        approximate_total_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateTotalPrice",
                 "type": "Attribute",
             }
         )
-        approximate_base_price: Optional[str] = field(
+        approximate_base_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateBasePrice",
                 "type": "Attribute",
             }
         )
-        equivalent_base_price: Optional[str] = field(
+        equivalent_base_price: None | str = field(
             default=None,
             metadata={
                 "name": "EquivalentBasePrice",
                 "type": "Attribute",
             }
         )
-        taxes: Optional[str] = field(
+        taxes: None | str = field(
             default=None,
             metadata={
                 "name": "Taxes",
                 "type": "Attribute",
             }
         )
-        fees: Optional[str] = field(
+        fees: None | str = field(
             default=None,
             metadata={
                 "name": "Fees",
                 "type": "Attribute",
             }
         )
-        services: Optional[str] = field(
+        services: None | str = field(
             default=None,
             metadata={
                 "name": "Services",
                 "type": "Attribute",
             }
         )
-        approximate_taxes: Optional[str] = field(
+        approximate_taxes: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateTaxes",
                 "type": "Attribute",
             }
         )
-        approximate_fees: Optional[str] = field(
+        approximate_fees: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateFees",
@@ -20889,7 +20890,7 @@ class PrePayProfileInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    pre_pay_id: Optional[PrePayId] = field(
+    pre_pay_id: None | PrePayId = field(
         default=None,
         metadata={
             "name": "PrePayId",
@@ -20897,42 +20898,42 @@ class PrePayProfileInfo:
             "required": True,
         }
     )
-    pre_pay_customer: Optional[PrePayCustomer] = field(
+    pre_pay_customer: None | PrePayCustomer = field(
         default=None,
         metadata={
             "name": "PrePayCustomer",
             "type": "Element",
         }
     )
-    pre_pay_account: Optional[PrePayAccount] = field(
+    pre_pay_account: None | PrePayAccount = field(
         default=None,
         metadata={
             "name": "PrePayAccount",
             "type": "Element",
         }
     )
-    affiliations: Optional[Affiliations] = field(
+    affiliations: None | Affiliations = field(
         default=None,
         metadata={
             "name": "Affiliations",
             "type": "Element",
         }
     )
-    account_related_rules: Optional[AccountRelatedRules] = field(
+    account_related_rules: None | AccountRelatedRules = field(
         default=None,
         metadata={
             "name": "AccountRelatedRules",
             "type": "Element",
         }
     )
-    status_code: Optional[str] = field(
+    status_code: None | str = field(
         default=None,
         metadata={
             "name": "StatusCode",
             "type": "Attribute",
         }
     )
-    creator_id: Optional[str] = field(
+    creator_id: None | str = field(
         default=None,
         metadata={
             "name": "CreatorID",
@@ -20958,7 +20959,7 @@ class Rows:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    row: List[Row] = field(
+    row: list[Row] = field(
         default_factory=list,
         metadata={
             "name": "Row",
@@ -20966,7 +20967,7 @@ class Rows:
             "max_occurs": 999,
         }
     )
-    segment_ref: Optional[str] = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
@@ -21055,7 +21056,7 @@ class TicketingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    booking_traveler_ref: List[str] = field(
+    booking_traveler_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -21063,63 +21064,63 @@ class TicketingModifiers:
             "max_occurs": 999,
         }
     )
-    net_remit: Optional[TypeTicketModifierAmountType] = field(
+    net_remit: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "NetRemit",
             "type": "Element",
         }
     )
-    net_fare: Optional[TypeTicketModifierAmountType] = field(
+    net_fare: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "NetFare",
             "type": "Element",
         }
     )
-    actual_selling_fare: Optional[TypeTicketModifierAmountType] = field(
+    actual_selling_fare: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "ActualSellingFare",
             "type": "Element",
         }
     )
-    invoice_fare: Optional[TypeTicketModifierAccountingType] = field(
+    invoice_fare: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "InvoiceFare",
             "type": "Element",
         }
     )
-    corporate_discount: Optional[TypeTicketModifierAccountingType] = field(
+    corporate_discount: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "CorporateDiscount",
             "type": "Element",
         }
     )
-    accounting_info: Optional[TypeTicketModifierAccountingType] = field(
+    accounting_info: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "AccountingInfo",
             "type": "Element",
         }
     )
-    bulk_ticket: Optional["TicketingModifiers.BulkTicket"] = field(
+    bulk_ticket: None | TicketingModifiers.BulkTicket = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Element",
         }
     )
-    group_tour: Optional[TypeBulkTicketModifierType] = field(
+    group_tour: None | TypeBulkTicketModifierType = field(
         default=None,
         metadata={
             "name": "GroupTour",
             "type": "Element",
         }
     )
-    commission: Optional[Commission] = field(
+    commission: None | Commission = field(
         default=None,
         metadata={
             "name": "Commission",
@@ -21127,14 +21128,14 @@ class TicketingModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    tour_code: Optional[TourCode] = field(
+    tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
         }
     )
-    ticket_endorsement: List[TicketEndorsement] = field(
+    ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
         metadata={
             "name": "TicketEndorsement",
@@ -21142,35 +21143,35 @@ class TicketingModifiers:
             "max_occurs": 3,
         }
     )
-    value_modifier: Optional[TypeTicketModifierValueType] = field(
+    value_modifier: None | TypeTicketModifierValueType = field(
         default=None,
         metadata={
             "name": "ValueModifier",
             "type": "Element",
         }
     )
-    document_select: Optional[DocumentSelect] = field(
+    document_select: None | DocumentSelect = field(
         default=None,
         metadata={
             "name": "DocumentSelect",
             "type": "Element",
         }
     )
-    document_options: Optional[DocumentOptions] = field(
+    document_options: None | DocumentOptions = field(
         default=None,
         metadata={
             "name": "DocumentOptions",
             "type": "Element",
         }
     )
-    segment_select: Optional[SegmentSelect] = field(
+    segment_select: None | SegmentSelect = field(
         default=None,
         metadata={
             "name": "SegmentSelect",
             "type": "Element",
         }
     )
-    segment_modifiers: List[SegmentModifiers] = field(
+    segment_modifiers: list[SegmentModifiers] = field(
         default_factory=list,
         metadata={
             "name": "SegmentModifiers",
@@ -21178,7 +21179,7 @@ class TicketingModifiers:
             "max_occurs": 999,
         }
     )
-    supplier_locator: Optional[SupplierLocator] = field(
+    supplier_locator: None | SupplierLocator = field(
         default=None,
         metadata={
             "name": "SupplierLocator",
@@ -21186,14 +21187,14 @@ class TicketingModifiers:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    destination_purpose_code: Optional[DestinationPurposeCode] = field(
+    destination_purpose_code: None | DestinationPurposeCode = field(
         default=None,
         metadata={
             "name": "DestinationPurposeCode",
             "type": "Element",
         }
     )
-    language_option: List[LanguageOption] = field(
+    language_option: list[LanguageOption] = field(
         default_factory=list,
         metadata={
             "name": "LanguageOption",
@@ -21201,28 +21202,28 @@ class TicketingModifiers:
             "max_occurs": 2,
         }
     )
-    land_charges: Optional[LandCharges] = field(
+    land_charges: None | LandCharges = field(
         default=None,
         metadata={
             "name": "LandCharges",
             "type": "Element",
         }
     )
-    print_blank_form_itinerary: Optional[PrintBlankFormItinerary] = field(
+    print_blank_form_itinerary: None | PrintBlankFormItinerary = field(
         default=None,
         metadata={
             "name": "PrintBlankFormItinerary",
             "type": "Element",
         }
     )
-    exclude_ticketing: Optional[ExcludeTicketing] = field(
+    exclude_ticketing: None | ExcludeTicketing = field(
         default=None,
         metadata={
             "name": "ExcludeTicketing",
             "type": "Element",
         }
     )
-    exempt_obfee: Optional[ExemptObfee] = field(
+    exempt_obfee: None | ExemptObfee = field(
         default=None,
         metadata={
             "name": "ExemptOBFee",
@@ -21236,14 +21237,14 @@ class TicketingModifiers:
             "type": "Attribute",
         }
     )
-    document_instruction_number: Optional[str] = field(
+    document_instruction_number: None | str = field(
         default=None,
         metadata={
             "name": "DocumentInstructionNumber",
             "type": "Attribute",
         }
     )
-    reference: Optional[str] = field(
+    reference: None | str = field(
         default=None,
         metadata={
             "name": "Reference",
@@ -21252,7 +21253,7 @@ class TicketingModifiers:
             "max_length": 30,
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -21260,7 +21261,7 @@ class TicketingModifiers:
             "max_length": 30,
         }
     )
-    free_text: Optional[str] = field(
+    free_text: None | str = field(
         default=None,
         metadata={
             "name": "FreeText",
@@ -21268,21 +21269,21 @@ class TicketingModifiers:
             "max_length": 756,
         }
     )
-    name_number: Optional[str] = field(
+    name_number: None | str = field(
         default=None,
         metadata={
             "name": "NameNumber",
             "type": "Attribute",
         }
     )
-    ticket_record: Optional[str] = field(
+    ticket_record: None | str = field(
         default=None,
         metadata={
             "name": "TicketRecord",
             "type": "Attribute",
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -21290,28 +21291,28 @@ class TicketingModifiers:
             "length": 2,
         }
     )
-    exempt_vat: Optional[bool] = field(
+    exempt_vat: None | bool = field(
         default=None,
         metadata={
             "name": "ExemptVAT",
             "type": "Attribute",
         }
     )
-    net_remit_applied: Optional[bool] = field(
+    net_remit_applied: None | bool = field(
         default=None,
         metadata={
             "name": "NetRemitApplied",
             "type": "Attribute",
         }
     )
-    free_ticket: Optional[bool] = field(
+    free_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "FreeTicket",
             "type": "Attribute",
         }
     )
-    currency_override_code: Optional[str] = field(
+    currency_override_code: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyOverrideCode",
@@ -21319,21 +21320,21 @@ class TicketingModifiers:
             "length": 1,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -21348,7 +21349,7 @@ class TicketingModifiers:
         ----------
         non_refundable: Indicates bulk ticket being non-refundable
         """
-        non_refundable: Optional[bool] = field(
+        non_refundable: None | bool = field(
             default=None,
             metadata={
                 "name": "NonRefundable",
@@ -21461,7 +21462,7 @@ class TypeBaseAirSegment(Segment):
     class Meta:
         name = "typeBaseAirSegment"
 
-    sponsored_flt_info: Optional[SponsoredFltInfo] = field(
+    sponsored_flt_info: None | SponsoredFltInfo = field(
         default=None,
         metadata={
             "name": "SponsoredFltInfo",
@@ -21469,7 +21470,7 @@ class TypeBaseAirSegment(Segment):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    codeshare_info: Optional[CodeshareInfo] = field(
+    codeshare_info: None | CodeshareInfo = field(
         default=None,
         metadata={
             "name": "CodeshareInfo",
@@ -21477,7 +21478,7 @@ class TypeBaseAirSegment(Segment):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_avail_info: List[AirAvailInfo] = field(
+    air_avail_info: list[AirAvailInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirAvailInfo",
@@ -21486,7 +21487,7 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    flight_details: List[FlightDetails] = field(
+    flight_details: list[FlightDetails] = field(
         default_factory=list,
         metadata={
             "name": "FlightDetails",
@@ -21495,7 +21496,7 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    flight_details_ref: List[FlightDetailsRef] = field(
+    flight_details_ref: list[FlightDetailsRef] = field(
         default_factory=list,
         metadata={
             "name": "FlightDetailsRef",
@@ -21504,7 +21505,7 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    alternate_location_distance_ref: List[AlternateLocationDistanceRef] = field(
+    alternate_location_distance_ref: list[AlternateLocationDistanceRef] = field(
         default_factory=list,
         metadata={
             "name": "AlternateLocationDistanceRef",
@@ -21513,7 +21514,7 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    connection: Optional[Connection] = field(
+    connection: None | Connection = field(
         default=None,
         metadata={
             "name": "Connection",
@@ -21521,7 +21522,7 @@ class TypeBaseAirSegment(Segment):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    sell_message: List[str] = field(
+    sell_message: list[str] = field(
         default_factory=list,
         metadata={
             "name": "SellMessage",
@@ -21530,7 +21531,7 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    rail_coach_details: List[RailCoachDetails] = field(
+    rail_coach_details: list[RailCoachDetails] = field(
         default_factory=list,
         metadata={
             "name": "RailCoachDetails",
@@ -21539,14 +21540,14 @@ class TypeBaseAirSegment(Segment):
             "max_occurs": 999,
         }
     )
-    open_segment: Optional[bool] = field(
+    open_segment: None | bool = field(
         default=None,
         metadata={
             "name": "OpenSegment",
             "type": "Attribute",
         }
     )
-    group: Optional[int] = field(
+    group: None | int = field(
         default=None,
         metadata={
             "name": "Group",
@@ -21554,7 +21555,7 @@ class TypeBaseAirSegment(Segment):
             "required": True,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -21562,14 +21563,14 @@ class TypeBaseAirSegment(Segment):
             "length": 2,
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
@@ -21577,7 +21578,7 @@ class TypeBaseAirSegment(Segment):
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -21587,7 +21588,7 @@ class TypeBaseAirSegment(Segment):
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -21597,42 +21598,42 @@ class TypeBaseAirSegment(Segment):
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    flight_time: Optional[int] = field(
+    flight_time: None | int = field(
         default=None,
         metadata={
             "name": "FlightTime",
             "type": "Attribute",
         }
     )
-    travel_time: Optional[int] = field(
+    travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
         }
     )
-    distance: Optional[int] = field(
+    distance: None | int = field(
         default=None,
         metadata={
             "name": "Distance",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -21641,7 +21642,7 @@ class TypeBaseAirSegment(Segment):
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -21650,35 +21651,35 @@ class TypeBaseAirSegment(Segment):
             "max_length": 5,
         }
     )
-    participant_level: Optional[str] = field(
+    participant_level: None | str = field(
         default=None,
         metadata={
             "name": "ParticipantLevel",
             "type": "Attribute",
         }
     )
-    link_availability: Optional[bool] = field(
+    link_availability: None | bool = field(
         default=None,
         metadata={
             "name": "LinkAvailability",
             "type": "Attribute",
         }
     )
-    polled_availability_option: Optional[str] = field(
+    polled_availability_option: None | str = field(
         default=None,
         metadata={
             "name": "PolledAvailabilityOption",
             "type": "Attribute",
         }
     )
-    availability_display_type: Optional[str] = field(
+    availability_display_type: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilityDisplayType",
             "type": "Attribute",
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -21687,14 +21688,14 @@ class TypeBaseAirSegment(Segment):
             "max_length": 2,
         }
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
         }
     )
-    equipment: Optional[str] = field(
+    equipment: None | str = field(
         default=None,
         metadata={
             "name": "Equipment",
@@ -21702,21 +21703,21 @@ class TypeBaseAirSegment(Segment):
             "length": 3,
         }
     )
-    marriage_group: Optional[int] = field(
+    marriage_group: None | int = field(
         default=None,
         metadata={
             "name": "MarriageGroup",
             "type": "Attribute",
         }
     )
-    number_of_stops: Optional[int] = field(
+    number_of_stops: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfStops",
             "type": "Attribute",
         }
     )
-    seamless: Optional[bool] = field(
+    seamless: None | bool = field(
         default=None,
         metadata={
             "name": "Seamless",
@@ -21730,42 +21731,42 @@ class TypeBaseAirSegment(Segment):
             "type": "Attribute",
         }
     )
-    guaranteed_payment_carrier: Optional[str] = field(
+    guaranteed_payment_carrier: None | str = field(
         default=None,
         metadata={
             "name": "GuaranteedPaymentCarrier",
             "type": "Attribute",
         }
     )
-    host_token_ref: Optional[str] = field(
+    host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
         }
     )
-    provider_reservation_info_ref: Optional[str] = field(
+    provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    passive_provider_reservation_info_ref: Optional[str] = field(
+    passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    optional_services_indicator: Optional[bool] = field(
+    optional_services_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "OptionalServicesIndicator",
             "type": "Attribute",
         }
     )
-    availability_source: Optional[str] = field(
+    availability_source: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilitySource",
@@ -21773,28 +21774,28 @@ class TypeBaseAirSegment(Segment):
             "max_length": 1,
         }
     )
-    apisrequirements_ref: Optional[str] = field(
+    apisrequirements_ref: None | str = field(
         default=None,
         metadata={
             "name": "APISRequirementsRef",
             "type": "Attribute",
         }
     )
-    black_listed: Optional[bool] = field(
+    black_listed: None | bool = field(
         default=None,
         metadata={
             "name": "BlackListed",
             "type": "Attribute",
         }
     )
-    operational_status: Optional[str] = field(
+    operational_status: None | str = field(
         default=None,
         metadata={
             "name": "OperationalStatus",
             "type": "Attribute",
         }
     )
-    number_in_party: Optional[int] = field(
+    number_in_party: None | int = field(
         default=None,
         metadata={
             "name": "NumberInParty",
@@ -21803,7 +21804,7 @@ class TypeBaseAirSegment(Segment):
             "max_inclusive": 99,
         }
     )
-    rail_coach_number: Optional[str] = field(
+    rail_coach_number: None | str = field(
         default=None,
         metadata={
             "name": "RailCoachNumber",
@@ -21811,7 +21812,7 @@ class TypeBaseAirSegment(Segment):
             "max_length": 4,
         }
     )
-    booking_date: Optional[XmlDate] = field(
+    booking_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingDate",
@@ -21832,7 +21833,7 @@ class TypeBaseAirSegment(Segment):
             "type": "Attribute",
         }
     )
-    brand_indicator: Optional[str] = field(
+    brand_indicator: None | str = field(
         default=None,
         metadata={
             "name": "BrandIndicator",
@@ -21853,7 +21854,7 @@ class AirFareDisplayRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_display: List[FareDisplay] = field(
+    fare_display: list[FareDisplay] = field(
         default_factory=list,
         metadata={
             "name": "FareDisplay",
@@ -21875,7 +21876,7 @@ class AirFareRulesRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_rule: List[FareRule] = field(
+    fare_rule: list[FareRule] = field(
         default_factory=list,
         metadata={
             "name": "FareRule",
@@ -21903,7 +21904,7 @@ class AirPrePayRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    pre_pay_profile_info: List[PrePayProfileInfo] = field(
+    pre_pay_profile_info: list[PrePayProfileInfo] = field(
         default_factory=list,
         metadata={
             "name": "PrePayProfileInfo",
@@ -21912,7 +21913,7 @@ class AirPrePayRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    max_results: Optional[int] = field(
+    max_results: None | int = field(
         default=None,
         metadata={
             "name": "MaxResults",
@@ -21921,14 +21922,14 @@ class AirPrePayRsp(BaseRsp):
             "max_inclusive": 200,
         }
     )
-    more_indicator: Optional[bool] = field(
+    more_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "MoreIndicator",
             "type": "Attribute",
         }
     )
-    more_data_start_index: Optional[str] = field(
+    more_data_start_index: None | str = field(
         default=None,
         metadata={
             "name": "MoreDataStartIndex",
@@ -21945,7 +21946,7 @@ class AirPricingTicketingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_info_ref: List[AirPricingInfoRef] = field(
+    air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfoRef",
@@ -21953,7 +21954,7 @@ class AirPricingTicketingModifiers:
             "max_occurs": 999,
         }
     )
-    ticketing_modifiers: Optional[TicketingModifiers] = field(
+    ticketing_modifiers: None | TicketingModifiers = field(
         default=None,
         metadata={
             "name": "TicketingModifiers",
@@ -21980,7 +21981,7 @@ class BaggageAllowances:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    baggage_allowance_info: List[BaggageAllowanceInfo] = field(
+    baggage_allowance_info: list[BaggageAllowanceInfo] = field(
         default_factory=list,
         metadata={
             "name": "BaggageAllowanceInfo",
@@ -21989,7 +21990,7 @@ class BaggageAllowances:
             "max_occurs": 999,
         }
     )
-    carry_on_allowance_info: List[CarryOnAllowanceInfo] = field(
+    carry_on_allowance_info: list[CarryOnAllowanceInfo] = field(
         default_factory=list,
         metadata={
             "name": "CarryOnAllowanceInfo",
@@ -21997,7 +21998,7 @@ class BaggageAllowances:
             "max_occurs": 999,
         }
     )
-    embargo_info: List[EmbargoInfo] = field(
+    embargo_info: list[EmbargoInfo] = field(
         default_factory=list,
         metadata={
             "name": "EmbargoInfo",
@@ -22042,7 +22043,7 @@ class Brand:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    title: List[Title] = field(
+    title: list[Title] = field(
         default_factory=list,
         metadata={
             "name": "Title",
@@ -22050,7 +22051,7 @@ class Brand:
             "max_occurs": 2,
         }
     )
-    text: List[Text] = field(
+    text: list[Text] = field(
         default_factory=list,
         metadata={
             "name": "Text",
@@ -22058,7 +22059,7 @@ class Brand:
             "max_occurs": 5,
         }
     )
-    image_location: List[ImageLocation] = field(
+    image_location: list[ImageLocation] = field(
         default_factory=list,
         metadata={
             "name": "ImageLocation",
@@ -22066,14 +22067,14 @@ class Brand:
             "max_occurs": 3,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    rules: List[Rules] = field(
+    rules: list[Rules] = field(
         default_factory=list,
         metadata={
             "name": "Rules",
@@ -22081,21 +22082,21 @@ class Brand:
             "max_occurs": 99,
         }
     )
-    service_associations: Optional[ServiceAssociations] = field(
+    service_associations: None | ServiceAssociations = field(
         default=None,
         metadata={
             "name": "ServiceAssociations",
             "type": "Element",
         }
     )
-    upsell_brand: Optional[UpsellBrand] = field(
+    upsell_brand: None | UpsellBrand = field(
         default=None,
         metadata={
             "name": "UpsellBrand",
             "type": "Element",
         }
     )
-    applicable_segment: List[TypeApplicableSegment] = field(
+    applicable_segment: list[TypeApplicableSegment] = field(
         default_factory=list,
         metadata={
             "name": "ApplicableSegment",
@@ -22103,7 +22104,7 @@ class Brand:
             "max_occurs": 99,
         }
     )
-    default_brand_detail: List[DefaultBrandDetail] = field(
+    default_brand_detail: list[DefaultBrandDetail] = field(
         default_factory=list,
         metadata={
             "name": "DefaultBrandDetail",
@@ -22111,14 +22112,14 @@ class Brand:
             "max_occurs": 99,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    brand_id: Optional[str] = field(
+    brand_id: None | str = field(
         default=None,
         metadata={
             "name": "BrandID",
@@ -22127,21 +22128,21 @@ class Brand:
             "max_length": 19,
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
         }
     )
-    air_itinerary_details_ref: Optional[str] = field(
+    air_itinerary_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirItineraryDetailsRef",
             "type": "Attribute",
         }
     )
-    up_sell_brand_id: Optional[str] = field(
+    up_sell_brand_id: None | str = field(
         default=None,
         metadata={
             "name": "UpSellBrandID",
@@ -22150,28 +22151,28 @@ class Brand:
             "max_length": 19,
         }
     )
-    brand_found: Optional[bool] = field(
+    brand_found: None | bool = field(
         default=None,
         metadata={
             "name": "BrandFound",
             "type": "Attribute",
         }
     )
-    up_sell_brand_found: Optional[bool] = field(
+    up_sell_brand_found: None | bool = field(
         default=None,
         metadata={
             "name": "UpSellBrandFound",
             "type": "Attribute",
         }
     )
-    branded_details_available: Optional[bool] = field(
+    branded_details_available: None | bool = field(
         default=None,
         metadata={
             "name": "BrandedDetailsAvailable",
             "type": "Attribute",
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "name": "Carrier",
@@ -22179,7 +22180,7 @@ class Brand:
             "length": 2,
         }
     )
-    brand_tier: Optional[str] = field(
+    brand_tier: None | str = field(
         default=None,
         metadata={
             "name": "BrandTier",
@@ -22188,7 +22189,7 @@ class Brand:
             "max_length": 10,
         }
     )
-    brand_maintained: Optional[str] = field(
+    brand_maintained: None | str = field(
         default=None,
         metadata={
             "name": "BrandMaintained",
@@ -22207,7 +22208,7 @@ class FlightOptionsList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    flight_option: List[FlightOption] = field(
+    flight_option: list[FlightOption] = field(
         default_factory=list,
         metadata={
             "name": "FlightOption",
@@ -22225,7 +22226,7 @@ class AirItinerary:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -22234,7 +22235,7 @@ class AirItinerary:
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -22243,7 +22244,7 @@ class AirItinerary:
             "max_occurs": 999,
         }
     )
-    apisrequirements: List[Apisrequirements] = field(
+    apisrequirements: list[Apisrequirements] = field(
         default_factory=list,
         metadata={
             "name": "APISRequirements",
@@ -22268,14 +22269,14 @@ class AirMerchandisingDetailsRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    brand: List[Brand] = field(
+    brand: list[Brand] = field(
         default_factory=list,
         metadata={
             "name": "Brand",
@@ -22283,7 +22284,7 @@ class AirMerchandisingDetailsRsp(BaseRsp):
             "max_occurs": 99,
         }
     )
-    unassociated_booking_code_list: Optional["AirMerchandisingDetailsRsp.UnassociatedBookingCodeList"] = field(
+    unassociated_booking_code_list: None | AirMerchandisingDetailsRsp.UnassociatedBookingCodeList = field(
         default=None,
         metadata={
             "name": "UnassociatedBookingCodeList",
@@ -22293,7 +22294,7 @@ class AirMerchandisingDetailsRsp(BaseRsp):
 
     @dataclass
     class UnassociatedBookingCodeList:
-        applicable_segment: List[TypeApplicableSegment] = field(
+        applicable_segment: list[TypeApplicableSegment] = field(
             default_factory=list,
             metadata={
                 "name": "ApplicableSegment",
@@ -22320,7 +22321,7 @@ class AirSegmentData:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -22328,7 +22329,7 @@ class AirSegmentData:
             "max_occurs": 999,
         }
     )
-    baggage_allowance: List[BaggageAllowance] = field(
+    baggage_allowance: list[BaggageAllowance] = field(
         default_factory=list,
         metadata={
             "name": "BaggageAllowance",
@@ -22336,7 +22337,7 @@ class AirSegmentData:
             "max_occurs": 999,
         }
     )
-    brand: List[Brand] = field(
+    brand: list[Brand] = field(
         default_factory=list,
         metadata={
             "name": "Brand",
@@ -22344,14 +22345,14 @@ class AirSegmentData:
             "max_occurs": 99,
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
         }
     )
-    class_of_service: Optional[str] = field(
+    class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
@@ -22370,7 +22371,7 @@ class AirSegmentError:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: Optional[AirSegment] = field(
+    air_segment: None | AirSegment = field(
         default=None,
         metadata={
             "name": "AirSegment",
@@ -22378,7 +22379,7 @@ class AirSegmentError:
             "required": True,
         }
     )
-    error_message: Optional[str] = field(
+    error_message: None | str = field(
         default=None,
         metadata={
             "name": "ErrorMessage",
@@ -22396,7 +22397,7 @@ class AirSegmentList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -22416,7 +22417,7 @@ class AirSolution:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    search_traveler: List[SearchTraveler] = field(
+    search_traveler: list[SearchTraveler] = field(
         default_factory=list,
         metadata={
             "name": "SearchTraveler",
@@ -22424,7 +22425,7 @@ class AirSolution:
             "max_occurs": 9,
         }
     )
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -22433,7 +22434,7 @@ class AirSolution:
             "max_occurs": 16,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -22442,7 +22443,7 @@ class AirSolution:
             "max_occurs": 16,
         }
     )
-    fare_basis: List[FareBasis] = field(
+    fare_basis: list[FareBasis] = field(
         default_factory=list,
         metadata={
             "name": "FareBasis",
@@ -22457,7 +22458,7 @@ class BrandList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    brand: List[Brand] = field(
+    brand: list[Brand] = field(
         default_factory=list,
         metadata={
             "name": "Brand",
@@ -22482,7 +22483,7 @@ class ExchangeAirSegment:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: Optional[AirSegment] = field(
+    air_segment: None | AirSegment = field(
         default=None,
         metadata={
             "name": "AirSegment",
@@ -22490,7 +22491,7 @@ class ExchangeAirSegment:
             "required": True,
         }
     )
-    cabin_class: Optional[CabinClass] = field(
+    cabin_class: None | CabinClass = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -22499,7 +22500,7 @@ class ExchangeAirSegment:
             "required": True,
         }
     )
-    fare_basis_code: Optional[str] = field(
+    fare_basis_code: None | str = field(
         default=None,
         metadata={
             "name": "FareBasisCode",
@@ -22590,7 +22591,7 @@ class FareInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_ticket_designator: List[FareTicketDesignator] = field(
+    fare_ticket_designator: list[FareTicketDesignator] = field(
         default_factory=list,
         metadata={
             "name": "FareTicketDesignator",
@@ -22598,7 +22599,7 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    fare_surcharge: List[FareSurcharge] = field(
+    fare_surcharge: list[FareSurcharge] = field(
         default_factory=list,
         metadata={
             "name": "FareSurcharge",
@@ -22606,7 +22607,7 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    account_code: List[AccountCode] = field(
+    account_code: list[AccountCode] = field(
         default_factory=list,
         metadata={
             "name": "AccountCode",
@@ -22615,7 +22616,7 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    contract_code: List[ContractCode] = field(
+    contract_code: list[ContractCode] = field(
         default_factory=list,
         metadata={
             "name": "ContractCode",
@@ -22623,7 +22624,7 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    endorsement: List[Endorsement] = field(
+    endorsement: list[Endorsement] = field(
         default_factory=list,
         metadata={
             "name": "Endorsement",
@@ -22632,28 +22633,28 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    baggage_allowance: Optional[BaggageAllowance] = field(
+    baggage_allowance: None | BaggageAllowance = field(
         default=None,
         metadata={
             "name": "BaggageAllowance",
             "type": "Element",
         }
     )
-    fare_rule_key: Optional[FareRuleKey] = field(
+    fare_rule_key: None | FareRuleKey = field(
         default=None,
         metadata={
             "name": "FareRuleKey",
             "type": "Element",
         }
     )
-    fare_rule_failure_info: Optional[FareRuleFailureInfo] = field(
+    fare_rule_failure_info: None | FareRuleFailureInfo = field(
         default=None,
         metadata={
             "name": "FareRuleFailureInfo",
             "type": "Element",
         }
     )
-    fare_remark_ref: List[FareRemarkRef] = field(
+    fare_remark_ref: list[FareRemarkRef] = field(
         default_factory=list,
         metadata={
             "name": "FareRemarkRef",
@@ -22661,14 +22662,14 @@ class FareInfo:
             "max_occurs": 999,
         }
     )
-    brand: Optional[Brand] = field(
+    brand: None | Brand = field(
         default=None,
         metadata={
             "name": "Brand",
             "type": "Element",
         }
     )
-    commission: Optional[Commission] = field(
+    commission: None | Commission = field(
         default=None,
         metadata={
             "name": "Commission",
@@ -22676,35 +22677,35 @@ class FareInfo:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    fare_attributes: Optional[str] = field(
+    fare_attributes: None | str = field(
         default=None,
         metadata={
             "name": "FareAttributes",
             "type": "Element",
         }
     )
-    change_penalty: Optional[TypeFarePenalty] = field(
+    change_penalty: None | TypeFarePenalty = field(
         default=None,
         metadata={
             "name": "ChangePenalty",
             "type": "Element",
         }
     )
-    cancel_penalty: Optional[TypeFarePenalty] = field(
+    cancel_penalty: None | TypeFarePenalty = field(
         default=None,
         metadata={
             "name": "CancelPenalty",
             "type": "Element",
         }
     )
-    fare_rules_filter: Optional[FareRulesFilter] = field(
+    fare_rules_filter: None | FareRulesFilter = field(
         default=None,
         metadata={
             "name": "FareRulesFilter",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -22712,7 +22713,7 @@ class FareInfo:
             "required": True,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -22720,7 +22721,7 @@ class FareInfo:
             "required": True,
         }
     )
-    passenger_type_code: Optional[str] = field(
+    passenger_type_code: None | str = field(
         default=None,
         metadata={
             "name": "PassengerTypeCode",
@@ -22730,7 +22731,7 @@ class FareInfo:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -22740,7 +22741,7 @@ class FareInfo:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -22750,7 +22751,7 @@ class FareInfo:
             "white_space": "collapse",
         }
     )
-    effective_date: Optional[str] = field(
+    effective_date: None | str = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -22758,42 +22759,42 @@ class FareInfo:
             "required": True,
         }
     )
-    travel_date: Optional[XmlDate] = field(
+    travel_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
         }
     )
-    departure_date: Optional[XmlDate] = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    private_fare: Optional[TypePrivateFare] = field(
+    private_fare: None | TypePrivateFare = field(
         default=None,
         metadata={
             "name": "PrivateFare",
             "type": "Attribute",
         }
     )
-    negotiated_fare: Optional[bool] = field(
+    negotiated_fare: None | bool = field(
         default=None,
         metadata={
             "name": "NegotiatedFare",
             "type": "Attribute",
         }
     )
-    tour_code: Optional[str] = field(
+    tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
@@ -22801,28 +22802,28 @@ class FareInfo:
             "max_length": 15,
         }
     )
-    waiver_code: Optional[str] = field(
+    waiver_code: None | str = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Attribute",
         }
     )
-    not_valid_before: Optional[XmlDate] = field(
+    not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[XmlDate] = field(
+    not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
         }
     )
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: None | str = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -22831,7 +22832,7 @@ class FareInfo:
             "max_length": 10,
         }
     )
-    fare_family: Optional[str] = field(
+    fare_family: None | str = field(
         default=None,
         metadata={
             "name": "FareFamily",
@@ -22840,14 +22841,14 @@ class FareInfo:
             "max_length": 32,
         }
     )
-    promotional_fare: Optional[bool] = field(
+    promotional_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PromotionalFare",
             "type": "Attribute",
         }
     )
-    car_code: Optional[str] = field(
+    car_code: None | str = field(
         default=None,
         metadata={
             "name": "CarCode",
@@ -22855,7 +22856,7 @@ class FareInfo:
             "max_length": 15,
         }
     )
-    value_code: Optional[str] = field(
+    value_code: None | str = field(
         default=None,
         metadata={
             "name": "ValueCode",
@@ -22863,42 +22864,42 @@ class FareInfo:
             "max_length": 15,
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
         }
     )
-    bulk_ticket: Optional[bool] = field(
+    bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
         }
     )
-    inclusive_tour: Optional[bool] = field(
+    inclusive_tour: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveTour",
             "type": "Attribute",
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -22907,7 +22908,7 @@ class FareInfo:
             "max_length": 5,
         }
     )
-    tax_amount: Optional[str] = field(
+    tax_amount: None | str = field(
         default=None,
         metadata={
             "name": "TaxAmount",
@@ -22928,7 +22929,7 @@ class FlightDetailsReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -22950,7 +22951,7 @@ class FlightDetailsRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -22959,7 +22960,7 @@ class FlightDetailsRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    co2_emissions: List[Co2Emissions] = field(
+    co2_emissions: list[Co2Emissions] = field(
         default_factory=list,
         metadata={
             "name": "CO2Emissions",
@@ -22977,7 +22978,7 @@ class JourneyData:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -23015,7 +23016,7 @@ class SeatMapReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    agency_sell_info: Optional[AgencySellInfo] = field(
+    agency_sell_info: None | AgencySellInfo = field(
         default=None,
         metadata={
             "name": "AgencySellInfo",
@@ -23023,7 +23024,7 @@ class SeatMapReq(BaseReq):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -23031,7 +23032,7 @@ class SeatMapReq(BaseReq):
             "max_occurs": 99,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -23040,7 +23041,7 @@ class SeatMapReq(BaseReq):
             "max_occurs": 99,
         }
     )
-    search_traveler: List[SearchTraveler] = field(
+    search_traveler: list[SearchTraveler] = field(
         default_factory=list,
         metadata={
             "name": "SearchTraveler",
@@ -23048,21 +23049,21 @@ class SeatMapReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    host_reservation: Optional[HostReservation] = field(
+    host_reservation: None | HostReservation = field(
         default=None,
         metadata={
             "name": "HostReservation",
             "type": "Element",
         }
     )
-    merchandising_pricing_modifiers: Optional[MerchandisingPricingModifiers] = field(
+    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = field(
         default=None,
         metadata={
             "name": "MerchandisingPricingModifiers",
             "type": "Element",
         }
     )
-    return_seat_pricing: Optional[bool] = field(
+    return_seat_pricing: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnSeatPricing",
@@ -23103,7 +23104,7 @@ class SeatMapRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -23112,7 +23113,7 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 99,
         }
     )
-    cabin_class: Optional[CabinClass] = field(
+    cabin_class: None | CabinClass = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -23120,7 +23121,7 @@ class SeatMapRsp(BaseRsp):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -23128,7 +23129,7 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 99,
         }
     )
-    search_traveler: List[SearchTraveler] = field(
+    search_traveler: list[SearchTraveler] = field(
         default_factory=list,
         metadata={
             "name": "SearchTraveler",
@@ -23136,14 +23137,14 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    remark: Optional[Remark] = field(
+    remark: None | Remark = field(
         default=None,
         metadata={
             "name": "Remark",
@@ -23151,7 +23152,7 @@ class SeatMapRsp(BaseRsp):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    rows: List[Rows] = field(
+    rows: list[Rows] = field(
         default_factory=list,
         metadata={
             "name": "Rows",
@@ -23159,7 +23160,7 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 99,
         }
     )
-    payment_restriction: List[PaymentRestriction] = field(
+    payment_restriction: list[PaymentRestriction] = field(
         default_factory=list,
         metadata={
             "name": "PaymentRestriction",
@@ -23168,7 +23169,7 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    seat_information: List[SeatInformation] = field(
+    seat_information: list[SeatInformation] = field(
         default_factory=list,
         metadata={
             "name": "SeatInformation",
@@ -23176,14 +23177,14 @@ class SeatMapRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    copyright: Optional[str] = field(
+    copyright: None | str = field(
         default=None,
         metadata={
             "name": "Copyright",
             "type": "Element",
         }
     )
-    group_seat_price: Optional[str] = field(
+    group_seat_price: None | str = field(
         default=None,
         metadata={
             "name": "GroupSeatPrice",
@@ -23215,7 +23216,7 @@ class TcrrefundBundle:
         name = "TCRRefundBundle"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_refund_info: Optional[AirRefundInfo] = field(
+    air_refund_info: None | AirRefundInfo = field(
         default=None,
         metadata={
             "name": "AirRefundInfo",
@@ -23223,14 +23224,14 @@ class TcrrefundBundle:
             "required": True,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -23238,7 +23239,7 @@ class TcrrefundBundle:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -23246,7 +23247,7 @@ class TcrrefundBundle:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -23254,7 +23255,7 @@ class TcrrefundBundle:
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -23263,7 +23264,7 @@ class TcrrefundBundle:
             "max_occurs": 999,
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
@@ -23271,7 +23272,7 @@ class TcrrefundBundle:
             "required": True,
         }
     )
-    refund_type: Optional[TcrrefundBundleRefundType] = field(
+    refund_type: None | TcrrefundBundleRefundType = field(
         default=None,
         metadata={
             "name": "RefundType",
@@ -23279,7 +23280,7 @@ class TcrrefundBundle:
             "required": True,
         }
     )
-    refund_access_code: Optional[str] = field(
+    refund_access_code: None | str = field(
         default=None,
         metadata={
             "name": "RefundAccessCode",
@@ -23299,7 +23300,7 @@ class AirExchangeMultiQuoteOption:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_data: List[AirSegmentData] = field(
+    air_segment_data: list[AirSegmentData] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentData",
@@ -23307,14 +23308,14 @@ class AirExchangeMultiQuoteOption:
             "max_occurs": 999,
         }
     )
-    air_exchange_bundle_total: Optional[AirExchangeBundleTotal] = field(
+    air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
         }
     )
-    air_exchange_bundle_list: List[AirExchangeBundleList] = field(
+    air_exchange_bundle_list: list[AirExchangeBundleList] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeBundleList",
@@ -23342,7 +23343,7 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    agency_sell_info: Optional[AgencySellInfo] = field(
+    agency_sell_info: None | AgencySellInfo = field(
         default=None,
         metadata={
             "name": "AgencySellInfo",
@@ -23350,14 +23351,14 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_solution: Optional[AirSolution] = field(
+    air_solution: None | AirSolution = field(
         default=None,
         metadata={
             "name": "AirSolution",
             "type": "Element",
         }
     )
-    host_reservation: List[HostReservation] = field(
+    host_reservation: list[HostReservation] = field(
         default_factory=list,
         metadata={
             "name": "HostReservation",
@@ -23365,7 +23366,7 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    offer_availability_modifiers: List[OfferAvailabilityModifiers] = field(
+    offer_availability_modifiers: list[OfferAvailabilityModifiers] = field(
         default_factory=list,
         metadata={
             "name": "OfferAvailabilityModifiers",
@@ -23373,7 +23374,7 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    merchandising_pricing_modifiers: Optional[MerchandisingPricingModifiers] = field(
+    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = field(
         default=None,
         metadata={
             "name": "MerchandisingPricingModifiers",
@@ -23397,7 +23398,7 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_solution: Optional[AirSolution] = field(
+    air_solution: None | AirSolution = field(
         default=None,
         metadata={
             "name": "AirSolution",
@@ -23405,7 +23406,7 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp):
             "required": True,
         }
     )
-    remark: Optional[Remark] = field(
+    remark: None | Remark = field(
         default=None,
         metadata={
             "name": "Remark",
@@ -23413,14 +23414,14 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    embargo_list: Optional[EmbargoList] = field(
+    embargo_list: None | EmbargoList = field(
         default=None,
         metadata={
             "name": "EmbargoList",
@@ -23551,7 +23552,7 @@ class AirPricingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_info: List[FareInfo] = field(
+    fare_info: list[FareInfo] = field(
         default_factory=list,
         metadata={
             "name": "FareInfo",
@@ -23559,14 +23560,14 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    fare_status: Optional[FareStatus] = field(
+    fare_status: None | FareStatus = field(
         default=None,
         metadata={
             "name": "FareStatus",
             "type": "Element",
         }
     )
-    fare_info_ref: List[FareInfoRef] = field(
+    fare_info_ref: list[FareInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "FareInfoRef",
@@ -23574,7 +23575,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    booking_info: List[BookingInfo] = field(
+    booking_info: list[BookingInfo] = field(
         default_factory=list,
         metadata={
             "name": "BookingInfo",
@@ -23582,7 +23583,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -23590,14 +23591,14 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    fare_calc: Optional[str] = field(
+    fare_calc: None | str = field(
         default=None,
         metadata={
             "name": "FareCalc",
             "type": "Element",
         }
     )
-    passenger_type: List[PassengerType] = field(
+    passenger_type: list[PassengerType] = field(
         default_factory=list,
         metadata={
             "name": "PassengerType",
@@ -23605,7 +23606,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
+    booking_traveler_ref: list[BookingTravelerRef] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -23614,14 +23615,14 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    payment_ref: List[PaymentRef] = field(
+    payment_ref: list[PaymentRef] = field(
         default_factory=list,
         metadata={
             "name": "PaymentRef",
@@ -23629,7 +23630,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    change_penalty: List[TypeFarePenalty] = field(
+    change_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
         metadata={
             "name": "ChangePenalty",
@@ -23637,7 +23638,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    cancel_penalty: List[TypeFarePenalty] = field(
+    cancel_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
         metadata={
             "name": "CancelPenalty",
@@ -23645,7 +23646,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    no_show_penalty: List[TypeFarePenalty] = field(
+    no_show_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
         metadata={
             "name": "NoShowPenalty",
@@ -23653,7 +23654,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -23661,7 +23662,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    adjustment: List[Adjustment] = field(
+    adjustment: list[Adjustment] = field(
         default_factory=list,
         metadata={
             "name": "Adjustment",
@@ -23669,7 +23670,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    yield_value: List[Yield] = field(
+    yield_value: list[Yield] = field(
         default_factory=list,
         metadata={
             "name": "Yield",
@@ -23677,14 +23678,14 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
             "type": "Element",
         }
     )
-    ticketing_modifiers_ref: List[TicketingModifiersRef] = field(
+    ticketing_modifiers_ref: list[TicketingModifiersRef] = field(
         default_factory=list,
         metadata={
             "name": "TicketingModifiersRef",
@@ -23692,7 +23693,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    air_segment_pricing_modifiers: List[AirSegmentPricingModifiers] = field(
+    air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentPricingModifiers",
@@ -23700,35 +23701,35 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    flight_options_list: Optional[FlightOptionsList] = field(
+    flight_options_list: None | FlightOptionsList = field(
         default=None,
         metadata={
             "name": "FlightOptionsList",
             "type": "Element",
         }
     )
-    baggage_allowances: Optional[BaggageAllowances] = field(
+    baggage_allowances: None | BaggageAllowances = field(
         default=None,
         metadata={
             "name": "BaggageAllowances",
             "type": "Element",
         }
     )
-    fare_rules_filter: Optional[FareRulesFilter] = field(
+    fare_rules_filter: None | FareRulesFilter = field(
         default=None,
         metadata={
             "name": "FareRulesFilter",
             "type": "Element",
         }
     )
-    policy_codes_list: Optional[PolicyCodesList] = field(
+    policy_codes_list: None | PolicyCodesList = field(
         default=None,
         metadata={
             "name": "PolicyCodesList",
             "type": "Element",
         }
     )
-    price_change: List[PriceChangeType] = field(
+    price_change: list[PriceChangeType] = field(
         default_factory=list,
         metadata={
             "name": "PriceChange",
@@ -23736,14 +23737,14 @@ class AirPricingInfo:
             "max_occurs": 99,
         }
     )
-    action_details: Optional[ActionDetails] = field(
+    action_details: None | ActionDetails = field(
         default=None,
         metadata={
             "name": "ActionDetails",
             "type": "Element",
         }
     )
-    commission: List[Commission] = field(
+    commission: list[Commission] = field(
         default_factory=list,
         metadata={
             "name": "Commission",
@@ -23752,7 +23753,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -23761,7 +23762,7 @@ class AirPricingInfo:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -23770,7 +23771,7 @@ class AirPricingInfo:
             "white_space": "collapse",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -23778,7 +23779,7 @@ class AirPricingInfo:
             "required": True,
         }
     )
-    command_key: Optional[str] = field(
+    command_key: None | str = field(
         default=None,
         metadata={
             "name": "CommandKey",
@@ -23786,77 +23787,77 @@ class AirPricingInfo:
             "max_length": 10,
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -23865,7 +23866,7 @@ class AirPricingInfo:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -23874,7 +23875,7 @@ class AirPricingInfo:
             "max_length": 5,
         }
     )
-    amount_type: Optional[str] = field(
+    amount_type: None | str = field(
         default=None,
         metadata={
             "name": "AmountType",
@@ -23883,49 +23884,49 @@ class AirPricingInfo:
             "max_length": 32,
         }
     )
-    includes_vat: Optional[bool] = field(
+    includes_vat: None | bool = field(
         default=None,
         metadata={
             "name": "IncludesVAT",
             "type": "Attribute",
         }
     )
-    exchange_amount: Optional[str] = field(
+    exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
         }
     )
-    forfeit_amount: Optional[str] = field(
+    forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
             "type": "Attribute",
         }
     )
-    refundable: Optional[bool] = field(
+    refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
         }
     )
-    exchangeable: Optional[bool] = field(
+    exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
         }
     )
-    latest_ticketing_time: Optional[str] = field(
+    latest_ticketing_time: None | str = field(
         default=None,
         metadata={
             "name": "LatestTicketingTime",
             "type": "Attribute",
         }
     )
-    pricing_method: Optional[TypePricingMethod] = field(
+    pricing_method: None | TypePricingMethod = field(
         default=None,
         metadata={
             "name": "PricingMethod",
@@ -23933,21 +23934,21 @@ class AirPricingInfo:
             "required": True,
         }
     )
-    checksum: Optional[str] = field(
+    checksum: None | str = field(
         default=None,
         metadata={
             "name": "Checksum",
             "type": "Attribute",
         }
     )
-    eticketability: Optional[TypeEticketability] = field(
+    eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -23955,35 +23956,35 @@ class AirPricingInfo:
             "length": 2,
         }
     )
-    provider_reservation_info_ref: Optional[str] = field(
+    provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    air_pricing_info_group: Optional[int] = field(
+    air_pricing_info_group: None | int = field(
         default=None,
         metadata={
             "name": "AirPricingInfoGroup",
             "type": "Attribute",
         }
     )
-    total_net_price: Optional[str] = field(
+    total_net_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalNetPrice",
             "type": "Attribute",
         }
     )
-    ticketed: Optional[bool] = field(
+    ticketed: None | bool = field(
         default=None,
         metadata={
             "name": "Ticketed",
             "type": "Attribute",
         }
     )
-    pricing_type: Optional[str] = field(
+    pricing_type: None | str = field(
         default=None,
         metadata={
             "name": "PricingType",
@@ -23991,42 +23992,42 @@ class AirPricingInfo:
             "max_length": 25,
         }
     )
-    true_last_date_to_ticket: Optional[str] = field(
+    true_last_date_to_ticket: None | str = field(
         default=None,
         metadata={
             "name": "TrueLastDateToTicket",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
         }
     )
-    in_policy: Optional[bool] = field(
+    in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "InPolicy",
             "type": "Attribute",
         }
     )
-    preferred_option: Optional[bool] = field(
+    preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
         }
     )
-    fare_calculation_ind: Optional[str] = field(
+    fare_calculation_ind: None | str = field(
         default=None,
         metadata={
             "name": "FareCalculationInd",
@@ -24034,7 +24035,7 @@ class AirPricingInfo:
             "length": 1,
         }
     )
-    cat35_indicator: Optional[bool] = field(
+    cat35_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "Cat35Indicator",
@@ -24054,7 +24055,7 @@ class AirRefundQuoteRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_refund_bundle: List[AirRefundBundle] = field(
+    air_refund_bundle: list[AirRefundBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirRefundBundle",
@@ -24062,7 +24063,7 @@ class AirRefundQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    tcrrefund_bundle: List[TcrrefundBundle] = field(
+    tcrrefund_bundle: list[TcrrefundBundle] = field(
         default_factory=list,
         metadata={
             "name": "TCRRefundBundle",
@@ -24089,7 +24090,7 @@ class AirRefundReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_refund_bundle: List[AirRefundBundle] = field(
+    air_refund_bundle: list[AirRefundBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirRefundBundle",
@@ -24097,7 +24098,7 @@ class AirRefundReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    tcrrefund_bundle: List[TcrrefundBundle] = field(
+    tcrrefund_bundle: list[TcrrefundBundle] = field(
         default_factory=list,
         metadata={
             "name": "TCRRefundBundle",
@@ -24105,14 +24106,14 @@ class AirRefundReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_refund_modifiers: Optional[AirRefundModifiers] = field(
+    air_refund_modifiers: None | AirRefundModifiers = field(
         default=None,
         metadata={
             "name": "AirRefundModifiers",
             "type": "Element",
         }
     )
-    commission: List[Commission] = field(
+    commission: list[Commission] = field(
         default_factory=list,
         metadata={
             "name": "Commission",
@@ -24121,7 +24122,7 @@ class AirRefundReq(BaseReq):
             "max_occurs": 9,
         }
     )
-    form_of_payment: Optional[FormOfPayment] = field(
+    form_of_payment: None | FormOfPayment = field(
         default=None,
         metadata={
             "name": "FormOfPayment",
@@ -24136,7 +24137,7 @@ class AirSearchReq(BaseSearchReq):
     """
     Base Request for Air Search.
     """
-    point_of_commencement: Optional[PointOfCommencement] = field(
+    point_of_commencement: None | PointOfCommencement = field(
         default=None,
         metadata={
             "name": "PointOfCommencement",
@@ -24144,7 +24145,7 @@ class AirSearchReq(BaseSearchReq):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    search_air_leg: List[SearchAirLeg] = field(
+    search_air_leg: list[SearchAirLeg] = field(
         default_factory=list,
         metadata={
             "name": "SearchAirLeg",
@@ -24153,7 +24154,7 @@ class AirSearchReq(BaseSearchReq):
             "max_occurs": 16,
         }
     )
-    search_specific_air_segment: List[SearchSpecificAirSegment] = field(
+    search_specific_air_segment: list[SearchSpecificAirSegment] = field(
         default_factory=list,
         metadata={
             "name": "SearchSpecificAirSegment",
@@ -24162,7 +24163,7 @@ class AirSearchReq(BaseSearchReq):
             "max_occurs": 999,
         }
     )
-    air_search_modifiers: Optional[AirSearchModifiers] = field(
+    air_search_modifiers: None | AirSearchModifiers = field(
         default=None,
         metadata={
             "name": "AirSearchModifiers",
@@ -24170,7 +24171,7 @@ class AirSearchReq(BaseSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    journey_data: Optional[JourneyData] = field(
+    journey_data: None | JourneyData = field(
         default=None,
         metadata={
             "name": "JourneyData",
@@ -24188,7 +24189,7 @@ class AirSegmentSellFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_error: List[AirSegmentError] = field(
+    air_segment_error: list[AirSegmentError] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentError",
@@ -24204,7 +24205,7 @@ class AvailabilityErrorInfo(TypeErrorInfo):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_error: List[AirSegmentError] = field(
+    air_segment_error: list[AirSegmentError] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentError",
@@ -24263,7 +24264,7 @@ class BaseAirPriceReq(BaseCoreReq):
         with the lowest fare regardless of the availability for the
         class of service. Only for providers 1P/1J.
     """
-    air_itinerary: Optional[AirItinerary] = field(
+    air_itinerary: None | AirItinerary = field(
         default=None,
         metadata={
             "name": "AirItinerary",
@@ -24272,7 +24273,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "required": True,
         }
     )
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
@@ -24280,7 +24281,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    search_passenger: List[SearchPassenger] = field(
+    search_passenger: list[SearchPassenger] = field(
         default_factory=list,
         metadata={
             "name": "SearchPassenger",
@@ -24290,7 +24291,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_occurs": 18,
         }
     )
-    air_pricing_command: List[AirPricingCommand] = field(
+    air_pricing_command: list[AirPricingCommand] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingCommand",
@@ -24300,7 +24301,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_occurs": 16,
         }
     )
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -24310,7 +24311,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_length": 8,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
@@ -24318,7 +24319,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -24327,7 +24328,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_occurs": 999,
         }
     )
-    pcc: Optional[Pcc] = field(
+    pcc: None | Pcc = field(
         default=None,
         metadata={
             "name": "PCC",
@@ -24335,7 +24336,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    ssr: List[Ssr] = field(
+    ssr: list[Ssr] = field(
         default_factory=list,
         metadata={
             "name": "SSR",
@@ -24344,7 +24345,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_occurs": 99,
         }
     )
-    check_obfees: Optional[str] = field(
+    check_obfees: None | str = field(
         default=None,
         metadata={
             "name": "CheckOBFees",
@@ -24358,7 +24359,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "type": "Attribute",
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -24367,7 +24368,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "max_length": 5,
         }
     )
-    ticket_date: Optional[XmlDate] = field(
+    ticket_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketDate",
@@ -24388,7 +24389,7 @@ class BaseAirPriceReq(BaseCoreReq):
             "type": "Attribute",
         }
     )
-    nscc: Optional[str] = field(
+    nscc: None | str = field(
         default=None,
         metadata={
             "name": "NSCC",
@@ -24418,7 +24419,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
     """
     Base Request for Low fare air Search.
     """
-    search_air_leg: List[SearchAirLeg] = field(
+    search_air_leg: list[SearchAirLeg] = field(
         default_factory=list,
         metadata={
             "name": "SearchAirLeg",
@@ -24427,7 +24428,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
             "max_occurs": 9,
         }
     )
-    search_specific_air_segment: List[SearchSpecificAirSegment] = field(
+    search_specific_air_segment: list[SearchSpecificAirSegment] = field(
         default_factory=list,
         metadata={
             "name": "SearchSpecificAirSegment",
@@ -24436,7 +24437,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
             "max_occurs": 999,
         }
     )
-    air_search_modifiers: Optional[AirSearchModifiers] = field(
+    air_search_modifiers: None | AirSearchModifiers = field(
         default=None,
         metadata={
             "name": "AirSearchModifiers",
@@ -24444,7 +24445,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    split_ticketing_search: Optional[SplitTicketingSearch] = field(
+    split_ticketing_search: None | SplitTicketingSearch = field(
         default=None,
         metadata={
             "name": "SplitTicketingSearch",
@@ -24452,7 +24453,7 @@ class BaseAirSearchReq(BaseCoreSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    journey_data: Optional[JourneyData] = field(
+    journey_data: None | JourneyData = field(
         default=None,
         metadata={
             "name": "JourneyData",
@@ -24470,7 +24471,7 @@ class FareInfoList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    fare_info: List[FareInfo] = field(
+    fare_info: list[FareInfo] = field(
         default_factory=list,
         metadata={
             "name": "FareInfo",
@@ -24489,7 +24490,7 @@ class AirExchangeMulitQuoteList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_exchange_multi_quote_option: List[AirExchangeMultiQuoteOption] = field(
+    air_exchange_multi_quote_option: list[AirExchangeMultiQuoteOption] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeMultiQuoteOption",
@@ -24541,7 +24542,7 @@ class AirPricePoint:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_info: List[AirPricingInfo] = field(
+    air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfo",
@@ -24549,7 +24550,7 @@ class AirPricePoint:
             "max_occurs": 999,
         }
     )
-    air_pricing_result_message: List[TypeResultMessage] = field(
+    air_pricing_result_message: list[TypeResultMessage] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingResultMessage",
@@ -24557,7 +24558,7 @@ class AirPricePoint:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -24565,7 +24566,7 @@ class AirPricePoint:
             "max_occurs": 999,
         }
     )
-    fare_note: List[FareNote] = field(
+    fare_note: list[FareNote] = field(
         default_factory=list,
         metadata={
             "name": "FareNote",
@@ -24573,7 +24574,7 @@ class AirPricePoint:
             "max_occurs": 99,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -24581,7 +24582,7 @@ class AirPricePoint:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -24589,70 +24590,70 @@ class AirPricePoint:
             "required": True,
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
@@ -24687,7 +24688,7 @@ class AirPricingInfoList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_info: List[AirPricingInfo] = field(
+    air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfo",
@@ -24756,7 +24757,7 @@ class AirPricingSolution:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -24764,7 +24765,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    air_segment_ref: List[AirSegmentRef] = field(
+    air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentRef",
@@ -24772,7 +24773,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    journey: List[Journey] = field(
+    journey: list[Journey] = field(
         default_factory=list,
         metadata={
             "name": "Journey",
@@ -24780,7 +24781,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    leg_ref: List[LegRef] = field(
+    leg_ref: list[LegRef] = field(
         default_factory=list,
         metadata={
             "name": "LegRef",
@@ -24788,7 +24789,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    air_pricing_info: List[AirPricingInfo] = field(
+    air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfo",
@@ -24796,7 +24797,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    fare_note: List[FareNote] = field(
+    fare_note: list[FareNote] = field(
         default_factory=list,
         metadata={
             "name": "FareNote",
@@ -24804,7 +24805,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    fare_note_ref: List[FareNoteRef] = field(
+    fare_note_ref: list[FareNoteRef] = field(
         default_factory=list,
         metadata={
             "name": "FareNoteRef",
@@ -24812,7 +24813,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    connection: List[Connection] = field(
+    connection: list[Connection] = field(
         default_factory=list,
         metadata={
             "name": "Connection",
@@ -24820,7 +24821,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    meta_data: List[MetaData] = field(
+    meta_data: list[MetaData] = field(
         default_factory=list,
         metadata={
             "name": "MetaData",
@@ -24829,7 +24830,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    air_pricing_result_message: List[TypeResultMessage] = field(
+    air_pricing_result_message: list[TypeResultMessage] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingResultMessage",
@@ -24837,7 +24838,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -24845,7 +24846,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    tax_info: List[TaxInfo] = field(
+    tax_info: list[TaxInfo] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -24853,7 +24854,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    air_itinerary_solution_ref: List[AirItinerarySolutionRef] = field(
+    air_itinerary_solution_ref: list[AirItinerarySolutionRef] = field(
         default_factory=list,
         metadata={
             "name": "AirItinerarySolutionRef",
@@ -24861,7 +24862,7 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -24870,28 +24871,28 @@ class AirPricingSolution:
             "max_occurs": 999,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    available_ssr: Optional[AvailableSsr] = field(
+    available_ssr: None | AvailableSsr = field(
         default=None,
         metadata={
             "name": "AvailableSSR",
             "type": "Element",
         }
     )
-    pricing_details: Optional[PricingDetails] = field(
+    pricing_details: None | PricingDetails = field(
         default=None,
         metadata={
             "name": "PricingDetails",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -24906,84 +24907,84 @@ class AirPricingSolution:
             "type": "Attribute",
         }
     )
-    quote_date: Optional[XmlDate] = field(
+    quote_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "QuoteDate",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    itinerary: Optional[AirPricingSolutionItinerary] = field(
+    itinerary: None | AirPricingSolutionItinerary = field(
         default=None,
         metadata={
             "name": "Itinerary",
@@ -25016,7 +25017,7 @@ class AvailabilitySearchReq(AirSearchReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    search_passenger: List[SearchPassenger] = field(
+    search_passenger: list[SearchPassenger] = field(
         default_factory=list,
         metadata={
             "name": "SearchPassenger",
@@ -25025,7 +25026,7 @@ class AvailabilitySearchReq(AirSearchReq):
             "max_occurs": 18,
         }
     )
-    point_of_sale: List[PointOfSale] = field(
+    point_of_sale: list[PointOfSale] = field(
         default_factory=list,
         metadata={
             "name": "PointOfSale",
@@ -25041,7 +25042,7 @@ class AvailabilitySearchReq(AirSearchReq):
             "type": "Attribute",
         }
     )
-    channel_id: Optional[str] = field(
+    channel_id: None | str = field(
         default=None,
         metadata={
             "name": "ChannelId",
@@ -25050,7 +25051,7 @@ class AvailabilitySearchReq(AirSearchReq):
             "max_length": 4,
         }
     )
-    nscc: Optional[str] = field(
+    nscc: None | str = field(
         default=None,
         metadata={
             "name": "NSCC",
@@ -25066,7 +25067,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
     """
     Availability Search response.
     """
-    flight_details_list: Optional[FlightDetailsList] = field(
+    flight_details_list: None | FlightDetailsList = field(
         default=None,
         metadata={
             "name": "FlightDetailsList",
@@ -25074,7 +25075,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_segment_list: Optional[AirSegmentList] = field(
+    air_segment_list: None | AirSegmentList = field(
         default=None,
         metadata={
             "name": "AirSegmentList",
@@ -25082,7 +25083,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    fare_info_list: Optional[FareInfoList] = field(
+    fare_info_list: None | FareInfoList = field(
         default=None,
         metadata={
             "name": "FareInfoList",
@@ -25090,7 +25091,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    fare_remark_list: Optional[FareRemarkList] = field(
+    fare_remark_list: None | FareRemarkList = field(
         default=None,
         metadata={
             "name": "FareRemarkList",
@@ -25098,7 +25099,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_itinerary_solution: List[AirItinerarySolution] = field(
+    air_itinerary_solution: list[AirItinerarySolution] = field(
         default_factory=list,
         metadata={
             "name": "AirItinerarySolution",
@@ -25107,7 +25108,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "max_occurs": 999,
         }
     )
-    host_token_list: Optional[HostTokenList] = field(
+    host_token_list: None | HostTokenList = field(
         default=None,
         metadata={
             "name": "HostTokenList",
@@ -25115,7 +25116,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    apisrequirements_list: Optional[ApisrequirementsList] = field(
+    apisrequirements_list: None | ApisrequirementsList = field(
         default=None,
         metadata={
             "name": "APISRequirementsList",
@@ -25123,7 +25124,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    distance_units: Optional[TypeDistance] = field(
+    distance_units: None | TypeDistance = field(
         default=None,
         metadata={
             "name": "DistanceUnits",
@@ -25210,7 +25211,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
         FareRulesFilter will be returned at FareInfo level.  Provider:
         1G/1V.
     """
-    search_passenger: List[SearchPassenger] = field(
+    search_passenger: list[SearchPassenger] = field(
         default_factory=list,
         metadata={
             "name": "SearchPassenger",
@@ -25220,7 +25221,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "max_occurs": 18,
         }
     )
-    air_pricing_modifiers: Optional[AirPricingModifiers] = field(
+    air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
@@ -25228,7 +25229,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    enumeration: Optional[Enumeration] = field(
+    enumeration: None | Enumeration = field(
         default=None,
         metadata={
             "name": "Enumeration",
@@ -25236,7 +25237,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_exchange_modifiers: Optional[AirExchangeModifiers] = field(
+    air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
         metadata={
             "name": "AirExchangeModifiers",
@@ -25244,7 +25245,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    flex_explore_modifiers: Optional[FlexExploreModifiers] = field(
+    flex_explore_modifiers: None | FlexExploreModifiers = field(
         default=None,
         metadata={
             "name": "FlexExploreModifiers",
@@ -25252,7 +25253,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    pcc: Optional[Pcc] = field(
+    pcc: None | Pcc = field(
         default=None,
         metadata={
             "name": "PCC",
@@ -25260,7 +25261,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    fare_rules_filter_category: Optional[FareRulesFilterCategory] = field(
+    fare_rules_filter_category: None | FareRulesFilterCategory = field(
         default=None,
         metadata={
             "name": "FareRulesFilterCategory",
@@ -25268,7 +25269,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -25312,7 +25313,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "type": "Attribute",
         }
     )
-    meta_option_identifier: Optional[str] = field(
+    meta_option_identifier: None | str = field(
         default=None,
         metadata={
             "name": "MetaOptionIdentifier",
@@ -25356,14 +25357,14 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "type": "Attribute",
         }
     )
-    check_obfees: Optional[str] = field(
+    check_obfees: None | str = field(
         default=None,
         metadata={
             "name": "CheckOBFees",
             "type": "Attribute",
         }
     )
-    nscc: Optional[str] = field(
+    nscc: None | str = field(
         default=None,
         metadata={
             "name": "NSCC",
@@ -25452,7 +25453,7 @@ class Etr:
         name = "ETR"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -25461,7 +25462,7 @@ class Etr:
             "max_length": 8,
         }
     )
-    agency_info: Optional[AgencyInfo] = field(
+    agency_info: None | AgencyInfo = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
@@ -25469,7 +25470,7 @@ class Etr:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    booking_traveler: Optional[BookingTraveler] = field(
+    booking_traveler: None | BookingTraveler = field(
         default=None,
         metadata={
             "name": "BookingTraveler",
@@ -25478,7 +25479,7 @@ class Etr:
             "required": True,
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -25487,7 +25488,7 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -25496,7 +25497,7 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    credit_card_auth: List[CreditCardAuth] = field(
+    credit_card_auth: list[CreditCardAuth] = field(
         default_factory=list,
         metadata={
             "name": "CreditCardAuth",
@@ -25505,7 +25506,7 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    supplier_locator: List[SupplierLocator] = field(
+    supplier_locator: list[SupplierLocator] = field(
         default_factory=list,
         metadata={
             "name": "SupplierLocator",
@@ -25514,7 +25515,7 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    fare_calc: Optional[str] = field(
+    fare_calc: None | str = field(
         default=None,
         metadata={
             "name": "FareCalc",
@@ -25522,7 +25523,7 @@ class Etr:
             "required": True,
         }
     )
-    ticket: List[Ticket] = field(
+    ticket: list[Ticket] = field(
         default_factory=list,
         metadata={
             "name": "Ticket",
@@ -25531,7 +25532,7 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    commission: List[Commission] = field(
+    commission: list[Commission] = field(
         default_factory=list,
         metadata={
             "name": "Commission",
@@ -25540,21 +25541,21 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    air_pricing_info: Optional[AirPricingInfo] = field(
+    air_pricing_info: None | AirPricingInfo = field(
         default=None,
         metadata={
             "name": "AirPricingInfo",
             "type": "Element",
         }
     )
-    audit_data: Optional[AuditData] = field(
+    audit_data: None | AuditData = field(
         default=None,
         metadata={
             "name": "AuditData",
             "type": "Element",
         }
     )
-    restriction: List[CommonRestriction] = field(
+    restriction: list[CommonRestriction] = field(
         default_factory=list,
         metadata={
             "name": "Restriction",
@@ -25563,112 +25564,112 @@ class Etr:
             "max_occurs": 999,
         }
     )
-    waiver_code: Optional[WaiverCode] = field(
+    waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
         }
     )
-    baggage_allowances: Optional[BaggageAllowances] = field(
+    baggage_allowances: None | BaggageAllowances = field(
         default=None,
         metadata={
             "name": "BaggageAllowances",
             "type": "Element",
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    refundable: Optional[bool] = field(
+    refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
         }
     )
-    exchangeable: Optional[bool] = field(
+    exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
         }
     )
-    tour_code: Optional[str] = field(
+    tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
@@ -25676,7 +25677,7 @@ class Etr:
             "max_length": 15,
         }
     )
-    issued_date: Optional[str] = field(
+    issued_date: None | str = field(
         default=None,
         metadata={
             "name": "IssuedDate",
@@ -25684,14 +25685,14 @@ class Etr:
             "required": True,
         }
     )
-    bulk_ticket: Optional[bool] = field(
+    bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -25700,7 +25701,7 @@ class Etr:
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -25708,7 +25709,7 @@ class Etr:
             "max_length": 15,
         }
     )
-    iatanumber: Optional[str] = field(
+    iatanumber: None | str = field(
         default=None,
         metadata={
             "name": "IATANumber",
@@ -25716,7 +25717,7 @@ class Etr:
             "max_length": 8,
         }
     )
-    pseudo_city_code: Optional[str] = field(
+    pseudo_city_code: None | str = field(
         default=None,
         metadata={
             "name": "PseudoCityCode",
@@ -25725,7 +25726,7 @@ class Etr:
             "max_length": 10,
         }
     )
-    country_code: Optional[str] = field(
+    country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
@@ -25733,7 +25734,7 @@ class Etr:
             "length": 2,
         }
     )
-    plating_carrier: Optional[str] = field(
+    plating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "PlatingCarrier",
@@ -25741,14 +25742,14 @@ class Etr:
             "length": 2,
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -25812,7 +25813,7 @@ class Tcr:
         name = "TCR"
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -25821,7 +25822,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -25830,7 +25831,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    booking_traveler: List[BookingTraveler] = field(
+    booking_traveler: list[BookingTraveler] = field(
         default_factory=list,
         metadata={
             "name": "BookingTraveler",
@@ -25840,7 +25841,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    passenger_ticket_number: List[PassengerTicketNumber] = field(
+    passenger_ticket_number: list[PassengerTicketNumber] = field(
         default_factory=list,
         metadata={
             "name": "PassengerTicketNumber",
@@ -25848,7 +25849,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    air_pricing_info: List[AirPricingInfo] = field(
+    air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfo",
@@ -25856,7 +25857,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    agency_info: Optional[AgencyInfo] = field(
+    agency_info: None | AgencyInfo = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
@@ -25864,7 +25865,7 @@ class Tcr:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -25873,7 +25874,7 @@ class Tcr:
             "max_length": 8,
         }
     )
-    supplier_locator: List[SupplierLocator] = field(
+    supplier_locator: list[SupplierLocator] = field(
         default_factory=list,
         metadata={
             "name": "SupplierLocator",
@@ -25882,7 +25883,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    refund_remark: List[RefundRemark] = field(
+    refund_remark: list[RefundRemark] = field(
         default_factory=list,
         metadata={
             "name": "RefundRemark",
@@ -25891,7 +25892,7 @@ class Tcr:
             "max_occurs": 999,
         }
     )
-    tcrnumber: Optional[str] = field(
+    tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
@@ -25899,7 +25900,7 @@ class Tcr:
             "required": True,
         }
     )
-    status: Optional[TypeTcrstatus] = field(
+    status: None | TypeTcrstatus = field(
         default=None,
         metadata={
             "name": "Status",
@@ -25907,7 +25908,7 @@ class Tcr:
             "required": True,
         }
     )
-    modified_date: Optional[str] = field(
+    modified_date: None | str = field(
         default=None,
         metadata={
             "name": "ModifiedDate",
@@ -25915,14 +25916,14 @@ class Tcr:
             "required": True,
         }
     )
-    confirmed_date: Optional[str] = field(
+    confirmed_date: None | str = field(
         default=None,
         metadata={
             "name": "ConfirmedDate",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
@@ -25930,7 +25931,7 @@ class Tcr:
             "required": True,
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
@@ -25938,7 +25939,7 @@ class Tcr:
             "required": True,
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
@@ -25946,7 +25947,7 @@ class Tcr:
             "required": True,
         }
     )
-    refundable: Optional[bool] = field(
+    refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
@@ -25954,7 +25955,7 @@ class Tcr:
             "required": True,
         }
     )
-    exchangeable: Optional[bool] = field(
+    exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
@@ -25962,7 +25963,7 @@ class Tcr:
             "required": True,
         }
     )
-    voidable: Optional[bool] = field(
+    voidable: None | bool = field(
         default=None,
         metadata={
             "name": "Voidable",
@@ -25970,7 +25971,7 @@ class Tcr:
             "required": True,
         }
     )
-    modifiable: Optional[bool] = field(
+    modifiable: None | bool = field(
         default=None,
         metadata={
             "name": "Modifiable",
@@ -25978,7 +25979,7 @@ class Tcr:
             "required": True,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -25988,7 +25989,7 @@ class Tcr:
             "max_length": 5,
         }
     )
-    provider_locator_code: Optional[str] = field(
+    provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
@@ -25997,7 +25998,7 @@ class Tcr:
             "max_length": 15,
         }
     )
-    refund_access_code: Optional[str] = field(
+    refund_access_code: None | str = field(
         default=None,
         metadata={
             "name": "RefundAccessCode",
@@ -26007,21 +26008,21 @@ class Tcr:
             "max_length": 32,
         }
     )
-    refund_amount: Optional[str] = field(
+    refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
         }
     )
-    refund_fee: Optional[str] = field(
+    refund_fee: None | str = field(
         default=None,
         metadata={
             "name": "RefundFee",
             "type": "Attribute",
         }
     )
-    forfeit_amount: Optional[str] = field(
+    forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
@@ -26062,7 +26063,7 @@ class TypeBaseAirReservation(BaseReservation):
     class Meta:
         name = "typeBaseAirReservation"
 
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
@@ -26070,7 +26071,7 @@ class TypeBaseAirReservation(BaseReservation):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    supplier_locator: List[SupplierLocator] = field(
+    supplier_locator: list[SupplierLocator] = field(
         default_factory=list,
         metadata={
             "name": "SupplierLocator",
@@ -26079,7 +26080,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    third_party_information: List[ThirdPartyInformation] = field(
+    third_party_information: list[ThirdPartyInformation] = field(
         default_factory=list,
         metadata={
             "name": "ThirdPartyInformation",
@@ -26088,7 +26089,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    document_info: Optional[DocumentInfo] = field(
+    document_info: None | DocumentInfo = field(
         default=None,
         metadata={
             "name": "DocumentInfo",
@@ -26096,7 +26097,7 @@ class TypeBaseAirReservation(BaseReservation):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
+    booking_traveler_ref: list[BookingTravelerRef] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -26105,7 +26106,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    provider_reservation_info_ref: List[ProviderReservationInfoRef] = field(
+    provider_reservation_info_ref: list[ProviderReservationInfoRef] = field(
         default_factory=list,
         metadata={
             "name": "ProviderReservationInfoRef",
@@ -26114,7 +26115,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    air_segment: List[AirSegment] = field(
+    air_segment: list[AirSegment] = field(
         default_factory=list,
         metadata={
             "name": "AirSegment",
@@ -26123,7 +26124,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    svc_segment: List[SvcSegment] = field(
+    svc_segment: list[SvcSegment] = field(
         default_factory=list,
         metadata={
             "name": "SvcSegment",
@@ -26132,7 +26133,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    air_pricing_info: List[AirPricingInfo] = field(
+    air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingInfo",
@@ -26141,7 +26142,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -26150,7 +26151,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    credit_card_auth: List[CreditCardAuth] = field(
+    credit_card_auth: list[CreditCardAuth] = field(
         default_factory=list,
         metadata={
             "name": "CreditCardAuth",
@@ -26159,7 +26160,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    fare_note: List[FareNote] = field(
+    fare_note: list[FareNote] = field(
         default_factory=list,
         metadata={
             "name": "FareNote",
@@ -26168,7 +26169,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    fee_info: List[FeeInfo] = field(
+    fee_info: list[FeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "FeeInfo",
@@ -26177,7 +26178,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    tax_info: List[TypeTaxInfoWithPaymentRef] = field(
+    tax_info: list[TypeTaxInfoWithPaymentRef] = field(
         default_factory=list,
         metadata={
             "name": "TaxInfo",
@@ -26186,7 +26187,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    ticketing_modifiers: List[TicketingModifiers] = field(
+    ticketing_modifiers: list[TicketingModifiers] = field(
         default_factory=list,
         metadata={
             "name": "TicketingModifiers",
@@ -26195,7 +26196,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    associated_remark: List[AssociatedRemark] = field(
+    associated_remark: list[AssociatedRemark] = field(
         default_factory=list,
         metadata={
             "name": "AssociatedRemark",
@@ -26204,7 +26205,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    pocket_itinerary_remark: List[PocketItineraryRemark] = field(
+    pocket_itinerary_remark: list[PocketItineraryRemark] = field(
         default_factory=list,
         metadata={
             "name": "PocketItineraryRemark",
@@ -26213,7 +26214,7 @@ class TypeBaseAirReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    air_exchange_bundle_total: Optional[AirExchangeBundleTotal] = field(
+    air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
@@ -26221,7 +26222,7 @@ class TypeBaseAirReservation(BaseReservation):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_exchange_bundle: List[AirExchangeBundle] = field(
+    air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeBundle",
@@ -26237,7 +26238,7 @@ class AirExchangeMultiQuoteRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_segment_list: List[AirSegmentList] = field(
+    air_segment_list: list[AirSegmentList] = field(
         default_factory=list,
         metadata={
             "name": "AirSegmentList",
@@ -26245,7 +26246,7 @@ class AirExchangeMultiQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    brand_list: List[BrandList] = field(
+    brand_list: list[BrandList] = field(
         default_factory=list,
         metadata={
             "name": "BrandList",
@@ -26253,7 +26254,7 @@ class AirExchangeMultiQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    air_exchange_mulit_quote_list: List[AirExchangeMulitQuoteList] = field(
+    air_exchange_mulit_quote_list: list[AirExchangeMulitQuoteList] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeMulitQuoteList",
@@ -26282,7 +26283,7 @@ class AirExchangeQuoteRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -26293,7 +26294,7 @@ class AirExchangeQuoteRsp(BaseRsp):
             "max_length": 13,
         }
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -26302,14 +26303,14 @@ class AirExchangeQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    air_exchange_bundle_total: Optional[AirExchangeBundleTotal] = field(
+    air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
         }
     )
-    air_exchange_bundle: List[AirExchangeBundle] = field(
+    air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeBundle",
@@ -26317,7 +26318,7 @@ class AirExchangeQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -26326,14 +26327,14 @@ class AirExchangeQuoteRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    fare_rule: List[FareRule] = field(
+    fare_rule: list[FareRule] = field(
         default_factory=list,
         metadata={
             "name": "FareRule",
@@ -26378,7 +26379,7 @@ class AirExchangeReq(BaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -26388,7 +26389,7 @@ class AirExchangeReq(BaseReq):
             "max_length": 8,
         }
     )
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -26399,7 +26400,7 @@ class AirExchangeReq(BaseReq):
             "max_length": 13,
         }
     )
-    specific_seat_assignment: List[SpecificSeatAssignment] = field(
+    specific_seat_assignment: list[SpecificSeatAssignment] = field(
         default_factory=list,
         metadata={
             "name": "SpecificSeatAssignment",
@@ -26407,7 +26408,7 @@ class AirExchangeReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -26416,21 +26417,21 @@ class AirExchangeReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    air_exchange_modifiers: Optional[AirExchangeModifiers] = field(
+    air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
         metadata={
             "name": "AirExchangeModifiers",
             "type": "Element",
         }
     )
-    air_exchange_bundle_total: Optional[AirExchangeBundleTotal] = field(
+    air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
         }
     )
-    air_exchange_bundle: List[AirExchangeBundle] = field(
+    air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
         metadata={
             "name": "AirExchangeBundle",
@@ -26438,7 +26439,7 @@ class AirExchangeReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -26447,14 +26448,14 @@ class AirExchangeReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
         }
     )
-    form_of_payment: Optional[FormOfPayment] = field(
+    form_of_payment: None | FormOfPayment = field(
         default=None,
         metadata={
             "name": "FormOfPayment",
@@ -26462,7 +26463,7 @@ class AirExchangeReq(BaseReq):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    form_of_payment_ref: Optional[FormOfPaymentRef] = field(
+    form_of_payment_ref: None | FormOfPaymentRef = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
@@ -26470,7 +26471,7 @@ class AirExchangeReq(BaseReq):
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    ssrinfo: List[Ssrinfo] = field(
+    ssrinfo: list[Ssrinfo] = field(
         default_factory=list,
         metadata={
             "name": "SSRInfo",
@@ -26479,7 +26480,7 @@ class AirExchangeReq(BaseReq):
             "max_occurs": 999,
         }
     )
-    add_svc: Optional[AddSvc] = field(
+    add_svc: None | AddSvc = field(
         default=None,
         metadata={
             "name": "AddSvc",
@@ -26510,7 +26511,7 @@ class AirPricePointList:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_price_point: List[AirPricePoint] = field(
+    air_price_point: list[AirPricePoint] = field(
         default_factory=list,
         metadata={
             "name": "AirPricePoint",
@@ -26537,7 +26538,7 @@ class AirPriceResult:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -26545,7 +26546,7 @@ class AirPriceResult:
             "max_occurs": 99,
         }
     )
-    fare_rule: List[FareRule] = field(
+    fare_rule: list[FareRule] = field(
         default_factory=list,
         metadata={
             "name": "FareRule",
@@ -26553,14 +26554,14 @@ class AirPriceResult:
             "max_occurs": 999,
         }
     )
-    air_price_error: Optional[TypeResultMessage] = field(
+    air_price_error: None | TypeResultMessage = field(
         default=None,
         metadata={
             "name": "AirPriceError",
             "type": "Element",
         }
     )
-    command_key: Optional[str] = field(
+    command_key: None | str = field(
         default=None,
         metadata={
             "name": "CommandKey",
@@ -26582,7 +26583,7 @@ class AirRefundRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    etr: List[Etr] = field(
+    etr: list[Etr] = field(
         default_factory=list,
         metadata={
             "name": "ETR",
@@ -26590,7 +26591,7 @@ class AirRefundRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    tcr: List[Tcr] = field(
+    tcr: list[Tcr] = field(
         default_factory=list,
         metadata={
             "name": "TCR",
@@ -26598,7 +26599,7 @@ class AirRefundRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    refund_failure_info: List[TypeTicketFailureInfo] = field(
+    refund_failure_info: list[TypeTicketFailureInfo] = field(
         default_factory=list,
         metadata={
             "name": "RefundFailureInfo",
@@ -26616,7 +26617,7 @@ class AirRepriceReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_reservation_locator_code: Optional[str] = field(
+    air_reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
@@ -26625,7 +26626,7 @@ class AirRepriceReq(AirBaseReq):
             "max_length": 8,
         }
     )
-    air_pricing_solution: Optional[AirPricingSolution] = field(
+    air_pricing_solution: None | AirPricingSolution = field(
         default=None,
         metadata={
             "name": "AirPricingSolution",
@@ -26654,7 +26655,7 @@ class AirRepriceRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_solution: Optional[AirPricingSolution] = field(
+    air_pricing_solution: None | AirPricingSolution = field(
         default=None,
         metadata={
             "name": "AirPricingSolution",
@@ -26662,7 +26663,7 @@ class AirRepriceRsp(BaseRsp):
             "required": True,
         }
     )
-    fare_rule: List[FareRule] = field(
+    fare_rule: list[FareRule] = field(
         default_factory=list,
         metadata={
             "name": "FareRule",
@@ -26698,7 +26699,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    etr: List[Etr] = field(
+    etr: list[Etr] = field(
         default_factory=list,
         metadata={
             "name": "ETR",
@@ -26706,7 +26707,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    mco: List[Mco] = field(
+    mco: list[Mco] = field(
         default_factory=list,
         metadata={
             "name": "MCO",
@@ -26715,7 +26716,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    tcr: List[Tcr] = field(
+    tcr: list[Tcr] = field(
         default_factory=list,
         metadata={
             "name": "TCR",
@@ -26723,7 +26724,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    document_failure_info: List[TypeFailureInfo] = field(
+    document_failure_info: list[TypeFailureInfo] = field(
         default_factory=list,
         metadata={
             "name": "DocumentFailureInfo",
@@ -26731,7 +26732,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    service_fee_info: List[ServiceFeeInfo] = field(
+    service_fee_info: list[ServiceFeeInfo] = field(
         default_factory=list,
         metadata={
             "name": "ServiceFeeInfo",
@@ -26740,7 +26741,7 @@ class AirRetrieveDocumentRsp(BaseRsp):
             "max_occurs": 99,
         }
     )
-    universal_record_locator_code: Optional[str] = field(
+    universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
@@ -26761,7 +26762,7 @@ class AirScheduleChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_solution: Optional[AirPricingSolution] = field(
+    air_pricing_solution: None | AirPricingSolution = field(
         default=None,
         metadata={
             "name": "AirPricingSolution",
@@ -26785,7 +26786,7 @@ class AirSolutionChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_solution: Optional[AirPricingSolution] = field(
+    air_pricing_solution: None | AirPricingSolution = field(
         default=None,
         metadata={
             "name": "AirPricingSolution",
@@ -26793,7 +26794,7 @@ class AirSolutionChangedInfo:
             "required": True,
         }
     )
-    reason_code: Optional[AirSolutionChangedInfoReasonCode] = field(
+    reason_code: None | AirSolutionChangedInfoReasonCode = field(
         default=None,
         metadata={
             "name": "ReasonCode",
@@ -26818,7 +26819,7 @@ class AirVoidDocumentRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    etr: List[Etr] = field(
+    etr: list[Etr] = field(
         default_factory=list,
         metadata={
             "name": "ETR",
@@ -26826,7 +26827,7 @@ class AirVoidDocumentRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    void_result_info: List[VoidResultInfo] = field(
+    void_result_info: list[VoidResultInfo] = field(
         default_factory=list,
         metadata={
             "name": "VoidResultInfo",
@@ -26856,7 +26857,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
     original_itinerary_details:
     override_pcc:
     """
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -26867,7 +26868,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
             "max_length": 13,
         }
     )
-    provider_reservation_info: Optional["BaseAirExchangeMultiQuoteReq.ProviderReservationInfo"] = field(
+    provider_reservation_info: None | BaseAirExchangeMultiQuoteReq.ProviderReservationInfo = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",
@@ -26875,7 +26876,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -26884,7 +26885,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
             "max_occurs": 2,
         }
     )
-    repricing_modifiers: Optional[RepricingModifiers] = field(
+    repricing_modifiers: None | RepricingModifiers = field(
         default=None,
         metadata={
             "name": "RepricingModifiers",
@@ -26892,7 +26893,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    original_itinerary_details: Optional[OriginalItineraryDetails] = field(
+    original_itinerary_details: None | OriginalItineraryDetails = field(
         default=None,
         metadata={
             "name": "OriginalItineraryDetails",
@@ -26900,7 +26901,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    override_pcc: Optional[OverridePcc] = field(
+    override_pcc: None | OverridePcc = field(
         default=None,
         metadata={
             "name": "OverridePCC",
@@ -26911,7 +26912,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
 
     @dataclass
     class ProviderReservationInfo:
-        provider_code: Optional[str] = field(
+        provider_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderCode",
@@ -26921,7 +26922,7 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
                 "max_length": 5,
             }
         )
-        provider_locator_code: Optional[str] = field(
+        provider_locator_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderLocatorCode",
@@ -26952,7 +26953,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
     pcc:
     fare_rule_type: Provider: ACH.
     """
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -26963,7 +26964,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "max_length": 13,
         }
     )
-    provider_reservation_info: Optional["BaseAirExchangeQuoteReq.ProviderReservationInfo"] = field(
+    provider_reservation_info: None | BaseAirExchangeQuoteReq.ProviderReservationInfo = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",
@@ -26971,7 +26972,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -26980,7 +26981,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "max_occurs": 2,
         }
     )
-    air_exchange_modifiers: Optional[AirExchangeModifiers] = field(
+    air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
         metadata={
             "name": "AirExchangeModifiers",
@@ -26988,7 +26989,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -26997,7 +26998,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "max_occurs": 999,
         }
     )
-    optional_services: Optional[OptionalServices] = field(
+    optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
@@ -27005,7 +27006,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -27014,7 +27015,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "max_occurs": 999,
         }
     )
-    repricing_modifiers: Optional[RepricingModifiers] = field(
+    repricing_modifiers: None | RepricingModifiers = field(
         default=None,
         metadata={
             "name": "RepricingModifiers",
@@ -27022,7 +27023,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    original_itinerary_details: Optional[OriginalItineraryDetails] = field(
+    original_itinerary_details: None | OriginalItineraryDetails = field(
         default=None,
         metadata={
             "name": "OriginalItineraryDetails",
@@ -27030,7 +27031,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    pcc: Optional[Pcc] = field(
+    pcc: None | Pcc = field(
         default=None,
         metadata={
             "name": "PCC",
@@ -27048,7 +27049,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
 
     @dataclass
     class ProviderReservationInfo:
-        provider_code: Optional[str] = field(
+        provider_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderCode",
@@ -27058,7 +27059,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
                 "max_length": 5,
             }
         )
-        provider_locator_code: Optional[str] = field(
+        provider_locator_code: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderLocatorCode",
@@ -27081,7 +27082,7 @@ class LowFareSearchAsynchReq(BaseLowFareSearchReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_search_asynch_modifiers: Optional[AirSearchAsynchModifiers] = field(
+    air_search_asynch_modifiers: None | AirSearchAsynchModifiers = field(
         default=None,
         metadata={
             "name": "AirSearchAsynchModifiers",
@@ -27104,7 +27105,7 @@ class LowFareSearchReq(BaseLowFareSearchReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    policy_reference: Optional[str] = field(
+    policy_reference: None | str = field(
         default=None,
         metadata={
             "name": "PolicyReference",
@@ -27120,7 +27121,7 @@ class OptionalServicesInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_pricing_solution: Optional[AirPricingSolution] = field(
+    air_pricing_solution: None | AirPricingSolution = field(
         default=None,
         metadata={
             "name": "AirPricingSolution",
@@ -27128,7 +27129,7 @@ class OptionalServicesInfo:
             "required": True,
         }
     )
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -27137,7 +27138,7 @@ class OptionalServicesInfo:
             "max_occurs": 999,
         }
     )
-    form_of_payment_ref: List[FormOfPaymentRef] = field(
+    form_of_payment_ref: list[FormOfPaymentRef] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPaymentRef",
@@ -27156,7 +27157,7 @@ class TypeAirReservationWithFop(TypeBaseAirReservation):
     class Meta:
         name = "typeAirReservationWithFOP"
 
-    form_of_payment: List[FormOfPayment] = field(
+    form_of_payment: list[FormOfPayment] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
@@ -27175,13 +27176,13 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
 
     Parameters
     ----------
-    type: Type choices are "Detail" or "Summary"  Default will be
+    type_value: Type choices are "Detail" or "Summary"  Default will be
         Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    type: str = field(
+    type_value: str = field(
         default="Summary",
         metadata={
             "name": "Type",
@@ -27212,7 +27213,7 @@ class AirExchangeRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    ticket_number: List[str] = field(
+    ticket_number: list[str] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
@@ -27223,7 +27224,7 @@ class AirExchangeRsp(BaseRsp):
             "max_length": 13,
         }
     )
-    booking_traveler: List[BookingTraveler] = field(
+    booking_traveler: list[BookingTraveler] = field(
         default_factory=list,
         metadata={
             "name": "BookingTraveler",
@@ -27232,14 +27233,14 @@ class AirExchangeRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    air_reservation: Optional[TypeAirReservationWithFop] = field(
+    air_reservation: None | TypeAirReservationWithFop = field(
         default=None,
         metadata={
             "name": "AirReservation",
             "type": "Element",
         }
     )
-    exchange_failure_info: List[TypeTicketFailureInfo] = field(
+    exchange_failure_info: list[TypeTicketFailureInfo] = field(
         default_factory=list,
         metadata={
             "name": "ExchangeFailureInfo",
@@ -27264,28 +27265,28 @@ class AirExchangeTicketingRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_solution_changed_info: Optional[AirSolutionChangedInfo] = field(
+    air_solution_changed_info: None | AirSolutionChangedInfo = field(
         default=None,
         metadata={
             "name": "AirSolutionChangedInfo",
             "type": "Element",
         }
     )
-    etr: Optional[Etr] = field(
+    etr: None | Etr = field(
         default=None,
         metadata={
             "name": "ETR",
             "type": "Element",
         }
     )
-    ticket_failure_info: Optional[TicketFailureInfo] = field(
+    ticket_failure_info: None | TicketFailureInfo = field(
         default=None,
         metadata={
             "name": "TicketFailureInfo",
             "type": "Element",
         }
     )
-    detailed_billing_information: Optional[DetailedBillingInformation] = field(
+    detailed_billing_information: None | DetailedBillingInformation = field(
         default=None,
         metadata={
             "name": "DetailedBillingInformation",
@@ -27299,7 +27300,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
     """
     Base Response for Air Search.
     """
-    fare_note_list: Optional[FareNoteList] = field(
+    fare_note_list: None | FareNoteList = field(
         default=None,
         metadata={
             "name": "FareNoteList",
@@ -27307,7 +27308,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    expert_solution_list: Optional[ExpertSolutionList] = field(
+    expert_solution_list: None | ExpertSolutionList = field(
         default=None,
         metadata={
             "name": "ExpertSolutionList",
@@ -27315,7 +27316,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    route_list: Optional[RouteList] = field(
+    route_list: None | RouteList = field(
         default=None,
         metadata={
             "name": "RouteList",
@@ -27323,7 +27324,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    alternate_route_list: Optional[AlternateRouteList] = field(
+    alternate_route_list: None | AlternateRouteList = field(
         default=None,
         metadata={
             "name": "AlternateRouteList",
@@ -27331,7 +27332,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    alternate_location_distance_list: Optional[AlternateLocationDistanceList] = field(
+    alternate_location_distance_list: None | AlternateLocationDistanceList = field(
         default=None,
         metadata={
             "name": "AlternateLocationDistanceList",
@@ -27339,7 +27340,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    fare_info_message: List[FareInfoMessage] = field(
+    fare_info_message: list[FareInfoMessage] = field(
         default_factory=list,
         metadata={
             "name": "FareInfoMessage",
@@ -27348,7 +27349,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "max_occurs": 99,
         }
     )
-    air_pricing_solution: List[AirPricingSolution] = field(
+    air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolution",
@@ -27357,7 +27358,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "max_occurs": 999,
         }
     )
-    air_price_point_list: Optional[AirPricePointList] = field(
+    air_price_point_list: None | AirPricePointList = field(
         default=None,
         metadata={
             "name": "AirPricePointList",
@@ -27365,7 +27366,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/air_v48_0",
         }
     )
-    rail_segment_list: Optional[RailSegmentList] = field(
+    rail_segment_list: None | RailSegmentList = field(
         default=None,
         metadata={
             "name": "RailSegmentList",
@@ -27373,7 +27374,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/rail_v48_0",
         }
     )
-    rail_journey_list: Optional[RailJourneyList] = field(
+    rail_journey_list: None | RailJourneyList = field(
         default=None,
         metadata={
             "name": "RailJourneyList",
@@ -27381,7 +27382,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/rail_v48_0",
         }
     )
-    rail_fare_note_list: Optional[RailFareNoteList] = field(
+    rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
@@ -27389,7 +27390,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/rail_v48_0",
         }
     )
-    rail_fare_idlist: Optional[RailFareIdlist] = field(
+    rail_fare_idlist: None | RailFareIdlist = field(
         default=None,
         metadata={
             "name": "RailFareIDList",
@@ -27397,7 +27398,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/rail_v48_0",
         }
     )
-    rail_fare_list: Optional[RailFareList] = field(
+    rail_fare_list: None | RailFareList = field(
         default=None,
         metadata={
             "name": "RailFareList",
@@ -27405,7 +27406,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "namespace": "http://www.travelport.com/schema/rail_v48_0",
         }
     )
-    rail_pricing_solution: List[RailPricingSolution] = field(
+    rail_pricing_solution: list[RailPricingSolution] = field(
         default_factory=list,
         metadata={
             "name": "RailPricingSolution",
@@ -27431,14 +27432,14 @@ class AirTicketingRsp(BaseRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_solution_changed_info: Optional[AirSolutionChangedInfo] = field(
+    air_solution_changed_info: None | AirSolutionChangedInfo = field(
         default=None,
         metadata={
             "name": "AirSolutionChangedInfo",
             "type": "Element",
         }
     )
-    etr: List[Etr] = field(
+    etr: list[Etr] = field(
         default_factory=list,
         metadata={
             "name": "ETR",
@@ -27446,7 +27447,7 @@ class AirTicketingRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    ticket_failure_info: List[TicketFailureInfo] = field(
+    ticket_failure_info: list[TicketFailureInfo] = field(
         default_factory=list,
         metadata={
             "name": "TicketFailureInfo",
@@ -27454,7 +27455,7 @@ class AirTicketingRsp(BaseRsp):
             "max_occurs": 999,
         }
     )
-    detailed_billing_information: List[DetailedBillingInformation] = field(
+    detailed_billing_information: list[DetailedBillingInformation] = field(
         default_factory=list,
         metadata={
             "name": "DetailedBillingInformation",
@@ -27479,7 +27480,7 @@ class AirUpsellSearchReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    air_itinerary: Optional[AirItinerary] = field(
+    air_itinerary: None | AirItinerary = field(
         default=None,
         metadata={
             "name": "AirItinerary",
@@ -27487,7 +27488,7 @@ class AirUpsellSearchReq(AirBaseReq):
             "required": True,
         }
     )
-    air_price_result: List[AirPriceResult] = field(
+    air_price_result: list[AirPriceResult] = field(
         default_factory=list,
         metadata={
             "name": "AirPriceResult",
@@ -27506,7 +27507,7 @@ class BaseAirPriceRsp(BaseRsp):
     air_itinerary: Provider: 1G,1V,1P,1J,ACH.
     air_price_result: Provider: 1G,1V,1P,1J,ACH.
     """
-    air_itinerary: Optional[AirItinerary] = field(
+    air_itinerary: None | AirItinerary = field(
         default=None,
         metadata={
             "name": "AirItinerary",
@@ -27515,7 +27516,7 @@ class BaseAirPriceRsp(BaseRsp):
             "required": True,
         }
     )
-    air_price_result: List[AirPriceResult] = field(
+    air_price_result: list[AirPriceResult] = field(
         default_factory=list,
         metadata={
             "name": "AirPriceResult",
@@ -27562,7 +27563,7 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    async_provider_specific_response: List[AsyncProviderSpecificResponse] = field(
+    async_provider_specific_response: list[AsyncProviderSpecificResponse] = field(
         default_factory=list,
         metadata={
             "name": "AsyncProviderSpecificResponse",
@@ -27570,14 +27571,14 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
             "max_occurs": 999,
         }
     )
-    brand_list: Optional[BrandList] = field(
+    brand_list: None | BrandList = field(
         default=None,
         metadata={
             "name": "BrandList",
             "type": "Element",
         }
     )
-    search_id: Optional[str] = field(
+    search_id: None | str = field(
         default=None,
         metadata={
             "name": "SearchId",
@@ -27585,7 +27586,7 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
             "required": True,
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -27608,14 +27609,14 @@ class LowFareSearchRsp(AirSearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    brand_list: Optional[BrandList] = field(
+    brand_list: None | BrandList = field(
         default=None,
         metadata={
             "name": "BrandList",
             "type": "Element",
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -27642,7 +27643,7 @@ class RetrieveLowFareSearchRsp(AirSearchRsp):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
-    async_provider_specific_response: List[AsyncProviderSpecificResponse] = field(
+    async_provider_specific_response: list[AsyncProviderSpecificResponse] = field(
         default_factory=list,
         metadata={
             "name": "AsyncProviderSpecificResponse",
@@ -27650,14 +27651,14 @@ class RetrieveLowFareSearchRsp(AirSearchRsp):
             "max_occurs": 999,
         }
     )
-    brand_list: Optional[BrandList] = field(
+    brand_list: None | BrandList = field(
         default=None,
         metadata={
             "name": "BrandList",
             "type": "Element",
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",

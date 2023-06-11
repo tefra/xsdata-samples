@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from npo.models.range_facet_result_item import RangeFacetResultItem
 
@@ -11,14 +11,14 @@ class DurationFacetResultItemType(RangeFacetResultItem):
     class Meta:
         name = "durationFacetResultItemType"
 
-    begin: Optional[XmlDuration] = field(
+    begin: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDuration] = field(
+    end: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",

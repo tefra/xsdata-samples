@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_sort_type_enum import MediaSortTypeEnum
 from npo.models.order_type_enum import OrderTypeEnum
 
@@ -11,13 +11,13 @@ class MediaSortType:
     class Meta:
         name = "mediaSortType"
 
-    value: Optional[MediaSortTypeEnum] = field(
+    value: None | MediaSortTypeEnum = field(
         default=None,
         metadata={
             "required": True,
         }
     )
-    order: Optional[OrderTypeEnum] = field(
+    order: None | OrderTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",

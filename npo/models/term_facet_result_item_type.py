@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.facet_result_item import FacetResultItem
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,14 +10,14 @@ class TermFacetResultItemType(FacetResultItem):
     class Meta:
         name = "termFacetResultItemType"
 
-    id: Optional[str] = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",

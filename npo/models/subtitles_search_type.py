@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.match import Match
 from npo.models.simple_matcher_type import SimpleMatcherType
 from npo.models.text_matcher_list_type import TextMatcherListType
@@ -12,35 +12,35 @@ class SubtitlesSearchType:
     class Meta:
         name = "subtitlesSearchType"
 
-    text: Optional[SimpleMatcherType] = field(
+    text: None | SimpleMatcherType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    mids: Optional[TextMatcherListType] = field(
+    mids: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    types: Optional[TextMatcherListType] = field(
+    types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    languages: Optional[TextMatcherListType] = field(
+    languages: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

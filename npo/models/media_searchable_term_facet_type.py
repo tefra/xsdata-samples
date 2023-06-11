@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_facet_type import MediaFacetType
 from npo.models.term_search_type import TermSearchType
 
@@ -11,7 +11,7 @@ class MediaSearchableTermFacetType(MediaFacetType):
     class Meta:
         name = "mediaSearchableTermFacetType"
 
-    sub_search: Optional[TermSearchType] = field(
+    sub_search: None | TermSearchType = field(
         default=None,
         metadata={
             "name": "subSearch",

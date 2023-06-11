@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional, Union
 from npo.models.lang_value import LangValue
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -16,7 +16,7 @@ class TagType:
             "required": True,
         }
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

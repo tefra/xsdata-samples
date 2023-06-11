@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_form import MediaForm
 from npo.models.page_sort_list_type import PageSortListType
 from npo.models.pages_facets_type import PagesFacetsType
@@ -13,14 +13,14 @@ class PagesFormType:
     class Meta:
         name = "pagesFormType"
 
-    searches: Optional[PagesSearchType] = field(
+    searches: None | PagesSearchType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sort_fields: Optional[PageSortListType] = field(
+    sort_fields: None | PageSortListType = field(
         default=None,
         metadata={
             "name": "sortFields",
@@ -28,14 +28,14 @@ class PagesFormType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    facets: Optional[PagesFacetsType] = field(
+    facets: None | PagesFacetsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    media_form: Optional[MediaForm] = field(
+    media_form: None | MediaForm = field(
         default=None,
         metadata={
             "name": "mediaForm",
@@ -43,7 +43,7 @@ class PagesFormType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    highlight: Optional[bool] = field(
+    highlight: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",

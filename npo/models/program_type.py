@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.base_media_type import BaseMediaType
 from npo.models.member_ref_type import MemberRefType
 from npo.models.program_type_enum import ProgramTypeEnum
@@ -14,7 +14,7 @@ class ProgramType(BaseMediaType):
     class Meta:
         name = "programType"
 
-    schedule_events: Optional[ScheduleEventsType] = field(
+    schedule_events: None | ScheduleEventsType = field(
         default=None,
         metadata={
             "name": "scheduleEvents",
@@ -22,7 +22,7 @@ class ProgramType(BaseMediaType):
             "namespace": "urn:vpro:media:2009",
         }
     )
-    episode_of: List[MemberRefType] = field(
+    episode_of: list[MemberRefType] = field(
         default_factory=list,
         metadata={
             "name": "episodeOf",
@@ -34,16 +34,17 @@ class ProgramType(BaseMediaType):
             ),
         }
     )
-    segments: Optional[SegmentsType] = field(
+    segments: None | SegmentsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    type: Optional[ProgramTypeEnum] = field(
+    type_value: None | ProgramTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
             "doc": "The type of this program (e.g. BROADCAST, TRACK, CLIP)",

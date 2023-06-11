@@ -194,8 +194,8 @@ class AdminNotes:
 class OtherHeiId:
     """
     :ivar value:
-    :ivar type: HEI identifier type. It is advised to use the types
-        provided in the enumeration (case sensitive), but custom
+    :ivar type_value: HEI identifier type. It is advised to use the
+        types provided in the enumeration (case sensitive), but custom
         identifier types are also allowed.
     """
     class Meta:
@@ -207,9 +207,10 @@ class OtherHeiId:
             "required": True,
         }
     )
-    type: Optional[OtherHeiIdValue] = field(
+    type_value: Optional[OtherHeiIdValue] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

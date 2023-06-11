@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_facets_result_type import MediaFacetsResultType
 from npo.models.search_result_type import SearchResultType
 
@@ -11,14 +11,14 @@ class GenericMediaSearchResultType(SearchResultType):
     class Meta:
         name = "genericMediaSearchResultType"
 
-    facets: Optional[MediaFacetsResultType] = field(
+    facets: None | MediaFacetsResultType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    selected_facets: Optional[MediaFacetsResultType] = field(
+    selected_facets: None | MediaFacetsResultType = field(
         default=None,
         metadata={
             "name": "selectedFacets",

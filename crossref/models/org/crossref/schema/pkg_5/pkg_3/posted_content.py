@@ -125,9 +125,10 @@ class PostedContent:
             "type": "Element",
         }
     )
-    type: PostedContentType = field(
+    type_value: PostedContentType = field(
         default=PostedContentType.PREPRINT,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

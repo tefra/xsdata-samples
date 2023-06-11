@@ -26,7 +26,7 @@ class ErrorElementType:
             "required": True,
         }
     )
-    type: Optional[ErrorElementTypeType] = field(
+    type_value: Optional[ErrorElementTypeType] = field(
         default=None,
         metadata={
             "name": "Type",

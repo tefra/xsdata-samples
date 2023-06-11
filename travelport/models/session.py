@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 
 __NAMESPACE__ = "http://www.travelport.com/soa/common/security/SessionContext_v1"
 
@@ -18,14 +18,14 @@ class SessionContext:
     class Meta:
         namespace = "http://www.travelport.com/soa/common/security/SessionContext_v1"
 
-    sess_tok: Optional["SessionContext.SessTok"] = field(
+    sess_tok: None | SessionContext.SessTok = field(
         default=None,
         metadata={
             "name": "SessTok",
             "type": "Element",
         }
     )
-    sess_prop: List["SessionContext.SessProp"] = field(
+    sess_prop: list[SessionContext.SessProp] = field(
         default_factory=list,
         metadata={
             "name": "SessProp",
@@ -41,7 +41,7 @@ class SessionContext:
         ----------
         id: ID of the Session Token
         """
-        id: Optional[str] = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -57,14 +57,14 @@ class SessionContext:
         nm: Name of the Session Property
         val: Value of the Session Property
         """
-        nm: Optional[str] = field(
+        nm: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
             }
         )
-        val: Optional[str] = field(
+        val: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

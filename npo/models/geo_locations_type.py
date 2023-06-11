@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.geo_location_type import GeoLocationType
 from npo.models.owner_type_enum import OwnerTypeEnum
 
@@ -11,7 +11,7 @@ class GeoLocationsType:
     class Meta:
         name = "geoLocationsType"
 
-    geo_location: List[GeoLocationType] = field(
+    geo_location: list[GeoLocationType] = field(
         default_factory=list,
         metadata={
             "name": "geoLocation",
@@ -19,7 +19,7 @@ class GeoLocationsType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",

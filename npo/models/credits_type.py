@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.name_type import NameType
 from npo.models.person_type import PersonType
 
@@ -11,14 +11,14 @@ class CreditsType:
     class Meta:
         name = "creditsType"
 
-    person: List[PersonType] = field(
+    person: list[PersonType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    name: List[NameType] = field(
+    name: list[NameType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

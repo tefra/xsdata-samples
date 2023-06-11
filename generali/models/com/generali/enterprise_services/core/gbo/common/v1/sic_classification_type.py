@@ -18,7 +18,7 @@ class SicClassificationType:
             "required": True,
         }
     )
-    type: Optional[SictypeEnum] = field(
+    type_value: Optional[SictypeEnum] = field(
         default=None,
         metadata={
             "name": "Type",

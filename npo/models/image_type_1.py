@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.image_type_enum import ImageTypeEnum
 from npo.models.license_enum import LicenseEnum
 from npo.models.owner_type_enum import OwnerTypeEnum
@@ -14,7 +14,7 @@ class ImageType1:
     class Meta:
         name = "imageType"
 
-    title: Optional[str] = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22,14 +22,14 @@ class ImageType1:
             "required": True,
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    image_uri: Optional[str] = field(
+    image_uri: None | str = field(
         default=None,
         metadata={
             "name": "imageUri",
@@ -37,42 +37,42 @@ class ImageType1:
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    offset: Optional[XmlDuration] = field(
+    offset: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    height: Optional[int] = field(
+    height: None | int = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    width: Optional[int] = field(
+    width: None | int = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    credits: Optional[str] = field(
+    credits: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    source: Optional[str] = field(
+    source: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    source_name: Optional[str] = field(
+    source_name: None | str = field(
         default=None,
         metadata={
             "name": "sourceName",
@@ -80,27 +80,28 @@ class ImageType1:
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    license: Optional[LicenseEnum] = field(
+    license: None | LicenseEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    date: Optional[str] = field(
+    date: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
         }
     )
-    type: Optional[ImageTypeEnum] = field(
+    type_value: None | ImageTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -113,48 +114,48 @@ class ImageType1:
             "type": "Attribute",
         }
     )
-    urn: Optional[str] = field(
+    urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[XmlDateTime] = field(
+    publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[XmlDateTime] = field(
+    last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    workflow: Optional[WorkflowEnumType] = field(
+    workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",

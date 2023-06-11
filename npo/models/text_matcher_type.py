@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.match import Match
 from npo.models.standard_match_type import StandardMatchType
 
@@ -17,14 +17,14 @@ class TextMatcherType:
             "required": True,
         }
     )
-    match_type: Optional[StandardMatchType] = field(
+    match_type: None | StandardMatchType = field(
         default=None,
         metadata={
             "name": "matchType",
             "type": "Attribute",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

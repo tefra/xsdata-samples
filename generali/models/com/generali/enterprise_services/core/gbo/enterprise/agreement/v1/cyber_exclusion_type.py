@@ -15,7 +15,7 @@ class CyberExclusionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",

@@ -1,7 +1,7 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDate, XmlTime
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
@@ -35,7 +35,7 @@ class CompanyNameType:
             "required": True,
         }
     )
-    company_short_name: Optional[str] = field(
+    company_short_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyShortName",
@@ -44,14 +44,14 @@ class CompanyNameType:
             "max_length": 64,
         }
     )
-    travel_sector: Optional[str] = field(
+    travel_sector: None | str = field(
         default=None,
         metadata={
             "name": "TravelSector",
             "type": "Attribute",
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -60,7 +60,7 @@ class CompanyNameType:
             "max_length": 8,
         }
     )
-    code_context: Optional[str] = field(
+    code_context: None | str = field(
         default=None,
         metadata={
             "name": "CodeContext",
@@ -92,7 +92,7 @@ class EquipmentType:
             "required": True,
         }
     )
-    air_equip_type: Optional[str] = field(
+    air_equip_type: None | str = field(
         default=None,
         metadata={
             "name": "AirEquipType",
@@ -228,7 +228,7 @@ class TravelerCountType:
         quantity: Used to define a quantity of an associated element or
             attribute.
     """
-    age: Optional[int] = field(
+    age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
@@ -237,7 +237,7 @@ class TravelerCountType:
             "max_inclusive": 999,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -246,7 +246,7 @@ class TravelerCountType:
             "max_length": 8,
         }
     )
-    code_context: Optional[str] = field(
+    code_context: None | str = field(
         default=None,
         metadata={
             "name": "CodeContext",
@@ -255,14 +255,14 @@ class TravelerCountType:
             "max_length": 32,
         }
     )
-    uri: Optional[str] = field(
+    uri: None | str = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
         }
     )
-    quantity: Optional[int] = field(
+    quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -286,7 +286,7 @@ class VoluntaryChangesType:
             change and other penalties are involved in the search or
             response.
     """
-    penalty: Optional["VoluntaryChangesType.Penalty"] = field(
+    penalty: None | VoluntaryChangesType.Penalty = field(
         default=None,
         metadata={
             "name": "Penalty",
@@ -294,7 +294,7 @@ class VoluntaryChangesType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    vol_change_ind: Optional[bool] = field(
+    vol_change_ind: None | bool = field(
         default=None,
         metadata={
             "name": "VolChangeInd",
@@ -319,21 +319,21 @@ class VoluntaryChangesType:
             percent: The penalty charge conveyed as a percent of the
                 total fare.
         """
-        penalty_type: Optional[str] = field(
+        penalty_type: None | str = field(
             default=None,
             metadata={
                 "name": "PenaltyType",
                 "type": "Attribute",
             }
         )
-        departure_status: Optional[str] = field(
+        departure_status: None | str = field(
             default=None,
             metadata={
                 "name": "DepartureStatus",
                 "type": "Attribute",
             }
         )
-        amount: Optional[Decimal] = field(
+        amount: None | Decimal = field(
             default=None,
             metadata={
                 "name": "Amount",
@@ -341,7 +341,7 @@ class VoluntaryChangesType:
                 "fraction_digits": 3,
             }
         )
-        currency_code: Optional[str] = field(
+        currency_code: None | str = field(
             default=None,
             metadata={
                 "name": "CurrencyCode",
@@ -349,14 +349,14 @@ class VoluntaryChangesType:
                 "pattern": r"[a-zA-Z]{3}",
             }
         )
-        decimal_places: Optional[int] = field(
+        decimal_places: None | int = field(
             default=None,
             metadata={
                 "name": "DecimalPlaces",
                 "type": "Attribute",
             }
         )
-        percent: Optional[Decimal] = field(
+        percent: None | Decimal = field(
             default=None,
             metadata={
                 "name": "Percent",
@@ -399,7 +399,7 @@ class AdvResTicketingType:
             advance ticketing restrictions are involved in the request
             or response.
     """
-    adv_reservation: Optional["AdvResTicketingType.AdvReservation"] = field(
+    adv_reservation: None | AdvResTicketingType.AdvReservation = field(
         default=None,
         metadata={
             "name": "AdvReservation",
@@ -407,7 +407,7 @@ class AdvResTicketingType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    adv_ticketing: Optional["AdvResTicketingType.AdvTicketing"] = field(
+    adv_ticketing: None | AdvResTicketingType.AdvTicketing = field(
         default=None,
         metadata={
             "name": "AdvTicketing",
@@ -415,14 +415,14 @@ class AdvResTicketingType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    adv_res_ind: Optional[bool] = field(
+    adv_res_ind: None | bool = field(
         default=None,
         metadata={
             "name": "AdvResInd",
             "type": "Attribute",
         }
     )
-    adv_ticketing_ind: Optional[bool] = field(
+    adv_ticketing_ind: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTicketingInd",
@@ -443,14 +443,14 @@ class AdvResTicketingType:
             latest_unit: The unit of elapsed time or the day of the week
                 to be applied to the LatestPeriod value.
         """
-        latest_time_of_day: Optional[Union[str, XmlTime]] = field(
+        latest_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "LatestTimeOfDay",
                 "type": "Attribute",
             }
         )
-        latest_period: Optional[str] = field(
+        latest_period: None | str = field(
             default=None,
             metadata={
                 "name": "LatestPeriod",
@@ -458,7 +458,7 @@ class AdvResTicketingType:
                 "pattern": r"[0-9]{1,3}",
             }
         )
-        latest_unit: Optional[StayUnitType] = field(
+        latest_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "LatestUnit",
@@ -489,14 +489,14 @@ class AdvResTicketingType:
                 week to be applied to the the period before departure
                 that a ticket must be purchased.
         """
-        from_res_time_of_day: Optional[Union[str, XmlTime]] = field(
+        from_res_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "FromResTimeOfDay",
                 "type": "Attribute",
             }
         )
-        from_res_period: Optional[str] = field(
+        from_res_period: None | str = field(
             default=None,
             metadata={
                 "name": "FromResPeriod",
@@ -504,21 +504,21 @@ class AdvResTicketingType:
                 "pattern": r"[0-9]{1,3}",
             }
         )
-        from_res_unit: Optional[StayUnitType] = field(
+        from_res_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "FromResUnit",
                 "type": "Attribute",
             }
         )
-        from_depart_time_of_day: Optional[Union[str, XmlTime]] = field(
+        from_depart_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "FromDepartTimeOfDay",
                 "type": "Attribute",
             }
         )
-        from_depart_period: Optional[str] = field(
+        from_depart_period: None | str = field(
             default=None,
             metadata={
                 "name": "FromDepartPeriod",
@@ -526,7 +526,7 @@ class AdvResTicketingType:
                 "pattern": r"[0-9]{1,3}",
             }
         )
-        from_depart_unit: Optional[StayUnitType] = field(
+        from_depart_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "FromDepartUnit",
@@ -546,7 +546,7 @@ class PassengerTypeQuantityType(TravelerCountType):
         index: Allows to identify which one of requested passengers this
             solution relates to.
     """
-    tpa_extensions: Optional["PassengerTypeQuantityType.TpaExtensions"] = field(
+    tpa_extensions: None | PassengerTypeQuantityType.TpaExtensions = field(
         default=None,
         metadata={
             "name": "TPA_Extensions",
@@ -561,7 +561,7 @@ class PassengerTypeQuantityType(TravelerCountType):
             "type": "Attribute",
         }
     )
-    index: Optional[int] = field(
+    index: None | int = field(
         default=None,
         metadata={
             "name": "Index",
@@ -581,7 +581,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 with voluntary changes should be included in the search
                 results.
         """
-        birth_date: Optional["PassengerTypeQuantityType.TpaExtensions.BirthDate"] = field(
+        birth_date: None | PassengerTypeQuantityType.TpaExtensions.BirthDate = field(
             default=None,
             metadata={
                 "name": "BirthDate",
@@ -589,7 +589,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             }
         )
-        age: Optional["PassengerTypeQuantityType.TpaExtensions.Age"] = field(
+        age: None | PassengerTypeQuantityType.TpaExtensions.Age = field(
             default=None,
             metadata={
                 "name": "Age",
@@ -597,7 +597,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             }
         )
-        state: Optional["PassengerTypeQuantityType.TpaExtensions.State"] = field(
+        state: None | PassengerTypeQuantityType.TpaExtensions.State = field(
             default=None,
             metadata={
                 "name": "State",
@@ -605,7 +605,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             }
         )
-        total_number: Optional["PassengerTypeQuantityType.TpaExtensions.TotalNumber"] = field(
+        total_number: None | PassengerTypeQuantityType.TpaExtensions.TotalNumber = field(
             default=None,
             metadata={
                 "name": "TotalNumber",
@@ -613,7 +613,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             }
         )
-        voluntary_changes: Optional["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges"] = field(
+        voluntary_changes: None | PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges = field(
             default=None,
             metadata={
                 "name": "VoluntaryChanges",
@@ -624,7 +624,7 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class BirthDate:
-            date: Optional[XmlDate] = field(
+            date: None | XmlDate = field(
                 default=None,
                 metadata={
                     "name": "Date",
@@ -634,7 +634,7 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class Age:
-            years: Optional[int] = field(
+            years: None | int = field(
                 default=None,
                 metadata={
                     "name": "Years",
@@ -645,7 +645,7 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class State:
-            code: Optional[str] = field(
+            code: None | str = field(
                 default=None,
                 metadata={
                     "name": "Code",
@@ -656,7 +656,7 @@ class PassengerTypeQuantityType(TravelerCountType):
 
         @dataclass
         class TotalNumber:
-            value: Optional[int] = field(
+            value: None | int = field(
                 default=None,
                 metadata={
                     "name": "Value",
@@ -676,7 +676,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     amount or a percentage of the fare.
                 match: Indicates relation between conditions.
             """
-            penalty: List["PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty"] = field(
+            penalty: list[PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty] = field(
                 default_factory=list,
                 metadata={
                     "name": "Penalty",
@@ -685,7 +685,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     "max_occurs": 2,
                 }
             )
-            match: Optional[VoluntaryChangesMatch] = field(
+            match: None | VoluntaryChangesMatch = field(
                 default=None,
                 metadata={
                     "name": "Match",
@@ -697,8 +697,8 @@ class PassengerTypeQuantityType(TravelerCountType):
             class Penalty:
                 """
                 Attributes
-                    type: Indicates the type (Refund or Exchange) of
-                        penalty involved in the search or response.
+                    type_value: Indicates the type (Refund or Exchange)
+                        of penalty involved in the search or response.
                     exclude: Indicate that specific penalty type should
                         be excluded from the response.
                     application: Identifier used to indicate whether the
@@ -711,28 +711,28 @@ class PassengerTypeQuantityType(TravelerCountType):
                         equivalent to the ISO 4217 standard "minor
                         unit".
                 """
-                type: Optional[PenaltyType] = field(
+                type_value: None | PenaltyType = field(
                     default=None,
                     metadata={
                         "name": "Type",
                         "type": "Attribute",
                     }
                 )
-                exclude: Optional[bool] = field(
+                exclude: None | bool = field(
                     default=None,
                     metadata={
                         "name": "Exclude",
                         "type": "Attribute",
                     }
                 )
-                application: Optional[PenaltyApplication] = field(
+                application: None | PenaltyApplication = field(
                     default=None,
                     metadata={
                         "name": "Application",
                         "type": "Attribute",
                     }
                 )
-                amount: Optional[Decimal] = field(
+                amount: None | Decimal = field(
                     default=None,
                     metadata={
                         "name": "Amount",
@@ -740,7 +740,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "fraction_digits": 3,
                     }
                 )
-                currency_code: Optional[str] = field(
+                currency_code: None | str = field(
                     default=None,
                     metadata={
                         "name": "CurrencyCode",
@@ -748,7 +748,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "pattern": r"[a-zA-Z]{3}",
                     }
                 )
-                decimal_places: Optional[int] = field(
+                decimal_places: None | int = field(
                     default=None,
                     metadata={
                         "name": "DecimalPlaces",
@@ -772,7 +772,7 @@ class StayRestrictionsType:
         stay_restrictions_ind: True indicates that Stay Restrictions
             exist.
     """
-    minimum_stay: Optional["StayRestrictionsType.MinimumStay"] = field(
+    minimum_stay: None | StayRestrictionsType.MinimumStay = field(
         default=None,
         metadata={
             "name": "MinimumStay",
@@ -780,7 +780,7 @@ class StayRestrictionsType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    maximum_stay: Optional["StayRestrictionsType.MaximumStay"] = field(
+    maximum_stay: None | StayRestrictionsType.MaximumStay = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -788,7 +788,7 @@ class StayRestrictionsType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    stay_restrictions_ind: Optional[bool] = field(
+    stay_restrictions_ind: None | bool = field(
         default=None,
         metadata={
             "name": "StayRestrictionsInd",
@@ -810,14 +810,14 @@ class StayRestrictionsType:
             min_stay_date: The specific date for the minimum stay
                 requirement.
         """
-        return_time_of_day: Optional[Union[str, XmlTime]] = field(
+        return_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
                 "type": "Attribute",
             }
         )
-        min_stay: Optional[int] = field(
+        min_stay: None | int = field(
             default=None,
             metadata={
                 "name": "MinStay",
@@ -826,14 +826,14 @@ class StayRestrictionsType:
                 "max_inclusive": 99,
             }
         )
-        stay_unit: Optional[StayUnitType] = field(
+        stay_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "StayUnit",
                 "type": "Attribute",
             }
         )
-        min_stay_date: Optional[Union[str, XmlTime]] = field(
+        min_stay_date: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "MinStayDate",
@@ -857,21 +857,21 @@ class StayRestrictionsType:
             max_stay_date: The specific date for the maximum stay
                 requirement.
         """
-        return_type: Optional[MaximumStayReturnType] = field(
+        return_type: None | MaximumStayReturnType = field(
             default=None,
             metadata={
                 "name": "ReturnType",
                 "type": "Attribute",
             }
         )
-        return_time_of_day: Optional[Union[str, XmlTime]] = field(
+        return_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
                 "type": "Attribute",
             }
         )
-        max_stay: Optional[int] = field(
+        max_stay: None | int = field(
             default=None,
             metadata={
                 "name": "MaxStay",
@@ -880,14 +880,14 @@ class StayRestrictionsType:
                 "max_inclusive": 99,
             }
         )
-        stay_unit: Optional[StayUnitType] = field(
+        stay_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "StayUnit",
                 "type": "Attribute",
             }
         )
-        max_stay_date: Optional[Union[str, XmlTime]] = field(
+        max_stay_date: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "MaxStayDate",

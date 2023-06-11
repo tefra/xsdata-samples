@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 @dataclass
 class TitleEltType:
     """
-    :ivar type:
+    :ivar type_value:
     :ivar lang: xml:lang is not required, but provides much of the
         motivation for title elements in addition to attributes, and so
         is provided here for convenience.
@@ -18,10 +18,11 @@ class TitleEltType:
     class Meta:
         name = "titleEltType"
 
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.TITLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,

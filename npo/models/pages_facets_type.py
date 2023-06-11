@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.date_range_facets_type import DateRangeFacetsType
 from npo.models.extended_page_facet_type import ExtendedPageFacetType
 from npo.models.page_facet_type import PageFacetType
@@ -15,7 +15,7 @@ class PagesFacetsType:
     class Meta:
         name = "pagesFacetsType"
 
-    sort_dates: Optional[DateRangeFacetsType] = field(
+    sort_dates: None | DateRangeFacetsType = field(
         default=None,
         metadata={
             "name": "sortDates",
@@ -23,63 +23,63 @@ class PagesFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    broadcasters: Optional[PageFacetType] = field(
+    broadcasters: None | PageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    types: Optional[PageFacetType] = field(
+    types: None | PageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    tags: Optional[ExtendedPageFacetType] = field(
+    tags: None | ExtendedPageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    keywords: Optional[ExtendedPageFacetType] = field(
+    keywords: None | ExtendedPageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    genres: Optional[PageSearchableTermFacetType] = field(
+    genres: None | PageSearchableTermFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    portals: Optional[PageFacetType] = field(
+    portals: None | PageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sections: Optional[PageFacetType] = field(
+    sections: None | PageFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    relations: Optional[PageRelationFacetListType] = field(
+    relations: None | PageRelationFacetListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    filter: Optional[PagesSearchType] = field(
+    filter: None | PagesSearchType = field(
         default=None,
         metadata={
             "type": "Element",

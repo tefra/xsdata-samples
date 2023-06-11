@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.page_sort_type import PageSortType
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,7 +10,7 @@ class PageSortListType:
     class Meta:
         name = "pageSortListType"
 
-    sort: List[PageSortType] = field(
+    sort: list[PageSortType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

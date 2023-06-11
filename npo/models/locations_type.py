@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.location_type import LocationType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class LocationsType:
     class Meta:
         name = "locationsType"
 
-    location: List[LocationType] = field(
+    location: list[LocationType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -27,9 +27,10 @@ class TCorrelationProperty(TRootElement):
             "type": "Attribute",
         }
     )
-    type: Optional[QName] = field(
+    type_value: Optional[QName] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

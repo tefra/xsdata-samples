@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.av_attributes_type import AvAttributesType
 from npo.models.channel_enum import ChannelEnum
@@ -16,28 +16,28 @@ class ScheduleEventType:
     class Meta:
         name = "scheduleEventType"
 
-    title: List[ScheduleEventTitle] = field(
+    title: list[ScheduleEventTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    description: List[ScheduleEventDescription] = field(
+    description: list[ScheduleEventDescription] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    repeat: Optional[RepeatType] = field(
+    repeat: None | RepeatType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    member_of: Optional[str] = field(
+    member_of: None | str = field(
         default=None,
         metadata={
             "name": "memberOf",
@@ -45,7 +45,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    av_attributes: Optional[AvAttributesType] = field(
+    av_attributes: None | AvAttributesType = field(
         default=None,
         metadata={
             "name": "avAttributes",
@@ -53,7 +53,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    text_subtitles: Optional[str] = field(
+    text_subtitles: None | str = field(
         default=None,
         metadata={
             "name": "textSubtitles",
@@ -61,7 +61,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    text_page: Optional[str] = field(
+    text_page: None | str = field(
         default=None,
         metadata={
             "name": "textPage",
@@ -69,7 +69,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    guide_day: Optional[XmlDate] = field(
+    guide_day: None | XmlDate = field(
         default=None,
         metadata={
             "name": "guideDay",
@@ -78,7 +78,7 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    start: Optional[XmlDateTime] = field(
+    start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
@@ -86,14 +86,14 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    offset: Optional[XmlDuration] = field(
+    offset: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[XmlDuration] = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
@@ -101,7 +101,7 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    po_prog_id: Optional[str] = field(
+    po_prog_id: None | str = field(
         default=None,
         metadata={
             "name": "poProgID",
@@ -109,7 +109,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    primary_lifestyle: Optional[str] = field(
+    primary_lifestyle: None | str = field(
         default=None,
         metadata={
             "name": "primaryLifestyle",
@@ -117,7 +117,7 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    secondary_lifestyle: Optional[str] = field(
+    secondary_lifestyle: None | str = field(
         default=None,
         metadata={
             "name": "secondaryLifestyle",
@@ -125,32 +125,32 @@ class ScheduleEventType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    imi: Optional[str] = field(
+    imi: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    channel: Optional[ChannelEnum] = field(
+    channel: None | ChannelEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    net: Optional[str] = field(
+    net: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    guide_day_attribute: Optional[XmlDate] = field(
+    guide_day_attribute: None | XmlDate = field(
         default=None,
         metadata={
             "name": "guideDay",
             "type": "Attribute",
         }
     )
-    mid_ref: Optional[str] = field(
+    mid_ref: None | str = field(
         default=None,
         metadata={
             "name": "midRef",
@@ -161,7 +161,7 @@ class ScheduleEventType:
             "pattern": r"[ \.a-zA-Z0-9_-]+",
         }
     )
-    urn_ref: Optional[str] = field(
+    urn_ref: None | str = field(
         default=None,
         metadata={
             "name": "urnRef",
@@ -169,9 +169,10 @@ class ScheduleEventType:
             "required": True,
         }
     )
-    type: Optional[ScheduleEventTypeEnum] = field(
+    type_value: None | ScheduleEventTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

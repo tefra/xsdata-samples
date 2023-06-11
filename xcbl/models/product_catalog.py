@@ -435,7 +435,7 @@ class CatalogAudience:
 
 @dataclass(kw_only=True)
 class CatalogContract:
-    type: CatalogContractType = field(
+    type_value: CatalogContractType = field(
         default=CatalogContractType.BUYER,
         metadata={
             "name": "Type",
@@ -581,7 +581,7 @@ class ProductId:
     class Meta:
         name = "ProductID"
 
-    type: ProductIdType = field(
+    type_value: ProductIdType = field(
         default=ProductIdType.SUPPLIER,
         metadata={
             "name": "Type",
@@ -996,7 +996,7 @@ class PricingInformation:
 
 @dataclass(kw_only=True)
 class Product:
-    type: ProductType = field(
+    type_value: ProductType = field(
         default=ProductType.GOOD,
         metadata={
             "name": "Type",
@@ -1454,7 +1454,7 @@ class CatalogHeader:
 
 @dataclass(kw_only=True)
 class CatalogSchema:
-    type: CatalogSchemaType = field(
+    type_value: CatalogSchemaType = field(
         default=CatalogSchemaType.SUPPLIER,
         metadata={
             "name": "Type",

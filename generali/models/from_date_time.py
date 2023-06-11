@@ -7,9 +7,10 @@ class FromDateTime:
     class Meta:
         name = "from-date-time"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }

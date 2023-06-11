@@ -7,9 +7,10 @@ class SchemeName:
     class Meta:
         name = "@scheme-name"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }

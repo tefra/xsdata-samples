@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.media_type_enum import MediaTypeEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class RecursiveMemberRef:
     class Meta:
         name = "recursiveMemberRef"
 
-    member_of: List["RecursiveMemberRef"] = field(
+    member_of: list[RecursiveMemberRef] = field(
         default_factory=list,
         metadata={
             "name": "memberOf",
@@ -18,7 +18,7 @@ class RecursiveMemberRef:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    episode_of: List["RecursiveMemberRef"] = field(
+    episode_of: list[RecursiveMemberRef] = field(
         default_factory=list,
         metadata={
             "name": "episodeOf",
@@ -26,7 +26,7 @@ class RecursiveMemberRef:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    segment_of: Optional["RecursiveMemberRef"] = field(
+    segment_of: None | RecursiveMemberRef = field(
         default=None,
         metadata={
             "name": "segmentOf",
@@ -34,20 +34,21 @@ class RecursiveMemberRef:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    mid_ref: Optional[str] = field(
+    mid_ref: None | str = field(
         default=None,
         metadata={
             "name": "midRef",
             "type": "Attribute",
         }
     )
-    type: Optional[MediaTypeEnum] = field(
+    type_value: None | MediaTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
-    index: Optional[int] = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

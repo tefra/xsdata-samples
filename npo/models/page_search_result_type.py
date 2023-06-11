@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_facets_result_type import MediaFacetsResultType
 from npo.models.page_facets_result_type import PageFacetsResultType
 from npo.models.search_result_type import SearchResultType
@@ -12,14 +12,14 @@ class PageSearchResultType(SearchResultType):
     class Meta:
         name = "pageSearchResultType"
 
-    facets: Optional[PageFacetsResultType] = field(
+    facets: None | PageFacetsResultType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    selected_facets: Optional[PageFacetsResultType] = field(
+    selected_facets: None | PageFacetsResultType = field(
         default=None,
         metadata={
             "name": "selectedFacets",
@@ -27,7 +27,7 @@ class PageSearchResultType(SearchResultType):
             "namespace": "urn:vpro:api:2013",
         }
     )
-    media_facets: Optional[MediaFacetsResultType] = field(
+    media_facets: None | MediaFacetsResultType = field(
         default=None,
         metadata={
             "name": "mediaFacets",
@@ -35,7 +35,7 @@ class PageSearchResultType(SearchResultType):
             "namespace": "urn:vpro:api:2013",
         }
     )
-    media_selected_facets: Optional[MediaFacetsResultType] = field(
+    media_selected_facets: None | MediaFacetsResultType = field(
         default=None,
         metadata={
             "name": "mediaSelectedFacets",

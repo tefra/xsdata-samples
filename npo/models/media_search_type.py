@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.date_range_matcher_list_type import DateRangeMatcherListType
 from npo.models.duration_range_matcher_list_type import DurationRangeMatcherListType
 from npo.models.extended_text_matcher_list_type import ExtendedTextMatcherListType
@@ -22,14 +22,14 @@ class MediaSearchType:
     class Meta:
         name = "mediaSearchType"
 
-    text: Optional[SimpleMatcherType] = field(
+    text: None | SimpleMatcherType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    media_ids: Optional[TextMatcherListType] = field(
+    media_ids: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "mediaIds",
@@ -38,7 +38,7 @@ class MediaSearchType:
             "doc": "The MID must match one of the mediaIds",
         }
     )
-    types: Optional[TextMatcherListType] = field(
+    types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -46,7 +46,7 @@ class MediaSearchType:
             "doc": "The media type must match one of these.",
         }
     )
-    av_types: Optional[TextMatcherListType] = field(
+    av_types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "avTypes",
@@ -54,7 +54,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sort_dates: Optional[DateRangeMatcherListType] = field(
+    sort_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "sortDates",
@@ -62,7 +62,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    publish_dates: Optional[DateRangeMatcherListType] = field(
+    publish_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "publishDates",
@@ -70,7 +70,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    creation_dates: Optional[DateRangeMatcherListType] = field(
+    creation_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "creationDates",
@@ -78,7 +78,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    last_modified_dates: Optional[DateRangeMatcherListType] = field(
+    last_modified_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "lastModifiedDates",
@@ -86,42 +86,42 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    broadcasters: Optional[TextMatcherListType] = field(
+    broadcasters: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    locations: Optional[TextMatcherListType] = field(
+    locations: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    tags: Optional[ExtendedTextMatcherListType] = field(
+    tags: None | ExtendedTextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    genres: Optional[TextMatcherListType] = field(
+    genres: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    durations: Optional[DurationRangeMatcherListType] = field(
+    durations: None | DurationRangeMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    descendant_of: Optional[TextMatcherListType] = field(
+    descendant_of: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "descendantOf",
@@ -129,7 +129,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    episode_of: Optional[TextMatcherListType] = field(
+    episode_of: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "episodeOf",
@@ -137,7 +137,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    member_of: Optional[TextMatcherListType] = field(
+    member_of: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "memberOf",
@@ -145,14 +145,14 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    relations: Optional[MediaRelationSearchListType] = field(
+    relations: None | MediaRelationSearchListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    schedule_events: List[ScheduleEventSearchType] = field(
+    schedule_events: list[ScheduleEventSearchType] = field(
         default_factory=list,
         metadata={
             "name": "scheduleEvents",
@@ -161,7 +161,7 @@ class MediaSearchType:
             "nillable": True,
         }
     )
-    age_ratings: Optional[TextMatcherListType] = field(
+    age_ratings: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "ageRatings",
@@ -169,7 +169,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    content_ratings: Optional[TextMatcherListType] = field(
+    content_ratings: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "contentRatings",
@@ -177,7 +177,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    titles: List[TitleSearchType] = field(
+    titles: list[TitleSearchType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -185,7 +185,7 @@ class MediaSearchType:
             "nillable": True,
         }
     )
-    geo_locations: List[GeoLocationSearchType] = field(
+    geo_locations: list[GeoLocationSearchType] = field(
         default_factory=list,
         metadata={
             "name": "geoLocations",
@@ -194,7 +194,7 @@ class MediaSearchType:
             "nillable": True,
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

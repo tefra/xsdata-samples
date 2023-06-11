@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.range_matcher_type import RangeMatcherType
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -11,14 +11,14 @@ class DateRangeMatcherType(RangeMatcherType):
     class Meta:
         name = "dateRangeMatcherType"
 
-    begin: Optional[XmlDateTime] = field(
+    begin: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDateTime] = field(
+    end: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",

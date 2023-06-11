@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.duration_range_facet_item_type import DurationRangeFacetItemType
 
@@ -11,14 +11,14 @@ class DurationRangeFacetsType(AbstractFacetType):
     class Meta:
         name = "durationRangeFacetsType"
 
-    interval: List[str] = field(
+    interval: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    range: List[DurationRangeFacetItemType] = field(
+    range: list[DurationRangeFacetItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.range_facet_result_item import RangeFacetResultItem
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -11,21 +11,21 @@ class DateFacetResultItemType(RangeFacetResultItem):
     class Meta:
         name = "dateFacetResultItemType"
 
-    begin: Optional[XmlDateTime] = field(
+    begin: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDateTime] = field(
+    end: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",

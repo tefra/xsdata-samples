@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -9,7 +9,7 @@ class AudioAttributesType:
     class Meta:
         name = "audioAttributesType"
 
-    number_of_channels: Optional[int] = field(
+    number_of_channels: None | int = field(
         default=None,
         metadata={
             "name": "numberOfChannels",
@@ -17,7 +17,7 @@ class AudioAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    audio_coding: Optional[str] = field(
+    audio_coding: None | str = field(
         default=None,
         metadata={
             "name": "audioCoding",
@@ -25,7 +25,7 @@ class AudioAttributesType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    language: Optional[str] = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Element",

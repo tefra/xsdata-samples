@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -16,20 +16,20 @@ class PortalRestrictionType:
             "required": True,
         }
     )
-    portal_id: Optional[str] = field(
+    portal_id: None | str = field(
         default=None,
         metadata={
             "name": "portalId",
             "type": "Attribute",
         }
     )
-    start: Optional[XmlDateTime] = field(
+    start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stop: Optional[XmlDateTime] = field(
+    stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.workflow_enum_type import WorkflowEnumType
 
 __NAMESPACE__ = "urn:vpro:shared:2009"
@@ -11,48 +11,48 @@ class PublishableObjectType:
     class Meta:
         name = "publishableObjectType"
 
-    urn: Optional[str] = field(
+    urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[XmlDateTime] = field(
+    publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[XmlDateTime] = field(
+    last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    workflow: Optional[WorkflowEnumType] = field(
+    workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",

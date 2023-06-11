@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.match import Match
 from npo.models.text_matcher_list_type import TextMatcherListType
 
@@ -11,7 +11,7 @@ class MemberRefSearchType:
     class Meta:
         name = "memberRefSearchType"
 
-    media_ids: Optional[TextMatcherListType] = field(
+    media_ids: None | TextMatcherListType = field(
         default=None,
         metadata={
             "name": "mediaIds",
@@ -19,14 +19,14 @@ class MemberRefSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    types: Optional[TextMatcherListType] = field(
+    types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

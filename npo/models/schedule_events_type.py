@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.schedule_event_type import ScheduleEventType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class ScheduleEventsType:
     class Meta:
         name = "scheduleEventsType"
 
-    schedule_event: List[ScheduleEventType] = field(
+    schedule_event: list[ScheduleEventType] = field(
         default_factory=list,
         metadata={
             "name": "scheduleEvent",
