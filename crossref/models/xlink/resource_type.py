@@ -10,10 +10,11 @@ class ResourceType:
     class Meta:
         name = "resourceType"
 
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.RESOURCE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,

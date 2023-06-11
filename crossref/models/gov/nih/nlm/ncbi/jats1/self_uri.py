@@ -86,10 +86,11 @@ class SelfUri:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }

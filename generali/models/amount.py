@@ -31,9 +31,10 @@ class Amount:
     class Meta:
         name = "amount"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -76,9 +77,10 @@ class Categories:
     class Meta:
         name = "categories"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -97,9 +99,10 @@ class CategoryCode:
     class Meta:
         name = "category-code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -125,9 +128,10 @@ class Code:
     class Meta:
         name = "code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -177,9 +181,10 @@ class CreatedById:
     class Meta:
         name = "created-by-id"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -212,9 +217,10 @@ class Criteria:
     class Meta:
         name = "criteria"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -239,9 +245,10 @@ class ErrorCode:
     class Meta:
         name = "error-code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -265,9 +272,10 @@ class Failure:
     class Meta:
         name = "failure"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -297,9 +305,10 @@ class FaultCause:
     class Meta:
         name = "fault-cause"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -322,9 +331,10 @@ class Id:
     class Meta:
         name = "id"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -357,9 +367,10 @@ class Identification:
     class Meta:
         name = "identification"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -385,9 +396,10 @@ class Ids:
     class Meta:
         name = "ids"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -406,9 +418,10 @@ class LastModifiedById:
     class Meta:
         name = "last-modified-by-id"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -441,9 +454,10 @@ class Metadata:
     class Meta:
         name = "metadata"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -460,9 +474,10 @@ class Quantity:
     class Meta:
         name = "quantity"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -505,9 +520,10 @@ class QueryExpression:
     class Meta:
         name = "query-expression"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -526,9 +542,10 @@ class ReferenceParameters:
     class Meta:
         name = "reference-parameters"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -545,9 +562,10 @@ class StatusCode:
     class Meta:
         name = "status-code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -580,9 +598,10 @@ class TypeCode:
     class Meta:
         name = "type-code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -632,9 +651,10 @@ class ValidityPeriod:
     class Meta:
         name = "validity-period"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -660,9 +680,10 @@ class ValueExpression:
     class Meta:
         name = "value-expression"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -681,9 +702,10 @@ class VersionId:
     class Meta:
         name = "version-id"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }
@@ -716,9 +738,10 @@ class Failures:
     class Meta:
         name = "failures"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -760,9 +783,10 @@ class Originator:
             "type": "Element",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -846,9 +870,10 @@ class Value:
             "type": "Element",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -871,9 +896,10 @@ class Values:
     class Meta:
         name = "values"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -923,9 +949,10 @@ class Characteristic:
             "type": "Element",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -948,9 +975,10 @@ class Characteristics:
     class Meta:
         name = "characteristics"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )
@@ -1319,9 +1347,10 @@ class DataRef:
     class Meta:
         name = "data-ref"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
         }
     )

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.gtaa_status_type import GtaaStatusType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class TopicType:
     class Meta:
         name = "topicType"
 
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -18,7 +18,7 @@ class TopicType:
             "required": True,
         }
     )
-    scope_note: List[str] = field(
+    scope_note: list[str] = field(
         default_factory=list,
         metadata={
             "name": "scopeNote",
@@ -26,14 +26,14 @@ class TopicType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    gtaa_uri: Optional[str] = field(
+    gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
         }
     )
-    gtaa_status: Optional[GtaaStatusType] = field(
+    gtaa_status: None | GtaaStatusType = field(
         default=None,
         metadata={
             "name": "gtaaStatus",

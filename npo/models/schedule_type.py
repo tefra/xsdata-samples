@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.channel_enum import ChannelEnum
 from npo.models.schedule_event_type import ScheduleEventType
@@ -12,7 +12,7 @@ class ScheduleType:
     class Meta:
         name = "scheduleType"
 
-    schedule_event: List[ScheduleEventType] = field(
+    schedule_event: list[ScheduleEventType] = field(
         default_factory=list,
         metadata={
             "name": "scheduleEvent",
@@ -21,44 +21,44 @@ class ScheduleType:
             "min_occurs": 1,
         }
     )
-    channel: Optional[ChannelEnum] = field(
+    channel: None | ChannelEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    net: Optional[str] = field(
+    net: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    date: Optional[XmlDate] = field(
+    date: None | XmlDate = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    release_version: Optional[int] = field(
+    release_version: None | int = field(
         default=None,
         metadata={
             "name": "releaseVersion",
             "type": "Attribute",
         }
     )
-    start: Optional[XmlDateTime] = field(
+    start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    stop: Optional[XmlDateTime] = field(
+    stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    reruns: Optional[bool] = field(
+    reruns: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",

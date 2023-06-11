@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
 
 __NAMESPACE__ = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
@@ -15,7 +15,7 @@ class AdditionalFareQualifierDetailsTypeI:
     :ivar pricing_group: Pricing group
     :ivar second_rate_class: Second rate class
     """
-    rate_class: Optional[str] = field(
+    rate_class: None | str = field(
         default=None,
         metadata={
             "name": "rateClass",
@@ -25,7 +25,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "max_length": 35,
         }
     )
-    ticket_designator: Optional[str] = field(
+    ticket_designator: None | str = field(
         default=None,
         metadata={
             "name": "ticketDesignator",
@@ -35,7 +35,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "max_length": 18,
         }
     )
-    pricing_group: Optional[str] = field(
+    pricing_group: None | str = field(
         default=None,
         metadata={
             "name": "pricingGroup",
@@ -45,7 +45,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "max_length": 35,
         }
     )
-    second_rate_class: List[str] = field(
+    second_rate_class: list[str] = field(
         default_factory=list,
         metadata={
             "name": "secondRateClass",
@@ -67,7 +67,7 @@ class AdditionalProductDetailsType:
         different from 0
     :ivar location_id: Location places of the stops
     """
-    equipment_type: Optional[str] = field(
+    equipment_type: None | str = field(
         default=None,
         metadata={
             "name": "equipmentType",
@@ -77,7 +77,7 @@ class AdditionalProductDetailsType:
             "max_length": 3,
         }
     )
-    operating_day: Optional[str] = field(
+    operating_day: None | str = field(
         default=None,
         metadata={
             "name": "operatingDay",
@@ -87,7 +87,7 @@ class AdditionalProductDetailsType:
             "max_length": 7,
         }
     )
-    tech_stop_number: Optional[str] = field(
+    tech_stop_number: None | str = field(
         default=None,
         metadata={
             "name": "techStopNumber",
@@ -96,7 +96,7 @@ class AdditionalProductDetailsType:
             "pattern": r"-?[0-9]{1,2}",
         }
     )
-    location_id: List[str] = field(
+    location_id: list[str] = field(
         default_factory=list,
         metadata={
             "name": "locationId",
@@ -115,7 +115,7 @@ class ApplicationErrorInformationType:
     :ivar error: The code assigned by the receiver of a message for
         identification of a data validation error condition.
     """
-    error: Optional[str] = field(
+    error: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -135,7 +135,7 @@ class AttributeInformationType:
     :ivar fee_parameter_type: Type of parameter.
     :ivar fee_parameter_description: Reference to company Id.
     """
-    fee_parameter_type: Optional[str] = field(
+    fee_parameter_type: None | str = field(
         default=None,
         metadata={
             "name": "feeParameterType",
@@ -145,7 +145,7 @@ class AttributeInformationType:
             "max_length": 3,
         }
     )
-    fee_parameter_description: Optional[str] = field(
+    fee_parameter_description: None | str = field(
         default=None,
         metadata={
             "name": "feeParameterDescription",
@@ -165,7 +165,7 @@ class AttributeInformationTypeU:
     :ivar attribute_type: Attribute type
     :ivar attribute_description: Attribute description
     """
-    attribute_type: Optional[str] = field(
+    attribute_type: None | str = field(
         default=None,
         metadata={
             "name": "attributeType",
@@ -176,7 +176,7 @@ class AttributeInformationTypeU:
             "max_length": 25,
         }
     )
-    attribute_description: Optional[str] = field(
+    attribute_description: None | str = field(
         default=None,
         metadata={
             "name": "attributeDescription",
@@ -199,7 +199,7 @@ class AttributeInformationType97181C:
     class Meta:
         name = "AttributeInformationType_97181C"
 
-    attribute_type: Optional[str] = field(
+    attribute_type: None | str = field(
         default=None,
         metadata={
             "name": "attributeType",
@@ -210,7 +210,7 @@ class AttributeInformationType97181C:
             "max_length": 25,
         }
     )
-    attribute_description: Optional[str] = field(
+    attribute_description: None | str = field(
         default=None,
         metadata={
             "name": "attributeDescription",
@@ -232,7 +232,7 @@ class BaggageDetailsType:
         or weight)
     :ivar unit_qualifier: Unit qualifier
     """
-    free_allowance: Optional[str] = field(
+    free_allowance: None | str = field(
         default=None,
         metadata={
             "name": "freeAllowance",
@@ -241,7 +241,7 @@ class BaggageDetailsType:
             "pattern": r"-?[0-9]{1,15}",
         }
     )
-    quantity_code: Optional[str] = field(
+    quantity_code: None | str = field(
         default=None,
         metadata={
             "name": "quantityCode",
@@ -250,7 +250,7 @@ class BaggageDetailsType:
             "pattern": r"[0-9A-Z]{1,3}",
         }
     )
-    unit_qualifier: Optional[str] = field(
+    unit_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "unitQualifier",
@@ -270,7 +270,7 @@ class BagtagDetailsType:
     :ivar identifier: Identifier
     :ivar number: Number
     """
-    identifier: Optional[str] = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -279,7 +279,7 @@ class BagtagDetailsType:
             "max_length": 35,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -295,7 +295,7 @@ class BucketInformationType:
     :ivar number: Number
     :ivar name: Name
     """
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -304,7 +304,7 @@ class BucketInformationType:
             "max_length": 3,
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -321,7 +321,7 @@ class CabinInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar cabin: Cabin code designator
     """
-    service: Optional[str] = field(
+    service: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -331,7 +331,7 @@ class CabinInformationType:
             "max_length": 5,
         }
     )
-    cabin: List[str] = field(
+    cabin: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -351,7 +351,7 @@ class CabinProductDetailsType:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
-    rbd: Optional[str] = field(
+    rbd: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -361,7 +361,7 @@ class CabinProductDetailsType:
             "max_length": 1,
         }
     )
-    booking_modifier: Optional[str] = field(
+    booking_modifier: None | str = field(
         default=None,
         metadata={
             "name": "bookingModifier",
@@ -371,7 +371,7 @@ class CabinProductDetailsType:
             "max_length": 1,
         }
     )
-    cabin: Optional[str] = field(
+    cabin: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -380,7 +380,7 @@ class CabinProductDetailsType:
             "max_length": 1,
         }
     )
-    avl_status: Optional[str] = field(
+    avl_status: None | str = field(
         default=None,
         metadata={
             "name": "avlStatus",
@@ -403,7 +403,7 @@ class CabinProductDetailsType195516C:
     class Meta:
         name = "CabinProductDetailsType_195516C"
 
-    rbd: Optional[str] = field(
+    rbd: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -412,7 +412,7 @@ class CabinProductDetailsType195516C:
             "max_length": 1,
         }
     )
-    booking_modifier: Optional[str] = field(
+    booking_modifier: None | str = field(
         default=None,
         metadata={
             "name": "bookingModifier",
@@ -422,7 +422,7 @@ class CabinProductDetailsType195516C:
             "max_length": 1,
         }
     )
-    cabin: Optional[str] = field(
+    cabin: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -431,7 +431,7 @@ class CabinProductDetailsType195516C:
             "max_length": 1,
         }
     )
-    avl_status: Optional[str] = field(
+    avl_status: None | str = field(
         default=None,
         metadata={
             "name": "avlStatus",
@@ -455,7 +455,7 @@ class CabinProductDetailsType205138C:
     class Meta:
         name = "CabinProductDetailsType_205138C"
 
-    rbd: Optional[str] = field(
+    rbd: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -465,7 +465,7 @@ class CabinProductDetailsType205138C:
             "max_length": 1,
         }
     )
-    booking_modifier: Optional[str] = field(
+    booking_modifier: None | str = field(
         default=None,
         metadata={
             "name": "bookingModifier",
@@ -474,7 +474,7 @@ class CabinProductDetailsType205138C:
             "pattern": r"[0-9A-Z]",
         }
     )
-    cabin: Optional[str] = field(
+    cabin: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -483,7 +483,7 @@ class CabinProductDetailsType205138C:
             "max_length": 1,
         }
     )
-    avl_status: Optional[str] = field(
+    avl_status: None | str = field(
         default=None,
         metadata={
             "name": "avlStatus",
@@ -504,7 +504,7 @@ class CabinProductDetailsType229142C:
     class Meta:
         name = "CabinProductDetailsType_229142C"
 
-    rbd: Optional[str] = field(
+    rbd: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -514,7 +514,7 @@ class CabinProductDetailsType229142C:
             "max_length": 1,
         }
     )
-    cabin: Optional[str] = field(
+    cabin: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -523,7 +523,7 @@ class CabinProductDetailsType229142C:
             "max_length": 1,
         }
     )
-    avl_status: Optional[str] = field(
+    avl_status: None | str = field(
         default=None,
         metadata={
             "name": "avlStatus",
@@ -543,7 +543,7 @@ class CategoryDescriptionType:
         purchase, STP for stopover restrictions, ELG for eligibility
         restrictions...)
     """
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -552,7 +552,7 @@ class CategoryDescriptionType:
             "pattern": r"-?[0-9]{1,3}",
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -569,7 +569,7 @@ class ClassInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar rbd: Class designator
     """
-    service: Optional[str] = field(
+    service: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -579,7 +579,7 @@ class ClassInformationType:
             "max_length": 5,
         }
     )
-    rbd: List[str] = field(
+    rbd: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -599,7 +599,7 @@ class CodedAttributeInformationType:
     :ivar attribute_type: Type of fee/reduction
     :ivar attribute_description: Fee Id Number
     """
-    attribute_type: Optional[str] = field(
+    attribute_type: None | str = field(
         default=None,
         metadata={
             "name": "attributeType",
@@ -610,7 +610,7 @@ class CodedAttributeInformationType:
             "max_length": 5,
         }
     )
-    attribute_description: Optional[str] = field(
+    attribute_description: None | str = field(
         default=None,
         metadata={
             "name": "attributeDescription",
@@ -633,7 +633,7 @@ class CodedAttributeInformationType270108C:
     class Meta:
         name = "CodedAttributeInformationType_270108C"
 
-    attribute_type: Optional[str] = field(
+    attribute_type: None | str = field(
         default=None,
         metadata={
             "name": "attributeType",
@@ -644,7 +644,7 @@ class CodedAttributeInformationType270108C:
             "max_length": 5,
         }
     )
-    attribute_description: Optional[str] = field(
+    attribute_description: None | str = field(
         default=None,
         metadata={
             "name": "attributeDescription",
@@ -664,7 +664,7 @@ class CompanyIdentificationTextType:
     :ivar text_ref_number: Company Id Text reference.
     :ivar company_text: Company id free text.
     """
-    text_ref_number: Optional[str] = field(
+    text_ref_number: None | str = field(
         default=None,
         metadata={
             "name": "textRefNumber",
@@ -673,7 +673,7 @@ class CompanyIdentificationTextType:
             "pattern": r"-?[0-9]{0,4}",
         }
     )
-    company_text: Optional[str] = field(
+    company_text: None | str = field(
         default=None,
         metadata={
             "name": "companyText",
@@ -692,7 +692,7 @@ class CompanyIdentificationType:
     :ivar operating_carrier: Operating carrier
     :ivar alliance: airline alliance code
     """
-    marketing_carrier: Optional[str] = field(
+    marketing_carrier: None | str = field(
         default=None,
         metadata={
             "name": "marketingCarrier",
@@ -703,7 +703,7 @@ class CompanyIdentificationType:
             "max_length": 3,
         }
     )
-    operating_carrier: Optional[str] = field(
+    operating_carrier: None | str = field(
         default=None,
         metadata={
             "name": "operatingCarrier",
@@ -713,7 +713,7 @@ class CompanyIdentificationType:
             "max_length": 3,
         }
     )
-    alliance: Optional[str] = field(
+    alliance: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -733,7 +733,7 @@ class CompanyIdentificationTypeI:
     :ivar operating_company: Company
     :ivar other_company: Company
     """
-    marketing_company: Optional[str] = field(
+    marketing_company: None | str = field(
         default=None,
         metadata={
             "name": "marketingCompany",
@@ -743,7 +743,7 @@ class CompanyIdentificationTypeI:
             "max_length": 3,
         }
     )
-    operating_company: Optional[str] = field(
+    operating_company: None | str = field(
         default=None,
         metadata={
             "name": "operatingCompany",
@@ -753,7 +753,7 @@ class CompanyIdentificationTypeI:
             "max_length": 3,
         }
     )
-    other_company: Optional[str] = field(
+    other_company: None | str = field(
         default=None,
         metadata={
             "name": "otherCompany",
@@ -774,7 +774,7 @@ class CompanyRoleIdentificationType:
     :ivar airline_designator: company identification
     :ivar flight_number: flight number
     """
-    code_share_type: Optional[str] = field(
+    code_share_type: None | str = field(
         default=None,
         metadata={
             "name": "codeShareType",
@@ -784,7 +784,7 @@ class CompanyRoleIdentificationType:
             "max_length": 1,
         }
     )
-    airline_designator: Optional[str] = field(
+    airline_designator: None | str = field(
         default=None,
         metadata={
             "name": "airlineDesignator",
@@ -794,7 +794,7 @@ class CompanyRoleIdentificationType:
             "max_length": 3,
         }
     )
-    flight_number: Optional[str] = field(
+    flight_number: None | str = field(
         default=None,
         metadata={
             "name": "flightNumber",
@@ -816,7 +816,7 @@ class CompanyRoleIdentificationType120771C:
     class Meta:
         name = "CompanyRoleIdentificationType_120771C"
 
-    transport_stage_qualifier: Optional[str] = field(
+    transport_stage_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "transportStageQualifier",
@@ -826,7 +826,7 @@ class CompanyRoleIdentificationType120771C:
             "max_length": 3,
         }
     )
-    company: Optional[str] = field(
+    company: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -844,7 +844,7 @@ class ConversionRateDetailsTypeI:
     :ivar currency: Currency
     :ivar amount: amount
     """
-    conversion_type: Optional[str] = field(
+    conversion_type: None | str = field(
         default=None,
         metadata={
             "name": "conversionType",
@@ -854,7 +854,7 @@ class ConversionRateDetailsTypeI:
             "max_length": 3,
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -863,7 +863,7 @@ class ConversionRateDetailsTypeI:
             "max_length": 3,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -887,7 +887,7 @@ class ConversionRateDetailsTypeI179848C:
     class Meta:
         name = "ConversionRateDetailsTypeI_179848C"
 
-    conversion_type: Optional[str] = field(
+    conversion_type: None | str = field(
         default=None,
         metadata={
             "name": "conversionType",
@@ -897,7 +897,7 @@ class ConversionRateDetailsTypeI179848C:
             "max_length": 3,
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -907,7 +907,7 @@ class ConversionRateDetailsTypeI179848C:
             "max_length": 3,
         }
     )
-    rate: Optional[str] = field(
+    rate: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -916,7 +916,7 @@ class ConversionRateDetailsTypeI179848C:
             "max_length": 18,
         }
     )
-    converted_amount_link: Optional[str] = field(
+    converted_amount_link: None | str = field(
         default=None,
         metadata={
             "name": "convertedAmountLink",
@@ -926,7 +926,7 @@ class ConversionRateDetailsTypeI179848C:
             "max_length": 18,
         }
     )
-    tax_qualifier: Optional[str] = field(
+    tax_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "taxQualifier",
@@ -944,16 +944,17 @@ class CriteriaDetailsType:
     class Meta:
         name = "CriteriaiDetaislType"
 
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -971,7 +972,7 @@ class DataInformationType:
 
     :ivar indicator: Ancillary services options
     """
-    indicator: Optional[str] = field(
+    indicator: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -991,7 +992,7 @@ class DataTypeInformationType:
     :ivar option: Status (automated, manually added, exempted). Default
         is automated
     """
-    sub_type: Optional[str] = field(
+    sub_type: None | str = field(
         default=None,
         metadata={
             "name": "subType",
@@ -1002,7 +1003,7 @@ class DataTypeInformationType:
             "max_length": 3,
         }
     )
-    option: Optional[str] = field(
+    option: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1022,7 +1023,7 @@ class DateAndTimeDetailsType:
     :ivar equipement_type: Movement type.
     :ivar location_id: Place/location identification.
     """
-    date_qualifier: Optional[str] = field(
+    date_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "dateQualifier",
@@ -1032,7 +1033,7 @@ class DateAndTimeDetailsType:
             "max_length": 3,
         }
     )
-    date: Optional[str] = field(
+    date: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1040,7 +1041,7 @@ class DateAndTimeDetailsType:
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
         }
     )
-    first_time: Optional[str] = field(
+    first_time: None | str = field(
         default=None,
         metadata={
             "name": "firstTime",
@@ -1049,7 +1050,7 @@ class DateAndTimeDetailsType:
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
         }
     )
-    equipement_type: Optional[str] = field(
+    equipement_type: None | str = field(
         default=None,
         metadata={
             "name": "equipementType",
@@ -1059,7 +1060,7 @@ class DateAndTimeDetailsType:
             "max_length": 3,
         }
     )
-    location_id: Optional[str] = field(
+    location_id: None | str = field(
         default=None,
         metadata={
             "name": "locationId",
@@ -1084,7 +1085,7 @@ class DateAndTimeDetailsType256192C:
     class Meta:
         name = "DateAndTimeDetailsType_256192C"
 
-    qualifier: Optional[str] = field(
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1093,7 +1094,7 @@ class DateAndTimeDetailsType256192C:
             "max_length": 3,
         }
     )
-    date: Optional[str] = field(
+    date: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1102,7 +1103,7 @@ class DateAndTimeDetailsType256192C:
             "max_length": 35,
         }
     )
-    time: Optional[str] = field(
+    time: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1110,7 +1111,7 @@ class DateAndTimeDetailsType256192C:
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
         }
     )
-    location: Optional[str] = field(
+    location: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1129,7 +1130,7 @@ class DateTimePeriodDetailsTypeI:
     :ivar qualifier: Qualifier
     :ivar value: Value
     """
-    qualifier: Optional[str] = field(
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1139,7 +1140,7 @@ class DateTimePeriodDetailsTypeI:
             "max_length": 3,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1160,7 +1161,7 @@ class DiscountPenaltyInformationType:
     :ivar amount: Amount
     :ivar percentage: Percentage
     """
-    fare_qualifier: Optional[str] = field(
+    fare_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "fareQualifier",
@@ -1171,7 +1172,7 @@ class DiscountPenaltyInformationType:
             "max_length": 3,
         }
     )
-    rate_category: Optional[str] = field(
+    rate_category: None | str = field(
         default=None,
         metadata={
             "name": "rateCategory",
@@ -1181,14 +1182,14 @@ class DiscountPenaltyInformationType:
             "max_length": 35,
         }
     )
-    amount: Optional[Decimal] = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    percentage: Optional[Decimal] = field(
+    percentage: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1209,7 +1210,7 @@ class DiscountPenaltyMonetaryInformationType:
     :ivar fee_amount: specify the value
     :ivar fee_currency: Fee currency code.
     """
-    fee_type: Optional[str] = field(
+    fee_type: None | str = field(
         default=None,
         metadata={
             "name": "feeType",
@@ -1219,7 +1220,7 @@ class DiscountPenaltyMonetaryInformationType:
             "max_length": 3,
         }
     )
-    fee_amount_type: Optional[str] = field(
+    fee_amount_type: None | str = field(
         default=None,
         metadata={
             "name": "feeAmountType",
@@ -1229,7 +1230,7 @@ class DiscountPenaltyMonetaryInformationType:
             "max_length": 3,
         }
     )
-    fee_amount: Optional[Decimal] = field(
+    fee_amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "feeAmount",
@@ -1237,7 +1238,7 @@ class DiscountPenaltyMonetaryInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    fee_currency: Optional[str] = field(
+    fee_currency: None | str = field(
         default=None,
         metadata={
             "name": "feeCurrency",
@@ -1268,7 +1269,7 @@ class FareCalculationCodeDetailsType:
     :ivar other_location_code: Other location code
     :ivar rate: Rate
     """
-    qualifier: Optional[str] = field(
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1277,14 +1278,14 @@ class FareCalculationCodeDetailsType:
             "max_length": 3,
         }
     )
-    amount: Optional[Decimal] = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    location_code: Optional[str] = field(
+    location_code: None | str = field(
         default=None,
         metadata={
             "name": "locationCode",
@@ -1294,7 +1295,7 @@ class FareCalculationCodeDetailsType:
             "max_length": 3,
         }
     )
-    other_location_code: Optional[str] = field(
+    other_location_code: None | str = field(
         default=None,
         metadata={
             "name": "otherLocationCode",
@@ -1304,7 +1305,7 @@ class FareCalculationCodeDetailsType:
             "max_length": 3,
         }
     )
-    rate: Optional[Decimal] = field(
+    rate: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1321,7 +1322,7 @@ class FareCategoryCodesTypeI:
     :ivar fare_type: Fare type
     :ivar other_fare_type: Other fare type
     """
-    fare_type: Optional[str] = field(
+    fare_type: None | str = field(
         default=None,
         metadata={
             "name": "fareType",
@@ -1332,7 +1333,7 @@ class FareCategoryCodesTypeI:
             "max_length": 20,
         }
     )
-    other_fare_type: List[str] = field(
+    other_fare_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "otherFareType",
@@ -1352,7 +1353,7 @@ class FareDetailsType:
 
     :ivar passenger_type_qualifier: Passenger Type qualifier
     """
-    passenger_type_qualifier: Optional[str] = field(
+    passenger_type_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "passengerTypeQualifier",
@@ -1374,7 +1375,7 @@ class FareDetailsTypeI:
     :ivar country: Country
     :ivar fare_category: Fare category
     """
-    qualifier: Optional[str] = field(
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1383,14 +1384,14 @@ class FareDetailsTypeI:
             "max_length": 3,
         }
     )
-    rate: Optional[Decimal] = field(
+    rate: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    country: Optional[str] = field(
+    country: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1399,7 +1400,7 @@ class FareDetailsTypeI:
             "max_length": 3,
         }
     )
-    fare_category: Optional[str] = field(
+    fare_category: None | str = field(
         default=None,
         metadata={
             "name": "fareCategory",
@@ -1422,7 +1423,7 @@ class FareDetailsType193037C:
     class Meta:
         name = "FareDetailsType_193037C"
 
-    qualifier: Optional[str] = field(
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1430,7 +1431,7 @@ class FareDetailsType193037C:
             "pattern": r"[0-9A-Z]{1,3}",
         }
     )
-    rate: Optional[str] = field(
+    rate: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1438,7 +1439,7 @@ class FareDetailsType193037C:
             "pattern": r"-?[0-9]{1,8}",
         }
     )
-    country: Optional[str] = field(
+    country: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1447,7 +1448,7 @@ class FareDetailsType193037C:
             "max_length": 3,
         }
     )
-    fare_category: Optional[str] = field(
+    fare_category: None | str = field(
         default=None,
         metadata={
             "name": "fareCategory",
@@ -1465,7 +1466,7 @@ class FareFamilyDetailsType:
 
     :ivar commercial_family: Commercial fare Family Short name
     """
-    commercial_family: Optional[str] = field(
+    commercial_family: None | str = field(
         default=None,
         metadata={
             "name": "commercialFamily",
@@ -1486,7 +1487,7 @@ class FareInformationTypeI:
     :ivar value_qualifier: Value qualifier
     :ivar value: Value
     """
-    value_qualifier: Optional[str] = field(
+    value_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "valueQualifier",
@@ -1496,7 +1497,7 @@ class FareInformationTypeI:
             "max_length": 3,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1511,7 +1512,7 @@ class FareProductDetailsType:
     """
     :ivar fare_basis: Fare basis code
     """
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "fareBasis",
@@ -1533,7 +1534,7 @@ class FareProductDetailsType248552C:
     class Meta:
         name = "FareProductDetailsType_248552C"
 
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "fareBasis",
@@ -1543,7 +1544,7 @@ class FareProductDetailsType248552C:
             "max_length": 18,
         }
     )
-    passenger_type: Optional[str] = field(
+    passenger_type: None | str = field(
         default=None,
         metadata={
             "name": "passengerType",
@@ -1553,7 +1554,7 @@ class FareProductDetailsType248552C:
             "max_length": 6,
         }
     )
-    fare_type: List[str] = field(
+    fare_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "fareType",
@@ -1571,7 +1572,7 @@ class FareTypeGroupingInformationType:
     """
     :ivar pricing_group: Pricing Group
     """
-    pricing_group: Optional[str] = field(
+    pricing_group: None | str = field(
         default=None,
         metadata={
             "name": "pricingGroup",
@@ -1590,7 +1591,7 @@ class FreeTextQualificationType:
     :ivar information_type: Coded Text or type of information in 4440
         (e.g. type of OSI or free text, canned message value)
     """
-    text_subject_qualifier: Optional[str] = field(
+    text_subject_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "textSubjectQualifier",
@@ -1601,7 +1602,7 @@ class FreeTextQualificationType:
             "max_length": 3,
         }
     )
-    information_type: Optional[str] = field(
+    information_type: None | str = field(
         default=None,
         metadata={
             "name": "informationType",
@@ -1621,7 +1622,7 @@ class FreeTextQualificationTypeI:
 
     :ivar text_subject_qualifier: Text subject qualifier
     """
-    text_subject_qualifier: Optional[str] = field(
+    text_subject_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "textSubjectQualifier",
@@ -1646,7 +1647,7 @@ class FreeTextQualificationType120769C:
     class Meta:
         name = "FreeTextQualificationType_120769C"
 
-    text_subject_qualifier: Optional[str] = field(
+    text_subject_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "textSubjectQualifier",
@@ -1657,7 +1658,7 @@ class FreeTextQualificationType120769C:
             "max_length": 3,
         }
     )
-    information_type: Optional[str] = field(
+    information_type: None | str = field(
         default=None,
         metadata={
             "name": "informationType",
@@ -1667,7 +1668,7 @@ class FreeTextQualificationType120769C:
             "max_length": 4,
         }
     )
-    language: Optional[str] = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1686,7 +1687,7 @@ class FrequentTravellerIdentificationType:
     :ivar tier_level: To specify a Tier linked to the FQTV
     :ivar priority_code: For example : priority code
     """
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1695,7 +1696,7 @@ class FrequentTravellerIdentificationType:
             "max_length": 35,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1704,7 +1705,7 @@ class FrequentTravellerIdentificationType:
             "max_length": 28,
         }
     )
-    tier_level: Optional[str] = field(
+    tier_level: None | str = field(
         default=None,
         metadata={
             "name": "tierLevel",
@@ -1714,7 +1715,7 @@ class FrequentTravellerIdentificationType:
             "max_length": 35,
         }
     )
-    priority_code: Optional[str] = field(
+    priority_code: None | str = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -1732,11 +1733,11 @@ class ItemNumberIdentificationType:
     Goods identification for a specified source.
 
     :ivar number: Ancillary Service number
-    :ivar type: Type
+    :ivar type_value: Type
     :ivar qualifier: Qualifier
     :ivar responsible_agency: Responsible agency
     """
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1745,7 +1746,17 @@ class ItemNumberIdentificationType:
             "max_length": 4,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+            "min_length": 1,
+            "max_length": 3,
+        }
+    )
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1754,16 +1765,7 @@ class ItemNumberIdentificationType:
             "max_length": 3,
         }
     )
-    qualifier: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_length": 1,
-            "max_length": 3,
-        }
-    )
-    responsible_agency: Optional[str] = field(
+    responsible_agency: None | str = field(
         default=None,
         metadata={
             "name": "responsibleAgency",
@@ -1784,7 +1786,7 @@ class ItemNumberIdentificationType191597C:
     class Meta:
         name = "ItemNumberIdentificationType_191597C"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1793,7 +1795,7 @@ class ItemNumberIdentificationType191597C:
             "max_length": 6,
         }
     )
-    number_type: Optional[str] = field(
+    number_type: None | str = field(
         default=None,
         metadata={
             "name": "numberType",
@@ -1811,14 +1813,14 @@ class ItemNumberIdentificationType192331C:
     Goods identification for a specified source.
 
     :ivar number: Service coverage number
-    :ivar type: Type
+    :ivar type_value: Type
     :ivar qualifier: Qualifier
     :ivar responsible_agency: Responsible agency
     """
     class Meta:
         name = "ItemNumberIdentificationType_192331C"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1827,7 +1829,17 @@ class ItemNumberIdentificationType192331C:
             "max_length": 6,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Element",
+            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+            "min_length": 1,
+            "max_length": 3,
+        }
+    )
+    qualifier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1836,16 +1848,7 @@ class ItemNumberIdentificationType192331C:
             "max_length": 3,
         }
     )
-    qualifier: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_length": 1,
-            "max_length": 3,
-        }
-    )
-    responsible_agency: Optional[str] = field(
+    responsible_agency: None | str = field(
         default=None,
         metadata={
             "name": "responsibleAgency",
@@ -1863,12 +1866,12 @@ class ItemNumberIdentificationType234878C:
     Goods identification for a specified source.
 
     :ivar number: Number
-    :ivar type: Type
+    :ivar type_value: Type
     """
     class Meta:
         name = "ItemNumberIdentificationType_234878C"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1876,9 +1879,10 @@ class ItemNumberIdentificationType234878C:
             "pattern": r"-?[0-9]{1,6}",
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
@@ -1895,7 +1899,7 @@ class ItemNumberIdentificationType248537C:
     class Meta:
         name = "ItemNumberIdentificationType_248537C"
 
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1914,7 +1918,7 @@ class ItemReferencesAndVersionsType:
     :ivar reference_type: Qualifies the type of the reference used.
     :ivar ref_number: Unique fee reference.
     """
-    reference_type: Optional[str] = field(
+    reference_type: None | str = field(
         default=None,
         metadata={
             "name": "referenceType",
@@ -1924,7 +1928,7 @@ class ItemReferencesAndVersionsType:
             "max_length": 6,
         }
     )
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -1946,7 +1950,7 @@ class ItemReferencesAndVersionsType78536S:
     class Meta:
         name = "ItemReferencesAndVersionsType_78536S"
 
-    reference_type: Optional[str] = field(
+    reference_type: None | str = field(
         default=None,
         metadata={
             "name": "referenceType",
@@ -1956,7 +1960,7 @@ class ItemReferencesAndVersionsType78536S:
             "max_length": 3,
         }
     )
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -1978,7 +1982,7 @@ class ItemReferencesAndVersionsType78564S:
     class Meta:
         name = "ItemReferencesAndVersionsType_78564S"
 
-    reference_type: Optional[str] = field(
+    reference_type: None | str = field(
         default=None,
         metadata={
             "name": "referenceType",
@@ -1988,7 +1992,7 @@ class ItemReferencesAndVersionsType78564S:
             "max_length": 3,
         }
     )
-    fee_ref_number: Optional[str] = field(
+    fee_ref_number: None | str = field(
         default=None,
         metadata={
             "name": "feeRefNumber",
@@ -2009,7 +2013,7 @@ class ItineraryDetailsType:
         specified requested segment
     :ivar segment_number: Requested segment number
     """
-    airport_city_qualifier: Optional[str] = field(
+    airport_city_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "airportCityQualifier",
@@ -2020,7 +2024,7 @@ class ItineraryDetailsType:
             "max_length": 1,
         }
     )
-    segment_number: Optional[str] = field(
+    segment_number: None | str = field(
         default=None,
         metadata={
             "name": "segmentNumber",
@@ -2040,7 +2044,7 @@ class LocationIdentificationDetailsType:
         point is an airport when ambiguity exists (e.g. HOU)
     :ivar terminal: Terminal information
     """
-    location_id: Optional[str] = field(
+    location_id: None | str = field(
         default=None,
         metadata={
             "name": "locationId",
@@ -2051,7 +2055,7 @@ class LocationIdentificationDetailsType:
             "max_length": 5,
         }
     )
-    airport_city_qualifier: Optional[str] = field(
+    airport_city_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "airportCityQualifier",
@@ -2061,7 +2065,7 @@ class LocationIdentificationDetailsType:
             "max_length": 1,
         }
     )
-    terminal: Optional[str] = field(
+    terminal: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2078,7 +2082,7 @@ class MiniRulesDetailsType:
     :ivar interpretation: Coded text (period or day)
     :ivar value: Data type coded or value of interpretation
     """
-    interpretation: Optional[str] = field(
+    interpretation: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2087,7 +2091,7 @@ class MiniRulesDetailsType:
             "max_length": 9,
         }
     )
-    value: List[str] = field(
+    value: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2105,7 +2109,7 @@ class MiniRulesIndicatorType:
     :ivar rule_indicator: See rule indicator and free form text
         indicator
     """
-    rule_indicator: List[str] = field(
+    rule_indicator: list[str] = field(
         default_factory=list,
         metadata={
             "name": "ruleIndicator",
@@ -2125,7 +2129,7 @@ class MiniRulesType:
 
     :ivar category: Categoty of restriction: PTC, Max Adv Pur, Days, ...
     """
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2144,7 +2148,7 @@ class MonetaryInformationDetailsType:
     :ivar amount: Amount
     :ivar currency: ISO currency code
     """
-    amount_type: Optional[str] = field(
+    amount_type: None | str = field(
         default=None,
         metadata={
             "name": "amountType",
@@ -2154,7 +2158,7 @@ class MonetaryInformationDetailsType:
             "max_length": 3,
         }
     )
-    amount: Optional[Decimal] = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2162,7 +2166,7 @@ class MonetaryInformationDetailsType:
             "required": True,
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2182,7 +2186,7 @@ class MonetaryInformationDetailsTypeI:
     :ivar amount: Amount
     :ivar currency: Currency
     """
-    type_qualifier: Optional[str] = field(
+    type_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "typeQualifier",
@@ -2193,7 +2197,7 @@ class MonetaryInformationDetailsTypeI:
             "max_length": 6,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2202,7 +2206,7 @@ class MonetaryInformationDetailsTypeI:
             "max_length": 35,
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2226,7 +2230,7 @@ class MonetaryInformationDetailsType245528C:
     class Meta:
         name = "MonetaryInformationDetailsType_245528C"
 
-    type_qualifier: Optional[str] = field(
+    type_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "typeQualifier",
@@ -2237,14 +2241,14 @@ class MonetaryInformationDetailsType245528C:
             "max_length": 3,
         }
     )
-    amount: Optional[Decimal] = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    currency: Optional[str] = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2253,7 +2257,7 @@ class MonetaryInformationDetailsType245528C:
             "max_length": 3,
         }
     )
-    location: Optional[str] = field(
+    location: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2271,7 +2275,7 @@ class OnTimePerformanceType:
     :ivar percentage: Percentage
     :ivar accuracy: Accuracy
     """
-    date_time_period: Optional[str] = field(
+    date_time_period: None | str = field(
         default=None,
         metadata={
             "name": "dateTimePeriod",
@@ -2281,14 +2285,14 @@ class OnTimePerformanceType:
             "max_length": 35,
         }
     )
-    percentage: Optional[Decimal] = field(
+    percentage: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    accuracy: Optional[str] = field(
+    accuracy: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2309,7 +2313,7 @@ class OriginAndDestinationRequestType134833S:
     class Meta:
         name = "OriginAndDestinationRequestType_134833S"
 
-    seg_ref: Optional[str] = field(
+    seg_ref: None | str = field(
         default=None,
         metadata={
             "name": "segRef",
@@ -2331,7 +2335,7 @@ class OriginatorIdentificationDetailsTypeI:
     :ivar confidential_office: Confidential Office Name.
     :ivar other_office: Other Office Name
     """
-    office_name: Optional[str] = field(
+    office_name: None | str = field(
         default=None,
         metadata={
             "name": "officeName",
@@ -2340,7 +2344,7 @@ class OriginatorIdentificationDetailsTypeI:
             "pattern": r"-?[0-9]{1,9}",
         }
     )
-    agent_signin: Optional[str] = field(
+    agent_signin: None | str = field(
         default=None,
         metadata={
             "name": "agentSignin",
@@ -2350,7 +2354,7 @@ class OriginatorIdentificationDetailsTypeI:
             "max_length": 9,
         }
     )
-    confidential_office: Optional[str] = field(
+    confidential_office: None | str = field(
         default=None,
         metadata={
             "name": "confidentialOffice",
@@ -2360,7 +2364,7 @@ class OriginatorIdentificationDetailsTypeI:
             "max_length": 9,
         }
     )
-    other_office: Optional[str] = field(
+    other_office: None | str = field(
         default=None,
         metadata={
             "name": "otherOffice",
@@ -2379,7 +2383,7 @@ class PricingTicketingInformationType:
 
     :ivar price_type: Price type qualifier
     """
-    price_type: List[str] = field(
+    price_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "priceType",
@@ -2400,7 +2404,7 @@ class PricingTicketingSubsequentType:
 
     :ivar pax_fare_num: Passenger fare product number
     """
-    pax_fare_num: List[str] = field(
+    pax_fare_num: list[str] = field(
         default_factory=list,
         metadata={
             "name": "paxFareNum",
@@ -2423,7 +2427,7 @@ class ProcessingInformationType:
     :ivar reference_qualifier: Reference qualifier
     :ivar ref_num: Reference number
     """
-    action_qualifier: Optional[str] = field(
+    action_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "actionQualifier",
@@ -2433,7 +2437,7 @@ class ProcessingInformationType:
             "max_length": 3,
         }
     )
-    reference_qualifier: Optional[str] = field(
+    reference_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "referenceQualifier",
@@ -2443,7 +2447,7 @@ class ProcessingInformationType:
             "max_length": 3,
         }
     )
-    ref_num: Optional[str] = field(
+    ref_num: None | str = field(
         default=None,
         metadata={
             "name": "refNum",
@@ -2465,7 +2469,7 @@ class ProductDateTimeType:
     :ivar date_variation: Arrival date compared to departure date, only
         if different from 0
     """
-    date_of_departure: Optional[str] = field(
+    date_of_departure: None | str = field(
         default=None,
         metadata={
             "name": "dateOfDeparture",
@@ -2475,7 +2479,7 @@ class ProductDateTimeType:
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
         }
     )
-    time_of_departure: Optional[str] = field(
+    time_of_departure: None | str = field(
         default=None,
         metadata={
             "name": "timeOfDeparture",
@@ -2484,7 +2488,7 @@ class ProductDateTimeType:
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
         }
     )
-    date_of_arrival: Optional[str] = field(
+    date_of_arrival: None | str = field(
         default=None,
         metadata={
             "name": "dateOfArrival",
@@ -2493,7 +2497,7 @@ class ProductDateTimeType:
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
         }
     )
-    time_of_arrival: Optional[str] = field(
+    time_of_arrival: None | str = field(
         default=None,
         metadata={
             "name": "timeOfArrival",
@@ -2502,7 +2506,7 @@ class ProductDateTimeType:
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
         }
     )
-    date_variation: Optional[str] = field(
+    date_variation: None | str = field(
         default=None,
         metadata={
             "name": "dateVariation",
@@ -2518,7 +2522,7 @@ class ProductDetailsType:
     """
     To specify availability and additional services for a product class.
     """
-    designator: Optional[str] = field(
+    designator: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2528,7 +2532,7 @@ class ProductDetailsType:
             "max_length": 17,
         }
     )
-    availability_status: Optional[str] = field(
+    availability_status: None | str = field(
         default=None,
         metadata={
             "name": "availabilityStatus",
@@ -2538,7 +2542,7 @@ class ProductDetailsType:
             "max_length": 3,
         }
     )
-    special_service: Optional[str] = field(
+    special_service: None | str = field(
         default=None,
         metadata={
             "name": "specialService",
@@ -2548,7 +2552,7 @@ class ProductDetailsType:
             "max_length": 3,
         }
     )
-    option: List[str] = field(
+    option: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2576,7 +2580,7 @@ class ProductFacilitiesType:
     :ivar flight_characteristic: Add some flight restrictions (See code
         set list)
     """
-    last_seat_available: Optional[str] = field(
+    last_seat_available: None | str = field(
         default=None,
         metadata={
             "name": "lastSeatAvailable",
@@ -2586,7 +2590,7 @@ class ProductFacilitiesType:
             "max_length": 1,
         }
     )
-    level_of_access: Optional[str] = field(
+    level_of_access: None | str = field(
         default=None,
         metadata={
             "name": "levelOfAccess",
@@ -2596,7 +2600,7 @@ class ProductFacilitiesType:
             "max_length": 3,
         }
     )
-    electronic_ticketing: Optional[str] = field(
+    electronic_ticketing: None | str = field(
         default=None,
         metadata={
             "name": "electronicTicketing",
@@ -2606,7 +2610,7 @@ class ProductFacilitiesType:
             "max_length": 1,
         }
     )
-    operational_suffix: Optional[str] = field(
+    operational_suffix: None | str = field(
         default=None,
         metadata={
             "name": "operationalSuffix",
@@ -2616,7 +2620,7 @@ class ProductFacilitiesType:
             "max_length": 1,
         }
     )
-    product_detail_qualifier: Optional[str] = field(
+    product_detail_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "productDetailQualifier",
@@ -2626,7 +2630,7 @@ class ProductFacilitiesType:
             "max_length": 3,
         }
     )
-    flight_characteristic: List[str] = field(
+    flight_characteristic: list[str] = field(
         default_factory=list,
         metadata={
             "name": "flightCharacteristic",
@@ -2646,7 +2650,7 @@ class ProductTypeDetailsType:
 
     :ivar availability_cnx_type: Availability connection type.
     """
-    availability_cnx_type: List[str] = field(
+    availability_cnx_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "availabilityCnxType",
@@ -2670,7 +2674,7 @@ class ProductTypeDetailsType205137C:
     class Meta:
         name = "ProductTypeDetailsType_205137C"
 
-    avl: List[str] = field(
+    avl: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2689,7 +2693,7 @@ class ProposedSegmentDetailsType:
     :ivar ref: Flight proposal reference
     :ivar unit_qualifier: Elapse Flying Time
     """
-    ref: Optional[str] = field(
+    ref: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2698,7 +2702,7 @@ class ProposedSegmentDetailsType:
             "max_length": 6,
         }
     )
-    unit_qualifier: Optional[str] = field(
+    unit_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "unitQualifier",
@@ -2720,7 +2724,7 @@ class ReferenceType:
     :ivar first_item_identifier: Reference of segment starting range
     :ivar last_item_identifier: Reference of segment ending range
     """
-    ref_of_leg: Optional[str] = field(
+    ref_of_leg: None | str = field(
         default=None,
         metadata={
             "name": "refOfLeg",
@@ -2730,7 +2734,7 @@ class ReferenceType:
             "max_length": 6,
         }
     )
-    first_item_identifier: Optional[str] = field(
+    first_item_identifier: None | str = field(
         default=None,
         metadata={
             "name": "firstItemIdentifier",
@@ -2739,7 +2743,7 @@ class ReferenceType:
             "pattern": r"-?[0-9]{1,3}",
         }
     )
-    last_item_identifier: Optional[str] = field(
+    last_item_identifier: None | str = field(
         default=None,
         metadata={
             "name": "lastItemIdentifier",
@@ -2756,7 +2760,7 @@ class ReferencingDetailsType:
     :ivar ref_qualifier: Reference qualifier
     :ivar ref_number: Requested segment reference
     """
-    ref_qualifier: Optional[str] = field(
+    ref_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "refQualifier",
@@ -2766,7 +2770,7 @@ class ReferencingDetailsType:
             "max_length": 3,
         }
     )
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -2789,7 +2793,7 @@ class ReferencingDetailsType191583C:
     class Meta:
         name = "ReferencingDetailsType_191583C"
 
-    ref_qualifier: Optional[str] = field(
+    ref_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "refQualifier",
@@ -2799,7 +2803,7 @@ class ReferencingDetailsType191583C:
             "max_length": 3,
         }
     )
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -2822,7 +2826,7 @@ class ReferencingDetailsType195561C:
     class Meta:
         name = "ReferencingDetailsType_195561C"
 
-    ref_qualifier: Optional[str] = field(
+    ref_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "refQualifier",
@@ -2832,7 +2836,7 @@ class ReferencingDetailsType195561C:
             "max_length": 3,
         }
     )
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -2849,22 +2853,23 @@ class ReferencingDetailsType234704C:
     """
     To provide reference identification.
 
-    :ivar type: Type
+    :ivar type_value: Type
     :ivar value: Value
     """
     class Meta:
         name = "ReferencingDetailsType_234704C"
 
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 10,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2883,7 +2888,7 @@ class SegmentRepetitionControlDetailsTypeI:
     :ivar quantity: traveller number
     :ivar number_of_units: range of traveller
     """
-    quantity: Optional[str] = field(
+    quantity: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2891,7 +2896,7 @@ class SegmentRepetitionControlDetailsTypeI:
             "pattern": r"-?[0-9]{1,15}",
         }
     )
-    number_of_units: Optional[str] = field(
+    number_of_units: None | str = field(
         default=None,
         metadata={
             "name": "numberOfUnits",
@@ -2907,12 +2912,13 @@ class SelectionDetailsInformationType:
     """
     To specify a selected option and associated information.
 
-    :ivar type: Carrier fee type
+    :ivar type_value: Carrier fee type
     :ivar option_information: Carrier fee status
     """
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
@@ -2920,7 +2926,7 @@ class SelectionDetailsInformationType:
             "max_length": 3,
         }
     )
-    option_information: Optional[str] = field(
+    option_information: None | str = field(
         default=None,
         metadata={
             "name": "optionInformation",
@@ -2940,7 +2946,7 @@ class SequenceInformationTypeU:
     :ivar number: Number
     :ivar identification_code: Identification code
     """
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2950,7 +2956,7 @@ class SequenceInformationTypeU:
             "max_length": 10,
         }
     )
-    identification_code: Optional[str] = field(
+    identification_code: None | str = field(
         default=None,
         metadata={
             "name": "identificationCode",
@@ -2969,7 +2975,7 @@ class ServicesReferences:
     :ivar status: Status of the service
     :ivar from_price: Service lowest price
     """
-    reference: Optional[str] = field(
+    reference: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2978,7 +2984,7 @@ class ServicesReferences:
             "max_length": 4,
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2987,7 +2993,7 @@ class ServicesReferences:
             "max_length": 3,
         }
     )
-    from_price: Optional[str] = field(
+    from_price: None | str = field(
         default=None,
         metadata={
             "name": "fromPrice",
@@ -3006,7 +3012,7 @@ class SpecialRequirementsDataDetailsType:
 
     :ivar seat_characteristics: SSR seat characteristic
     """
-    seat_characteristics: List[str] = field(
+    seat_characteristics: list[str] = field(
         default_factory=list,
         metadata={
             "name": "seatCharacteristics",
@@ -3033,7 +3039,7 @@ class SpecialRequirementsTypeDetailsType:
     :ivar service_sub_group: Specify the Service Sub-Group
     :ivar service_free_text: Free Text attached to the Service.
     """
-    service_classification: Optional[str] = field(
+    service_classification: None | str = field(
         default=None,
         metadata={
             "name": "serviceClassification",
@@ -3044,7 +3050,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_length": 4,
         }
     )
-    service_status: Optional[str] = field(
+    service_status: None | str = field(
         default=None,
         metadata={
             "name": "serviceStatus",
@@ -3054,7 +3060,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_length": 3,
         }
     )
-    service_number_of_instances: Optional[str] = field(
+    service_number_of_instances: None | str = field(
         default=None,
         metadata={
             "name": "serviceNumberOfInstances",
@@ -3063,7 +3069,7 @@ class SpecialRequirementsTypeDetailsType:
             "pattern": r"-?[0-9]{1,15}",
         }
     )
-    service_marketing_carrier: Optional[str] = field(
+    service_marketing_carrier: None | str = field(
         default=None,
         metadata={
             "name": "serviceMarketingCarrier",
@@ -3073,7 +3079,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_length": 3,
         }
     )
-    service_group: Optional[str] = field(
+    service_group: None | str = field(
         default=None,
         metadata={
             "name": "serviceGroup",
@@ -3083,7 +3089,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_length": 3,
         }
     )
-    service_sub_group: Optional[str] = field(
+    service_sub_group: None | str = field(
         default=None,
         metadata={
             "name": "serviceSubGroup",
@@ -3093,7 +3099,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_length": 3,
         }
     )
-    service_free_text: List[str] = field(
+    service_free_text: list[str] = field(
         default_factory=list,
         metadata={
             "name": "serviceFreeText",
@@ -3113,7 +3119,7 @@ class SpecificTravellerDetailsType:
 
     :ivar reference_number: Reference number
     """
-    reference_number: Optional[str] = field(
+    reference_number: None | str = field(
         default=None,
         metadata={
             "name": "referenceNumber",
@@ -3133,7 +3139,7 @@ class StatusDetailsType:
     :ivar notification2: CPU time,user type
     :ivar description: Capture and trace information
     """
-    advisory_type_info: Optional[str] = field(
+    advisory_type_info: None | str = field(
         default=None,
         metadata={
             "name": "advisoryTypeInfo",
@@ -3143,7 +3149,7 @@ class StatusDetailsType:
             "max_length": 3,
         }
     )
-    notification: Optional[str] = field(
+    notification: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3152,7 +3158,7 @@ class StatusDetailsType:
             "max_length": 3,
         }
     )
-    notification2: Optional[str] = field(
+    notification2: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3161,7 +3167,7 @@ class StatusDetailsType:
             "max_length": 3,
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3185,7 +3191,7 @@ class StatusDetailsType256255C:
     class Meta:
         name = "StatusDetailsType_256255C"
 
-    indicator: Optional[str] = field(
+    indicator: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3194,7 +3200,7 @@ class StatusDetailsType256255C:
             "max_length": 3,
         }
     )
-    action: Optional[str] = field(
+    action: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3213,10 +3219,10 @@ class TaxDetailsType:
     :ivar rate: Amount
     :ivar country_code: Country code
     :ivar currency_code: Currency code
-    :ivar type: Type
+    :ivar type_value: Type
     :ivar indicator: Indicator
     """
-    rate: Optional[str] = field(
+    rate: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3225,7 +3231,7 @@ class TaxDetailsType:
             "max_length": 12,
         }
     )
-    country_code: Optional[str] = field(
+    country_code: None | str = field(
         default=None,
         metadata={
             "name": "countryCode",
@@ -3235,7 +3241,7 @@ class TaxDetailsType:
             "max_length": 3,
         }
     )
-    currency_code: Optional[str] = field(
+    currency_code: None | str = field(
         default=None,
         metadata={
             "name": "currencyCode",
@@ -3245,16 +3251,17 @@ class TaxDetailsType:
             "max_length": 3,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
         }
     )
-    indicator: List[str] = field(
+    indicator: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3273,7 +3280,7 @@ class TravellerDetailsType:
         system.
     :ivar infant_indicator: Traveller is an infant
     """
-    ref: Optional[str] = field(
+    ref: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3281,7 +3288,7 @@ class TravellerDetailsType:
             "pattern": r"-?[0-9]{1,3}",
         }
     )
-    infant_indicator: Optional[str] = field(
+    infant_indicator: None | str = field(
         default=None,
         metadata={
             "name": "infantIndicator",
@@ -3300,7 +3307,7 @@ class ActionDetailsType:
     :ivar number_of_items_details: Number of items details
     :ivar last_items_details: Range of segments
     """
-    number_of_items_details: Optional[ProcessingInformationType] = field(
+    number_of_items_details: None | ProcessingInformationType = field(
         default=None,
         metadata={
             "name": "numberOfItemsDetails",
@@ -3308,7 +3315,7 @@ class ActionDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    last_items_details: List[ReferenceType] = field(
+    last_items_details: list[ReferenceType] = field(
         default_factory=list,
         metadata={
             "name": "lastItemsDetails",
@@ -3329,7 +3336,7 @@ class ApplicationErrorInformationType78543S:
     class Meta:
         name = "ApplicationErrorInformationType_78543S"
 
-    application_error_detail: Optional[ApplicationErrorInformationType] = field(
+    application_error_detail: None | ApplicationErrorInformationType = field(
         default=None,
         metadata={
             "name": "applicationErrorDetail",
@@ -3348,7 +3355,7 @@ class AttributeType:
     :ivar attribute_qualifier: Criteria Set Type
     :ivar attribute_details: Criteria details
     """
-    attribute_qualifier: Optional[str] = field(
+    attribute_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "attributeQualifier",
@@ -3358,7 +3365,7 @@ class AttributeType:
             "max_length": 3,
         }
     )
-    attribute_details: List[AttributeInformationType97181C] = field(
+    attribute_details: list[AttributeInformationType97181C] = field(
         default_factory=list,
         metadata={
             "name": "attributeDetails",
@@ -3376,7 +3383,7 @@ class AttributeTypeU:
     :ivar attribute_function: provides the function of the attribute
     :ivar attribute_details: provides details for the Attribute
     """
-    attribute_function: Optional[str] = field(
+    attribute_function: None | str = field(
         default=None,
         metadata={
             "name": "attributeFunction",
@@ -3386,7 +3393,7 @@ class AttributeTypeU:
             "max_length": 3,
         }
     )
-    attribute_details: Optional[AttributeInformationTypeU] = field(
+    attribute_details: None | AttributeInformationTypeU = field(
         default=None,
         metadata={
             "name": "attributeDetails",
@@ -3407,7 +3414,7 @@ class AttributeType78561S:
     class Meta:
         name = "AttributeType_78561S"
 
-    fee_parameter: List[AttributeInformationType] = field(
+    fee_parameter: list[AttributeInformationType] = field(
         default_factory=list,
         metadata={
             "name": "feeParameter",
@@ -3426,7 +3433,7 @@ class CategDescrType:
     :ivar description_info: Category description information
     :ivar process_indicator: Category processing indicator
     """
-    description_info: Optional[CategoryDescriptionType] = field(
+    description_info: None | CategoryDescriptionType = field(
         default=None,
         metadata={
             "name": "descriptionInfo",
@@ -3435,7 +3442,7 @@ class CategDescrType:
             "required": True,
         }
     )
-    process_indicator: Optional[str] = field(
+    process_indicator: None | str = field(
         default=None,
         metadata={
             "name": "processIndicator",
@@ -3454,7 +3461,7 @@ class CodedAttributeType:
 
     :ivar attribute_details: Fee/reduction Id
     """
-    attribute_details: List[CodedAttributeInformationType] = field(
+    attribute_details: list[CodedAttributeInformationType] = field(
         default_factory=list,
         metadata={
             "name": "attributeDetails",
@@ -3475,7 +3482,7 @@ class CommercialAgreementsType:
     :ivar codeshare_details: Codeshare Details
     :ivar other_codeshare_details: Other codeshare details
     """
-    codeshare_details: Optional[CompanyRoleIdentificationType] = field(
+    codeshare_details: None | CompanyRoleIdentificationType = field(
         default=None,
         metadata={
             "name": "codeshareDetails",
@@ -3483,7 +3490,7 @@ class CommercialAgreementsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    other_codeshare_details: List[CompanyRoleIdentificationType] = field(
+    other_codeshare_details: list[CompanyRoleIdentificationType] = field(
         default_factory=list,
         metadata={
             "name": "otherCodeshareDetails",
@@ -3502,7 +3509,7 @@ class ConversionRateTypeI:
     :ivar conversion_rate_detail: Detail of conversion rate of First
         Monetary Unit.
     """
-    conversion_rate_detail: List[ConversionRateDetailsTypeI179848C] = field(
+    conversion_rate_detail: list[ConversionRateDetailsTypeI179848C] = field(
         default_factory=list,
         metadata={
             "name": "conversionRateDetail",
@@ -3524,7 +3531,7 @@ class ConversionRateTypeI78562S:
     class Meta:
         name = "ConversionRateTypeI_78562S"
 
-    conversion_rate_detail: List[ConversionRateDetailsTypeI] = field(
+    conversion_rate_detail: list[ConversionRateDetailsTypeI] = field(
         default_factory=list,
         metadata={
             "name": "conversionRateDetail",
@@ -3543,7 +3550,7 @@ class DateAndTimeInformationType:
 
     :ivar stop_details: Details on date and time
     """
-    stop_details: List[DateAndTimeDetailsType] = field(
+    stop_details: list[DateAndTimeDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "stopDetails",
@@ -3566,7 +3573,7 @@ class DateAndTimeInformationType182345S:
     class Meta:
         name = "DateAndTimeInformationType_182345S"
 
-    date_and_time_details: List[DateAndTimeDetailsType256192C] = field(
+    date_and_time_details: list[DateAndTimeDetailsType256192C] = field(
         default_factory=list,
         metadata={
             "name": "dateAndTimeDetails",
@@ -3586,7 +3593,7 @@ class DiscountAndPenaltyInformationType:
         agent collected fee.
     :ivar fee_information: Used to specify penalty information
     """
-    fee_identification: Optional[str] = field(
+    fee_identification: None | str = field(
         default=None,
         metadata={
             "name": "feeIdentification",
@@ -3596,7 +3603,7 @@ class DiscountAndPenaltyInformationType:
             "max_length": 3,
         }
     )
-    fee_information: Optional[DiscountPenaltyMonetaryInformationType] = field(
+    fee_information: None | DiscountPenaltyMonetaryInformationType = field(
         default=None,
         metadata={
             "name": "feeInformation",
@@ -3612,7 +3619,7 @@ class ExcessBaggageType:
     :ivar baggage_details: Baggage details
     :ivar bag_tag_details: Free baggage allowance details
     """
-    baggage_details: Optional[BaggageDetailsType] = field(
+    baggage_details: None | BaggageDetailsType = field(
         default=None,
         metadata={
             "name": "baggageDetails",
@@ -3620,7 +3627,7 @@ class ExcessBaggageType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    bag_tag_details: List[BagtagDetailsType] = field(
+    bag_tag_details: list[BagtagDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "bagTagDetails",
@@ -3646,7 +3653,7 @@ class FareFamilyType:
     :ivar carrier: Carrier code
     :ivar services: Reference to the services details
     """
-    ref_number: Optional[str] = field(
+    ref_number: None | str = field(
         default=None,
         metadata={
             "name": "refNumber",
@@ -3656,7 +3663,7 @@ class FareFamilyType:
             "pattern": r"-?[0-9]{1,3}",
         }
     )
-    fare_familyname: Optional[str] = field(
+    fare_familyname: None | str = field(
         default=None,
         metadata={
             "name": "fareFamilyname",
@@ -3666,7 +3673,7 @@ class FareFamilyType:
             "max_length": 10,
         }
     )
-    hierarchy: Optional[str] = field(
+    hierarchy: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3674,7 +3681,7 @@ class FareFamilyType:
             "pattern": r"-?[0-9]{1,4}",
         }
     )
-    cabin: Optional[str] = field(
+    cabin: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3683,7 +3690,7 @@ class FareFamilyType:
             "max_length": 1,
         }
     )
-    commercial_family_details: List[FareFamilyDetailsType] = field(
+    commercial_family_details: list[FareFamilyDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "commercialFamilyDetails",
@@ -3692,7 +3699,7 @@ class FareFamilyType:
             "max_occurs": 20,
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3701,7 +3708,7 @@ class FareFamilyType:
             "max_length": 100,
         }
     )
-    carrier: Optional[str] = field(
+    carrier: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3710,7 +3717,7 @@ class FareFamilyType:
             "max_length": 3,
         }
     )
-    services: List[ServicesReferences] = field(
+    services: list[ServicesReferences] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3730,7 +3737,7 @@ class FareInformationType:
     :ivar fare_type_grouping: Fare Type Grouping
     :ivar rate_category: Rate Category
     """
-    value_qualifier: Optional[str] = field(
+    value_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "valueQualifier",
@@ -3739,7 +3746,7 @@ class FareInformationType:
             "pattern": r"[0-9A-Z]{1,3}",
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3747,7 +3754,7 @@ class FareInformationType:
             "pattern": r"-?[0-9]{1,15}",
         }
     )
-    fare_details: Optional[FareDetailsType193037C] = field(
+    fare_details: None | FareDetailsType193037C = field(
         default=None,
         metadata={
             "name": "fareDetails",
@@ -3755,7 +3762,7 @@ class FareInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    identity_number: Optional[str] = field(
+    identity_number: None | str = field(
         default=None,
         metadata={
             "name": "identityNumber",
@@ -3765,7 +3772,7 @@ class FareInformationType:
             "max_length": 35,
         }
     )
-    fare_type_grouping: Optional[FareTypeGroupingInformationType] = field(
+    fare_type_grouping: None | FareTypeGroupingInformationType = field(
         default=None,
         metadata={
             "name": "fareTypeGrouping",
@@ -3773,7 +3780,7 @@ class FareInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    rate_category: Optional[str] = field(
+    rate_category: None | str = field(
         default=None,
         metadata={
             "name": "rateCategory",
@@ -3795,7 +3802,7 @@ class FareInformationType80868S:
     class Meta:
         name = "FareInformationType_80868S"
 
-    fare_details: Optional[FareDetailsType] = field(
+    fare_details: None | FareDetailsType = field(
         default=None,
         metadata={
             "name": "fareDetails",
@@ -3816,7 +3823,7 @@ class FareQualifierDetailsType:
     :ivar additional_fare_details: Additional fare details
     :ivar discount_details: Discount details
     """
-    movement_type: Optional[str] = field(
+    movement_type: None | str = field(
         default=None,
         metadata={
             "name": "movementType",
@@ -3826,7 +3833,7 @@ class FareQualifierDetailsType:
             "max_length": 3,
         }
     )
-    fare_categories: Optional[FareCategoryCodesTypeI] = field(
+    fare_categories: None | FareCategoryCodesTypeI = field(
         default=None,
         metadata={
             "name": "fareCategories",
@@ -3834,7 +3841,7 @@ class FareQualifierDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    fare_details: Optional[FareDetailsTypeI] = field(
+    fare_details: None | FareDetailsTypeI = field(
         default=None,
         metadata={
             "name": "fareDetails",
@@ -3842,7 +3849,7 @@ class FareQualifierDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    additional_fare_details: Optional[AdditionalFareQualifierDetailsTypeI] = field(
+    additional_fare_details: None | AdditionalFareQualifierDetailsTypeI = field(
         default=None,
         metadata={
             "name": "additionalFareDetails",
@@ -3850,7 +3857,7 @@ class FareQualifierDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    discount_details: List[DiscountPenaltyInformationType] = field(
+    discount_details: list[DiscountPenaltyInformationType] = field(
         default_factory=list,
         metadata={
             "name": "discountDetails",
@@ -3869,7 +3876,7 @@ class FlightCharacteristicsType:
     :ivar on_time_performance: On-Time Performance
     :ivar in_flight_srv: In flight services
     """
-    on_time_performance: Optional[OnTimePerformanceType] = field(
+    on_time_performance: None | OnTimePerformanceType = field(
         default=None,
         metadata={
             "name": "onTimePerformance",
@@ -3877,7 +3884,7 @@ class FlightCharacteristicsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    in_flight_srv: List[str] = field(
+    in_flight_srv: list[str] = field(
         default_factory=list,
         metadata={
             "name": "inFlightSrv",
@@ -3898,7 +3905,7 @@ class FlightProductInformationType:
     :ivar cabin_product: Indicates flight cabin details
     :ivar context_details: To specify additional characteristics.
     """
-    cabin_product: List[CabinProductDetailsType195516C] = field(
+    cabin_product: list[CabinProductDetailsType195516C] = field(
         default_factory=list,
         metadata={
             "name": "cabinProduct",
@@ -3907,7 +3914,7 @@ class FlightProductInformationType:
             "max_occurs": 6,
         }
     )
-    context_details: Optional[ProductTypeDetailsType] = field(
+    context_details: None | ProductTypeDetailsType = field(
         default=None,
         metadata={
             "name": "contextDetails",
@@ -3928,7 +3935,7 @@ class FlightProductInformationType141442S:
     class Meta:
         name = "FlightProductInformationType_141442S"
 
-    cabin_product: List[CabinProductDetailsType205138C] = field(
+    cabin_product: list[CabinProductDetailsType205138C] = field(
         default_factory=list,
         metadata={
             "name": "cabinProduct",
@@ -3937,7 +3944,7 @@ class FlightProductInformationType141442S:
             "max_occurs": 26,
         }
     )
-    context_details: Optional[ProductTypeDetailsType205137C] = field(
+    context_details: None | ProductTypeDetailsType205137C = field(
         default=None,
         metadata={
             "name": "contextDetails",
@@ -3958,7 +3965,7 @@ class FlightProductInformationType161491S:
     class Meta:
         name = "FlightProductInformationType_161491S"
 
-    cabin_product: Optional[CabinProductDetailsType229142C] = field(
+    cabin_product: None | CabinProductDetailsType229142C = field(
         default=None,
         metadata={
             "name": "cabinProduct",
@@ -3966,7 +3973,7 @@ class FlightProductInformationType161491S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    fare_product_detail: Optional[FareProductDetailsType] = field(
+    fare_product_detail: None | FareProductDetailsType = field(
         default=None,
         metadata={
             "name": "fareProductDetail",
@@ -3990,7 +3997,7 @@ class FlightProductInformationType176659S:
     class Meta:
         name = "FlightProductInformationType_176659S"
 
-    cabin_product: Optional[CabinProductDetailsType] = field(
+    cabin_product: None | CabinProductDetailsType = field(
         default=None,
         metadata={
             "name": "cabinProduct",
@@ -3998,7 +4005,7 @@ class FlightProductInformationType176659S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    fare_product_detail: Optional[FareProductDetailsType248552C] = field(
+    fare_product_detail: None | FareProductDetailsType248552C = field(
         default=None,
         metadata={
             "name": "fareProductDetail",
@@ -4006,7 +4013,7 @@ class FlightProductInformationType176659S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    corporate_id: List[str] = field(
+    corporate_id: list[str] = field(
         default_factory=list,
         metadata={
             "name": "corporateId",
@@ -4017,7 +4024,7 @@ class FlightProductInformationType176659S:
             "max_length": 20,
         }
     )
-    break_point: Optional[str] = field(
+    break_point: None | str = field(
         default=None,
         metadata={
             "name": "breakPoint",
@@ -4027,7 +4034,7 @@ class FlightProductInformationType176659S:
             "max_length": 1,
         }
     )
-    context_details: Optional[ProductTypeDetailsType] = field(
+    context_details: None | ProductTypeDetailsType = field(
         default=None,
         metadata={
             "name": "contextDetails",
@@ -4046,7 +4053,7 @@ class FlightServicesType:
     :ivar cabin_info:
     :ivar class_info:
     """
-    service_type: Optional[str] = field(
+    service_type: None | str = field(
         default=None,
         metadata={
             "name": "serviceType",
@@ -4057,7 +4064,7 @@ class FlightServicesType:
             "max_length": 3,
         }
     )
-    cabin_info: List[CabinInformationType] = field(
+    cabin_info: list[CabinInformationType] = field(
         default_factory=list,
         metadata={
             "name": "cabinInfo",
@@ -4066,7 +4073,7 @@ class FlightServicesType:
             "max_occurs": 99,
         }
     )
-    class_info: List[ClassInformationType] = field(
+    class_info: list[ClassInformationType] = field(
         default_factory=list,
         metadata={
             "name": "classInfo",
@@ -4084,7 +4091,7 @@ class FrequentTravellerIdentificationCodeType:
 
     :ivar frequent_traveller_details: Frequent Traveller Info
     """
-    frequent_traveller_details: List[FrequentTravellerIdentificationType] = field(
+    frequent_traveller_details: list[FrequentTravellerIdentificationType] = field(
         default_factory=list,
         metadata={
             "name": "frequentTravellerDetails",
@@ -4107,7 +4114,7 @@ class HeaderInformationTypeI:
     :ivar product_identification: Contains product identification such
         as UIC code...
     """
-    status: List[str] = field(
+    status: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4117,7 +4124,7 @@ class HeaderInformationTypeI:
             "max_length": 3,
         }
     )
-    date_time_period_details: Optional[DateTimePeriodDetailsTypeI] = field(
+    date_time_period_details: None | DateTimePeriodDetailsTypeI = field(
         default=None,
         metadata={
             "name": "dateTimePeriodDetails",
@@ -4125,7 +4132,7 @@ class HeaderInformationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    reference_number: Optional[str] = field(
+    reference_number: None | str = field(
         default=None,
         metadata={
             "name": "referenceNumber",
@@ -4135,7 +4142,7 @@ class HeaderInformationTypeI:
             "max_length": 35,
         }
     )
-    product_identification: List[str] = field(
+    product_identification: list[str] = field(
         default_factory=list,
         metadata={
             "name": "productIdentification",
@@ -4156,7 +4163,7 @@ class InteractiveFreeTextType:
     :ivar free_text_qualification: Free text qualification
     :ivar free_text: Free text
     """
-    free_text_qualification: Optional[FreeTextQualificationTypeI] = field(
+    free_text_qualification: None | FreeTextQualificationTypeI = field(
         default=None,
         metadata={
             "name": "freeTextQualification",
@@ -4164,7 +4171,7 @@ class InteractiveFreeTextType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    free_text: Optional[str] = field(
+    free_text: None | str = field(
         default=None,
         metadata={
             "name": "freeText",
@@ -4187,7 +4194,7 @@ class InteractiveFreeTextType78534S:
     class Meta:
         name = "InteractiveFreeTextType_78534S"
 
-    free_text_qualification: Optional[FreeTextQualificationType] = field(
+    free_text_qualification: None | FreeTextQualificationType = field(
         default=None,
         metadata={
             "name": "freeTextQualification",
@@ -4195,7 +4202,7 @@ class InteractiveFreeTextType78534S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    description: List[str] = field(
+    description: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4218,7 +4225,7 @@ class InteractiveFreeTextType78544S:
     class Meta:
         name = "InteractiveFreeTextType_78544S"
 
-    free_text_qualification: Optional[FreeTextQualificationType120769C] = field(
+    free_text_qualification: None | FreeTextQualificationType120769C = field(
         default=None,
         metadata={
             "name": "freeTextQualification",
@@ -4226,7 +4233,7 @@ class InteractiveFreeTextType78544S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    description: List[str] = field(
+    description: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4249,7 +4256,7 @@ class InteractiveFreeTextType78559S:
     class Meta:
         name = "InteractiveFreeTextType_78559S"
 
-    free_text_qualification: Optional[FreeTextQualificationType120769C] = field(
+    free_text_qualification: None | FreeTextQualificationType120769C = field(
         default=None,
         metadata={
             "name": "freeTextQualification",
@@ -4257,7 +4264,7 @@ class InteractiveFreeTextType78559S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    description: List[str] = field(
+    description: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4276,7 +4283,7 @@ class ItemNumberType:
 
     :ivar item_number: Item number details
     """
-    item_number: Optional[ItemNumberIdentificationType192331C] = field(
+    item_number: None | ItemNumberIdentificationType192331C = field(
         default=None,
         metadata={
             "name": "itemNumber",
@@ -4299,7 +4306,7 @@ class ItemNumberType161497S:
     class Meta:
         name = "ItemNumberType_161497S"
 
-    item_number_id: Optional[ItemNumberIdentificationType191597C] = field(
+    item_number_id: None | ItemNumberIdentificationType191597C = field(
         default=None,
         metadata={
             "name": "itemNumberId",
@@ -4307,7 +4314,7 @@ class ItemNumberType161497S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    code_share_details: List[CompanyRoleIdentificationType120771C] = field(
+    code_share_details: list[CompanyRoleIdentificationType120771C] = field(
         default_factory=list,
         metadata={
             "name": "codeShareDetails",
@@ -4316,7 +4323,7 @@ class ItemNumberType161497S:
             "max_occurs": 6,
         }
     )
-    price_ticketing: Optional[PricingTicketingInformationType] = field(
+    price_ticketing: None | PricingTicketingInformationType = field(
         default=None,
         metadata={
             "name": "priceTicketing",
@@ -4336,7 +4343,7 @@ class ItemNumberType166130S:
     class Meta:
         name = "ItemNumberType_166130S"
 
-    item_number_details: List[ItemNumberIdentificationType234878C] = field(
+    item_number_details: list[ItemNumberIdentificationType234878C] = field(
         default_factory=list,
         metadata={
             "name": "itemNumberDetails",
@@ -4356,7 +4363,7 @@ class ItemNumberType176648S:
     class Meta:
         name = "ItemNumberType_176648S"
 
-    item_number_details: List[ItemNumberIdentificationType248537C] = field(
+    item_number_details: list[ItemNumberIdentificationType248537C] = field(
         default_factory=list,
         metadata={
             "name": "itemNumberDetails",
@@ -4378,7 +4385,7 @@ class ItemNumberType80866S:
     class Meta:
         name = "ItemNumberType_80866S"
 
-    item_number_details: Optional[ItemNumberIdentificationType] = field(
+    item_number_details: None | ItemNumberIdentificationType = field(
         default=None,
         metadata={
             "name": "itemNumberDetails",
@@ -4403,7 +4410,7 @@ class MiniRulesType78547S:
     class Meta:
         name = "MiniRulesType_78547S"
 
-    restriction_type: Optional[str] = field(
+    restriction_type: None | str = field(
         default=None,
         metadata={
             "name": "restrictionType",
@@ -4413,7 +4420,7 @@ class MiniRulesType78547S:
             "max_length": 6,
         }
     )
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4423,14 +4430,14 @@ class MiniRulesType78547S:
             "max_length": 3,
         }
     )
-    indicator: Optional[MiniRulesIndicatorType] = field(
+    indicator: None | MiniRulesIndicatorType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    mini_rules: List[MiniRulesDetailsType] = field(
+    mini_rules: list[MiniRulesDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "miniRules",
@@ -4448,7 +4455,7 @@ class MonetaryInformationType:
 
     :ivar monetary_detail: Monetary information.
     """
-    monetary_detail: List[MonetaryInformationDetailsType] = field(
+    monetary_detail: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "monetaryDetail",
@@ -4466,7 +4473,7 @@ class MonetaryInformationTypeI:
 
     :ivar monetary_details: Monetary details
     """
-    monetary_details: List[MonetaryInformationDetailsTypeI] = field(
+    monetary_details: list[MonetaryInformationDetailsTypeI] = field(
         default_factory=list,
         metadata={
             "name": "monetaryDetails",
@@ -4486,7 +4493,7 @@ class MonetaryInformationType174241S:
     class Meta:
         name = "MonetaryInformationType_174241S"
 
-    monetary_details: Optional[MonetaryInformationDetailsType245528C] = field(
+    monetary_details: None | MonetaryInformationDetailsType245528C = field(
         default=None,
         metadata={
             "name": "monetaryDetails",
@@ -4495,7 +4502,7 @@ class MonetaryInformationType174241S:
             "required": True,
         }
     )
-    other_monetary_details: List[MonetaryInformationDetailsType245528C] = field(
+    other_monetary_details: list[MonetaryInformationDetailsType245528C] = field(
         default_factory=list,
         metadata={
             "name": "otherMonetaryDetails",
@@ -4516,7 +4523,7 @@ class MonetaryInformationType185955S:
     class Meta:
         name = "MonetaryInformationType_185955S"
 
-    monetary_detail: List[MonetaryInformationDetailsType] = field(
+    monetary_detail: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "monetaryDetail",
@@ -4538,7 +4545,7 @@ class MonetaryInformationType193024S:
     class Meta:
         name = "MonetaryInformationType_193024S"
 
-    monetary_detail: List[MonetaryInformationDetailsType] = field(
+    monetary_detail: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "monetaryDetail",
@@ -4558,7 +4565,7 @@ class OriginAndDestinationRequestType:
     :ivar location_forcing: Forces arrival or departure, from/to the
         same airport/city
     """
-    seg_ref: Optional[str] = field(
+    seg_ref: None | str = field(
         default=None,
         metadata={
             "name": "segRef",
@@ -4568,7 +4575,7 @@ class OriginAndDestinationRequestType:
             "pattern": r"-?[0-9]{1,2}",
         }
     )
-    location_forcing: List[ItineraryDetailsType] = field(
+    location_forcing: list[ItineraryDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "locationForcing",
@@ -4594,7 +4601,7 @@ class PricingTicketingSubsequentType193023S:
     class Meta:
         name = "PricingTicketingSubsequentType_193023S"
 
-    pax_fare_num: Optional[str] = field(
+    pax_fare_num: None | str = field(
         default=None,
         metadata={
             "name": "paxFareNum",
@@ -4605,7 +4612,7 @@ class PricingTicketingSubsequentType193023S:
             "max_length": 3,
         }
     )
-    total_fare_amount: Optional[Decimal] = field(
+    total_fare_amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "totalFareAmount",
@@ -4614,7 +4621,7 @@ class PricingTicketingSubsequentType193023S:
             "required": True,
         }
     )
-    total_tax_amount: Optional[Decimal] = field(
+    total_tax_amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "totalTaxAmount",
@@ -4622,7 +4629,7 @@ class PricingTicketingSubsequentType193023S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    code_share_details: List[CompanyRoleIdentificationType120771C] = field(
+    code_share_details: list[CompanyRoleIdentificationType120771C] = field(
         default_factory=list,
         metadata={
             "name": "codeShareDetails",
@@ -4631,7 +4638,7 @@ class PricingTicketingSubsequentType193023S:
             "max_occurs": 6,
         }
     )
-    monetary_details: List[MonetaryInformationDetailsType] = field(
+    monetary_details: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "monetaryDetails",
@@ -4640,7 +4647,7 @@ class PricingTicketingSubsequentType193023S:
             "max_occurs": 20,
         }
     )
-    pricing_ticketing: Optional[PricingTicketingInformationType] = field(
+    pricing_ticketing: None | PricingTicketingInformationType = field(
         default=None,
         metadata={
             "name": "pricingTicketing",
@@ -4660,7 +4667,7 @@ class ProductInformationType:
         CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
     :ivar booking_class_details:
     """
-    product_details_qualifier: Optional[str] = field(
+    product_details_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "productDetailsQualifier",
@@ -4670,7 +4677,7 @@ class ProductInformationType:
             "max_length": 3,
         }
     )
-    booking_class_details: List[ProductDetailsType] = field(
+    booking_class_details: list[ProductDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "bookingClassDetails",
@@ -4690,7 +4697,7 @@ class ProposedSegmentType:
     :ivar flight_characteristic: Flight characteristics.
     :ivar maj_cabin: Majority cabin
     """
-    flight_proposal: List[ProposedSegmentDetailsType] = field(
+    flight_proposal: list[ProposedSegmentDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "flightProposal",
@@ -4700,7 +4707,7 @@ class ProposedSegmentType:
             "max_occurs": 9,
         }
     )
-    flight_characteristic: Optional[str] = field(
+    flight_characteristic: None | str = field(
         default=None,
         metadata={
             "name": "flightCharacteristic",
@@ -4710,7 +4717,7 @@ class ProposedSegmentType:
             "max_length": 3,
         }
     )
-    maj_cabin: Optional[str] = field(
+    maj_cabin: None | str = field(
         default=None,
         metadata={
             "name": "majCabin",
@@ -4729,7 +4736,7 @@ class ReferenceInfoType:
 
     :ivar referencing_detail: Referencing details
     """
-    referencing_detail: List[ReferencingDetailsType191583C] = field(
+    referencing_detail: list[ReferencingDetailsType191583C] = field(
         default_factory=list,
         metadata={
             "name": "referencingDetail",
@@ -4751,7 +4758,7 @@ class ReferenceInfoType133176S:
     class Meta:
         name = "ReferenceInfoType_133176S"
 
-    referencing_detail: List[ReferencingDetailsType] = field(
+    referencing_detail: list[ReferencingDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "referencingDetail",
@@ -4772,7 +4779,7 @@ class ReferenceInfoType134839S:
     class Meta:
         name = "ReferenceInfoType_134839S"
 
-    referencing_detail: List[ReferencingDetailsType195561C] = field(
+    referencing_detail: list[ReferencingDetailsType195561C] = field(
         default_factory=list,
         metadata={
             "name": "referencingDetail",
@@ -4793,7 +4800,7 @@ class ReferenceInfoType134840S:
     class Meta:
         name = "ReferenceInfoType_134840S"
 
-    referencing_detail: List[ReferencingDetailsType195561C] = field(
+    referencing_detail: list[ReferencingDetailsType195561C] = field(
         default_factory=list,
         metadata={
             "name": "referencingDetail",
@@ -4814,7 +4821,7 @@ class ReferenceInfoType165972S:
     class Meta:
         name = "ReferenceInfoType_165972S"
 
-    reference_details: List[ReferencingDetailsType234704C] = field(
+    reference_details: list[ReferencingDetailsType234704C] = field(
         default_factory=list,
         metadata={
             "name": "referenceDetails",
@@ -4836,7 +4843,7 @@ class ReferenceInfoType176658S:
     class Meta:
         name = "ReferenceInfoType_176658S"
 
-    referencing_detail: List[ReferencingDetailsType] = field(
+    referencing_detail: list[ReferencingDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "referencingDetail",
@@ -4854,7 +4861,7 @@ class SegmentRepetitionControlTypeI:
 
     :ivar segment_control_details: Segment control details
     """
-    segment_control_details: List[SegmentRepetitionControlDetailsTypeI] = field(
+    segment_control_details: list[SegmentRepetitionControlDetailsTypeI] = field(
         default_factory=list,
         metadata={
             "name": "segmentControlDetails",
@@ -4872,7 +4879,7 @@ class SelectionDetailsType:
 
     :ivar carrier_fee_details: Carrier fees options
     """
-    carrier_fee_details: Optional[SelectionDetailsInformationType] = field(
+    carrier_fee_details: None | SelectionDetailsInformationType = field(
         default=None,
         metadata={
             "name": "carrierFeeDetails",
@@ -4890,7 +4897,7 @@ class SequenceDetailsTypeU:
 
     :ivar sequence_details: Sequence details
     """
-    sequence_details: Optional[SequenceInformationTypeU] = field(
+    sequence_details: None | SequenceInformationTypeU = field(
         default=None,
         metadata={
             "name": "sequenceDetails",
@@ -4909,7 +4916,7 @@ class SpecialRequirementsDetailsType:
         of the customer
     :ivar seat_details: Seat details
     """
-    service_requirements_info: Optional[SpecialRequirementsTypeDetailsType] = field(
+    service_requirements_info: None | SpecialRequirementsTypeDetailsType = field(
         default=None,
         metadata={
             "name": "serviceRequirementsInfo",
@@ -4918,7 +4925,7 @@ class SpecialRequirementsDetailsType:
             "required": True,
         }
     )
-    seat_details: List[SpecialRequirementsDataDetailsType] = field(
+    seat_details: list[SpecialRequirementsDataDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "seatDetails",
@@ -4938,7 +4945,7 @@ class SpecificDataInformationType:
     :ivar data_type_information: Carrier fee description
     :ivar data_information: Data information
     """
-    data_type_information: Optional[DataTypeInformationType] = field(
+    data_type_information: None | DataTypeInformationType = field(
         default=None,
         metadata={
             "name": "dataTypeInformation",
@@ -4947,7 +4954,7 @@ class SpecificDataInformationType:
             "required": True,
         }
     )
-    data_information: List[DataInformationType] = field(
+    data_information: list[DataInformationType] = field(
         default_factory=list,
         metadata={
             "name": "dataInformation",
@@ -4965,7 +4972,7 @@ class SpecificTravellerType:
 
     :ivar traveller_details: Traveller details
     """
-    traveller_details: List[SpecificTravellerDetailsType] = field(
+    traveller_details: list[SpecificTravellerDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "travellerDetails",
@@ -4983,7 +4990,7 @@ class StatusType:
 
     :ivar status: Status details
     """
-    status: List[StatusDetailsType] = field(
+    status: list[StatusDetailsType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5004,7 +5011,7 @@ class StatusType182386S:
     class Meta:
         name = "StatusType_182386S"
 
-    status_information: List[StatusDetailsType256255C] = field(
+    status_information: list[StatusDetailsType256255C] = field(
         default_factory=list,
         metadata={
             "name": "statusInformation",
@@ -5024,7 +5031,7 @@ class TaxType:
     :ivar tax_category: Tax category
     :ivar tax_details: Tax details
     """
-    tax_category: Optional[str] = field(
+    tax_category: None | str = field(
         default=None,
         metadata={
             "name": "taxCategory",
@@ -5034,7 +5041,7 @@ class TaxType:
             "max_length": 3,
         }
     )
-    tax_details: List[TaxDetailsType] = field(
+    tax_details: list[TaxDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "taxDetails",
@@ -5052,7 +5059,7 @@ class TransportIdentifierType:
 
     :ivar company_identification: Company identification
     """
-    company_identification: Optional[CompanyIdentificationTypeI] = field(
+    company_identification: None | CompanyIdentificationTypeI = field(
         default=None,
         metadata={
             "name": "companyIdentification",
@@ -5076,7 +5083,7 @@ class TravelProductType:
     :ivar add_product_detail: Additional product details
     :ivar attribute_details: Attribute details
     """
-    product_date_time: Optional[ProductDateTimeType] = field(
+    product_date_time: None | ProductDateTimeType = field(
         default=None,
         metadata={
             "name": "productDateTime",
@@ -5085,7 +5092,7 @@ class TravelProductType:
             "required": True,
         }
     )
-    location: List[LocationIdentificationDetailsType] = field(
+    location: list[LocationIdentificationDetailsType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5094,7 +5101,7 @@ class TravelProductType:
             "max_occurs": 2,
         }
     )
-    company_id: Optional[CompanyIdentificationType] = field(
+    company_id: None | CompanyIdentificationType = field(
         default=None,
         metadata={
             "name": "companyId",
@@ -5102,7 +5109,7 @@ class TravelProductType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    flight_ortrain_number: Optional[str] = field(
+    flight_ortrain_number: None | str = field(
         default=None,
         metadata={
             "name": "flightOrtrainNumber",
@@ -5112,7 +5119,7 @@ class TravelProductType:
             "max_length": 8,
         }
     )
-    product_detail: Optional[AdditionalProductDetailsType] = field(
+    product_detail: None | AdditionalProductDetailsType = field(
         default=None,
         metadata={
             "name": "productDetail",
@@ -5120,7 +5127,7 @@ class TravelProductType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    add_product_detail: Optional[ProductFacilitiesType] = field(
+    add_product_detail: None | ProductFacilitiesType = field(
         default=None,
         metadata={
             "name": "addProductDetail",
@@ -5128,7 +5135,7 @@ class TravelProductType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    attribute_details: List[CodedAttributeInformationType270108C] = field(
+    attribute_details: list[CodedAttributeInformationType270108C] = field(
         default_factory=list,
         metadata={
             "name": "attributeDetails",
@@ -5147,7 +5154,7 @@ class TravellerReferenceInformationType:
     :ivar ptc: Requested passenger type
     :ivar traveller: Traveller details
     """
-    ptc: List[str] = field(
+    ptc: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5157,7 +5164,7 @@ class TravellerReferenceInformationType:
             "max_length": 6,
         }
     )
-    traveller: List[TravellerDetailsType] = field(
+    traveller: list[TravellerDetailsType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5178,7 +5185,7 @@ class UserIdentificationType:
     :ivar office_code: The code given to an agent by the originating
         reservation system.
     """
-    office_identification: Optional[OriginatorIdentificationDetailsTypeI] = field(
+    office_identification: None | OriginatorIdentificationDetailsTypeI = field(
         default=None,
         metadata={
             "name": "officeIdentification",
@@ -5186,7 +5193,7 @@ class UserIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
         }
     )
-    office_type: Optional[str] = field(
+    office_type: None | str = field(
         default=None,
         metadata={
             "name": "officeType",
@@ -5196,7 +5203,7 @@ class UserIdentificationType:
             "max_length": 1,
         }
     )
-    office_code: Optional[str] = field(
+    office_code: None | str = field(
         default=None,
         metadata={
             "name": "officeCode",
@@ -5213,7 +5220,7 @@ class ValueSearchCriteriaType:
     """
     To specify Criteria with list of parameters.
     """
-    ref: Optional[str] = field(
+    ref: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5222,7 +5229,7 @@ class ValueSearchCriteriaType:
             "max_length": 35,
         }
     )
-    value: Optional[str] = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5231,7 +5238,7 @@ class ValueSearchCriteriaType:
             "max_length": 18,
         }
     )
-    criteria_details: List[CriteriaDetailsType] = field(
+    criteria_details: list[CriteriaDetailsType] = field(
         default_factory=list,
         metadata={
             "name": "criteriaDetails",
@@ -5274,28 +5281,28 @@ class FareMasterPricerTravelBoardSearchReply:
         name = "Fare_MasterPricerTravelBoardSearchReply"
         namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
 
-    reply_status: Optional[StatusType] = field(
+    reply_status: None | StatusType = field(
         default=None,
         metadata={
             "name": "replyStatus",
             "type": "Element",
         }
     )
-    error_message: Optional["FareMasterPricerTravelBoardSearchReply.ErrorMessage"] = field(
+    error_message: None | FareMasterPricerTravelBoardSearchReply.ErrorMessage = field(
         default=None,
         metadata={
             "name": "errorMessage",
             "type": "Element",
         }
     )
-    conversion_rate: Optional[ConversionRateTypeI] = field(
+    conversion_rate: None | ConversionRateTypeI = field(
         default=None,
         metadata={
             "name": "conversionRate",
             "type": "Element",
         }
     )
-    solution_family: List[FareInformationType] = field(
+    solution_family: list[FareInformationType] = field(
         default_factory=list,
         metadata={
             "name": "solutionFamily",
@@ -5303,7 +5310,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 20,
         }
     )
-    family_information: List[FareFamilyType] = field(
+    family_information: list[FareFamilyType] = field(
         default_factory=list,
         metadata={
             "name": "familyInformation",
@@ -5311,14 +5318,14 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 200,
         }
     )
-    amount_info_for_all_pax: Optional["FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax"] = field(
+    amount_info_for_all_pax: None | FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax = field(
         default=None,
         metadata={
             "name": "amountInfoForAllPax",
             "type": "Element",
         }
     )
-    amount_info_per_pax: List["FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax"] = field(
+    amount_info_per_pax: list[FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax] = field(
         default_factory=list,
         metadata={
             "name": "amountInfoPerPax",
@@ -5326,7 +5333,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 20,
         }
     )
-    fee_details: List["FareMasterPricerTravelBoardSearchReply.FeeDetails"] = field(
+    fee_details: list[FareMasterPricerTravelBoardSearchReply.FeeDetails] = field(
         default_factory=list,
         metadata={
             "name": "feeDetails",
@@ -5334,7 +5341,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 2099,
         }
     )
-    bucket_info: List[BucketInformationType] = field(
+    bucket_info: list[BucketInformationType] = field(
         default_factory=list,
         metadata={
             "name": "bucketInfo",
@@ -5342,7 +5349,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 10,
         }
     )
-    company_id_text: List[CompanyIdentificationTextType] = field(
+    company_id_text: list[CompanyIdentificationTextType] = field(
         default_factory=list,
         metadata={
             "name": "companyIdText",
@@ -5350,7 +5357,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 5000,
         }
     )
-    office_id_details: List["FareMasterPricerTravelBoardSearchReply.OfficeIdDetails"] = field(
+    office_id_details: list[FareMasterPricerTravelBoardSearchReply.OfficeIdDetails] = field(
         default_factory=list,
         metadata={
             "name": "officeIdDetails",
@@ -5358,7 +5365,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 20,
         }
     )
-    flight_index: List["FareMasterPricerTravelBoardSearchReply.FlightIndex"] = field(
+    flight_index: list[FareMasterPricerTravelBoardSearchReply.FlightIndex] = field(
         default_factory=list,
         metadata={
             "name": "flightIndex",
@@ -5366,14 +5373,14 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 6,
         }
     )
-    recommendation: List["FareMasterPricerTravelBoardSearchReply.Recommendation"] = field(
+    recommendation: list[FareMasterPricerTravelBoardSearchReply.Recommendation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 100000,
         }
     )
-    other_solutions: List["FareMasterPricerTravelBoardSearchReply.OtherSolutions"] = field(
+    other_solutions: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions] = field(
         default_factory=list,
         metadata={
             "name": "otherSolutions",
@@ -5381,7 +5388,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 100009,
         }
     )
-    warning_info: List["FareMasterPricerTravelBoardSearchReply.WarningInfo"] = field(
+    warning_info: list[FareMasterPricerTravelBoardSearchReply.WarningInfo] = field(
         default_factory=list,
         metadata={
             "name": "warningInfo",
@@ -5389,7 +5396,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 9,
         }
     )
-    global_information: List["FareMasterPricerTravelBoardSearchReply.GlobalInformation"] = field(
+    global_information: list[FareMasterPricerTravelBoardSearchReply.GlobalInformation] = field(
         default_factory=list,
         metadata={
             "name": "globalInformation",
@@ -5397,7 +5404,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 9,
         }
     )
-    service_fees_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp"] = field(
+    service_fees_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp] = field(
         default_factory=list,
         metadata={
             "name": "serviceFeesGrp",
@@ -5405,14 +5412,14 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 3,
         }
     )
-    value: List[ValueSearchCriteriaType] = field(
+    value: list[ValueSearchCriteriaType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 100009,
         }
     )
-    mnr_grp: Optional["FareMasterPricerTravelBoardSearchReply.MnrGrp"] = field(
+    mnr_grp: None | FareMasterPricerTravelBoardSearchReply.MnrGrp = field(
         default=None,
         metadata={
             "name": "mnrGrp",
@@ -5426,7 +5433,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar application_error: Application error details.
         :ivar error_message_text: Type of error message and free text
         """
-        application_error: Optional[ApplicationErrorInformationType78543S] = field(
+        application_error: None | ApplicationErrorInformationType78543S = field(
             default=None,
             metadata={
                 "name": "applicationError",
@@ -5434,7 +5441,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        error_message_text: Optional[InteractiveFreeTextType78544S] = field(
+        error_message_text: None | InteractiveFreeTextType78544S = field(
             default=None,
             metadata={
                 "name": "errorMessageText",
@@ -5448,7 +5455,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar itinerary_amounts: Itinerary amounts for all passengers
         :ivar amounts_per_sgt: Amounts information per segment
         """
-        itinerary_amounts: Optional[MonetaryInformationType] = field(
+        itinerary_amounts: None | MonetaryInformationType = field(
             default=None,
             metadata={
                 "name": "itineraryAmounts",
@@ -5456,7 +5463,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        amounts_per_sgt: List["FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax.AmountsPerSgt"] = field(
+        amounts_per_sgt: list[FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax.AmountsPerSgt] = field(
             default_factory=list,
             metadata={
                 "name": "amountsPerSgt",
@@ -5472,7 +5479,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar amounts: Amounts : Issue total amount, issue taxes
                 amount, non refundable taxes amount
             """
-            sgt_ref: Optional[ReferenceInfoType133176S] = field(
+            sgt_ref: None | ReferenceInfoType133176S = field(
                 default=None,
                 metadata={
                     "name": "sgtRef",
@@ -5480,7 +5487,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            amounts: Optional[MonetaryInformationType] = field(
+            amounts: None | MonetaryInformationType = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -5495,7 +5502,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar itinerary_amounts: Itinerary amounts information
         :ivar amounts_per_sgt: Amounts per segment
         """
-        pax_ref: Optional[SpecificTravellerType] = field(
+        pax_ref: None | SpecificTravellerType = field(
             default=None,
             metadata={
                 "name": "paxRef",
@@ -5503,14 +5510,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        pax_attributes: Optional[FareInformationType80868S] = field(
+        pax_attributes: None | FareInformationType80868S = field(
             default=None,
             metadata={
                 "name": "paxAttributes",
                 "type": "Element",
             }
         )
-        itinerary_amounts: Optional[MonetaryInformationType] = field(
+        itinerary_amounts: None | MonetaryInformationType = field(
             default=None,
             metadata={
                 "name": "itineraryAmounts",
@@ -5518,7 +5525,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        amounts_per_sgt: List["FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax.AmountsPerSgt"] = field(
+        amounts_per_sgt: list[FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax.AmountsPerSgt] = field(
             default_factory=list,
             metadata={
                 "name": "amountsPerSgt",
@@ -5534,7 +5541,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar amounts: Amounts : Issue total amount, issue taxes
                 amount, non refundable taxes amount
             """
-            sgt_ref: Optional[ReferenceInfoType133176S] = field(
+            sgt_ref: None | ReferenceInfoType133176S = field(
                 default=None,
                 metadata={
                     "name": "sgtRef",
@@ -5542,7 +5549,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            amounts: Optional[MonetaryInformationType] = field(
+            amounts: None | MonetaryInformationType = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -5558,7 +5565,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar converted_or_original_info: To specify conversion rate
             details
         """
-        fee_reference: Optional[ItemReferencesAndVersionsType78564S] = field(
+        fee_reference: None | ItemReferencesAndVersionsType78564S = field(
             default=None,
             metadata={
                 "name": "feeReference",
@@ -5566,21 +5573,21 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        fee_information: Optional[DiscountAndPenaltyInformationType] = field(
+        fee_information: None | DiscountAndPenaltyInformationType = field(
             default=None,
             metadata={
                 "name": "feeInformation",
                 "type": "Element",
             }
         )
-        fee_parameters: Optional[AttributeType78561S] = field(
+        fee_parameters: None | AttributeType78561S = field(
             default=None,
             metadata={
                 "name": "feeParameters",
                 "type": "Element",
             }
         )
-        converted_or_original_info: Optional[ConversionRateTypeI78562S] = field(
+        converted_or_original_info: None | ConversionRateTypeI78562S = field(
             default=None,
             metadata={
                 "name": "convertedOrOriginalInfo",
@@ -5594,7 +5601,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar office_id_information: Office Id Information
         :ivar office_id_reference: Office Id Reference Number
         """
-        office_id_information: Optional[UserIdentificationType] = field(
+        office_id_information: None | UserIdentificationType = field(
             default=None,
             metadata={
                 "name": "officeIdInformation",
@@ -5602,7 +5609,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        office_id_reference: Optional[ItemReferencesAndVersionsType78536S] = field(
+        office_id_reference: None | ItemReferencesAndVersionsType78536S = field(
             default=None,
             metadata={
                 "name": "officeIdReference",
@@ -5618,7 +5625,7 @@ class FareMasterPricerTravelBoardSearchReply:
             about requested segments
         :ivar group_of_flights: List of flights per requested segment
         """
-        requested_segment_ref: Optional[OriginAndDestinationRequestType] = field(
+        requested_segment_ref: None | OriginAndDestinationRequestType = field(
             default=None,
             metadata={
                 "name": "requestedSegmentRef",
@@ -5626,7 +5633,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        group_of_flights: List["FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights"] = field(
+        group_of_flights: list[FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights] = field(
             default_factory=list,
             metadata={
                 "name": "groupOfFlights",
@@ -5643,7 +5650,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 proposed flight group.
             :ivar flight_details: List of flight per Elapse Flying time
             """
-            prop_flight_gr_detail: Optional[ProposedSegmentType] = field(
+            prop_flight_gr_detail: None | ProposedSegmentType = field(
                 default=None,
                 metadata={
                     "name": "propFlightGrDetail",
@@ -5651,7 +5658,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            flight_details: List["FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights.FlightDetails"] = field(
+            flight_details: list[FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights.FlightDetails] = field(
                 default_factory=list,
                 metadata={
                     "name": "flightDetails",
@@ -5677,7 +5684,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar flight_characteristics: Flight characteristics
                 :ivar flight_services: Flight Services by cabin/rbd
                 """
-                flight_information: Optional[TravelProductType] = field(
+                flight_information: None | TravelProductType = field(
                     default=None,
                     metadata={
                         "name": "flightInformation",
@@ -5685,7 +5692,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                avl_info: List[FlightProductInformationType141442S] = field(
+                avl_info: list[FlightProductInformationType141442S] = field(
                     default_factory=list,
                     metadata={
                         "name": "avlInfo",
@@ -5693,7 +5700,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "max_occurs": 6,
                     }
                 )
-                technical_stop: List[DateAndTimeInformationType] = field(
+                technical_stop: list[DateAndTimeInformationType] = field(
                     default_factory=list,
                     metadata={
                         "name": "technicalStop",
@@ -5701,28 +5708,28 @@ class FareMasterPricerTravelBoardSearchReply:
                         "max_occurs": 5,
                     }
                 )
-                commercial_agreement: Optional[CommercialAgreementsType] = field(
+                commercial_agreement: None | CommercialAgreementsType = field(
                     default=None,
                     metadata={
                         "name": "commercialAgreement",
                         "type": "Element",
                     }
                 )
-                add_info: Optional[HeaderInformationTypeI] = field(
+                add_info: None | HeaderInformationTypeI = field(
                     default=None,
                     metadata={
                         "name": "addInfo",
                         "type": "Element",
                     }
                 )
-                flight_characteristics: Optional[FlightCharacteristicsType] = field(
+                flight_characteristics: None | FlightCharacteristicsType = field(
                     default=None,
                     metadata={
                         "name": "flightCharacteristics",
                         "type": "Element",
                     }
                 )
-                flight_services: List[FlightServicesType] = field(
+                flight_services: list[FlightServicesType] = field(
                     default_factory=list,
                     metadata={
                         "name": "flightServices",
@@ -5748,7 +5755,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar pax_fare_product: Passenger fare product details
         :ivar specific_rec_details: Specific recommendation details
         """
-        item_number: Optional[ItemNumberType161497S] = field(
+        item_number: None | ItemNumberType161497S = field(
             default=None,
             metadata={
                 "name": "itemNumber",
@@ -5756,7 +5763,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        warning_message: List[InteractiveFreeTextType78544S] = field(
+        warning_message: list[InteractiveFreeTextType78544S] = field(
             default_factory=list,
             metadata={
                 "name": "warningMessage",
@@ -5764,14 +5771,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 4,
             }
         )
-        fare_family_ref: Optional[ReferenceInfoType133176S] = field(
+        fare_family_ref: None | ReferenceInfoType133176S = field(
             default=None,
             metadata={
                 "name": "fareFamilyRef",
                 "type": "Element",
             }
         )
-        rec_price_info: Optional[MonetaryInformationType193024S] = field(
+        rec_price_info: None | MonetaryInformationType193024S = field(
             default=None,
             metadata={
                 "name": "recPriceInfo",
@@ -5779,7 +5786,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        mini_rule: List[MiniRulesType78547S] = field(
+        mini_rule: list[MiniRulesType78547S] = field(
             default_factory=list,
             metadata={
                 "name": "miniRule",
@@ -5787,7 +5794,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 9,
             }
         )
-        segment_flight_ref: List[ReferenceInfoType] = field(
+        segment_flight_ref: list[ReferenceInfoType] = field(
             default_factory=list,
             metadata={
                 "name": "segmentFlightRef",
@@ -5795,7 +5802,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 100009,
             }
         )
-        recommandation_segments_fare_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.RecommandationSegmentsFareDetails"] = field(
+        recommandation_segments_fare_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.RecommandationSegmentsFareDetails] = field(
             default_factory=list,
             metadata={
                 "name": "recommandationSegmentsFareDetails",
@@ -5803,7 +5810,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 6,
             }
         )
-        pax_fare_product: List["FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct"] = field(
+        pax_fare_product: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct] = field(
             default_factory=list,
             metadata={
                 "name": "paxFareProduct",
@@ -5812,7 +5819,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 10,
             }
         )
-        specific_rec_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails"] = field(
+        specific_rec_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails] = field(
             default_factory=list,
             metadata={
                 "name": "specificRecDetails",
@@ -5829,7 +5836,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar segment_monetary_information: Amounts per requested
                 segment.
             """
-            recommendation_seg_ref: Optional[OriginAndDestinationRequestType] = field(
+            recommendation_seg_ref: None | OriginAndDestinationRequestType = field(
                 default=None,
                 metadata={
                     "name": "recommendationSegRef",
@@ -5837,7 +5844,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            segment_monetary_information: Optional[MonetaryInformationType] = field(
+            segment_monetary_information: None | MonetaryInformationType = field(
                 default=None,
                 metadata={
                     "name": "segmentMonetaryInformation",
@@ -5858,7 +5865,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fare: fare Details
             :ivar fare_details: Fare details by Requested segment number
             """
-            pax_fare_detail: Optional[PricingTicketingSubsequentType193023S] = field(
+            pax_fare_detail: None | PricingTicketingSubsequentType193023S = field(
                 default=None,
                 metadata={
                     "name": "paxFareDetail",
@@ -5866,14 +5873,14 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            fee_ref: Optional[ReferenceInfoType134839S] = field(
+            fee_ref: None | ReferenceInfoType134839S = field(
                 default=None,
                 metadata={
                     "name": "feeRef",
                     "type": "Element",
                 }
             )
-            pax_reference: List[TravellerReferenceInformationType] = field(
+            pax_reference: list[TravellerReferenceInformationType] = field(
                 default_factory=list,
                 metadata={
                     "name": "paxReference",
@@ -5882,21 +5889,21 @@ class FareMasterPricerTravelBoardSearchReply:
                     "max_occurs": 6,
                 }
             )
-            passenger_tax_details: Optional[TaxType] = field(
+            passenger_tax_details: None | TaxType = field(
                 default=None,
                 metadata={
                     "name": "passengerTaxDetails",
                     "type": "Element",
                 }
             )
-            fare: List["FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.Fare"] = field(
+            fare: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.Fare] = field(
                 default_factory=list,
                 metadata={
                     "type": "Element",
                     "max_occurs": 7,
                 }
             )
-            fare_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails"] = field(
+            fare_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails] = field(
                 default_factory=list,
                 metadata={
                     "name": "fareDetails",
@@ -5913,7 +5920,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar monetary_information: Amount of penalties,
                     Surcharges...
                 """
-                pricing_message: Optional[InteractiveFreeTextType78559S] = field(
+                pricing_message: None | InteractiveFreeTextType78559S = field(
                     default=None,
                     metadata={
                         "name": "pricingMessage",
@@ -5921,7 +5928,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                monetary_information: Optional[MonetaryInformationType185955S] = field(
+                monetary_information: None | MonetaryInformationType185955S = field(
                     default=None,
                     metadata={
                         "name": "monetaryInformation",
@@ -5939,7 +5946,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     passenger per requested segment.
                 :ivar maj_cabin: Majority Cabin Info
                 """
-                segment_ref: Optional[OriginAndDestinationRequestType] = field(
+                segment_ref: None | OriginAndDestinationRequestType = field(
                     default=None,
                     metadata={
                         "name": "segmentRef",
@@ -5947,7 +5954,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                group_of_fares: List["FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails.GroupOfFares"] = field(
+                group_of_fares: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails.GroupOfFares] = field(
                     default_factory=list,
                     metadata={
                         "name": "groupOfFares",
@@ -5955,14 +5962,14 @@ class FareMasterPricerTravelBoardSearchReply:
                         "max_occurs": 4,
                     }
                 )
-                psg_seg_monetary_information: Optional[MonetaryInformationType] = field(
+                psg_seg_monetary_information: None | MonetaryInformationType = field(
                     default=None,
                     metadata={
                         "name": "psgSegMonetaryInformation",
                         "type": "Element",
                     }
                 )
-                maj_cabin: List[ProductInformationType] = field(
+                maj_cabin: list[ProductInformationType] = field(
                     default_factory=list,
                     metadata={
                         "name": "majCabin",
@@ -5983,7 +5990,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     :ivar fare_families_ref: Reference of Fare Family
                         for each Fare Component
                     """
-                    product_information: Optional[FlightProductInformationType176659S] = field(
+                    product_information: None | FlightProductInformationType176659S = field(
                         default=None,
                         metadata={
                             "name": "productInformation",
@@ -5991,7 +5998,7 @@ class FareMasterPricerTravelBoardSearchReply:
                             "required": True,
                         }
                     )
-                    fare_calculation_code_details: List[FareCalculationCodeDetailsType] = field(
+                    fare_calculation_code_details: list[FareCalculationCodeDetailsType] = field(
                         default_factory=list,
                         metadata={
                             "name": "fareCalculationCodeDetails",
@@ -5999,14 +6006,14 @@ class FareMasterPricerTravelBoardSearchReply:
                             "max_occurs": 9,
                         }
                     )
-                    ticket_infos: Optional[FareQualifierDetailsType] = field(
+                    ticket_infos: None | FareQualifierDetailsType = field(
                         default=None,
                         metadata={
                             "name": "ticketInfos",
                             "type": "Element",
                         }
                     )
-                    fare_families_ref: Optional[ReferenceInfoType176658S] = field(
+                    fare_families_ref: None | ReferenceInfoType176658S = field(
                         default=None,
                         metadata={
                             "name": "fareFamiliesRef",
@@ -6021,7 +6028,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar specific_product_details: Specific fare product
                 details
             """
-            specific_rec_item: Optional[ItemReferencesAndVersionsType] = field(
+            specific_rec_item: None | ItemReferencesAndVersionsType = field(
                 default=None,
                 metadata={
                     "name": "specificRecItem",
@@ -6029,7 +6036,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            specific_product_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails"] = field(
+            specific_product_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails] = field(
                 default_factory=list,
                 metadata={
                     "name": "specificProductDetails",
@@ -6045,7 +6052,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar fare_context_details: Specific fare details per
                     requested segments.
                 """
-                product_references: Optional[PricingTicketingSubsequentType] = field(
+                product_references: None | PricingTicketingSubsequentType = field(
                     default=None,
                     metadata={
                         "name": "productReferences",
@@ -6053,7 +6060,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                fare_context_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails"] = field(
+                fare_context_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails] = field(
                     default_factory=list,
                     metadata={
                         "name": "fareContextDetails",
@@ -6070,7 +6077,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     :ivar cnx_context_details: Fare connection context
                         details
                     """
-                    requested_segment_info: Optional[OriginAndDestinationRequestType134833S] = field(
+                    requested_segment_info: None | OriginAndDestinationRequestType134833S = field(
                         default=None,
                         metadata={
                             "name": "requestedSegmentInfo",
@@ -6078,7 +6085,7 @@ class FareMasterPricerTravelBoardSearchReply:
                             "required": True,
                         }
                     )
-                    cnx_context_details: List["FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails.CnxContextDetails"] = field(
+                    cnx_context_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails.CnxContextDetails] = field(
                         default_factory=list,
                         metadata={
                             "name": "cnxContextDetails",
@@ -6093,7 +6100,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         :ivar fare_cnx_info: Fare connection context
                             details
                         """
-                        fare_cnx_info: Optional[FlightProductInformationType] = field(
+                        fare_cnx_info: None | FlightProductInformationType = field(
                             default=None,
                             metadata={
                                 "name": "fareCnxInfo",
@@ -6110,14 +6117,14 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar psg_info: Passenger Related info (discount card, PTC, fare
             info, amount ...)
         """
-        reference: Optional[SequenceDetailsTypeU] = field(
+        reference: None | SequenceDetailsTypeU = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             }
         )
-        amt_group: List["FareMasterPricerTravelBoardSearchReply.OtherSolutions.AmtGroup"] = field(
+        amt_group: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions.AmtGroup] = field(
             default_factory=list,
             metadata={
                 "name": "amtGroup",
@@ -6125,7 +6132,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 10,
             }
         )
-        psg_info: List["FareMasterPricerTravelBoardSearchReply.OtherSolutions.PsgInfo"] = field(
+        psg_info: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions.PsgInfo] = field(
             default_factory=list,
             metadata={
                 "name": "psgInfo",
@@ -6141,14 +6148,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 segment...)
             :ivar amount: Amount Description
             """
-            ref: Optional[ReferenceInfoType165972S] = field(
+            ref: None | ReferenceInfoType165972S = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 }
             )
-            amount: Optional[MonetaryInformationTypeI] = field(
+            amount: None | MonetaryInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -6165,39 +6172,39 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fare: Fare description
             :ivar attribute: Additional Information
             """
-            ref: Optional[SegmentRepetitionControlTypeI] = field(
+            ref: None | SegmentRepetitionControlTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 }
             )
-            description: Optional[FareInformationTypeI] = field(
+            description: None | FareInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 }
             )
-            freq_traveller: Optional[FrequentTravellerIdentificationCodeType] = field(
+            freq_traveller: None | FrequentTravellerIdentificationCodeType = field(
                 default=None,
                 metadata={
                     "name": "freqTraveller",
                     "type": "Element",
                 }
             )
-            amount: Optional[MonetaryInformationTypeI] = field(
+            amount: None | MonetaryInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 }
             )
-            fare: Optional[FlightProductInformationType161491S] = field(
+            fare: None | FlightProductInformationType161491S = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 }
             )
-            attribute: List[AttributeTypeU] = field(
+            attribute: list[AttributeTypeU] = field(
                 default_factory=list,
                 metadata={
                     "type": "Element",
@@ -6211,7 +6218,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar global_message_marker: Dummy Segment
         :ivar global_message: Informative free text information
         """
-        global_message_marker: Optional[DummySegmentTypeI] = field(
+        global_message_marker: None | DummySegmentTypeI = field(
             default=None,
             metadata={
                 "name": "globalMessageMarker",
@@ -6219,7 +6226,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        global_message: Optional[InteractiveFreeTextType78534S] = field(
+        global_message: None | InteractiveFreeTextType78534S = field(
             default=None,
             metadata={
                 "name": "globalMessage",
@@ -6233,7 +6240,7 @@ class FareMasterPricerTravelBoardSearchReply:
         """
         :ivar attributes: Coded attributes
         """
-        attributes: Optional[CodedAttributeType] = field(
+        attributes: None | CodedAttributeType = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -6255,7 +6262,7 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar free_bag_allowance_grp: Free baggage allowance information
             group
         """
-        service_type_info: Optional[SelectionDetailsType] = field(
+        service_type_info: None | SelectionDetailsType = field(
             default=None,
             metadata={
                 "name": "serviceTypeInfo",
@@ -6263,7 +6270,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        service_fee_ref_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeRefGrp"] = field(
+        service_fee_ref_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeRefGrp] = field(
             default_factory=list,
             metadata={
                 "name": "serviceFeeRefGrp",
@@ -6271,7 +6278,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 100000,
             }
         )
-        service_coverage_info_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp"] = field(
+        service_coverage_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp] = field(
             default_factory=list,
             metadata={
                 "name": "serviceCoverageInfoGrp",
@@ -6279,7 +6286,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 100000,
             }
         )
-        global_message_marker: Optional[DummySegmentTypeI] = field(
+        global_message_marker: None | DummySegmentTypeI = field(
             default=None,
             metadata={
                 "name": "globalMessageMarker",
@@ -6287,7 +6294,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "required": True,
             }
         )
-        service_fee_info_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp"] = field(
+        service_fee_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp] = field(
             default_factory=list,
             metadata={
                 "name": "serviceFeeInfoGrp",
@@ -6295,7 +6302,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 100000,
             }
         )
-        service_details_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp"] = field(
+        service_details_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp] = field(
             default_factory=list,
             metadata={
                 "name": "serviceDetailsGrp",
@@ -6303,7 +6310,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "max_occurs": 200,
             }
         )
-        free_bag_allowance_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.FreeBagAllowanceGrp"] = field(
+        free_bag_allowance_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.FreeBagAllowanceGrp] = field(
             default_factory=list,
             metadata={
                 "name": "freeBagAllowanceGrp",
@@ -6317,7 +6324,7 @@ class FareMasterPricerTravelBoardSearchReply:
             """
             :ivar ref_info: Reference of service fee global information
             """
-            ref_info: Optional[ReferenceInfoType] = field(
+            ref_info: None | ReferenceInfoType = field(
                 default=None,
                 metadata={
                     "name": "refInfo",
@@ -6334,7 +6341,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar service_cov_info_grp: Service coverage information
                 group
             """
-            item_number_info: Optional[ItemNumberType] = field(
+            item_number_info: None | ItemNumberType = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
@@ -6342,7 +6349,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            service_cov_info_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp.ServiceCovInfoGrp"] = field(
+            service_cov_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp.ServiceCovInfoGrp] = field(
                 default_factory=list,
                 metadata={
                     "name": "serviceCovInfoGrp",
@@ -6361,7 +6368,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar carrier_info: Carrier information
                 :ivar ref_info: Service reference number
                 """
-                pax_ref_info: Optional[SpecificTravellerType] = field(
+                pax_ref_info: None | SpecificTravellerType = field(
                     default=None,
                     metadata={
                         "name": "paxRefInfo",
@@ -6369,7 +6376,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                coverage_per_flights_info: List[ActionDetailsType] = field(
+                coverage_per_flights_info: list[ActionDetailsType] = field(
                     default_factory=list,
                     metadata={
                         "name": "coveragePerFlightsInfo",
@@ -6377,14 +6384,14 @@ class FareMasterPricerTravelBoardSearchReply:
                         "max_occurs": 6,
                     }
                 )
-                carrier_info: Optional[TransportIdentifierType] = field(
+                carrier_info: None | TransportIdentifierType = field(
                     default=None,
                     metadata={
                         "name": "carrierInfo",
                         "type": "Element",
                     }
                 )
-                ref_info: Optional[ReferenceInfoType134840S] = field(
+                ref_info: None | ReferenceInfoType134840S = field(
                     default=None,
                     metadata={
                         "name": "refInfo",
@@ -6398,7 +6405,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar item_number_info: Item number details
             :ivar service_details_grp: Service fee informations
             """
-            item_number_info: Optional[ItemNumberType] = field(
+            item_number_info: None | ItemNumberType = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
@@ -6406,7 +6413,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            service_details_grp: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp"] = field(
+            service_details_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp] = field(
                 default_factory=list,
                 metadata={
                     "name": "serviceDetailsGrp",
@@ -6422,7 +6429,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar service_matched_info_group: Service matched
                     information
                 """
-                ref_info: Optional[ReferenceInfoType134840S] = field(
+                ref_info: None | ReferenceInfoType134840S = field(
                     default=None,
                     metadata={
                         "name": "refInfo",
@@ -6430,7 +6437,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                service_matched_info_group: List["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp.ServiceMatchedInfoGroup"] = field(
+                service_matched_info_group: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp.ServiceMatchedInfoGroup] = field(
                     default_factory=list,
                     metadata={
                         "name": "serviceMatchedInfoGroup",
@@ -6447,7 +6454,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         information
                     :ivar amount_info: Informative Service amount
                     """
-                    pax_ref_info: Optional[SpecificTravellerType] = field(
+                    pax_ref_info: None | SpecificTravellerType = field(
                         default=None,
                         metadata={
                             "name": "paxRefInfo",
@@ -6455,14 +6462,14 @@ class FareMasterPricerTravelBoardSearchReply:
                             "required": True,
                         }
                     )
-                    pricing_info: Optional[FareInformationType80868S] = field(
+                    pricing_info: None | FareInformationType80868S = field(
                         default=None,
                         metadata={
                             "name": "pricingInfo",
                             "type": "Element",
                         }
                     )
-                    amount_info: Optional[MonetaryInformationType193024S] = field(
+                    amount_info: None | MonetaryInformationType193024S = field(
                         default=None,
                         metadata={
                             "name": "amountInfo",
@@ -6477,7 +6484,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 (exclusion,inclusion, mode pushed,polled)
             :ivar fee_description_grp: Fee description
             """
-            service_option_info: Optional[SpecificDataInformationType] = field(
+            service_option_info: None | SpecificDataInformationType = field(
                 default=None,
                 metadata={
                     "name": "serviceOptionInfo",
@@ -6485,7 +6492,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            fee_description_grp: Optional["FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp.FeeDescriptionGrp"] = field(
+            fee_description_grp: None | FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp.FeeDescriptionGrp = field(
                 default=None,
                 metadata={
                     "name": "feeDescriptionGrp",
@@ -6503,7 +6510,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     information (service description, ...)
                 :ivar commercial_name: Commercial name
                 """
-                item_number_info: Optional[ItemNumberType80866S] = field(
+                item_number_info: None | ItemNumberType80866S = field(
                     default=None,
                     metadata={
                         "name": "itemNumberInfo",
@@ -6511,21 +6518,21 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                service_attributes_info: Optional[AttributeType] = field(
+                service_attributes_info: None | AttributeType = field(
                     default=None,
                     metadata={
                         "name": "serviceAttributesInfo",
                         "type": "Element",
                     }
                 )
-                service_description_info: Optional[SpecialRequirementsDetailsType] = field(
+                service_description_info: None | SpecialRequirementsDetailsType = field(
                     default=None,
                     metadata={
                         "name": "serviceDescriptionInfo",
                         "type": "Element",
                     }
                 )
-                commercial_name: Optional[InteractiveFreeTextType] = field(
+                commercial_name: None | InteractiveFreeTextType = field(
                     default=None,
                     metadata={
                         "name": "commercialName",
@@ -6540,7 +6547,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 information
             :ivar item_number_info: Item number information
             """
-            free_bag_allownce_info: Optional[ExcessBaggageType] = field(
+            free_bag_allownce_info: None | ExcessBaggageType = field(
                 default=None,
                 metadata={
                     "name": "freeBagAllownceInfo",
@@ -6548,7 +6555,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            item_number_info: Optional[ItemNumberType166130S] = field(
+            item_number_info: None | ItemNumberType166130S = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
@@ -6558,14 +6565,14 @@ class FareMasterPricerTravelBoardSearchReply:
 
     @dataclass
     class MnrGrp:
-        mnr: Optional[MiniRulesType] = field(
+        mnr: None | MiniRulesType = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             }
         )
-        mnr_details: List["FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails"] = field(
+        mnr_details: list[FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails] = field(
             default_factory=list,
             metadata={
                 "name": "mnrDetails",
@@ -6581,7 +6588,7 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar date_info:
             :ivar cat_grp: Categories
             """
-            mnr_ref: Optional[ItemNumberType176648S] = field(
+            mnr_ref: None | ItemNumberType176648S = field(
                 default=None,
                 metadata={
                     "name": "mnrRef",
@@ -6589,7 +6596,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 }
             )
-            date_info: List[DateAndTimeInformationType182345S] = field(
+            date_info: list[DateAndTimeInformationType182345S] = field(
                 default_factory=list,
                 metadata={
                     "name": "dateInfo",
@@ -6597,7 +6604,7 @@ class FareMasterPricerTravelBoardSearchReply:
                     "max_occurs": 16,
                 }
             )
-            cat_grp: List["FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails.CatGrp"] = field(
+            cat_grp: list[FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails.CatGrp] = field(
                 default_factory=list,
                 metadata={
                     "name": "catGrp",
@@ -6613,7 +6620,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar mon_info: Monetary information
                 :ivar status_info: Status information
                 """
-                cat_info: Optional[CategDescrType] = field(
+                cat_info: None | CategDescrType = field(
                     default=None,
                     metadata={
                         "name": "catInfo",
@@ -6621,14 +6628,14 @@ class FareMasterPricerTravelBoardSearchReply:
                         "required": True,
                     }
                 )
-                mon_info: Optional[MonetaryInformationType174241S] = field(
+                mon_info: None | MonetaryInformationType174241S = field(
                     default=None,
                     metadata={
                         "name": "monInfo",
                         "type": "Element",
                     }
                 )
-                status_info: Optional[StatusType182386S] = field(
+                status_info: None | StatusType182386S = field(
                     default=None,
                     metadata={
                         "name": "statusInfo",

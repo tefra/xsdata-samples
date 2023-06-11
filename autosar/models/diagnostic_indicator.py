@@ -51,7 +51,7 @@ class DiagnosticIndicator:
         atpVariation stereotype.
     :ivar healing_cycle_counter_threshold: This attribute defines the
         number of healing cycles for the WarningIndicatorOffCriteria
-    :ivar type: Defines the type of the indicator.
+    :ivar type_value: Defines the type of the indicator.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -164,7 +164,7 @@ class DiagnosticIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type: Optional[DiagnosticIndicatorTypeEnumValueVariationPoint] = field(
+    type_value: Optional[DiagnosticIndicatorTypeEnumValueVariationPoint] = field(
         default=None,
         metadata={
             "name": "TYPE",

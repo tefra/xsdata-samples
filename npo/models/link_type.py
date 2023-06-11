@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.link_type_enum import LinkTypeEnum
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
@@ -10,23 +10,24 @@ class LinkType:
     class Meta:
         name = "linkType"
 
-    text: Optional[str] = field(
+    text: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    page_ref: Optional[str] = field(
+    page_ref: None | str = field(
         default=None,
         metadata={
             "name": "pageRef",
             "type": "Attribute",
         }
     )
-    type: Optional[LinkTypeEnum] = field(
+    type_value: None | LinkTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

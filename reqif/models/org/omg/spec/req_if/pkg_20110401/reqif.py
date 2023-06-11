@@ -381,7 +381,7 @@ class AttributeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionBoolean.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionBoolean.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -483,7 +483,7 @@ class AttributeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionDate.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionDate.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -585,7 +585,7 @@ class AttributeDefinitionEnumeration:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionEnumeration.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionEnumeration.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -695,7 +695,7 @@ class AttributeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionInteger.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionInteger.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -797,7 +797,7 @@ class AttributeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionReal.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionReal.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -899,7 +899,7 @@ class AttributeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionString.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionString.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1479,7 +1479,7 @@ class RelationGroup:
             "required": True,
         }
     )
-    type: Optional["RelationGroup.TypeType"] = field(
+    type_value: Optional["RelationGroup.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1919,7 +1919,7 @@ class AttributeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["AttributeDefinitionXhtml.TypeType"] = field(
+    type_value: Optional["AttributeDefinitionXhtml.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2021,7 +2021,7 @@ class SpecObject:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["SpecObject.TypeType"] = field(
+    type_value: Optional["SpecObject.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2182,7 +2182,7 @@ class SpecRelation:
             "required": True,
         }
     )
-    type: Optional["SpecRelation.TypeType"] = field(
+    type_value: Optional["SpecRelation.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2355,7 +2355,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         }
     )
-    type: Optional["Specification.TypeType"] = field(
+    type_value: Optional["Specification.TypeType"] = field(
         default=None,
         metadata={
             "name": "TYPE",

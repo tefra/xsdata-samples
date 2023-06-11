@@ -1633,10 +1633,11 @@ class AwardId:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -2417,10 +2418,11 @@ class Institution:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -6535,10 +6537,11 @@ class FundingSource:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -8972,10 +8975,11 @@ class ElementCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -9254,10 +9258,11 @@ class MixedCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -9908,10 +9913,11 @@ class NlmCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -10003,10 +10009,11 @@ class Product:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -12354,10 +12361,11 @@ class SupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -15507,10 +15515,11 @@ class Bio:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -15608,10 +15617,11 @@ class Collab:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -16054,10 +16064,11 @@ class Contrib:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -17416,10 +17427,11 @@ class License:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -17685,10 +17697,11 @@ class Media:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -20663,10 +20676,11 @@ class ChemStruct:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -21262,10 +21276,11 @@ class NamedContent:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -21669,10 +21684,11 @@ class InlineMedia:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -22169,10 +22185,11 @@ class Graphic:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -23970,10 +23987,11 @@ class RelatedObject:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -24618,10 +24636,11 @@ class RelatedArticle:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -25237,10 +25256,11 @@ class InlineSupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -25625,10 +25645,11 @@ class ExtLink:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }
@@ -26191,10 +26212,11 @@ class Abbrev:
             "namespace": "http://www.w3.org/1999/xlink",
         }
     )
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.SIMPLE,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         }

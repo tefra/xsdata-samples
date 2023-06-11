@@ -34,7 +34,7 @@ class PeerReview:
     :ivar scn_policies:
     :ivar doi_data:
     :ivar stage:
-    :ivar type:
+    :ivar type_value:
     :ivar recommendation:
     :ivar revision_round: Required attribute. First submission defined
         as revision round zero
@@ -118,9 +118,10 @@ class PeerReview:
             "type": "Attribute",
         }
     )
-    type: Optional[PeerReviewType] = field(
+    type_value: Optional[PeerReviewType] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

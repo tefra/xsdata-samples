@@ -7,9 +7,10 @@ class UnitCode:
     class Meta:
         name = "@unit-code"
 
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Element",
             "required": True,
         }

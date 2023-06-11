@@ -10,7 +10,7 @@ class ClinicalTrialNumber:
     """
     :ivar registry: The clinical trial identifier related to the
         article.
-    :ivar type: Used to identify the article publication date in
+    :ivar type_value: Used to identify the article publication date in
         relation to the issuance of the trial results
     :ivar content:
     """
@@ -28,9 +28,10 @@ class ClinicalTrialNumber:
             "pattern": r"10.18810/[a-z-]+",
         }
     )
-    type: Optional[ClinicalTrialNumberType] = field(
+    type_value: Optional[ClinicalTrialNumberType] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

@@ -28,9 +28,10 @@ class TRelationship(TBaseElement):
             "min_occurs": 1,
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

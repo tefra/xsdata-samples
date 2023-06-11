@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -15,7 +15,7 @@ class LanguageType:
             "required": True,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

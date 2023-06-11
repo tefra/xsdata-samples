@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.media_type_enum import MediaTypeEnum
 from npo.models.recursive_member_ref import RecursiveMemberRef
 
@@ -12,7 +12,7 @@ class MemberRefType:
     class Meta:
         name = "memberRefType"
 
-    episode_of: List[RecursiveMemberRef] = field(
+    episode_of: list[RecursiveMemberRef] = field(
         default_factory=list,
         metadata={
             "name": "episodeOf",
@@ -20,7 +20,7 @@ class MemberRefType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    member_of: List[RecursiveMemberRef] = field(
+    member_of: list[RecursiveMemberRef] = field(
         default_factory=list,
         metadata={
             "name": "memberOf",
@@ -28,7 +28,7 @@ class MemberRefType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    segment_of: Optional[RecursiveMemberRef] = field(
+    segment_of: None | RecursiveMemberRef = field(
         default=None,
         metadata={
             "name": "segmentOf",
@@ -36,7 +36,7 @@ class MemberRefType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    mid_ref: Optional[str] = field(
+    mid_ref: None | str = field(
         default=None,
         metadata={
             "name": "midRef",
@@ -47,7 +47,7 @@ class MemberRefType:
             "doc": "Reference to the MID of the parent of this object.",
         }
     )
-    urn_ref: Optional[str] = field(
+    urn_ref: None | str = field(
         default=None,
         metadata={
             "name": "urnRef",
@@ -59,7 +59,7 @@ class MemberRefType:
             ),
         }
     )
-    crid_ref: Optional[str] = field(
+    crid_ref: None | str = field(
         default=None,
         metadata={
             "name": "cridRef",
@@ -71,13 +71,14 @@ class MemberRefType:
             ),
         }
     )
-    type: Optional[MediaTypeEnum] = field(
+    type_value: None | MediaTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
-    index: Optional[int] = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -89,7 +90,7 @@ class MemberRefType:
             "type": "Attribute",
         }
     )
-    added: Optional[XmlDateTime] = field(
+    added: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_sort_type import MediaSortType
 from npo.models.owner_type_enum import OwnerTypeEnum
 from npo.models.textual_type_enum import TextualTypeEnum
@@ -12,13 +12,14 @@ class TitleSortOrderType(MediaSortType):
     class Meta:
         name = "titleSortOrderType"
 
-    type: Optional[TextualTypeEnum] = field(
+    type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",

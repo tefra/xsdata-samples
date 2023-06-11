@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.segment_type import SegmentType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class SegmentsType:
     class Meta:
         name = "segmentsType"
 
-    segment: List[SegmentType] = field(
+    segment: list[SegmentType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

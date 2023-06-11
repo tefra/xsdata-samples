@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.term_facet_result_item_type import TermFacetResultItemType
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,7 +10,7 @@ class PageGenreFacetResultItemType(TermFacetResultItemType):
     class Meta:
         name = "pageGenreFacetResultItemType"
 
-    term: List[str] = field(
+    term: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",

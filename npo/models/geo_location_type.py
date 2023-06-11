@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.geo_role_type import GeoRoleType
 from npo.models.gtaa_status_type import GtaaStatusType
 
@@ -11,7 +11,7 @@ class GeoLocationType:
     class Meta:
         name = "geoLocationType"
 
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -19,7 +19,7 @@ class GeoLocationType:
             "required": True,
         }
     )
-    scope_note: List[str] = field(
+    scope_note: list[str] = field(
         default_factory=list,
         metadata={
             "name": "scopeNote",
@@ -27,21 +27,21 @@ class GeoLocationType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    role: Optional[GeoRoleType] = field(
+    role: None | GeoRoleType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    gtaa_uri: Optional[str] = field(
+    gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
         }
     )
-    gtaa_status: Optional[GtaaStatusType] = field(
+    gtaa_status: None | GtaaStatusType = field(
         default=None,
         metadata={
             "name": "gtaaStatus",

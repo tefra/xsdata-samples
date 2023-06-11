@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.duration_range_matcher_type import DurationRangeMatcherType
 from npo.models.matcher_list import MatcherList
 
@@ -11,7 +11,7 @@ class DurationRangeMatcherListType(MatcherList):
     class Meta:
         name = "durationRangeMatcherListType"
 
-    matcher: List[DurationRangeMatcherType] = field(
+    matcher: list[DurationRangeMatcherType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

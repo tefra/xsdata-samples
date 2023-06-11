@@ -609,7 +609,7 @@ class ReferenceType:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",
@@ -635,7 +635,7 @@ class RetrievalMethodType:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",

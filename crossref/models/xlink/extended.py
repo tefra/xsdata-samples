@@ -17,10 +17,11 @@ class Extended:
     class Meta:
         name = "extended"
 
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.EXTENDED,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,

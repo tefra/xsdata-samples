@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from travelport.models.air import (
     AirExchangeEligibilityReq,
     AirExchangeEligibilityRsp,
@@ -72,14 +72,14 @@ class AirAvailabilitySearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirAvailabilitySearchPortTypeServiceInput.Header"] = field(
+    header: None | AirAvailabilitySearchPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirAvailabilitySearchPortTypeServiceInput.Body"] = field(
+    body: None | AirAvailabilitySearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -89,7 +89,7 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -100,7 +100,7 @@ class AirAvailabilitySearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        availability_search_req: Optional[AvailabilitySearchReq] = field(
+        availability_search_req: None | AvailabilitySearchReq = field(
             default=None,
             metadata={
                 "name": "AvailabilitySearchReq",
@@ -116,7 +116,7 @@ class AirAvailabilitySearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirAvailabilitySearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -126,7 +126,7 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        availability_search_rsp: Optional[AvailabilitySearchRsp] = field(
+        availability_search_rsp: None | AvailabilitySearchRsp = field(
             default=None,
             metadata={
                 "name": "AvailabilitySearchRsp",
@@ -134,7 +134,7 @@ class AirAvailabilitySearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirAvailabilitySearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -144,28 +144,28 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -175,7 +175,7 @@ class AirAvailabilitySearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -191,7 +191,7 @@ class AirExchangeEligibilityPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeEligibilityPortTypeServiceInput.Body"] = field(
+    body: None | AirExchangeEligibilityPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -201,7 +201,7 @@ class AirExchangeEligibilityPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_exchange_eligibility_req: Optional[AirExchangeEligibilityReq] = field(
+        air_exchange_eligibility_req: None | AirExchangeEligibilityReq = field(
             default=None,
             metadata={
                 "name": "AirExchangeEligibilityReq",
@@ -217,7 +217,7 @@ class AirExchangeEligibilityPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body"] = field(
+    body: None | AirExchangeEligibilityPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -227,7 +227,7 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_exchange_eligibility_rsp: Optional[AirExchangeEligibilityRsp] = field(
+        air_exchange_eligibility_rsp: None | AirExchangeEligibilityRsp = field(
             default=None,
             metadata={
                 "name": "AirExchangeEligibilityRsp",
@@ -235,7 +235,7 @@ class AirExchangeEligibilityPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -245,28 +245,28 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -276,7 +276,7 @@ class AirExchangeEligibilityPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -292,7 +292,7 @@ class AirExchangeMultiQuotePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeMultiQuotePortTypeServiceInput.Body"] = field(
+    body: None | AirExchangeMultiQuotePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -302,7 +302,7 @@ class AirExchangeMultiQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_exchange_multi_quote_req: Optional[AirExchangeMultiQuoteReq] = field(
+        air_exchange_multi_quote_req: None | AirExchangeMultiQuoteReq = field(
             default=None,
             metadata={
                 "name": "AirExchangeMultiQuoteReq",
@@ -318,7 +318,7 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body"] = field(
+    body: None | AirExchangeMultiQuotePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -328,7 +328,7 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_exchange_multi_quote_rsp: Optional[AirExchangeMultiQuoteRsp] = field(
+        air_exchange_multi_quote_rsp: None | AirExchangeMultiQuoteRsp = field(
             default=None,
             metadata={
                 "name": "AirExchangeMultiQuoteRsp",
@@ -336,7 +336,7 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -346,28 +346,28 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -377,7 +377,7 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -393,7 +393,7 @@ class AirExchangeProcessPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeProcessPortTypeServiceInput.Body"] = field(
+    body: None | AirExchangeProcessPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -403,7 +403,7 @@ class AirExchangeProcessPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_exchange_req: Optional[AirExchangeReq] = field(
+        air_exchange_req: None | AirExchangeReq = field(
             default=None,
             metadata={
                 "name": "AirExchangeReq",
@@ -419,7 +419,7 @@ class AirExchangeProcessPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeProcessPortTypeServiceOutput.Body"] = field(
+    body: None | AirExchangeProcessPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -429,7 +429,7 @@ class AirExchangeProcessPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_exchange_rsp: Optional[AirExchangeRsp] = field(
+        air_exchange_rsp: None | AirExchangeRsp = field(
             default=None,
             metadata={
                 "name": "AirExchangeRsp",
@@ -437,7 +437,7 @@ class AirExchangeProcessPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirExchangeProcessPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -447,28 +447,28 @@ class AirExchangeProcessPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirExchangeProcessPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirExchangeProcessPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -478,7 +478,7 @@ class AirExchangeProcessPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -494,7 +494,7 @@ class AirExchangeQuotePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeQuotePortTypeServiceInput.Body"] = field(
+    body: None | AirExchangeQuotePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -504,7 +504,7 @@ class AirExchangeQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_exchange_quote_req: Optional[AirExchangeQuoteReq] = field(
+        air_exchange_quote_req: None | AirExchangeQuoteReq = field(
             default=None,
             metadata={
                 "name": "AirExchangeQuoteReq",
@@ -520,7 +520,7 @@ class AirExchangeQuotePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeQuotePortTypeServiceOutput.Body"] = field(
+    body: None | AirExchangeQuotePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -530,7 +530,7 @@ class AirExchangeQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_exchange_quote_rsp: Optional[AirExchangeQuoteRsp] = field(
+        air_exchange_quote_rsp: None | AirExchangeQuoteRsp = field(
             default=None,
             metadata={
                 "name": "AirExchangeQuoteRsp",
@@ -538,7 +538,7 @@ class AirExchangeQuotePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirExchangeQuotePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -548,28 +548,28 @@ class AirExchangeQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -579,7 +579,7 @@ class AirExchangeQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -595,14 +595,14 @@ class AirExchangeTicketingPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirExchangeTicketingPortTypeServiceInput.Header"] = field(
+    header: None | AirExchangeTicketingPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirExchangeTicketingPortTypeServiceInput.Body"] = field(
+    body: None | AirExchangeTicketingPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -612,7 +612,7 @@ class AirExchangeTicketingPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -623,7 +623,7 @@ class AirExchangeTicketingPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_exchange_ticketing_req: Optional[AirExchangeTicketingReq] = field(
+        air_exchange_ticketing_req: None | AirExchangeTicketingReq = field(
             default=None,
             metadata={
                 "name": "AirExchangeTicketingReq",
@@ -639,7 +639,7 @@ class AirExchangeTicketingPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirExchangeTicketingPortTypeServiceOutput.Body"] = field(
+    body: None | AirExchangeTicketingPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -649,7 +649,7 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_exchange_ticketing_rsp: Optional[AirExchangeTicketingRsp] = field(
+        air_exchange_ticketing_rsp: None | AirExchangeTicketingRsp = field(
             default=None,
             metadata={
                 "name": "AirExchangeTicketingRsp",
@@ -657,7 +657,7 @@ class AirExchangeTicketingPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirExchangeTicketingPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -667,28 +667,28 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -698,7 +698,7 @@ class AirExchangeTicketingPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -714,14 +714,14 @@ class AirFareDisplayPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirFareDisplayPortTypeServiceInput.Header"] = field(
+    header: None | AirFareDisplayPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirFareDisplayPortTypeServiceInput.Body"] = field(
+    body: None | AirFareDisplayPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -731,7 +731,7 @@ class AirFareDisplayPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -742,7 +742,7 @@ class AirFareDisplayPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_fare_display_req: Optional[AirFareDisplayReq] = field(
+        air_fare_display_req: None | AirFareDisplayReq = field(
             default=None,
             metadata={
                 "name": "AirFareDisplayReq",
@@ -758,7 +758,7 @@ class AirFareDisplayPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirFareDisplayPortTypeServiceOutput.Body"] = field(
+    body: None | AirFareDisplayPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -768,7 +768,7 @@ class AirFareDisplayPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_fare_display_rsp: Optional[AirFareDisplayRsp] = field(
+        air_fare_display_rsp: None | AirFareDisplayRsp = field(
             default=None,
             metadata={
                 "name": "AirFareDisplayRsp",
@@ -776,7 +776,7 @@ class AirFareDisplayPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirFareDisplayPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -786,28 +786,28 @@ class AirFareDisplayPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirFareDisplayPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirFareDisplayPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -817,7 +817,7 @@ class AirFareDisplayPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -833,14 +833,14 @@ class AirFareRulesPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirFareRulesPortTypeServiceInput.Header"] = field(
+    header: None | AirFareRulesPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirFareRulesPortTypeServiceInput.Body"] = field(
+    body: None | AirFareRulesPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -850,7 +850,7 @@ class AirFareRulesPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -861,7 +861,7 @@ class AirFareRulesPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_fare_rules_req: Optional[AirFareRulesReq] = field(
+        air_fare_rules_req: None | AirFareRulesReq = field(
             default=None,
             metadata={
                 "name": "AirFareRulesReq",
@@ -877,7 +877,7 @@ class AirFareRulesPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirFareRulesPortTypeServiceOutput.Body"] = field(
+    body: None | AirFareRulesPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -887,7 +887,7 @@ class AirFareRulesPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_fare_rules_rsp: Optional[AirFareRulesRsp] = field(
+        air_fare_rules_rsp: None | AirFareRulesRsp = field(
             default=None,
             metadata={
                 "name": "AirFareRulesRsp",
@@ -895,7 +895,7 @@ class AirFareRulesPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirFareRulesPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -905,28 +905,28 @@ class AirFareRulesPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirFareRulesPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirFareRulesPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -936,7 +936,7 @@ class AirFareRulesPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -952,7 +952,7 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirLowFareSearchAsynchPortTypeServiceInput.Body"] = field(
+    body: None | AirLowFareSearchAsynchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -962,7 +962,7 @@ class AirLowFareSearchAsynchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        low_fare_search_asynch_req: Optional[LowFareSearchAsynchReq] = field(
+        low_fare_search_asynch_req: None | LowFareSearchAsynchReq = field(
             default=None,
             metadata={
                 "name": "LowFareSearchAsynchReq",
@@ -978,7 +978,7 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body"] = field(
+    body: None | AirLowFareSearchAsynchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -988,7 +988,7 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        low_fare_search_asynch_rsp: Optional[LowFareSearchAsynchRsp] = field(
+        low_fare_search_asynch_rsp: None | LowFareSearchAsynchRsp = field(
             default=None,
             metadata={
                 "name": "LowFareSearchAsynchRsp",
@@ -996,7 +996,7 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1006,28 +1006,28 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirLowFareSearchAsynchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1037,7 +1037,7 @@ class AirLowFareSearchAsynchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1053,14 +1053,14 @@ class AirLowFareSearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirLowFareSearchPortTypeServiceInput.Header"] = field(
+    header: None | AirLowFareSearchPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirLowFareSearchPortTypeServiceInput.Body"] = field(
+    body: None | AirLowFareSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1070,7 +1070,7 @@ class AirLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -1081,7 +1081,7 @@ class AirLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        low_fare_search_req: Optional[LowFareSearchReq] = field(
+        low_fare_search_req: None | LowFareSearchReq = field(
             default=None,
             metadata={
                 "name": "LowFareSearchReq",
@@ -1097,7 +1097,7 @@ class AirLowFareSearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirLowFareSearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirLowFareSearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1107,7 +1107,7 @@ class AirLowFareSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        low_fare_search_rsp: Optional[LowFareSearchRsp] = field(
+        low_fare_search_rsp: None | LowFareSearchRsp = field(
             default=None,
             metadata={
                 "name": "LowFareSearchRsp",
@@ -1115,7 +1115,7 @@ class AirLowFareSearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirLowFareSearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1125,28 +1125,28 @@ class AirLowFareSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirLowFareSearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1156,7 +1156,7 @@ class AirLowFareSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1172,7 +1172,7 @@ class AirMerchandisingDetailsPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirMerchandisingDetailsPortTypeServiceInput.Body"] = field(
+    body: None | AirMerchandisingDetailsPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1182,7 +1182,7 @@ class AirMerchandisingDetailsPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_merchandising_details_req: Optional[AirMerchandisingDetailsReq] = field(
+        air_merchandising_details_req: None | AirMerchandisingDetailsReq = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingDetailsReq",
@@ -1198,7 +1198,7 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body"] = field(
+    body: None | AirMerchandisingDetailsPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1208,7 +1208,7 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_merchandising_details_rsp: Optional[AirMerchandisingDetailsRsp] = field(
+        air_merchandising_details_rsp: None | AirMerchandisingDetailsRsp = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingDetailsRsp",
@@ -1216,7 +1216,7 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1226,28 +1226,28 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1257,7 +1257,7 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1273,7 +1273,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceInput.Body"] = field(
+    body: None | AirMerchandisingOfferAvailabilityPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1283,7 +1283,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_merchandising_offer_availability_req: Optional[AirMerchandisingOfferAvailabilityReq] = field(
+        air_merchandising_offer_availability_req: None | AirMerchandisingOfferAvailabilityReq = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingOfferAvailabilityReq",
@@ -1299,7 +1299,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body"] = field(
+    body: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1309,7 +1309,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_merchandising_offer_availability_rsp: Optional[AirMerchandisingOfferAvailabilityRsp] = field(
+        air_merchandising_offer_availability_rsp: None | AirMerchandisingOfferAvailabilityRsp = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingOfferAvailabilityRsp",
@@ -1317,7 +1317,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1327,28 +1327,28 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1358,7 +1358,7 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1374,7 +1374,7 @@ class AirPrePayPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirPrePayPortTypeServiceInput.Body"] = field(
+    body: None | AirPrePayPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1384,7 +1384,7 @@ class AirPrePayPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_pre_pay_req: Optional[AirPrePayReq] = field(
+        air_pre_pay_req: None | AirPrePayReq = field(
             default=None,
             metadata={
                 "name": "AirPrePayReq",
@@ -1400,7 +1400,7 @@ class AirPrePayPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirPrePayPortTypeServiceOutput.Body"] = field(
+    body: None | AirPrePayPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1410,7 +1410,7 @@ class AirPrePayPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_pre_pay_rsp: Optional[AirPrePayRsp] = field(
+        air_pre_pay_rsp: None | AirPrePayRsp = field(
             default=None,
             metadata={
                 "name": "AirPrePayRsp",
@@ -1418,7 +1418,7 @@ class AirPrePayPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirPrePayPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirPrePayPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1428,28 +1428,28 @@ class AirPrePayPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirPrePayPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirPrePayPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1459,7 +1459,7 @@ class AirPrePayPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1475,14 +1475,14 @@ class AirPricePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["AirPricePortTypeServiceInput.Header"] = field(
+    header: None | AirPricePortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["AirPricePortTypeServiceInput.Body"] = field(
+    body: None | AirPricePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1492,7 +1492,7 @@ class AirPricePortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -1503,7 +1503,7 @@ class AirPricePortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_price_req: Optional[AirPriceReq] = field(
+        air_price_req: None | AirPriceReq = field(
             default=None,
             metadata={
                 "name": "AirPriceReq",
@@ -1519,7 +1519,7 @@ class AirPricePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirPricePortTypeServiceOutput.Body"] = field(
+    body: None | AirPricePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1529,7 +1529,7 @@ class AirPricePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_price_rsp: Optional[AirPriceRsp] = field(
+        air_price_rsp: None | AirPriceRsp = field(
             default=None,
             metadata={
                 "name": "AirPriceRsp",
@@ -1537,7 +1537,7 @@ class AirPricePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirPricePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirPricePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1547,28 +1547,28 @@ class AirPricePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirPricePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirPricePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1578,7 +1578,7 @@ class AirPricePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1594,7 +1594,7 @@ class AirRefundQuotePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRefundQuotePortTypeServiceInput.Body"] = field(
+    body: None | AirRefundQuotePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1604,7 +1604,7 @@ class AirRefundQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_refund_quote_req: Optional[AirRefundQuoteReq] = field(
+        air_refund_quote_req: None | AirRefundQuoteReq = field(
             default=None,
             metadata={
                 "name": "AirRefundQuoteReq",
@@ -1620,7 +1620,7 @@ class AirRefundQuotePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRefundQuotePortTypeServiceOutput.Body"] = field(
+    body: None | AirRefundQuotePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1630,7 +1630,7 @@ class AirRefundQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_refund_quote_rsp: Optional[AirRefundQuoteRsp] = field(
+        air_refund_quote_rsp: None | AirRefundQuoteRsp = field(
             default=None,
             metadata={
                 "name": "AirRefundQuoteRsp",
@@ -1638,7 +1638,7 @@ class AirRefundQuotePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirRefundQuotePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1648,28 +1648,28 @@ class AirRefundQuotePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1679,7 +1679,7 @@ class AirRefundQuotePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1695,7 +1695,7 @@ class AirRefundTicketPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRefundTicketPortTypeServiceInput.Body"] = field(
+    body: None | AirRefundTicketPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1705,7 +1705,7 @@ class AirRefundTicketPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_refund_req: Optional[AirRefundReq] = field(
+        air_refund_req: None | AirRefundReq = field(
             default=None,
             metadata={
                 "name": "AirRefundReq",
@@ -1721,7 +1721,7 @@ class AirRefundTicketPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRefundTicketPortTypeServiceOutput.Body"] = field(
+    body: None | AirRefundTicketPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1731,7 +1731,7 @@ class AirRefundTicketPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_refund_rsp: Optional[AirRefundRsp] = field(
+        air_refund_rsp: None | AirRefundRsp = field(
             default=None,
             metadata={
                 "name": "AirRefundRsp",
@@ -1739,7 +1739,7 @@ class AirRefundTicketPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirRefundTicketPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1749,28 +1749,28 @@ class AirRefundTicketPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirRefundTicketPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirRefundTicketPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1780,7 +1780,7 @@ class AirRefundTicketPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1796,7 +1796,7 @@ class AirRepriceSearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRepriceSearchPortTypeServiceInput.Body"] = field(
+    body: None | AirRepriceSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1806,7 +1806,7 @@ class AirRepriceSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_reprice_req: Optional[AirRepriceReq] = field(
+        air_reprice_req: None | AirRepriceReq = field(
             default=None,
             metadata={
                 "name": "AirRepriceReq",
@@ -1822,7 +1822,7 @@ class AirRepriceSearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRepriceSearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirRepriceSearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1832,7 +1832,7 @@ class AirRepriceSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_reprice_rsp: Optional[AirRepriceRsp] = field(
+        air_reprice_rsp: None | AirRepriceRsp = field(
             default=None,
             metadata={
                 "name": "AirRepriceRsp",
@@ -1840,7 +1840,7 @@ class AirRepriceSearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirRepriceSearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1850,28 +1850,28 @@ class AirRepriceSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirRepriceSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirRepriceSearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1881,7 +1881,7 @@ class AirRepriceSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1897,7 +1897,7 @@ class AirRetrieveDocumentPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRetrieveDocumentPortTypeServiceInput.Body"] = field(
+    body: None | AirRetrieveDocumentPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1907,7 +1907,7 @@ class AirRetrieveDocumentPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_retrieve_document_req: Optional[AirRetrieveDocumentReq] = field(
+        air_retrieve_document_req: None | AirRetrieveDocumentReq = field(
             default=None,
             metadata={
                 "name": "AirRetrieveDocumentReq",
@@ -1923,7 +1923,7 @@ class AirRetrieveDocumentPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body"] = field(
+    body: None | AirRetrieveDocumentPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -1933,7 +1933,7 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_retrieve_document_rsp: Optional[AirRetrieveDocumentRsp] = field(
+        air_retrieve_document_rsp: None | AirRetrieveDocumentRsp = field(
             default=None,
             metadata={
                 "name": "AirRetrieveDocumentRsp",
@@ -1941,7 +1941,7 @@ class AirRetrieveDocumentPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirRetrieveDocumentPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -1951,28 +1951,28 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1982,7 +1982,7 @@ class AirRetrieveDocumentPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -1998,7 +1998,7 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRetrieveLowFareSearchPortTypeServiceInput.Body"] = field(
+    body: None | AirRetrieveLowFareSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2008,7 +2008,7 @@ class AirRetrieveLowFareSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        retrieve_low_fare_search_req: Optional[RetrieveLowFareSearchReq] = field(
+        retrieve_low_fare_search_req: None | RetrieveLowFareSearchReq = field(
             default=None,
             metadata={
                 "name": "RetrieveLowFareSearchReq",
@@ -2024,7 +2024,7 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirRetrieveLowFareSearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2034,7 +2034,7 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        retrieve_low_fare_search_rsp: Optional[RetrieveLowFareSearchRsp] = field(
+        retrieve_low_fare_search_rsp: None | RetrieveLowFareSearchRsp = field(
             default=None,
             metadata={
                 "name": "RetrieveLowFareSearchRsp",
@@ -2042,7 +2042,7 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2052,28 +2052,28 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirRetrieveLowFareSearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2083,7 +2083,7 @@ class AirRetrieveLowFareSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2099,7 +2099,7 @@ class AirScheduleSearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirScheduleSearchPortTypeServiceInput.Body"] = field(
+    body: None | AirScheduleSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2109,7 +2109,7 @@ class AirScheduleSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        schedule_search_req: Optional[ScheduleSearchReq] = field(
+        schedule_search_req: None | ScheduleSearchReq = field(
             default=None,
             metadata={
                 "name": "ScheduleSearchReq",
@@ -2125,7 +2125,7 @@ class AirScheduleSearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirScheduleSearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirScheduleSearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2135,7 +2135,7 @@ class AirScheduleSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        schedule_search_rsp: Optional[ScheduleSearchRsp] = field(
+        schedule_search_rsp: None | ScheduleSearchRsp = field(
             default=None,
             metadata={
                 "name": "ScheduleSearchRsp",
@@ -2143,7 +2143,7 @@ class AirScheduleSearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirScheduleSearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2153,28 +2153,28 @@ class AirScheduleSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2184,7 +2184,7 @@ class AirScheduleSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2200,7 +2200,7 @@ class AirTicketingPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirTicketingPortTypeServiceInput.Body"] = field(
+    body: None | AirTicketingPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2210,7 +2210,7 @@ class AirTicketingPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_ticketing_req: Optional[AirTicketingReq] = field(
+        air_ticketing_req: None | AirTicketingReq = field(
             default=None,
             metadata={
                 "name": "AirTicketingReq",
@@ -2226,7 +2226,7 @@ class AirTicketingPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirTicketingPortTypeServiceOutput.Body"] = field(
+    body: None | AirTicketingPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2236,7 +2236,7 @@ class AirTicketingPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_ticketing_rsp: Optional[AirTicketingRsp] = field(
+        air_ticketing_rsp: None | AirTicketingRsp = field(
             default=None,
             metadata={
                 "name": "AirTicketingRsp",
@@ -2244,7 +2244,7 @@ class AirTicketingPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirTicketingPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirTicketingPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2254,28 +2254,28 @@ class AirTicketingPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirTicketingPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirTicketingPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2285,7 +2285,7 @@ class AirTicketingPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2301,7 +2301,7 @@ class AirUpsellSearchPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirUpsellSearchPortTypeServiceInput.Body"] = field(
+    body: None | AirUpsellSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2311,7 +2311,7 @@ class AirUpsellSearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_upsell_search_req: Optional[AirUpsellSearchReq] = field(
+        air_upsell_search_req: None | AirUpsellSearchReq = field(
             default=None,
             metadata={
                 "name": "AirUpsellSearchReq",
@@ -2327,7 +2327,7 @@ class AirUpsellSearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirUpsellSearchPortTypeServiceOutput.Body"] = field(
+    body: None | AirUpsellSearchPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2337,7 +2337,7 @@ class AirUpsellSearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_upsell_search_rsp: Optional[AirUpsellSearchRsp] = field(
+        air_upsell_search_rsp: None | AirUpsellSearchRsp = field(
             default=None,
             metadata={
                 "name": "AirUpsellSearchRsp",
@@ -2345,7 +2345,7 @@ class AirUpsellSearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirUpsellSearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2355,28 +2355,28 @@ class AirUpsellSearchPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2386,7 +2386,7 @@ class AirUpsellSearchPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2402,7 +2402,7 @@ class AirVoidDocumentPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirVoidDocumentPortTypeServiceInput.Body"] = field(
+    body: None | AirVoidDocumentPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2412,7 +2412,7 @@ class AirVoidDocumentPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_void_document_req: Optional[AirVoidDocumentReq] = field(
+        air_void_document_req: None | AirVoidDocumentReq = field(
             default=None,
             metadata={
                 "name": "AirVoidDocumentReq",
@@ -2428,7 +2428,7 @@ class AirVoidDocumentPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["AirVoidDocumentPortTypeServiceOutput.Body"] = field(
+    body: None | AirVoidDocumentPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2438,7 +2438,7 @@ class AirVoidDocumentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_void_document_rsp: Optional[AirVoidDocumentRsp] = field(
+        air_void_document_rsp: None | AirVoidDocumentRsp = field(
             default=None,
             metadata={
                 "name": "AirVoidDocumentRsp",
@@ -2446,7 +2446,7 @@ class AirVoidDocumentPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | AirVoidDocumentPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2456,28 +2456,28 @@ class AirVoidDocumentPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2487,7 +2487,7 @@ class AirVoidDocumentPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2503,7 +2503,7 @@ class EmdissuancePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["EmdissuancePortTypeServiceInput.Body"] = field(
+    body: None | EmdissuancePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2513,7 +2513,7 @@ class EmdissuancePortTypeServiceInput:
 
     @dataclass
     class Body:
-        emdissuance_req: Optional[EmdissuanceReq] = field(
+        emdissuance_req: None | EmdissuanceReq = field(
             default=None,
             metadata={
                 "name": "EMDIssuanceReq",
@@ -2529,7 +2529,7 @@ class EmdissuancePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["EmdissuancePortTypeServiceOutput.Body"] = field(
+    body: None | EmdissuancePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2539,7 +2539,7 @@ class EmdissuancePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        emdissuance_rsp: Optional[EmdissuanceRsp] = field(
+        emdissuance_rsp: None | EmdissuanceRsp = field(
             default=None,
             metadata={
                 "name": "EMDIssuanceRsp",
@@ -2547,7 +2547,7 @@ class EmdissuancePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["EmdissuancePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | EmdissuancePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2557,28 +2557,28 @@ class EmdissuancePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["EmdissuancePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | EmdissuancePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2588,7 +2588,7 @@ class EmdissuancePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2604,7 +2604,7 @@ class EmdretrievePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["EmdretrievePortTypeServiceInput.Body"] = field(
+    body: None | EmdretrievePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2614,7 +2614,7 @@ class EmdretrievePortTypeServiceInput:
 
     @dataclass
     class Body:
-        emdretrieve_req: Optional[EmdretrieveReq] = field(
+        emdretrieve_req: None | EmdretrieveReq = field(
             default=None,
             metadata={
                 "name": "EMDRetrieveReq",
@@ -2630,7 +2630,7 @@ class EmdretrievePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["EmdretrievePortTypeServiceOutput.Body"] = field(
+    body: None | EmdretrievePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2640,7 +2640,7 @@ class EmdretrievePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        emdretrieve_rsp: Optional[EmdretrieveRsp] = field(
+        emdretrieve_rsp: None | EmdretrieveRsp = field(
             default=None,
             metadata={
                 "name": "EMDRetrieveRsp",
@@ -2648,7 +2648,7 @@ class EmdretrievePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["EmdretrievePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | EmdretrievePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2658,28 +2658,28 @@ class EmdretrievePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["EmdretrievePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | EmdretrievePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2689,7 +2689,7 @@ class EmdretrievePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2705,7 +2705,7 @@ class FlightDetailsPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightDetailsPortTypeServiceInput.Body"] = field(
+    body: None | FlightDetailsPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2715,7 +2715,7 @@ class FlightDetailsPortTypeServiceInput:
 
     @dataclass
     class Body:
-        flight_details_req: Optional[FlightDetailsReq] = field(
+        flight_details_req: None | FlightDetailsReq = field(
             default=None,
             metadata={
                 "name": "FlightDetailsReq",
@@ -2731,7 +2731,7 @@ class FlightDetailsPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightDetailsPortTypeServiceOutput.Body"] = field(
+    body: None | FlightDetailsPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2741,7 +2741,7 @@ class FlightDetailsPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        flight_details_rsp: Optional[FlightDetailsRsp] = field(
+        flight_details_rsp: None | FlightDetailsRsp = field(
             default=None,
             metadata={
                 "name": "FlightDetailsRsp",
@@ -2749,7 +2749,7 @@ class FlightDetailsPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | FlightDetailsPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2759,28 +2759,28 @@ class FlightDetailsPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["FlightDetailsPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | FlightDetailsPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2790,7 +2790,7 @@ class FlightDetailsPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2806,7 +2806,7 @@ class FlightInfoPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightInfoPortTypeServiceInput.Body"] = field(
+    body: None | FlightInfoPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2816,7 +2816,7 @@ class FlightInfoPortTypeServiceInput:
 
     @dataclass
     class Body:
-        flight_information_req: Optional[FlightInformationReq] = field(
+        flight_information_req: None | FlightInformationReq = field(
             default=None,
             metadata={
                 "name": "FlightInformationReq",
@@ -2832,7 +2832,7 @@ class FlightInfoPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightInfoPortTypeServiceOutput.Body"] = field(
+    body: None | FlightInfoPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2842,7 +2842,7 @@ class FlightInfoPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        flight_information_rsp: Optional[FlightInformationRsp] = field(
+        flight_information_rsp: None | FlightInformationRsp = field(
             default=None,
             metadata={
                 "name": "FlightInformationRsp",
@@ -2850,7 +2850,7 @@ class FlightInfoPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["FlightInfoPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | FlightInfoPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2860,28 +2860,28 @@ class FlightInfoPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["FlightInfoPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | FlightInfoPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2891,7 +2891,7 @@ class FlightInfoPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -2907,7 +2907,7 @@ class FlightTimeTablePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightTimeTablePortTypeServiceInput.Body"] = field(
+    body: None | FlightTimeTablePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2917,7 +2917,7 @@ class FlightTimeTablePortTypeServiceInput:
 
     @dataclass
     class Body:
-        flight_time_table_req: Optional[FlightTimeTableReq] = field(
+        flight_time_table_req: None | FlightTimeTableReq = field(
             default=None,
             metadata={
                 "name": "FlightTimeTableReq",
@@ -2933,7 +2933,7 @@ class FlightTimeTablePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["FlightTimeTablePortTypeServiceOutput.Body"] = field(
+    body: None | FlightTimeTablePortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -2943,7 +2943,7 @@ class FlightTimeTablePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        flight_time_table_rsp: Optional[FlightTimeTableRsp] = field(
+        flight_time_table_rsp: None | FlightTimeTableRsp = field(
             default=None,
             metadata={
                 "name": "FlightTimeTableRsp",
@@ -2951,7 +2951,7 @@ class FlightTimeTablePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | FlightTimeTablePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -2961,28 +2961,28 @@ class FlightTimeTablePortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["FlightTimeTablePortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | FlightTimeTablePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -2992,7 +2992,7 @@ class FlightTimeTablePortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",
@@ -3008,14 +3008,14 @@ class SeatMapPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: Optional["SeatMapPortTypeServiceInput.Header"] = field(
+    header: None | SeatMapPortTypeServiceInput.Header = field(
         default=None,
         metadata={
             "name": "Header",
             "type": "Element",
         }
     )
-    body: Optional["SeatMapPortTypeServiceInput.Body"] = field(
+    body: None | SeatMapPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -3025,7 +3025,7 @@ class SeatMapPortTypeServiceInput:
 
     @dataclass
     class Header:
-        session_context: Optional[SessionContext] = field(
+        session_context: None | SessionContext = field(
             default=None,
             metadata={
                 "name": "SessionContext",
@@ -3036,7 +3036,7 @@ class SeatMapPortTypeServiceInput:
 
     @dataclass
     class Body:
-        seat_map_req: Optional[SeatMapReq] = field(
+        seat_map_req: None | SeatMapReq = field(
             default=None,
             metadata={
                 "name": "SeatMapReq",
@@ -3052,7 +3052,7 @@ class SeatMapPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional["SeatMapPortTypeServiceOutput.Body"] = field(
+    body: None | SeatMapPortTypeServiceOutput.Body = field(
         default=None,
         metadata={
             "name": "Body",
@@ -3062,7 +3062,7 @@ class SeatMapPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        seat_map_rsp: Optional[SeatMapRsp] = field(
+        seat_map_rsp: None | SeatMapRsp = field(
             default=None,
             metadata={
                 "name": "SeatMapRsp",
@@ -3070,7 +3070,7 @@ class SeatMapPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v48_0",
             }
         )
-        fault: Optional["SeatMapPortTypeServiceOutput.Body.Fault"] = field(
+        fault: None | SeatMapPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -3080,28 +3080,28 @@ class SeatMapPortTypeServiceOutput:
 
         @dataclass
         class Fault:
-            faultcode: Optional[str] = field(
+            faultcode: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultstring: Optional[str] = field(
+            faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            faultactor: Optional[str] = field(
+            faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            detail: Optional["SeatMapPortTypeServiceOutput.Body.Fault.Detail"] = field(
+            detail: None | SeatMapPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -3111,7 +3111,7 @@ class SeatMapPortTypeServiceOutput:
 
             @dataclass
             class Detail:
-                error_info: Optional[ErrorInfo] = field(
+                error_info: None | ErrorInfo = field(
                     default=None,
                     metadata={
                         "name": "ErrorInfo",

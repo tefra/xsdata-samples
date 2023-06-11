@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClassAttributeInFrameStructure:
-    type: Optional[QName] = field(
+    type_value: Optional[QName] = field(
         default=None,
         metadata={
             "name": "Type",

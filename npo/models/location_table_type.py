@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.location_type import LocationType
 from npo.models.schedule_event_type import ScheduleEventType
 
@@ -11,14 +11,14 @@ class LocationTableType:
     class Meta:
         name = "locationTableType"
 
-    location: List[LocationType] = field(
+    location: list[LocationType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    schedule_event: List[ScheduleEventType] = field(
+    schedule_event: list[ScheduleEventType] = field(
         default_factory=list,
         metadata={
             "name": "scheduleEvent",

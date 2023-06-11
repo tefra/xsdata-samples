@@ -1119,8 +1119,9 @@ class StructuredReq:
         initiated.
     :ivar issued_by: This represents the person, organization or
         authority which issued the requirement.
-    :ivar type: This attribute allows to denote the type of requirement
-        to denote for example is it an "enhancement", "new feature" etc.
+    :ivar type_value: This attribute allows to denote the type of
+        requirement to denote for example is it an "enhancement", "new
+        feature" etc.
     :ivar importance: This allows to represent the importance of the
         requirement.
     :ivar description: Ths represents the general description of the
@@ -1277,7 +1278,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type: Optional[String] = field(
+    type_value: Optional[String] = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2737,7 +2738,7 @@ class ListType:
     :ivar keep_with_previous: This attribute denotes the pagination
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
-    :ivar type: The type of the list. Default is "UNNUMBER"
+    :ivar type_value: The type of the list. Default is "UNNUMBER"
     """
     class Meta:
         name = "LIST"
@@ -2803,7 +2804,7 @@ class ListType:
             "type": "Attribute",
         }
     )
-    type: Optional[ListEnumSimple] = field(
+    type_value: Optional[ListEnumSimple] = field(
         default=None,
         metadata={
             "name": "TYPE",

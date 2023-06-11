@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.subtitles_search_type import SubtitlesSearchType
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,7 +10,7 @@ class SubtitlesFormType:
     class Meta:
         name = "subtitlesFormType"
 
-    searches: Optional[SubtitlesSearchType] = field(
+    searches: None | SubtitlesSearchType = field(
         default=None,
         metadata={
             "type": "Element",

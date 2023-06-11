@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.geo_role_type import GeoRoleType
 from npo.models.match import Match
 from npo.models.owner_type_enum import OwnerTypeEnum
@@ -18,26 +18,26 @@ class GeoLocationSearchType:
             "required": True,
         }
     )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    role: Optional[GeoRoleType] = field(
+    role: None | GeoRoleType = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    gtaa_uri: Optional[str] = field(
+    gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

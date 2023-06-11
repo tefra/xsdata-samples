@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.text_facet_type import TextFacetType
 from npo.models.title_search_type import TitleSearchType
 
@@ -11,7 +11,7 @@ class MediaTitleFacetType(TextFacetType):
     class Meta:
         name = "mediaTitleFacetType"
 
-    sub_search: Optional[TitleSearchType] = field(
+    sub_search: None | TitleSearchType = field(
         default=None,
         metadata={
             "name": "subSearch",
@@ -19,7 +19,7 @@ class MediaTitleFacetType(TextFacetType):
             "namespace": "urn:vpro:api:2013",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

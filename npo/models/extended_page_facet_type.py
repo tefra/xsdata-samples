@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.pages_search_type import PagesSearchType
 from npo.models.text_facet_type import TextFacetType
 
@@ -11,14 +11,14 @@ class ExtendedPageFacetType(TextFacetType):
     class Meta:
         name = "extendedPageFacetType"
 
-    filter: Optional[PagesSearchType] = field(
+    filter: None | PagesSearchType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    case_sensitive: Optional[bool] = field(
+    case_sensitive: None | bool = field(
         default=None,
         metadata={
             "name": "caseSensitive",

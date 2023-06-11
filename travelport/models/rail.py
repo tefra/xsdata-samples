@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 from travelport.models.common import (
     BaseReservation,
@@ -37,7 +37,7 @@ class FareValidity:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_journey_ref: Optional[str] = field(
+    rail_journey_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailJourneyRef",
@@ -45,14 +45,14 @@ class FareValidity:
             "required": True,
         }
     )
-    not_valid_before: Optional[XmlDate] = field(
+    not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
         }
     )
-    not_valid_after: Optional[XmlDate] = field(
+    not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
@@ -94,7 +94,7 @@ class JourneyRemark:
             "required": True,
         }
     )
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
@@ -124,14 +124,14 @@ class OperatingCompany:
             "required": True,
         }
     )
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Attribute",
         }
     )
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -160,7 +160,7 @@ class RailAutoSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    seat_type: Optional[str] = field(
+    seat_type: None | str = field(
         default=None,
         metadata={
             "name": "SeatType",
@@ -170,7 +170,7 @@ class RailAutoSeatAssignment:
             "max_length": 255,
         }
     )
-    seat_value: Optional[str] = field(
+    seat_value: None | str = field(
         default=None,
         metadata={
             "name": "SeatValue",
@@ -180,14 +180,14 @@ class RailAutoSeatAssignment:
             "max_length": 255,
         }
     )
-    rail_segment_ref: Optional[str] = field(
+    rail_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -208,7 +208,7 @@ class RailAvailInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    class_code: Optional[str] = field(
+    class_code: None | str = field(
         default=None,
         metadata={
             "name": "ClassCode",
@@ -217,14 +217,14 @@ class RailAvailInfo:
             "max_length": 8,
         }
     )
-    quantity: Optional[int] = field(
+    quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -252,7 +252,7 @@ class RailBookingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_ref: Optional[str] = field(
+    rail_fare_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailFareRef",
@@ -260,7 +260,7 @@ class RailBookingInfo:
             "required": True,
         }
     )
-    rail_journey_ref: Optional[str] = field(
+    rail_journey_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailJourneyRef",
@@ -297,49 +297,49 @@ class RailExchangeInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    refund_amount: Optional[str] = field(
+    refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
         }
     )
-    cancellation_fee: Optional[str] = field(
+    cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "CancellationFee",
             "type": "Attribute",
         }
     )
-    exchange_amount: Optional[str] = field(
+    exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
         }
     )
-    approximate_refund_amount: Optional[str] = field(
+    approximate_refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateRefundAmount",
             "type": "Attribute",
         }
     )
-    approximate_cancellation_fee: Optional[str] = field(
+    approximate_cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateCancellationFee",
             "type": "Attribute",
         }
     )
-    approximate_exchange_amount: Optional[str] = field(
+    approximate_exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateExchangeAmount",
             "type": "Attribute",
         }
     )
-    retain_amount: Optional[str] = field(
+    retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
@@ -357,7 +357,7 @@ class RailFareIdref:
         name = "RailFareIDRef"
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -376,7 +376,7 @@ class RailFareNoteRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -394,7 +394,7 @@ class RailFareRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -432,7 +432,7 @@ class RailInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -441,7 +441,7 @@ class RailInfo:
             "white_space": "collapse",
         }
     )
-    rail_loc_origin: Optional[str] = field(
+    rail_loc_origin: None | str = field(
         default=None,
         metadata={
             "name": "RailLocOrigin",
@@ -451,7 +451,7 @@ class RailInfo:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -460,7 +460,7 @@ class RailInfo:
             "white_space": "collapse",
         }
     )
-    rail_loc_destination: Optional[str] = field(
+    rail_loc_destination: None | str = field(
         default=None,
         metadata={
             "name": "RailLocDestination",
@@ -470,7 +470,7 @@ class RailInfo:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -478,14 +478,14 @@ class RailInfo:
             "required": True,
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    train_number: Optional[str] = field(
+    train_number: None | str = field(
         default=None,
         metadata={
             "name": "TrainNumber",
@@ -495,7 +495,7 @@ class RailInfo:
             "max_length": 8,
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -505,7 +505,7 @@ class RailInfo:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -525,7 +525,7 @@ class RailJourneyRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -555,42 +555,42 @@ class RailRefundInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    refund_amount: Optional[str] = field(
+    refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
         }
     )
-    cancellation_fee: Optional[str] = field(
+    cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "CancellationFee",
             "type": "Attribute",
         }
     )
-    refund: Optional[bool] = field(
+    refund: None | bool = field(
         default=None,
         metadata={
             "name": "Refund",
             "type": "Attribute",
         }
     )
-    retain: Optional[bool] = field(
+    retain: None | bool = field(
         default=None,
         metadata={
             "name": "Retain",
             "type": "Attribute",
         }
     )
-    retain_amount: Optional[str] = field(
+    retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
             "type": "Attribute",
         }
     )
-    net_amount: Optional[str] = field(
+    net_amount: None | str = field(
         default=None,
         metadata={
             "name": "NetAmount",
@@ -607,7 +607,7 @@ class RailSegmentRef:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -643,7 +643,7 @@ class RailSpecificSeatAssignment:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    coach_label: Optional[str] = field(
+    coach_label: None | str = field(
         default=None,
         metadata={
             "name": "CoachLabel",
@@ -651,7 +651,7 @@ class RailSpecificSeatAssignment:
             "required": True,
         }
     )
-    place_label: Optional[str] = field(
+    place_label: None | str = field(
         default=None,
         metadata={
             "name": "PlaceLabel",
@@ -659,7 +659,7 @@ class RailSpecificSeatAssignment:
             "required": True,
         }
     )
-    assignment: Optional[str] = field(
+    assignment: None | str = field(
         default=None,
         metadata={
             "name": "Assignment",
@@ -667,7 +667,7 @@ class RailSpecificSeatAssignment:
             "required": True,
         }
     )
-    rail_segment_ref: Optional[str] = field(
+    rail_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailSegmentRef",
@@ -675,7 +675,7 @@ class RailSpecificSeatAssignment:
             "required": True,
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -695,7 +695,7 @@ class RailSupplier:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    code: Optional[str] = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -736,14 +736,14 @@ class TicketAdvisory:
             "max_length": 500,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
         }
     )
-    language_code: Optional[str] = field(
+    language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
@@ -844,7 +844,7 @@ class Characteristic:
             "type": "Attribute",
         }
     )
-    class_value: Optional[TypeCoachClassType] = field(
+    class_value: None | TypeCoachClassType = field(
         default=None,
         metadata={
             "name": "Class",
@@ -871,7 +871,7 @@ class RailFareComponent:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    discount: List["RailFareComponent.Discount"] = field(
+    discount: list[RailFareComponent.Discount] = field(
         default_factory=list,
         metadata={
             "name": "Discount",
@@ -879,7 +879,7 @@ class RailFareComponent:
             "max_occurs": 5,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -887,21 +887,21 @@ class RailFareComponent:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    age: Optional[int] = field(
+    age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
         }
     )
-    passenger_type_code: Optional[str] = field(
+    passenger_type_code: None | str = field(
         default=None,
         metadata={
             "name": "PassengerTypeCode",
@@ -910,14 +910,14 @@ class RailFareComponent:
             "max_length": 5,
         }
     )
-    supplier_passenger_type: Optional[str] = field(
+    supplier_passenger_type: None | str = field(
         default=None,
         metadata={
             "name": "SupplierPassengerType",
             "type": "Attribute",
         }
     )
-    quantity: Optional[int] = field(
+    quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -927,7 +927,7 @@ class RailFareComponent:
 
     @dataclass
     class Discount:
-        discount_card: List[DiscountCard] = field(
+        discount_card: list[DiscountCard] = field(
             default_factory=list,
             metadata={
                 "name": "DiscountCard",
@@ -937,7 +937,7 @@ class RailFareComponent:
                 "max_occurs": 9,
             }
         )
-        key: Optional[str] = field(
+        key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
@@ -972,7 +972,7 @@ class RailFareId:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -980,21 +980,21 @@ class RailFareId:
             "required": True,
         }
     )
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -1031,7 +1031,7 @@ class RailFareNote:
             "required": True,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -1039,7 +1039,7 @@ class RailFareNote:
             "required": True,
         }
     )
-    note_name: Optional[str] = field(
+    note_name: None | str = field(
         default=None,
         metadata={
             "name": "NoteName",
@@ -1047,14 +1047,14 @@ class RailFareNote:
             "required": True,
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -1068,21 +1068,21 @@ class RailLegModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    permitted_connection_points: Optional["RailLegModifiers.PermittedConnectionPoints"] = field(
+    permitted_connection_points: None | RailLegModifiers.PermittedConnectionPoints = field(
         default=None,
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
         }
     )
-    prohibited_connection_points: Optional["RailLegModifiers.ProhibitedConnectionPoints"] = field(
+    prohibited_connection_points: None | RailLegModifiers.ProhibitedConnectionPoints = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",
             "type": "Element",
         }
     )
-    class_value: Optional[str] = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "Class",
@@ -1092,7 +1092,7 @@ class RailLegModifiers:
 
     @dataclass
     class PermittedConnectionPoints:
-        connection_point: List[ConnectionPoint] = field(
+        connection_point: list[ConnectionPoint] = field(
             default_factory=list,
             metadata={
                 "name": "ConnectionPoint",
@@ -1105,7 +1105,7 @@ class RailLegModifiers:
 
     @dataclass
     class ProhibitedConnectionPoints:
-        connection_point: List[ConnectionPoint] = field(
+        connection_point: list[ConnectionPoint] = field(
             default_factory=list,
             metadata={
                 "name": "ConnectionPoint",
@@ -1138,7 +1138,7 @@ class RailPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    discount_card: List[DiscountCard] = field(
+    discount_card: list[DiscountCard] = field(
         default_factory=list,
         metadata={
             "name": "DiscountCard",
@@ -1161,7 +1161,7 @@ class RailPricingModifiers:
             "type": "Attribute",
         }
     )
-    currency_type: Optional[str] = field(
+    currency_type: None | str = field(
         default=None,
         metadata={
             "name": "CurrencyType",
@@ -1169,7 +1169,7 @@ class RailPricingModifiers:
             "length": 3,
         }
     )
-    rail_search_type: Optional[str] = field(
+    rail_search_type: None | str = field(
         default=None,
         metadata={
             "name": "RailSearchType",
@@ -1195,7 +1195,7 @@ class RailSearchModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    preferred_suppliers: Optional["RailSearchModifiers.PreferredSuppliers"] = field(
+    preferred_suppliers: None | RailSearchModifiers.PreferredSuppliers = field(
         default=None,
         metadata={
             "name": "PreferredSuppliers",
@@ -1211,14 +1211,14 @@ class RailSearchModifiers:
             "max_inclusive": 3,
         }
     )
-    direction: Optional[TypeRailDirection] = field(
+    direction: None | TypeRailDirection = field(
         default=None,
         metadata={
             "name": "Direction",
             "type": "Attribute",
         }
     )
-    class_value: Optional[str] = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "Class",
@@ -1235,7 +1235,7 @@ class RailSearchModifiers:
 
     @dataclass
     class PreferredSuppliers:
-        rail_supplier: List[RailSupplier] = field(
+        rail_supplier: list[RailSupplier] = field(
             default_factory=list,
             metadata={
                 "name": "RailSupplier",
@@ -1257,7 +1257,7 @@ class RailSegmentInfo:
     ----------
     value:
     category: Supplier specific category.
-    type: Either Extra for ExtraSegmentInfo or Vendor for
+    type_value: Either Extra for ExtraSegmentInfo or Vendor for
         VendorMessages.
     """
     class Meta:
@@ -1269,14 +1269,14 @@ class RailSegmentInfo:
             "required": True,
         }
     )
-    category: Optional[str] = field(
+    category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
         }
     )
-    type: Optional[TypeRailSegmentInfo] = field(
+    type_value: None | TypeRailSegmentInfo = field(
         default=None,
         metadata={
             "name": "Type",
@@ -1306,7 +1306,7 @@ class RailTicketInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_journey_ref: List[RailJourneyRef] = field(
+    rail_journey_ref: list[RailJourneyRef] = field(
         default_factory=list,
         metadata={
             "name": "RailJourneyRef",
@@ -1314,7 +1314,7 @@ class RailTicketInfo:
             "max_occurs": 999,
         }
     )
-    ticket_advisory: List[TicketAdvisory] = field(
+    ticket_advisory: list[TicketAdvisory] = field(
         default_factory=list,
         metadata={
             "name": "TicketAdvisory",
@@ -1322,7 +1322,7 @@ class RailTicketInfo:
             "max_occurs": 10,
         }
     )
-    number: Optional[str] = field(
+    number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
@@ -1332,7 +1332,7 @@ class RailTicketInfo:
             "max_length": 19,
         }
     )
-    issue_location: Optional[str] = field(
+    issue_location: None | str = field(
         default=None,
         metadata={
             "name": "IssueLocation",
@@ -1341,7 +1341,7 @@ class RailTicketInfo:
             "max_length": 128,
         }
     )
-    ticket_status: Optional[str] = field(
+    ticket_status: None | str = field(
         default=None,
         metadata={
             "name": "TicketStatus",
@@ -1350,7 +1350,7 @@ class RailTicketInfo:
             "max_length": 255,
         }
     )
-    ticket_form_type: Optional[str] = field(
+    ticket_form_type: None | str = field(
         default=None,
         metadata={
             "name": "TicketFormType",
@@ -1359,7 +1359,7 @@ class RailTicketInfo:
             "max_length": 255,
         }
     )
-    traffic_type: Optional[str] = field(
+    traffic_type: None | str = field(
         default=None,
         metadata={
             "name": "TrafficType",
@@ -1368,14 +1368,14 @@ class RailTicketInfo:
             "max_length": 255,
         }
     )
-    issued_date: Optional[XmlDateTime] = field(
+    issued_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssuedDate",
             "type": "Attribute",
         }
     )
-    ticket_type: Optional[str] = field(
+    ticket_type: None | str = field(
         default=None,
         metadata={
             "name": "TicketType",
@@ -1384,7 +1384,7 @@ class RailTicketInfo:
             "max_length": 255,
         }
     )
-    booking_traveler_ref: Optional[str] = field(
+    booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
@@ -1407,14 +1407,14 @@ class Coach:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    characteristic: Optional[Characteristic] = field(
+    characteristic: None | Characteristic = field(
         default=None,
         metadata={
             "name": "Characteristic",
             "type": "Element",
         }
     )
-    remark: List[Remark] = field(
+    remark: list[Remark] = field(
         default_factory=list,
         metadata={
             "name": "Remark",
@@ -1423,7 +1423,7 @@ class Coach:
             "max_occurs": 999,
         }
     )
-    coach_number: Optional[str] = field(
+    coach_number: None | str = field(
         default=None,
         metadata={
             "name": "CoachNumber",
@@ -1488,7 +1488,7 @@ class RailFare:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_note_ref: List[RailFareNoteRef] = field(
+    rail_fare_note_ref: list[RailFareNoteRef] = field(
         default_factory=list,
         metadata={
             "name": "RailFareNoteRef",
@@ -1496,7 +1496,7 @@ class RailFare:
             "max_occurs": 999,
         }
     )
-    rail_fare_id: List[RailFareId] = field(
+    rail_fare_id: list[RailFareId] = field(
         default_factory=list,
         metadata={
             "name": "RailFareID",
@@ -1504,7 +1504,7 @@ class RailFare:
             "max_occurs": 999,
         }
     )
-    rail_fare_idref: List[RailFareIdref] = field(
+    rail_fare_idref: list[RailFareIdref] = field(
         default_factory=list,
         metadata={
             "name": "RailFareIDRef",
@@ -1512,7 +1512,7 @@ class RailFare:
             "max_occurs": 999,
         }
     )
-    fare_validity: List[FareValidity] = field(
+    fare_validity: list[FareValidity] = field(
         default_factory=list,
         metadata={
             "name": "FareValidity",
@@ -1520,7 +1520,7 @@ class RailFare:
             "max_occurs": 999,
         }
     )
-    host_token: Optional[HostToken] = field(
+    host_token: None | HostToken = field(
         default=None,
         metadata={
             "name": "HostToken",
@@ -1528,7 +1528,7 @@ class RailFare:
             "namespace": "http://www.travelport.com/schema/common_v48_0",
         }
     )
-    ful_fillment_type: List[str] = field(
+    ful_fillment_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "FulFillmentType",
@@ -1538,7 +1538,7 @@ class RailFare:
             "max_length": 255,
         }
     )
-    rail_fare_component: List[RailFareComponent] = field(
+    rail_fare_component: list[RailFareComponent] = field(
         default_factory=list,
         metadata={
             "name": "RailFareComponent",
@@ -1546,7 +1546,7 @@ class RailFare:
             "max_occurs": 99,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -1554,14 +1554,14 @@ class RailFare:
             "required": True,
         }
     )
-    fare_basis: Optional[str] = field(
+    fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -1571,7 +1571,7 @@ class RailFare:
             "max_length": 128,
         }
     )
-    passenger_type_code: Optional[str] = field(
+    passenger_type_code: None | str = field(
         default=None,
         metadata={
             "name": "PassengerTypeCode",
@@ -1580,7 +1580,7 @@ class RailFare:
             "max_length": 5,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -1589,7 +1589,7 @@ class RailFare:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -1598,7 +1598,7 @@ class RailFare:
             "white_space": "collapse",
         }
     )
-    effective_date: Optional[str] = field(
+    effective_date: None | str = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -1606,28 +1606,28 @@ class RailFare:
             "required": True,
         }
     )
-    amount: Optional[str] = field(
+    amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
         }
     )
-    route_description: Optional[str] = field(
+    route_description: None | str = field(
         default=None,
         metadata={
             "name": "RouteDescription",
             "type": "Attribute",
         }
     )
-    ticket_type_code: Optional[str] = field(
+    ticket_type_code: None | str = field(
         default=None,
         metadata={
             "name": "TicketTypeCode",
             "type": "Attribute",
         }
     )
-    fare_reference: Optional[str] = field(
+    fare_reference: None | str = field(
         default=None,
         metadata={
             "name": "FareReference",
@@ -1643,35 +1643,35 @@ class RailFare:
             "type": "Attribute",
         }
     )
-    origin_station_name: Optional[str] = field(
+    origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
         }
     )
-    destination_station_name: Optional[str] = field(
+    destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
         }
     )
-    reservation_required: Optional[bool] = field(
+    reservation_required: None | bool = field(
         default=None,
         metadata={
             "name": "ReservationRequired",
             "type": "Attribute",
         }
     )
-    journey_direction: Optional[TypeJourneyDirection] = field(
+    journey_direction: None | TypeJourneyDirection = field(
         default=None,
         metadata={
             "name": "JourneyDirection",
             "type": "Attribute",
         }
     )
-    rail_loc_origin: Optional[str] = field(
+    rail_loc_origin: None | str = field(
         default=None,
         metadata={
             "name": "RailLocOrigin",
@@ -1681,7 +1681,7 @@ class RailFare:
             "white_space": "collapse",
         }
     )
-    rail_loc_destination: Optional[str] = field(
+    rail_loc_destination: None | str = field(
         default=None,
         metadata={
             "name": "RailLocDestination",
@@ -1691,14 +1691,14 @@ class RailFare:
             "white_space": "collapse",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -1716,7 +1716,7 @@ class RailFareIdlist:
         name = "RailFareIDList"
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_id: List[RailFareId] = field(
+    rail_fare_id: list[RailFareId] = field(
         default_factory=list,
         metadata={
             "name": "RailFareID",
@@ -1735,7 +1735,7 @@ class RailFareNoteList:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare_note: List[RailFareNote] = field(
+    rail_fare_note: list[RailFareNote] = field(
         default_factory=list,
         metadata={
             "name": "RailFareNote",
@@ -1791,7 +1791,7 @@ class RailSegment(Segment):
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_segment_info: List[RailSegmentInfo] = field(
+    rail_segment_info: list[RailSegmentInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailSegmentInfo",
@@ -1799,14 +1799,14 @@ class RailSegment(Segment):
             "max_occurs": 999,
         }
     )
-    operating_company: Optional[OperatingCompany] = field(
+    operating_company: None | OperatingCompany = field(
         default=None,
         metadata={
             "name": "OperatingCompany",
             "type": "Element",
         }
     )
-    rail_avail_info: List[RailAvailInfo] = field(
+    rail_avail_info: list[RailAvailInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailAvailInfo",
@@ -1814,7 +1814,7 @@ class RailSegment(Segment):
             "max_occurs": 999,
         }
     )
-    ful_fillment_type: List[str] = field(
+    ful_fillment_type: list[str] = field(
         default_factory=list,
         metadata={
             "name": "FulFillmentType",
@@ -1824,7 +1824,7 @@ class RailSegment(Segment):
             "max_length": 255,
         }
     )
-    train_number: Optional[str] = field(
+    train_number: None | str = field(
         default=None,
         metadata={
             "name": "TrainNumber",
@@ -1833,7 +1833,7 @@ class RailSegment(Segment):
             "max_length": 8,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -1842,7 +1842,7 @@ class RailSegment(Segment):
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -1851,7 +1851,7 @@ class RailSegment(Segment):
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -1859,28 +1859,28 @@ class RailSegment(Segment):
             "required": True,
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    origin_station_name: Optional[str] = field(
+    origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
         }
     )
-    destination_station_name: Optional[str] = field(
+    destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
         }
     )
-    rail_loc_origin: Optional[str] = field(
+    rail_loc_origin: None | str = field(
         default=None,
         metadata={
             "name": "RailLocOrigin",
@@ -1890,7 +1890,7 @@ class RailSegment(Segment):
             "white_space": "collapse",
         }
     )
-    rail_loc_destination: Optional[str] = field(
+    rail_loc_destination: None | str = field(
         default=None,
         metadata={
             "name": "RailLocDestination",
@@ -1900,14 +1900,14 @@ class RailSegment(Segment):
             "white_space": "collapse",
         }
     )
-    train_type: Optional[str] = field(
+    train_type: None | str = field(
         default=None,
         metadata={
             "name": "TrainType",
             "type": "Attribute",
         }
     )
-    train_type_code: Optional[str] = field(
+    train_type_code: None | str = field(
         default=None,
         metadata={
             "name": "TrainTypeCode",
@@ -1916,49 +1916,49 @@ class RailSegment(Segment):
             "max_length": 8,
         }
     )
-    transport_mode: Optional[TypeTransportMode] = field(
+    transport_mode: None | TypeTransportMode = field(
         default=None,
         metadata={
             "name": "TransportMode",
             "type": "Attribute",
         }
     )
-    seat_assignable: Optional[bool] = field(
+    seat_assignable: None | bool = field(
         default=None,
         metadata={
             "name": "SeatAssignable",
             "type": "Attribute",
         }
     )
-    transport_code: Optional[str] = field(
+    transport_code: None | str = field(
         default=None,
         metadata={
             "name": "TransportCode",
             "type": "Attribute",
         }
     )
-    reservation_required: Optional[bool] = field(
+    reservation_required: None | bool = field(
         default=None,
         metadata={
             "name": "ReservationRequired",
             "type": "Attribute",
         }
     )
-    travel_time: Optional[int] = field(
+    travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
         }
     )
-    host_token_ref: Optional[str] = field(
+    host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
         }
     )
-    cabin_class: Optional[str] = field(
+    cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
@@ -1967,7 +1967,7 @@ class RailSegment(Segment):
             "max_length": 128,
         }
     )
-    class_code: Optional[str] = field(
+    class_code: None | str = field(
         default=None,
         metadata={
             "name": "ClassCode",
@@ -1986,7 +1986,7 @@ class RailFareList:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare: List[RailFare] = field(
+    rail_fare: list[RailFare] = field(
         default_factory=list,
         metadata={
             "name": "RailFare",
@@ -2073,7 +2073,7 @@ class RailJourney:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_segment: List[RailSegment] = field(
+    rail_segment: list[RailSegment] = field(
         default_factory=list,
         metadata={
             "name": "RailSegment",
@@ -2081,7 +2081,7 @@ class RailJourney:
             "max_occurs": 999,
         }
     )
-    rail_segment_ref: List[RailSegmentRef] = field(
+    rail_segment_ref: list[RailSegmentRef] = field(
         default_factory=list,
         metadata={
             "name": "RailSegmentRef",
@@ -2089,7 +2089,7 @@ class RailJourney:
             "max_occurs": 999,
         }
     )
-    journey_remark: List[JourneyRemark] = field(
+    journey_remark: list[JourneyRemark] = field(
         default_factory=list,
         metadata={
             "name": "JourneyRemark",
@@ -2097,7 +2097,7 @@ class RailJourney:
             "max_occurs": 999,
         }
     )
-    host_token: List[HostToken] = field(
+    host_token: list[HostToken] = field(
         default_factory=list,
         metadata={
             "name": "HostToken",
@@ -2106,7 +2106,7 @@ class RailJourney:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2114,7 +2114,7 @@ class RailJourney:
             "required": True,
         }
     )
-    origin: Optional[str] = field(
+    origin: None | str = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -2123,7 +2123,7 @@ class RailJourney:
             "white_space": "collapse",
         }
     )
-    destination: Optional[str] = field(
+    destination: None | str = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -2132,7 +2132,7 @@ class RailJourney:
             "white_space": "collapse",
         }
     )
-    departure_time: Optional[str] = field(
+    departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -2140,28 +2140,28 @@ class RailJourney:
             "required": True,
         }
     )
-    arrival_time: Optional[str] = field(
+    arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
         }
     )
-    origin_station_name: Optional[str] = field(
+    origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
         }
     )
-    destination_station_name: Optional[str] = field(
+    destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
         }
     )
-    rail_loc_origin: Optional[str] = field(
+    rail_loc_origin: None | str = field(
         default=None,
         metadata={
             "name": "RailLocOrigin",
@@ -2171,7 +2171,7 @@ class RailJourney:
             "white_space": "collapse",
         }
     )
-    rail_loc_destination: Optional[str] = field(
+    rail_loc_destination: None | str = field(
         default=None,
         metadata={
             "name": "RailLocDestination",
@@ -2181,7 +2181,7 @@ class RailJourney:
             "white_space": "collapse",
         }
     )
-    route_description: Optional[str] = field(
+    route_description: None | str = field(
         default=None,
         metadata={
             "name": "RouteDescription",
@@ -2189,91 +2189,91 @@ class RailJourney:
             "max_length": 255,
         }
     )
-    journey_direction: Optional[TypeJourneyDirection] = field(
+    journey_direction: None | TypeJourneyDirection = field(
         default=None,
         metadata={
             "name": "JourneyDirection",
             "type": "Attribute",
         }
     )
-    journey_duration: Optional[int] = field(
+    journey_duration: None | int = field(
         default=None,
         metadata={
             "name": "JourneyDuration",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -2282,7 +2282,7 @@ class RailJourney:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -2291,35 +2291,35 @@ class RailJourney:
             "max_length": 5,
         }
     )
-    status: Optional[str] = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
         }
     )
-    provider_reservation_info_ref: Optional[str] = field(
+    provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    passive_provider_reservation_info_ref: Optional[str] = field(
+    passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
         }
     )
-    travel_order: Optional[int] = field(
+    travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
         }
     )
-    route_reference: Optional[str] = field(
+    route_reference: None | str = field(
         default=None,
         metadata={
             "name": "RouteReference",
@@ -2328,21 +2328,21 @@ class RailJourney:
             "max_length": 255,
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
         }
     )
-    operation: Optional[str] = field(
+    operation: None | str = field(
         default=None,
         metadata={
             "name": "Operation",
@@ -2398,7 +2398,7 @@ class RailPricingInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_fare: List[RailFare] = field(
+    rail_fare: list[RailFare] = field(
         default_factory=list,
         metadata={
             "name": "RailFare",
@@ -2406,7 +2406,7 @@ class RailPricingInfo:
             "max_occurs": 999,
         }
     )
-    rail_fare_ref: List[RailFareRef] = field(
+    rail_fare_ref: list[RailFareRef] = field(
         default_factory=list,
         metadata={
             "name": "RailFareRef",
@@ -2414,7 +2414,7 @@ class RailPricingInfo:
             "max_occurs": 999,
         }
     )
-    rail_booking_info: List[RailBookingInfo] = field(
+    rail_booking_info: list[RailBookingInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailBookingInfo",
@@ -2422,7 +2422,7 @@ class RailPricingInfo:
             "max_occurs": 999,
         }
     )
-    passenger_type: List[TypePassengerType] = field(
+    passenger_type: list[TypePassengerType] = field(
         default_factory=list,
         metadata={
             "name": "PassengerType",
@@ -2430,7 +2430,7 @@ class RailPricingInfo:
             "max_occurs": 999,
         }
     )
-    booking_traveler_ref: List[BookingTravelerRef] = field(
+    booking_traveler_ref: list[BookingTravelerRef] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -2439,7 +2439,7 @@ class RailPricingInfo:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2447,98 +2447,98 @@ class RailPricingInfo:
             "required": True,
         }
     )
-    exchange_amount: Optional[str] = field(
+    exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
         }
     )
-    approximate_exchange_amount: Optional[str] = field(
+    approximate_exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateExchangeAmount",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    el_stat: Optional[TypeElementStatus] = field(
+    el_stat: None | TypeElementStatus = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
         }
     )
-    key_override: Optional[bool] = field(
+    key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
@@ -2555,7 +2555,7 @@ class RailSegmentList:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_segment: List[RailSegment] = field(
+    rail_segment: list[RailSegment] = field(
         default_factory=list,
         metadata={
             "name": "RailSegment",
@@ -2573,7 +2573,7 @@ class RailJourneyList:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_journey: List[RailJourney] = field(
+    rail_journey: list[RailJourney] = field(
         default_factory=list,
         metadata={
             "name": "RailJourney",
@@ -2603,7 +2603,7 @@ class RailReservation(BaseReservation):
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    booking_traveler_ref: List[BookingTravelerRef] = field(
+    booking_traveler_ref: list[BookingTravelerRef] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
@@ -2613,7 +2613,7 @@ class RailReservation(BaseReservation):
             "max_occurs": 9,
         }
     )
-    rail_journey: List[RailJourney] = field(
+    rail_journey: list[RailJourney] = field(
         default_factory=list,
         metadata={
             "name": "RailJourney",
@@ -2622,7 +2622,7 @@ class RailReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    rail_pricing_info: List[RailPricingInfo] = field(
+    rail_pricing_info: list[RailPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailPricingInfo",
@@ -2630,7 +2630,7 @@ class RailReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    payment: List[Payment] = field(
+    payment: list[Payment] = field(
         default_factory=list,
         metadata={
             "name": "Payment",
@@ -2639,7 +2639,7 @@ class RailReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    rail_ticket_info: List[RailTicketInfo] = field(
+    rail_ticket_info: list[RailTicketInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailTicketInfo",
@@ -2647,14 +2647,14 @@ class RailReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    rail_fare_note_list: Optional[RailFareNoteList] = field(
+    rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
         }
     )
-    supplier_locator: List[SupplierLocator] = field(
+    supplier_locator: list[SupplierLocator] = field(
         default_factory=list,
         metadata={
             "name": "SupplierLocator",
@@ -2663,7 +2663,7 @@ class RailReservation(BaseReservation):
             "max_occurs": 999,
         }
     )
-    booking_status: Optional[str] = field(
+    booking_status: None | str = field(
         default=None,
         metadata={
             "name": "BookingStatus",
@@ -2681,7 +2681,7 @@ class SearchRailLeg:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    search_origin: List[TypeSearchLocation] = field(
+    search_origin: list[TypeSearchLocation] = field(
         default_factory=list,
         metadata={
             "name": "SearchOrigin",
@@ -2690,7 +2690,7 @@ class SearchRailLeg:
             "max_occurs": 999,
         }
     )
-    search_destination: List[TypeSearchLocation] = field(
+    search_destination: list[TypeSearchLocation] = field(
         default_factory=list,
         metadata={
             "name": "SearchDestination",
@@ -2699,14 +2699,14 @@ class SearchRailLeg:
             "max_occurs": 999,
         }
     )
-    rail_segment_list: Optional[RailSegmentList] = field(
+    rail_segment_list: None | RailSegmentList = field(
         default=None,
         metadata={
             "name": "RailSegmentList",
             "type": "Element",
         }
     )
-    search_dep_time: List[TypeFlexibleTimeSpec] = field(
+    search_dep_time: list[TypeFlexibleTimeSpec] = field(
         default_factory=list,
         metadata={
             "name": "SearchDepTime",
@@ -2714,7 +2714,7 @@ class SearchRailLeg:
             "max_occurs": 999,
         }
     )
-    search_arv_time: List[TypeTimeSpec] = field(
+    search_arv_time: list[TypeTimeSpec] = field(
         default_factory=list,
         metadata={
             "name": "SearchArvTime",
@@ -2722,7 +2722,7 @@ class SearchRailLeg:
             "max_occurs": 999,
         }
     )
-    rail_leg_modifiers: Optional[RailLegModifiers] = field(
+    rail_leg_modifiers: None | RailLegModifiers = field(
         default=None,
         metadata={
             "name": "RailLegModifiers",
@@ -2774,7 +2774,7 @@ class TypeRailPricingSolution:
     class Meta:
         name = "typeRailPricingSolution"
 
-    rail_journey: List[RailJourney] = field(
+    rail_journey: list[RailJourney] = field(
         default_factory=list,
         metadata={
             "name": "RailJourney",
@@ -2783,7 +2783,7 @@ class TypeRailPricingSolution:
             "max_occurs": 999,
         }
     )
-    rail_journey_ref: List[RailJourneyRef] = field(
+    rail_journey_ref: list[RailJourneyRef] = field(
         default_factory=list,
         metadata={
             "name": "RailJourneyRef",
@@ -2792,7 +2792,7 @@ class TypeRailPricingSolution:
             "max_occurs": 999,
         }
     )
-    rail_pricing_info: List[RailPricingInfo] = field(
+    rail_pricing_info: list[RailPricingInfo] = field(
         default_factory=list,
         metadata={
             "name": "RailPricingInfo",
@@ -2801,7 +2801,7 @@ class TypeRailPricingSolution:
             "max_occurs": 999,
         }
     )
-    key: Optional[str] = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
@@ -2809,84 +2809,84 @@ class TypeRailPricingSolution:
             "required": True,
         }
     )
-    offer_id: Optional[int] = field(
+    offer_id: None | int = field(
         default=None,
         metadata={
             "name": "OfferId",
             "type": "Attribute",
         }
     )
-    total_price: Optional[str] = field(
+    total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
         }
     )
-    base_price: Optional[str] = field(
+    base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
         }
     )
-    approximate_total_price: Optional[str] = field(
+    approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
         }
     )
-    approximate_base_price: Optional[str] = field(
+    approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
         }
     )
-    equivalent_base_price: Optional[str] = field(
+    equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
         }
     )
-    taxes: Optional[str] = field(
+    taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
         }
     )
-    fees: Optional[str] = field(
+    fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
         }
     )
-    services: Optional[str] = field(
+    services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
         }
     )
-    approximate_taxes: Optional[str] = field(
+    approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
         }
     )
-    approximate_fees: Optional[str] = field(
+    approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
         }
     )
-    provider_code: Optional[str] = field(
+    provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
@@ -2896,7 +2896,7 @@ class TypeRailPricingSolution:
             "max_length": 5,
         }
     )
-    supplier_code: Optional[str] = field(
+    supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
@@ -2906,14 +2906,14 @@ class TypeRailPricingSolution:
             "max_length": 5,
         }
     )
-    host_token_ref: Optional[str] = field(
+    host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
         }
     )
-    reference: Optional[str] = field(
+    reference: None | str = field(
         default=None,
         metadata={
             "name": "Reference",
@@ -2930,7 +2930,7 @@ class RailExchangeSolution(TypeRailPricingSolution):
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_exchange_info: Optional[RailExchangeInfo] = field(
+    rail_exchange_info: None | RailExchangeInfo = field(
         default=None,
         metadata={
             "name": "RailExchangeInfo",
@@ -2962,7 +2962,7 @@ class RailSolutionChangedInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
 
-    rail_pricing_solution: Optional[RailPricingSolution] = field(
+    rail_pricing_solution: None | RailPricingSolution = field(
         default=None,
         metadata={
             "name": "RailPricingSolution",
@@ -2970,7 +2970,7 @@ class RailSolutionChangedInfo:
             "required": True,
         }
     )
-    reason_code: Optional[RailSolutionChangedInfoReasonCode] = field(
+    reason_code: None | RailSolutionChangedInfoReasonCode = field(
         default=None,
         metadata={
             "name": "ReasonCode",

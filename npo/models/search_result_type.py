@@ -1,3 +1,4 @@
+from __future__ import annotations
 from dataclasses import dataclass
 from npo.models.result_type import ResultType
 

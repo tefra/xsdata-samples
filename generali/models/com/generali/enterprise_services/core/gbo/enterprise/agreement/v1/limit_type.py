@@ -73,7 +73,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         }
     )
-    type: Optional[LimitTypeType] = field(
+    type_value: Optional[LimitTypeType] = field(
         default=None,
         metadata={
             "name": "Type",

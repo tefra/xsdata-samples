@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.media_facets_type import MediaFacetsType
 from npo.models.media_search_type import MediaSearchType
 from npo.models.media_sort_type import MediaSortType
@@ -13,14 +13,14 @@ class MediaFormType:
     class Meta:
         name = "mediaFormType"
 
-    searches: Optional[MediaSearchType] = field(
+    searches: None | MediaSearchType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sort_fields: Optional["MediaFormType.SortFields"] = field(
+    sort_fields: None | MediaFormType.SortFields = field(
         default=None,
         metadata={
             "name": "sortFields",
@@ -28,14 +28,14 @@ class MediaFormType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    facets: Optional[MediaFacetsType] = field(
+    facets: None | MediaFacetsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    highlight: Optional[bool] = field(
+    highlight: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -44,14 +44,14 @@ class MediaFormType:
 
     @dataclass
     class SortFields:
-        sort: List[MediaSortType] = field(
+        sort: list[MediaSortType] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
             }
         )
-        title_sort: List[TitleSortOrderType] = field(
+        title_sort: list[TitleSortOrderType] = field(
             default_factory=list,
             metadata={
                 "name": "titleSort",

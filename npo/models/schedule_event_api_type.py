@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.group import Group
 from npo.models.program import Program
 from npo.models.schedule_event_type import ScheduleEventType
@@ -13,21 +13,21 @@ class ScheduleEventApiType(ScheduleEventType):
     class Meta:
         name = "scheduleEventApiType"
 
-    program: Optional[Program] = field(
+    program: None | Program = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    group: Optional[Group] = field(
+    group: None | Group = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    segment: Optional[Segment] = field(
+    segment: None | Segment = field(
         default=None,
         metadata={
             "type": "Element",

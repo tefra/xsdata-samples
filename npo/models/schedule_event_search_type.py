@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.channel_enum import ChannelEnum
 from npo.models.range_matcher_type import RangeMatcherType
 
@@ -12,35 +12,35 @@ class ScheduleEventSearchType(RangeMatcherType):
     class Meta:
         name = "scheduleEventSearchType"
 
-    begin: Optional[XmlDateTime] = field(
+    begin: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDateTime] = field(
+    end: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    channel: Optional[ChannelEnum] = field(
+    channel: None | ChannelEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    net: Optional[str] = field(
+    net: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    rerun: Optional[bool] = field(
+    rerun: None | bool = field(
         default=None,
         metadata={
             "type": "Element",

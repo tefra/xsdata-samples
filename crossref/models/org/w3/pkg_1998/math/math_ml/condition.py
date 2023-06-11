@@ -3682,9 +3682,10 @@ class Set:
             "type": "Attribute",
         }
     )
-    type: Optional[object] = field(
+    type_value: Optional[object] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -9009,9 +9010,10 @@ class Declare:
             "type": "Element",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -53753,9 +53755,10 @@ class Csymbol(CsymbolContent):
             "type": "Attribute",
         }
     )
-    type: Optional[object] = field(
+    type_value: Optional[object] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -56395,9 +56398,10 @@ class Ci(CiContent):
             "type": "Attribute",
         }
     )
-    type: Optional[object] = field(
+    type_value: Optional[object] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )
@@ -61669,9 +61673,10 @@ class Cn(CnContent):
             "type": "Attribute",
         }
     )
-    type: Optional[object] = field(
+    type_value: Optional[object] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

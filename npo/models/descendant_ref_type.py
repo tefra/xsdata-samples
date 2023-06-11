@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_type_enum import MediaTypeEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class DescendantRefType:
     class Meta:
         name = "descendantRefType"
 
-    mid_ref: Optional[str] = field(
+    mid_ref: None | str = field(
         default=None,
         metadata={
             "name": "midRef",
@@ -20,16 +20,17 @@ class DescendantRefType:
             "pattern": r"[ \.a-zA-Z0-9_-]+",
         }
     )
-    urn_ref: Optional[str] = field(
+    urn_ref: None | str = field(
         default=None,
         metadata={
             "name": "urnRef",
             "type": "Attribute",
         }
     )
-    type: Optional[MediaTypeEnum] = field(
+    type_value: None | MediaTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from dataclasses import dataclass
 from npo.models.program_type import ProgramType
 

@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from npo.models.broadcaster_type import BroadcasterType
 from npo.models.embed_type import EmbedType
 from npo.models.genre import Genre
@@ -21,14 +21,14 @@ class PageType:
     class Meta:
         name = "pageType"
 
-    crid: List[str] = field(
+    crid: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    alternative_url: List[str] = field(
+    alternative_url: list[str] = field(
         default_factory=list,
         metadata={
             "name": "alternativeUrl",
@@ -36,7 +36,7 @@ class PageType:
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    broadcaster: List[BroadcasterType] = field(
+    broadcaster: list[BroadcasterType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -44,14 +44,14 @@ class PageType:
             "min_occurs": 1,
         }
     )
-    portal: Optional[PortalType] = field(
+    portal: None | PortalType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    title: Optional[str] = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -59,7 +59,7 @@ class PageType:
             "required": True,
         }
     )
-    sub_title: Optional[str] = field(
+    sub_title: None | str = field(
         default=None,
         metadata={
             "name": "subTitle",
@@ -67,63 +67,63 @@ class PageType:
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    keyword: List[str] = field(
+    keyword: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    genre: List[Genre] = field(
+    genre: list[Genre] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    summary: Optional[str] = field(
+    summary: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    paragraphs: Optional["PageType.Paragraphs"] = field(
+    paragraphs: None | PageType.Paragraphs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    tag: List[str] = field(
+    tag: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    referral: List[ReferralType] = field(
+    referral: list[ReferralType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    link: List[LinkType] = field(
+    link: list[LinkType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    embed: List[EmbedType] = field(
+    embed: list[EmbedType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    stat_ref: List[str] = field(
+    stat_ref: list[str] = field(
         default_factory=list,
         metadata={
             "name": "statRef",
@@ -131,84 +131,85 @@ class PageType:
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    images: Optional["PageType.Images"] = field(
+    images: None | PageType.Images = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    relation: List[RelationType2] = field(
+    relation: list[RelationType2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    url: Optional[str] = field(
+    url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    type: Optional[PageTypeEnum] = field(
+    type_value: None | PageTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[XmlDateTime] = field(
+    last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    last_published: Optional[XmlDateTime] = field(
+    last_published: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastPublished",
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    ref_count: Optional[int] = field(
+    ref_count: None | int = field(
         default=None,
         metadata={
             "name": "refCount",
             "type": "Attribute",
         }
     )
-    sort_date: Optional[XmlDateTime] = field(
+    sort_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "sortDate",
             "type": "Attribute",
         }
     )
-    workflow: Optional[PageWorkflow] = field(
+    workflow: None | PageWorkflow = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -217,7 +218,7 @@ class PageType:
 
     @dataclass
     class Paragraphs:
-        paragraph: List[ParagraphType] = field(
+        paragraph: list[ParagraphType] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -227,7 +228,7 @@ class PageType:
 
     @dataclass
     class Images:
-        image: List[ImageType2] = field(
+        image: list[ImageType2] = field(
             default_factory=list,
             metadata={
                 "type": "Element",

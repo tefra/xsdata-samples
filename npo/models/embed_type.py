@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.group import Group
 from npo.models.program import Program
 from npo.models.segment import Segment
@@ -12,35 +12,35 @@ class EmbedType:
     class Meta:
         name = "embedType"
 
-    title: Optional[str] = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    description: Optional[str] = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
         }
     )
-    group: Optional[Group] = field(
+    group: None | Group = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    program: Optional[Program] = field(
+    program: None | Program = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    segment: Optional[Segment] = field(
+    segment: None | Segment = field(
         default=None,
         metadata={
             "type": "Element",

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.pages_search_type import PagesSearchType
 from npo.models.text_facet_type import TextFacetType
 
@@ -11,7 +11,7 @@ class PageFacetType(TextFacetType):
     class Meta:
         name = "pageFacetType"
 
-    filter: Optional[PagesSearchType] = field(
+    filter: None | PagesSearchType = field(
         default=None,
         metadata={
             "type": "Element",

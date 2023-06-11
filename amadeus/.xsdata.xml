@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config xmlns="http://pypi.org/project/xsdata" version="23.5">
-  <Output maxLineLength="79">
+  <Output maxLineLength="79" subscriptableTypes="true" unionType="true">
     <Package>amadeus.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
     <Structure>filenames</Structure>
@@ -8,7 +8,7 @@
     <FilterStrategy>allGlobals</FilterStrategy>
     <RelativeImports>false</RelativeImports>
     <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
-    <PostponedAnnotations>false</PostponedAnnotations>
+    <PostponedAnnotations>true</PostponedAnnotations>
     <UnnestClasses>false</UnnestClasses>
     <IgnorePatterns>false</IgnorePatterns>
     <IncludeHeader>false</IncludeHeader>

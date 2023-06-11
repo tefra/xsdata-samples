@@ -46,7 +46,7 @@ class IndicatorStatusNeeds:
         defining a model element (e.g. the ECU Configuration Parameter
         Values). These are not intended as documentation but are mere
         design notes.
-    :ivar type: Defines the type of the indicator.
+    :ivar type_value: Defines the type of the indicator.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -143,7 +143,7 @@ class IndicatorStatusNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type: Optional[DiagnosticIndicatorTypeEnum] = field(
+    type_value: Optional[DiagnosticIndicatorTypeEnum] = field(
         default=None,
         metadata={
             "name": "TYPE",

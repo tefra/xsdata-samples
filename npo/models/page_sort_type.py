@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.order_type_enum import OrderTypeEnum
 from npo.models.page_sort_type_enum import PageSortTypeEnum
 
@@ -11,13 +11,13 @@ class PageSortType:
     class Meta:
         name = "pageSortType"
 
-    value: Optional[PageSortTypeEnum] = field(
+    value: None | PageSortTypeEnum = field(
         default=None,
         metadata={
             "required": True,
         }
     )
-    order: Optional[OrderTypeEnum] = field(
+    order: None | OrderTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",

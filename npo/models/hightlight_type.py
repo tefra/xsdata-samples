@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 
 __NAMESPACE__ = "urn:vpro:api:2013"
 
@@ -9,7 +9,7 @@ class HightlightType:
     class Meta:
         name = "hightlightType"
 
-    body: List[str] = field(
+    body: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -17,7 +17,7 @@ class HightlightType:
             "nillable": True,
         }
     )
-    term: Optional[str] = field(
+    term: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

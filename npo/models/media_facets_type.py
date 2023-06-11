@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.date_range_facets_type import DateRangeFacetsType
 from npo.models.duration_range_facets_type import DurationRangeFacetsType
 from npo.models.extended_media_facet_type import ExtendedMediaFacetType
@@ -18,21 +18,21 @@ class MediaFacetsType:
     class Meta:
         name = "mediaFacetsType"
 
-    titles: Optional[MediaTitleFacetListType] = field(
+    titles: None | MediaTitleFacetListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    types: Optional[MediaFacetType] = field(
+    types: None | MediaFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    av_types: Optional[MediaFacetType] = field(
+    av_types: None | MediaFacetType = field(
         default=None,
         metadata={
             "name": "avTypes",
@@ -40,7 +40,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sort_dates: Optional[DateRangeFacetsType] = field(
+    sort_dates: None | DateRangeFacetsType = field(
         default=None,
         metadata={
             "name": "sortDates",
@@ -48,35 +48,35 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    broadcasters: Optional[MediaFacetType] = field(
+    broadcasters: None | MediaFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    genres: Optional[MediaSearchableTermFacetType] = field(
+    genres: None | MediaSearchableTermFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    tags: Optional[ExtendedMediaFacetType] = field(
+    tags: None | ExtendedMediaFacetType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    durations: Optional[DurationRangeFacetsType] = field(
+    durations: None | DurationRangeFacetsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    descendant_of: Optional[MemberRefFacetType] = field(
+    descendant_of: None | MemberRefFacetType = field(
         default=None,
         metadata={
             "name": "descendantOf",
@@ -84,7 +84,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    episode_of: Optional[MemberRefFacetType] = field(
+    episode_of: None | MemberRefFacetType = field(
         default=None,
         metadata={
             "name": "episodeOf",
@@ -92,7 +92,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    member_of: Optional[MemberRefFacetType] = field(
+    member_of: None | MemberRefFacetType = field(
         default=None,
         metadata={
             "name": "memberOf",
@@ -100,14 +100,14 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    relations: Optional[MediaRelationFacetListType] = field(
+    relations: None | MediaRelationFacetListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    age_ratings: Optional[MediaFacetType] = field(
+    age_ratings: None | MediaFacetType = field(
         default=None,
         metadata={
             "name": "ageRatings",
@@ -115,7 +115,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    content_ratings: Optional[MediaFacetType] = field(
+    content_ratings: None | MediaFacetType = field(
         default=None,
         metadata={
             "name": "contentRatings",
@@ -123,7 +123,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    geo_locations: Optional[MediaSearchableTermFacetType] = field(
+    geo_locations: None | MediaSearchableTermFacetType = field(
         default=None,
         metadata={
             "name": "geoLocations",
@@ -131,7 +131,7 @@ class MediaFacetsType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    filter: Optional[MediaSearchType] = field(
+    filter: None | MediaSearchType = field(
         default=None,
         metadata={
             "type": "Element",

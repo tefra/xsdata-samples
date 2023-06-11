@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
@@ -15,7 +15,7 @@ class SectionType:
             "required": True,
         }
     )
-    path: Optional[str] = field(
+    path: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.link_type_enum import LinkTypeEnum
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
@@ -16,15 +16,16 @@ class ReferralType:
             "required": True,
         }
     )
-    referrer: Optional[str] = field(
+    referrer: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    type: Optional[LinkTypeEnum] = field(
+    type_value: None | LinkTypeEnum = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

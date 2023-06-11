@@ -62,7 +62,7 @@ class DiagnosticOperationCycle:
         the operation cycle state is only stored volatile This attribute
         is only relevant for the AUTOSAR adaptive platform. It no longer
         has a meaning on the AUTOSAR classic platform.
-    :ivar type: Operation cycles types for the Dem.
+    :ivar type_value: Operation cycles types for the Dem.
     :ivar s: Checksum calculated by the user's tool environment for an
         ArObject. May be used in an own tool environment to determine if
         an ArObject has changed. The checksum has no semantic meaning
@@ -191,7 +191,7 @@ class DiagnosticOperationCycle:
             "namespace": "http://autosar.org/schema/r4.0",
         }
     )
-    type: Optional[DiagnosticOperationCycleTypeEnum] = field(
+    type_value: Optional[DiagnosticOperationCycleTypeEnum] = field(
         default=None,
         metadata={
             "name": "TYPE",

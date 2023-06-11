@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from xsdata.models.datatype import XmlDuration
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,21 +10,21 @@ class DurationRangeFacetItemType:
     class Meta:
         name = "durationRangeFacetItemType"
 
-    name: Optional[str] = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    begin: Optional[XmlDuration] = field(
+    begin: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    end: Optional[XmlDuration] = field(
+    end: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",

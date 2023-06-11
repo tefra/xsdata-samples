@@ -27,9 +27,9 @@ class Tt:
         LaTeX commands such as \\sep{}.  An example is to render
         "MyClass" as "My\\sep{}Class". Default is the value of the
         attribute "term".
-    :ivar type: This attribute specifies the type of the technical term.
-        Values are such as "VARIABLE" "CALPRM". It is no longer an enum
-        in order to support process specific extensions.
+    :ivar type_value: This attribute specifies the type of the technical
+        term. Values are such as "VARIABLE" "CALPRM". It is no longer an
+        enum in order to support process specific extensions.
     """
     class Meta:
         name = "TT"
@@ -62,7 +62,7 @@ class Tt:
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "TYPE",

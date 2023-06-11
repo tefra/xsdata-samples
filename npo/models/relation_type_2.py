@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
@@ -15,23 +15,24 @@ class RelationType2:
             "required": True,
         }
     )
-    uri_ref: Optional[str] = field(
+    uri_ref: None | str = field(
         default=None,
         metadata={
             "name": "uriRef",
             "type": "Attribute",
         }
     )
-    broadcaster: Optional[str] = field(
+    broadcaster: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    type: Optional[str] = field(
+    type_value: None | str = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "required": True,
         }

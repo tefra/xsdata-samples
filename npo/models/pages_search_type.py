@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.date_range_matcher_list_type import DateRangeMatcherListType
 from npo.models.extended_text_matcher_list_type import ExtendedTextMatcherListType
 from npo.models.match import Match
@@ -16,63 +16,63 @@ class PagesSearchType:
     class Meta:
         name = "pagesSearchType"
 
-    text: Optional[SimpleMatcherType] = field(
+    text: None | SimpleMatcherType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    broadcasters: Optional[TextMatcherListType] = field(
+    broadcasters: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    types: Optional[TextMatcherListType] = field(
+    types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    portals: Optional[TextMatcherListType] = field(
+    portals: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sections: Optional[TextMatcherListType] = field(
+    sections: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    genres: Optional[TextMatcherListType] = field(
+    genres: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    tags: Optional[ExtendedTextMatcherListType] = field(
+    tags: None | ExtendedTextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    keywords: Optional[ExtendedTextMatcherListType] = field(
+    keywords: None | ExtendedTextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    sort_dates: Optional[DateRangeMatcherListType] = field(
+    sort_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "sortDates",
@@ -80,7 +80,7 @@ class PagesSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    last_modified_dates: Optional[DateRangeMatcherListType] = field(
+    last_modified_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "lastModifiedDates",
@@ -88,7 +88,7 @@ class PagesSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    creation_dates: Optional[DateRangeMatcherListType] = field(
+    creation_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "creationDates",
@@ -96,7 +96,7 @@ class PagesSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    publish_dates: Optional[DateRangeMatcherListType] = field(
+    publish_dates: None | DateRangeMatcherListType = field(
         default=None,
         metadata={
             "name": "publishDates",
@@ -104,28 +104,28 @@ class PagesSearchType:
             "namespace": "urn:vpro:api:2013",
         }
     )
-    relations: Optional[PageRelationSearchListType] = field(
+    relations: None | PageRelationSearchListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    links: Optional[PageAssociationSearchListType] = field(
+    links: None | PageAssociationSearchListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    referrals: Optional[PageAssociationSearchListType] = field(
+    referrals: None | PageAssociationSearchListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    match: Optional[Match] = field(
+    match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",

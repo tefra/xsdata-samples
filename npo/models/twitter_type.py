@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.twitter_type_type import TwitterTypeType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -16,9 +16,10 @@ class TwitterType:
             "required": True,
         }
     )
-    type: Optional[TwitterTypeType] = field(
+    type_value: None | TwitterTypeType = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

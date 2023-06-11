@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.organization_type import OrganizationType
 
 __NAMESPACE__ = "urn:vpro:media:2009"
@@ -10,7 +10,7 @@ class PortalsType:
     class Meta:
         name = "portalsType"
 
-    portal: List[OrganizationType] = field(
+    portal: list[OrganizationType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

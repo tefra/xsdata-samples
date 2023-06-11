@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List
 from npo.models.date_facet_result_item_type import DateFacetResultItemType
 from npo.models.named_term_facet_result_item_type import NamedTermFacetResultItemType
 from npo.models.page_genre_facet_result_item_type import PageGenreFacetResultItemType
@@ -13,7 +13,7 @@ class PageFacetsResultType:
     class Meta:
         name = "pageFacetsResultType"
 
-    sort_dates: List[DateFacetResultItemType] = field(
+    sort_dates: list[DateFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "sortDates",
@@ -22,7 +22,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    types: List[TermFacetResultItemType] = field(
+    types: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -30,7 +30,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    broadcasters: List[TermFacetResultItemType] = field(
+    broadcasters: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -38,7 +38,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    tags: List[TermFacetResultItemType] = field(
+    tags: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -46,7 +46,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    keywords: List[TermFacetResultItemType] = field(
+    keywords: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -54,7 +54,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    genres: List[PageGenreFacetResultItemType] = field(
+    genres: list[PageGenreFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -62,7 +62,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    portals: List[TermFacetResultItemType] = field(
+    portals: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -70,7 +70,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    sections: List[TermFacetResultItemType] = field(
+    sections: list[TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -78,7 +78,7 @@ class PageFacetsResultType:
             "nillable": True,
         }
     )
-    relations: List[NamedTermFacetResultItemType] = field(
+    relations: list[NamedTermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

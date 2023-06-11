@@ -1,6 +1,6 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
-from xsdata.models.datatype import XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from npo.models.av_attributes_type import AvAttributesType
 from npo.models.location_type_enum import LocationTypeEnum
 from npo.models.owner_type_enum import OwnerTypeEnum
@@ -15,7 +15,7 @@ class LocationType:
     class Meta:
         name = "locationType"
 
-    program_url: Optional[str] = field(
+    program_url: None | str = field(
         default=None,
         metadata={
             "name": "programUrl",
@@ -24,7 +24,7 @@ class LocationType:
             "required": True,
         }
     )
-    av_attributes: Optional[AvAttributesType] = field(
+    av_attributes: None | AvAttributesType = field(
         default=None,
         metadata={
             "name": "avAttributes",
@@ -32,88 +32,89 @@ class LocationType:
             "namespace": "urn:vpro:media:2009",
         }
     )
-    subtitles: Optional[str] = field(
+    subtitles: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    offset: Optional[XmlDuration] = field(
+    offset: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    duration: Optional[XmlDuration] = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
         }
     )
-    type: Optional[LocationTypeEnum] = field(
+    type_value: None | LocationTypeEnum = field(
+        default=None,
+        metadata={
+            "name": "type",
+            "type": "Attribute",
+        }
+    )
+    platform: None | PlatformTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    platform: Optional[PlatformTypeEnum] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        }
-    )
-    owner: Optional[OwnerTypeEnum] = field(
+    owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         }
     )
-    urn: Optional[str] = field(
+    urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    publish_start: Optional[XmlDateTime] = field(
+    publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
         }
     )
-    publish_stop: Optional[XmlDateTime] = field(
+    publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
         }
     )
-    publish_date: Optional[XmlDateTime] = field(
+    publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
         }
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
         }
     )
-    last_modified: Optional[XmlDateTime] = field(
+    last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
         }
     )
-    workflow: Optional[WorkflowEnumType] = field(
+    workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",

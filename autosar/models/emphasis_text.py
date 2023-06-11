@@ -29,9 +29,9 @@ class EmphasisText:
         specified bases on 6 digits RGB hex-code.
     :ivar font: This specifies the font style in which the emphasized
         text shall be rendered.
-    :ivar type: Indicates how the text may be emphasized. Note that this
-        is only a proposal which can be overridden or ignored by
-        particular formatting engines. Default is BOLD.
+    :ivar type_value: Indicates how the text may be emphasized. Note
+        that this is only a proposal which can be overridden or ignored
+        by particular formatting engines. Default is BOLD.
     :ivar content:
     """
     class Meta:
@@ -66,7 +66,7 @@ class EmphasisText:
             "type": "Attribute",
         }
     )
-    type: Optional[EEnumSimple] = field(
+    type_value: Optional[EEnumSimple] = field(
         default=None,
         metadata={
             "name": "TYPE",

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional
 from npo.models.total_qualifier import TotalQualifier
 
 __NAMESPACE__ = "urn:vpro:api:2013"
@@ -10,33 +10,33 @@ class ResultType:
     class Meta:
         name = "resultType"
 
-    items: Optional["ResultType.Items"] = field(
+    items: None | ResultType.Items = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
         }
     )
-    total: Optional[int] = field(
+    total: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    total_qualifier: Optional[TotalQualifier] = field(
+    total_qualifier: None | TotalQualifier = field(
         default=None,
         metadata={
             "name": "totalQualifier",
             "type": "Attribute",
         }
     )
-    offset: Optional[int] = field(
+    offset: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         }
     )
-    max: Optional[int] = field(
+    max: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45,7 +45,7 @@ class ResultType:
 
     @dataclass
     class Items:
-        item: List[object] = field(
+        item: list[object] = field(
             default_factory=list,
             metadata={
                 "type": "Element",

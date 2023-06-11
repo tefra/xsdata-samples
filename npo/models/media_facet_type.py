@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_search_type import MediaSearchType
 from npo.models.text_facet_type import TextFacetType
 
@@ -11,7 +11,7 @@ class MediaFacetType(TextFacetType):
     class Meta:
         name = "mediaFacetType"
 
-    filter: Optional[MediaSearchType] = field(
+    filter: None | MediaSearchType = field(
         default=None,
         metadata={
             "type": "Element",

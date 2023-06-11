@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.w3.org/1999/xlink"
 @dataclass
 class LocatorType:
     """
-    :ivar type:
+    :ivar type_value:
     :ivar href:
     :ivar role:
     :ivar title:
@@ -18,10 +18,11 @@ class LocatorType:
     class Meta:
         name = "locatorType"
 
-    type: TypeType = field(
+    type_value: TypeType = field(
         init=False,
         default=TypeType.LOCATOR,
         metadata={
+            "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,

@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 from npo.models.media_facet_type import MediaFacetType
 from npo.models.member_ref_search_type import MemberRefSearchType
 
@@ -11,7 +11,7 @@ class MemberRefFacetType(MediaFacetType):
     class Meta:
         name = "memberRefFacetType"
 
-    sub_search: Optional[MemberRefSearchType] = field(
+    sub_search: None | MemberRefSearchType = field(
         default=None,
         metadata={
             "name": "subSearch",

@@ -68,9 +68,10 @@ class Tendsto:
             "type": "Attribute",
         }
     )
-    type: Optional[object] = field(
+    type_value: Optional[object] = field(
         default=None,
         metadata={
+            "name": "type",
             "type": "Attribute",
         }
     )

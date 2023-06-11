@@ -1,5 +1,5 @@
+from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
@@ -15,7 +15,7 @@ class RepeatType:
             "required": True,
         }
     )
-    is_rerun: Optional[bool] = field(
+    is_rerun: None | bool = field(
         default=None,
         metadata={
             "name": "isRerun",
