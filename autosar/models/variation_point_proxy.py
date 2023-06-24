@@ -37,7 +37,9 @@ class VariationPointProxy:
     """The VariationPointProxy represents variation points of the C/C++
     implementation.
 
-    In case of bindingTime = compileTime the RTE provides defines which can be used for Pre Processor directives to implement compileTime variability.
+    In case of bindingTime = compileTime the RTE provides defines which
+    can be used for Pre Processor directives to implement compileTime
+    variability.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

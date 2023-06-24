@@ -433,24 +433,23 @@ class ErrorResponse:
 class SuccessUserMessage(MultilineStringWithOptionalLang):
     """This element is sometimes added to regular HTTP 200 responses.
 
-    This serves as an equivalent of the `user-message` element
-    introduced in the `error-response` above, but this one is for HTTP
-    200 responses (not error responses). If the server includes this
-    element in the response, then it indicates that it wants this
-    message to be displayed for the human who had initiated the request.
-    If it's given, then clients SHOULD display this message for their
-    end users (if it is possible to display it). In case of most APIs no
-    such extra message is necessary, because HTTP 200 means "success" in
-    itself. However, in cases of some other APIs, the server is allowed
-    some more flexibility in how the request is being processed. This
-    element allows to developers to inform end users about
-    irregularieties in this process. In places where we expect this
-    element to appear, it will be referred to in a proper `response.xsd`
-    file, along with some additional explanations. Usually it will be
-    used along with minOccurs="0" and maxOccurs="unbounded" attributes,
-    in order to allow servers to provide the message in multiple
-    languages. It is RECOMMENDED for the server to provide it at least
-    in English.
+    This serves as
+    an equivalent of the `user-message` element introduced in the `error-response`
+    above, but this one is for HTTP 200 responses (not error responses).
+    If the server includes this element in the response, then it indicates that it
+    wants this message to be displayed for the human who had initiated the request.
+    If it's given, then clients SHOULD display this message for their end users (if
+    it is possible to display it).
+    In case of most APIs no such extra message is necessary, because HTTP 200 means
+    "success" in itself. However, in cases of some other APIs, the server is
+    allowed some more flexibility in how the request is being processed. This
+    element allows to developers to inform end users about irregularieties in this
+    process.
+    In places where we expect this element to appear, it will be referred to in a
+    proper `response.xsd` file, along with some additional explanations. Usually it
+    will be used along with minOccurs="0" and maxOccurs="unbounded" attributes, in
+    order to allow servers to provide the message in multiple languages. It is
+    RECOMMENDED for the server to provide it at least in English.
     """
     class Meta:
         name = "success-user-message"
@@ -461,19 +460,18 @@ class SuccessUserMessage(MultilineStringWithOptionalLang):
 class Host:
     """Defines a single EWP Host.
 
-    EWP Host defines relationships between HEIs, APIs, server
-    administrators and client credentials. One EWP Host defines a single
-    Cartesian product (a "join") of all these sets. (E.g. if a client
-    certificate X and a HEI Y is present in the same host, then it means
-    that server which signs its requests with X is allowed to request
-    resources visible to HEI Y. Similar statement is true for every
-    other pair of sets.) Most partners will have exactly one `host`
-    entry. However, in some cases you might need to describe more than
-    one. For example, when you server covers two HEIs, but one of your
-    APIs is available for only one of these two HEIs, then it's
-    impossible to describe such relationship with a single Cartesian
-    product. You will need to use a sum of at least two Cartesian
-    products. (which is expressed by two `host` entries).
+    EWP Host defines relationships between HEIs, APIs, server administrators and
+    client credentials. One EWP Host defines a single Cartesian product (a "join")
+    of all these sets. (E.g. if a client certificate X and a HEI Y is present in
+    the same host, then it means that server which signs its requests with X is
+    allowed to request resources visible to HEI Y. Similar statement is true for
+    every other pair of sets.)
+    Most partners will have exactly one `host` entry. However, in some cases you
+    might need to describe more than one. For example, when you server covers
+    two HEIs, but one of your APIs is available for only one of these two HEIs,
+    then it's impossible to describe such relationship with a single Cartesian
+    product. You will need to use a sum of at least two Cartesian products. (which
+    is expressed by two `host` entries).
 
     :ivar admin_email: RECOMMENDED element. Address of a developer or
         server administrator who may be contacted in case of problems

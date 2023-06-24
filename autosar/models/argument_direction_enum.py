@@ -8,7 +8,6 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 @dataclass
 class ArgumentDirectionEnum:
     """Use cases:
-
     * Arguments in ClientServerOperation can have different directions that need to be formally indicated because they have an impact on how the function signature looks like eventually.
     * Arguments in BswModuleEntry already determine a function signature, but the direction is used to specify the semantics, especially of pointer arguments.
 

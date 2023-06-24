@@ -24,9 +24,7 @@ class SecurityEventFilterChain:
     """This meta-class represents a configurable chain of filters used to qualify
     security events.
 
-    The different filters of this filter chain are applied in the follow
-    order: SecurityEventStateFilter, SecurityEventOneEveryNFilter,
-    SecurityEventAggregationFilter, SecurityEventThresholdFilter.
+    The different filters of this filter chain are applied in the follow order: SecurityEventStateFilter, SecurityEventOneEveryNFilter, SecurityEventAggregationFilter, SecurityEventThresholdFilter.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

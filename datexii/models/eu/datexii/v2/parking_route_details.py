@@ -13,10 +13,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class ParkingRouteDetails(ParkingRoute):
-    """Urban context: Defining parking routes leading to the parking site.
-
-    Truck parking context: Can be used to define a dynamic route
-    management.
+    """Urban context: Defining parking routes leading to the parking site. Truck parking context: Can be used to define a dynamic route management.
 
     :ivar parking_route_name: Name of the parking route.
     :ivar parking_route_type: The type of parking route. If not

@@ -9,9 +9,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarParameterRef:
-    """This class represents a reference to a parameter within AUTOSAR which can be
-    one of the following use cases:
-
+    """This class represents a reference to a parameter within AUTOSAR which can be one of the following use cases:
     localParameter:
     * localParameter which is used as whole (e.g.  sharedAxis for curve)
     autosarVariable:

@@ -8,8 +8,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class DedicatedAccess:
-    """
-    Reference to an access of any type (vehicles, pedestrian, ...).
+    """Reference to an access of any type (vehicles, pedestrian, ...).
 
     :ivar dedicated_access: Specifies a reference to an access, object
         (i.e. an entrance, an exit or both). A Point location and

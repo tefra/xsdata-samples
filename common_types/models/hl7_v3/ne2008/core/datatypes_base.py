@@ -476,14 +476,14 @@ class TelExplicit:
 
 @dataclass
 class Url(AnyType):
-    """A telecommunications address  specified according to Internet standard RFC
-    1738 [http://www.ietf.org/rfc/rfc1738.txt].
-
-    The URL specifies the protocol and the contact point defined by that
-    protocol for the resource.  Notable uses of the telecommunication
-    address data type are for telephone and telefax numbers, e-mail
-    addresses, Hypertext references, FTP references, etc.
-    """
+    """A telecommunications address  specified according to
+    Internet standard RFC 1738
+    [http://www.ietf.org/rfc/rfc1738.txt]. The
+    URL specifies the protocol and the contact point defined
+    by that protocol for the resource.  Notable uses of the
+    telecommunication address data type are for telephone and
+    telefax numbers, e-mail addresses, Hypertext references,
+    FTP references, etc."""
     class Meta:
         name = "URL"
 

@@ -23,8 +23,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class XcpPdu:
     """This element is deprecated and will be removed in future.
 
-    The GeneralPurposeIPdu with the category "XCP" shall be used
-    instead. Old description: AUTOSAR XCP Pdu.
+    The GeneralPurposeIPdu with the category "XCP" shall be used instead.
+    Old description:
+    AUTOSAR XCP Pdu.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

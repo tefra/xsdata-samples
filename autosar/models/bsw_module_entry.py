@@ -32,10 +32,7 @@ class BswModuleEntry:
     """This class represents a single API entry (C-function prototype) into the BSW
     module or cluster.
 
-    The name of the C-function is equal to the short name of this
-    element with one exception: In case of multiple instances of a
-    module on the same CPU, special rules for "infixes" apply, see
-    description of class BswImplementation.
+    The name of the C-function is equal to the short name of this element with one exception: In case of multiple instances of a module on the same CPU, special rules for "infixes" apply, see description of class BswImplementation.
 
     :ivar short_name: This specifies an identifying shortName for the
         object. It needs to be unique within its context and is intended

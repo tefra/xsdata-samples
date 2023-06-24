@@ -7,7 +7,8 @@ __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 class StdRevisionOf:
     """Designator for the previous revision of the standard being deposited.
 
-    (note: use alt_as_published for revisions within designators having common stem)
+    (note: use alt_as_published for revisions within designators having
+    common stem)
     """
     class Meta:
         name = "std_revision_of"

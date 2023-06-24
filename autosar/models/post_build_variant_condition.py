@@ -12,10 +12,9 @@ class PostBuildVariantCondition:
     """This class specifies the value which shall be assigned to a particular
     variant criterion in order to bind the variation point.
 
-    If multiple criterion/value pairs are specified, they shall all
-    match to bind the variation point. In other words binding can be
-    represented by (criterion1 == value1) &amp;&amp; (condition2 ==
-    value2) ...
+    If multiple criterion/value pairs are specified, they shall all match to bind the variation point.
+    In other words binding can be represented by
+    (criterion1 == value1) &amp;&amp; (condition2 == value2) ...
 
     :ivar matching_criterion_ref: This is the criterion which needs to
         match the value in order to make the PostbuildVariantCondition

@@ -10,9 +10,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 @dataclass
 class AutosarVariableRef:
-    """This class represents a reference to a variable within AUTOSAR which can be
-    one of the following use cases:
-
+    """This class represents a reference to a variable within AUTOSAR which can be one of the following use cases:
     localVariable:
     * localVariable which is used as whole (e.g. InterRunnableVariable, inputValue for curve)
     autosarVariable:

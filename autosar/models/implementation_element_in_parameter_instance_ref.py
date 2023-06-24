@@ -12,17 +12,10 @@ class ImplementationElementInParameterInstanceRef:
     """Describes a reference to a particular ImplementationDataTypeElement instance
     in the context of a given ParameterDataPrototype.
 
-    Thus it refers to a particular element in the implementation
-    description of a software data structure. Use Case: The RTE
-    generator publishes its generated structure of calibration
-    parameters in its BSW module description using the "constantMemory"
-    role of ParameterDataPrototypes. Each ParameterDataPrototype
-    describes a group of single calibration parameters. In order to
-    point to these single parameters, this "instance ref" is needed.
-    Note that this class follows the pattern of an InstanceRef but is
-    not implemented based on the abstract classes because the
-    ImplementationDataType isn't either, especially because
-    ImplementationDataTypeElement isn't derived from AtpPrototype.
+    Thus it refers to a particular element in the implementation description of a software data structure.
+    Use Case:
+    The RTE generator publishes its generated structure of calibration parameters in its BSW module description using the "constantMemory" role of ParameterDataPrototypes. Each ParameterDataPrototype describes a group of single calibration parameters. In order to point to these single parameters, this "instance ref" is needed.
+    Note that this class follows the pattern of an InstanceRef but is not implemented based on the abstract classes because the ImplementationDataType isn't either, especially because ImplementationDataTypeElement isn't derived from AtpPrototype.
 
     :ivar context_ref: The context for the referred element.
     :ivar target_ref: The referred data element.

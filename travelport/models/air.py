@@ -401,9 +401,7 @@ class Advtype:
 
 @dataclass
 class ActionDetails:
-    """
-    Information related to the storing of the fare: Agent, Date and Action for
-    Provider: 1P/1J.
+    """Information related to the storing of the fare: Agent, Date and Action for Provider: 1P/1J
 
     Parameters
     ----------
@@ -1998,7 +1996,9 @@ class FareDetailsRef:
 
 @dataclass
 class FareInfoMessage:
-    """A simple textual fare information message.Providers supported : 1G/1V/1P/1J"""
+    """
+    A simple textual fare information message.Providers supported : 1G/1V/1P/1J.
+    """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
 
@@ -5922,11 +5922,9 @@ class TypeCarrierCode(Enum):
 
 class TypeConnectionIndicator(Enum):
     """Types of connection indicator :
-
     AvailabilityAndPricing : Specified availability and pricing connection;
     TurnAround : Specified turn around;
-    Stopover : Specified stopover;
-    """
+    Stopover : Specified stopover;"""
     AVAILABILITY_AND_PRICING = "AvailabilityAndPricing"
     TURN_AROUND = "TurnAround"
     STOPOVER = "Stopover"

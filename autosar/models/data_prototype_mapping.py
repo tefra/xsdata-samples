@@ -16,17 +16,9 @@ class DataPrototypeMapping:
     unequal semantic (resolution or range) in context of two different
     SenderReceiverInterface, NvDataInterface or ParameterInterface or Operations.
 
-    If the semantic is unequal following rules apply: The
-    textTableMapping is only applicable if the referred DataPrototypes
-    are typed by AutosarDataType referring to CompuMethods of category
-    TEXTTABLE, SCALE_LINEAR_AND_TEXTTABLE or BITFIELD_TEXTTABLE. In the
-    case that the  DataPrototypes are typed by AutosarDataType either
-    referring to CompuMethods of category LINEAR, IDENTICAL or referring
-    to no CompuMethod (which is similar as  IDENTICAL) the linear
-    conversion factor is calculated out of the factorSiToUnit and
-    offsetSiToUnit attributes of the referred Units and the
-    CompuRationalCoeffs of a compuInternalToPhys of the referred
-    CompuMethods.
+    If the semantic is unequal following rules apply:
+    The textTableMapping is only applicable if the referred DataPrototypes are typed by AutosarDataType referring to CompuMethods of category TEXTTABLE, SCALE_LINEAR_AND_TEXTTABLE or BITFIELD_TEXTTABLE.
+    In the case that the  DataPrototypes are typed by AutosarDataType either referring to CompuMethods of category LINEAR, IDENTICAL or referring to no CompuMethod (which is similar as  IDENTICAL) the linear conversion factor is calculated out of the factorSiToUnit and offsetSiToUnit attributes of the referred Units and the CompuRationalCoeffs of a compuInternalToPhys of the referred CompuMethods.
 
     :ivar first_data_prototype_ref: First to be mapped DataPrototype in
         context of a  SenderReceiverInterface, NvDataInterface,

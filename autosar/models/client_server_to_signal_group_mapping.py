@@ -28,11 +28,10 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class ClientServerToSignalGroupMapping:
     """This mapping is deprecated and will be removed in future.
 
-    It is replaced by the ClientServerToSignalMapping. Old description:
-    Mapping of client server operation arguments to signals of a signal
-    group. Arguments with a primitive datatype will be mapped via the
-    "ClientServerPrimitiveTypeMapping" element. Arguments with composite
-    datatypes will be mapped via the "CompositeTypeMapping" element.
+    It is replaced by the ClientServerToSignalMapping.
+    Old description:
+    Mapping of client server operation arguments to signals of a signal group. Arguments with a primitive datatype will be mapped via the "ClientServerPrimitiveTypeMapping" element.
+    Arguments with composite datatypes will be mapped via the "CompositeTypeMapping" element.
 
     :ivar communication_direction: This attribute controls the direction
         into which the mapped SystemSignal is communicated with respect

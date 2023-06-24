@@ -10,9 +10,9 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 class DiscoveryTechnology:
     """This element is deprecated and will be removed in future.
 
-    This information is replaced by the runtimePortConfiguration and
-    runtimeIpAddressConfiguration attributes in the SocketConnection.
-    Old description: Discovery technology information.
+    This information is replaced by the runtimePortConfiguration and runtimeIpAddressConfiguration attributes in the SocketConnection.
+    Old description:
+    Discovery technology information.
 
     :ivar name: Discovery technology used.
     :ivar version: Version of the used Discovery protocol.
