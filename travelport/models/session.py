@@ -12,8 +12,10 @@ class SessionContext:
 
     Parameters
     ----------
-    sess_tok: A Session Token provided by Travelport
-    sess_prop: A session property combination
+    sess_tok
+        A Session Token provided by Travelport
+    sess_prop
+        A session property combination
     """
     class Meta:
         namespace = "http://www.travelport.com/soa/common/security/SessionContext_v1"
@@ -39,7 +41,8 @@ class SessionContext:
         """
         Parameters
         ----------
-        id: ID of the Session Token
+        id
+            ID of the Session Token
         """
         id: None | str = field(
             default=None,
@@ -54,8 +57,10 @@ class SessionContext:
         """
         Parameters
         ----------
-        nm: Name of the Session Property
-        val: Value of the Session Property
+        nm
+            Name of the Session Property
+        val
+            Value of the Session Property
         """
         nm: None | str = field(
             default=None,

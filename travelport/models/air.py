@@ -107,68 +107,93 @@ class Advtype:
     """
     Parameters
     ----------
-    adv_rsvn_only_if_tk: Reservation only if ticketed. True is advanced
-        reservations only if tickets. False is no advanced reservations
-    adv_rsvn_any_tm: Reservation anytime. True if advanced reservatiosn
-        anytime. False if advanced reservations for a limited time.
-    adv_rsvn_hrs: Reservation hours. True if advanced reservation time
-        in hours. False if advanced reservation time not in hours.
-    adv_rsvn_days: Reservation days. True if advanced reservation time
-        in days. False if advanced reservation time not in days.
-    adv_rsvn_months: Reservation months. True if advanced reservation
-        time in months. False if advanced reservation time not in
+    adv_rsvn_only_if_tk
+        Reservation only if ticketed. True is advanced reservations only if
+        tickets. False is no advanced reservations
+    adv_rsvn_any_tm
+        Reservation anytime. True if advanced reservatiosn anytime. False if
+        advanced reservations for a limited time.
+    adv_rsvn_hrs
+        Reservation hours. True if advanced reservation time in hours. False
+        if advanced reservation time not in hours.
+    adv_rsvn_days
+        Reservation days. True if advanced reservation time in days. False
+        if advanced reservation time not in days.
+    adv_rsvn_months
+        Reservation months. True if advanced reservation time in months.
+        False if advanced reservation time not in months.
+    adv_rsvn_earliest_tm
+        Earliest reservation time. True if advanced reservations time is
+        earliest permitted. False is advanced reservation time not earliest
+        permitted time.
+    adv_rsvn_latest_tm
+        Latest reservation time. True if advanced reservations time is
+        latest permitted. False is advanced reservation time not latest
+        permitted time.
+    adv_rsvn_waived
+        Reservation Waived. True if advanced reservation waived. False if
+        advanced reservation not waived.
+    adv_rsvn_data_exists
+        Reservation data exists. True if advanced reservation data exists.
+        False if advanced reservation data does not exist.
+    adv_rsvn_end_item
+        Reservation end item. True if advanced reservation end item and more
+        values. False if it does not exist.
+    adv_tk_earliest_tm
+        Earliest ticketing time. True if earliest permitted. False if not
+        earliest permitted.
+    adv_tk_latest_tm
+        Latest ticketing time. True if time is latest permitted. False if
+        time is not latest permitted.
+    adv_tk_rsvn_hrs
+        Ticketing reservation hours. True if in hours. False if not in
+        hours.
+    adv_tk_rsvn_days
+        Ticketing reservation days. True if in days. False if not in days.
+    adv_tk_rsvn_months
+        Ticketing reservation months. True if in months. False if not in
         months.
-    adv_rsvn_earliest_tm: Earliest reservation time. True if advanced
-        reservations time is earliest permitted. False is advanced
-        reservation time not earliest permitted time.
-    adv_rsvn_latest_tm: Latest reservation time. True if advanced
-        reservations time is latest permitted. False is advanced
-        reservation time not latest permitted time.
-    adv_rsvn_waived: Reservation Waived. True if advanced reservation
-        waived. False if advanced reservation not waived.
-    adv_rsvn_data_exists: Reservation data exists. True if advanced
-        reservation data exists. False if advanced reservation data does
-        not exist.
-    adv_rsvn_end_item: Reservation end item. True if advanced
-        reservation end item and more values. False if it does not
-        exist.
-    adv_tk_earliest_tm: Earliest ticketing time. True if earliest
-        permitted. False if not earliest permitted.
-    adv_tk_latest_tm: Latest ticketing time. True if time is latest
-        permitted. False if time is not latest permitted.
-    adv_tk_rsvn_hrs: Ticketing reservation hours. True if in hours.
-        False if not in hours.
-    adv_tk_rsvn_days: Ticketing reservation days. True if in days. False
-        if not in days.
-    adv_tk_rsvn_months: Ticketing reservation months. True if in months.
-        False if not in months.
-    adv_tk_start_hrs: Latest ticketing departure. True if time is latest
-        permitted. False if time is not latest permitted.
-    adv_tk_start_days: Ticketing departure days. True if in days. False
-        if not in days.
-    adv_tk_start_months: Ticketing reservation months. True if in
-        months. False if not in months.
-    adv_tk_waived: Ticketing waived. True if waived. False if not
-        waived.
-    adv_tk_any_tm: Ticketing anytime. True if anytime. False if limited
-        time.
-    adv_tk_end_item: Ticketing end item. True if advanced ticketing item
-        and more values. False if end item does not exist.
-    adv_rsvn_tm: Advanced reservation time.
-    adv_tk_rsvn_tm: Advanced ticketing reservation time.
-    adv_tk_start_tm: Advanced ticketing departure time.
-    earliest_rsvn_dt_present: Earliest reservation date. True if date is
-        present. False if date is not present.
-    earliest_tk_dt_present: Earliest ticketing date. True if date is
-        present. False if date is not present.
-    latest_rsvn_dt_present: Latest reservation date. True if date is
-        present. False if date is not present.
-    latest_tk_dt_present: Latest ticketing date.  True if date is
-        present. False if date is not present.
-    earliest_rsvn_dt: Earliest reservation date.
-    earliest_tk_dt: Earliest ticketing date.
-    latest_rsvn_dt: Latest reservation date.
-    latest_tk_dt: Latest ticketing date.
+    adv_tk_start_hrs
+        Latest ticketing departure. True if time is latest permitted. False
+        if time is not latest permitted.
+    adv_tk_start_days
+        Ticketing departure days. True if in days. False if not in days.
+    adv_tk_start_months
+        Ticketing reservation months. True if in months. False if not in
+        months.
+    adv_tk_waived
+        Ticketing waived. True if waived. False if not waived.
+    adv_tk_any_tm
+        Ticketing anytime. True if anytime. False if limited time.
+    adv_tk_end_item
+        Ticketing end item. True if advanced ticketing item and more values.
+        False if end item does not exist.
+    adv_rsvn_tm
+        Advanced reservation time.
+    adv_tk_rsvn_tm
+        Advanced ticketing reservation time.
+    adv_tk_start_tm
+        Advanced ticketing departure time.
+    earliest_rsvn_dt_present
+        Earliest reservation date. True if date is present. False if date is
+        not present.
+    earliest_tk_dt_present
+        Earliest ticketing date. True if date is present. False if date is
+        not present.
+    latest_rsvn_dt_present
+        Latest reservation date. True if date is present. False if date is
+        not present.
+    latest_tk_dt_present
+        Latest ticketing date.  True if date is present. False if date is
+        not present.
+    earliest_rsvn_dt
+        Earliest reservation date.
+    earliest_tk_dt
+        Earliest ticketing date.
+    latest_rsvn_dt
+        Latest reservation date.
+    latest_tk_dt
+        Latest ticketing date.
     """
     class Meta:
         name = "ADVType"
@@ -405,13 +430,16 @@ class ActionDetails:
 
     Parameters
     ----------
-    pseudo_city_code: PCC in the host of the agent who stored the fare
-        for Provider: 1P/1J
-    agent_sine: The sign in of the user who stored the fare for
-        Provider: 1P/1J
-    event_date: Date at which the fare was stored for Provider: 1P/1J
-    event_time: Time at which the fare was stored for Provider: 1P/1J
-    text: The type of action the agent performed for Provider: 1P/1J
+    pseudo_city_code
+        PCC in the host of the agent who stored the fare for Provider: 1P/1J
+    agent_sine
+        The sign in of the user who stored the fare for Provider: 1P/1J
+    event_date
+        Date at which the fare was stored for Provider: 1P/1J
+    event_time
+        Time at which the fare was stored for Provider: 1P/1J
+    text
+        The type of action the agent performed for Provider: 1P/1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -460,8 +488,9 @@ class AdditionalInfo:
     """
     Parameters
     ----------
-    category: The category code is the code the AdditionalInfo text came
-        from, e.g. S5 or S7.
+    category
+        The category code is the code the AdditionalInfo text came from,
+        e.g. S5 or S7.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -503,16 +532,19 @@ class Adjustment:
 
     Parameters
     ----------
-    amount: Implies a flat amount to be adjusted. Negetive value implies
-        a discount.
-    percent: Implies an adjustment to be made on original price.
-        Negetive value implies a discount.
-    adjusted_total_price: The adjusted price after applying adjustment
-        on Total price
-    approximate_adjusted_total_price: The Converted adjusted total price
-        in Default Currency for this entity.
-    booking_traveler_ref: Reference to a booking traveler for which
-        adjustment is applied.
+    amount
+        Implies a flat amount to be adjusted. Negetive value implies a
+        discount.
+    percent
+        Implies an adjustment to be made on original price. Negetive value
+        implies a discount.
+    adjusted_total_price
+        The adjusted price after applying adjustment on Total price
+    approximate_adjusted_total_price
+        The Converted adjusted total price in Default Currency for this
+        entity.
+    booking_traveler_ref
+        Reference to a booking traveler for which adjustment is applied.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -709,7 +741,8 @@ class AirSearchAsynchModifiers:
         """
         Parameters
         ----------
-        max_wait: Max wait time in seconds.
+        max_wait
+            Max wait time in seconds.
         """
         max_wait: None | int = field(
             default=None,
@@ -753,8 +786,9 @@ class AirSegmentTicketingModifiers:
 
     Parameters
     ----------
-    air_segment_ref:
-    brand_tier: Modifier to price by specific brand tier number.
+    air_segment_ref
+    brand_tier
+        Modifier to price by specific brand tier number.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -791,8 +825,9 @@ class Alliance:
 
     Parameters
     ----------
-    code: The possible values are *A for Star Alliance,*O for One
-        world,*S for Sky team etc.
+    code
+        The possible values are *A for Star Alliance,*O for One world,*S for
+        Sky team etc.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -854,10 +889,11 @@ class BookingCodeInfo:
 
     Parameters
     ----------
-    cabin_class: Specifies Cabin class for a group of class of services.
-        Cabin class is not identified if it is not present.
-    booking_counts: Lists class of service and their counts for specific
-        cabin class
+    cabin_class
+        Specifies Cabin class for a group of class of services. Cabin class
+        is not identified if it is not present.
+    booking_counts
+        Lists class of service and their counts for specific cabin class
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -885,16 +921,18 @@ class BookingInfo:
 
     Parameters
     ----------
-    booking_code:
-    booking_count: Seat availability of the BookingCode
-    cabin_class:
-    fare_info_ref:
-    segment_ref:
-    coupon_ref: The coupon to which that booking is relative (if
-        applicable)
-    air_itinerary_solution_ref: Reference to an Air Itinerary Solution
-    host_token_ref: HostToken Reference for this segment and fare
-        combination.
+    booking_code
+    booking_count
+        Seat availability of the BookingCode
+    cabin_class
+    fare_info_ref
+    segment_ref
+    coupon_ref
+        The coupon to which that booking is relative (if applicable)
+    air_itinerary_solution_ref
+        Reference to an Air Itinerary Solution
+    host_token_ref
+        HostToken Reference for this segment and fare combination.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1043,12 +1081,14 @@ class BrandInfo:
 
     Parameters
     ----------
-    key: Brand Key
-    brand_id: The unique identifier of the brand
-    air_pricing_info_ref: A reference to a AirPricing. Providers: ACH,
-        1G, 1V, 1P, 1J.
-    fare_info_ref: A reference to a FareInfo. Providers: ACH, 1G, 1V,
-        1P, 1J.
+    key
+        Brand Key
+    brand_id
+        The unique identifier of the brand
+    air_pricing_info_ref
+        A reference to a AirPricing. Providers: ACH, 1G, 1V, 1P, 1J.
+    fare_info_ref
+        A reference to a FareInfo. Providers: ACH, 1G, 1V, 1P, 1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1093,8 +1133,10 @@ class BrandModifiers:
 
     Parameters
     ----------
-    fare_family_display: Used to request a fare family display.
-    basic_details_only: Used to request basic details of the brand.
+    fare_family_display
+        Used to request a fare family display.
+    basic_details_only
+        Used to request basic details of the brand.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1119,13 +1161,14 @@ class BrandModifiers:
         """
         Parameters
         ----------
-        modifier_type: "FareFamily" returns the lowest branded fares in
-            a fare family. "MaintainBookingCode" attempts to return the
-            lowest branded fare in a fare family display based on the
-            permitted booking code. Any brand that does not have a fare
-            for the permitted booking code will then have the lowest
-            fare returned. "LowestFareInBrand" returns the lowest fare
-            within each branded fare in a fare family display.
+        modifier_type
+            "FareFamily" returns the lowest branded fares in a fare family.
+            "MaintainBookingCode" attempts to return the lowest branded fare
+            in a fare family display based on the permitted booking code.
+            Any brand that does not have a fare for the permitted booking
+            code will then have the lowest fare returned.
+            "LowestFareInBrand" returns the lowest fare within each branded
+            fare in a fare family display.
         """
         modifier_type: None | str = field(
             default=None,
@@ -1155,8 +1198,10 @@ class Co2Emission:
 
     Parameters
     ----------
-    air_segment_ref: The segment reference
-    value: The CO2 emission value for the air segment
+    air_segment_ref
+        The segment reference
+    value
+        The CO2 emission value for the air segment
     """
     class Meta:
         name = "CO2Emission"
@@ -1225,10 +1270,12 @@ class CodeshareInfo:
 
     Parameters
     ----------
-    value:
-    operating_carrier: The actual carrier that is operating the flight.
-    operating_flight_number: The actual flight number of the carrier
-        that is operating the flight.
+    value
+    operating_carrier
+        The actual carrier that is operating the flight.
+    operating_flight_number
+        The actual flight number of the carrier that is operating the
+        flight.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1283,11 +1330,12 @@ class ContractCode:
 
     Parameters
     ----------
-    code: The 1-64 character string which uniquely identifies a
-        Contract.
-    company_name: Providers supported : ACH
-    provider_code:
-    supplier_code:
+    code
+        The 1-64 character string which uniquely identifies a Contract.
+    company_name
+        Providers supported : ACH
+    provider_code
+    supplier_code
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1371,9 +1419,10 @@ class CustomerReceiptInfo:
 
     Parameters
     ----------
-    booking_traveler_ref: Refererence of the Booking Traveler related to
-        the email.
-    email_ref: Reference to the email address used for receipt of EMD.
+    booking_traveler_ref
+        Refererence of the Booking Traveler related to the email.
+    email_ref
+        Reference to the email address used for receipt of EMD.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1417,9 +1466,12 @@ class Document:
 
     Parameters
     ----------
-    sequence: Sequence number for the document.
-    type_value: Type of the Document. Visa, Passport, DriverLicense etc.
-    level: Applicability level of the Document. Required, Supported,
+    sequence
+        Sequence number for the document.
+    type_value
+        Type of the Document. Visa, Passport, DriverLicense etc.
+    level
+        Applicability level of the Document. Required, Supported,
         API_Supported or Unknown.
     """
     class Meta:
@@ -1453,10 +1505,10 @@ class DocumentModifiers:
     """
     Parameters
     ----------
-    generate_itinerary_invoice: Generate itinerary/invoice documents
-        along with ticket
-    generate_accounting_interface: Generate interface message along with
-        ticket
+    generate_itinerary_invoice
+        Generate itinerary/invoice documents along with ticket
+    generate_accounting_interface
+        Generate interface message along with ticket
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1484,13 +1536,14 @@ class DocumentOptions:
 
     Parameters
     ----------
-    passenger_receipt_override:
-    override_option: Allows an agency to override print options for
-        documents during document generation.
-    suppress_itinerary_remarks: True when itinerary remarks are
-        suppressed.
-    generate_itin_numbers: True when itinerary numbers are system
-        generated.
+    passenger_receipt_override
+    override_option
+        Allows an agency to override print options for documents during
+        document generation.
+    suppress_itinerary_remarks
+        True when itinerary remarks are suppressed.
+    generate_itin_numbers
+        True when itinerary numbers are system generated.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1594,11 +1647,14 @@ class EmdtravelerInfo:
 
     Parameters
     ----------
-    name_info: Name information of the EMD traveler.
-    traveler_type: Defines the type of traveler used for booking which
-        could be a non-defining type (Companion, Web-fare, etc), or a
-        standard type (Adult, Child, etc).
-    age: Age of the traveler
+    name_info
+        Name information of the EMD traveler.
+    traveler_type
+        Defines the type of traveler used for booking which could be a non-
+        defining type (Companion, Web-fare, etc), or a standard type (Adult,
+        Child, etc).
+    age
+        Age of the traveler
     """
     class Meta:
         name = "EMDTravelerInfo"
@@ -1634,11 +1690,16 @@ class EmdtravelerInfo:
         """
         Parameters
         ----------
-        prefix: Name prefix.
-        first: First Name.
-        middle: Midle name.
-        last: Last Name.
-        suffix: Name suffix.
+        prefix
+            Name prefix.
+        first
+            First Name.
+        middle
+            Midle name.
+        last
+            Last Name.
+        suffix
+            Name suffix.
         """
         prefix: None | str = field(
             default=None,
@@ -1711,19 +1772,25 @@ class Embargo:
 
     Parameters
     ----------
-    key:
-    carrier:
-    segment_ref:
-    name: The commercial name of the optional service on which the
-        embargo applies. Provider: 1G, 1V, 1P, 1J
-    text: Brief description of the embargo. Provider: 1G, 1V, 1P, 1J
-    secondary_type: The secondary type of the optional service on which
-        the embargo applies.  Provider: 1G, 1V, 1P, 1J
-    type_value: The type of optional service on which the embargo
+    key
+    carrier
+    segment_ref
+    name
+        The commercial name of the optional service on which the embargo
+        applies. Provider: 1G, 1V, 1P, 1J
+    text
+        Brief description of the embargo. Provider: 1G, 1V, 1P, 1J
+    secondary_type
+        The secondary type of the optional service on which the embargo
         applies.  Provider: 1G, 1V, 1P, 1J
-    url: Website of the operating carrier. Provider: 1G, 1V, 1P, 1J
-    service_sub_code: The service sub code of the optional service on
-        which the embargo applies.  Provider: 1G, 1V, 1P, 1J
+    type_value
+        The type of optional service on which the embargo applies.
+        Provider: 1G, 1V, 1P, 1J
+    url
+        Website of the operating carrier. Provider: 1G, 1V, 1P, 1J
+    service_sub_code
+        The service sub code of the optional service on which the embargo
+        applies.  Provider: 1G, 1V, 1P, 1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1805,7 +1872,8 @@ class ExchangedTicketInfo:
 
     Parameters
     ----------
-    number: Original Ticket that was Exchange/Reissued
+    number
+        Original Ticket that was Exchange/Reissued
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1829,8 +1897,9 @@ class ExcludeTicketing:
 
     Parameters
     ----------
-    booking_traveler_ref: Reference to a booking traveler for which
-        ticketing modifier is applied.
+    booking_traveler_ref
+        Reference to a booking traveler for which ticketing modifier is
+        applied.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1873,15 +1942,18 @@ class ExemptTaxes:
 
     Parameters
     ----------
-    country_code: Specify ISO country code for which tax exemption is
-        requested.
-    tax_category: Specify tax category for which tax exemption is
-        requested.
-    all_taxes: Request exemption of all taxes.
-    tax_territory: exemption is achieved by sending in the TaxTerritory
-        in the tax exempt price request.
-    company_name: The federal government body name must be provided in
-        this element. This field is required by AC
+    country_code
+        Specify ISO country code for which tax exemption is requested.
+    tax_category
+        Specify tax category for which tax exemption is requested.
+    all_taxes
+        Request exemption of all taxes.
+    tax_territory
+        exemption is achieved by sending in the TaxTerritory in the tax
+        exempt price request.
+    company_name
+        The federal government body name must be provided in this element.
+        This field is required by AC
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -1936,9 +2008,10 @@ class FareBasis:
 
     Parameters
     ----------
-    code: The fare basis code for this fare
-    segment_ref: The segment to which this FareBasis Code is to
-        connected
+    code
+        The fare basis code for this fare
+    segment_ref
+        The segment to which this FareBasis Code is to connected
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2079,20 +2152,25 @@ class FarePricing:
 
     Parameters
     ----------
-    passenger_type:
-    total_fare_amount:
-    private_fare: NegotiatedFare attribute from earlier version of
-        schema used to imply whether the fare is private fare or not.
-        So, this attribute is renamed to PrivateFare as it best suited.
-    negotiated_fare: Identifies the fare as a Negotiated Fare.
-    auto_priceable: Identifies the fare as Autopriceable or not. False
-        value means the fare filing is incomplete and the fare should
-        not be used.
-    total_net_fare_amount: Total Net fare amount.
-    base_fare: Base fare amount.
-    taxes:
-    mmid: Contains the Reference id which is generated when the request
-        was ReturnMM=”true”.
+    passenger_type
+    total_fare_amount
+    private_fare
+        NegotiatedFare attribute from earlier version of schema used to
+        imply whether the fare is private fare or not. So, this attribute is
+        renamed to PrivateFare as it best suited.
+    negotiated_fare
+        Identifies the fare as a Negotiated Fare.
+    auto_priceable
+        Identifies the fare as Autopriceable or not. False value means the
+        fare filing is incomplete and the fare should not be used.
+    total_net_fare_amount
+        Total Net fare amount.
+    base_fare
+        Base fare amount.
+    taxes
+    mmid
+        Contains the Reference id which is generated when the request was
+        ReturnMM=”true”.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2343,9 +2421,10 @@ class FareRuleKey:
 
     Parameters
     ----------
-    value:
-    fare_info_ref: The Fare Component to which this Rule Key applies
-    provider_code:
+    value
+    fare_info_ref
+        The Fare Component to which this Rule Key applies
+    provider_code
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2480,10 +2559,12 @@ class FareRulesFilterCategory:
 
     Parameters
     ----------
-    category_code: Fare Rules Filter category can be requested.
-        Currently only '˜MIN, MAX, ADV, CHG, OTH' is supported.
-        Applicable for Providers 1G,1V,1P,1J.
-    fare_info_ref: This tells if Low Fare Finder was used.
+    category_code
+        Fare Rules Filter category can be requested. Currently only '˜MIN,
+        MAX, ADV, CHG, OTH' is supported. Applicable for Providers
+        1G,1V,1P,1J.
+    fare_info_ref
+        This tells if Low Fare Finder was used.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2513,8 +2594,10 @@ class FareStatusFailureInfo:
 
     Parameters
     ----------
-    code: The failure code of the fare.
-    reason: The reason for the failure.
+    code
+        The failure code of the fare.
+    reason
+        The reason for the failure.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2580,9 +2663,10 @@ class FeeApplication:
     """
     Parameters
     ----------
-    value:
-    code: The code associated to the fee application. The  choices are:
-        1, 2, 3, 4, 5, K, F
+    value
+    code
+        The code associated to the fee application. The  choices are: 1, 2,
+        3, 4, 5, K, F
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2638,19 +2722,23 @@ class FlightInfoCriteria:
     """
     Parameters
     ----------
-    key: An identifier to link the flightinfo responses to the criteria.
-        The value passed here will be returned in the resulting
-        flightinfo(s) from this command.
-    carrier: The carrier that is marketing this segment
-    flight_number: The flight number under which the marketing carrier
-        is marketing this flight
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_date: The date at which this entity departs. This does not
-        include time zone information since it can be derived from the
-        origin location.
-    class_of_service:
+    key
+        An identifier to link the flightinfo responses to the criteria. The
+        value passed here will be returned in the resulting flightinfo(s)
+        from this command.
+    carrier
+        The carrier that is marketing this segment
+    flight_number
+        The flight number under which the marketing carrier is marketing
+        this flight
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_date
+        The date at which this entity departs. This does not include time
+        zone information since it can be derived from the origin location.
+    class_of_service
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2726,18 +2814,19 @@ class FlightType:
 
     Parameters
     ----------
-    require_single_carrier:
-    max_connections: The maximum number of connections within a segment
-        group.
-    max_stops: The maximum number of stops within a connection.
-    non_stop_directs:
-    stop_directs:
-    single_online_con:
-    double_online_con:
-    triple_online_con:
-    single_interline_con:
-    double_interline_con:
-    triple_interline_con:
+    require_single_carrier
+    max_connections
+        The maximum number of connections within a segment group.
+    max_stops
+        The maximum number of stops within a connection.
+    non_stop_directs
+    stop_directs
+    single_online_con
+    double_online_con
+    triple_online_con
+    single_interline_con
+    double_interline_con
+    triple_interline_con
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2830,9 +2919,9 @@ class GroupedOption:
     """
     Parameters
     ----------
-    optional_service_ref: Reference to a optionalService which is paired
-        with other optional services in the parent PairedOptions
-        element.
+    optional_service_ref
+        Reference to a optionalService which is paired with other optional
+        services in the parent PairedOptions element.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2856,19 +2945,23 @@ class HostReservation:
 
     Parameters
     ----------
-    carrier: The carrier code (e.g. YX, UA, ...) that is providing the
+    carrier
+        The carrier code (e.g. YX, UA, ...) that is providing the
         merchandising
-    carrier_locator_code: The locator code in the supplier system (also
-        could be defined as locator in the carrier host system).
-    provider_code: Contains the GDS or other provider code of the entity
-        actually housing the reservation. This is optional when used on
-        Merchandising Availability but required on
-        MerchandisingFulfillment.
-    provider_locator_code: Contains the locator of the reservation
-        actually housed in the provider.
-    universal_locator_code: The locator of the Universal Record, if one
-        exists.
-    eticket: An flag to indicate if ticket has been issued for the PNR.
+    carrier_locator_code
+        The locator code in the supplier system (also could be defined as
+        locator in the carrier host system).
+    provider_code
+        Contains the GDS or other provider code of the entity actually
+        housing the reservation. This is optional when used on Merchandising
+        Availability but required on MerchandisingFulfillment.
+    provider_locator_code
+        Contains the locator of the reservation actually housed in the
+        provider.
+    universal_locator_code
+        The locator of the Universal Record, if one exists.
+    eticket
+        An flag to indicate if ticket has been issued for the PNR.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2934,10 +3027,13 @@ class ImageLocation:
     """
     Parameters
     ----------
-    value:
-    type_value: Type of Image Location. E.g., "Agent", "Consumer".
-    image_width: The width of the image
-    image_height: The height of the image
+    value
+    type_value
+        Type of Image Location. E.g., "Agent", "Consumer".
+    image_width
+        The width of the image
+    image_height
+        The height of the image
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -2998,8 +3094,10 @@ class LanguageOption:
 
     Parameters
     ----------
-    language: 2 Letter ISO Language code
-    country: 2 Letter ISO Country code
+    language
+        2 Letter ISO Language code
+    country
+        2 Letter ISO Country code
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3031,13 +3129,17 @@ class LegDetail:
 
     Parameters
     ----------
-    key:
-    origin_airport: Returns the origin airport code for the Leg Detail.
-    destination_airport: Returns the destination airport code for the
-        Leg Detail.
-    carrier: Carrier for the Search Leg Detail.
-    travel_date: The Departure date and time for this Leg Detail.
-    flight_number: Flight Number for the Search Leg Detail.
+    key
+    origin_airport
+        Returns the origin airport code for the Leg Detail.
+    destination_airport
+        Returns the destination airport code for the Leg Detail.
+    carrier
+        Carrier for the Search Leg Detail.
+    travel_date
+        The Departure date and time for this Leg Detail.
+    flight_number
+        Flight Number for the Search Leg Detail.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3121,8 +3223,9 @@ class LoyaltyCardDetails:
 
     Parameters
     ----------
-    supplier_code: Carrier Code
-    priority_code:
+    supplier_code
+        Carrier Code
+    priority_code
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3152,23 +3255,32 @@ class Maxtype:
     """
     Parameters
     ----------
-    hours_max: Maximum hours. True if unit of time is hours. False if
-        unit of time is not hours.
-    days_max: Maximum days. True if unit of time is days. False if unit
-        of time is not days.
-    months_max: Maximum months. True if unit of time is months. False if
-        unit of time is not months.
-    occur_ind_max: Maximum cccurance indicator. True if day of the week
-        is used. False if day of the week is not used.
-    same_day_max: Same day maximum. True if Stay is same day. False if
-        Stay is not same day.
-    start_ind_max: Start indicator. True if start indicator. False if
-        not a start indicator.
-    completion_ind: Completion indicator. True if Completion C
-        Indicator. False if not Completion C Indicator.
-    tm_dowmax: If a max unit of time is true then number corrolates to
-        day of the week starting with 1 for Sunday.
-    num_occur_max: Number of maximum occurances.
+    hours_max
+        Maximum hours. True if unit of time is hours. False if unit of time
+        is not hours.
+    days_max
+        Maximum days. True if unit of time is days. False if unit of time is
+        not days.
+    months_max
+        Maximum months. True if unit of time is months. False if unit of
+        time is not months.
+    occur_ind_max
+        Maximum cccurance indicator. True if day of the week is used. False
+        if day of the week is not used.
+    same_day_max
+        Same day maximum. True if Stay is same day. False if Stay is not
+        same day.
+    start_ind_max
+        Start indicator. True if start indicator. False if not a start
+        indicator.
+    completion_ind
+        Completion indicator. True if Completion C Indicator. False if not
+        Completion C Indicator.
+    tm_dowmax
+        If a max unit of time is true then number corrolates to day of the
+        week starting with 1 for Sunday.
+    num_occur_max
+        Number of maximum occurances.
     """
     class Meta:
         name = "MAXType"
@@ -3243,21 +3355,29 @@ class Mintype:
     """
     Parameters
     ----------
-    hours_min: Minimum hours. True if unit of time is hours.  False if
-        unit of time is not hours.
-    days_min: Minimum days. True if unit of time is days. False if unit
-        of time is not days.
-    months_min: Minimum months. True if unit of time is months. False if
-        unit of time is not months.
-    occur_ind_min: Minimum occurance indicator. True if day of the week
-        is used. False if day of the week is not used.
-    same_day_min: Same day minimum. True if Stay is same day. False if
-        Stay is not same day.
-    tm_dowmin: If a min unit of time is true then number corrolates to
-        day of the week starting with 1 for Sunday.
-    fare_component: Fare component number of the most restrictive fare.
-    num_occur_min: Number of min occurances. This field is used in
-        conjunction with the Day of Week.
+    hours_min
+        Minimum hours. True if unit of time is hours.  False if unit of time
+        is not hours.
+    days_min
+        Minimum days. True if unit of time is days. False if unit of time is
+        not days.
+    months_min
+        Minimum months. True if unit of time is months. False if unit of
+        time is not months.
+    occur_ind_min
+        Minimum occurance indicator. True if day of the week is used. False
+        if day of the week is not used.
+    same_day_min
+        Same day minimum. True if Stay is same day. False if Stay is not
+        same day.
+    tm_dowmin
+        If a min unit of time is true then number corrolates to day of the
+        week starting with 1 for Sunday.
+    fare_component
+        Fare component number of the most restrictive fare.
+    num_occur_min
+        Number of min occurances. This field is used in conjunction with the
+        Day of Week.
     """
     class Meta:
         name = "MINType"
@@ -3328,12 +3448,14 @@ class MaxLayoverDurationType:
 
     Parameters
     ----------
-    domestic: It will be applied for all Domestic-to-Domestic
-        connections.
-    gateway: It will be applied for all Domestic to International and
+    domestic
+        It will be applied for all Domestic-to-Domestic connections.
+    gateway
+        It will be applied for all Domestic to International and
         International to Domestic connections.
-    international: It will be applied for all International-to-
-        International connections.
+    international
+        It will be applied for all International-to-International
+        connections.
     """
     domestic: None | int = field(
         default=None,
@@ -3371,24 +3493,28 @@ class MultiGdssearchIndicator:
 
     Parameters
     ----------
-    type_value: Indicates whether only public fares or both public and
-        private fares should be returned or a specific type of private
-        fares. Examples of valid values are PublicFaresOnly,
-        PrivateFaresOnly, AirlinePrivateFaresOnly,
-        AgencyPrivateFaresOnly, PublicandPrivateFares, and NetFaresOnly.
-    provider_code:
-    default_provider: Use the value “true” if the provider is the
-        default (primary) provider.  Use the value “false” if the
-        provider is the alternate (secondary).  Use of this attribute
-        requires specifically provisioned credentials.
-    private_fare_code: The code of the corporate private fare.  This is
-        the same as an account code.  Use of this attribute requires
+    type_value
+        Indicates whether only public fares or both public and private fares
+        should be returned or a specific type of private fares. Examples of
+        valid values are PublicFaresOnly, PrivateFaresOnly,
+        AirlinePrivateFaresOnly, AgencyPrivateFaresOnly,
+        PublicandPrivateFares, and NetFaresOnly.
+    provider_code
+    default_provider
+        Use the value “true” if the provider is the default (primary)
+        provider.  Use the value “false” if the provider is the alternate
+        (secondary).  Use of this attribute requires specifically
+        provisioned credentials.
+    private_fare_code
+        The code of the corporate private fare.  This is the same as an
+        account code.  Use of this attribute requires specifically
+        provisioned credentials.
+    private_fare_code_only
+        :  Indicates whether or not the private fares returned should be
+        restricted to only those specific to the PrivateFareCode in the
+        previous attribute.  This has the same validation as the
+        AccountCodeFaresOnly attribute.  Use of this attribute requires
         specifically provisioned credentials.
-    private_fare_code_only: :  Indicates whether or not the private
-        fares returned should be restricted to only those specific to
-        the PrivateFareCode in the previous attribute.  This has the
-        same validation as the AccountCodeFaresOnly attribute.  Use of
-        this attribute requires specifically provisioned credentials.
     """
     class Meta:
         name = "MultiGDSSearchIndicator"
@@ -3438,77 +3564,113 @@ class Othtype:
     """
     Parameters
     ----------
-    cat0: Category 0 rules. True if category applies.  False if rules do
-        not apply.
-    cat1: Category 1 rules. True if category applies.  False if rules do
-        not apply.
-    cat2: Category 2 rules. True if category applies.  False if rules do
-        not apply.
-    cat3: Category 3 rules. True if category applies.  False if rules do
-        not apply.
-    cat4: Category 4 rules. True if category applies.  False if rules do
-        not apply.
-    cat5: Category 5 rules. True if category applies.  False if rules do
-        not apply.
-    cat6: Category 6 rules. True if category applies.  False if rules do
-        not apply.
-    cat7: Category 7 rules. True if category applies.  False if rules do
-        not apply.
-    cat8: Category 8 rules. True if category applies.  False if rules do
-        not apply.
-    cat9: Category 9 rules. True if category applies.  False if rules do
-        not apply.
-    cat10: Category 10 rules. True if category applies.  False if rules
-        do not apply.
-    cat11: Category 11 rules. True if category applies.  False if rules
-        do not apply.
-    cat12: Category 12 rules. True if category applies.  False if rules
-        do not apply.
-    cat13: Category 13 rules. True if category applies.  False if rules
-        do not apply.
-    cat14: Category 14 rules. True if category applies.  False if rules
-        do not apply.
-    cat15: Category 15 rules. True if category applies.  False if rules
-        do not apply.
-    cat16: Category 16 rules. True if category applies.  False if rules
-        do not apply.
-    cat17: Category 17 rules. True if category applies.  False if rules
-        do not apply.
-    cat18: Category 18 rules. True if category applies.  False if rules
-        do not apply.
-    cat19: Category 19 rules. True if category applies.  False if rules
-        do not apply.
-    cat20: Category 20 rules. True if category applies.  False if rules
-        do not apply.
-    cat21: Category 21 rules. True if category applies.  False if rules
-        do not apply.
-    cat22: Category 22 rules. True if category applies.  False if rules
-        do not apply.
-    cat23: Category 23 rules. True if category applies.  False if rules
-        do not apply.
-    cat24: Category 24 rules. True if category applies.  False if rules
-        do not apply.
-    cat25: Category 25 rules. True if category applies.  False if rules
-        do not apply.
-    cat26: Category 26 rules. True if category applies.  False if rules
-        do not apply.
-    cat27: Category 27 rules. True if category applies.  False if rules
-        do not apply.
-    cat28: Category 28 rules. True if category applies.  False if rules
-        do not apply.
-    cat29: Category 29 rules. True if category applies.  False if rules
-        do not apply.
-    cat30: Category 30 rules. True if category applies.  False if rules
-        do not apply.
-    cat31: Category 31 rules. True if category applies.  False if rules
-        do not apply.
-    restrictive_dt: Most restrictive ticketing date.
-    surcharge_amt: Surcharge amount
-    not_usacity: Not USA city.  True if Origin or final destination not
-        a continental U.S. City. False if Origin or final destination a
-        continental U.S. City.
-    missing_rules: Missing rules.  True if rules are missing.  False if
-        rules are not missing.
+    cat0
+        Category 0 rules. True if category applies.  False if rules do not
+        apply.
+    cat1
+        Category 1 rules. True if category applies.  False if rules do not
+        apply.
+    cat2
+        Category 2 rules. True if category applies.  False if rules do not
+        apply.
+    cat3
+        Category 3 rules. True if category applies.  False if rules do not
+        apply.
+    cat4
+        Category 4 rules. True if category applies.  False if rules do not
+        apply.
+    cat5
+        Category 5 rules. True if category applies.  False if rules do not
+        apply.
+    cat6
+        Category 6 rules. True if category applies.  False if rules do not
+        apply.
+    cat7
+        Category 7 rules. True if category applies.  False if rules do not
+        apply.
+    cat8
+        Category 8 rules. True if category applies.  False if rules do not
+        apply.
+    cat9
+        Category 9 rules. True if category applies.  False if rules do not
+        apply.
+    cat10
+        Category 10 rules. True if category applies.  False if rules do not
+        apply.
+    cat11
+        Category 11 rules. True if category applies.  False if rules do not
+        apply.
+    cat12
+        Category 12 rules. True if category applies.  False if rules do not
+        apply.
+    cat13
+        Category 13 rules. True if category applies.  False if rules do not
+        apply.
+    cat14
+        Category 14 rules. True if category applies.  False if rules do not
+        apply.
+    cat15
+        Category 15 rules. True if category applies.  False if rules do not
+        apply.
+    cat16
+        Category 16 rules. True if category applies.  False if rules do not
+        apply.
+    cat17
+        Category 17 rules. True if category applies.  False if rules do not
+        apply.
+    cat18
+        Category 18 rules. True if category applies.  False if rules do not
+        apply.
+    cat19
+        Category 19 rules. True if category applies.  False if rules do not
+        apply.
+    cat20
+        Category 20 rules. True if category applies.  False if rules do not
+        apply.
+    cat21
+        Category 21 rules. True if category applies.  False if rules do not
+        apply.
+    cat22
+        Category 22 rules. True if category applies.  False if rules do not
+        apply.
+    cat23
+        Category 23 rules. True if category applies.  False if rules do not
+        apply.
+    cat24
+        Category 24 rules. True if category applies.  False if rules do not
+        apply.
+    cat25
+        Category 25 rules. True if category applies.  False if rules do not
+        apply.
+    cat26
+        Category 26 rules. True if category applies.  False if rules do not
+        apply.
+    cat27
+        Category 27 rules. True if category applies.  False if rules do not
+        apply.
+    cat28
+        Category 28 rules. True if category applies.  False if rules do not
+        apply.
+    cat29
+        Category 29 rules. True if category applies.  False if rules do not
+        apply.
+    cat30
+        Category 30 rules. True if category applies.  False if rules do not
+        apply.
+    cat31
+        Category 31 rules. True if category applies.  False if rules do not
+        apply.
+    restrictive_dt
+        Most restrictive ticketing date.
+    surcharge_amt
+        Surcharge amount
+    not_usacity
+        Not USA city.  True if Origin or final destination not a continental
+        U.S. City. False if Origin or final destination a continental U.S.
+        City.
+    missing_rules
+        Missing rules.  True if rules are missing.  False if rules are not
+        missing.
     """
     class Meta:
         name = "OTHType"
@@ -3772,11 +3934,13 @@ class OfferAvailabilityModifiers:
     """
     Parameters
     ----------
-    service_type: To restrict offers to only this type.
-    carrier: The carrier whose paid seat optional services is to be
-        returned by uAPI.
-    currency_type: Currency code override. Providers: ACH, 1G, 1V, 1P,
-        1J
+    service_type
+        To restrict offers to only this type.
+    carrier
+        The carrier whose paid seat optional services is to be returned by
+        uAPI.
+    currency_type
+        Currency code override. Providers: ACH, 1G, 1V, 1P, 1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3817,14 +3981,20 @@ class OptionalServiceModifier:
 
     Parameters
     ----------
-    type_value: Optional service type
-    secondary_type: Secondary optional service type
-    supplier_code: Optional service supplier code
-    service_sub_code: As published by ATPCO
-    travel_date: The departure date of the air segment the optional
-        service is valid for.
-    description: This allows MDS to return specific image and text
-        corresponding to the ancillary name (S5 ancillary name).
+    type_value
+        Optional service type
+    secondary_type
+        Secondary optional service type
+    supplier_code
+        Optional service supplier code
+    service_sub_code
+        As published by ATPCO
+    travel_date
+        The departure date of the air segment the optional service is valid
+        for.
+    description
+        This allows MDS to return specific image and text corresponding to
+        the ancillary name (S5 ancillary name).
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -3987,9 +4157,10 @@ class PassengerTicketNumber:
 
     Parameters
     ----------
-    ticket_number: The identifying number for a Ticket for a passenger.
-    booking_traveler_ref: Reference to a passenger associated with a
-        ticket.
+    ticket_number
+        The identifying number for a Ticket for a passenger.
+    booking_traveler_ref
+        Reference to a passenger associated with a ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4035,36 +4206,44 @@ class PenFeeType:
     """
     Parameters
     ----------
-    dep_required: Deposit required. True if require. False if not
-        required.
-    dep_non_ref: Deposit non-refundable.  True is  non-refundanbe.
-        False is refundable.
-    tk_non_ref: Ticket non-refundable. True if non-refundanbe. False if
+    dep_required
+        Deposit required. True if require. False if not required.
+    dep_non_ref
+        Deposit non-refundable.  True is  non-refundanbe.  False is
         refundable.
-    air_vfee: Carrier fee. True if carrier fee is assessed should
-        passenger for complete all conditions for travel at fare. False
-        if it does not exist.
-    cancellation: Cancellation. True if subject to penalty. False if no
-        penalty.
-    fail_confirm_space: Failure to confirm space. True if subject to
-        penalty if seats are not confirmed. False if subject to penalty
-        if seats are confirmed.
-    itin_chg: Subject to penalty if Itinerary is changed requiring
-        reissue of ticket. True if subject to penalty. False if no
-        penalty if reissue required.
-    replace_tk: Replace ticket. True if subject to penalty, if
-        replacement of lost ticket / exchange order. False if no
-        penalty, if replacement of lost ticket or exchange order.
-    applicable: Applicable. True if amount specified is applicable.
-        Flase if amount specified is not applicable.
-    applicable_to: Applicable to penalty or deposit. True if amount
-        specified applies to penalty. False if amount specified applies
-        to deposit.
-    amt: Amount of penalty.  If XXX.XX then it is an amount.  If it is
-        XX then is is a percenatge.  Eg 100.00 or 000100.
-    type_value: Type of penalty.  If it is D then dollar.  If it is P
-        then percentage.
-    currency: Currency code of penalty (e.g. USD).
+    tk_non_ref
+        Ticket non-refundable. True if non-refundanbe. False if refundable.
+    air_vfee
+        Carrier fee. True if carrier fee is assessed should passenger for
+        complete all conditions for travel at fare. False if it does not
+        exist.
+    cancellation
+        Cancellation. True if subject to penalty. False if no penalty.
+    fail_confirm_space
+        Failure to confirm space. True if subject to penalty if seats are
+        not confirmed. False if subject to penalty if seats are confirmed.
+    itin_chg
+        Subject to penalty if Itinerary is changed requiring reissue of
+        ticket. True if subject to penalty. False if no penalty if reissue
+        required.
+    replace_tk
+        Replace ticket. True if subject to penalty, if replacement of lost
+        ticket / exchange order. False if no penalty, if replacement of lost
+        ticket or exchange order.
+    applicable
+        Applicable. True if amount specified is applicable. Flase if amount
+        specified is not applicable.
+    applicable_to
+        Applicable to penalty or deposit. True if amount specified applies
+        to penalty. False if amount specified applies to deposit.
+    amt
+        Amount of penalty.  If XXX.XX then it is an amount.  If it is XX
+        then is is a percenatge.  Eg 100.00 or 000100.
+    type_value
+        Type of penalty.  If it is D then dollar.  If it is P then
+        percentage.
+    currency
+        Currency code of penalty (e.g. USD).
     """
     dep_required: None | bool = field(
         default=None,
@@ -4164,8 +4343,10 @@ class Penalty:
     """
     Parameters
     ----------
-    amount: Penalty Amount
-    penalty_type: This is the PPC (Price Processing Code)code.
+    amount
+        Penalty Amount
+    penalty_type
+        This is the PPC (Price Processing Code)code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4191,29 +4372,40 @@ class PenaltyInformation:
     """
     Parameters
     ----------
-    value:
-    carrier: Fare-owning carrier
-    fare_basis: Unique identifier that provides the association to the
-        fare amount and fare rules.
-    fare_component: A portion of a journey or itinerary between two
-        consecutive fare break points.
-    priceable_unit: Identifies FareComponents that are priced together
-    board_point: Origin for the FareComponent
-    off_point: Destination for the FareComponent
-    minimum_change_fee: Estimated minimum change fee associated with the
-        fare component.  Can be overridden by ChangeFeeApplicationCodes
-        for other fare components.
-    maximum_change_fee: Estimated maximum change fee associated with the
-        fare component.  Can be overridden by ChangeFeeApplicationCodes
-        for other fare components.
-    filed_currency: Currency of the filed change fee
-    conversion_rate: Conversion rate from filed change fee currency to
-        reissue location currency
-    refundable: Answers whether the FareComponent is refundable
-    change_fee_application_code: Unique code associated with the
-        PenaltyInformation text which defines how fees will be
-        applied/calculated. E.g. J2 translates to "From among all fare
-        components, changed and unchanged...."
+    value
+    carrier
+        Fare-owning carrier
+    fare_basis
+        Unique identifier that provides the association to the fare amount
+        and fare rules.
+    fare_component
+        A portion of a journey or itinerary between two consecutive fare
+        break points.
+    priceable_unit
+        Identifies FareComponents that are priced together
+    board_point
+        Origin for the FareComponent
+    off_point
+        Destination for the FareComponent
+    minimum_change_fee
+        Estimated minimum change fee associated with the fare component.
+        Can be overridden by ChangeFeeApplicationCodes for other fare
+        components.
+    maximum_change_fee
+        Estimated maximum change fee associated with the fare component.
+        Can be overridden by ChangeFeeApplicationCodes for other fare
+        components.
+    filed_currency
+        Currency of the filed change fee
+    conversion_rate
+        Conversion rate from filed change fee currency to reissue location
+        currency
+    refundable
+        Answers whether the FareComponent is refundable
+    change_fee_application_code
+        Unique code associated with the PenaltyInformation text which
+        defines how fees will be applied/calculated. E.g. J2 translates to
+        "From among all fare components, changed and unchanged...."
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4324,9 +4516,12 @@ class PersonName:
 
     Parameters
     ----------
-    first: Person First Name.
-    last: Person Last Name.
-    prefix: Person Name prefix.
+    first
+        Person First Name.
+    last
+        Person Last Name.
+    prefix
+        Person Name prefix.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4368,7 +4563,8 @@ class PersonNameSearch:
 
     Parameters
     ----------
-    last: Person Last Name to be searched for Flight Pass content.
+    last
+        Person Last Name to be searched for Flight Pass content.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4390,8 +4586,9 @@ class PolicyCodesList:
     """
     Parameters
     ----------
-    policy_code: A code that indicates why an item was determined to be
-        ‘out of policy’.
+    policy_code
+        A code that indicates why an item was determined to be ‘out of
+        policy’.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4416,12 +4613,14 @@ class PriceChangeType:
 
     Parameters
     ----------
-    value:
-    amount: Contains the currency and amount information. Assume the
-        amount is added unless a hyphen is present to indicate
-        subtraction.
-    carrier: Contains carrier code information
-    segment_ref: Contains segment reference information
+    value
+    amount
+        Contains the currency and amount information. Assume the amount is
+        added unless a hyphen is present to indicate subtraction.
+    carrier
+        Contains carrier code information
+    segment_ref
+        Contains segment reference information
     """
     value: str = field(
         default="",
@@ -4458,10 +4657,13 @@ class PriceRange:
     """
     Parameters
     ----------
-    default_currency: Indicates if the currency code of StartPrice /
-        EndPrice is the default currency code
-    start_price: Price range start value
-    end_price: Price range end value
+    default_currency
+        Indicates if the currency code of StartPrice / EndPrice is the
+        default currency code
+    start_price
+        Price range start value
+    end_price
+        Price range end value
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4496,10 +4698,10 @@ class PrintBlankFormItinerary:
 
     Parameters
     ----------
-    include_description: If it is true then document will be printed
-        including descriptions.
-    include_header: If it is true then document will be printed
-        including it's header.
+    include_description
+        If it is true then document will be printed including descriptions.
+    include_header
+        If it is true then document will be printed including it's header.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4529,9 +4731,12 @@ class PromoCode:
 
     Parameters
     ----------
-    code: To be used to specify Promotional Code.
-    provider_code: To be used to specify Provider Code.
-    supplier_code: To be used to specify Supplier Code.
+    code
+        To be used to specify Promotional Code.
+    provider_code
+        To be used to specify Provider Code.
+    supplier_code
+        To be used to specify Supplier Code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4573,11 +4778,13 @@ class RailCoachDetails:
     """
     Parameters
     ----------
-    rail_coach_number: Rail coach number for the returned coach details.
-    available_rail_seats: Number of available seats present in this rail
-        coach.
-    rail_seat_map_availability: Indicates if seats are available in this
-        rail coach which can be mapped.
+    rail_coach_number
+        Rail coach number for the returned coach details.
+    available_rail_seats
+        Number of available seats present in this rail coach.
+    rail_seat_map_availability
+        Indicates if seats are available in this rail coach which can be
+        mapped.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4736,12 +4943,13 @@ class RuleCharges:
 
     Parameters
     ----------
-    penalty_type:
-    departure_status:
-    amount:
-    percent:
-    more_rules_present: If true, specifies that advance purchase
-        information will be present in fare rules.
+    penalty_type
+    departure_status
+    amount
+    percent
+    more_rules_present
+        If true, specifies that advance purchase information will be present
+        in fare rules.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4788,7 +4996,8 @@ class Rules:
     """
     Parameters
     ----------
-    rules_text: Rules text
+    rules_text
+        Rules text
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4807,17 +5016,21 @@ class SearchSpecificAirSegment:
     """
     Parameters
     ----------
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
-        from the origin location.
-    carrier: The carrier that is marketing this segment
-    flight_number: The flight number under which the marketing carrier
-        is marketing this flight
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    segment_index: The sequential AirSegment number that this segment
-        connected to.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location.
+    carrier
+        The carrier that is marketing this segment
+    flight_number
+        The flight number under which the marketing carrier is marketing
+        this flight
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    segment_index
+        The sequential AirSegment number that this segment connected to.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4885,16 +5098,20 @@ class SeatInformation:
 
     Parameters
     ----------
-    power: Detail about any electrical power the seat might have. For
-        example: No Power Providers: 1G, 1V, 1P, 1J
-    video: Detail about any video components the seat might have. For
-        example: No Video Providers: 1G, 1V, 1P, 1J
-    type_value: Detail about the type of seat. For example: Exit Row,
-        Standard, etc. Providers: 1G, 1V, 1P, 1J
-    description: Detailed description of the seat. Providers: 1G, 1V,
-        1P, 1J
-    rating: Definition of the seat rating. Providers: 1G, 1V, 1P, 1J
-    key:
+    power
+        Detail about any electrical power the seat might have. For example:
+        No Power Providers: 1G, 1V, 1P, 1J
+    video
+        Detail about any video components the seat might have. For example:
+        No Video Providers: 1G, 1V, 1P, 1J
+    type_value
+        Detail about the type of seat. For example: Exit Row, Standard, etc.
+        Providers: 1G, 1V, 1P, 1J
+    description
+        Detailed description of the seat. Providers: 1G, 1V, 1P, 1J
+    rating
+        Definition of the seat rating. Providers: 1G, 1V, 1P, 1J
+    key
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -4953,9 +5170,10 @@ class SeatInformation:
         """
         Parameters
         ----------
-        value:
-        number: Numerical rating of the seat from 1 to 5 with 1 being
-            bad and 5 being good. Providers: 1G, 1V, 1P, 1J
+        value
+        number
+            Numerical rating of the seat from 1 to 5 with 1 being bad and 5
+            being good. Providers: 1G, 1V, 1P, 1J
         """
         value: str = field(
             default="",
@@ -4997,8 +5215,9 @@ class ServiceSubGroup:
 
     Parameters
     ----------
-    code: The Service Sub Group Code of the Ancillary Service.
-        Providers: 1G, 1V, 1P, 1J, ACH
+    code
+        The Service Sub Group Code of the Ancillary Service.  Providers: 1G,
+        1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5019,14 +5238,18 @@ class SpecificSeatAssignment:
 
     Parameters
     ----------
-    booking_traveler_ref: The passenger that this seat assignment is for
-    segment_ref: The segment that we will assign this seat on
-    flight_detail_ref: The Flight Detail ref of the AirSegment used when
-        requesting seats on Change of Guage flights
-    seat_id: The actual seat ID that is being requested. Special
-        Characters are not supported in this field.
-    rail_coach_number: Coach number for which rail seatmap/coachmap is
-        returned.
+    booking_traveler_ref
+        The passenger that this seat assignment is for
+    segment_ref
+        The segment that we will assign this seat on
+    flight_detail_ref
+        The Flight Detail ref of the AirSegment used when requesting seats
+        on Change of Guage flights
+    seat_id
+        The actual seat ID that is being requested. Special Characters are
+        not supported in this field.
+    rail_coach_number
+        Coach number for which rail seatmap/coachmap is returned.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5083,10 +5306,11 @@ class SplitTicketingSearch:
 
     Parameters
     ----------
-    round_trip: Percentage of Roundtrip price points to be returned in
-        the search response. This should be an even number. The One-Way
-        price points returned in the response would be evenly
-        distributed between the outbound and the inbound.
+    round_trip
+        Percentage of Roundtrip price points to be returned in the search
+        response. This should be an even number. The One-Way price points
+        returned in the response would be evenly distributed between the
+        outbound and the inbound.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5109,9 +5333,12 @@ class SponsoredFltInfo:
 
     Parameters
     ----------
-    sponsored_lnb: The line number of the sponsored flight item
-    neutral_lnb: The neutral line number for the flight item.
-    flt_key: The unique identifying key for the sponsored flight.
+    sponsored_lnb
+        The line number of the sponsored flight item
+    neutral_lnb
+        The neutral line number for the flight item.
+    flt_key
+        The unique identifying key for the sponsored flight.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5151,24 +5378,35 @@ class SvcSegment:
 
     Parameters
     ----------
-    key: The Key of SVC Segment.
-    carrier: The platting carrier
-    status:
-    number_of_items:
-    origin: Origin location - Airport code. 1P only.
-    destination: Destination location - Airport code. 1P only.
-    start_date: Start date of the segment. Generally it is the next date
-        after the last air segment. 1P only
-    travel_order: To identify the appropriate travel sequence for
-        Air/Car/Hotel/Passive segments/reservations based on travel
-        dates. This ordering is applicable across the UR not provider or
-        traveler specific
-    booking_traveler_ref:
-    rfic: 1P - Reason for issuance
-    rfisc: 1P - Resaon for issuance sub-code
-    svc_description: 1P - SVC fee description
-    fee: The fee to be collected using SVC segment
-    emdnumber: Generated EMD number, if EMD is issued on the SVC
+    key
+        The Key of SVC Segment.
+    carrier
+        The platting carrier
+    status
+    number_of_items
+    origin
+        Origin location - Airport code. 1P only.
+    destination
+        Destination location - Airport code. 1P only.
+    start_date
+        Start date of the segment. Generally it is the next date after the
+        last air segment. 1P only
+    travel_order
+        To identify the appropriate travel sequence for
+        Air/Car/Hotel/Passive segments/reservations based on travel dates.
+        This ordering is applicable across the UR not provider or traveler
+        specific
+    booking_traveler_ref
+    rfic
+        1P - Reason for issuance
+    rfisc
+        1P - Resaon for issuance sub-code
+    svc_description
+        1P - SVC fee description
+    fee
+        The fee to be collected using SVC segment
+    emdnumber
+        Generated EMD number, if EMD is issued on the SVC
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5293,8 +5531,9 @@ class Tax:
 
     Parameters
     ----------
-    category: The tax category represents a valid IATA tax code.
-    amount:
+    category
+        The tax category represents a valid IATA tax code.
+    amount
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5351,8 +5590,10 @@ class TicketAgency:
 
     Parameters
     ----------
-    provider_code: The code of the Provider (e.g. 1G, 1P)
-    pseudo_city_code: The PCC of the host system.
+    provider_code
+        The code of the Provider (e.g. 1G, 1P)
+    pseudo_city_code
+        The PCC of the host system.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5419,8 +5660,10 @@ class TicketValidity:
 
     Parameters
     ----------
-    not_valid_before: Fare not valid before this date.
-    not_valid_after: Fare not valid after this date.
+    not_valid_before
+        Fare not valid before this date.
+    not_valid_after
+        Fare not valid after this date.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5485,9 +5728,11 @@ class TravelArranger:
 
     Parameters
     ----------
-    value:
-    company_short_name: Company Name
-    code: IATA Code for Arranger
+    value
+    company_short_name
+        Company Name
+    code
+        IATA Code for Arranger
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5642,9 +5887,10 @@ class WaiverCode:
 
     Parameters
     ----------
-    tour_code:
-    ticket_designator:
-    endorsement: Endorsement. Size can be up to 100 characters
+    tour_code
+    ticket_designator
+    endorsement
+        Endorsement. Size can be up to 100 characters
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5686,10 +5932,10 @@ class Yield:
 
     Parameters
     ----------
-    amount: Yield per passenger level in Default Currency for this
-        entity.
-    booking_traveler_ref: Reference to a booking traveler for which
-        Yield is applied.
+    amount
+        Yield per passenger level in Default Currency for this entity.
+    booking_traveler_ref
+        Reference to a booking traveler for which Yield is applied.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -5716,27 +5962,48 @@ class TypeAtpcoglobalIndicator(Enum):
 
     Properties
     ----------
-    AL: FareByRule -- All fares incl. EH/TS
-    AP: Via Atlantic Pacific
-    AT: Via Atlantic
-    CA: Within Canada.
-    CT: Circle trip.
-    EH: Within Eastern Hemisphere
-    FE: Far East
-    IN: FareByRule - For int'l incl. AT/PA/WH/CT/RW
-    NA: FareByRule for North America incl US/CA/TB/PV
-    PA: Via Pacific
-    PN: Via Pacific and via North America
-    PO: Via Polar Route.
-    RU: Russia - Area 3
-    RW: Round The World.
-    SA: South Atlantic only
-    SP: Via South Polar Route
-    TB: Trans-border
-    TS: Via Siberia.
-    US: Within the United States.
-    WH: Within Western Hemisphere
-    ZZ: Any Global
+    AL
+        FareByRule -- All fares incl. EH/TS
+    AP
+        Via Atlantic Pacific
+    AT
+        Via Atlantic
+    CA
+        Within Canada.
+    CT
+        Circle trip.
+    EH
+        Within Eastern Hemisphere
+    FE
+        Far East
+    IN
+        FareByRule - For int'l incl. AT/PA/WH/CT/RW
+    NA
+        FareByRule for North America incl US/CA/TB/PV
+    PA
+        Via Pacific
+    PN
+        Via Pacific and via North America
+    PO
+        Via Polar Route.
+    RU
+        Russia - Area 3
+    RW
+        Round The World.
+    SA
+        South Atlantic only
+    SP
+        Via South Polar Route
+    TB
+        Trans-border
+    TS
+        Via Siberia.
+    US
+        Within the United States.
+    WH
+        Within Western Hemisphere
+    ZZ
+        Any Global
     """
     AL = "AL"
     AP = "AP"
@@ -5769,10 +6036,12 @@ class TypeAnchorFlightData:
 
     Parameters
     ----------
-    airline_code: Indicates Anchor flight carrier code
-    flight_number: Indicates Anchor flight number
-    connection_indicator: Indicates that the Anchor flight has any
-        connecting flight or not
+    airline_code
+        Indicates Anchor flight carrier code
+    flight_number
+        Indicates Anchor flight number
+    connection_indicator
+        Indicates that the Anchor flight has any connecting flight or not
     """
     class Meta:
         name = "typeAnchorFlightData"
@@ -5809,9 +6078,10 @@ class TypeApplicableSegment:
     """
     Parameters
     ----------
-    key:
-    air_itinerary_details_ref:
-    booking_counts: Classes of service and their counts.
+    key
+    air_itinerary_details_ref
+    booking_counts
+        Classes of service and their counts.
     """
     class Meta:
         name = "typeApplicableSegment"
@@ -5895,10 +6165,11 @@ class TypeBulkTicketModifierType:
 
     Parameters
     ----------
-    suppress_on_fare_calc: Optional attribute to allow a modifier impact
-        such as Bulk Ticketing to have information suppressed on the
-        Fare Calc when generating supporting documents Check the
-        specific host system which may or may not support this function
+    suppress_on_fare_calc
+        Optional attribute to allow a modifier impact such as Bulk Ticketing
+        to have information suppressed on the Fare Calc when generating
+        supporting documents Check the specific host system which may or may
+        not support this function
     """
     class Meta:
         name = "typeBulkTicketModifierType"
@@ -5992,18 +6263,26 @@ class TypeDestinationCode(Enum):
 
     Properties
     ----------
-    MEXICO_COST_RICA_CENTRAL_AMERICA: Mexico/Central America/Canal
-        Zone/Costa Rica
-    CARIBBEAN: Island and Countries of The Caribbean
-    SOUTH_AMERICA: South America
-    EUROPE: Europe
-    AFRICA: Africa
-    MIDDLE_EAST_WESTERN_ASIA: Middle East/Western Asia
-    ASIA: Asia
-    AUSTRALIA_NEW_ZEALAND_PACIFIC_ISLANDS: Australia/New Zealand/Pacific
-        Islands
-    CANADA_GREENLAND: Canada and Greenland
-    USA: United States of America
+    MEXICO_COST_RICA_CENTRAL_AMERICA
+        Mexico/Central America/Canal Zone/Costa Rica
+    CARIBBEAN
+        Island and Countries of The Caribbean
+    SOUTH_AMERICA
+        South America
+    EUROPE
+        Europe
+    AFRICA
+        Africa
+    MIDDLE_EAST_WESTERN_ASIA
+        Middle East/Western Asia
+    ASIA
+        Asia
+    AUSTRALIA_NEW_ZEALAND_PACIFIC_ISLANDS
+        Australia/New Zealand/Pacific Islands
+    CANADA_GREENLAND
+        Canada and Greenland
+    USA
+        United States of America
     """
     MEXICO_COST_RICA_CENTRAL_AMERICA = "MexicoCostRicaCentralAmerica"
     CARIBBEAN = "Caribbean"
@@ -6088,12 +6367,14 @@ class TypeFareBreak(Enum):
 
     Properties
     ----------
-    MUST_BREAK: Break Fare at the associated segment. Multiple Breaks or
-        No Breaks may be allowed.
-    MUST_ONLY_BREAK: Only Break Fare at the associated segment. Fare
-        Break in the entire itinerary is allowed only at the concerned
-        segment.
-    MUST_NOT_BREAK: No Fare Break allowed at the associated segment.
+    MUST_BREAK
+        Break Fare at the associated segment. Multiple Breaks or No Breaks
+        may be allowed.
+    MUST_ONLY_BREAK
+        Only Break Fare at the associated segment. Fare Break in the entire
+        itinerary is allowed only at the concerned segment.
+    MUST_NOT_BREAK
+        No Fare Break allowed at the associated segment.
     """
     MUST_BREAK = "MustBreak"
     MUST_ONLY_BREAK = "MustOnlyBreak"
@@ -6124,29 +6405,41 @@ class TypeFareGuarantee(Enum):
 
     Properties
     ----------
-    AUTO: Automatically generated
-    MANUAL: Agent has overridden default(s)
-    MANUAL_FARE: Fare has been constructed by agent
-    GUARANTEED: Fare is guaranteed
-    INVALID: Invalid fare, e.g. due to name or itinerary change
-    RESTORED: Ticketed stored fare has been restored
-    TICKETED:
-    UNTICKETABLE: Unable to ticket
-    REPRICE: Need requote to ticket
-    EXPIRED: Expired fare due to older fare guarantee date typically
-        older than 7 days
-    AUTO_USING_PRIVATE_FARE: Agency private fares that are not
-        guaranteed
-    GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline
-        private fare that was filed with a fare distributor.
-    AIRLINE: Fare guaranteed by Airline.
-    GUARANTEE_EXPIRED: Guaranteed fare recently got expired as ticketing
-        hadn't been done within a time frame typically midnight local
-        time of POS .
-    AGENCY_PRIVATE_FARE_NO_OVERRIDE: Agency Private Fare with no rules
-        override
-    UNKNOWN: To handle new enumerations added by provider but currently
-        not recognized by API
+    AUTO
+        Automatically generated
+    MANUAL
+        Agent has overridden default(s)
+    MANUAL_FARE
+        Fare has been constructed by agent
+    GUARANTEED
+        Fare is guaranteed
+    INVALID
+        Invalid fare, e.g. due to name or itinerary change
+    RESTORED
+        Ticketed stored fare has been restored
+    TICKETED
+    UNTICKETABLE
+        Unable to ticket
+    REPRICE
+        Need requote to ticket
+    EXPIRED
+        Expired fare due to older fare guarantee date typically older than 7
+        days
+    AUTO_USING_PRIVATE_FARE
+        Agency private fares that are not guaranteed
+    GUARANTEED_USING_AIRLINE_PRIVATE_FARE
+        Guaranteed fare using Airline private fare that was filed with a
+        fare distributor.
+    AIRLINE
+        Fare guaranteed by Airline.
+    GUARANTEE_EXPIRED
+        Guaranteed fare recently got expired as ticketing hadn't been done
+        within a time frame typically midnight local time of POS .
+    AGENCY_PRIVATE_FARE_NO_OVERRIDE
+        Agency Private Fare with no rules override
+    UNKNOWN
+        To handle new enumerations added by provider but currently not
+        recognized by API
     """
     AUTO = "Auto"
     MANUAL = "Manual"
@@ -6190,41 +6483,76 @@ class TypeFareRuleCategoryCode(Enum):
 
     Properties
     ----------
-    APP: Rule App/Other Conditions
-    WHO: Eligibility
-    DAY: Day/Time
-    SEA: Seasonal
-    FLT: Flight App
-    ADV: Advance Res/Tkt
-    MIN: Minimum Stay
-    MAX: Maximum Stay
-    STP: Stopovers
-    TRF: Transfers/Routing
-    CMB: Combinability
-    BLA: Blackouts
-    SUR: Surcharges
-    ACC: Accompanied
-    TVL: Travel Restrictions
-    TKT: Sales Restrictions
-    CHG: Penalties
-    HIP: HIP and Mileage Exceptions
-    END: Ticket Endorsements
-    CHD: Children"s Discounts
-    TUC: Tour Conductor Disc
-    AGT: Agent Discounts
-    DSC: All Other Disc
-    MIS: Misc Fare Tags
-    FBR: Fare By Rule
-    GRP: Groups
-    TUR: Tours
-    VAC: Visit Another Country
-    DEP: Deposits
-    VOL: Voluntary Changes
-    IVE: Involuntary Exchanges
-    VOR: Voluntary Refunds
-    IVR: Involuntary Refunds
-    NET: Negotiated Fares
-    OTH: Other
+    APP
+        Rule App/Other Conditions
+    WHO
+        Eligibility
+    DAY
+        Day/Time
+    SEA
+        Seasonal
+    FLT
+        Flight App
+    ADV
+        Advance Res/Tkt
+    MIN
+        Minimum Stay
+    MAX
+        Maximum Stay
+    STP
+        Stopovers
+    TRF
+        Transfers/Routing
+    CMB
+        Combinability
+    BLA
+        Blackouts
+    SUR
+        Surcharges
+    ACC
+        Accompanied
+    TVL
+        Travel Restrictions
+    TKT
+        Sales Restrictions
+    CHG
+        Penalties
+    HIP
+        HIP and Mileage Exceptions
+    END
+        Ticket Endorsements
+    CHD
+        Children"s Discounts
+    TUC
+        Tour Conductor Disc
+    AGT
+        Agent Discounts
+    DSC
+        All Other Disc
+    MIS
+        Misc Fare Tags
+    FBR
+        Fare By Rule
+    GRP
+        Groups
+    TUR
+        Tours
+    VAC
+        Visit Another Country
+    DEP
+        Deposits
+    VOL
+        Voluntary Changes
+    IVE
+        Involuntary Exchanges
+    VOR
+        Voluntary Refunds
+    IVR
+        Involuntary Refunds
+    NET
+        Negotiated Fares
+    OTH
+        Other
     """
     APP = "APP"
     WHO = "WHO"
@@ -6289,13 +6617,19 @@ class TypeFareStatusCode(Enum):
     """
     Properties
     ----------
-    READY_TO_TICKET: Fare is enabled and available for ticketing
-    UNABLE_TO_TICKET: Fare could not be ticketed
-    REPRICE: Fare needs to be repriced
-    TICKETED: Fare is ticketed
-    UNABLE: Fare is not enabled
-    UNKNOWN: To handle new enumerations added by provider but currently
-        not recognized by API
+    READY_TO_TICKET
+        Fare is enabled and available for ticketing
+    UNABLE_TO_TICKET
+        Fare could not be ticketed
+    REPRICE
+        Fare needs to be repriced
+    TICKETED
+        Fare is ticketed
+    UNABLE
+        Fare is not enabled
+    UNKNOWN
+        To handle new enumerations added by provider but currently not
+        recognized by API
     """
     READY_TO_TICKET = "ReadyToTicket"
     UNABLE_TO_TICKET = "UnableToTicket"
@@ -6335,13 +6669,14 @@ class TypeFaresIndicator(Enum):
 
     Properties
     ----------
-    PUBLIC_FARES_ONLY:
-    PRIVATE_FARES_ONLY:
-    AGENCY_PRIVATE_FARES_ONLY:
-    AIRLINE_PRIVATE_FARES_ONLY:
-    PUBLIC_AND_PRIVATE_FARES:
-    NET_FARES_ONLY:
-    ALL_FARES: Applicable for 1G/1V air shop only
+    PUBLIC_FARES_ONLY
+    PRIVATE_FARES_ONLY
+    AGENCY_PRIVATE_FARES_ONLY
+    AIRLINE_PRIVATE_FARES_ONLY
+    PUBLIC_AND_PRIVATE_FARES
+    NET_FARES_ONLY
+    ALL_FARES
+        Applicable for 1G/1V air shop only
     """
     PUBLIC_FARES_ONLY = "PublicFaresOnly"
     PRIVATE_FARES_ONLY = "PrivateFaresOnly"
@@ -6358,9 +6693,12 @@ class TypeIgnoreStopOver(Enum):
 
     Properties
     ----------
-    NO_STOP_OVER: No Stop over included.
-    STOP_OVER: Stop over included.
-    IGNORE_SEGMENT: Segment Ignored.
+    NO_STOP_OVER
+        No Stop over included.
+    STOP_OVER
+        Stop over included.
+    IGNORE_SEGMENT
+        Segment Ignored.
     """
     NO_STOP_OVER = "NoStopOver"
     STOP_OVER = "StopOver"
@@ -6420,8 +6758,9 @@ class TypeNativeSearchModifier:
     """
     Parameters
     ----------
-    value:
-    provider_code: The host for which the NativeModfier being added to
+    value
+    provider_code
+        The host for which the NativeModfier being added to
     """
     class Meta:
         name = "typeNativeSearchModifier"
@@ -6479,41 +6818,55 @@ class TypePricingMethod(Enum):
 
     Properties
     ----------
-    AUTO: Automatically generated
-    MANUAL: Agent has overridden default(s)
-    MANUAL_FARE: Fare has been constructed by agent
-    GUARANTEED: Fare is guaranteed
-    INVALID: Invalid fare, e.g. due to name or itinerary change
-    RESTORED: Ticketed stored fare has been restored
-    TICKETED:
-    UNTICKETABLE: Unable to ticket
-    REPRICE: Need requote to ticket
-    EXPIRED: Expired fare, older than 7 days
-    AUTO_USING_PRIVATE_FARE: Agency private fares that are not
-        guaranteed
-    GUARANTEED_USING_AIRLINE_PRIVATE_FARE: Guaranteed fare using Airline
-        private fare that was filed with a fare distributor.
-    AIRLINE: Fare created as a result of Claim PNR which transfers data
-        to GDS for ticketing purposes.
-    AGENT_ASSISTED: Fare is created using Agent Asisted Pricing.
-        Worldspan TKG FAX Line Documentation - AGENT ASSISTEDPRICED
-    VERIFY_PRICE: Verify existing saved price on PNR . Worldspan TKG FAX
-        Line Documentation -  AWAITING PRICE VERIFICATION
-    ALT_SEGMENT_REMOVED_REPRICE: ALT Segment removed, Reprice pricing.
-        Worldspan TKG FAX Line Documentation - AWAITING REPRICING ALT
-        SEGS RMVD
-    AUXILIARY_SEGMENT_REMOVED_REPRICE: AUX Segment removed, Reprice
-        pricing. Worldspan TKG FAX Line Documentation -  AWAITING
-        REPRICING AUX SEGS REMOVED
-    DUPLICATE_SEGMENT_REMOVED_REPRICE: Duplicate Segment removed,
-        Reprice pricing. Worldspan TKG FAX Line Documentation - AWAITING
-        REPRICING DUPE SEGS REMOVED
-    UNKNOWN: Any other kind of Pricing Method which is not supported by
-        API.
-    GUARANTEED_USING_AGENCY_PRIVATE_FARE: Guaranteed fare using Agency
-        private fare that was filed with a fare distributor.
-    AUTO_RAPID_REPRICE: Auto priced by rapid reprice. Provider 1P FCI
-        code 4 .
+    AUTO
+        Automatically generated
+    MANUAL
+        Agent has overridden default(s)
+    MANUAL_FARE
+        Fare has been constructed by agent
+    GUARANTEED
+        Fare is guaranteed
+    INVALID
+        Invalid fare, e.g. due to name or itinerary change
+    RESTORED
+        Ticketed stored fare has been restored
+    TICKETED
+    UNTICKETABLE
+        Unable to ticket
+    REPRICE
+        Need requote to ticket
+    EXPIRED
+        Expired fare, older than 7 days
+    AUTO_USING_PRIVATE_FARE
+        Agency private fares that are not guaranteed
+    GUARANTEED_USING_AIRLINE_PRIVATE_FARE
+        Guaranteed fare using Airline private fare that was filed with a
+        fare distributor.
+    AIRLINE
+        Fare created as a result of Claim PNR which transfers data to GDS
+        for ticketing purposes.
+    AGENT_ASSISTED
+        Fare is created using Agent Asisted Pricing. Worldspan TKG FAX Line
+        Documentation - AGENT ASSISTEDPRICED
+    VERIFY_PRICE
+        Verify existing saved price on PNR . Worldspan TKG FAX Line
+        Documentation -  AWAITING PRICE VERIFICATION
+    ALT_SEGMENT_REMOVED_REPRICE
+        ALT Segment removed, Reprice pricing. Worldspan TKG FAX Line
+        Documentation - AWAITING REPRICING ALT SEGS RMVD
+    AUXILIARY_SEGMENT_REMOVED_REPRICE
+        AUX Segment removed, Reprice pricing. Worldspan TKG FAX Line
+        Documentation -  AWAITING REPRICING AUX SEGS REMOVED
+    DUPLICATE_SEGMENT_REMOVED_REPRICE
+        Duplicate Segment removed, Reprice pricing. Worldspan TKG FAX Line
+        Documentation - AWAITING REPRICING DUPE SEGS REMOVED
+    UNKNOWN
+        Any other kind of Pricing Method which is not supported by API.
+    GUARANTEED_USING_AGENCY_PRIVATE_FARE
+        Guaranteed fare using Agency private fare that was filed with a fare
+        distributor.
+    AUTO_RAPID_REPRICE
+        Auto priced by rapid reprice. Provider 1P FCI code 4 .
     """
     AUTO = "Auto"
     MANUAL = "Manual"
@@ -6557,9 +6910,12 @@ class TypePurposeCode(Enum):
 
     Properties
     ----------
-    BUSINESS: Business
-    PLEASURE: Pleasure
-    CHARTER_SERVICE: Charter Service
+    BUSINESS
+        Business
+    PLEASURE
+        Pleasure
+    CHARTER_SERVICE
+        Charter Service
     """
     BUSINESS = "Business"
     PLEASURE = "Pleasure"
@@ -6642,16 +6998,16 @@ class TypeTextElement:
     """
     Parameters
     ----------
-    value:
-    type_value:
-    language_code: ISO 639 two-character language codes are used to
-        retrieve specific information in the requested language. For
-        Rich Content and Branding, language codes ZH-HANT (Chinese
-        Traditional), ZH-HANS (Chinese Simplified), FR-CA (French
-        Canadian) and PT-BR (Portuguese Brazil) can also be used. For
-        RCH, language codes ENGB, ENUS, DEDE, DECH can also be used.
-        Only certain services support this attribute. Providers: ACH,
-        RCH, 1G, 1V, 1P, 1J.
+    value
+    type_value
+    language_code
+        ISO 639 two-character language codes are used to retrieve specific
+        information in the requested language. For Rich Content and
+        Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS
+        (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese
+        Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE,
+        DECH can also be used. Only certain services support this attribute.
+        Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     class Meta:
         name = "typeTextElement"
@@ -6705,7 +7061,8 @@ class TypeTicketModifierAmountType:
 
     Parameters
     ----------
-    amount: Amount associated with a ticketing modifier
+    amount
+        Amount associated with a ticketing modifier
     """
     class Meta:
         name = "typeTicketModifierAmountType"
@@ -6728,7 +7085,8 @@ class TypeTicketModifierPercentType:
 
     Parameters
     ----------
-    percent: Percent associated with a ticketing modifier
+    percent
+        Percent associated with a ticketing modifier
     """
     class Meta:
         name = "typeTicketModifierPercentType"
@@ -6751,8 +7109,9 @@ class TypeTicketModifierValueType:
 
     Parameters
     ----------
-    value:
-    net_fare_value: Treat the value as net fare discount information
+    value
+    net_fare_value
+        Treat the value as net fare discount information
     """
     class Meta:
         name = "typeTicketModifierValueType"
@@ -6795,8 +7154,9 @@ class TypeUnitOfMeasure:
     """
     Parameters
     ----------
-    value:
-    unit: Unit values would be lb,Lb,kg etc.
+    value
+    unit
+        Unit values would be lb,Lb,kg etc.
     """
     class Meta:
         name = "typeUnitOfMeasure"
@@ -6850,17 +7210,21 @@ class Apisrequirements:
 
     Parameters
     ----------
-    document:
-    key: Unique identifier for this APIS Requirements - use this key
-        when a single APIS Requirements is shared by multiple elements.
-    level: Applicability level of the Document. Required, Supported,
+    document
+    key
+        Unique identifier for this APIS Requirements - use this key when a
+        single APIS Requirements is shared by multiple elements.
+    level
+        Applicability level of the Document. Required, Supported,
         API_Supported or Unknown
-    gender_required:
-    date_of_birth_required:
-    required_documents: What are required documents for the APIS
-        Requirement. One, FirstAndOneOther or All
-    nationality_required: Nationality of the traveler is required for
-        booking for some suppliers.
+    gender_required
+    date_of_birth_required
+    required_documents
+        What are required documents for the APIS Requirement. One,
+        FirstAndOneOther or All
+    nationality_required
+        Nationality of the traveler is required for booking for some
+        suppliers.
     """
     class Meta:
         name = "APISRequirements"
@@ -6944,10 +7308,11 @@ class AirAvailInfo:
 
     Parameters
     ----------
-    booking_code_info:
-    fare_token_info: Associates Fare with HostToken
-    provider_code:
-    host_token_ref:
+    booking_code_info
+    fare_token_info
+        Associates Fare with HostToken
+    provider_code
+    host_token_ref
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7019,8 +7384,9 @@ class AirExchangeBundleTotal:
 
     Parameters
     ----------
-    air_exchange_info:
-    penalty: Only used within an AirExchangeQuoteRsp
+    air_exchange_info
+    penalty
+        Only used within an AirExchangeQuoteRsp
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7052,10 +7418,11 @@ class AirExchangeEligibilityReq(BaseReq):
 
     Parameters
     ----------
-    provider_reservation_info: Provider:1P - Represents a valid Provider
-        Reservation/PNR whose itinerary is to be exchanged
-    type_value: Type choices are "Detail" or "Summary"  Default will be
-        Summary
+    provider_reservation_info
+        Provider:1P - Represents a valid Provider Reservation/PNR whose
+        itinerary is to be exchanged
+    type_value
+        Type choices are "Detail" or "Summary"  Default will be Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7106,19 +7473,21 @@ class AirExchangeModifiers:
 
     Parameters
     ----------
-    contract_codes:
-    booking_date:
-    ticketing_date:
-    account_code:
-    ticket_designator:
-    allow_penalty_fares:
-    private_fares_only:
-    universal_record_locator_code: Which UniversalRecord should this new
-        reservation be applied to. If blank, then a new one is created.
-    provider_locator_code: Which Provider reservation does this
-        reservation get added to.
-    provider_code: To be used with ProviderLocatorCode, which host the
-        reservation being added to belongs to.
+    contract_codes
+    booking_date
+    ticketing_date
+    account_code
+    ticket_designator
+    allow_penalty_fares
+    private_fares_only
+    universal_record_locator_code
+        Which UniversalRecord should this new reservation be applied to. If
+        blank, then a new one is created.
+    provider_locator_code
+        Which Provider reservation does this reservation get added to.
+    provider_code
+        To be used with ProviderLocatorCode, which host the reservation
+        being added to belongs to.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7293,8 +7662,9 @@ class AirFareRuleCategory:
 
     Parameters
     ----------
-    category_code: The Category Code for Air Fare Rule.
-    fare_info_ref:
+    category_code
+        The Category Code for Air Fare Rule.
+    fare_info_ref
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7324,8 +7694,10 @@ class AirPrePayReq(BaseReq):
 
     Parameters
     ----------
-    list_search: Provider: ACH.
-    pre_pay_retrieve: Provider: ACH.
+    list_search
+        Provider: ACH.
+    pre_pay_retrieve
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7350,13 +7722,15 @@ class AirPrePayReq(BaseReq):
         """
         Parameters
         ----------
-        person_name_search: Customer name detail for searching flight
-            pass content.
-        loyalty_card: Customer loyalty card for searching flight pass
-            content.
-        start_from_result: Start index of the section of flight pass
-            numbers that is being requested.
-        max_results: Max Number of Flight Passes being requested for.
+        person_name_search
+            Customer name detail for searching flight pass content.
+        loyalty_card
+            Customer loyalty card for searching flight pass content.
+        start_from_result
+            Start index of the section of flight pass numbers that is being
+            requested.
+        max_results
+            Max Number of Flight Passes being requested for.
         """
         person_name_search: None | PersonNameSearch = field(
             default=None,
@@ -7399,8 +7773,10 @@ class AirPrePayReq(BaseReq):
         """
         Parameters
         ----------
-        id: Pre pay id to retrieved,example flight pass  number
-        type_value: Pre pay id type,example 'FlightPass'
+        id
+            Pre pay id to retrieved,example flight pass  number
+        type_value
+            Pre pay id type,example 'FlightPass'
         """
         id: None | str = field(
             default=None,
@@ -7429,8 +7805,9 @@ class AirPricingAdjustment:
 
     Parameters
     ----------
-    adjustment:
-    key: Key of AirPricingInfo from booking.
+    adjustment
+    key
+        Key of AirPricingInfo from booking.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7505,22 +7882,29 @@ class AirRefundInfo:
 
     Parameters
     ----------
-    refund_remark:
-    refund_amount:
-    retain_amount:
-    refund_fee: Refund fee for ACH/1P
-    refundable_taxes: 1P - None : All taxes are not refundable. Unknown
-        : Refundability of taxes are not known.
-    filed_currency: 1P  Currency of filed CAT33 refund fee
-    conversion_rate: 1P - Currency conversion rate used for conversion
-        between FiledCurrency and PCC base currency in which the
-        response is returned.
-    taxes: 1P - The total value of taxes.
-    original_ticket_total: 1P - The original ticket amount.
-    forfeit_amount:
-    retain: This indicates whether any amount is retained by the
-        provider.
-    refund: This indicates whether carrier/host supports refund for the
+    refund_remark
+    refund_amount
+    retain_amount
+    refund_fee
+        Refund fee for ACH/1P
+    refundable_taxes
+        1P - None : All taxes are not refundable. Unknown : Refundability of
+        taxes are not known.
+    filed_currency
+        1P  Currency of filed CAT33 refund fee
+    conversion_rate
+        1P - Currency conversion rate used for conversion between
+        FiledCurrency and PCC base currency in which the response is
+        returned.
+    taxes
+        1P - The total value of taxes.
+    original_ticket_total
+        1P - The original ticket amount.
+    forfeit_amount
+    retain
+        This indicates whether any amount is retained by the provider.
+    refund
+        This indicates whether carrier/host supports refund for the
         correcponding pnr.
     """
     class Meta:
@@ -7622,14 +8006,20 @@ class AirRefundQuoteReq(BaseReq):
 
     Parameters
     ----------
-    ticket_number: Provider: ACH.
-    tcrnumber: Provider: ACH-The identifying number for a Ticketless Air
+    ticket_number
+        Provider: ACH.
+    tcrnumber
+        Provider: ACH-The identifying number for a Ticketless Air
         Reservation
-    air_refund_modifiers: Provider: ACH.
-    host_token: Provider: ACH.
-    provider_reservation_info: Provider: 1P - Represents a valid
-        Provider Reservation/PNR whose itinerary is to be requested
-    ignore: Provider: ACH.
+    air_refund_modifiers
+        Provider: ACH.
+    host_token
+        Provider: ACH.
+    provider_reservation_info
+        Provider: 1P - Represents a valid Provider Reservation/PNR whose
+        itinerary is to be requested
+    ignore
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7718,22 +8108,30 @@ class AirRetrieveDocumentReq(BaseReq):
 
     Parameters
     ----------
-    air_reservation_locator_code: Provider: 1G,1V,1P,1J.
-    ticket_number: Provider: 1G,1V,1P,1J.
-    tcrnumber: Provider: 1G,1V,1P,1J-The identifying number for a
-        Ticketless Air Reservation.
-    return_restrictions: Will return a response which includes a set of
-        restrictions associated with the document.
-    return_pricing: Provider: 1G,1V,1P,1J-Will return a response which
-        includes the pricing associated with the ETR.
-    retrieve_mco: When true, returns MCO Information. The default value
-        is false.
-    universal_record_locator_code: Contains the Locator Code of the
-        Universal Record that houses this reservation.
-    provider_code: Contains the Provider Code of the provider that
-        houses this reservation.
-    provider_locator_code: Contains the Locator Code of the Provider
-        Reservation that houses this reservation.
+    air_reservation_locator_code
+        Provider: 1G,1V,1P,1J.
+    ticket_number
+        Provider: 1G,1V,1P,1J.
+    tcrnumber
+        Provider: 1G,1V,1P,1J-The identifying number for a Ticketless Air
+        Reservation.
+    return_restrictions
+        Will return a response which includes a set of restrictions
+        associated with the document.
+    return_pricing
+        Provider: 1G,1V,1P,1J-Will return a response which includes the
+        pricing associated with the ETR.
+    retrieve_mco
+        When true, returns MCO Information. The default value is false.
+    universal_record_locator_code
+        Contains the Locator Code of the Universal Record that houses this
+        reservation.
+    provider_code
+        Contains the Provider Code of the provider that houses this
+        reservation.
+    provider_locator_code
+        Contains the Locator Code of the Provider Reservation that houses
+        this reservation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7822,27 +8220,32 @@ class AirSegmentDetails:
 
     Parameters
     ----------
-    passenger_details_ref:
-    brand_id:
-    booking_code_list: Lists classes of service and their counts
-        separated by delimiter |.
-    key:
-    provider_code:
-    carrier:
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
+    passenger_details_ref
+    brand_id
+    booking_code_list
+        Lists classes of service and their counts separated by delimiter |.
+    key
+    provider_code
+    carrier
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        This does not include time zone information since it can be derived
         from the origin location.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. This does not include time zone information since
-        it can be derived from the origin location.
-    equipment:
-    class_of_service:
-    cabin_class:
-    operating_carrier: The actual carrier that is operating the flight.
-    flight_number: Flight Number for the Search Leg Detail.
+    equipment
+    class_of_service
+    cabin_class
+    operating_carrier
+        The actual carrier that is operating the flight.
+    flight_number
+        Flight Number for the Search Leg Detail.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -7986,20 +8389,24 @@ class AirSegmentPricingModifiers:
 
     Parameters
     ----------
-    permitted_booking_codes:
-    air_segment_ref:
-    cabin_class:
-    account_code:
-    prohibit_advance_purchase_fares:
-    prohibit_non_refundable_fares:
-    prohibit_penalty_fares:
-    fare_basis_code: The fare basis code to be used for pricing.
-    fare_break: Fare break point modifier to instruct Fares where it
-        should or should not break the fare.
-    connection_indicator: ConnectionIndicator attribute will be used to
-        map connection indicators AvailabilityAndPricing, TurnAround and
-        Stopover. This attribute is for Wordspan/1P only.
-    brand_tier: Modifier to price by specific brand tier number.
+    permitted_booking_codes
+    air_segment_ref
+    cabin_class
+    account_code
+    prohibit_advance_purchase_fares
+    prohibit_non_refundable_fares
+    prohibit_penalty_fares
+    fare_basis_code
+        The fare basis code to be used for pricing.
+    fare_break
+        Fare break point modifier to instruct Fares where it should or
+        should not break the fare.
+    connection_indicator
+        ConnectionIndicator attribute will be used to map connection
+        indicators AvailabilityAndPricing, TurnAround and Stopover. This
+        attribute is for Wordspan/1P only.
+    brand_tier
+        Modifier to price by specific brand tier number.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8104,36 +8511,42 @@ class AirTicketingModifiers:
 
     Parameters
     ----------
-    document_modifiers:
-    air_pricing_info_ref:
-    tour_code: Allows an agency to modify the tour code information
-        during ticket issuance. Providers supported: Worldspan and JAL.
-    ticket_endorsement: Allows an agency to add user defined ticketing
-        endorsements in the ticket. Providers supported: Worldspan and
-        JAL.
-    commission: Allows an agency to add the commission to a new or
-        different commission rate which will be applied at time of
-        ticketing. The commission Modifier allows the user specify how
-        the commission change is to applied. Providers supported:
+    document_modifiers
+    air_pricing_info_ref
+    tour_code
+        Allows an agency to modify the tour code information during ticket
+        issuance. Providers supported: Worldspan and JAL.
+    ticket_endorsement
+        Allows an agency to add user defined ticketing endorsements in the
+        ticket. Providers supported: Worldspan and JAL.
+    commission
+        Allows an agency to add the commission to a new or different
+        commission rate which will be applied at time of ticketing. The
+        commission Modifier allows the user specify how the commission
+        change is to applied. Providers supported: Worldspan and JAL.
+    form_of_payment
+        FormOfPayment information to be used as ticketing modifier at the
+        time of ticketing. Providers supported: Galileo, Apollo, Worldspan
+        and JAL.
+    credit_card_auth
+        CreditCardAuth information to be used as ticketing modifier at the
+        time of ticketing. Providers supported: Galileo, Apollo, Worldspan
+        and JAL.
+    payment
+        Provide Payment for FOP. Providers supported: Galileo, Apollo,
         Worldspan and JAL.
-    form_of_payment: FormOfPayment information to be used as ticketing
-        modifier at the time of ticketing. Providers supported: Galileo,
-        Apollo, Worldspan and JAL.
-    credit_card_auth: CreditCardAuth information to be used as ticketing
-        modifier at the time of ticketing. Providers supported: Galileo,
-        Apollo, Worldspan and JAL.
-    payment: Provide Payment for FOP. Providers supported: Galileo,
-        Apollo, Worldspan and JAL.
-    plating_carrier: The Plating Carrier used for this ticket
-    ticketed_fare_override: It is a modifier to allow re-issuance of
-        tickets for stored fares which are already ticketed. Providers
-        supported are 1P/1J
-    suppress_tax_and_fee: Allow to suppress Taxand Fee in ticketing
-        response.Providers supported: Worldspan and JAL.
-    no_comparison_sfq: 1P/1J - Set to "true" to include the no
-        comparison overide #NC to override the existing SFQ and issue
-        the ticket. Only valid for AirTicketingReq, not valid  for
-        AirExchangeTicketingReq.
+    plating_carrier
+        The Plating Carrier used for this ticket
+    ticketed_fare_override
+        It is a modifier to allow re-issuance of tickets for stored fares
+        which are already ticketed. Providers supported are 1P/1J
+    suppress_tax_and_fee
+        Allow to suppress Taxand Fee in ticketing response.Providers
+        supported: Worldspan and JAL.
+    no_comparison_sfq
+        1P/1J - Set to "true" to include the no comparison overide #NC to
+        override the existing SFQ and issue the ticket. Only valid for
+        AirTicketingReq, not valid  for AirExchangeTicketingReq.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8241,12 +8654,12 @@ class AlternateLocationDistance:
 
     Parameters
     ----------
-    distance:
-    key:
-    search_location: The Searching City or Airport specified in the
-        Request.
-    alternate_location: The nearby Alternate City or Airport to
-        SearchLocation.
+    distance
+    key
+    search_location
+        The Searching City or Airport specified in the Request.
+    alternate_location
+        The nearby Alternate City or Airport to SearchLocation.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8322,16 +8735,20 @@ class AutoSeatAssignment:
 
     Parameters
     ----------
-    segment_ref: The segment that this assignment belongs to
-    smoking: Indicates that the requested seat type should be a smoking
-        seat.
-    seat_type: The type of seat that is requested
-    group: Indicates that this seat request is for group seating for all
+    segment_ref
+        The segment that this assignment belongs to
+    smoking
+        Indicates that the requested seat type should be a smoking seat.
+    seat_type
+        The type of seat that is requested
+    group
+        Indicates that this seat request is for group seating for all
         passengers. If no SegmentRef is included, group seating will be
         requested for all segments.
-    booking_traveler_ref: The booking traveler that this seat assignment
-        is for. If not entered, this applies to the primary booking
-        traveler and other passengers are adjacent.
+    booking_traveler_ref
+        The booking traveler that this seat assignment is for. If not
+        entered, this applies to the primary booking traveler and other
+        passengers are adjacent.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8379,11 +8796,12 @@ class AvailableDiscount:
     """
     Parameters
     ----------
-    loyalty_program: Customer Loyalty Program Detail.
-    amount:
-    percent:
-    description:
-    discount_qualifier:
+    loyalty_program
+        Customer Loyalty Program Detail.
+    amount
+    percent
+    description
+    discount_qualifier
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8435,9 +8853,10 @@ class AvailableSsr:
 
     Parameters
     ----------
-    ssr:
-    ssrrules: Holds the rules for selecting the SSR in the itinerary
-    industry_standard_ssr:
+    ssr
+    ssrrules
+        Holds the rules for selecting the SSR in the itinerary
+    industry_standard_ssr
     """
     class Meta:
         name = "AvailableSSR"
@@ -8479,12 +8898,14 @@ class BackOfficeHandOff:
 
     Parameters
     ----------
-    type_value: The type of back office document,valid options are
+    type_value
+        The type of back office document,valid options are
         Accounting,Global,NonAccounting,NonAccountingRemote,Dual.
-    location: This is required for NonAccountingRemote,Dual and Global
-        type back office.
-    pseudo_city_code: The PCC of the host system where it would be
-        routed.
+    location
+        This is required for NonAccountingRemote,Dual and Global type back
+        office.
+    pseudo_city_code
+        The PCC of the host system where it would be routed.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8524,12 +8945,13 @@ class BaseBaggageAllowanceInfo:
 
     Parameters
     ----------
-    urlinfo: Contains the text and URL information as published by
-        carrier.
-    text_info: Text information as published by carrier.
-    origin:
-    destination:
-    carrier:
+    urlinfo
+        Contains the text and URL information as published by carrier.
+    text_info
+        Text information as published by carrier.
+    origin
+    destination
+    carrier
     """
     urlinfo: list[Urlinfo] = field(
         default_factory=list,
@@ -8584,13 +9006,16 @@ class BillingDetailItem:
 
     Parameters
     ----------
-    name: Detailed Billing Information Name(e.g Personal ID, Account
-        Number)
-    data_type: Detailed Billing Information DataType (Alpha, Numeric,
-        etc.)
-    min_length: Detailed Billing Information Minimum Length.
-    max_length: Detailed Billing Information Maximum Length.
-    value: Detailed Billing Information Value
+    name
+        Detailed Billing Information Name(e.g Personal ID, Account Number)
+    data_type
+        Detailed Billing Information DataType (Alpha, Numeric, etc.)
+    min_length
+        Detailed Billing Information Minimum Length.
+    max_length
+        Detailed Billing Information Maximum Length.
+    value
+        Detailed Billing Information Value
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8643,19 +9068,22 @@ class BundledService:
 
     Parameters
     ----------
-    carrier: Carrier the service is applicable.
-    carrier_sub_code: Carrier sub code. True means the carrier used
-        their own sub code. False means the carrier used an ATPCO sub
-        code
-    service_type: The type of service or what the service is used for,
-        e.g. F type is flight type, meaning the service is used on a
-        flight
-    service_sub_code: The sub code of the service, e.g. OAA for Pre paid
-        baggage
-    name: Name of the bundled service.
-    booking: Booking method for the bundled service, e..g SSR.
-    occurrence: How many of the service are included in the bundled
-        service.
+    carrier
+        Carrier the service is applicable.
+    carrier_sub_code
+        Carrier sub code. True means the carrier used their own sub code.
+        False means the carrier used an ATPCO sub code
+    service_type
+        The type of service or what the service is used for, e.g. F type is
+        flight type, meaning the service is used on a flight
+    service_sub_code
+        The sub code of the service, e.g. OAA for Pre paid baggage
+    name
+        Name of the bundled service.
+    booking
+        Booking method for the bundled service, e..g SSR.
+    occurrence
+        How many of the service are included in the bundled service.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8738,12 +9166,16 @@ class Co2Emissions:
 
     Parameters
     ----------
-    co2_emission:
-    total_value: The total CO2 emission value for the journey
-    unit: The unit used in the TotalValue attribute
-    category: The category name of the type of cabin, either Economy or
-        Premium.  Premium is any cabin that is not considered Economy
-    source: The source responsible for the values
+    co2_emission
+    total_value
+        The total CO2 emission value for the journey
+    unit
+        The unit used in the TotalValue attribute
+    category
+        The category name of the type of cabin, either Economy or Premium.
+        Premium is any cabin that is not considered Economy
+    source
+        The source responsible for the values
     """
     class Meta:
         name = "CO2Emissions"
@@ -8798,8 +9230,9 @@ class CategoryDetailsType:
     """
     Parameters
     ----------
-    category_details: For each category Details of Structured Fare Rules
-    value:
+    category_details
+        For each category Details of Structured Fare Rules
+    value
     """
     category_details: list[ValueDetails] = field(
         default_factory=list,
@@ -8825,11 +9258,11 @@ class Characteristic:
     """
     Parameters
     ----------
-    value:
-    position:
-    row_location:
-    padiscode: Industry standard code that defines seat and row
-        characteristic.
+    value
+    position
+    row_location
+    padiscode
+        Industry standard code that defines seat and row characteristic.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8932,12 +9365,13 @@ class ConjunctedTicketInfo:
     """
     Parameters
     ----------
-    number:
-    iatanumber:
-    ticket_issue_date:
-    ticketing_agent_sign_on:
-    country_code: Contains Ticketed PCC’s Country code.
-    status:
+    number
+    iatanumber
+    ticket_issue_date
+    ticketing_agent_sign_on
+    country_code
+        Contains Ticketed PCC’s Country code.
+    status
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -8998,52 +9432,68 @@ class Coupon:
 
     Parameters
     ----------
-    ticket_designator:
-    key:
-    coupon_number: The sequential number of this coupon.
-    operating_carrier: The true carrier.
-    operating_flight_number: The true carrier's flight number.
-    marketing_carrier: If codeshare applies to this, this is the
-        marketing carrier (as opposed to the operating carrier).
-    marketing_flight_number: If codeshare applies to this, this is the
-        marketing flight number (as opposed to the operating flight
-        number).
-    origin: Returns the airport or city code that defines the origin
-        market for this fare.
-    destination: Returns the airport or city code that defines the
-        destination market for this fare.
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
-        from the origin location. In case of open segment this will not
-        be returned.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. This does not include time zone information since
-        it can be derived from the origin location.
-    stopover_code: Stopover code - indicator that stopover is allowed at
-        Origin Airport or City.
-    booking_class: Booked fare class for coupon.
-    fare_basis: The fare basis code for this fare
-    not_valid_before: Fare not valid before this date.
-    not_valid_after: Fare not valid after this date.
-    status: The status of this coupon returend from host is mapped as
-        follows Code="A" Status="Airport Controlled" Code="C"
-        Status="Checked In" Code="F" Status="Flown/Used" Code="L"
-        Status="Boarded/Lifted" Code="O" Status="Open" Code="P"
-        Status="Printed" Code="R" Status="Refunded" Code="E"
-        Status="Exchanged" Code="V" Status="Void" Code="Z"
-        Status="Archived/Carrier Modified" Code="U" Status="Unavailable"
-        Code="S" Status="Suspended" Code="I" Status="Irregular Ops"
-        Code="D" Status="Deleted/Removed" Code="X" Status="Unknown"
-    segment_group: Indicates the grouping in which this segment resides
-        based on Origin/Destination pairs in itinerary
-    marriage_group: Airline Marrraige group indicator
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    ticket_designator
+    key
+    coupon_number
+        The sequential number of this coupon.
+    operating_carrier
+        The true carrier.
+    operating_flight_number
+        The true carrier's flight number.
+    marketing_carrier
+        If codeshare applies to this, this is the marketing carrier (as
+        opposed to the operating carrier).
+    marketing_flight_number
+        If codeshare applies to this, this is the marketing flight number
+        (as opposed to the operating flight number).
+    origin
+        Returns the airport or city code that defines the origin market for
+        this fare.
+    destination
+        Returns the airport or city code that defines the destination market
+        for this fare.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location. In case of open segment this will not be returned.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        This does not include time zone information since it can be derived
+        from the origin location.
+    stopover_code
+        Stopover code - indicator that stopover is allowed at Origin Airport
+        or City.
+    booking_class
+        Booked fare class for coupon.
+    fare_basis
+        The fare basis code for this fare
+    not_valid_before
+        Fare not valid before this date.
+    not_valid_after
+        Fare not valid after this date.
+    status
+        The status of this coupon returend from host is mapped as follows
+        Code="A" Status="Airport Controlled" Code="C" Status="Checked In"
+        Code="F" Status="Flown/Used" Code="L" Status="Boarded/Lifted"
+        Code="O" Status="Open" Code="P" Status="Printed" Code="R"
+        Status="Refunded" Code="E" Status="Exchanged" Code="V" Status="Void"
+        Code="Z" Status="Archived/Carrier Modified" Code="U"
+        Status="Unavailable" Code="S" Status="Suspended" Code="I"
+        Status="Irregular Ops" Code="D" Status="Deleted/Removed" Code="X"
+        Status="Unknown"
+    segment_group
+        Indicates the grouping in which this segment resides based on
+        Origin/Destination pairs in itinerary
+    marriage_group
+        Airline Marrraige group indicator
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9249,7 +9699,8 @@ class Dimension(TypeUnitOfMeasure):
 
     Parameters
     ----------
-    type_value: Type denotes Length,Height,Width of a baggage.
+    type_value
+        Type denotes Length,Height,Width of a baggage.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9268,36 +9719,43 @@ class Emd:
     """
     Parameters
     ----------
-    fulfillment_type: A one digit code specifying how the service must
-        be fulfilled. See FulfillmentTypeDescription for the description
-        of this value.
-    fulfillment_type_description: EMD description.
-    associated_item: The type of Optional Service.  The choices are
-        Flight, Ticket, Merchandising, Rule Buster, Allowance,
-        Chargeable Baggage, Carry On Baggage Allowance, Prepaid Baggage.
-        Provider: 1G, 1V, 1P, 1J
-    availability_charge_indicator: A one-letter code specifying whether
-        the service is available or if there is a charge associated with
-        it. X = Service not available F = No charge for service (free)
-        and an EMD is not issued to reflect free service E = No charge
-        for service (free) and an EMD is issued to reflect the free
-        service. G = No charge for service (free), booking is not
-        required and an EMD is not issued to reflect free service H = No
-        charge for service (free), booking is not required, and an EMD
-        is issued to reflect the free service. Blank = No application.
-        Charges apply according to the data in the Service Fee fields.
-    refund_reissue_indicator: An attribute specifying whether the
-        service is refundable or reissuable.
-    commissionable: True/False value to whether or not the service is
-        comissionable.
-    mileage_indicator: True/False value to whether or not the service
-        has miles.
-    location: 3 letter location code where the service will be availed.
-    date: The date at which the service will be used.
-    booking: Holds the booking description for the service, e.g., SSR.
-    display_category: Describes when the service should be displayed.
-    reusable: Identifies if the service can be re-used towards a future
-        purchase.
+    fulfillment_type
+        A one digit code specifying how the service must be fulfilled. See
+        FulfillmentTypeDescription for the description of this value.
+    fulfillment_type_description
+        EMD description.
+    associated_item
+        The type of Optional Service.  The choices are Flight, Ticket,
+        Merchandising, Rule Buster, Allowance, Chargeable Baggage, Carry On
+        Baggage Allowance, Prepaid Baggage.  Provider: 1G, 1V, 1P, 1J
+    availability_charge_indicator
+        A one-letter code specifying whether the service is available or if
+        there is a charge associated with it. X = Service not available F =
+        No charge for service (free) and an EMD is not issued to reflect
+        free service E = No charge for service (free) and an EMD is issued
+        to reflect the free service. G = No charge for service (free),
+        booking is not required and an EMD is not issued to reflect free
+        service H = No charge for service (free), booking is not required,
+        and an EMD is issued to reflect the free service. Blank = No
+        application. Charges apply according to the data in the Service Fee
+        fields.
+    refund_reissue_indicator
+        An attribute specifying whether the service is refundable or
+        reissuable.
+    commissionable
+        True/False value to whether or not the service is comissionable.
+    mileage_indicator
+        True/False value to whether or not the service has miles.
+    location
+        3 letter location code where the service will be availed.
+    date
+        The date at which the service will be used.
+    booking
+        Holds the booking description for the service, e.g., SSR.
+    display_category
+        Describes when the service should be displayed.
+    reusable
+        Identifies if the service can be re-used towards a future purchase.
     """
     class Meta:
         name = "EMD"
@@ -9401,11 +9859,14 @@ class Emdcommission:
 
     Parameters
     ----------
-    type_value: Type of the commission applied.One of Amount/Percentage
-    value: Value of the commission applied for EMD issuance.Could
-        represent amount or percentage depending on the type
-    currency_code: Currency of the commission amount applied.Applicable
-        only with type - Amount
+    type_value
+        Type of the commission applied.One of Amount/Percentage
+    value
+        Value of the commission applied for EMD issuance.Could represent
+        amount or percentage depending on the type
+    currency_code
+        Currency of the commission amount applied.Applicable only with type
+        - Amount
     """
     class Meta:
         name = "EMDCommission"
@@ -9445,36 +9906,50 @@ class Emdcoupon:
 
     Parameters
     ----------
-    number: Number of the EMD coupon
-    status: Status of the coupon. Possible values Open, Void, Refunded,
+    number
+        Number of the EMD coupon
+    status
+        Status of the coupon. Possible values Open, Void, Refunded,
         Exchanged, Irregular Operations,Airport Control, Checked In,
         Flown/Used, Boarded/Lifted, Suspended, Unknown
-    svc_description: Description of the service related to the EMD
-        Coupon
-    consumed_at_issuance_ind: Indicates if the EMD coupon has been
-        considered used as soon as issued.
-    rfic: Reason For Issuance Code for the EMD coupon
-    rfisc: Reason For Issueance Sub code for the EMD coupon
-    rfidescription: Reason for Issueance Description for the EMD coupon
-    origin: Departure Airport Code for the flight with which the Coupon
-        is associated
-    destination: Destination Airport Code for the flight with which the
-        Coupon is associated
-    flight_number: Flight Number of the flight with which the coupon is
-        associated.
-    present_to: Service provider to present the coupon to
-    present_at: Location of service provider where this coupon should be
-        presented at
-    non_refundable_ind: Indicates whether the coupon is non-refundable
-    marketing_carrier: Marketing carrier associated with the coupon
-    key: System generated Key
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    svc_description
+        Description of the service related to the EMD Coupon
+    consumed_at_issuance_ind
+        Indicates if the EMD coupon has been considered used as soon as
+        issued.
+    rfic
+        Reason For Issuance Code for the EMD coupon
+    rfisc
+        Reason For Issueance Sub code for the EMD coupon
+    rfidescription
+        Reason for Issueance Description for the EMD coupon
+    origin
+        Departure Airport Code for the flight with which the Coupon is
+        associated
+    destination
+        Destination Airport Code for the flight with which the Coupon is
+        associated
+    flight_number
+        Flight Number of the flight with which the coupon is associated.
+    present_to
+        Service provider to present the coupon to
+    present_at
+        Location of service provider where this coupon should be presented
+        at
+    non_refundable_ind
+        Indicates whether the coupon is non-refundable
+    marketing_carrier
+        Marketing carrier associated with the coupon
+    key
+        System generated Key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "EMDCoupon"
@@ -9625,10 +10100,12 @@ class EmdretrieveReq(BaseReq):
 
     Parameters
     ----------
-    list_retrieve: Provider: 1G/1V/1P/1J-Information required for
-        retrieval of list of EMDs
-    detail_retrieve: Provider: 1G/1V/1P/1J-Information required for a
-        detailed EMD retrieve
+    list_retrieve
+        Provider: 1G/1V/1P/1J-Information required for retrieval of list of
+        EMDs
+    detail_retrieve
+        Provider: 1G/1V/1P/1J-Information required for a detailed EMD
+        retrieve
     """
     class Meta:
         name = "EMDRetrieveReq"
@@ -9654,8 +10131,9 @@ class EmdretrieveReq(BaseReq):
         """
         Parameters
         ----------
-        provider_reservation_detail: Provider reservation details to be
-            provided to fetch list of EMDs associated with it.
+        provider_reservation_detail
+            Provider reservation details to be provided to fetch list of
+            EMDs associated with it.
         """
         provider_reservation_detail: None | ProviderReservationDetail = field(
             default=None,
@@ -9672,15 +10150,16 @@ class EmdretrieveReq(BaseReq):
         """
         Parameters
         ----------
-        provider_reservation_detail: Provider reservation locator to be
-            specified for display operation, if mentioned along woth the
-            EMD number then synchronization of that EMD is performed
-            considering the same to be associated with the mentioned
-            PNR.
-        emdnumber: EMD number to be specified for display operation. If
-            mentioned along with provider reservation detail then
-            synchronization of that EMD is performed considering the
-            same to be associated with the mentioned PNR.
+        provider_reservation_detail
+            Provider reservation locator to be specified for display
+            operation, if mentioned along woth the EMD number then
+            synchronization of that EMD is performed considering the same to
+            be associated with the mentioned PNR.
+        emdnumber
+            EMD number to be specified for display operation. If mentioned
+            along with provider reservation detail then synchronization of
+            that EMD is performed considering the same to be associated with
+            the mentioned PNR.
         """
         provider_reservation_detail: None | ProviderReservationDetail = field(
             default=None,
@@ -9726,11 +10205,12 @@ class ExchangePenaltyInfo:
     """
     Parameters
     ----------
-    penalty_information:
-    ptc:
-    minimum_change_fee: Minimum change fee for changes to the itinerary.
-    maximum_change_fee: Maximum change fee for changes  to the
-        itinerary.
+    penalty_information
+    ptc
+    minimum_change_fee
+        Minimum change fee for changes to the itinerary.
+    maximum_change_fee
+        Maximum change fee for changes  to the itinerary.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9775,10 +10255,13 @@ class FareDetails:
 
     Parameters
     ----------
-    fare_ticket_designator:
-    key: Fare key
-    passenger_detail_ref: PassengerRef key
-    fare_basis: The fare basis code for this fare
+    fare_ticket_designator
+    key
+        Fare key
+    passenger_detail_ref
+        PassengerRef key
+    fare_basis
+        The fare basis code for this fare
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9824,8 +10307,10 @@ class FareGuaranteeInfo:
 
     Parameters
     ----------
-    guarantee_date: The date till which the fare is guaranteed.
-    guarantee_type: Determines the status of a fare for a passenger.
+    guarantee_date
+        The date till which the fare is guaranteed.
+    guarantee_type
+        Determines the status of a fare for a passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9855,18 +10340,19 @@ class FareNote:
 
     Parameters
     ----------
-    value:
-    key:
-    precedence:
-    note_name:
-    fare_info_message_ref:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    value
+    key
+    precedence
+    note_name
+    fare_info_message_ref
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -9970,12 +10456,12 @@ class FareRestrictionDate:
 
     Parameters
     ----------
-    direction:
-    start_date:
-    end_date:
-    end_date_indicator: This field indicates the end date/last date for
-        which travel on the fare component being validated must be
-        commenced or completed
+    direction
+    start_date
+    end_date
+    end_date_indicator
+        This field indicates the end date/last date for which travel on the
+        fare component being validated must be commenced or completed
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10212,8 +10698,9 @@ class FareStatus:
 
     Parameters
     ----------
-    fare_status_failure_info:
-    code: The status of the fare.
+    fare_status_failure_info
+    code
+        The status of the fare.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10242,19 +10729,20 @@ class FareSurcharge:
 
     Parameters
     ----------
-    key:
-    type_value:
-    amount:
-    segment_ref:
-    coupon_ref: The coupon to which that surcharge is relative (if
-        applicable)
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    key
+    type_value
+    amount
+    segment_ref
+    coupon_ref
+        The coupon to which that surcharge is relative (if applicable)
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10333,15 +10821,19 @@ class FlexExploreModifiers:
 
     Parameters
     ----------
-    destination: List of specific destinations for performing flex
-        explore. Applicable only with flex explore type - Destination
-    type_value: Type of flex explore to be performed
-    radius: Radius around the destination of actual itinerary in which
-        the search would be performed. Supported only with types -
+    destination
+        List of specific destinations for performing flex explore.
+        Applicable only with flex explore type - Destination
+    type_value
+        Type of flex explore to be performed
+    radius
+        Radius around the destination of actual itinerary in which the
+        search would be performed. Supported only with types -
         DistanceInMiles and DistanceInKilometers
-    group_name: Group name for a set of destinations to be searched.
-        Use with Type=Group. Group names are defined in the Search
-        Control Console. Supported Providers:  1G/1V/1P
+    group_name
+        Group name for a set of destinations to be searched.  Use with
+        Type=Group. Group names are defined in the Search Control Console.
+        Supported Providers:  1G/1V/1P
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10388,7 +10880,8 @@ class FlightInformationReq(BaseReq):
 
     Parameters
     ----------
-    flight_info_criteria: Provider: 1G,1V.
+    flight_info_criteria
+        Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10409,15 +10902,18 @@ class GeneralTimeTable:
     """
     Parameters
     ----------
-    days_of_operation:
-    flight_origin:
-    flight_destination:
-    carrier_list:
-    start_date:
-    end_date:
-    start_time: Flight start time of flight time tabel .
-    end_time: Flight end time of flight time tabel .
-    include_connection: Include or exclude connecting flights.
+    days_of_operation
+    flight_origin
+    flight_destination
+    carrier_list
+    start_date
+    end_date
+    start_time
+        Flight start time of flight time tabel .
+    end_time
+        Flight end time of flight time tabel .
+    include_connection
+        Include or exclude connecting flights.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10532,10 +11028,11 @@ class IncludeAddlBookingCodeInfo:
 
     Parameters
     ----------
-    type_value: The type defines that the booking code info is for
-        primary or secondary carrier.
-    secondary_carrier: The secondary carrier code is required when type
-        is secondary .
+    type_value
+        The type defines that the booking code info is for primary or
+        secondary carrier.
+    secondary_carrier
+        The secondary carrier code is required when type is secondary .
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10583,11 +11080,13 @@ class Itinerary:
 
     Parameters
     ----------
-    type_value: Specifies the type of itinenary option for ticket like
-        Invoice type or Pocket itinenary.
-    option: Specifies the itinerary option like NoFare,NoAmount.
-    separate_indicator: Set to true if one itinerary to be printed per
-        passenger.
+    type_value
+        Specifies the type of itinenary option for ticket like Invoice type
+        or Pocket itinenary.
+    option
+        Specifies the itinerary option like NoFare,NoAmount.
+    separate_indicator
+        Set to true if one itinerary to be printed per passenger.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10622,10 +11121,11 @@ class Journey:
 
     Parameters
     ----------
-    air_segment_ref:
-    travel_time: Total traveling time that is difference between the
-        departure time of the first segment and the arrival time of the
-        last segments for that particular entire set of connection.
+    air_segment_ref
+    travel_time
+        Total traveling time that is difference between the departure time
+        of the first segment and the arrival time of the last segments for
+        that particular entire set of connection.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10707,12 +11207,14 @@ class Leg:
 
     Parameters
     ----------
-    leg_detail:
-    key:
-    group: Returns the Group Number for the leg.
-    origin: Returns the origin airport or city code for the leg.
-    destination: Returns the destination airport or city code for the
-        leg.
+    leg_detail
+    key
+    group
+        Returns the Group Number for the leg.
+    origin
+        Returns the origin airport or city code for the leg.
+    destination
+        Returns the destination airport or city code for the leg.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10772,12 +11274,12 @@ class LegPrice:
 
     Parameters
     ----------
-    leg_detail:
-    key:
-    total_price: The Total Prices for the Combination of Journey legs
-        for this Price.
-    approximate_total_price: The Converted Total Price in Agency's
-        Default Currency Value
+    leg_detail
+    key
+    total_price
+        The Total Prices for the Combination of Journey legs for this Price.
+    approximate_total_price
+        The Converted Total Price in Agency's Default Currency Value
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10821,20 +11323,23 @@ class ManualFareAdjustment:
     """
     Parameters
     ----------
-    applied_on: Represents pricing component upon which manual
-        increment/discount to be applied. Presently supported values are
-        Base and Total. Other is present as a future place holder but
-        presently no request processing logic is available for value
-        Other
-    adjustment_type: Represents process used for applying manual
-        discount/increment. Presently supported values are Flat,
-        Percentage.
-    value: Represents value of increment/discount applied. Negative
-        value is considered as discount whereas positive value
-        represents increment
-    passenger_ref: Represents passenger association.
-    ticket_designator: Providers: 1p/1j
-    fare_type: Providers: 1p/1j
+    applied_on
+        Represents pricing component upon which manual increment/discount to
+        be applied. Presently supported values are Base and Total. Other is
+        present as a future place holder but presently no request processing
+        logic is available for value Other
+    adjustment_type
+        Represents process used for applying manual discount/increment.
+        Presently supported values are Flat, Percentage.
+    value
+        Represents value of increment/discount applied. Negative value is
+        considered as discount whereas positive value represents increment
+    passenger_ref
+        Represents passenger association.
+    ticket_designator
+        Providers: 1p/1j
+    fare_type
+        Providers: 1p/1j
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10911,8 +11416,9 @@ class MerchandisingPricingModifiers:
     """
     Parameters
     ----------
-    account_code: The account code is used to get corporate discounted
-        pricing on paid seats. Provider:ACH
+    account_code
+        The account code is used to get corporate discounted pricing on paid
+        seats. Provider:ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -10956,16 +11462,22 @@ class OriginalItineraryDetails:
 
     Parameters
     ----------
-    itinerary_type: Values allowed are International or Domestic. This
-        tells if the itinerary is international or domestic.
-    bulk_ticket: Set to true and the itinerary is/will be a bulk ticket.
-        Set to false and the itinerary being repriced will not be a bulk
-        ticket. Default is false.
-    ticketing_pcc: This is the PCC or SID where the ticket was issued
-    ticketing_iata: This is the IATA where the ticket was issued.
-    ticketing_country: This is the country where the ticket was issued.
-    tour_code:
-    ticketing_date: The date the repriced itinerary was ticketed
+    itinerary_type
+        Values allowed are International or Domestic. This tells if the
+        itinerary is international or domestic.
+    bulk_ticket
+        Set to true and the itinerary is/will be a bulk ticket. Set to false
+        and the itinerary being repriced will not be a bulk ticket. Default
+        is false.
+    ticketing_pcc
+        This is the PCC or SID where the ticket was issued
+    ticketing_iata
+        This is the IATA where the ticket was issued.
+    ticketing_country
+        This is the country where the ticket was issued.
+    tour_code
+    ticketing_date
+        The date the repriced itinerary was ticketed
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11068,10 +11580,13 @@ class PassengerDetails:
 
     Parameters
     ----------
-    loyalty_card_details:
-    key: Passenger key
-    code: Passenger code
-    age: Passenger age
+    loyalty_card_details
+    key
+        Passenger key
+    code
+        Passenger code
+    age
+        Passenger age
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11158,10 +11673,13 @@ class PrePayId:
 
     Parameters
     ----------
-    company_name: Supplier info that is specific to the pre pay Id
-    id: This is the exact pre pay number. Example flight pass number
-    type_value: Type of pre pay unique identifier,presently only
-        available value is FlightPass.
+    company_name
+        Supplier info that is specific to the pre pay Id
+    id
+        This is the exact pre pay number. Example flight pass number
+    type_value
+        Type of pre pay unique identifier,presently only available value is
+        FlightPass.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11253,27 +11771,43 @@ class PricingDetails:
 
     Parameters
     ----------
-    advisory_message: Advisory messages returned from the host.
-    endorsement_text: Endorsement text returned from the host.
-    waiver_text: Waiver text returned from the host.
-    low_fare_pricing: This tells if Low Fare Finder was used.
-    low_fare_found: This tells if the lowest fare was found.
-    penalty_applies: This tells if penalties apply.
-    discount_applies: This tells if a discount applies.
-    itinerary_type: Values allowed are International or Domestic. This
-        tells if the itinerary is international or domestic.
-    validating_vendor_code: The vendor code of the validating carrier.
-    for_ticketing_on_date: The ticketing date of the itinerary.
-    last_date_to_ticket: The last date to issue the ticket.
-    form_of_refund: How the refund will be issued. Values will be MCO or
-        FormOfPayment
-    account_code:
-    bankers_selling_rate: The selling rate at time of quote.
-    pricing_type: Ties with the RepricingModifiers sent in the request
-        and tells how the itinerary was priced.
-    conversion_rate: The conversion rate at the time of quote.
-    rate_of_exchange: The exchange rate at time of quote.
-    original_ticket_currency: The currency of the original ticket.
+    advisory_message
+        Advisory messages returned from the host.
+    endorsement_text
+        Endorsement text returned from the host.
+    waiver_text
+        Waiver text returned from the host.
+    low_fare_pricing
+        This tells if Low Fare Finder was used.
+    low_fare_found
+        This tells if the lowest fare was found.
+    penalty_applies
+        This tells if penalties apply.
+    discount_applies
+        This tells if a discount applies.
+    itinerary_type
+        Values allowed are International or Domestic. This tells if the
+        itinerary is international or domestic.
+    validating_vendor_code
+        The vendor code of the validating carrier.
+    for_ticketing_on_date
+        The ticketing date of the itinerary.
+    last_date_to_ticket
+        The last date to issue the ticket.
+    form_of_refund
+        How the refund will be issued. Values will be MCO or FormOfPayment
+    account_code
+    bankers_selling_rate
+        The selling rate at time of quote.
+    pricing_type
+        Ties with the RepricingModifiers sent in the request and tells how
+        the itinerary was priced.
+    conversion_rate
+        The conversion rate at the time of quote.
+    rate_of_exchange
+        The exchange rate at time of quote.
+    original_ticket_currency
+        The currency of the original ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11452,12 +11986,13 @@ class RefundFailureInfo:
 
     Parameters
     ----------
-    ticket_number:
-    name:
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
-    booking_traveler_ref:
-    code:
-    message:
+    ticket_number
+    name
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
+    booking_traveler_ref
+    code
+    message
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11520,12 +12055,17 @@ class RelatedTraveler:
 
     Parameters
     ----------
-    loyalty_card: Traveler loyalty card detail
-    person_name: Traveler name detail
-    credits_used: Traveler pre pay credit detail
-    status_code: Traveler status code(One of Marked for
+    loyalty_card
+        Traveler loyalty card detail
+    person_name
+        Traveler name detail
+    credits_used
+        Traveler pre pay credit detail
+    status_code
+        Traveler status code(One of Marked for
         deletion,Lapsed,Terminated,Active,Inactive)
-    relation: Relation to the pre pay id. Example flight pass user
+    relation
+        Relation to the pre pay id. Example flight pass user
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11595,10 +12135,11 @@ class RetrieveLowFareSearchReq(BaseReq):
 
     Parameters
     ----------
-    search_id: Provider: 1G,1V,1P,1J,ACH-SearchID to be used for
-        Asynchronous LowFareSearch Request
-    provider_code: Provider: 1G,1V,1P,1J,ACH-Provider code of a specific
-        host
+    search_id
+        Provider: 1G,1V,1P,1J,ACH-SearchID to be used for Asynchronous
+        LowFareSearch Request
+    provider_code
+        Provider: 1G,1V,1P,1J,ACH-Provider code of a specific host
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11704,12 +12245,13 @@ class RuleAdvancedPurchase:
 
     Parameters
     ----------
-    reservation_latest_period:
-    reservation_latest_unit:
-    ticketing_earliest_date:
-    ticketing_latest_date:
-    more_rules_present: If true, specifies that advance purchase
-        information will be present in fare rules.
+    reservation_latest_period
+    reservation_latest_unit
+    ticketing_earliest_date
+    ticketing_latest_date
+    more_rules_present
+        If true, specifies that advance purchase information will be present
+        in fare rules.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11781,25 +12323,32 @@ class SegmentSelect:
 
     Parameters
     ----------
-    air_segment_ref: Reference to AirSegment from an Air Reservation.
-    hotel_reservation_ref: Specify the locator code of Hotel reservation
-        if it needs to be considered as Auxiliary segment
-    vehicle_reservation_ref: Specify the locator code of Vehicle
-        reservation if it needs to be considered as Auxiliary segment
-    passive_segment_ref: Reference to PassiveSegment from a Passive
-        Reservation.Specify the passive segment if it needs to be
+    air_segment_ref
+        Reference to AirSegment from an Air Reservation.
+    hotel_reservation_ref
+        Specify the locator code of Hotel reservation if it needs to be
         considered as Auxiliary segment
-    all_confirmed_air: Set to true to consider all Confirmed segments
-        including active and passive and set to false to discard
-        confirmed segments
-    all_waitlisted_air: Set to true to consider all Waitlisted segments
-        and false to discard all waitlisted segments
-    all_hotel: Set to true to consider all Hotel reservations as
-        Auxiliary segment and false to discard all Hotel reservations
-    all_vehicle: Set to true to consider all Vehicle reservations as
-        Auxiliary segment and false to discard all Vehicle reservations
-    all_passive: Set to true to consider all Passive segments as
-        Auxiliary segment and false to discard passive segments
+    vehicle_reservation_ref
+        Specify the locator code of Vehicle reservation if it needs to be
+        considered as Auxiliary segment
+    passive_segment_ref
+        Reference to PassiveSegment from a Passive Reservation.Specify the
+        passive segment if it needs to be considered as Auxiliary segment
+    all_confirmed_air
+        Set to true to consider all Confirmed segments including active and
+        passive and set to false to discard confirmed segments
+    all_waitlisted_air
+        Set to true to consider all Waitlisted segments and false to discard
+        all waitlisted segments
+    all_hotel
+        Set to true to consider all Hotel reservations as Auxiliary segment
+        and false to discard all Hotel reservations
+    all_vehicle
+        Set to true to consider all Vehicle reservations as Auxiliary
+        segment and false to discard all Vehicle reservations
+    all_passive
+        Set to true to consider all Passive segments as Auxiliary segment
+        and false to discard passive segments
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11881,15 +12430,18 @@ class SelectionModifiers:
 
     Parameters
     ----------
-    air_segment_ref: References to airsegments for which EMDs will be
-        generated on all the associated services.
-    svc_segment_ref: SVC segment reference to which the EMD is being
-        issued
-    supplier_code: Supplier/Vendor code for which EMDs will be generated
-        on all the associated services. Required if PNR contains more
-        than one supplier.
-    rfic: Reason for issuance code for which EMDs will be generated on
-        all the associated services.
+    air_segment_ref
+        References to airsegments for which EMDs will be generated on all
+        the associated services.
+    svc_segment_ref
+        SVC segment reference to which the EMD is being issued
+    supplier_code
+        Supplier/Vendor code for which EMDs will be generated on all the
+        associated services. Required if PNR contains more than one
+        supplier.
+    rfic
+        Reason for issuance code for which EMDs will be generated on all the
+        associated services.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11933,8 +12485,8 @@ class ServiceAssociations:
     """
     Parameters
     ----------
-    applicable_segment: Applicable air segment associated with this
-        brand.
+    applicable_segment
+        Applicable air segment associated with this brand.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -11954,9 +12506,10 @@ class ServiceAssociations:
         """
         Parameters
         ----------
-        response_message:
-        optional_service_ref:
-        key: Applicable air segment key
+        response_message
+        optional_service_ref
+        key
+            Applicable air segment key
         """
         response_message: None | ResponseMessage = field(
             default=None,
@@ -11990,9 +12543,10 @@ class ServiceGroup:
 
     Parameters
     ----------
-    service_sub_group:
-    code: The Service Group Code of the Ancillary Service.  Providers:
-        1G, 1V, 1P, 1J, ACH
+    service_sub_group
+    code
+        The Service Group Code of the Ancillary Service.  Providers: 1G, 1V,
+        1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12023,24 +12577,28 @@ class SolutionGroup:
 
     Parameters
     ----------
-    permitted_account_codes:
-    preferred_account_codes:
-    prohibited_account_codes:
-    permitted_point_of_sales:
-    prohibited_point_of_sales:
-    count: The number of solution to include in this group. If only one
-        group specified, this can be left blank. If multiple groups
-        specified, all counts must add up to the MaxResults of the
-        request.
-    trip_type: Specifies the trip type for this group of results. Allows
-        targeting a result set to a particular set of characterists.
-    diversification: Specifies the diversification of this group of
-        results, if specified. Allows targeting a result set to ensure
-        they contain more unique results.
-    tag: An arbitrary name for this group of solutions. Will be returned
-        with the solution for idetification.
-    primary: Indicates that this is a primary SolutionGroup when using
-        alternate pricing concepts
+    permitted_account_codes
+    preferred_account_codes
+    prohibited_account_codes
+    permitted_point_of_sales
+    prohibited_point_of_sales
+    count
+        The number of solution to include in this group. If only one group
+        specified, this can be left blank. If multiple groups specified, all
+        counts must add up to the MaxResults of the request.
+    trip_type
+        Specifies the trip type for this group of results. Allows targeting
+        a result set to a particular set of characterists.
+    diversification
+        Specifies the diversification of this group of results, if
+        specified. Allows targeting a result set to ensure they contain more
+        unique results.
+    tag
+        An arbitrary name for this group of solutions. Will be returned with
+        the solution for idetification.
+    primary
+        Indicates that this is a primary SolutionGroup when using alternate
+        pricing concepts
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12260,10 +12818,12 @@ class Tcrinfo:
     """
     Parameters
     ----------
-    status:
-    date:
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
-    provider_reservation_info_ref: Provider reservation reference key.
+    status
+    date
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
+    provider_reservation_info_ref
+        Provider reservation reference key.
     """
     class Meta:
         name = "TCRInfo"
@@ -12318,9 +12878,9 @@ class TermConditions:
 
     Parameters
     ----------
-    language_option:
-    include_term_conditions: Specifies whether Term and Conditions
-        included in the Fax or not .
+    language_option
+    include_term_conditions
+        Specifies whether Term and Conditions included in the Fax or not .
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12363,11 +12923,12 @@ class TicketFailureInfo:
 
     Parameters
     ----------
-    air_pricing_info_ref: Returns related air pricing infos.
-    name:
-    code:
-    message:
-    booking_traveler_ref:
+    air_pricing_info_ref
+        Returns related air pricing infos.
+    name
+    code
+    message
+    booking_traveler_ref
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12432,11 +12993,15 @@ class Variance:
 
     Parameters
     ----------
-    type_value: Indicates type Variance, i.e. Actual, Estimated,
-        Canceled and Diversion.
-    time: Indicates time for Variance.
-    indicator: Indicates VAriance Indicator, i.e. Early, Late.
-    reason: Reason for Variance
+    type_value
+        Indicates type Variance, i.e. Actual, Estimated, Canceled and
+        Diversion.
+    time
+        Indicates time for Variance.
+    indicator
+        Indicates VAriance Indicator, i.e. Early, Late.
+    reason
+        Reason for Variance
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12479,10 +13044,11 @@ class VoidDocumentInfo:
 
     Parameters
     ----------
-    document_number: Identifies the document number to be voided.
-    document_type: Identifies the document type to be voided, Document
-        Type can have four values like Service Fee, Paper Ticket , MCO
-        and E-Ticket.
+    document_number
+        Identifies the document number to be voided.
+    document_type
+        Identifies the document type to be voided, Document Type can have
+        four values like Service Fee, Paper Ticket , MCO and E-Ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12512,12 +13078,15 @@ class VoidResultInfo:
 
     Parameters
     ----------
-    failure_remark: Container to show all provider failure information.
-    document_number: Identifies the document number to be voided.
-    document_type: Identifies the document type to be voided, Document
-        Type can have four values like Service Fee, Paper Ticket , MCO
-        and E-Ticket.
-    result_type: Successful Or Failed result indicator.
+    failure_remark
+        Container to show all provider failure information.
+    document_number
+        Identifies the document number to be voided.
+    document_type
+        Identifies the document type to be voided, Document Type can have
+        four values like Service Fee, Paper Ticket , MCO and E-Ticket.
+    result_type
+        Successful Or Failed result indicator.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12562,12 +13131,15 @@ class TypeFarePenalty:
 
     Parameters
     ----------
-    amount: The penalty (if any) - expressed as the actual amount of
-        money. Both Amount and Percentage can be present.
-    percentage: The penalty (if any) - expressed in percentage. Both
+    amount
+        The penalty (if any) - expressed as the actual amount of money. Both
         Amount and Percentage can be present.
-    penalty_applies:
-    no_show: The No Show penalty (if any) to change/cancel the fare.
+    percentage
+        The penalty (if any) - expressed in percentage. Both Amount and
+        Percentage can be present.
+    penalty_applies
+    no_show
+        The No Show penalty (if any) to change/cancel the fare.
     """
     class Meta:
         name = "typeFarePenalty"
@@ -12612,11 +13184,12 @@ class TypeRestrictionLengthOfStay:
 
     Parameters
     ----------
-    length:
-    stay_unit:
-    stay_date:
-    more_rules_present: If true, specifies that advance purchase
-        information will be present in fare rules.
+    length
+    stay_unit
+    stay_date
+    more_rules_present
+        If true, specifies that advance purchase information will be present
+        in fare rules.
     """
     class Meta:
         name = "typeRestrictionLengthOfStay"
@@ -12656,8 +13229,8 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo):
     """
     Parameters
     ----------
-    payment_ref: This reference elements will associate relevant payment
-        to this tax
+    payment_ref
+        This reference elements will associate relevant payment to this tax
     """
     class Meta:
         name = "typeTaxInfoWithPaymentRef"
@@ -12680,12 +13253,13 @@ class TypeTicketFailureInfo:
 
     Parameters
     ----------
-    ticket_number:
-    name:
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
-    booking_traveler_ref:
-    code:
-    message:
+    ticket_number
+    name
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
+    booking_traveler_ref
+    code
+    message
     """
     class Meta:
         name = "typeTicketFailureInfo"
@@ -12816,10 +13390,11 @@ class AirExchangeBundle:
 
     Parameters
     ----------
-    air_exchange_info:
-    air_pricing_info_ref:
-    tax_info:
-    penalty: Only used within an AirExchangeQuoteRsp
+    air_exchange_info
+    air_pricing_info_ref
+    tax_info
+    penalty
+        Only used within an AirExchangeQuoteRsp
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12885,9 +13460,10 @@ class AirItineraryDetails:
 
     Parameters
     ----------
-    air_segment_details:
-    passenger_details:
-    key: Air itinerary details key
+    air_segment_details
+    passenger_details
+    key
+        Air itinerary details key
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -12925,50 +13501,55 @@ class AirLegModifiers:
     """
     Parameters
     ----------
-    permitted_cabins:
-    preferred_cabins:
-    permitted_carriers:
-    prohibited_carriers:
-    preferred_carriers:
-    permitted_connection_points: This is the container to specify all
-        permitted connection points. Applicable for 1G/1V/1P/1J.
-    prohibited_connection_points: This is the container to specify all
-        prohibited connection points. Applicable for 1G/1V/1P/1J.
-    preferred_connection_points: This is the container to specify all
-        preferred connection points. Applicable for 1G/1V only.
-    permitted_booking_codes: This is the container to specify all
-        permitted booking codes
-    preferred_booking_codes:
-    preferred_alliances:
-    prohibited_booking_codes: This is the container to specify all
-        prohibited booking codes
-    disfavored_alliances:
-    flight_type:
-    anchor_flight_data:
-    prohibit_overnight_layovers: If true, excludes connections if
-        arrival time of first flight and departure time of second flight
-        is on 2 different calendar days. When used in conjunction with
-        MaxConnectionTime, it would exclude all connections if the
-        connecting flights wait time exceeds the time specified in
-        MaxConnectionTime.
-    max_connection_time:
-    return_first_available_only: If it is true then it will search for
-        first available for the booking code designated or any booking
-        code in same cabin.
-    allow_direct_access: If it is true request will be sent directly to
-        the carrier.
-    prohibit_multi_airport_connection: Indicates whether to restrict
-        multi-airport connections
-    prefer_non_stop: When non-stops are preferred, the distribution of
-        search results should skew heavily toward non-stop flights while
-        still returning some one stop flights for comparison and price
-        competitiveness. The search request will ‘boost' the preference
-        towards non-stops. If true then Non Stop flights will be
-        preferred.
-    order_by: Indicates whether to sort by Journey Time, Deparature Time
-        or Arrival Time
-    max_journey_time: Maximum Journey Time for this leg (in hours) 0-99.
-        Supported Providers 1G,1V.
+    permitted_cabins
+    preferred_cabins
+    permitted_carriers
+    prohibited_carriers
+    preferred_carriers
+    permitted_connection_points
+        This is the container to specify all permitted connection points.
+        Applicable for 1G/1V/1P/1J.
+    prohibited_connection_points
+        This is the container to specify all prohibited connection points.
+        Applicable for 1G/1V/1P/1J.
+    preferred_connection_points
+        This is the container to specify all preferred connection points.
+        Applicable for 1G/1V only.
+    permitted_booking_codes
+        This is the container to specify all permitted booking codes
+    preferred_booking_codes
+    preferred_alliances
+    prohibited_booking_codes
+        This is the container to specify all prohibited booking codes
+    disfavored_alliances
+    flight_type
+    anchor_flight_data
+    prohibit_overnight_layovers
+        If true, excludes connections if arrival time of first flight and
+        departure time of second flight is on 2 different calendar days.
+        When used in conjunction with MaxConnectionTime, it would exclude
+        all connections if the connecting flights wait time exceeds the time
+        specified in MaxConnectionTime.
+    max_connection_time
+    return_first_available_only
+        If it is true then it will search for first available for the
+        booking code designated or any booking code in same cabin.
+    allow_direct_access
+        If it is true request will be sent directly to the carrier.
+    prohibit_multi_airport_connection
+        Indicates whether to restrict multi-airport connections
+    prefer_non_stop
+        When non-stops are preferred, the distribution of search results
+        should skew heavily toward non-stop flights while still returning
+        some one stop flights for comparison and price competitiveness. The
+        search request will ‘boost' the preference towards non-stops. If
+        true then Non Stop flights will be preferred.
+    order_by
+        Indicates whether to sort by Journey Time, Deparature Time or
+        Arrival Time
+    max_journey_time
+        Maximum Journey Time for this leg (in hours) 0-99. Supported
+        Providers 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13233,14 +13814,15 @@ class AirRefundBundle:
 
     Parameters
     ----------
-    air_refund_info:
-    name:
-    tax_info:
-    waiver_code:
-    ticket_number:
-    ptc: Specifies the passenger type code for 1P
-    refund_type: Specifies whether this bundle was auto or manually
-        generated
+    air_refund_info
+    name
+    tax_info
+    waiver_code
+    ticket_number
+    ptc
+        Specifies the passenger type code for 1P
+    refund_type
+        Specifies whether this bundle was auto or manually generated
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13308,71 +13890,78 @@ class AirSearchModifiers:
 
     Parameters
     ----------
-    disfavored_providers:
-    preferred_providers:
-    disfavored_carriers:
-    permitted_carriers:
-    prohibited_carriers:
-    preferred_carriers:
-    permitted_cabins:
-    preferred_cabins:
-    preferred_alliances:
-    disfavored_alliances:
-    permitted_booking_codes: This is the container to specify all
-        permitted booking codes
-    preferred_booking_codes:
-    prohibited_booking_codes: This is the container to specify all
-        prohibited booking codes
-    flight_type:
-    max_layover_duration: This is the maximum duration the layover may
-        have for each trip in the request. Supported providers 1P, 1J.
-    native_search_modifier: Container for Native command modifiers.
-        Providers supported : 1P
-    distance_type:
-    include_flight_details:
-    allow_change_of_airport:
-    prohibit_overnight_layovers: If true, excludes connections if
-        arrival time of first flight and departure time of second flight
-        is on 2 different calendar days. When used in conjunction with
-        MaxConnectionTime, it would exclude all connections if the
-        connecting flights wait time exceeds the time specified in
-        MaxConnectionTime.
-    max_solutions: The maximum number of solutions to return. Decreasing
-        this number
-    max_connection_time: The maximum anount of time (in minutes) that a
-        solution can contain for connections between flights.
-    search_weekends: A value of true indicates that search should be
-        expanded to include weekend combinations, if applicable.
-    include_extra_solutions: If true, indicates that search should be
-        made for returning more solutions, if available. For example,
-        for certain providers, premium members may have the facility to
-        get more solutions. This attribute may have to be combined with
-        other applicable modifiers (like SearchWeekends) to return more
-        results.
-    prohibit_multi_airport_connection: Indicates whether to restrict
-        multi-airport connections
-    prefer_non_stop: When non-stops are preferred, the distribution of
-        search results should skew heavily toward non-stop flights while
-        still returning some one stop flights for comparison and price
-        competitiveness. The search request will ‘boost' the preference
-        towards non-stops. If true then Non Stop flights will be
-        preferred.
-    order_by: Indicates whether to sort by Journey Time, Deparature Time
-        or Arrival Time. Applicable to air availability only.
-    exclude_open_jaw_airport: This option ensures that travel into/out
-        of each location will be into/out of the same airport of that
-        location. Values are true or false. Default value is 'false'. If
-        value is true then open jaws are exclude. If false the open jaws
+    disfavored_providers
+    preferred_providers
+    disfavored_carriers
+    permitted_carriers
+    prohibited_carriers
+    preferred_carriers
+    permitted_cabins
+    preferred_cabins
+    preferred_alliances
+    disfavored_alliances
+    permitted_booking_codes
+        This is the container to specify all permitted booking codes
+    preferred_booking_codes
+    prohibited_booking_codes
+        This is the container to specify all prohibited booking codes
+    flight_type
+    max_layover_duration
+        This is the maximum duration the layover may have for each trip in
+        the request. Supported providers 1P, 1J.
+    native_search_modifier
+        Container for Native command modifiers. Providers supported : 1P
+    distance_type
+    include_flight_details
+    allow_change_of_airport
+    prohibit_overnight_layovers
+        If true, excludes connections if arrival time of first flight and
+        departure time of second flight is on 2 different calendar days.
+        When used in conjunction with MaxConnectionTime, it would exclude
+        all connections if the connecting flights wait time exceeds the time
+        specified in MaxConnectionTime.
+    max_solutions
+        The maximum number of solutions to return. Decreasing this number
+    max_connection_time
+        The maximum anount of time (in minutes) that a solution can contain
+        for connections between flights.
+    search_weekends
+        A value of true indicates that search should be expanded to include
+        weekend combinations, if applicable.
+    include_extra_solutions
+        If true, indicates that search should be made for returning more
+        solutions, if available. For example, for certain providers, premium
+        members may have the facility to get more solutions. This attribute
+        may have to be combined with other applicable modifiers (like
+        SearchWeekends) to return more results.
+    prohibit_multi_airport_connection
+        Indicates whether to restrict multi-airport connections
+    prefer_non_stop
+        When non-stops are preferred, the distribution of search results
+        should skew heavily toward non-stop flights while still returning
+        some one stop flights for comparison and price competitiveness. The
+        search request will ‘boost' the preference towards non-stops. If
+        true then Non Stop flights will be preferred.
+    order_by
+        Indicates whether to sort by Journey Time, Deparature Time or
+        Arrival Time. Applicable to air availability only.
+    exclude_open_jaw_airport
+        This option ensures that travel into/out of each location will be
+        into/out of the same airport of that location. Values are true or
+        false. Default value is 'false'. If value is true then open jaws are
+        exclude. If false the open jaws are included. The supported
+        providers: 1P, 1J
+    exclude_ground_transportation
+        Indicates whether to allow the user to exclude ground transportation
+        or not. Default value is 'false'. If value is true then ground
+        transportations are excluded. If false then ground transportations
         are included. The supported providers: 1P, 1J
-    exclude_ground_transportation: Indicates whether to allow the user
-        to exclude ground transportation or not. Default value is
-        'false'. If value is true then ground transportations are
-        excluded. If false then ground transportations are included. The
-        supported providers: 1P, 1J
-    max_journey_time: Maximum Journey Time for all legs (in hours) 0-99.
-        For LFS Supported Providers are 1G,1V,1P,1J. For AirAvail
-        Supported Providers are 1G,1V.
-    jet_service_only: Restricts results to Jet service flights only.
+    max_journey_time
+        Maximum Journey Time for all legs (in hours) 0-99. For LFS Supported
+        Providers are 1G,1V,1P,1J. For AirAvail Supported Providers are
+        1G,1V.
+    jet_service_only
+        Restricts results to Jet service flights only.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13692,17 +14281,22 @@ class AirVoidDocumentReq(BaseReq):
 
     Parameters
     ----------
-    air_reservation_locator_code: Provider: 1G,1V.
-    void_document_info: Provider: 1G,1V-All tickets that belong to this
-        PNR must be enumerated here. Voiding only some tickets of a
-        multi-ticket PNR not currently supported.
-    show_etr: Provider: 1G,1V-If set as true, response will display the
-        detailed ETR for successfully voided E-Tickets.
-    provider_code: Provider: 1G,1V-Provider code of a specific host.
-    provider_locator_code: Provider: 1G,1V-Contains the locator of the
-        host reservation.
-    validate_spanish_residency: Provider: 1G - If set as true, Spanish
-        Residency will be validated for Provisioned Customers.
+    air_reservation_locator_code
+        Provider: 1G,1V.
+    void_document_info
+        Provider: 1G,1V-All tickets that belong to this PNR must be
+        enumerated here. Voiding only some tickets of a multi-ticket PNR not
+        currently supported.
+    show_etr
+        Provider: 1G,1V-If set as true, response will display the detailed
+        ETR for successfully voided E-Tickets.
+    provider_code
+        Provider: 1G,1V-Provider code of a specific host.
+    provider_locator_code
+        Provider: 1G,1V-Contains the locator of the host reservation.
+    validate_spanish_residency
+        Provider: 1G - If set as true, Spanish Residency will be validated
+        for Provisioned Customers.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13810,28 +14404,36 @@ class AuditData:
 
     Parameters
     ----------
-    tax_info:
-    key:
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
+    tax_info
+    key
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -13988,13 +14590,15 @@ class BookingRules:
 
     Parameters
     ----------
-    booking_rules_fare_reference:
-    rule_info: Pre pay booking rule information
-    restriction: Booking restrictions for associated pre pay account
-    document_required: Detail about required documents for this pre pay
-        id
-    gender_dob_required: Vendor populates if gender/DOB data is required
-        in book.
+    booking_rules_fare_reference
+    rule_info
+        Pre pay booking rule information
+    restriction
+        Booking restrictions for associated pre pay account
+    document_required
+        Detail about required documents for this pre pay id
+    gender_dob_required
+        Vendor populates if gender/DOB data is required in book.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14058,27 +14662,33 @@ class BrandingInfo:
 
     Parameters
     ----------
-    price_range: The price range of the Ancillary Service.  Providers:
-        1G, 1V, 1P, 1J, ACH
-    text:
-    title: The additional titles associated to the brand or optional
-        service. Providers: ACH, 1G, 1V, 1P, 1J
-    image_location:
-    service_group:
-    air_segment_ref: Specifies the AirSegment the branding information
-        is for. Providers: ACH, 1G, 1V, 1P, 1J
-    key:
-    service_sub_code: The Service Sub Code of the Ancillary Service.
-        Providers: 1G, 1V, 1P, 1J, ACH
-    external_service_name: The external name of the Ancillary Service.
-        Providers: 1G, 1V, 1P, 1J, ACH
-    service_type: The type of Ancillary Service.  Providers: 1G, 1V, 1P,
+    price_range
+        The price range of the Ancillary Service.  Providers: 1G, 1V, 1P,
         1J, ACH
-    commercial_name: The commercial name of the Ancillary Service.
-        Providers: 1G, 1V, 1P, 1J, ACH
-    chargeable: Indicates if the optional service is not offered, is
-        available for a charge, or is included in the brand.  Providers:
-        1G, 1V, 1P, 1J, ACH
+    text
+    title
+        The additional titles associated to the brand or optional service.
+        Providers: ACH, 1G, 1V, 1P, 1J
+    image_location
+    service_group
+    air_segment_ref
+        Specifies the AirSegment the branding information is for. Providers:
+        ACH, 1G, 1V, 1P, 1J
+    key
+    service_sub_code
+        The Service Sub Code of the Ancillary Service.  Providers: 1G, 1V,
+        1P, 1J, ACH
+    external_service_name
+        The external name of the Ancillary Service.  Providers: 1G, 1V, 1P,
+        1J, ACH
+    service_type
+        The type of Ancillary Service.  Providers: 1G, 1V, 1P, 1J, ACH
+    commercial_name
+        The commercial name of the Ancillary Service.  Providers: 1G, 1V,
+        1P, 1J, ACH
+    chargeable
+        Indicates if the optional service is not offered, is available for a
+        charge, or is included in the brand.  Providers: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14198,25 +14808,30 @@ class Connection:
 
     Parameters
     ----------
-    fare_note:
-    change_of_plane: Indicates the traveler must change planes between
-        flights.
-    change_of_terminal: Indicates the traveler must change terminals
-        between flights.
-    change_of_airport: Indicates the traveler must change airports
-        between flights.
-    stop_over: Indicates that there is a significant delay between
-        flights (usually 12 hours or more)
-    min_connection_time: The minimum time needed to connect between the
-        two different destinations.
-    duration: The actual duration (in minutes) between flights.
-    segment_index: The sequential AirSegment number that this connection
-        information applies to.
-    flight_details_index: The sequential FlightDetails number that this
-        connection information applies to.
-    include_stop_over_to_fare_quote: The field determines to quote fares
-        with or without stop overs,the values can be NoStopOver,StopOver
-        and IgnoreSegment.
+    fare_note
+    change_of_plane
+        Indicates the traveler must change planes between flights.
+    change_of_terminal
+        Indicates the traveler must change terminals between flights.
+    change_of_airport
+        Indicates the traveler must change airports between flights.
+    stop_over
+        Indicates that there is a significant delay between flights (usually
+        12 hours or more)
+    min_connection_time
+        The minimum time needed to connect between the two different
+        destinations.
+    duration
+        The actual duration (in minutes) between flights.
+    segment_index
+        The sequential AirSegment number that this connection information
+        applies to.
+    flight_details_index
+        The sequential FlightDetails number that this connection information
+        applies to.
+    include_stop_over_to_fare_quote
+        The field determines to quote fares with or without stop overs,the
+        values can be NoStopOver,StopOver and IgnoreSegment.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14300,9 +14915,10 @@ class DetailedBillingInformation:
 
     Parameters
     ----------
-    form_of_payment_ref:
-    air_pricing_info_ref: Returns related air pricing infos.
-    billing_detail_item:
+    form_of_payment_ref
+    air_pricing_info_ref
+        Returns related air pricing infos.
+    billing_detail_item
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14342,12 +14958,15 @@ class DocumentSelect:
 
     Parameters
     ----------
-    back_office_hand_off:
-    itinerary:
-    issue_ticket_only: Set to true to alter system default of
-        itinerary,ticket and back office.
-    issue_electronic_ticket: Set to true for electronic tickets.
-    fax_indicator: Set to true for providing fax details.
+    back_office_hand_off
+    itinerary
+    issue_ticket_only
+        Set to true to alter system default of itinerary,ticket and back
+        office.
+    issue_electronic_ticket
+        Set to true for electronic tickets.
+    fax_indicator
+        Set to true for providing fax details.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14445,24 +15064,31 @@ class Emdsummary:
 
     Parameters
     ----------
-    emdcoupon: The coupon information for the EMD issued.
-    number: EMD Number
-    primary_document_indicator: Indicates whether the EMD is a primary
-        EMD.
-    in_conjunction_with: Returns the number of the Primary EMD, if this
-        EMD is a conjunctive EMD
-    associated_ticket_number: This number indicates the e-Ticket number
-        associated with this EMD
-    plating_carrier: Plating carrier code for which this EMD is issued
-    issue_date: Issue Date for this EMD
-    key: System generated Key
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    emdcoupon
+        The coupon information for the EMD issued.
+    number
+        EMD Number
+    primary_document_indicator
+        Indicates whether the EMD is a primary EMD.
+    in_conjunction_with
+        Returns the number of the Primary EMD, if this EMD is a conjunctive
+        EMD
+    associated_ticket_number
+        This number indicates the e-Ticket number associated with this EMD
+    plating_carrier
+        Plating carrier code for which this EMD is issued
+    issue_date
+        Issue Date for this EMD
+    key
+        System generated Key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "EMDSummary"
@@ -14554,28 +15180,35 @@ class ElectronicMiscDocument:
 
     Parameters
     ----------
-    emdcoupon: The coupon information for the EMD issued.
-    number: EMD Number
-    primary_document_indicator: Indicates whether the EMD is a primary
-        EMD.
-    in_conjunction_with: Returns the number of the Primary EMD, if this
-        EMD is a conjunctive EMD
-    associated_ticket_number: This number indicates the e-Ticket number
-        associated with this EMD
-    plating_carrier: Plating carrier code for which this EMD is issued
-    issue_date: Issue Date for this EMD
-    status: Status of the EMD calculated on the basis of coupon status.
-        Possible values Open, Void, Refunded, Exchanged, Irregular
-        Operations,Airport Control, Checked In, Flown/Used,
-        Boarded/Lifted, Suspended, Unknown
-    key: System generated Key
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    emdcoupon
+        The coupon information for the EMD issued.
+    number
+        EMD Number
+    primary_document_indicator
+        Indicates whether the EMD is a primary EMD.
+    in_conjunction_with
+        Returns the number of the Primary EMD, if this EMD is a conjunctive
+        EMD
+    associated_ticket_number
+        This number indicates the e-Ticket number associated with this EMD
+    plating_carrier
+        Plating carrier code for which this EMD is issued
+    issue_date
+        Issue Date for this EMD
+    status
+        Status of the EMD calculated on the basis of coupon status. Possible
+        values Open, Void, Refunded, Exchanged, Irregular Operations,Airport
+        Control, Checked In, Flown/Used, Boarded/Lifted, Suspended, Unknown
+    key
+        System generated Key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14700,11 +15333,14 @@ class ExchangeEligibilityInfo:
     """
     Parameters
     ----------
-    exchange_penalty_info:
-    eligible_fares: Identifies which fares are eligible for Exchange
-    refundable_fares: Fares eligible for refund: All, Some, None
-    passed_automation_checks: Indicates whether the itinerary passed
-        initial validation for automated exchange
+    exchange_penalty_info
+    eligible_fares
+        Identifies which fares are eligible for Exchange
+    refundable_fares
+        Fares eligible for refund: All, Some, None
+    passed_automation_checks
+        Indicates whether the itinerary passed initial validation for
+        automated exchange
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14748,12 +15384,14 @@ class ExpertSolution:
 
     Parameters
     ----------
-    leg_price:
-    key:
-    total_price: The Total Price for the Solution.
-    approximate_total_price: The Converted Total Price in Agency's
-        Default Currency Value
-    created_date: The Date on which this solution was created
+    leg_price
+    key
+    total_price
+        The Total Price for the Solution.
+    approximate_total_price
+        The Converted Total Price in Agency's Default Currency Value
+    created_date
+        The Date on which this solution was created
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -14806,48 +15444,62 @@ class Facility:
 
     Parameters
     ----------
-    characteristic:
-    remark:
-    passenger_seat_price:
-    tax_info: Tax information related to seat price. This is presently
-        populated for MCH and ACH content. Applicable providers are
-        MCH/ACH
-    emd:
-    service_data:
-    tour_code:
-    type_value: The type of facility
-    seat_code: If a seat type, the seat identifier
-    availability: If a seat type, the availability of the seat
-    seat_price: The price of the seat, if applicable.
-    paid: Set to True if either SeatPrice or GroupSeatPrice are
-        returned.
-    service_sub_code: The service subcode associated with the Facility
-    ssrcode: The SSR Code associated with the Facility
-    issuance_reason: A one-letter RFIC value filed by the airline in
-        each Optional Service will be mapped to this attribute. RFIC is
-        IATA Reason for Issuance Code. Possible codes are A (Air
-        transportation),B (Surface Transportation),C(Bagage),
-        D(Financial Impact),E(Airport
-        Services),F(Merchandise),G(Inflight Services),I (Individual
-        Airline use).
-    base_seat_price: Price of the seats excluding Taxes.
-    taxes: Tax amount for the seat price.
-    quantity: The number of units availed for each optional service
-        (e.g. 2 baggage availed will be specified as 2 in quantity for
-        optional service BAGGAGE)
-    sequence_number: The sequence number associated with the
-        OptionalService
-    inclusive_of_tax: Identifies if the service was filed with a fee
-        that is inclusive of tax.
-    interline_settlement_allowed: Identifies if the interline settlement
-        is allowed in service .
-    geography_specification: Sector, Portion, Journey.
-    source: The Source of the optional service. The source can be ACH,
-        MCE, or MCH.
-    optional_service_ref: References the OptionalService for the
-        Row/Facility. Providers: ACH, 1G, 1V, 1P, 1J
-    seat_information_ref: Specifies the seat information for the seat.
-        Providers: ACH, 1G, 1V, 1P, 1J
+    characteristic
+    remark
+    passenger_seat_price
+    tax_info
+        Tax information related to seat price. This is presently populated
+        for MCH and ACH content. Applicable providers are MCH/ACH
+    emd
+    service_data
+    tour_code
+    type_value
+        The type of facility
+    seat_code
+        If a seat type, the seat identifier
+    availability
+        If a seat type, the availability of the seat
+    seat_price
+        The price of the seat, if applicable.
+    paid
+        Set to True if either SeatPrice or GroupSeatPrice are returned.
+    service_sub_code
+        The service subcode associated with the Facility
+    ssrcode
+        The SSR Code associated with the Facility
+    issuance_reason
+        A one-letter RFIC value filed by the airline in each Optional
+        Service will be mapped to this attribute. RFIC is IATA Reason for
+        Issuance Code. Possible codes are A (Air transportation),B (Surface
+        Transportation),C(Bagage), D(Financial Impact),E(Airport
+        Services),F(Merchandise),G(Inflight Services),I (Individual Airline
+        use).
+    base_seat_price
+        Price of the seats excluding Taxes.
+    taxes
+        Tax amount for the seat price.
+    quantity
+        The number of units availed for each optional service (e.g. 2
+        baggage availed will be specified as 2 in quantity for optional
+        service BAGGAGE)
+    sequence_number
+        The sequence number associated with the OptionalService
+    inclusive_of_tax
+        Identifies if the service was filed with a fee that is inclusive of
+        tax.
+    interline_settlement_allowed
+        Identifies if the interline settlement is allowed in service .
+    geography_specification
+        Sector, Portion, Journey.
+    source
+        The Source of the optional service. The source can be ACH, MCE, or
+        MCH.
+    optional_service_ref
+        References the OptionalService for the Row/Facility. Providers: ACH,
+        1G, 1V, 1P, 1J
+    seat_information_ref
+        Specifies the seat information for the seat. Providers: ACH, 1G, 1V,
+        1P, 1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15132,10 +15784,12 @@ class FareRuleCategoryTypes:
     """
     Parameters
     ----------
-    category_details: To indicate details of which category is displayed
-    variable_category_details: If the specified category of Structured
-        Fare Rules is of variable lenght
-    value:
+    category_details
+        To indicate details of which category is displayed
+    variable_category_details
+        If the specified category of Structured Fare Rules is of variable
+        lenght
+    value
     """
     category_details: list[ValueDetails] = field(
         default_factory=list,
@@ -15173,14 +15827,20 @@ class FareRulesFilter:
 
     Parameters
     ----------
-    refundability: Refundability/Penalty Fare Rules about this fare
-        component.
-    latest_ticketing_time: For Future Use
-    chg: For Penalties
-    min: For Minimum Stay
-    max: For Maximum Stay
-    adv: For Advance Res/Tkt
-    oth: Other
+    refundability
+        Refundability/Penalty Fare Rules about this fare component.
+    latest_ticketing_time
+        For Future Use
+    chg
+        For Penalties
+    min
+        For Minimum Stay
+    max
+        For Maximum Stay
+    adv
+        For Advance Res/Tkt
+    oth
+        Other
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15240,7 +15900,8 @@ class FareRulesFilter:
         """
         Parameters
         ----------
-        value: Currently returned: FullyRefundable (1G,1V),
+        value
+            Currently returned: FullyRefundable (1G,1V),
             RefundableWithPenalty (1G,1V), Refundable (1P,1J),
             NonRefundable (1G,1V,1P,1J).Refundable.
         """
@@ -15261,15 +15922,21 @@ class FaxDetails:
 
     Parameters
     ----------
-    phone_number: Send type as Fax for fax number.
-    term_conditions: Term and Conditions for the fax .
-    remark:
-    include_cover_sheet: Specifies whether to include a cover page with
-        fax or not.
-    to: To address.
-    from_value: From address.
-    dept_billing_code: Department billing code.
-    invoice_number: Invoice number.
+    phone_number
+        Send type as Fax for fax number.
+    term_conditions
+        Term and Conditions for the fax .
+    remark
+    include_cover_sheet
+        Specifies whether to include a cover page with fax or not.
+    to
+        To address.
+    from_value
+        From address.
+    dept_billing_code
+        Department billing code.
+    invoice_number
+        Invoice number.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15341,32 +16008,37 @@ class FlightInfoDetail:
     """
     Parameters
     ----------
-    codeshare_info:
-    meals:
-    in_flight_services:
-    variance:
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    scheduled_departure_time: The date and time at which this entity is
-        scheduled to depart. This does not include time zone information
-        since it can be derived from the origin location.
-    scheduled_arrival_time: The date and time at which this entity is
-        scheduled to arrive at the destination. This does not include
-        time zone information since it can be derived from the origin
-        location.
-    travel_time: Total time spent (minutes) traveling including flight
-        time and ground time.
-    eticketability: Identifies if this particular segment is
-        E-Ticketable
-    equipment:
-    origin_terminal:
-    origin_gate: To be used to display origin flight gate number
-    destination_terminal:
-    destination_gate: To be used to display destination flight gate
-        number
-    automated_checkin: “True” indicates that the flight allows automated
-        check-in. The default is “False”.
+    codeshare_info
+    meals
+    in_flight_services
+    variance
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    scheduled_departure_time
+        The date and time at which this entity is scheduled to depart. This
+        does not include time zone information since it can be derived from
+        the origin location.
+    scheduled_arrival_time
+        The date and time at which this entity is scheduled to arrive at the
+        destination. This does not include time zone information since it
+        can be derived from the origin location.
+    travel_time
+        Total time spent (minutes) traveling including flight time and
+        ground time.
+    eticketability
+        Identifies if this particular segment is E-Ticketable
+    equipment
+    origin_terminal
+    origin_gate
+        To be used to display origin flight gate number
+    destination_terminal
+    destination_gate
+        To be used to display destination flight gate number
+    automated_checkin
+        “True” indicates that the flight allows automated check-in. The
+        default is “False”.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15529,14 +16201,19 @@ class IssuanceModifiers:
 
     Parameters
     ----------
-    form_of_payment_ref: Reference to FormOfPayment present in the UR to
-        be used for EMD issuance.
-    form_of_payment: FormOfPayment information to be used for EMD
+    form_of_payment_ref
+        Reference to FormOfPayment present in the UR to be used for EMD
         issuance.
-    customer_receipt_info: Information about customer receipt via email.
-    emdendorsement: Endorsement details to be used during EMD issuance.
-    emdcommission: Commission information to be used for EMD issuance.
-    plating_carrier: Plating carrier code for which this EMD is issued.
+    form_of_payment
+        FormOfPayment information to be used for EMD issuance.
+    customer_receipt_info
+        Information about customer receipt via email.
+    emdendorsement
+        Endorsement details to be used during EMD issuance.
+    emdcommission
+        Commission information to be used for EMD issuance.
+    plating_carrier
+        Plating carrier code for which this EMD is issued.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15612,9 +16289,10 @@ class PenaltyFareInformation:
     """
     Parameters
     ----------
-    penalty_info: Penalty Limit if requested.
-    prohibit_penalty_fares: Indicates whether user wants penalty fares
-        to be returned.
+    penalty_info
+        Penalty Limit if requested.
+    prohibit_penalty_fares
+        Indicates whether user wants penalty fares to be returned.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15643,11 +16321,15 @@ class PrePayCustomer:
 
     Parameters
     ----------
-    person_name:
-    email: Customer email detail
-    address: Customer address detail
-    related_traveler: Travelers related to this pre pay id
-    loyalty_card: Customer loyalty card detail
+    person_name
+    email
+        Customer email detail
+    address
+        Customer address detail
+    related_traveler
+        Travelers related to this pre pay id
+    loyalty_card
+        Customer loyalty card detail
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15702,10 +16384,11 @@ class PrePayPriceInfo:
 
     Parameters
     ----------
-    tax_info: Detailed tax information for the pre pay account
-    base_fare:
-    total_fare:
-    total_tax:
+    tax_info
+        Detailed tax information for the pre pay account
+    base_fare
+    total_fare
+    total_tax
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -15749,48 +16432,64 @@ class RepricingModifiers:
 
     Parameters
     ----------
-    private_fare_options: Public and/or Private Fares requested for
-        pricing.            Currently supported: AccountCodeOnly,
-        PrivateFaresOnly, PublicPrivateFaresOnly.
-    fare_type:
-    fare_ticket_designator:
-    override_currency:
-    air_segment_pricing_modifiers:
-    withhold_tax_code: Used to request tax withholding for the tax code
-        specified. Providers supported 1G/1P
-    price_class_of_service: Values allowed are ClassBooked or
-        LowestClass. This tells how to price the new itinerary.
-    create_date: This is either today’s date or the date the repriced
-        itinerary was created
-    reissue_loc_city_code: This is the city code of the reissue location
-    reissue_loc_country_code: This is the country code of the reissue
-        location
-    bulk_ticket: Set to true and the itinerary is/will be a bulk ticket.
-        Set to false and the itinerary being repriced will not be a bulk
-        ticket.
-    account_code: May be used in conjunction with PrivateFareOptions
-    penalty_as_tax_code: Used to request that the penalty be applied as
-        a tax, to the tax code specified. Providers supported 1G/1P
-    air_pricing_solution_ref: A reference to a AirPricingSolution.
-        Providers: 1G, 1V, 1P, 1J.
-    penalty_to_fare: Will add the change fee/penalty amount to the total
-        fare amount. Supported Providers: 1P
-    price_ptconly: A value of true forces the price for the PTC even if
-        that fare is not the lowest fare for the passenger.
-    brand_details: Set to true full brand details will be returned.
-    brand_modifier: A value of MaintainBrand will maintain the brand
-        from the original ticket if applicable.
-    jet_service_only: Request flights that are jet service only.
-        Available in AirExchangeMultiQuoteReq only.
-    time_window: A value of Time Window is optional. Available in
+    private_fare_options
+        Public and/or Private Fares requested for pricing.
+        Currently supported: AccountCodeOnly, PrivateFaresOnly,
+        PublicPrivateFaresOnly.
+    fare_type
+    fare_ticket_designator
+    override_currency
+    air_segment_pricing_modifiers
+    withhold_tax_code
+        Used to request tax withholding for the tax code specified.
+        Providers supported 1G/1P
+    price_class_of_service
+        Values allowed are ClassBooked or LowestClass. This tells how to
+        price the new itinerary.
+    create_date
+        This is either today’s date or the date the repriced itinerary was
+        created
+    reissue_loc_city_code
+        This is the city code of the reissue location
+    reissue_loc_country_code
+        This is the country code of the reissue location
+    bulk_ticket
+        Set to true and the itinerary is/will be a bulk ticket. Set to false
+        and the itinerary being repriced will not be a bulk ticket.
+    account_code
+        May be used in conjunction with PrivateFareOptions
+    penalty_as_tax_code
+        Used to request that the penalty be applied as a tax, to the tax
+        code specified. Providers supported 1G/1P
+    air_pricing_solution_ref
+        A reference to a AirPricingSolution. Providers: 1G, 1V, 1P, 1J.
+    penalty_to_fare
+        Will add the change fee/penalty amount to the total fare amount.
+        Supported Providers: 1P
+    price_ptconly
+        A value of true forces the price for the PTC even if that fare is
+        not the lowest fare for the passenger.
+    brand_details
+        Set to true full brand details will be returned.
+    brand_modifier
+        A value of MaintainBrand will maintain the brand from the original
+        ticket if applicable.
+    jet_service_only
+        Request flights that are jet service only. Available in
         AirExchangeMultiQuoteReq only.
-    flight_type: Type of flights to be returned. Values are 'NonStop',
-        'Direct', 'SingleConnection' and 'NoRestrictions'. Available in
+    time_window
+        A value of Time Window is optional. Available in
         AirExchangeMultiQuoteReq only.
-    multi_airport_search: A value of Multi Airport Search Indicator is
-        optional. Available in AirExchangeMultiQuoteReq only.
-    connection_point: A value of Connection City Code is optional.
-        Available in AirExchangeMultiQuoteReq only.
+    flight_type
+        Type of flights to be returned. Values are 'NonStop', 'Direct',
+        'SingleConnection' and 'NoRestrictions'. Available in
+        AirExchangeMultiQuoteReq only.
+    multi_airport_search
+        A value of Multi Airport Search Indicator is optional. Available in
+        AirExchangeMultiQuoteReq only.
+    connection_point
+        A value of Connection City Code is optional. Available in
+        AirExchangeMultiQuoteReq only.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16048,12 +16747,15 @@ class TcrexchangeBundle:
 
     Parameters
     ----------
-    air_exchange_info:
-    air_pricing_info_ref:
-    fee_info:
-    tax_info: Itinerary level taxes
-    penalty: Only used within an AirExchangeQuoteRsp
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
+    air_exchange_info
+    air_pricing_info_ref
+    fee_info
+    tax_info
+        Itinerary level taxes
+    penalty
+        Only used within an AirExchangeQuoteRsp
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
     """
     class Meta:
         name = "TCRExchangeBundle"
@@ -16119,20 +16821,21 @@ class Ticket:
 
     Parameters
     ----------
-    coupon:
-    ticket_endorsement:
-    tour_code:
-    exchanged_ticket_info:
-    key:
-    ticket_number:
-    ticket_status:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    coupon
+    ticket_endorsement
+    tour_code
+    exchanged_ticket_info
+    key
+    ticket_number
+    ticket_status
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16214,19 +16917,22 @@ class TicketInfo:
     """
     Parameters
     ----------
-    name:
-    conjuncted_ticket_info:
-    exchanged_ticket_info:
-    number:
-    iatanumber:
-    ticket_issue_date:
-    ticketing_agent_sign_on:
-    country_code: Contains Ticketed PCC’s Country code.
-    status:
-    bulk_ticket: Whether the ticket was issued as bulk.
-    booking_traveler_ref: A reference to a passenger.
-    air_pricing_info_ref: A reference to a AirPricing.Applicable
-        Providers 1G and 1V.
+    name
+    conjuncted_ticket_info
+    exchanged_ticket_info
+    number
+    iatanumber
+    ticket_issue_date
+    ticketing_agent_sign_on
+    country_code
+        Contains Ticketed PCC’s Country code.
+    status
+    bulk_ticket
+        Whether the ticket was issued as bulk.
+    booking_traveler_ref
+        A reference to a passenger.
+    air_pricing_info_ref
+        A reference to a AirPricing.Applicable Providers 1G and 1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16332,11 +17038,14 @@ class TypeDefaultBrandDetail:
     """
     Parameters
     ----------
-    text: Text associated to the brand
-    image_location: Images associated to the brand
-    applicable_segment: Defines for which air segment the brand is
-        applicable.
-    brand_id: The unique identifier of the brand
+    text
+        Text associated to the brand
+    image_location
+        Images associated to the brand
+    applicable_segment
+        Defines for which air segment the brand is applicable.
+    brand_id
+        The unique identifier of the brand
     """
     class Meta:
         name = "typeDefaultBrandDetail"
@@ -16443,23 +17152,28 @@ class AirExchangeTicketingReq(BaseReq):
 
     Parameters
     ----------
-    air_reservation_locator_code: Identifies the PNR to ticket.
+    air_reservation_locator_code
+        Identifies the PNR to ticket. Providers 1G, 1V, 1P.
+    ticket_number
+        Ticket number to reissue. Providers 1G, 1V, 1P.
+    ticketing_modifiers_ref
+        Provider: 1P-Reference to a shared list of Ticketing Modifiers. This
+        is supported for Worldspan provider only. When AirPricingInfoRef is
+        used along with TicketingModifiersRef means that particular
+        TicketingModifiers will to be applied while ticketing the Stored
+        fare corresponding to the AirPricingInfo. Absence of
+        AirPricingInfoRef means that particular TicketingModifiers will be
+        applied to all Stored fares which are requested to be ticketed.
+    waiver_code
+    detailed_billing_information
         Providers 1G, 1V, 1P.
-    ticket_number: Ticket number to reissue. Providers 1G, 1V, 1P.
-    ticketing_modifiers_ref: Provider: 1P-Reference to a shared list of
-        Ticketing Modifiers. This is supported for Worldspan provider
-        only. When AirPricingInfoRef is used along with
-        TicketingModifiersRef means that particular TicketingModifiers
-        will to be applied while ticketing the Stored fare corresponding
-        to the AirPricingInfo. Absence of AirPricingInfoRef means that
-        particular TicketingModifiers will be applied to all Stored
-        fares which are requested to be ticketed.
-    waiver_code:
-    detailed_billing_information: Providers 1G, 1V, 1P.
-    air_ticketing_modifiers: Provider: 1G,1V,1P.
-    bulk_ticket: Providers 1G, 1V, 1P.
-    change_fee_on_ticket: Applies the change fee/penalty to the original
-        form of payment. Providers: 1V
+    air_ticketing_modifiers
+        Provider: 1G,1V,1P.
+    bulk_ticket
+        Providers 1G, 1V, 1P.
+    change_fee_on_ticket
+        Applies the change fee/penalty to the original form of payment.
+        Providers: 1V
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16537,40 +17251,42 @@ class AirFareDisplayModifiers:
     """
     Parameters
     ----------
-    trip_type:
-    cabin_class:
-    penalty_fare_information: Request Fares with specific Penalty
-        Information.
-    fare_search_option:
-    max_responses:
-    departure_date:
-    ticketing_date:
-    return_date:
-    base_fare_only:
-    unrestricted_fares_only:
-    fares_indicator: Indicates whether only public fares should be
-        returned or specific type of private fares
-    currency_type:
-    include_taxes:
-    include_estimated_taxes: Indicates to include estimated taxes i.e.
-        if set to true estimated total fare,base fare and taxes would be
-        returned.
-    include_surcharges:
-    global_indicator:
-    prohibit_min_stay_fares:
-    prohibit_max_stay_fares:
-    prohibit_advance_purchase_fares:
-    prohibit_non_refundable_fares: Indicates whether it prohibits
-        NonRefundable Fares.
-    validated_fares_only: Indicates that the requested Fares should be
-        Validated Fares only. If set to true, then only valid fares will
-        be returned. If set to false, both valid and non valid fares
-        will be returned. If not sent, then no validation will be done.
-        All fares will be returned.
-    prohibit_travel_restricted_fares: Indicates that the Fares not
-        complying Travel Restrictions and Seasonality fare rules are
-        prohibited
-    filed_currency: Represents the filed currency of the fare
+    trip_type
+    cabin_class
+    penalty_fare_information
+        Request Fares with specific Penalty Information.
+    fare_search_option
+    max_responses
+    departure_date
+    ticketing_date
+    return_date
+    base_fare_only
+    unrestricted_fares_only
+    fares_indicator
+        Indicates whether only public fares should be returned or specific
+        type of private fares
+    currency_type
+    include_taxes
+    include_estimated_taxes
+        Indicates to include estimated taxes i.e. if set to true estimated
+        total fare,base fare and taxes would be returned.
+    include_surcharges
+    global_indicator
+    prohibit_min_stay_fares
+    prohibit_max_stay_fares
+    prohibit_advance_purchase_fares
+    prohibit_non_refundable_fares
+        Indicates whether it prohibits NonRefundable Fares.
+    validated_fares_only
+        Indicates that the requested Fares should be Validated Fares only.
+        If set to true, then only valid fares will be returned. If set to
+        false, both valid and non valid fares will be returned. If not sent,
+        then no validation will be done. All fares will be returned.
+    prohibit_travel_restricted_fares
+        Indicates that the Fares not complying Travel Restrictions and
+        Seasonality fare rules are prohibited
+    filed_currency
+        Represents the filed currency of the fare
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16750,20 +17466,26 @@ class AirFareRulesReq(BaseReq):
 
     Parameters
     ----------
-    air_reservation_selector: Provider: 1G,1V,1P,1J,ACH-Parameters to
-        use for a fare rule lookup associated with an Air Reservation
-        Locator Code
-    fare_rule_lookup: Used to look up fare rules based on the origin,
-        destination, and carrier of the air segment, the fare basis code
-        and the provider code.  Providers: 1P, 1J.
-    fare_rule_key: Used to look up fare rules based on a fare rule key.
-        Providers: 1G, 1V, 1P, 1J, ACH.
-    air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
-    air_fare_rules_modifier: Provider: 1G,1V.
-    fare_rules_filter_category: Structured Fare Rules Filter if
-        requested will return rules for requested categories in the
-        response. Applicable for providers 1G, 1V.
-    fare_rule_type: Provider: 1G,1V,1P,1J,ACH.
+    air_reservation_selector
+        Provider: 1G,1V,1P,1J,ACH-Parameters to use for a fare rule lookup
+        associated with an Air Reservation Locator Code
+    fare_rule_lookup
+        Used to look up fare rules based on the origin, destination, and
+        carrier of the air segment, the fare basis code and the provider
+        code.  Providers: 1P, 1J.
+    fare_rule_key
+        Used to look up fare rules based on a fare rule key. Providers: 1G,
+        1V, 1P, 1J, ACH.
+    air_fare_display_rule_key
+        Provider: 1G,1V,1P,1J.
+    air_fare_rules_modifier
+        Provider: 1G,1V.
+    fare_rules_filter_category
+        Structured Fare Rules Filter if requested will return rules for
+        requested categories in the response. Applicable for providers 1G,
+        1V.
+    fare_rule_type
+        Provider: 1G,1V,1P,1J,ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -16825,9 +17547,11 @@ class AirFareRulesReq(BaseReq):
         """
         Parameters
         ----------
-        category_code: Structured Fare Rules can be requested for "ADV",
-            "MIN", "MAX",  "STP", and "CHG".
-        fare_info_ref: Key reference for multiple fare rule
+        category_code
+            Structured Fare Rules can be requested for "ADV", "MIN", "MAX",
+            "STP", and "CHG".
+        fare_info_ref
+            Key reference for multiple fare rule
         """
         category_code: list[object] = field(
             default_factory=list,
@@ -16851,9 +17575,10 @@ class AirFareRulesReq(BaseReq):
         """
         Parameters
         ----------
-        fare_info_ref:
-        air_reservation_locator_code: The Air Reservation locator code
-            which is an unique identifier for the reservation
+        fare_info_ref
+        air_reservation_locator_code
+            The Air Reservation locator code which is an unique identifier
+            for the reservation
         """
         fare_info_ref: list[FareInfoRef] = field(
             default_factory=list,
@@ -16917,71 +17642,84 @@ class AirPricingModifiers:
 
     Parameters
     ----------
-    prohibited_rule_categories:
-    account_codes:
-    permitted_cabins:
-    contract_codes:
-    exempt_taxes:
-    penalty_fare_information: Request Fares with specific Penalty
-        Information.
-    discount_card: Discount request for rail.
-    promo_codes:
-    manual_fare_adjustment: Represents increment/discount applied
-        manually by agent.
-    point_of_sale: User can use this node to send a specific PCC to
-        access fares allowed only for that PCC. This node gives the
-        capability for fare redistribution at stored fare level. As
-        multiple UAPI AirPricingInfos (all having same
-        AirPricingInfoGroup) can converge to a single stored fare, UAPI
-        will map PoinOfSale information from the first available one
-        from each group
-    brand_modifiers: Used to specify the level of branding requested.
-    multi_gdssearch_indicator:
-    preferred_cabins:
-    prohibit_min_stay_fares:
-    prohibit_max_stay_fares:
-    currency_type:
-    prohibit_advance_purchase_fares:
-    prohibit_non_refundable_fares:
-    prohibit_restricted_fares:
-    fares_indicator: Indicates whether only public fares should be
-        returned or specific type of private fares
-    filed_currency: Currency in which Fares/Prices will be filed if
-        supported by the supplier else approximated to.
-    plating_carrier: The Plating Carrier for this journey.
-    override_carrier: The Plating Carrier for this journey.
-    eticketability: Request a search based on whether only E-ticketable
-        fares are required.
-    account_code_fares_only: Indicates whether or not the private fares
-        returned should be restricted to only those specific to the
-        input account code and contract code.
-    key:
-    prohibit_non_exchangeable_fares:
-    force_segment_select: This indicator allows agent to force segment
-        select option in host while selecting all air segments to store
-        price on a PNR. This is relevent only when agent selects all air
-        segmnets to price. if agent selects specific segments to price
-        then this attribute will be ignored by the system. This is
-        currently used by Worldspan only.
-    inventory_request_type: This allows user to make request for a
-        particular source of inventory for pricing modifier purposes.
-        This is currently used by Worldspan only.
-    one_way_shop: Via this attribute one way shop can be requested.
-        Applicable provider is 1G
-    prohibit_unbundled_fare_types: A "True" value wiill remove fares
-        with EOU and ERU fare types from consideration. A "False" value
-        is the same as no value.  Default is no value. Applicable
-        providers:  1P/1J/1G/1V
-    return_services: When set to false, ATPCO filed Optional Services
-        will not be returned. Default is true. Provider: 1G, 1V, 1P, 1J
-    channel_id: A Channel ID is 2 to 4 alpha-numeric characters used to
-        activate the Search Control Console filter for a specific group
-        of travelers being served by the agency credential.
-    return_fare_attributes: Returns attributes that are associated to a
-        fare
-    sell_check: Checks if the segment is bookable before pricing
-    return_failed_segments: If "true", returns failed segments
-        information.
+    prohibited_rule_categories
+    account_codes
+    permitted_cabins
+    contract_codes
+    exempt_taxes
+    penalty_fare_information
+        Request Fares with specific Penalty Information.
+    discount_card
+        Discount request for rail.
+    promo_codes
+    manual_fare_adjustment
+        Represents increment/discount applied manually by agent.
+    point_of_sale
+        User can use this node to send a specific PCC to access fares
+        allowed only for that PCC. This node gives the capability for fare
+        redistribution at stored fare level. As multiple UAPI
+        AirPricingInfos (all having same AirPricingInfoGroup) can converge
+        to a single stored fare, UAPI will map PoinOfSale information from
+        the first available one from each group
+    brand_modifiers
+        Used to specify the level of branding requested.
+    multi_gdssearch_indicator
+    preferred_cabins
+    prohibit_min_stay_fares
+    prohibit_max_stay_fares
+    currency_type
+    prohibit_advance_purchase_fares
+    prohibit_non_refundable_fares
+    prohibit_restricted_fares
+    fares_indicator
+        Indicates whether only public fares should be returned or specific
+        type of private fares
+    filed_currency
+        Currency in which Fares/Prices will be filed if supported by the
+        supplier else approximated to.
+    plating_carrier
+        The Plating Carrier for this journey.
+    override_carrier
+        The Plating Carrier for this journey.
+    eticketability
+        Request a search based on whether only E-ticketable fares are
+        required.
+    account_code_fares_only
+        Indicates whether or not the private fares returned should be
+        restricted to only those specific to the input account code and
+        contract code.
+    key
+    prohibit_non_exchangeable_fares
+    force_segment_select
+        This indicator allows agent to force segment select option in host
+        while selecting all air segments to store price on a PNR. This is
+        relevent only when agent selects all air segmnets to price. if agent
+        selects specific segments to price then this attribute will be
+        ignored by the system. This is currently used by Worldspan only.
+    inventory_request_type
+        This allows user to make request for a particular source of
+        inventory for pricing modifier purposes. This is currently used by
+        Worldspan only.
+    one_way_shop
+        Via this attribute one way shop can be requested. Applicable
+        provider is 1G
+    prohibit_unbundled_fare_types
+        A "True" value wiill remove fares with EOU and ERU fare types from
+        consideration. A "False" value is the same as no value.  Default is
+        no value. Applicable providers:  1P/1J/1G/1V
+    return_services
+        When set to false, ATPCO filed Optional Services will not be
+        returned. Default is true. Provider: 1G, 1V, 1P, 1J
+    channel_id
+        A Channel ID is 2 to 4 alpha-numeric characters used to activate the
+        Search Control Console filter for a specific group of travelers
+        being served by the agency credential.
+    return_fare_attributes
+        Returns attributes that are associated to a fare
+    sell_check
+        Checks if the segment is bookable before pricing
+    return_failed_segments
+        If "true", returns failed segments information.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -17268,7 +18006,8 @@ class AirPricingModifiers:
         """
         Parameters
         ----------
-        account_code: Used to get negotiated pricing. Provider:ACH.
+        account_code
+            Used to get negotiated pricing. Provider:ACH.
         """
         account_code: list[AccountCode] = field(
             default_factory=list,
@@ -17332,15 +18071,15 @@ class BagDetails:
 
     Parameters
     ----------
-    baggage_restriction:
-    available_discount:
-    applicable_bags: Applicable baggage like Carry-On,1st Check-in,2nd
-        Check -in etc.
-    base_price:
-    approximate_base_price:
-    taxes:
-    total_price:
-    approximate_total_price:
+    baggage_restriction
+    available_discount
+    applicable_bags
+        Applicable baggage like Carry-On,1st Check-in,2nd Check -in etc.
+    base_price
+    approximate_base_price
+    taxes
+    total_price
+    approximate_total_price
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -17413,7 +18152,8 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
 
     Parameters
     ----------
-    carry_on_details: Information related to Carry-On Bag details .
+    carry_on_details
+        Information related to Carry-On Bag details .
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -17432,14 +18172,14 @@ class CarryOnAllowanceInfo(BaseBaggageAllowanceInfo):
         """
         Parameters
         ----------
-        baggage_restriction:
-        applicable_carry_on_bags: Applicable Carry-On baggage "First",
-            "Second", "Third" etc
-        base_price:
-        approximate_base_price:
-        taxes:
-        total_price:
-        approximate_total_price:
+        baggage_restriction
+        applicable_carry_on_bags
+            Applicable Carry-On baggage "First", "Second", "Third" etc
+        base_price
+        approximate_base_price
+        taxes
+        total_price
+        approximate_total_price
         """
         baggage_restriction: list[BaggageRestriction] = field(
             default_factory=list,
@@ -17546,32 +18286,40 @@ class Emdinfo:
 
     Parameters
     ----------
-    emdtraveler_info: Basic information of the traveler associated with
-        this EMDInfo.
-    supplier_locator: List of Supplier Locator information that is
-        associated with this document
-    electronic_misc_document: Electronic miscellaneous documents.As an
-        EMDInfo container displays all the EMDs which are in
-        conjunction, there can be maximum 4 ElectronicMiscDocuments
-        present in an EMDInfo
-    payment: Payment charged for EMD isuance
-    form_of_payment: FormOfPayment used for issuing these electronic
-        miscellaneous documents
-    emdpricing_info: Fare related information for these electronic
-        miscellaneous documents
-    emdendorsement:
-    fare_calc: Infomration about the fare calculation
-    emdcommission: Commission information applied during EMD issuance
-    provider_code:
-    provider_locator_code:
-    key: System generated Key
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    emdtraveler_info
+        Basic information of the traveler associated with this EMDInfo.
+    supplier_locator
+        List of Supplier Locator information that is associated with this
+        document
+    electronic_misc_document
+        Electronic miscellaneous documents.As an EMDInfo container displays
+        all the EMDs which are in conjunction, there can be maximum 4
+        ElectronicMiscDocuments present in an EMDInfo
+    payment
+        Payment charged for EMD isuance
+    form_of_payment
+        FormOfPayment used for issuing these electronic miscellaneous
+        documents
+    emdpricing_info
+        Fare related information for these electronic miscellaneous
+        documents
+    emdendorsement
+    fare_calc
+        Infomration about the fare calculation
+    emdcommission
+        Commission information applied during EMD issuance
+    provider_code
+    provider_locator_code
+    key
+        System generated Key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "EMDInfo"
@@ -17700,22 +18448,25 @@ class EmdissuanceReq(BaseReq):
 
     Parameters
     ----------
-    provider_reservation_detail: PNR information for which EMD is going
-        to be issued.
-    ticket_number: Ticket number for which EMD is going to be
-        issued.Required for EMD-A issuance.
-    issuance_modifiers: General modifiers related to EMD issuance.
-    selection_modifiers: Modifiers related to selection of services
-        during EMD issuance.
-    universal_record_locator_code: Represents a valid Universal Record
-        locator code.
-    show_details: This attribute gives the control to request for
-        complete information on Issued EMDs or minimal
-        information.Requesting complete information leads to possible
-        multiple supplier calls for fetching all the details.
-    issue_all_open_svc: Issues EMDS to all SVC segments. If it is true,
-        TicketNumber and SVC segment reference need not be provided.
-        Supported provider 1P.
+    provider_reservation_detail
+        PNR information for which EMD is going to be issued.
+    ticket_number
+        Ticket number for which EMD is going to be issued.Required for EMD-A
+        issuance.
+    issuance_modifiers
+        General modifiers related to EMD issuance.
+    selection_modifiers
+        Modifiers related to selection of services during EMD issuance.
+    universal_record_locator_code
+        Represents a valid Universal Record locator code.
+    show_details
+        This attribute gives the control to request for complete information
+        on Issued EMDs or minimal information.Requesting complete
+        information leads to possible multiple supplier calls for fetching
+        all the details.
+    issue_all_open_svc
+        Issues EMDS to all SVC segments. If it is true, TicketNumber and SVC
+        segment reference need not be provided. Supported provider 1P.
     """
     class Meta:
         name = "EMDIssuanceReq"
@@ -17788,20 +18539,26 @@ class EmdsummaryInfo:
 
     Parameters
     ----------
-    emdsummary: Summary information for EMDs conjuncted to each other.
-    emdtraveler_info: EMD traveler information.
-    payment: Payment charged to issue EMD.
-    provider_reservation_info_ref: A reference to the provider
-        reservation with which the document is associated.Displayed when
-        shown as part of UR.Not displayed in EMDRetrieveRsp
-    key: System generated Key
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    emdsummary
+        Summary information for EMDs conjuncted to each other.
+    emdtraveler_info
+        EMD traveler information.
+    payment
+        Payment charged to issue EMD.
+    provider_reservation_info_ref
+        A reference to the provider reservation with which the document is
+        associated.Displayed when shown as part of UR.Not displayed in
+        EMDRetrieveRsp
+    key
+        System generated Key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "EMDSummaryInfo"
@@ -17940,8 +18697,9 @@ class FaxDetailsInformation:
 
     Parameters
     ----------
-    air_pricing_info_ref: Returns related air pricing infos.
-    fax_details:
+    air_pricing_info_ref
+        Returns related air pricing infos.
+    fax_details
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -17972,41 +18730,48 @@ class FlightDetails:
 
     Parameters
     ----------
-    connection:
-    meals:
-    in_flight_services:
-    key:
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_time: The date and time at which this entity departs. Date
-        and time are represented as Airport Local Time at the place of
-        departure. The correct time zone offset is also included.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. Date and time are represented as Airport Local Time
-        at the place of arrival. The correct time zone offset is also
-        included.
-    flight_time: Time spent (minutes) traveling in flight, including
-        airport taxi time.
-    travel_time: Total time spent (minutes) traveling including flight
-        time and ground time.
-    distance: The distance traveled. Units are specified in the parent
-        response element.
-    equipment:
-    on_time_performance: Represents flight on time performance as a
-        percentage from 0 to 100
-    origin_terminal:
-    destination_terminal:
-    ground_time:
-    automated_checkin: “True” indicates that the flight allows automated
-        check-in. The default is “False”.
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    connection
+    meals
+    in_flight_services
+    key
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_time
+        The date and time at which this entity departs. Date and time are
+        represented as Airport Local Time at the place of departure. The
+        correct time zone offset is also included.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        Date and time are represented as Airport Local Time at the place of
+        arrival. The correct time zone offset is also included.
+    flight_time
+        Time spent (minutes) traveling in flight, including airport taxi
+        time.
+    travel_time
+        Total time spent (minutes) traveling including flight time and
+        ground time.
+    distance
+        The distance traveled. Units are specified in the parent response
+        element.
+    equipment
+    on_time_performance
+        Represents flight on time performance as a percentage from 0 to 100
+    origin_terminal
+    destination_terminal
+    ground_time
+    automated_checkin
+        “True” indicates that the flight allows automated check-in. The
+        default is “False”.
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18161,22 +18926,26 @@ class FlightInfo:
     """
     Parameters
     ----------
-    flight_info_detail:
-    flight_info_error_message: Errors, Warnings and informational
-        messages for the Flight referenced above.
-    criteria_key: An identifier to link the flightinfo responses to the
-        criteria in request. The value populated here is passed in
-        request.
-    carrier: The carrier that is marketing this segment
-    flight_number: The flight number under which the marketing carrier
-        is marketing this flight
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_date: The date at which this entity departs. This does not
-        include time zone information since it can be derived from the
-        origin location.
-    class_of_service:
+    flight_info_detail
+    flight_info_error_message
+        Errors, Warnings and informational messages for the Flight
+        referenced above.
+    criteria_key
+        An identifier to link the flightinfo responses to the criteria in
+        request. The value populated here is passed in request.
+    carrier
+        The carrier that is marketing this segment
+    flight_number
+        The flight number under which the marketing carrier is marketing
+        this flight
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_date
+        The date at which this entity departs. This does not include time
+        zone information since it can be derived from the origin location.
+    class_of_service
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18267,34 +19036,46 @@ class FlightTimeDetail:
 
     Parameters
     ----------
-    days_of_operation:
-    connection:
-    key:
-    vendor_code:
-    flight_number:
-    origin:
-    destination:
-    departure_time: Flight departure time
-    arrival_time: Flight arrival time
-    stop_count:
-    equipment:
-    schedule_start_date: Flight time table search start date
-    schedule_end_date: Flight time table search end date
-    display_option: Indicates if carrier has link (carrier specific)
-        display option.
-    on_time_performance: On time performance indicator in percentage.
-    day_change: Indicates if flight arrives on same day as departure,
-        previous day, or next day. Like values  00 means Same day ,  01
-        means next day, -1 mean Previous day etc.
-    journey_time: Indicates total journey time in minutes.
-    flight_time: Indicates total flight time in minutes.
-    start_terminal: Flight start terminal code.
-    end_terminal: Flight end terminal code.
-    first_intermediate_stop: First intermediate stop after board point.
-    last_intermediate_stop: Last intermediate stop before off point.
-    inside_availability:
-    secure_sell:
-    availability_source:
+    days_of_operation
+    connection
+    key
+    vendor_code
+    flight_number
+    origin
+    destination
+    departure_time
+        Flight departure time
+    arrival_time
+        Flight arrival time
+    stop_count
+    equipment
+    schedule_start_date
+        Flight time table search start date
+    schedule_end_date
+        Flight time table search end date
+    display_option
+        Indicates if carrier has link (carrier specific) display option.
+    on_time_performance
+        On time performance indicator in percentage.
+    day_change
+        Indicates if flight arrives on same day as departure, previous day,
+        or next day. Like values  00 means Same day ,  01 means next day, -1
+        mean Previous day etc.
+    journey_time
+        Indicates total journey time in minutes.
+    flight_time
+        Indicates total flight time in minutes.
+    start_terminal
+        Flight start terminal code.
+    end_terminal
+        Flight end terminal code.
+    first_intermediate_stop
+        First intermediate stop after board point.
+    last_intermediate_stop
+        Last intermediate stop before off point.
+    inside_availability
+    secure_sell
+    availability_source
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18497,7 +19278,8 @@ class FlightTimeTableReq(BaseSearchReq):
 
     Parameters
     ----------
-    flight_time_table_criteria: Provider: 1G,1V.
+    flight_time_table_criteria
+        Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18573,12 +19355,13 @@ class Option:
 
     Parameters
     ----------
-    booking_info:
-    connection:
-    key:
-    travel_time: Total traveling time that is difference between the
-        departure time of the first segment and the arrival time of the
-        last segments for that particular entire set of connection.
+    booking_info
+    connection
+    key
+    travel_time
+        Total traveling time that is difference between the departure time
+        of the first segment and the arrival time of the last segments for
+        that particular entire set of connection.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -18621,130 +19404,171 @@ class OptionalService:
     """
     Parameters
     ----------
-    service_data:
-    service_info:
-    remark: Information regarding any specific for this service.
-    tax_info:
-    fee_info:
-    emd:
-    bundled_services:
-    additional_info:
-    fee_application: Specifies how the Optional Service fee is to be
-        applied.  The choices are Per One Way, Per Round Trip, Per Item
-        (Per Piece), Per Travel, Per Ticket, Per 1 Kilo, Per 5 Kilos.
-        Provider: 1G, 1V, 1P, 1J
-    text:
-    price_range:
-    tour_code:
-    branding_info:
-    title:
-    provider_code:
-    supplier_code:
-    optional_services_rule_ref: UniqueID to associate a rule to the
-        Optional Service
-    type_value: Specify the type of service offered (e.g. seats,
-        baggage, etc.)
-    confirmation: Confirmation number provided by the supplier
-    secondary_type: The secondary option code type required for certain
-        options
-    purchase_window: Describes when the Service is available for
-        confirmation or purchase (e.g. Booking Only, Check-in Only,
-        Anytime, etc.)
-    priority: Numeric value that represents the priority order of the
-        Service
-    available: Boolean to describe whether the Service is available for
-        sale or not
-    entitled: Boolean to describe whether the passenger is entitled for
-        the service without charge or not
-    per_traveler: Boolean to describe whether the Amount on the Service
-        is charged per traveler.
-    create_date: Timestamp when this service/offer got created.
-    payment_ref: Reference to a payment for merchandising services.
-    service_status: Specify the service status (e.g. active, canceled,
-        etc.)
-    quantity: The number of units availed for each optional service
-        (e.g. 2 baggage availed will be specified as 2 in quantity for
-        optional service BAGGAGE)
-    sequence_number: The sequence number associated with the
-        OptionalService
-    service_sub_code: The service subcode associated with the
-        OptionalService
-    ssrcode: The SSR Code associated with the OptionalService
-    issuance_reason: A one-letter code specifying the reason for
-        issuance of the OptionalService
-    provider_defined_type: Original Type as sent by the provider
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    key:
-    assess_indicator: Indicates whether price is assessed by mileage or
-        currency or both
-    mileage: Indicates mileage fee/amount
-    applicable_fflevel: Numerical value of the loyalty card level for
-        which this service is available.
-    private: Describes if service is private or not.
-    ssrfree_text: Certain SSR types sent in OptionalService SSRCode
-        require a free text message. For example, PETC Pet in Cabin.
-    is_pricing_approximate: When set to True indicates that the pricing
-        returned is approximate. Supported providers are MCH/ACH
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
-    chargeable: Indicates if the optional service is not offered, is
-        available for a charge, or is included in the brand
-    inclusive_of_tax: Identifies if the service was filed with a fee
-        that is inclusive of tax.
-    interline_settlement_allowed: Identifies if the interline settlement
-        is allowed in service .
-    geography_specification: Sector, Portion, Journey.
-    excess_weight_rate: The cost of the bag per unit weight.
-    source: The Source of the optional service. The source can be ACH,
-        MCE, or MCH.
-    viewable_only: Describes if the OptionalService is viewable only or
-        not. If viewable only then the service cannot be sold.
-    display_text: Title of the Optional Service.  Provider: ACH
-    weight_in_excess: The excess weight of a bag. Providers: 1G, 1V, 1P,
+    service_data
+    service_info
+    remark
+        Information regarding any specific for this service.
+    tax_info
+    fee_info
+    emd
+    bundled_services
+    additional_info
+    fee_application
+        Specifies how the Optional Service fee is to be applied.  The
+        choices are Per One Way, Per Round Trip, Per Item (Per Piece), Per
+        Travel, Per Ticket, Per 1 Kilo, Per 5 Kilos.  Provider: 1G, 1V, 1P,
         1J
-    total_weight: The total weight of a bag. Providers: 1G, 1V, 1P, 1J
-    baggage_unit_price: The per unit price of baggage. Providers: 1G,
-        1V, 1P, 1J
-    first_piece: Indicates the minimum occurrence of excess
-        baggage.Provider: 1G, 1V, 1P, 1J.
-    last_piece: Indicates the maximum occurrence of excess baggage.
-        Provider: 1G, 1V, 1P, 1J.
-    restricted: When set to “true”, the Optional Service is restricted
-        by an embargo. Provider: 1G, 1V, 1P, 1J
-    is_reprice_required: When set to “true”, the Optional Service must
-        be re-priced. Provider: 1G, 1V, 1P, 1J
-    booked_quantity: Indicates the Optional Service quantity already
-        booked. Provider: 1G, 1V, 1P, 1J
-    group: Associates Optional Services with the same ServiceSub Code,
-        Air Segment, Passenger, and EMD Associated Item. Provider:1G,
-        1V, 1P, 1J
-    pseudo_city_code: The PCC or SID that booked the Optional Service.
-    tag: Optional service group name.
-    display_order: Optional service group display order.
+    text
+    price_range
+    tour_code
+    branding_info
+    title
+    provider_code
+    supplier_code
+    optional_services_rule_ref
+        UniqueID to associate a rule to the Optional Service
+    type_value
+        Specify the type of service offered (e.g. seats, baggage, etc.)
+    confirmation
+        Confirmation number provided by the supplier
+    secondary_type
+        The secondary option code type required for certain options
+    purchase_window
+        Describes when the Service is available for confirmation or purchase
+        (e.g. Booking Only, Check-in Only, Anytime, etc.)
+    priority
+        Numeric value that represents the priority order of the Service
+    available
+        Boolean to describe whether the Service is available for sale or not
+    entitled
+        Boolean to describe whether the passenger is entitled for the
+        service without charge or not
+    per_traveler
+        Boolean to describe whether the Amount on the Service is charged per
+        traveler.
+    create_date
+        Timestamp when this service/offer got created.
+    payment_ref
+        Reference to a payment for merchandising services.
+    service_status
+        Specify the service status (e.g. active, canceled, etc.)
+    quantity
+        The number of units availed for each optional service (e.g. 2
+        baggage availed will be specified as 2 in quantity for optional
+        service BAGGAGE)
+    sequence_number
+        The sequence number associated with the OptionalService
+    service_sub_code
+        The service subcode associated with the OptionalService
+    ssrcode
+        The SSR Code associated with the OptionalService
+    issuance_reason
+        A one-letter code specifying the reason for issuance of the
+        OptionalService
+    provider_defined_type
+        Original Type as sent by the provider
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    key
+    assess_indicator
+        Indicates whether price is assessed by mileage or currency or both
+    mileage
+        Indicates mileage fee/amount
+    applicable_fflevel
+        Numerical value of the loyalty card level for which this service is
+        available.
+    private
+        Describes if service is private or not.
+    ssrfree_text
+        Certain SSR types sent in OptionalService SSRCode require a free
+        text message. For example, PETC Pet in Cabin.
+    is_pricing_approximate
+        When set to True indicates that the pricing returned is approximate.
+        Supported providers are MCH/ACH
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
+    chargeable
+        Indicates if the optional service is not offered, is available for a
+        charge, or is included in the brand
+    inclusive_of_tax
+        Identifies if the service was filed with a fee that is inclusive of
+        tax.
+    interline_settlement_allowed
+        Identifies if the interline settlement is allowed in service .
+    geography_specification
+        Sector, Portion, Journey.
+    excess_weight_rate
+        The cost of the bag per unit weight.
+    source
+        The Source of the optional service. The source can be ACH, MCE, or
+        MCH.
+    viewable_only
+        Describes if the OptionalService is viewable only or not. If
+        viewable only then the service cannot be sold.
+    display_text
+        Title of the Optional Service.  Provider: ACH
+    weight_in_excess
+        The excess weight of a bag. Providers: 1G, 1V, 1P, 1J
+    total_weight
+        The total weight of a bag. Providers: 1G, 1V, 1P, 1J
+    baggage_unit_price
+        The per unit price of baggage. Providers: 1G, 1V, 1P, 1J
+    first_piece
+        Indicates the minimum occurrence of excess baggage.Provider: 1G, 1V,
+        1P, 1J.
+    last_piece
+        Indicates the maximum occurrence of excess baggage. Provider: 1G,
+        1V, 1P, 1J.
+    restricted
+        When set to “true”, the Optional Service is restricted by an
+        embargo. Provider: 1G, 1V, 1P, 1J
+    is_reprice_required
+        When set to “true”, the Optional Service must be re-priced.
+        Provider: 1G, 1V, 1P, 1J
+    booked_quantity
+        Indicates the Optional Service quantity already booked. Provider:
+        1G, 1V, 1P, 1J
+    group
+        Associates Optional Services with the same ServiceSub Code, Air
+        Segment, Passenger, and EMD Associated Item. Provider:1G, 1V, 1P, 1J
+    pseudo_city_code
+        The PCC or SID that booked the Optional Service.
+    tag
+        Optional service group name.
+    display_order
+        Optional service group display order.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19302,13 +20126,17 @@ class PrePayAccount:
 
     Parameters
     ----------
-    credit_summary:
-    pre_pay_price_info:
-    program_title: Pre pay program title
-    certificate_number:
-    program_name: Pre pay program name
-    effective_date: Effective date for the pre pay account
-    expire_date: Expiry date for the pre pay account
+    credit_summary
+    pre_pay_price_info
+    program_title
+        Pre pay program title
+    certificate_number
+    program_name
+        Pre pay program name
+    effective_date
+        Effective date for the pre pay account
+    expire_date
+        Expiry date for the pre pay account
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19431,14 +20259,15 @@ class SearchAirLeg:
 
     Parameters
     ----------
-    search_origin:
-    search_destination:
-    search_dep_time:
-    search_arv_time: Specifies the preferred time within the time range.
-        For 1G, 1V, 1P, 1J, it is supported for AvailabilitySearchReq
-        (TimeRange must also be specified) and not supported for
-        LowFareSearchReq. ACH does not support search by arrival time.
-    air_leg_modifiers:
+    search_origin
+    search_destination
+    search_dep_time
+    search_arv_time
+        Specifies the preferred time within the time range. For 1G, 1V, 1P,
+        1J, it is supported for AvailabilitySearchReq (TimeRange must also
+        be specified) and not supported for LowFareSearchReq. ACH does not
+        support search by arrival time.
+    air_leg_modifiers
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19492,10 +20321,11 @@ class SegmentModifiers:
 
     Parameters
     ----------
-    air_segment_ref:
-    ticket_validity: To be used to pass the ticket validity dates
-    baggage_allowance:
-    ticket_designator:
+    air_segment_ref
+    ticket_validity
+        To be used to pass the ticket validity dates
+    baggage_allowance
+    ticket_designator
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19538,7 +20368,8 @@ class StructuredFareRulesType:
     """
     Parameters
     ----------
-    fare_rule_category_type: For FareRulesType element
+    fare_rule_category_type
+        For FareRulesType element
     """
     fare_rule_category_type: list[FareRuleCategoryTypes] = field(
         default_factory=list,
@@ -19559,31 +20390,50 @@ class AirFareDisplayReq(BaseReq):
 
     Parameters
     ----------
-    fare_type: Provider: 1G,1V,1P,1J.
-    passenger_type: Provider: 1G,1V,1P,1J.
-    booking_code: Provider: 1G,1V,1P,1J.
-    include_addl_booking_code_info: Provider: 1G,1V,1P,1J.
-    fare_basis: Provider: 1G,1V,1P,1J.
-    carrier: Provider: 1G,1V,1P,1J.
-    account_code: Provider: 1G,1V,1P,1J.
-    contract_code: Provider: 1G,1V.
-    air_fare_display_modifiers: Provider: 1G,1V,1P,1J.
-    point_of_sale: Provider: 1G,1V.
-    air_fare_display_rule_key: Provider: 1G,1V,1P,1J.
-    origin: Provider: 1G,1V,1P,1J.
-    destination: Provider: 1G,1V,1P,1J.
-    provider_code: Provider: 1G,1V,1P,1J.
-    include_mile_route_information: Provider: 1G,1V,1P,1J-Used to
-        request Mile/Route Information in follow on (Mile, Route, Both)
-    un_saleable_fares_only: Provider: 1G,1V,1P,1J-Used to request
-        unsaleable fares only also known as place of sale fares.
-    channel_id: A Channel ID is 4 alpha-numeric characters used to
-        activate the Search Control Console filter for a specific group
-        of travelers being served by the agency credential.
-    nscc: 1 to 3 numeric that define a Search Control Console
-        filter.This attribute is used to override that filter.
-    return_mm: If this attribute is set to true, Fare Control Manager
-        processing will be invoked.
+    fare_type
+        Provider: 1G,1V,1P,1J.
+    passenger_type
+        Provider: 1G,1V,1P,1J.
+    booking_code
+        Provider: 1G,1V,1P,1J.
+    include_addl_booking_code_info
+        Provider: 1G,1V,1P,1J.
+    fare_basis
+        Provider: 1G,1V,1P,1J.
+    carrier
+        Provider: 1G,1V,1P,1J.
+    account_code
+        Provider: 1G,1V,1P,1J.
+    contract_code
+        Provider: 1G,1V.
+    air_fare_display_modifiers
+        Provider: 1G,1V,1P,1J.
+    point_of_sale
+        Provider: 1G,1V.
+    air_fare_display_rule_key
+        Provider: 1G,1V,1P,1J.
+    origin
+        Provider: 1G,1V,1P,1J.
+    destination
+        Provider: 1G,1V,1P,1J.
+    provider_code
+        Provider: 1G,1V,1P,1J.
+    include_mile_route_information
+        Provider: 1G,1V,1P,1J-Used to request Mile/Route Information in
+        follow on (Mile, Route, Both)
+    un_saleable_fares_only
+        Provider: 1G,1V,1P,1J-Used to request unsaleable fares only also
+        known as place of sale fares.
+    channel_id
+        A Channel ID is 4 alpha-numeric characters used to activate the
+        Search Control Console filter for a specific group of travelers
+        being served by the agency credential.
+    nscc
+        1 to 3 numeric that define a Search Control Console filter.This
+        attribute is used to override that filter.
+    return_mm
+        If this attribute is set to true, Fare Control Manager processing
+        will be invoked.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19785,14 +20635,16 @@ class AirPricingCommand:
 
     Parameters
     ----------
-    air_pricing_modifiers:
-    air_segment_pricing_modifiers:
-    command_key: An identifier to link the pricing responses to the
-        pricing commands. The value passed here will be returned in the
-        resulting AirPricingInfo(s) from this command.
-    cabin_class: Specify the cabin type to price the entire itinerary
-        in. If segment level cabin selection is required, this attribute
-        should not be used.
+    air_pricing_modifiers
+    air_segment_pricing_modifiers
+    command_key
+        An identifier to link the pricing responses to the pricing commands.
+        The value passed here will be returned in the resulting
+        AirPricingInfo(s) from this command.
+    cabin_class
+        Specify the cabin type to price the entire itinerary in. If segment
+        level cabin selection is required, this attribute should not be
+        used.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19836,27 +20688,35 @@ class AirTicketingReq(AirBaseReq):
 
     Parameters
     ----------
-    air_reservation_locator_code: Provider: 1G,1V,1P,1J.
-    air_pricing_info_ref: Provider: 1G,1V,1P,1J-Indicates air pricing
-        infos to be ticketed.
-    ticketing_modifiers_ref: Provider: 1P,1J-Reference to a shared list
-        of Ticketing Modifiers. This is supported for Worldspan and JAL
-        providers only. When AirPricingInfoRef is used along with
-        TicketingModifiersRef means that particular TicketingModifiers
-        will to be applied while ticketing the Stored fare corresponding
-        to the AirPricingInfo. Absence of AirPricingInfoRef means that
-        particular TicketingModifiers will be applied to all Stored
-        fares which are requested to be ticketed.
-    waiver_code:
-    commission:
-    detailed_billing_information: Provider: 1G,1V.
-    fax_details_information: Provider: 1V.
-    air_ticketing_modifiers: Provider: 1G,1V,1P,1J.
-    air_segment_ticketing_modifiers: Provider: 1P,1J.
-    return_info_on_fail:
-    bulk_ticket: Provider: 1G,1V,1P,1J.
-    validate_spanish_residency: Provider: 1G - If set as true, Spanish
-        Residency will be validated for Provisioned Customers.
+    air_reservation_locator_code
+        Provider: 1G,1V,1P,1J.
+    air_pricing_info_ref
+        Provider: 1G,1V,1P,1J-Indicates air pricing infos to be ticketed.
+    ticketing_modifiers_ref
+        Provider: 1P,1J-Reference to a shared list of Ticketing Modifiers.
+        This is supported for Worldspan and JAL providers only. When
+        AirPricingInfoRef is used along with TicketingModifiersRef means
+        that particular TicketingModifiers will to be applied while
+        ticketing the Stored fare corresponding to the AirPricingInfo.
+        Absence of AirPricingInfoRef means that particular
+        TicketingModifiers will be applied to all Stored fares which are
+        requested to be ticketed.
+    waiver_code
+    commission
+    detailed_billing_information
+        Provider: 1G,1V.
+    fax_details_information
+        Provider: 1V.
+    air_ticketing_modifiers
+        Provider: 1G,1V,1P,1J.
+    air_segment_ticketing_modifiers
+        Provider: 1P,1J.
+    return_info_on_fail
+    bulk_ticket
+        Provider: 1G,1V,1P,1J.
+    validate_spanish_residency
+        Provider: 1G - If set as true, Spanish Residency will be validated
+        for Provisioned Customers.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -19984,21 +20844,24 @@ class AutoPricingInfo:
 
     Parameters
     ----------
-    air_segment_ref:
-    booking_traveler_ref:
-    air_pricing_modifiers:
-    air_segment_pricing_modifiers:
-    key:
-    pricing_type: Indicates the Pricing Type used. The possible values
-        are TicketRecord, StoredFare, PricingInstruction.
-    plating_carrier: The Plating Carrier for this journey
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    air_segment_ref
+    booking_traveler_ref
+    air_pricing_modifiers
+    air_segment_pricing_modifiers
+    key
+    pricing_type
+        Indicates the Pricing Type used. The possible values are
+        TicketRecord, StoredFare, PricingInstruction.
+    plating_carrier
+        The Plating Carrier for this journey
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20117,11 +20980,13 @@ class EmdissuanceRsp(BaseRsp):
 
     Parameters
     ----------
-    emdsummary_info: List of EMDSummaryInfo elements to show minimal
-        information in issuance response. Appears for ShowDetails=false
-        in the request.This is the default behaviour.
-    emdinfo: List of EMDInfo elements to show detailoed information in
-        issuance response. Appears for ShowDetails=true in the request.
+    emdsummary_info
+        List of EMDSummaryInfo elements to show minimal information in
+        issuance response. Appears for ShowDetails=false in the request.This
+        is the default behaviour.
+    emdinfo
+        List of EMDInfo elements to show detailoed information in issuance
+        response. Appears for ShowDetails=true in the request.
     """
     class Meta:
         name = "EMDIssuanceRsp"
@@ -20153,8 +21018,10 @@ class EmdretrieveRsp(BaseRsp):
 
     Parameters
     ----------
-    emdinfo: Provider: 1G/1V/1P/1J.
-    emdsummary_info: Provider: 1G/1V/1P/1J.
+    emdinfo
+        Provider: 1G/1V/1P/1J.
+    emdsummary_info
+        Provider: 1G/1V/1P/1J.
     """
     class Meta:
         name = "EMDRetrieveRsp"
@@ -20184,42 +21051,45 @@ class FareDisplay:
 
     Parameters
     ----------
-    fare_display_rule:
-    fare_pricing:
-    fare_restriction:
-    fare_routing_information:
-    fare_mileage_information:
-    air_fare_display_rule_key:
-    booking_code:
-    account_code:
-    addl_booking_code_information:
-    fare_rule_failure_info: Returns fare rule failure info for Non Valid
-        fares.
-    price_change: Indicates a price change is found in Fare Control
-        Manager
-    carrier:
-    fare_basis:
-    amount:
-    trip_type:
-    fare_type_code:
-    special_fare:
-    instant_purchase:
-    eligibility_restricted:
-    flight_restricted:
-    stopovers_restricted:
-    transfers_restricted:
-    blackouts_exist:
-    accompanied_travel:
-    mile_or_route_based_fare:
-    global_indicator:
-    origin: Returns the origin airport or city code for which this
-        tariff is applicable.
-    destination: Returns the destination airport or city code for which
-        this tariff is applicable.
-    fare_ticketing_code: Returns the ticketing code for which this
-        tariff is applicable.
-    fare_ticketing_designator: Returns the ticketing designator for
-        which this tariff is applicable.
+    fare_display_rule
+    fare_pricing
+    fare_restriction
+    fare_routing_information
+    fare_mileage_information
+    air_fare_display_rule_key
+    booking_code
+    account_code
+    addl_booking_code_information
+    fare_rule_failure_info
+        Returns fare rule failure info for Non Valid fares.
+    price_change
+        Indicates a price change is found in Fare Control Manager
+    carrier
+    fare_basis
+    amount
+    trip_type
+    fare_type_code
+    special_fare
+    instant_purchase
+    eligibility_restricted
+    flight_restricted
+    stopovers_restricted
+    transfers_restricted
+    blackouts_exist
+    accompanied_travel
+    mile_or_route_based_fare
+    global_indicator
+    origin
+        Returns the origin airport or city code for which this tariff is
+        applicable.
+    destination
+        Returns the destination airport or city code for which this tariff
+        is applicable.
+    fare_ticketing_code
+        Returns the ticketing code for which this tariff is applicable.
+    fare_ticketing_designator
+        Returns the ticketing designator for which this tariff is
+        applicable.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20590,7 +21460,8 @@ class FlightInformationRsp(BaseRsp):
     """
     Parameters
     ----------
-    flight_info: Provider: 1G,1V.
+    flight_info
+        Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20613,11 +21484,14 @@ class FlightOption:
 
     Parameters
     ----------
-    option: List of BookingInfo available for the search air leg.
-    leg_ref: Identifies the Leg Reference for this Flight Option.
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
+    option
+        List of BookingInfo available for the search air leg.
+    leg_ref
+        Identifies the Leg Reference for this Flight Option.
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20667,7 +21541,8 @@ class FlightTimeTableRsp(BaseSearchRsp):
 
     Parameters
     ----------
-    flight_time_table_list: Provider: 1G,1V.
+    flight_time_table_list
+        Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20700,13 +21575,15 @@ class OptionalServices:
 
     Parameters
     ----------
-    optional_services_total: The total fares, fees and taxes associated
-        with the Optional Services
-    optional_service:
-    grouped_option_info: Details about an unselected or "other" option
-        when optional services are grouped together.
-    optional_service_rules: Holds the rules for selecting the optional
-        service in the itinerary
+    optional_services_total
+        The total fares, fees and taxes associated with the Optional
+        Services
+    optional_service
+    grouped_option_info
+        Details about an unselected or "other" option when optional services
+        are grouped together.
+    optional_service_rules
+        Holds the rules for selecting the optional service in the itinerary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20749,29 +21626,37 @@ class OptionalServices:
         """
         Parameters
         ----------
-        tax_info:
-        fee_info:
-        total_price: The total price for this entity including base
-            price and all taxes.
-        base_price: Represents the base price for this entity. This does
-            not include any taxes or surcharges.
-        approximate_total_price: The Converted total price in Default
-            Currency for this entity including base price and all taxes.
-        approximate_base_price: The Converted base price in Default
-            Currency for this entity. This does not include any taxes or
-            surcharges.
-        equivalent_base_price: Represents the base price in the related
-            currency for this entity. This does not include any taxes or
-            surcharges.
-        taxes: The aggregated amount of all the taxes that are
-            associated with this entity. See the associated TaxInfo
-            array for a breakdown of the individual taxes.
-        fees: The aggregated amount of all the fees that are associated
-            with this entity. See the associated FeeInfo array for a
-            breakdown of the individual fees.
-        services: The total cost for all optional services.
-        approximate_taxes: The Converted tax amount in Default Currency.
-        approximate_fees: The Converted fee amount in Default Currency.
+        tax_info
+        fee_info
+        total_price
+            The total price for this entity including base price and all
+            taxes.
+        base_price
+            Represents the base price for this entity. This does not include
+            any taxes or surcharges.
+        approximate_total_price
+            The Converted total price in Default Currency for this entity
+            including base price and all taxes.
+        approximate_base_price
+            The Converted base price in Default Currency for this entity.
+            This does not include any taxes or surcharges.
+        equivalent_base_price
+            Represents the base price in the related currency for this
+            entity. This does not include any taxes or surcharges.
+        taxes
+            The aggregated amount of all the taxes that are associated with
+            this entity. See the associated TaxInfo array for a breakdown of
+            the individual taxes.
+        fees
+            The aggregated amount of all the fees that are associated with
+            this entity. See the associated FeeInfo array for a breakdown of
+            the individual fees.
+        services
+            The total cost for all optional services.
+        approximate_taxes
+            The Converted tax amount in Default Currency.
+        approximate_fees
+            The Converted fee amount in Default Currency.
         """
         tax_info: list[TaxInfo] = field(
             default_factory=list,
@@ -20868,22 +21753,28 @@ class PrePayProfileInfo:
 
     Parameters
     ----------
-    pre_pay_id: Pre pay unique identifier detail.This information block
-        is returned both in list and  detail retrieve
-        transactions.Example flight pass number
-    pre_pay_customer: Pre pay customer detail.This information block is
-        returned both in list and  detail retrieve transactions.
-    pre_pay_account: Pre pay account detail.This information block is
-        returned both in list and  detail retrieve transactions.
-    affiliations: Pre pay affiliations detail.This information block is
-        returned only in detail retrieve transactions.
-    account_related_rules: Pre pay account related rules.This
-        information block is returned only in detail retrieve
-        transactions.
-    status_code: Customer pre pay profile status code(One of Marked for
+    pre_pay_id
+        Pre pay unique identifier detail.This information block is returned
+        both in list and  detail retrieve transactions.Example flight pass
+        number
+    pre_pay_customer
+        Pre pay customer detail.This information block is returned both in
+        list and  detail retrieve transactions.
+    pre_pay_account
+        Pre pay account detail.This information block is returned both in
+        list and  detail retrieve transactions.
+    affiliations
+        Pre pay affiliations detail.This information block is returned only
+        in detail retrieve transactions.
+    account_related_rules
+        Pre pay account related rules.This information block is returned
+        only in detail retrieve transactions.
+    status_code
+        Customer pre pay profile status code(One of Marked for
         deletion,Lapsed,Terminated,Active,Inactive)
-    creator_id: This is the loyalty card number of the person who
-        originally purchased/setup the flight pass
+    creator_id
+        This is the loyalty card number of the person who originally
+        purchased/setup the flight pass
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20950,9 +21841,11 @@ class Rows:
 
     Parameters
     ----------
-    row: Provider: 1G,1V,1P,1J,ACH,MCH.
-    segment_ref: Specifies the AirSegment the seat map is for.
-        Providers: ACH, 1G, 1V, 1P, 1J
+    row
+        Provider: 1G,1V,1P,1J,ACH,MCH.
+    segment_ref
+        Specifies the AirSegment the seat map is for. Providers: ACH, 1G,
+        1V, 1P, 1J
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -20981,75 +21874,94 @@ class TicketingModifiers:
 
     Parameters
     ----------
-    booking_traveler_ref: Reference to a booking traveler for which
-        ticketing modifier is applied.
-    net_remit: Allows an agency to override the net remittance amount -
-        varies by BSP agreement
-    net_fare: Net Fare amount for a ticketed fare
-    actual_selling_fare: Allows an agency to report an Actual Selling
-        Fare as part of the net remittance BSP agreement
-    invoice_fare: Allows an agency to report an Invoice Fare as part of
-        the net remittance BSP agreement
-    corporate_discount: Allows an agency to add a corporate discount to
-        the itinerary to be ticketed
-    accounting_info: Allows an agency to report Accounting Information
-        as part of the net remittance BSP agreement
-    bulk_ticket: Allows an agency to update the fare as a Bulk ticket -
-        Optional SuppressOnFareCalc attribute will control how fare
+    booking_traveler_ref
+        Reference to a booking traveler for which ticketing modifier is
+        applied.
+    net_remit
+        Allows an agency to override the net remittance amount - varies by
+        BSP agreement
+    net_fare
+        Net Fare amount for a ticketed fare
+    actual_selling_fare
+        Allows an agency to report an Actual Selling Fare as part of the net
+        remittance BSP agreement
+    invoice_fare
+        Allows an agency to report an Invoice Fare as part of the net
+        remittance BSP agreement
+    corporate_discount
+        Allows an agency to add a corporate discount to the itinerary to be
+        ticketed
+    accounting_info
+        Allows an agency to report Accounting Information as part of the net
+        remittance BSP agreement
+    bulk_ticket
+        Allows an agency to update the fare as a Bulk ticket - Optional
+        SuppressOnFareCalc attribute will control how fare calculation is
+        printed on the ticket
+    group_tour
+        Allows an agency to update the fare as a Group Tour (inclusive tour)
+        ticket - Optional SuppressOnFareCalc attribute will control how fare
         calculation is printed on the ticket
-    group_tour: Allows an agency to update the fare as a Group Tour
-        (inclusive tour) ticket - Optional SuppressOnFareCalc attribute
-        will control how fare calculation is printed on the ticket
-    commission: Allows an agency to update the commission to a new or
-        different commission rate which will be applied at time of
-        ticketing. The commission Modifier allows the user specify how
-        the commission change is to applied
-    tour_code: Allows an agency to modify the tour code information on
-        the ticket
-    ticket_endorsement: Allows an agency to add user defined ticketing
-        endorsements the ticket
-    value_modifier: Allows an agency to modify value or commission of
-        the ticket. The modifier is generic and depends on the specific
-        GDS and BSP implementation
-    document_select:
-    document_options:
-    segment_select:
-    segment_modifiers:
-    supplier_locator:
-    destination_purpose_code:
-    language_option:
-    land_charges:
-    print_blank_form_itinerary:
-    exclude_ticketing:
-    exempt_obfee:
-    is_primary_di: Indicates if the DI is Primary DI. 1P only
-    document_instruction_number: The Document Instruction line number.
-        1P only
-    reference: Identifies if TicketingModifiers contains DI line
-        information. 1P only.
-    status: DI line status - ex:Ticketed
-    free_text: DI line information shown as free text as in Host. 1P
-        only
-    name_number: Host Name Number
-    ticket_record: Ticket Record Number
-    plating_carrier: Allows an agency to specify the Plating Carrier for
-        ticketing
-    exempt_vat: Allows an agency to update if VAT is Exemtped on the
-        fare.
-    net_remit_applied: Indicator to the BSP net remittance scheme
-        applies to ticketed fare.
-    free_ticket: Indicates free ticket.
-    currency_override_code: This modifier allows an agency to specify
-        the currency like L for Local, E for Euro, U for USD, C for CAD
-        (Canadian dollars).
-    key:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    commission
+        Allows an agency to update the commission to a new or different
+        commission rate which will be applied at time of ticketing. The
+        commission Modifier allows the user specify how the commission
+        change is to applied
+    tour_code
+        Allows an agency to modify the tour code information on the ticket
+    ticket_endorsement
+        Allows an agency to add user defined ticketing endorsements the
+        ticket
+    value_modifier
+        Allows an agency to modify value or commission of the ticket. The
+        modifier is generic and depends on the specific GDS and BSP
+        implementation
+    document_select
+    document_options
+    segment_select
+    segment_modifiers
+    supplier_locator
+    destination_purpose_code
+    language_option
+    land_charges
+    print_blank_form_itinerary
+    exclude_ticketing
+    exempt_obfee
+    is_primary_di
+        Indicates if the DI is Primary DI. 1P only
+    document_instruction_number
+        The Document Instruction line number. 1P only
+    reference
+        Identifies if TicketingModifiers contains DI line information. 1P
+        only.
+    status
+        DI line status - ex:Ticketed
+    free_text
+        DI line information shown as free text as in Host. 1P only
+    name_number
+        Host Name Number
+    ticket_record
+        Ticket Record Number
+    plating_carrier
+        Allows an agency to specify the Plating Carrier for ticketing
+    exempt_vat
+        Allows an agency to update if VAT is Exemtped on the fare.
+    net_remit_applied
+        Indicator to the BSP net remittance scheme applies to ticketed fare.
+    free_ticket
+        Indicates free ticket.
+    currency_override_code
+        This modifier allows an agency to specify the currency like L for
+        Local, E for Euro, U for USD, C for CAD (Canadian dollars).
+    key
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -21345,7 +22257,8 @@ class TicketingModifiers:
         """
         Parameters
         ----------
-        non_refundable: Indicates bulk ticket being non-refundable
+        non_refundable
+            Indicates bulk ticket being non-refundable
         """
         non_refundable: None | bool = field(
             default=None,
@@ -21361,101 +22274,121 @@ class TypeBaseAirSegment(Segment):
     """
     Parameters
     ----------
-    sponsored_flt_info:
-    codeshare_info:
-    air_avail_info:
-    flight_details:
-    flight_details_ref:
-    alternate_location_distance_ref:
-    connection:
-    sell_message:
-    rail_coach_details:
-    open_segment: Indicates OpenSegment when True
-    group: The Origin Destination Grouping of this segment.
-    carrier: The carrier that is marketing this segment
-    cabin_class: Specifies Cabin class for a group of class of services.
-        Cabin class is not identified if it is not present.
-    flight_number: The flight number under which the marketing carrier
-        is marketing this flight
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_time: The date and time at which this entity departs. Date
-        and time are represented as Airport Local Time at the place of
-        departure. The correct time zone offset is also included.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. Date and time are represented as Airport Local Time
-        at the place of arrival. The correct time zone offset is also
-        included.
-    flight_time: Time spent (minutes) traveling in flight, including
-        airport taxi time.
-    travel_time: Total time spent (minutes) traveling including flight
-        time and ground time.
-    distance: The distance traveled. Units are specified in the parent
-        response element.
-    provider_code:
-    supplier_code:
-    participant_level: Type of sell agreement between host and link
-        carrier.
-    link_availability: Indicates if carrier has link (carrier specific)
-        display option.
-    polled_availability_option: Indicates if carrier has Inside
-        (polled)Availability option.
-    availability_display_type: The type of availability from which the
-        segment is sold.Possible Values (List): G - General S - Flight
-        Specific L - Carrier Specific/Direct Access M - Manual Sell F -
-        Fare Shop/Optimal Shop Q - Fare Specific Fare Quote unbooked R -
-        Redemption Availability used to complete the sell. Supported
-        Providers: 1G,1V.
-    class_of_service:
-    eticketability: Identifies if this particular segment is
-        E-Ticketable
-    equipment: Identifies the equipment that this segment is operating
-        under.
-    marriage_group: Identifies this segment as being a married segment.
-        It is paired with other segments of the same value.
-    number_of_stops: Identifies the number of stops for each within the
-        segment.
-    seamless: Identifies that this segment was sold via a direct access
-        channel to the marketing carrier.
-    change_of_plane: Indicates the traveler must change planes between
-        flights.
-    guaranteed_payment_carrier: Identifies that this segment has
-        Guaranteed Payment Carrier.
-    host_token_ref: Identifies that this segment has Guaranteed Payment
-        Carrier.
-    provider_reservation_info_ref: Provider reservation reference key.
-    passive_provider_reservation_info_ref: Provider reservation
-        reference key.
-    optional_services_indicator: Indicates true if flight provides
-        optional services.
-    availability_source: Indicates Availability source of AirSegment.
-    apisrequirements_ref: Reference to the APIS Requirements for this
-        AirSegment.
-    black_listed: Indicates blacklisted carriers which are banned from
-        servicing points to, from and within the European Community.
-    operational_status: Refers to the flight operational status for the
-        segment. This attribute will only be returned in the
-        AvailabilitySearchRsp and not used/returned in any other
-        request/responses. If this attribute is not returned back in the
-        response, it means the flight is operational and not past
-        scheduled departure.
-    number_in_party: Number of person traveling in this air segment
-        excluding the number of infants on lap.
-    rail_coach_number: Coach number for which rail seatmap/coachmap is
-        returned.
-    booking_date: Used for rapid reprice. The date the booking was made.
-        Providers: 1G/1V/1P/1S/1A
-    flown_segment: Used for rapid reprice. Tells whether or not the air
-        segment has been flown. Providers: 1G/1V/1P/1S/1A
-    schedule_change: Used for rapid reprice. Tells whether or not the
-        air segment had a schedule change by the carrier. This tells
-        rapid reprice that the change in the air segment was involuntary
-        and because of a schedule change, not because the user is
-        changing the segment. Providers: 1G/1V/1P/1S/1A
-    brand_indicator: Value “B” specifies that the carrier supports Rich
-        Content and Branding.  The Brand Indicator is only returned in
-        the availability search response.  Provider: 1G, 1V, 1P, 1J, ACH
+    sponsored_flt_info
+    codeshare_info
+    air_avail_info
+    flight_details
+    flight_details_ref
+    alternate_location_distance_ref
+    connection
+    sell_message
+    rail_coach_details
+    open_segment
+        Indicates OpenSegment when True
+    group
+        The Origin Destination Grouping of this segment.
+    carrier
+        The carrier that is marketing this segment
+    cabin_class
+        Specifies Cabin class for a group of class of services. Cabin class
+        is not identified if it is not present.
+    flight_number
+        The flight number under which the marketing carrier is marketing
+        this flight
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_time
+        The date and time at which this entity departs. Date and time are
+        represented as Airport Local Time at the place of departure. The
+        correct time zone offset is also included.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        Date and time are represented as Airport Local Time at the place of
+        arrival. The correct time zone offset is also included.
+    flight_time
+        Time spent (minutes) traveling in flight, including airport taxi
+        time.
+    travel_time
+        Total time spent (minutes) traveling including flight time and
+        ground time.
+    distance
+        The distance traveled. Units are specified in the parent response
+        element.
+    provider_code
+    supplier_code
+    participant_level
+        Type of sell agreement between host and link carrier.
+    link_availability
+        Indicates if carrier has link (carrier specific) display option.
+    polled_availability_option
+        Indicates if carrier has Inside (polled)Availability option.
+    availability_display_type
+        The type of availability from which the segment is sold.Possible
+        Values (List): G - General S - Flight Specific L - Carrier
+        Specific/Direct Access M - Manual Sell F - Fare Shop/Optimal Shop Q
+        - Fare Specific Fare Quote unbooked R - Redemption Availability used
+        to complete the sell. Supported Providers: 1G,1V.
+    class_of_service
+    eticketability
+        Identifies if this particular segment is E-Ticketable
+    equipment
+        Identifies the equipment that this segment is operating under.
+    marriage_group
+        Identifies this segment as being a married segment. It is paired
+        with other segments of the same value.
+    number_of_stops
+        Identifies the number of stops for each within the segment.
+    seamless
+        Identifies that this segment was sold via a direct access channel to
+        the marketing carrier.
+    change_of_plane
+        Indicates the traveler must change planes between flights.
+    guaranteed_payment_carrier
+        Identifies that this segment has Guaranteed Payment Carrier.
+    host_token_ref
+        Identifies that this segment has Guaranteed Payment Carrier.
+    provider_reservation_info_ref
+        Provider reservation reference key.
+    passive_provider_reservation_info_ref
+        Provider reservation reference key.
+    optional_services_indicator
+        Indicates true if flight provides optional services.
+    availability_source
+        Indicates Availability source of AirSegment.
+    apisrequirements_ref
+        Reference to the APIS Requirements for this AirSegment.
+    black_listed
+        Indicates blacklisted carriers which are banned from servicing
+        points to, from and within the European Community.
+    operational_status
+        Refers to the flight operational status for the segment. This
+        attribute will only be returned in the AvailabilitySearchRsp and not
+        used/returned in any other request/responses. If this attribute is
+        not returned back in the response, it means the flight is
+        operational and not past scheduled departure.
+    number_in_party
+        Number of person traveling in this air segment excluding the number
+        of infants on lap.
+    rail_coach_number
+        Coach number for which rail seatmap/coachmap is returned.
+    booking_date
+        Used for rapid reprice. The date the booking was made. Providers:
+        1G/1V/1P/1S/1A
+    flown_segment
+        Used for rapid reprice. Tells whether or not the air segment has
+        been flown. Providers: 1G/1V/1P/1S/1A
+    schedule_change
+        Used for rapid reprice. Tells whether or not the air segment had a
+        schedule change by the carrier. This tells rapid reprice that the
+        change in the air segment was involuntary and because of a schedule
+        change, not because the user is changing the segment. Providers:
+        1G/1V/1P/1S/1A
+    brand_indicator
+        Value “B” specifies that the carrier supports Rich Content and
+        Branding.  The Brand Indicator is only returned in the availability
+        search response.  Provider: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         name = "typeBaseAirSegment"
@@ -21847,7 +22780,8 @@ class AirFareDisplayRsp(BaseRsp):
 
     Parameters
     ----------
-    fare_display: Provider: 1G,1V,1P,1J.
+    fare_display
+        Provider: 1G,1V,1P,1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -21869,7 +22803,8 @@ class AirFareRulesRsp(BaseRsp):
 
     Parameters
     ----------
-    fare_rule: Provider: 1G,1V,1P,1J,ACH.
+    fare_rule
+        Provider: 1G,1V,1P,1J,ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -21891,13 +22826,15 @@ class AirPrePayRsp(BaseRsp):
 
     Parameters
     ----------
-    pre_pay_profile_info: Provider: ACH.
-    max_results: Provider: ACH-Max Number of Flight Passes being
-        returned.
-    more_indicator: Provider: ACH-Indicates if there are more flight
-        passes to be offered
-    more_data_start_index: Provider: ACH-Indicates start index of the
-        next flight Passes
+    pre_pay_profile_info
+        Provider: ACH.
+    max_results
+        Provider: ACH-Max Number of Flight Passes being returned.
+    more_indicator
+        Provider: ACH-Indicates if there are more flight passes to be
+        offered
+    more_data_start_index
+        Provider: ACH-Indicates start index of the next flight Passes
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22013,30 +22950,43 @@ class Brand:
 
     Parameters
     ----------
-    title: The additional titles associated to the brand
-    text: Text associated to the brand
-    image_location: Images associated to the brand
-    optional_services:
-    rules: Brand rules
-    service_associations: Service associated with this brand
-    upsell_brand: The unique identifier of the Upsell brand
-    applicable_segment:
-    default_brand_detail: Default brand details.
-    key: Brand Key
-    brand_id: The unique identifier of the brand
-    name: The Title of the brand
-    air_itinerary_details_ref: AirItinerary associated with this brand
-    up_sell_brand_id:
-    brand_found: Indicates whether brand for the fare was found for
-        carrier or not
-    up_sell_brand_found: Indicates whether upsell brand for the fare was
-        found for carrier or not
-    branded_details_available: Indicates if full details of the brand is
-        available
-    carrier:
-    brand_tier: Modifier to price by specific brand tier number.
-    brand_maintained: Indicates whether the brand was maintained from
-        the original ticket.
+    title
+        The additional titles associated to the brand
+    text
+        Text associated to the brand
+    image_location
+        Images associated to the brand
+    optional_services
+    rules
+        Brand rules
+    service_associations
+        Service associated with this brand
+    upsell_brand
+        The unique identifier of the Upsell brand
+    applicable_segment
+    default_brand_detail
+        Default brand details.
+    key
+        Brand Key
+    brand_id
+        The unique identifier of the brand
+    name
+        The Title of the brand
+    air_itinerary_details_ref
+        AirItinerary associated with this brand
+    up_sell_brand_id
+    brand_found
+        Indicates whether brand for the fare was found for carrier or not
+    up_sell_brand_found
+        Indicates whether upsell brand for the fare was found for carrier or
+        not
+    branded_details_available
+        Indicates if full details of the brand is available
+    carrier
+    brand_tier
+        Modifier to price by specific brand tier number.
+    brand_maintained
+        Indicates whether the brand was maintained from the original ticket.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22259,10 +23209,11 @@ class AirMerchandisingDetailsRsp(BaseRsp):
 
     Parameters
     ----------
-    optional_services:
-    brand:
-    unassociated_booking_code_list: Lists classes of service by segment
-        sent in the request which are not associated to a brand.
+    optional_services
+    brand
+    unassociated_booking_code_list
+        Lists classes of service by segment sent in the request which are
+        not associated to a brand.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22309,12 +23260,13 @@ class AirSegmentData:
 
     Parameters
     ----------
-    air_segment_ref:
-    baggage_allowance:
-    brand:
-    cabin_class: Specifies Cabin class for a group of class of services.
-        Cabin class is not identified if it is not present.
-    class_of_service:
+    air_segment_ref
+    baggage_allowance
+    brand
+    cabin_class
+        Specifies Cabin class for a group of class of services. Cabin class
+        is not identified if it is not present.
+    class_of_service
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22473,10 +23425,10 @@ class ExchangeAirSegment:
 
     Parameters
     ----------
-    air_segment:
-    cabin_class:
-    fare_basis_code: The fare basis code to be used for exchange of this
-        segment.
+    air_segment
+    cabin_class
+    fare_basis_code
+        The fare basis code to be used for exchange of this segment.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22514,77 +23466,94 @@ class FareInfo:
 
     Parameters
     ----------
-    fare_ticket_designator:
-    fare_surcharge:
-    account_code:
-    contract_code:
-    endorsement:
-    baggage_allowance:
-    fare_rule_key:
-    fare_rule_failure_info:
-    fare_remark_ref:
-    brand:
-    commission: Specifies the Commission for Agency for a particular
-        Fare component. Apllicable Providers are 1G and 1V.
-    fare_attributes: Returns all fare attributes separated by pipe ‘|’.
-        Attribute information is returned by comma separated values for
-        each attribute. These information include attribute number,
-        chargeable indicator and supplementary info. Attribute numbers:
-        1 - Checked Bag, 2 - Carry On, 3 - Rebooking, 4 - Refund, 5 -
-        Seats, 6 - Meals, 7 - WiFi. Chargeable Indicator: Y -
-        Chargeable, N - Not Chargeable. Supplementary Information that
-        will be returned is : For 1 and 2 - Baggage weights. For 3 –
-        Changeable Info. For 4 – Refundable Info. For 5 - Seat
-        description. For 6 – Meal description. For 7 – WiFi description.
-        Example:
+    fare_ticket_designator
+    fare_surcharge
+    account_code
+    contract_code
+    endorsement
+    baggage_allowance
+    fare_rule_key
+    fare_rule_failure_info
+    fare_remark_ref
+    brand
+    commission
+        Specifies the Commission for Agency for a particular Fare component.
+        Apllicable Providers are 1G and 1V.
+    fare_attributes
+        Returns all fare attributes separated by pipe ‘|’. Attribute
+        information is returned by comma separated values for each
+        attribute. These information include attribute number, chargeable
+        indicator and supplementary info. Attribute numbers: 1 - Checked
+        Bag, 2 - Carry On, 3 - Rebooking, 4 - Refund, 5 - Seats, 6 - Meals,
+        7 - WiFi. Chargeable Indicator: Y - Chargeable, N - Not Chargeable.
+        Supplementary Information that will be returned is : For 1 and 2 -
+        Baggage weights. For 3 – Changeable Info. For 4 – Refundable Info.
+        For 5 - Seat description. For 6 – Meal description. For 7 – WiFi
+        description. Example:
         1,Y,23|1,N,50|2,N,8|3,N,CHANGEABLE|4,Y,REFUNDABLE|5,N,SEATING|5,N,MIDDLE|6,Y,SOFT
         DRINK|6,N,ALCOHOLIC DRINK|6,Y,SNACK|7,X,WIFI
-    change_penalty: The penalty (if any) to change the itinerary
-    cancel_penalty: The penalty (if any) to cancel the fare
-    fare_rules_filter:
-    key:
-    fare_basis: The fare basis code for this fare
-    passenger_type_code: The PTC that is associated with this fare.
-    origin: Returns the airport or city code that defines the origin
-        market for this fare.
-    destination: Returns the airport or city code that defines the
-        destination market for this fare.
-    effective_date: Returns the date on which this fare was quoted
-    travel_date: Returns the departure date of the first segment that
-        uses this fare.
-    departure_date: Returns the departure date of the first segment of
-        the journey.
-    amount:
-    private_fare:
-    negotiated_fare: Identifies the fare as a Negotiated Fare.
-    tour_code:
-    waiver_code:
-    not_valid_before: Fare not valid before this date.
-    not_valid_after: Fare not valid after this date.
-    pseudo_city_code: Provider PseudoCityCode associated with private
-        fare.
-    fare_family: An alpha-numeric string which denotes fare family. Some
-        carriers may return this in lieu of or in addition to the
-        CabinClass.
-    promotional_fare: Boolean to describe whether the Fare is
-        Promotional fare or not.
-    car_code:
-    value_code:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
-    bulk_ticket: Whether the ticket can be issued as bulk for this fare.
-        Providers supported: Worldspan and JAL
-    inclusive_tour: Whether the ticket can be issued as part of included
-        package for this fare. Providers supported: Worldspan and JAL
-    value: Used in rapid reprice
-    supplier_code: Code of the provider returning this fare info
-    tax_amount: Currency code and value for the approximate tax amount
-        for this fare component.
+    change_penalty
+        The penalty (if any) to change the itinerary
+    cancel_penalty
+        The penalty (if any) to cancel the fare
+    fare_rules_filter
+    key
+    fare_basis
+        The fare basis code for this fare
+    passenger_type_code
+        The PTC that is associated with this fare.
+    origin
+        Returns the airport or city code that defines the origin market for
+        this fare.
+    destination
+        Returns the airport or city code that defines the destination market
+        for this fare.
+    effective_date
+        Returns the date on which this fare was quoted
+    travel_date
+        Returns the departure date of the first segment that uses this fare.
+    departure_date
+        Returns the departure date of the first segment of the journey.
+    amount
+    private_fare
+    negotiated_fare
+        Identifies the fare as a Negotiated Fare.
+    tour_code
+    waiver_code
+    not_valid_before
+        Fare not valid before this date.
+    not_valid_after
+        Fare not valid after this date.
+    pseudo_city_code
+        Provider PseudoCityCode associated with private fare.
+    fare_family
+        An alpha-numeric string which denotes fare family. Some carriers may
+        return this in lieu of or in addition to the CabinClass.
+    promotional_fare
+        Boolean to describe whether the Fare is Promotional fare or not.
+    car_code
+    value_code
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
+    bulk_ticket
+        Whether the ticket can be issued as bulk for this fare. Providers
+        supported: Worldspan and JAL
+    inclusive_tour
+        Whether the ticket can be issued as part of included package for
+        this fare. Providers supported: Worldspan and JAL
+    value
+        Used in rapid reprice
+    supplier_code
+        Code of the provider returning this fare info
+    tax_amount
+        Currency code and value for the approximate tax amount for this fare
+        component.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22922,7 +23891,8 @@ class FlightDetailsReq(BaseReq):
 
     Parameters
     ----------
-    air_segment: Provider: 1G,1V,1P,1J.
+    air_segment
+        Provider: 1G,1V,1P,1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22943,8 +23913,9 @@ class FlightDetailsRsp(BaseRsp):
     """
     Parameters
     ----------
-    air_segment: Provider: 1G,1V,1P,1J.
-    co2_emissions:
+    air_segment
+        Provider: 1G,1V,1P,1J.
+    co2_emissions
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -22994,22 +23965,26 @@ class SeatMapReq(BaseReq):
 
     Parameters
     ----------
-    agency_sell_info: Provider: ACH-Required if the user requesting the
-        seat map is not the same agent authenticated in the request.
-    air_segment: Provider: 1G,1V,1P,1J,ACH,MCH.
-    host_token: Provider: ACH-Required if the carrier has multiple
-        adapters.
-    search_traveler: Provider: 1G,1V,ACH,MCH.
-    host_reservation: Provider: ACH,MCH-Required when seat price is
-        requested.
-    merchandising_pricing_modifiers: Used to provide additional pricing
-        options. Provider:ACH.
-    return_seat_pricing: Provider: 1G,1V,1P,1J,ACH-When set to true the
-        price of the seat will be returned if it exists.
-    return_branding_info: A value of true will return the BrandingInfo
-        block in the response if applicable. A value of false will not
-        return the BrandingInfo block in the response. Providers: 1G,
-        1V, 1P, 1J, ACH
+    agency_sell_info
+        Provider: ACH-Required if the user requesting the seat map is not
+        the same agent authenticated in the request.
+    air_segment
+        Provider: 1G,1V,1P,1J,ACH,MCH.
+    host_token
+        Provider: ACH-Required if the carrier has multiple adapters.
+    search_traveler
+        Provider: 1G,1V,ACH,MCH.
+    host_reservation
+        Provider: ACH,MCH-Required when seat price is requested.
+    merchandising_pricing_modifiers
+        Used to provide additional pricing options. Provider:ACH.
+    return_seat_pricing
+        Provider: 1G,1V,1P,1J,ACH-When set to true the price of the seat
+        will be returned if it exists.
+    return_branding_info
+        A value of true will return the BrandingInfo block in the response
+        if applicable. A value of false will not return the BrandingInfo
+        block in the response. Providers: 1G, 1V, 1P, 1J, ACH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -23083,21 +24058,30 @@ class SeatMapRsp(BaseRsp):
     """
     Parameters
     ----------
-    host_token: Provider: ACH,MCH.
-    cabin_class: Provider: 1G,1V,1P,1J,ACH,MCH.
-    air_segment: Provider: ACH,MCH.
-    search_traveler: Provider: ACH,MCH.
-    optional_services: A wrapper for all the information regarding each
-        of the Optional Services. Provider: 1G,1V,1P,1J,ACH.
-    remark: Provider: 1G,1V,1P,1J,ACH,MCH.
-    rows:
-    payment_restriction: Provider: MCH-Information regarding valid
-        payment types, if restrictions apply(supplier specific)
-    seat_information:
-    copyright: Copyright text applicable for some seat content.
-        Providers: 1G, 1V, 1P, 1J,ACH
-    group_seat_price: Provider: 1G,1V-Seat price for the all passengers
-        traveling together only when supplier provides group flat fee.
+    host_token
+        Provider: ACH,MCH.
+    cabin_class
+        Provider: 1G,1V,1P,1J,ACH,MCH.
+    air_segment
+        Provider: ACH,MCH.
+    search_traveler
+        Provider: ACH,MCH.
+    optional_services
+        A wrapper for all the information regarding each of the Optional
+        Services. Provider: 1G,1V,1P,1J,ACH.
+    remark
+        Provider: 1G,1V,1P,1J,ACH,MCH.
+    rows
+    payment_restriction
+        Provider: MCH-Information regarding valid payment types, if
+        restrictions apply(supplier specific)
+    seat_information
+    copyright
+        Copyright text applicable for some seat content. Providers: 1G, 1V,
+        1P, 1J,ACH
+    group_seat_price
+        Provider: 1G,1V-Seat price for the all passengers traveling together
+        only when supplier provides group flat fee.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -23199,16 +24183,18 @@ class TcrrefundBundle:
 
     Parameters
     ----------
-    air_refund_info:
-    waiver_code:
-    air_segment:
-    fee_info:
-    tax_info: Itinerary level taxes
-    host_token:
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
-    refund_type: Specifies whether this bundle was auto or manually
-        generated
-    refund_access_code:
+    air_refund_info
+    waiver_code
+    air_segment
+    fee_info
+    tax_info
+        Itinerary level taxes
+    host_token
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
+    refund_type
+        Specifies whether this bundle was auto or manually generated
+    refund_access_code
     """
     class Meta:
         name = "TCRRefundBundle"
@@ -23331,12 +24317,16 @@ class AirMerchandisingOfferAvailabilityReq(BaseReq):
 
     Parameters
     ----------
-    agency_sell_info: Provider: 1G,1V,1P,1J,ACH.
-    air_solution: Provider: 1G,1V,1P,1J,ACH.
-    host_reservation: Provider: 1G,1V,1P,1J,ACH.
-    offer_availability_modifiers: Provider: 1G,1V,1P,1J,ACH.
-    merchandising_pricing_modifiers: Used to provide additional pricing
-        modifiers. Provider:ACH.
+    agency_sell_info
+        Provider: 1G,1V,1P,1J,ACH.
+    air_solution
+        Provider: 1G,1V,1P,1J,ACH.
+    host_reservation
+        Provider: 1G,1V,1P,1J,ACH.
+    offer_availability_modifiers
+        Provider: 1G,1V,1P,1J,ACH.
+    merchandising_pricing_modifiers
+        Used to provide additional pricing modifiers. Provider:ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -23388,10 +24378,12 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp):
 
     Parameters
     ----------
-    air_solution: Provider: 1G,1V,1P,1J,ACH.
-    remark: Provider: 1G,1V,1P,1J,ACH.
-    optional_services:
-    embargo_list:
+    air_solution
+        Provider: 1G,1V,1P,1J,ACH.
+    remark
+        Provider: 1G,1V,1P,1J,ACH.
+    optional_services
+    embargo_list
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -23437,115 +24429,144 @@ class AirPricingInfo:
 
     Parameters
     ----------
-    fare_info:
-    fare_status:
-    fare_info_ref:
-    booking_info:
-    tax_info:
-    fare_calc:
-    passenger_type:
-    booking_traveler_ref:
-    waiver_code:
-    payment_ref: The reference to the Payment if Air Pricing is charged
-    change_penalty: The penalty (if any) to change the itinerary
-    cancel_penalty: The penalty (if any) to cancel the fare
-    no_show_penalty: The NoShow penalty (if any)
-    fee_info:
-    adjustment:
-    yield_value:
-    air_pricing_modifiers:
-    ticketing_modifiers_ref:
-    air_segment_pricing_modifiers:
-    flight_options_list:
-    baggage_allowances:
-    fare_rules_filter:
-    policy_codes_list: A list of codes that indicate why an item was
-        determined to be ‘out of policy’
-    price_change: Indicates a price change is found in Fare Control
-        Manager
-    action_details:
-    commission: Allows an agency to update the commission to a new or
-        different commission rate which will be applied at time of
-        ticketing. The commission Modifier allows the user specify how
-        the commission change is to applied
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    key:
-    command_key: The command identifier used when this is in response to
-        an AirPricingCommand. Not used in any request processing.
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    provider_code:
-    supplier_code:
-    amount_type: This field displays type of payment amount when it is
-        non-monetary. Presently available/supported value is "Flight
-        Pass Credits".
-    includes_vat: Indicates whether the Base Price includes VAT.
-    exchange_amount: The amount to pay to cover the exchange of the fare
-        (includes penalties).
-    forfeit_amount: The amount forfeited when the fare is exchanged.
-    refundable: Indicates whether the fare is refundable
-    exchangeable: Indicates whether the fare is exchangeable
-    latest_ticketing_time: The latest date/time at which this pricing
-        information is valid
-    pricing_method:
-    checksum: A security value used to guarantee that the pricing data
-        sent in matches the pricing data previously returned
-    eticketability: The E-Ticketability of this AirPricing
-    plating_carrier: The Plating Carrier for this journey
-    provider_reservation_info_ref: Provider reservation reference key.
-    air_pricing_info_group: This attribute is added to support multiple
-        store fare in Host. All AirPricingInfo with same group number
-        will be stored together.
-    total_net_price: The total price of a negotiated fare.
-    ticketed: Indicates if the associated stored fare is ticketed or
-        not.
-    pricing_type: Indicates the Pricing Type used. The possible values
-        are TicketRecord, StoredFare, PricingInstruction.
-    true_last_date_to_ticket: This date indicates the true last
-        date/time to ticket for the fare. This date comes from the filed
-        fare . There is no guarantee the fare will still be available on
-        that date or that the fare amount may change. It is merely the
-        last date to purchase a ticket based on the carriers fare rules
-        at the time the itinerary was quoted and stored
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
-    in_policy: This attribute will be used to indicate if a fare or rate
-        has been determined to be ‘in policy’ based on the associated
-        policy settings.
-    preferred_option: This attribute is used to indicate if the vendors
-        responsible for the fare or rate being returned have been
-        determined to be ‘preferred’ based on the associated policy
+    fare_info
+    fare_status
+    fare_info_ref
+    booking_info
+    tax_info
+    fare_calc
+    passenger_type
+    booking_traveler_ref
+    waiver_code
+    payment_ref
+        The reference to the Payment if Air Pricing is charged
+    change_penalty
+        The penalty (if any) to change the itinerary
+    cancel_penalty
+        The penalty (if any) to cancel the fare
+    no_show_penalty
+        The NoShow penalty (if any)
+    fee_info
+    adjustment
+    yield_value
+    air_pricing_modifiers
+    ticketing_modifiers_ref
+    air_segment_pricing_modifiers
+    flight_options_list
+    baggage_allowances
+    fare_rules_filter
+    policy_codes_list
+        A list of codes that indicate why an item was determined to be ‘out
+        of policy’
+    price_change
+        Indicates a price change is found in Fare Control Manager
+    action_details
+    commission
+        Allows an agency to update the commission to a new or different
+        commission rate which will be applied at time of ticketing. The
+        commission Modifier allows the user specify how the commission
+        change is to applied
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    key
+    command_key
+        The command identifier used when this is in response to an
+        AirPricingCommand. Not used in any request processing.
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    provider_code
+    supplier_code
+    amount_type
+        This field displays type of payment amount when it is non-monetary.
+        Presently available/supported value is "Flight Pass Credits".
+    includes_vat
+        Indicates whether the Base Price includes VAT.
+    exchange_amount
+        The amount to pay to cover the exchange of the fare (includes
+        penalties).
+    forfeit_amount
+        The amount forfeited when the fare is exchanged.
+    refundable
+        Indicates whether the fare is refundable
+    exchangeable
+        Indicates whether the fare is exchangeable
+    latest_ticketing_time
+        The latest date/time at which this pricing information is valid
+    pricing_method
+    checksum
+        A security value used to guarantee that the pricing data sent in
+        matches the pricing data previously returned
+    eticketability
+        The E-Ticketability of this AirPricing
+    plating_carrier
+        The Plating Carrier for this journey
+    provider_reservation_info_ref
+        Provider reservation reference key.
+    air_pricing_info_group
+        This attribute is added to support multiple store fare in Host. All
+        AirPricingInfo with same group number will be stored together.
+    total_net_price
+        The total price of a negotiated fare.
+    ticketed
+        Indicates if the associated stored fare is ticketed or not.
+    pricing_type
+        Indicates the Pricing Type used. The possible values are
+        TicketRecord, StoredFare, PricingInstruction.
+    true_last_date_to_ticket
+        This date indicates the true last date/time to ticket for the fare.
+        This date comes from the filed fare . There is no guarantee the fare
+        will still be available on that date or that the fare amount may
+        change. It is merely the last date to purchase a ticket based on the
+        carriers fare rules at the time the itinerary was quoted and stored
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
+    in_policy
+        This attribute will be used to indicate if a fare or rate has been
+        determined to be ‘in policy’ based on the associated policy
         settings.
-    fare_calculation_ind: Fare calculation that was used to price the
-        itinerary.
-    cat35_indicator: A true value indicates that the fare has a Cat35
-        rule. A false valud indicates that the fare does not have a
-        Cat35 rule
+    preferred_option
+        This attribute is used to indicate if the vendors responsible for
+        the fare or rate being returned have been determined to be
+        ‘preferred’ based on the associated policy settings.
+    fare_calculation_ind
+        Fare calculation that was used to price the itinerary.
+    cat35_indicator
+        A true value indicates that the fare has a Cat35 rule. A false valud
+        indicates that the fare does not have a Cat35 rule
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -24047,8 +25068,9 @@ class AirRefundQuoteRsp(BaseRsp):
     """
     Parameters
     ----------
-    air_refund_bundle:
-    tcrrefund_bundle: Provider: ACH.
+    air_refund_bundle
+    tcrrefund_bundle
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -24078,12 +25100,16 @@ class AirRefundReq(BaseReq):
 
     Parameters
     ----------
-    air_refund_bundle: Provider: ACH.
-    tcrrefund_bundle: Provider: ACH.
-    air_refund_modifiers:
-    commission: Provider: ACH.
-    form_of_payment: Provider: ACH-Form of Payment for any Additional
-        Collection charges for the Refund.
+    air_refund_bundle
+        Provider: ACH.
+    tcrrefund_bundle
+        Provider: ACH.
+    air_refund_modifiers
+    commission
+        Provider: ACH.
+    form_of_payment
+        Provider: ACH-Form of Payment for any Additional Collection charges
+        for the Refund.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -24219,48 +25245,63 @@ class BaseAirPriceReq(BaseCoreReq):
     """
     Parameters
     ----------
-    air_itinerary: Provider: 1G,1V,1P,1J,ACH.
-    air_pricing_modifiers: Provider: 1G,1V,1P,1J,ACH.
-    search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger
-        increased in to 18 to support 9 INF passenger along with 9
-        ADT,CHD,INS                                      passenger
-    air_pricing_command: Provider: 1G,1V,1P,1J,ACH.
-    air_reservation_locator_code: Provider: ACH,1P,1J
-    optional_services: Provider: ACH.
-    form_of_payment: Provider: 1G,1V,1P,1J,ACH.
-    pcc:
-    ssr: Special Service Request for GST tax details. Provider: ACH
-    check_obfees: A flag to return fees for ticketing and for various
-        forms of payment. The default is “TicketingOnly” and will return
-        only ticketing fees.  The value “All” will return ticketing fees
-        and the applicable form of payment fees for the form of payment
-        information specified in the request.  “FOPOnly” will return the
-        applicable form of payment fees for the form of payment
-        information specified in the request. Form of payment fees are
-        never included in the total unless specific card details are in
-        the request.Provider notes:ACH - CheckOBFees is valid only for
-        LowFareSearch.  The valid values are “All”, “TicketingOnly” and
-        “None” and the default value is “None”. 1P/1J -The valid values
-        are “All”, “None” and “TicketingOnly”.1G – All four values are
-        supported.1V/RCH – CheckOBFees are not supported.”
-    fare_rule_type: Provider: 1G,1V,1P,1J,ACH.
-    supplier_code: Specifies the supplier/ vendor for vendor specific
-        price requests
-    ticket_date: YYYY-MM-DD Using a date in the past is a request for an
-        historical fare
-    check_flight_details: To Include FlightDetails in Response set to
-        “true” the Default value is “false”.
-    return_mm: If this attribute is set to “true”, Fare Control Manager
-        processing will be invoked.
-    nscc: 1 to 3 numeric that defines a Search Control Console
-        filter.This attribute is used to override that filter.
-    split_pricing: Indicates whether the AirSegments should be priced
-        together or separately. Set ‘true’ for split pricing. Set
-        ‘false’ for pricing together.SplitPricing is not supported with
-        post book re-pricing.
-    ignore_availability: Provides a method of pricing a book itinerary
-        with the lowest fare regardless of the availability for the
-        class of service. Only for providers 1P/1J.
+    air_itinerary
+        Provider: 1G,1V,1P,1J,ACH.
+    air_pricing_modifiers
+        Provider: 1G,1V,1P,1J,ACH.
+    search_passenger
+        Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18
+        to support 9 INF passenger along with 9 ADT,CHD,INS
+        passenger
+    air_pricing_command
+        Provider: 1G,1V,1P,1J,ACH.
+    air_reservation_locator_code
+        Provider: ACH,1P,1J
+    optional_services
+        Provider: ACH.
+    form_of_payment
+        Provider: 1G,1V,1P,1J,ACH.
+    pcc
+    ssr
+        Special Service Request for GST tax details. Provider: ACH
+    check_obfees
+        A flag to return fees for ticketing and for various forms of
+        payment. The default is “TicketingOnly” and will return only
+        ticketing fees.  The value “All” will return ticketing fees and the
+        applicable form of payment fees for the form of payment information
+        specified in the request.  “FOPOnly” will return the applicable form
+        of payment fees for the form of payment information specified in the
+        request. Form of payment fees are never included in the total unless
+        specific card details are in the request.Provider notes:ACH -
+        CheckOBFees is valid only for LowFareSearch.  The valid values are
+        “All”, “TicketingOnly” and “None” and the default value is “None”.
+        1P/1J -The valid values are “All”, “None” and “TicketingOnly”.1G –
+        All four values are supported.1V/RCH – CheckOBFees are not
+        supported.”
+    fare_rule_type
+        Provider: 1G,1V,1P,1J,ACH.
+    supplier_code
+        Specifies the supplier/ vendor for vendor specific price requests
+    ticket_date
+        YYYY-MM-DD Using a date in the past is a request for an historical
+        fare
+    check_flight_details
+        To Include FlightDetails in Response set to “true” the Default value
+        is “false”.
+    return_mm
+        If this attribute is set to “true”, Fare Control Manager processing
+        will be invoked.
+    nscc
+        1 to 3 numeric that defines a Search Control Console filter.This
+        attribute is used to override that filter.
+    split_pricing
+        Indicates whether the AirSegments should be priced together or
+        separately. Set ‘true’ for split pricing. Set ‘false’ for pricing
+        together.SplitPricing is not supported with post book re-pricing.
+    ignore_availability
+        Provides a method of pricing a book itinerary with the lowest fare
+        regardless of the availability for the class of service. Only for
+        providers 1P/1J.
     """
     air_itinerary: None | AirItinerary = field(
         default=None,
@@ -24506,36 +25547,46 @@ class AirPricePoint:
 
     Parameters
     ----------
-    air_pricing_info:
-    air_pricing_result_message:
-    fee_info: Supported by ACH only
-    fare_note:
-    tax_info: Itinerary level taxes
-    key:
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    complete_itinerary: This attribute is used to return whether
-        complete Itinerary is present in the AirPricePoint structure or
-        not. If set to true means AirPricePoint contains the result for
-        full requested itinerary.
+    air_pricing_info
+    air_pricing_result_message
+    fee_info
+        Supported by ACH only
+    fare_note
+    tax_info
+        Itinerary level taxes
+    key
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    complete_itinerary
+        This attribute is used to return whether complete Itinerary is
+        present in the AirPricePoint structure or not. If set to true means
+        AirPricePoint contains the result for full requested itinerary.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -24703,54 +25754,65 @@ class AirPricingSolution:
 
     Parameters
     ----------
-    air_segment:
-    air_segment_ref:
-    journey:
-    leg_ref:
-    air_pricing_info:
-    fare_note:
-    fare_note_ref:
-    connection:
-    meta_data:
-    air_pricing_result_message:
-    fee_info:
-    tax_info: Itinerary level taxes
-    air_itinerary_solution_ref:
-    host_token:
-    optional_services:
-    available_ssr:
-    pricing_details:
-    key:
-    complete_itinerary: This attribute is used to return whether
-        complete Itinerary is present in the AirPricingSolution
-        structure or not. If set to true means AirPricingSolution
-        contains the result for full requested itinerary.
-    quote_date: This date will be equal to the date of the transaction
-        unless the request included a modified ticket date.
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    itinerary: For an exchange request this tells if the itinerary is
-        the original one or new one. A value of Original will only apply
-        to 1G/1V/1P/1S/1A. A value of New will apply to
-        1G/1V/1P/1S/1A/ACH.
+    air_segment
+    air_segment_ref
+    journey
+    leg_ref
+    air_pricing_info
+    fare_note
+    fare_note_ref
+    connection
+    meta_data
+    air_pricing_result_message
+    fee_info
+    tax_info
+        Itinerary level taxes
+    air_itinerary_solution_ref
+    host_token
+    optional_services
+    available_ssr
+    pricing_details
+    key
+    complete_itinerary
+        This attribute is used to return whether complete Itinerary is
+        present in the AirPricingSolution structure or not. If set to true
+        means AirPricingSolution contains the result for full requested
+        itinerary.
+    quote_date
+        This date will be equal to the date of the transaction unless the
+        request included a modified ticket date.
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    itinerary
+        For an exchange request this tells if the itinerary is the original
+        one or new one. A value of Original will only apply to
+        1G/1V/1P/1S/1A. A value of New will apply to 1G/1V/1P/1S/1A/ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -24998,19 +26060,22 @@ class AvailabilitySearchReq(AirSearchReq):
 
     Parameters
     ----------
-    search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger
-        increased in to 18 to support 9 INF passenger along with 9
-        ADT,CHD,INS
+    search_passenger
+        Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18
+        to support 9 INF passenger along with 9 ADT,CHD,INS
         passenger
-    point_of_sale: Provider: ACH.
-    return_brand_indicator: When set to “true”, the Brand Indicator can
-        be returned in the availability search response. Provider: 1G,
-        1V, 1P, 1J, ACH
-    channel_id: A Channel ID is 4 alpha-numeric characters used to
-        activate the Search Control Console filter for a specific group
-        of travelers being served by the agency credential.
-    nscc: Allows the agency to bypass/override the Search Control
-        Console rule.
+    point_of_sale
+        Provider: ACH.
+    return_brand_indicator
+        When set to “true”, the Brand Indicator can be returned in the
+        availability search response. Provider: 1G, 1V, 1P, 1J, ACH
+    channel_id
+        A Channel ID is 4 alpha-numeric characters used to activate the
+        Search Control Console filter for a specific group of travelers
+        being served by the agency credential.
+    nscc
+        Allows the agency to bypass/override the Search Control Console
+        rule.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -25138,76 +26203,89 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
 
     Parameters
     ----------
-    search_passenger: Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger
-        increased in to 18 to support 9 INF passenger along with 9
-        ADT,CHD,INS                                      passenger
-    air_pricing_modifiers: Provider: 1G,1V,1P,1J,ACH.
-    enumeration: Provider: 1G,1V,1P,1J,ACH.
-    air_exchange_modifiers: Provider: ACH.
-    flex_explore_modifiers: This is the container for a set of modifiers
-        which allow the user to perform a special kind of low fare
-        search, depicted as flex explore, based on different parameters
-        like Area, Zone, Country, State, Specific locations, Distance
-        around the actual destination of the itinerary. Applicable for
-        providers 1G,1V,1P.
-    pcc:
-    fare_rules_filter_category:
-    form_of_payment: Provider: 1P,1J
-    enable_point_to_point_search: Provider: 1G,1V,1P,1J,ACH-Indicates
-        that low cost providers should be queried for top connection
-        options and the results returned with the search.
-    enable_point_to_point_alternates: Provider: 1G,1V,1P,1J,ACH-
-        Indicates that suggestions for alternate connection cities for
-        low cost providers should be returned with the search.
-    max_number_of_expert_solutions: Provider: 1G,1V,1P,1J,ACH-Indicates
-        the Maximum Number of Expert Solutions to be returned from the
-        Knowledge Base for the provided search criteria
-    solution_result: Provider: 1G,1V,1P,1J,ACH-Indicates whether the
-        response will contain Solution result (AirPricingSolution) or
-        Non Solution Result (AirPricingPoints). The default value is
-        false. This attribute cannot be combined with
-        EnablePointToPointSearch, EnablePointToPointAlternates and
-        MaxNumberOfExpertSolutions.
-    prefer_complete_itinerary: Provider: ACH-This attribute is only
-        supported for ACH .It works in conjunction with the
-        @SolutionResult flag
-    meta_option_identifier: Invoke Meta Search.  Valid values are 00 to
-        99, or D for the default meta search configuration.  When Meta
-        Search not requested, normal LowFareSearch applies.  Supported
-        Providers;  1g/1v/1p/1j
-    return_upsell_fare: When set to “true”, Upsell information will be
-        returned in the shop response. Provider supported : 1G, 1V, 1P,
-        1J
-    include_fare_info_messages: Set to True to return
-        FareInfoMessageList. Providers supported: 1G/1V/1P/1J
-    return_branded_fares: When ReturnBrandedFares is set to “false”,
-        Rich Content and Branding will not be returned in the shop
-        response.  When ReturnBrandedFares it is set to “true” or is not
-        sent, Rich Content and Branding will be returned in the shop
-        response.  Provider: 1P/1J/ACH.
-    multi_gdssearch: A "true" value indicates MultiGDSSearch. Specific
-        provisioning is required.
-    return_mm: If this attribute is set to “true”, Fare Control Manager
-        processing will be invoked.
-    check_obfees: A flag to return fees for ticketing and for various
-        forms of payment. The default is “TicketingOnly” and will return
-        only ticketing fees.  The value “All” will return ticketing fees
-        and the applicable form of payment fees for the form of payment
-        information specified in the request.  “FOPOnly” will return the
-        applicable form of payment fees for the form of payment
-        information specified in the request. Form of payment fees are
-        never included in the total unless specific card details are in
-        the request.Provider notes:ACH - CheckOBFees is valid only for
-        LowFareSearch.  The valid values are “All”, “TicketingOnly” and
-        “None” and the default value is “None”. 1P/1J -The valid values
-        are “All”, “None” and “TicketingOnly”.1G – All four values are
-        supported.1V/RCH – CheckOBFees are not supported.”
-    nscc: 1 to 3 numeric that defines a Search Control Console
-        filter.This attribute is used to override that filter.
-    fare_info_rules: Returns ChangePenalty and CancelPenalty values at
-        the FareInfo level. If FareRulesFilterCategory is sent
-        FareRulesFilter will be returned at FareInfo level.  Provider:
-        1G/1V.
+    search_passenger
+        Provider: 1G,1V,1P,1J,ACH-Maxinumber of passenger increased in to 18
+        to support 9 INF passenger along with 9 ADT,CHD,INS
+        passenger
+    air_pricing_modifiers
+        Provider: 1G,1V,1P,1J,ACH.
+    enumeration
+        Provider: 1G,1V,1P,1J,ACH.
+    air_exchange_modifiers
+        Provider: ACH.
+    flex_explore_modifiers
+        This is the container for a set of modifiers which allow the user to
+        perform a special kind of low fare search, depicted as flex explore,
+        based on different parameters like Area, Zone, Country, State,
+        Specific locations, Distance around the actual destination of the
+        itinerary. Applicable for providers 1G,1V,1P.
+    pcc
+    fare_rules_filter_category
+    form_of_payment
+        Provider: 1P,1J
+    enable_point_to_point_search
+        Provider: 1G,1V,1P,1J,ACH-Indicates that low cost providers should
+        be queried for top connection options and the results returned with
+        the search.
+    enable_point_to_point_alternates
+        Provider: 1G,1V,1P,1J,ACH-Indicates that suggestions for alternate
+        connection cities for low cost providers should be returned with the
+        search.
+    max_number_of_expert_solutions
+        Provider: 1G,1V,1P,1J,ACH-Indicates the Maximum Number of Expert
+        Solutions to be returned from the Knowledge Base for the provided
+        search criteria
+    solution_result
+        Provider: 1G,1V,1P,1J,ACH-Indicates whether the response will
+        contain Solution result (AirPricingSolution) or Non Solution Result
+        (AirPricingPoints). The default value is false. This attribute
+        cannot be combined with EnablePointToPointSearch,
+        EnablePointToPointAlternates and MaxNumberOfExpertSolutions.
+    prefer_complete_itinerary
+        Provider: ACH-This attribute is only supported for ACH .It works in
+        conjunction with the @SolutionResult flag
+    meta_option_identifier
+        Invoke Meta Search.  Valid values are 00 to 99, or D for the default
+        meta search configuration.  When Meta Search not requested, normal
+        LowFareSearch applies.  Supported Providers;  1g/1v/1p/1j
+    return_upsell_fare
+        When set to “true”, Upsell information will be returned in the shop
+        response. Provider supported : 1G, 1V, 1P, 1J
+    include_fare_info_messages
+        Set to True to return FareInfoMessageList. Providers supported:
+        1G/1V/1P/1J
+    return_branded_fares
+        When ReturnBrandedFares is set to “false”, Rich Content and Branding
+        will not be returned in the shop response.  When ReturnBrandedFares
+        it is set to “true” or is not sent, Rich Content and Branding will
+        be returned in the shop response.  Provider: 1P/1J/ACH.
+    multi_gdssearch
+        A "true" value indicates MultiGDSSearch. Specific provisioning is
+        required.
+    return_mm
+        If this attribute is set to “true”, Fare Control Manager processing
+        will be invoked.
+    check_obfees
+        A flag to return fees for ticketing and for various forms of
+        payment. The default is “TicketingOnly” and will return only
+        ticketing fees.  The value “All” will return ticketing fees and the
+        applicable form of payment fees for the form of payment information
+        specified in the request.  “FOPOnly” will return the applicable form
+        of payment fees for the form of payment information specified in the
+        request. Form of payment fees are never included in the total unless
+        specific card details are in the request.Provider notes:ACH -
+        CheckOBFees is valid only for LowFareSearch.  The valid values are
+        “All”, “TicketingOnly” and “None” and the default value is “None”.
+        1P/1J -The valid values are “All”, “None” and “TicketingOnly”.1G –
+        All four values are supported.1V/RCH – CheckOBFees are not
+        supported.”
+    nscc
+        1 to 3 numeric that defines a Search Control Console filter.This
+        attribute is used to override that filter.
+    fare_info_rules
+        Returns ChangePenalty and CancelPenalty values at the FareInfo
+        level. If FareRulesFilterCategory is sent FareRulesFilter will be
+        returned at FareInfo level.  Provider: 1G/1V.
     """
     search_passenger: list[SearchPassenger] = field(
         default_factory=list,
@@ -25387,65 +26465,81 @@ class Etr:
 
     Parameters
     ----------
-    air_reservation_locator_code:
-    agency_info:
-    booking_traveler:
-    form_of_payment:
-    payment:
-    credit_card_auth: This is a container to display detail information
-        of credit card auth. Providers supported: Worldspan and JAL.
-    supplier_locator:
-    fare_calc:
-    ticket:
-    commission:
-    air_pricing_info:
-    audit_data:
-    restriction:
-    waiver_code:
-    baggage_allowances: Baggage Allowance Info after Ticketing
-    key:
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    refundable:
-    exchangeable:
-    tour_code:
-    issued_date: Ticket issue date.
-    bulk_ticket: Whether the ticket was issued as bulk.
-    provider_code: Contains the Provider Code of the provider that
-        houses this ETR.
-    provider_locator_code: Contains the Locator Code of the Provider
-        Reservation that houses this ETR.
-    iatanumber: Contains the IATA Number of the agent initiating the
-        request.
-    pseudo_city_code: Contain Pseudo City, city/office number, branch
-        ID, etc.
-    country_code: Contains Ticketed PCC’s Country code.
-    plating_carrier: Contains the Plating Carrier of this ETR.
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    air_reservation_locator_code
+    agency_info
+    booking_traveler
+    form_of_payment
+    payment
+    credit_card_auth
+        This is a container to display detail information of credit card
+        auth. Providers supported: Worldspan and JAL.
+    supplier_locator
+    fare_calc
+    ticket
+    commission
+    air_pricing_info
+    audit_data
+    restriction
+    waiver_code
+    baggage_allowances
+        Baggage Allowance Info after Ticketing
+    key
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    refundable
+    exchangeable
+    tour_code
+    issued_date
+        Ticket issue date.
+    bulk_ticket
+        Whether the ticket was issued as bulk.
+    provider_code
+        Contains the Provider Code of the provider that houses this ETR.
+    provider_locator_code
+        Contains the Locator Code of the Provider Reservation that houses
+        this ETR.
+    iatanumber
+        Contains the IATA Number of the agent initiating the request.
+    pseudo_city_code
+        Contain Pseudo City, city/office number, branch ID, etc.
+    country_code
+        Contains Ticketed PCC’s Country code.
+    plating_carrier
+        Contains the Plating Carrier of this ETR.
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "ETR"
@@ -25772,40 +26866,51 @@ class Tcr:
 
     Parameters
     ----------
-    form_of_payment:
-    payment:
-    booking_traveler:
-    passenger_ticket_number:
-    air_pricing_info:
-    agency_info:
-    air_reservation_locator_code:
-    supplier_locator:
-    refund_remark:
-    tcrnumber: The identifying number for a Ticketless Air Reservation.
-    status: The current status of this TCR. Some status values are not
+    form_of_payment
+    payment
+    booking_traveler
+    passenger_ticket_number
+    air_pricing_info
+    agency_info
+    air_reservation_locator_code
+    supplier_locator
+    refund_remark
+    tcrnumber
+        The identifying number for a Ticketless Air Reservation.
+    status
+        The current status of this TCR. Some status values are not
         applicable by some Airlines.
-    modified_date: The date at which the status was changed on this TCR
-        due to an action event (itemized from the booleans below).
-    confirmed_date: The date at which this TCR was confirmed (not
-        created). This mean the payment was approved and processed and
-        travel for this TCR is confirmed.
-    base_price: The base price of this TCR as a whole as it was when it
-        was first booked.
-    taxes: The taxes of this TCR as a whole as it was when it was first
+    modified_date
+        The date at which the status was changed on this TCR due to an
+        action event (itemized from the booleans below).
+    confirmed_date
+        The date at which this TCR was confirmed (not created). This mean
+        the payment was approved and processed and travel for this TCR is
+        confirmed.
+    base_price
+        The base price of this TCR as a whole as it was when it was first
         booked.
-    fees: The fees of this TCR as a whole as it was when it was first
-        booked.
-    refundable: Is it possible to perform a Refund for this TCR.
-    exchangeable: Is it possible to perform an Exchange for this TCR.
-    voidable: Is it possible to perform a Void on this TCR.
-    modifiable: Is it possible to modify this TCR (opposed to
-        Refund/Exchange/Void).
-    provider_code:
-    provider_locator_code:
-    refund_access_code:
-    refund_amount: Total Amount refunded to the customer.
-    refund_fee: Charges incurred for processing refund.
-    forfeit_amount: Amount forfeited as a result of refund.
+    taxes
+        The taxes of this TCR as a whole as it was when it was first booked.
+    fees
+        The fees of this TCR as a whole as it was when it was first booked.
+    refundable
+        Is it possible to perform a Refund for this TCR.
+    exchangeable
+        Is it possible to perform an Exchange for this TCR.
+    voidable
+        Is it possible to perform a Void on this TCR.
+    modifiable
+        Is it possible to modify this TCR (opposed to Refund/Exchange/Void).
+    provider_code
+    provider_locator_code
+    refund_access_code
+    refund_amount
+        Total Amount refunded to the customer.
+    refund_fee
+        Charges incurred for processing refund.
+    forfeit_amount
+        Amount forfeited as a result of refund.
     """
     class Meta:
         name = "TCR"
@@ -26036,27 +27141,29 @@ class TypeBaseAirReservation(BaseReservation):
 
     Parameters
     ----------
-    optional_services:
-    supplier_locator:
-    third_party_information:
-    document_info:
-    booking_traveler_ref:
-    provider_reservation_info_ref:
-    air_segment:
-    svc_segment: Service segment added to collect additional fee. 1P
-        only
-    air_pricing_info:
-    payment:
-    credit_card_auth:
-    fare_note:
-    fee_info:
-    tax_info: Itinerary level taxes
-    ticketing_modifiers:
-    associated_remark:
-    pocket_itinerary_remark:
-    air_exchange_bundle_total:
-    air_exchange_bundle: Bundle exchange, pricing, and penalty
-        information. Providers ACH/1G/1V/1P
+    optional_services
+    supplier_locator
+    third_party_information
+    document_info
+    booking_traveler_ref
+    provider_reservation_info_ref
+    air_segment
+    svc_segment
+        Service segment added to collect additional fee. 1P only
+    air_pricing_info
+    payment
+    credit_card_auth
+    fare_note
+    fee_info
+    tax_info
+        Itinerary level taxes
+    ticketing_modifiers
+    associated_remark
+    pocket_itinerary_remark
+    air_exchange_bundle_total
+    air_exchange_bundle
+        Bundle exchange, pricing, and penalty information. Providers
+        ACH/1G/1V/1P
     """
     class Meta:
         name = "typeBaseAirReservation"
@@ -26267,16 +27374,21 @@ class AirExchangeQuoteRsp(BaseRsp):
     """
     Parameters
     ----------
-    ticket_number:
-    air_pricing_solution: Provider: 1G/1V/1P/1S/1A.
-    air_exchange_bundle_total:
-    air_exchange_bundle: Bundle exchange, pricing, and penalty
-        information. Providers ACH/1G/1V/1P
-    host_token: Encrypted data from the host. Required to send the
-        HostToken from the AirExchangeQuoteRsp in the AirExchangeReq.
-        Providers ACH/1G/1V/1P.
-    optional_services: Provider: ACH.
-    fare_rule: Provider: ACH.
+    ticket_number
+    air_pricing_solution
+        Provider: 1G/1V/1P/1S/1A.
+    air_exchange_bundle_total
+    air_exchange_bundle
+        Bundle exchange, pricing, and penalty information. Providers
+        ACH/1G/1V/1P
+    host_token
+        Encrypted data from the host. Required to send the HostToken from
+        the AirExchangeQuoteRsp in the AirExchangeReq. Providers
+        ACH/1G/1V/1P.
+    optional_services
+        Provider: ACH.
+    fare_rule
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26349,30 +27461,40 @@ class AirExchangeReq(BaseReq):
 
     Parameters
     ----------
-    air_reservation_locator_code: Identifies the PNR locator code.
-        Providers ACH/1G/1V/1P
-    ticket_number:
-    specific_seat_assignment: Identifies the standard seat. Providers
+    air_reservation_locator_code
+        Identifies the PNR locator code. Providers ACH/1G/1V/1P
+    ticket_number
+    specific_seat_assignment
+        Identifies the standard seat. Providers ACH/1G/1V/1P
+    air_pricing_solution
+        Providers ACH/1G/1V/1P.
+    air_exchange_modifiers
+        Provider: ACH.
+    air_exchange_bundle_total
+        Provider: 1G/1V/1P/1S/1A.
+    air_exchange_bundle
+        Bundle exchange, pricing, and penalty information. Providers
+        ACH/1G/1V/1P.
+    host_token
+        Encrypted data from the host. Required to send the HostToken from
+        the AirExchangeQuoteRsp in the AirExchangeReq. Providers
         ACH/1G/1V/1P
-    air_pricing_solution: Providers ACH/1G/1V/1P.
-    air_exchange_modifiers: Provider: ACH.
-    air_exchange_bundle_total: Provider: 1G/1V/1P/1S/1A.
-    air_exchange_bundle: Bundle exchange, pricing, and penalty
-        information. Providers ACH/1G/1V/1P.
-    host_token: Encrypted data from the host. Required to send the
-        HostToken from the AirExchangeQuoteRsp in the AirExchangeReq.
-        Providers ACH/1G/1V/1P
-    optional_services: Provider: ACH.
-    form_of_payment: Form of Payment for any additional collection
-        charges for the Exchange. For ACH, most carriers will only allow
-        refund amounts to the original form of payment. Providers
-        ACH/1G/1V/1P
-    form_of_payment_ref: Provider: ACH-Universal Record reference to
-        Form of Payment for any Additional Collection charges or Refund
-        due for the itinerary exchange
-    ssrinfo: Providers ACH, 1G, 1V, 1P.
-    add_svc: 1P - Add SVC segments to collect additional fee
-    return_reservation: Provider: ACH.
+    optional_services
+        Provider: ACH.
+    form_of_payment
+        Form of Payment for any additional collection charges for the
+        Exchange. For ACH, most carriers will only allow refund amounts to
+        the original form of payment. Providers ACH/1G/1V/1P
+    form_of_payment_ref
+        Provider: ACH-Universal Record reference to Form of Payment for any
+        Additional Collection charges or Refund due for the itinerary
+        exchange
+    ssrinfo
+        Providers ACH, 1G, 1V, 1P.
+    add_svc
+        1P - Add SVC segments to collect additional fee
+    return_reservation
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26502,9 +27624,10 @@ class AirPricePointList:
 
     Parameters
     ----------
-    air_price_point: The container which holds the Non Solutioned
-        result. Different options for each search leg requested will be
-        returned and one option for each search leg can be selected.
+    air_price_point
+        The container which holds the Non Solutioned result. Different
+        options for each search leg requested will be returned and one
+        option for each search leg can be selected.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26527,11 +27650,12 @@ class AirPriceResult:
 
     Parameters
     ----------
-    air_pricing_solution:
-    fare_rule:
-    air_price_error:
-    command_key: The command identifier used when this is in response to
-        an AirPricingCommand. Not used in any request processing.
+    air_pricing_solution
+    fare_rule
+    air_price_error
+    command_key
+        The command identifier used when this is in response to an
+        AirPricingCommand. Not used in any request processing.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26574,9 +27698,12 @@ class AirRefundRsp(BaseRsp):
     """
     Parameters
     ----------
-    etr: Provider: ACH.
-    tcr: Provider: ACH.
-    refund_failure_info: Provider: ACH.
+    etr
+        Provider: ACH.
+    tcr
+        Provider: ACH.
+    refund_failure_info
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26685,14 +27812,20 @@ class AirRetrieveDocumentRsp(BaseRsp):
     """
     Parameters
     ----------
-    etr: Provider: 1G,1V,1P,1J.
-    mco: Provider: 1G,1V,1P,1J.
-    tcr: Provider: 1G,1V,1P,1J.
-    document_failure_info: Provider: 1G,1V,1P,1J-Will be optionally
-        returned if there are duplicate ticket numbers.
-    service_fee_info: Provider: 1G,1V
-    universal_record_locator_code: Provider: 1G,1V,1P,1J-Represents a
-        valid Universal Record locator code.
+    etr
+        Provider: 1G,1V,1P,1J.
+    mco
+        Provider: 1G,1V,1P,1J.
+    tcr
+        Provider: 1G,1V,1P,1J.
+    document_failure_info
+        Provider: 1G,1V,1P,1J-Will be optionally returned if there are
+        duplicate ticket numbers.
+    service_fee_info
+        Provider: 1G,1V
+    universal_record_locator_code
+        Provider: 1G,1V,1P,1J-Represents a valid Universal Record locator
+        code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26811,8 +27944,10 @@ class AirVoidDocumentRsp(BaseRsp):
 
     Parameters
     ----------
-    etr: Provider: 1G,1V.
-    void_result_info: Provider: 1G,1V.
+    etr
+        Provider: 1G,1V.
+    void_result_info
+        Provider: 1G,1V.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -26847,13 +27982,14 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq):
     """
     Parameters
     ----------
-    ticket_number:
-    provider_reservation_info: Provider: 1P - Represents a valid
-        Provider Reservation/PNR whose itinerary is to be exchanged
-    air_pricing_solution:
-    repricing_modifiers:
-    original_itinerary_details:
-    override_pcc:
+    ticket_number
+    provider_reservation_info
+        Provider: 1P - Represents a valid Provider Reservation/PNR whose
+        itinerary is to be exchanged
+    air_pricing_solution
+    repricing_modifiers
+    original_itinerary_details
+    override_pcc
     """
     ticket_number: list[str] = field(
         default_factory=list,
@@ -26936,20 +28072,25 @@ class BaseAirExchangeQuoteReq(BaseCoreReq):
     """
     Parameters
     ----------
-    ticket_number:
-    provider_reservation_info: Provider: 1G/1V/1P/ACH - Represents a
-        valid Provider Reservation/PNR whose itinerary is to be
-        exchanged
-    air_pricing_solution:
-    air_exchange_modifiers: Provider: ACH.
-    host_token: Provider: ACH.
-    optional_services: Provider: ACH.
-    form_of_payment: Provider: ACH-This would allow a user to see the
-        fees if they are changing from one Form Of Payment to other .
-    repricing_modifiers:
-    original_itinerary_details:
-    pcc:
-    fare_rule_type: Provider: ACH.
+    ticket_number
+    provider_reservation_info
+        Provider: 1G/1V/1P/ACH - Represents a valid Provider Reservation/PNR
+        whose itinerary is to be exchanged
+    air_pricing_solution
+    air_exchange_modifiers
+        Provider: ACH.
+    host_token
+        Provider: ACH.
+    optional_services
+        Provider: ACH.
+    form_of_payment
+        Provider: ACH-This would allow a user to see the fees if they are
+        changing from one Form Of Payment to other .
+    repricing_modifiers
+    original_itinerary_details
+    pcc
+    fare_rule_type
+        Provider: ACH.
     """
     ticket_number: list[str] = field(
         default_factory=list,
@@ -27075,7 +28216,8 @@ class LowFareSearchAsynchReq(BaseLowFareSearchReq):
 
     Parameters
     ----------
-    air_search_asynch_modifiers: Provider: 1G,1V,1P,1J,ACH.
+    air_search_asynch_modifiers
+        Provider: 1G,1V,1P,1J,ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27096,9 +28238,10 @@ class LowFareSearchReq(BaseLowFareSearchReq):
 
     Parameters
     ----------
-    policy_reference: This attribute will be used to pass in a value on
-        the request which would be used to link to a ‘Policy Group’ in a
-        policy engine external to UAPI.
+    policy_reference
+        This attribute will be used to pass in a value on the request which
+        would be used to link to a ‘Policy Group’ in a policy engine
+        external to UAPI.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27174,8 +28317,8 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
 
     Parameters
     ----------
-    type_value: Type choices are "Detail" or "Summary"  Default will be
-        Summary
+    type_value
+        Type choices are "Detail" or "Summary"  Default will be Summary
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27203,10 +28346,13 @@ class AirExchangeRsp(BaseRsp):
     """
     Parameters
     ----------
-    ticket_number:
-    booking_traveler: Provider: ACH.
-    air_reservation: Provider: ACH.
-    exchange_failure_info: Provider: ACH.
+    ticket_number
+    booking_traveler
+        Provider: ACH.
+    air_reservation
+        Provider: ACH.
+    exchange_failure_info
+        Provider: ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27255,10 +28401,13 @@ class AirExchangeTicketingRsp(BaseRsp):
 
     Parameters
     ----------
-    air_solution_changed_info:
-    etr: Provider 1G, 1V, 1P.
-    ticket_failure_info: Provider 1G, 1V, 1P.
-    detailed_billing_information: Providers 1G, 1V, 1P.
+    air_solution_changed_info
+    etr
+        Provider 1G, 1V, 1P.
+    ticket_failure_info
+        Provider 1G, 1V, 1P.
+    detailed_billing_information
+        Providers 1G, 1V, 1P.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27422,10 +28571,13 @@ class AirTicketingRsp(BaseRsp):
 
     Parameters
     ----------
-    air_solution_changed_info:
-    etr: Provider: 1G,1V,1P,1J.
-    ticket_failure_info: Provider: 1G,1V,1P,1J.
-    detailed_billing_information: Provider: 1G,1V,1P,1J.
+    air_solution_changed_info
+    etr
+        Provider: 1G,1V,1P,1J.
+    ticket_failure_info
+        Provider: 1G,1V,1P,1J.
+    detailed_billing_information
+        Provider: 1G,1V,1P,1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27470,10 +28622,11 @@ class AirUpsellSearchReq(AirBaseReq):
 
     Parameters
     ----------
-    air_itinerary: Provider: 1G,1V,1P,1J,ACH-AirItinerary of the pricing
-        request.
-    air_price_result: Provider: 1G,1V,1P,1J,ACH-Result of AirPrice
-        request. Upsell uses this to search for new offer.
+    air_itinerary
+        Provider: 1G,1V,1P,1J,ACH-AirItinerary of the pricing request.
+    air_price_result
+        Provider: 1G,1V,1P,1J,ACH-Result of AirPrice request. Upsell uses
+        this to search for new offer.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27502,8 +28655,10 @@ class BaseAirPriceRsp(BaseRsp):
     """
     Parameters
     ----------
-    air_itinerary: Provider: 1G,1V,1P,1J,ACH.
-    air_price_result: Provider: 1G,1V,1P,1J,ACH.
+    air_itinerary
+        Provider: 1G,1V,1P,1J,ACH.
+    air_price_result
+        Provider: 1G,1V,1P,1J,ACH.
     """
     air_itinerary: None | AirItinerary = field(
         default=None,
@@ -27549,14 +28704,15 @@ class LowFareSearchAsynchRsp(AirSearchRsp):
 
     Parameters
     ----------
-    async_provider_specific_response: Provider: 1G,1V,1P,1J,ACH-
-        Identifies pending responses from a specific provider using
-        MoreResults attribute
-    brand_list:
-    search_id: Provider: 1G,1V,1P,1J,ACH-Indicates the Search Id of the
-        LFS search
-    currency_type: Provider: 1G,1V,1P,1J,ACH-Specifies the default
-        Currency Type in the response.
+    async_provider_specific_response
+        Provider: 1G,1V,1P,1J,ACH-Identifies pending responses from a
+        specific provider using MoreResults attribute
+    brand_list
+    search_id
+        Provider: 1G,1V,1P,1J,ACH-Indicates the Search Id of the LFS search
+    currency_type
+        Provider: 1G,1V,1P,1J,ACH-Specifies the default Currency Type in the
+        response.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27601,8 +28757,9 @@ class LowFareSearchRsp(AirSearchRsp):
 
     Parameters
     ----------
-    brand_list:
-    currency_type: Provider: 1G,1V,1P,1J,ACH.
+    brand_list
+    currency_type
+        Provider: 1G,1V,1P,1J,ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"
@@ -27632,11 +28789,12 @@ class RetrieveLowFareSearchRsp(AirSearchRsp):
 
     Parameters
     ----------
-    async_provider_specific_response: Provider: 1G,1V,1P,1J,ACH-
-        Identifies pending responses from a specific provider using
-        MoreResults attribute
-    brand_list:
-    currency_type: Provider: 1G,1V,1P,1J,ACH.
+    async_provider_specific_response
+        Provider: 1G,1V,1P,1J,ACH-Identifies pending responses from a
+        specific provider using MoreResults attribute
+    brand_list
+    currency_type
+        Provider: 1G,1V,1P,1J,ACH.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v48_0"

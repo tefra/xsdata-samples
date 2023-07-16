@@ -29,10 +29,12 @@ class FareValidity:
 
     Parameters
     ----------
-    rail_journey_ref: Reference to a journey to which this fare validity
-        refers.
-    not_valid_before: Fare not valid before this date.
-    not_valid_after: Fare not valid after this date.
+    rail_journey_ref
+        Reference to a journey to which this fare validity refers.
+    not_valid_before
+        Fare not valid before this date.
+    not_valid_after
+        Fare not valid after this date.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -111,9 +113,11 @@ class OperatingCompany:
 
     Parameters
     ----------
-    value:
-    code: Company Short Text
-    name: Name Identifying the Train Service other than BN orTL
+    value
+    code
+        Company Short Text
+    name
+        Name Identifying the Train Service other than BN orTL
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -148,14 +152,17 @@ class RailAutoSeatAssignment:
 
     Parameters
     ----------
-    seat_type: Indicates codeset of values such as Seat Type like
-        Place,Position, Smoking Choice, Place Arrangement, Place
-        Direction, Compartment.
-    seat_value: Indicates the value specific to the selected type.
-    rail_segment_ref: The rail segment that this assignment belongs to
-    booking_traveler_ref: The booking traveler that this seat assignment
-        is for. If not entered, this applies to the primary booking
-        traveler and other passengers are adjacent.
+    seat_type
+        Indicates codeset of values such as Seat Type like Place,Position,
+        Smoking Choice, Place Arrangement, Place Direction, Compartment.
+    seat_value
+        Indicates the value specific to the selected type.
+    rail_segment_ref
+        The rail segment that this assignment belongs to
+    booking_traveler_ref
+        The booking traveler that this seat assignment is for. If not
+        entered, this applies to the primary booking traveler and other
+        passengers are adjacent.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -201,9 +208,12 @@ class RailAvailInfo:
     """
     Parameters
     ----------
-    class_code: A booking code or fare basis code or fare class.
-    quantity: Available fare basis code or fare class quantity.
-    cabin_class: The fare basis code or fare class for this fare.
+    class_code
+        A booking code or fare basis code or fare class.
+    quantity
+        Available fare basis code or fare class quantity.
+    cabin_class
+        The fare basis code or fare class for this fare.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -242,12 +252,12 @@ class RailBookingInfo:
 
     Parameters
     ----------
-    rail_fare_ref: Reference to a fare that applies to the journey
-        below.
-    rail_journey_ref: Reference to a journeys on which the above fare
-        applies.
-    optional_service: Indicate the OfferFareItem elements  will be
-        Optional or not.
+    rail_fare_ref
+        Reference to a fare that applies to the journey below.
+    rail_journey_ref
+        Reference to a journeys on which the above fare applies.
+    optional_service
+        Indicate the OfferFareItem elements  will be Optional or not.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -284,15 +294,17 @@ class RailExchangeInfo:
 
     Parameters
     ----------
-    refund_amount:
-    cancellation_fee:
-    exchange_amount:
-    approximate_refund_amount:
-    approximate_cancellation_fee:
-    approximate_exchange_amount: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    retain_amount: Amount retained by a rail vendor for future use at
-        the vendor’s site.
+    refund_amount
+    cancellation_fee
+    exchange_amount
+    approximate_refund_amount
+    approximate_cancellation_fee
+    approximate_exchange_amount
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    retain_amount
+        Amount retained by a rail vendor for future use at the vendor’s
+        site.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -412,22 +424,27 @@ class RailInfo:
 
     Parameters
     ----------
-    origin: The IATA location code for this origination of this entity.
-    rail_loc_origin: RCH specific origin code (a.k.a UCodes) which
-        uniquely identifies a train station.
-    destination: The IATA location code for this destination of this
-        entity.
-    rail_loc_destination: RCH specific destination code (a.k.a UCodes)
-        which uniquely identifies a train station.
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
+    origin
+        The IATA location code for this origination of this entity.
+    rail_loc_origin
+        RCH specific origin code (a.k.a UCodes) which uniquely identifies a
+        train station.
+    destination
+        The IATA location code for this destination of this entity.
+    rail_loc_destination
+        RCH specific destination code (a.k.a UCodes) which uniquely
+        identifies a train station.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        This does not include time zone information since it can be derived
         from the origin location.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. This does not include time zone information since
-        it can be derived from the origin location.
-    train_number:
-    provider_code:
-    supplier_code:
+    train_number
+    provider_code
+    supplier_code
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -542,15 +559,19 @@ class RailRefundInfo:
 
     Parameters
     ----------
-    refund_amount: Amount refunded back to customer.
-    cancellation_fee: Cancellation penalty imposed by the distributor.
-    refund: Indicates whether vendor offers refund on rail reservation.
-    retain: Indicates whether vendor retains the amount to be used
-        later.
-    retain_amount: Amount retained by rail vendor for futute
-        exchange/rail book at rail vendor site.
-    net_amount: Net total amount to be refunded or retained by the
-        vendor.
+    refund_amount
+        Amount refunded back to customer.
+    cancellation_fee
+        Cancellation penalty imposed by the distributor.
+    refund
+        Indicates whether vendor offers refund on rail reservation.
+    retain
+        Indicates whether vendor retains the amount to be used later.
+    retain_amount
+        Amount retained by rail vendor for futute exchange/rail book at rail
+        vendor site.
+    net_amount
+        Net total amount to be refunded or retained by the vendor.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -631,14 +652,19 @@ class RailSpecificSeatAssignment:
 
     Parameters
     ----------
-    coach_label: The coach number of the train being requested.
-    place_label: The actual seat number or the close-to seat number
-        based on the Assignment.
-    assignment: Defines how the PlaceLabel should be applied.  The
-        values are 6.STP for actual seat or 2.STP for close-to seat.
-        Default is 2.STP.
-    rail_segment_ref: The rail segment to which this assignment belongs.
-    booking_traveler_ref: The BookingTraveler for this seat assignment.
+    coach_label
+        The coach number of the train being requested.
+    place_label
+        The actual seat number or the close-to seat number based on the
+        Assignment.
+    assignment
+        Defines how the PlaceLabel should be applied.  The values are
+        6.STP for actual seat or 2.STP for close-to seat. Default is
+        2.STP.
+    rail_segment_ref
+        The rail segment to which this assignment belongs.
+    booking_traveler_ref
+        The BookingTraveler for this seat assignment.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -690,7 +716,8 @@ class RailSupplier:
     """
     Parameters
     ----------
-    code: 2 character Rail distributor code.
+    code
+        2 character Rail distributor code.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -714,16 +741,16 @@ class TicketAdvisory:
 
     Parameters
     ----------
-    value:
-    key:
-    language_code: ISO 639 two-character language codes are used to
-        retrieve specific information in the requested language. For
-        Rich Content and Branding, language codes ZH-HANT (Chinese
-        Traditional), ZH-HANS (Chinese Simplified), FR-CA (French
-        Canadian) and PT-BR (Portuguese Brazil) can also be used. For
-        RCH, language codes ENGB, ENUS, DEDE, DECH can also be used.
-        Only certain services support this attribute. Providers: ACH,
-        RCH, 1G, 1V, 1P, 1J.
+    value
+    key
+    language_code
+        ISO 639 two-character language codes are used to retrieve specific
+        information in the requested language. For Rich Content and
+        Branding, language codes ZH-HANT (Chinese Traditional), ZH-HANS
+        (Chinese Simplified), FR-CA (French Canadian) and PT-BR (Portuguese
+        Brazil) can also be used. For RCH, language codes ENGB, ENUS, DEDE,
+        DECH can also be used. Only certain services support this attribute.
+        Providers: ACH, RCH, 1G, 1V, 1P, 1J.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -860,13 +887,17 @@ class RailFareComponent:
 
     Parameters
     ----------
-    discount: Discount information specific to the fare component
-    key:
-    amount: FareComponent amount
-    age:
-    passenger_type_code: The three character passenger code
-    supplier_passenger_type: Supplier passenger type code
-    quantity:
+    discount
+        Discount information specific to the fare component
+    key
+    amount
+        FareComponent amount
+    age
+    passenger_type_code
+        The three character passenger code
+    supplier_passenger_type
+        Supplier passenger type code
+    quantity
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -951,16 +982,17 @@ class RailFareId:
     """
     Parameters
     ----------
-    value:
-    key:
-    category:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    value
+    key
+    category
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         name = "RailFareID"
@@ -1011,16 +1043,17 @@ class RailFareNote:
 
     Parameters
     ----------
-    value:
-    key:
-    note_name:
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    value
+    key
+    note_name
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1124,16 +1157,18 @@ class RailPricingModifiers:
 
     Parameters
     ----------
-    discount_card: Discount request for rail.
-    prohibit_non_refundable_fares: Indicates whether it prohibits
-        NonRefundable Fares.
-    prohibit_non_exchangeable_fares: Indicates whether it prohibits
-        NonExchangeable Fares .
-    currency_type: 3 Letter Currency Code
-    rail_search_type: RailSearchType options are "All Fares"  "Fastest"
-        "Lowest Fare" "One Fare Per Class" "Seasons".  Supported by
-        NTV/VF only for "All Fares" "Lowest Fare" and "One Fare Per
-        Class". Provider : RCH
+    discount_card
+        Discount request for rail.
+    prohibit_non_refundable_fares
+        Indicates whether it prohibits NonRefundable Fares.
+    prohibit_non_exchangeable_fares
+        Indicates whether it prohibits NonExchangeable Fares .
+    currency_type
+        3 Letter Currency Code
+    rail_search_type
+        RailSearchType options are "All Fares"  "Fastest"  "Lowest Fare"
+        "One Fare Per Class" "Seasons".  Supported by NTV/VF only for "All
+        Fares" "Lowest Fare" and "One Fare Per Class". Provider : RCH
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1185,12 +1220,14 @@ class RailSearchModifiers:
 
     Parameters
     ----------
-    preferred_suppliers:
-    max_changes: The maximum number of stops within a connection.
-    direction: The direction of travel.
-    class_value:
-    max_solutions: The maximum number of solutions to return. Decreasing
-        this number
+    preferred_suppliers
+    max_changes
+        The maximum number of stops within a connection.
+    direction
+        The direction of travel.
+    class_value
+    max_solutions
+        The maximum number of solutions to return. Decreasing this number
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1255,10 +1292,11 @@ class RailSegmentInfo:
 
     Parameters
     ----------
-    value:
-    category: Supplier specific category.
-    type_value: Either Extra for ExtraSegmentInfo or Vendor for
-        VendorMessages.
+    value
+    category
+        Supplier specific category.
+    type_value
+        Either Extra for ExtraSegmentInfo or Vendor for VendorMessages.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1291,17 +1329,24 @@ class RailTicketInfo:
     """
     Parameters
     ----------
-    rail_journey_ref:
-    ticket_advisory:
-    number: Ticket number.
-    issue_location: Issue location is internal distributor code
-        associated with the PCC.
-    ticket_status: Status of Ticket.
-    ticket_form_type: FormType of Ticket.
-    traffic_type: Type of traffic.
-    issued_date: Ticket issue date.
-    ticket_type: Type of ticket. Paper, eTicket etc.
-    booking_traveler_ref: Reference to a BookingTraveler.
+    rail_journey_ref
+    ticket_advisory
+    number
+        Ticket number.
+    issue_location
+        Issue location is internal distributor code associated with the PCC.
+    ticket_status
+        Status of Ticket.
+    ticket_form_type
+        FormType of Ticket.
+    traffic_type
+        Type of traffic.
+    issued_date
+        Ticket issue date.
+    ticket_type
+        Type of ticket. Paper, eTicket etc.
+    booking_traveler_ref
+        Reference to a BookingTraveler.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1400,9 +1445,10 @@ class Coach:
 
     Parameters
     ----------
-    characteristic:
-    remark:
-    coach_number: Coach number for which seat map/coach map is returned.
+    characteristic
+    remark
+    coach_number
+        Coach number for which seat map/coach map is returned.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1439,51 +1485,63 @@ class RailFare:
 
     Parameters
     ----------
-    rail_fare_note_ref: Key reference to RailFareNote present in
-        RailFareNotList
-    rail_fare_id:
-    rail_fare_idref:
-    fare_validity:
-    host_token:
-    ful_fillment_type:
-    rail_fare_component:
-    key:
-    fare_basis: The fare basis code  or fare description for this fare
-    cabin_class: The fare basis code or fare class for this fare
-    passenger_type_code: The PTC that is associated with this fare.
-        Default to ADT
-    origin: Returns the airport or city code that defines the origin
-        market for this fare.
-    destination: Returns the airport or city code that defines the
-        destination market for this fare.
-    effective_date: Returns the date on which this fare was quoted. Set
-        as current date
-    amount:
-    route_description: Describes the route of the train fare.
-    ticket_type_code: Describes the main identifier code of the fare.
-    fare_reference: Unique reference for the fare that is required in
-        RailExchangeQuote request.
-    cross_city_fare: Set to 'true' if the fare is valid across a
-        Metropolitan Area, eg. Cross-London travel via the London
-        Underground.
-    origin_station_name: The origin station name for the Rail Fare.
-    destination_station_name: The destination station name for the Rail
-        Fare.
-    reservation_required: Set to true if a seat reservation is required
-        while booking.
-    journey_direction: The direction of the Journey (Outward or Return)
-        associated with the Rail fare.
-    rail_loc_origin: RCH specific origin code (a.k.a UCodes) which
-        uniquely identifies a train station.
-    rail_loc_destination: RCH specific destination code (a.k.a UCodes)
-        which uniquely identifies a train station.
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    rail_fare_note_ref
+        Key reference to RailFareNote present in RailFareNotList
+    rail_fare_id
+    rail_fare_idref
+    fare_validity
+    host_token
+    ful_fillment_type
+    rail_fare_component
+    key
+    fare_basis
+        The fare basis code  or fare description for this fare
+    cabin_class
+        The fare basis code or fare class for this fare
+    passenger_type_code
+        The PTC that is associated with this fare. Default to ADT
+    origin
+        Returns the airport or city code that defines the origin market for
+        this fare.
+    destination
+        Returns the airport or city code that defines the destination market
+        for this fare.
+    effective_date
+        Returns the date on which this fare was quoted. Set as current date
+    amount
+    route_description
+        Describes the route of the train fare.
+    ticket_type_code
+        Describes the main identifier code of the fare.
+    fare_reference
+        Unique reference for the fare that is required in RailExchangeQuote
+        request.
+    cross_city_fare
+        Set to 'true' if the fare is valid across a Metropolitan Area, eg.
+        Cross-London travel via the London Underground.
+    origin_station_name
+        The origin station name for the Rail Fare.
+    destination_station_name
+        The destination station name for the Rail Fare.
+    reservation_required
+        Set to true if a seat reservation is required while booking.
+    journey_direction
+        The direction of the Journey (Outward or Return) associated with the
+        Rail fare.
+    rail_loc_origin
+        RCH specific origin code (a.k.a UCodes) which uniquely identifies a
+        train station.
+    rail_loc_destination
+        RCH specific destination code (a.k.a UCodes) which uniquely
+        identifies a train station.
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -1752,41 +1810,55 @@ class RailSegment(Segment):
 
     Parameters
     ----------
-    rail_segment_info:
-    operating_company:
-    rail_avail_info:
-    ful_fillment_type:
-    train_number:
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
+    rail_segment_info
+    operating_company
+    rail_avail_info
+    ful_fillment_type
+    train_number
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        This does not include time zone information since it can be derived
         from the origin location.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. This does not include time zone information since
-        it can be derived from the origin location.
-    origin_station_name: The origin station name for the Journey.
-    destination_station_name: The destination station name for the
-        Journey.
-    rail_loc_origin: RCH specific origin code (a.k.a UCodes) which
-        uniquely identifies a train station.
-    rail_loc_destination: RCH specific destination code (a.k.a UCodes)
-        which uniquely identifies a train station.
-    train_type: Type of train used. Same as TrainServiceType.
-    train_type_code: Code for type of train used. Same as
-        TrainServiceType.
-    transport_mode: Type of Transport Mode used.
-    seat_assignable: Set to true if there exists seats to be booked
-    transport_code: Supplier specific train code
-    reservation_required: Set to true if a reservation is required for
-        booking.
-    travel_time: Total time spent (minutes) traveling
-    host_token_ref: The reference key for the host token. From the
-        HostTokenList Providers RCH.
-    cabin_class: Rail Cabin class specification. The valid values are
-        Economy, Business, First and Other
-    class_code: A booking code or fare basis code or fare class.
+    origin_station_name
+        The origin station name for the Journey.
+    destination_station_name
+        The destination station name for the Journey.
+    rail_loc_origin
+        RCH specific origin code (a.k.a UCodes) which uniquely identifies a
+        train station.
+    rail_loc_destination
+        RCH specific destination code (a.k.a UCodes) which uniquely
+        identifies a train station.
+    train_type
+        Type of train used. Same as TrainServiceType.
+    train_type_code
+        Code for type of train used. Same as TrainServiceType.
+    transport_mode
+        Type of Transport Mode used.
+    seat_assignable
+        Set to true if there exists seats to be booked
+    transport_code
+        Supplier specific train code
+    reservation_required
+        Set to true if a reservation is required for booking.
+    travel_time
+        Total time spent (minutes) traveling
+    host_token_ref
+        The reference key for the host token. From the HostTokenList
+        Providers RCH.
+    cabin_class
+        Rail Cabin class specification. The valid values are Economy,
+        Business, First and Other
+    class_code
+        A booking code or fare basis code or fare class.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2004,71 +2076,92 @@ class RailJourney:
 
     Parameters
     ----------
-    rail_segment:
-    rail_segment_ref:
-    journey_remark:
-    host_token:
-    key:
-    origin: The IATA location code for this origination of this entity.
-    destination: The IATA location code for this destination of this
-        entity.
-    departure_time: The date and time at which this entity departs. This
-        does not include time zone information since it can be derived
+    rail_segment
+    rail_segment_ref
+    journey_remark
+    host_token
+    key
+    origin
+        The IATA location code for this origination of this entity.
+    destination
+        The IATA location code for this destination of this entity.
+    departure_time
+        The date and time at which this entity departs. This does not
+        include time zone information since it can be derived from the
+        origin location.
+    arrival_time
+        The date and time at which this entity arrives at the destination.
+        This does not include time zone information since it can be derived
         from the origin location.
-    arrival_time: The date and time at which this entity arrives at the
-        destination. This does not include time zone information since
-        it can be derived from the origin location.
-    origin_station_name: The origin station name for the Journey.
-    destination_station_name: The destination station name for the
-        Journey.
-    rail_loc_origin: RCH specific origin code (a.k.a UCodes) which
-        uniquely identifies a train station.
-    rail_loc_destination: RCH specific destination code (a.k.a UCodes)
-        which uniquely identifies a train station.
-    route_description: The description of the route.
-    journey_direction: The direction of the Journey (Outward or Return).
-    journey_duration: The duration of the entire Journey in minutes
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    provider_code:
-    supplier_code:
-    status: Status of this Journey.
-    provider_reservation_info_ref: Provider reservation reference key.
-    passive_provider_reservation_info_ref: Passive provider reservation
-        reference key.
-    travel_order: To identify the appropriate travel sequence for
-        Air/Car/Hotel/Rail segments/reservations/Journeys based on
-        travel dates. This ordering is applicable across the UR not
-        provider or traveler specific
-    route_reference: RouteReference is required in seat assignment
-        purpose
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
-    operation: "Type of exchange. Add - Add new Journey. Update - Modify
-        existing Journey. Delete - Remove existing Journey"
+    origin_station_name
+        The origin station name for the Journey.
+    destination_station_name
+        The destination station name for the Journey.
+    rail_loc_origin
+        RCH specific origin code (a.k.a UCodes) which uniquely identifies a
+        train station.
+    rail_loc_destination
+        RCH specific destination code (a.k.a UCodes) which uniquely
+        identifies a train station.
+    route_description
+        The description of the route.
+    journey_direction
+        The direction of the Journey (Outward or Return).
+    journey_duration
+        The duration of the entire Journey in minutes
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    provider_code
+    supplier_code
+    status
+        Status of this Journey.
+    provider_reservation_info_ref
+        Provider reservation reference key.
+    passive_provider_reservation_info_ref
+        Passive provider reservation reference key.
+    travel_order
+        To identify the appropriate travel sequence for Air/Car/Hotel/Rail
+        segments/reservations/Journeys based on travel dates. This ordering
+        is applicable across the UR not provider or traveler specific
+    route_reference
+        RouteReference is required in seat assignment purpose
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
+    operation
+        "Type of exchange. Add - Add new Journey. Update - Modify existing
+        Journey. Delete - Remove existing Journey"
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2358,42 +2451,52 @@ class RailPricingInfo:
 
     Parameters
     ----------
-    rail_fare:
-    rail_fare_ref:
-    rail_booking_info:
-    passenger_type:
-    booking_traveler_ref:
-    key:
-    exchange_amount: The amount to pay to cover the exchange of the fare
-        (includes penalties).
-    approximate_exchange_amount:
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    el_stat: This attribute is used to show the action results of an
-        element. Possible values are "A" (when elements have been added
-        to the UR) and "M" (when existing elements have been modified).
-        Response only.
-    key_override: If a duplicate key is found where we are adding
-        elements in some cases like URAdd, then instead of erroring out
-        set this attribute to true.
+    rail_fare
+    rail_fare_ref
+    rail_booking_info
+    passenger_type
+    booking_traveler_ref
+    key
+    exchange_amount
+        The amount to pay to cover the exchange of the fare (includes
+        penalties).
+    approximate_exchange_amount
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    el_stat
+        This attribute is used to show the action results of an element.
+        Possible values are "A" (when elements have been added to the UR)
+        and "M" (when existing elements have been modified). Response only.
+    key_override
+        If a duplicate key is found where we are adding elements in some
+        cases like URAdd, then instead of erroring out set this attribute to
+        true.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2590,15 +2693,16 @@ class RailReservation(BaseReservation):
 
     Parameters
     ----------
-    booking_traveler_ref:
-    rail_journey:
-    rail_pricing_info:
-    payment:
-    rail_ticket_info:
-    rail_fare_note_list: List of RailFareNote(s) that is referenced by
-        key in RailFare.
-    supplier_locator:
-    booking_status: The Current Status of the rail booking.
+    booking_traveler_ref
+    rail_journey
+    rail_pricing_info
+    payment
+    rail_ticket_info
+    rail_fare_note_list
+        List of RailFareNote(s) that is referenced by key in RailFare.
+    supplier_locator
+    booking_status
+        The Current Status of the rail booking.
     """
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v48_0"
@@ -2738,38 +2842,49 @@ class TypeRailPricingSolution:
 
     Parameters
     ----------
-    rail_journey:
-    rail_journey_ref:
-    rail_pricing_info:
-    key:
-    offer_id: OfferID must be included if the RailCreateReq contains a
-        price.  If the RailCreateReq is used for the Direct Book
-        function, the OfferID is not included.
-    total_price: The total price for this entity including base price
-        and all taxes.
-    base_price: Represents the base price for this entity. This does not
-        include any taxes or surcharges.
-    approximate_total_price: The Converted total price in Default
-        Currency for this entity including base price and all taxes.
-    approximate_base_price: The Converted base price in Default Currency
-        for this entity. This does not include any taxes or surcharges.
-    equivalent_base_price: Represents the base price in the related
-        currency for this entity. This does not include any taxes or
-        surcharges.
-    taxes: The aggregated amount of all the taxes that are associated
-        with this entity. See the associated TaxInfo array for a
-        breakdown of the individual taxes.
-    fees: The aggregated amount of all the fees that are associated with
-        this entity. See the associated FeeInfo array for a breakdown of
-        the individual fees.
-    services: The total cost for all optional services.
-    approximate_taxes: The Converted tax amount in Default Currency.
-    approximate_fees: The Converted fee amount in Default Currency.
-    provider_code:
-    supplier_code:
-    host_token_ref: HostTokenRef will reference the value in
-        HostTokenList/HostToken @ Key
-    reference: Offer Reference required for Booking(eg.TL).
+    rail_journey
+    rail_journey_ref
+    rail_pricing_info
+    key
+    offer_id
+        OfferID must be included if the RailCreateReq contains a price.  If
+        the RailCreateReq is used for the Direct Book function, the OfferID
+        is not included.
+    total_price
+        The total price for this entity including base price and all taxes.
+    base_price
+        Represents the base price for this entity. This does not include any
+        taxes or surcharges.
+    approximate_total_price
+        The Converted total price in Default Currency for this entity
+        including base price and all taxes.
+    approximate_base_price
+        The Converted base price in Default Currency for this entity. This
+        does not include any taxes or surcharges.
+    equivalent_base_price
+        Represents the base price in the related currency for this entity.
+        This does not include any taxes or surcharges.
+    taxes
+        The aggregated amount of all the taxes that are associated with this
+        entity. See the associated TaxInfo array for a breakdown of the
+        individual taxes.
+    fees
+        The aggregated amount of all the fees that are associated with this
+        entity. See the associated FeeInfo array for a breakdown of the
+        individual fees.
+    services
+        The total cost for all optional services.
+    approximate_taxes
+        The Converted tax amount in Default Currency.
+    approximate_fees
+        The Converted fee amount in Default Currency.
+    provider_code
+    supplier_code
+    host_token_ref
+        HostTokenRef will reference the value in HostTokenList/HostToken @
+        Key
+    reference
+        Offer Reference required for Booking(eg.TL).
     """
     class Meta:
         name = "typeRailPricingSolution"
