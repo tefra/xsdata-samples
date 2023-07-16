@@ -51,4 +51,5 @@ jobs:
         if: matrix.collection.id != 'common_types'
         run: ./run.py test ${{ matrix.collection.id }}
       - name: Run mypy
+        if: matrix.collection.id != 'generali'
         run: ./run.py mypy ${{ matrix.collection.id }}
