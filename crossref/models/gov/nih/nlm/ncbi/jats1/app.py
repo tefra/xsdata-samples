@@ -69,6 +69,7 @@ class App:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     title: List[Title] = field(

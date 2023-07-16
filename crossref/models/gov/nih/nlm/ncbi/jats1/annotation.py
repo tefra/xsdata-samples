@@ -151,6 +151,7 @@ class CollabAlternatives:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     id: Optional[str] = field(
@@ -181,6 +182,7 @@ class Annotation:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     content_type: Optional[str] = field(
@@ -238,6 +240,7 @@ class AuthorComment:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     content_type: Optional[str] = field(
@@ -358,6 +361,7 @@ class Fn:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     custom_type: Optional[str] = field(
@@ -492,6 +496,7 @@ class OpenAccess:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     id: Optional[str] = field(
@@ -727,6 +732,7 @@ class FnGroup:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     content_type: Optional[str] = field(
@@ -798,6 +804,7 @@ class ListType:
         metadata={
             "name": "list-item",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     continued_from: Optional[str] = field(
@@ -4853,6 +4860,7 @@ class CompoundSubject:
         metadata={
             "name": "compound-subject-part",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     assigning_authority: Optional[str] = field(
@@ -6170,6 +6178,7 @@ class CompoundKwd:
         metadata={
             "name": "compound-kwd-part",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     assigning_authority: Optional[str] = field(
@@ -7174,6 +7183,7 @@ class Speech:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     content_type: Optional[str] = field(
@@ -7548,6 +7558,7 @@ class AffAlternatives:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     id: Optional[str] = field(
@@ -11517,6 +11528,7 @@ class Tbody:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     align: Optional[TbodyAlign] = field(
@@ -11581,6 +11593,7 @@ class Tfoot:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     align: Optional[TfootAlign] = field(
@@ -11645,6 +11658,7 @@ class Thead:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     align: Optional[TheadAlign] = field(
@@ -12888,6 +12902,7 @@ class QuestionWrapGroup:
         metadata={
             "name": "question-wrap",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     audience: Optional[str] = field(
@@ -16095,6 +16110,7 @@ class ContribGroup:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     address: List["Address"] = field(
@@ -16280,6 +16296,7 @@ class Sec:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     title: List["Title"] = field(
@@ -26098,6 +26115,7 @@ class Def:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     id: Optional[str] = field(

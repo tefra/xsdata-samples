@@ -26,6 +26,7 @@ class CustomMetadata:
         default_factory=list,
         metadata={
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     program: List[FundrefProgram] = field(

@@ -22,6 +22,7 @@ class Standard:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     content_item: List[ContentItem] = field(

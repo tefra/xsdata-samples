@@ -19,6 +19,7 @@ class ArticleVersionAlternatives:
         metadata={
             "name": "article-version",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
     id: Optional[str] = field(

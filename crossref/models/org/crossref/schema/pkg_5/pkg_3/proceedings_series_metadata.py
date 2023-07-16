@@ -34,6 +34,7 @@ class ProceedingsSeriesMetadata:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
             "min_length": 1,
             "max_length": 511,
         }

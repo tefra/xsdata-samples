@@ -56,6 +56,7 @@ class AttributeValueBoolean:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -91,6 +92,7 @@ class AttributeValueDate:
                 "name": "ATTRIBUTE-DEFINITION-DATE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -126,6 +128,7 @@ class AttributeValueEnumeration:
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -172,6 +175,7 @@ class AttributeValueInteger:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -207,6 +211,7 @@ class AttributeValueReal:
                 "name": "ATTRIBUTE-DEFINITION-REAL-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -242,6 +247,7 @@ class AttributeValueString:
                 "name": "ATTRIBUTE-DEFINITION-STRING-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -458,6 +464,7 @@ class AttributeDefinitionBoolean:
                 "name": "DATATYPE-DEFINITION-BOOLEAN-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -560,6 +567,7 @@ class AttributeDefinitionDate:
                 "name": "DATATYPE-DEFINITION-DATE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -670,6 +678,7 @@ class AttributeDefinitionEnumeration:
                 "name": "DATATYPE-DEFINITION-ENUMERATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -772,6 +781,7 @@ class AttributeDefinitionInteger:
                 "name": "DATATYPE-DEFINITION-INTEGER-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -874,6 +884,7 @@ class AttributeDefinitionReal:
                 "name": "DATATYPE-DEFINITION-REAL-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -976,6 +987,7 @@ class AttributeDefinitionString:
                 "name": "DATATYPE-DEFINITION-STRING-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1436,6 +1448,7 @@ class EnumValue:
                 "name": "EMBEDDED-VALUE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1538,6 +1551,7 @@ class RelationGroup:
                 "name": "SPECIFICATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1560,6 +1574,7 @@ class RelationGroup:
                 "name": "SPECIFICATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1571,6 +1586,7 @@ class RelationGroup:
                 "name": "RELATION-GROUP-TYPE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1747,6 +1763,7 @@ class SpecHierarchy:
                 "name": "SPEC-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1819,6 +1836,7 @@ class AttributeValueXhtml:
                 "name": "ATTRIBUTE-DEFINITION-XHTML-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -1996,6 +2014,7 @@ class AttributeDefinitionXhtml:
                 "name": "DATATYPE-DEFINITION-XHTML-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -2139,6 +2158,7 @@ class SpecObject:
                 "name": "SPEC-OBJECT-TYPE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -2300,6 +2320,7 @@ class SpecRelation:
                 "name": "SPEC-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -2311,6 +2332,7 @@ class SpecRelation:
                 "name": "SPEC-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -2322,6 +2344,7 @@ class SpecRelation:
                 "name": "SPEC-RELATION-TYPE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -2484,6 +2507,7 @@ class Specification:
                 "name": "SPECIFICATION-TYPE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
             }
         )
 
@@ -3217,6 +3241,7 @@ class ReqIf:
             metadata={
                 "name": "REQ-IF-HEADER",
                 "type": "Element",
+                "required": True,
             }
         )
 
@@ -3227,6 +3252,7 @@ class ReqIf:
             metadata={
                 "name": "REQ-IF-CONTENT",
                 "type": "Element",
+                "required": True,
             }
         )
 

@@ -23,6 +23,7 @@ class Name:
         default=None,
         metadata={
             "type": "Element",
+            "required": True,
         }
     )
     given_names: List[GivenNames] = field(
