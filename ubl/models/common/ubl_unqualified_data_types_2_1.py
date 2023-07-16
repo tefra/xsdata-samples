@@ -1,4 +1,5 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Optional
 from ubl.models.common.ccts_cct_schema_module_2_1 import (
     AmountType as CctsCctSchemaModule21AmountType,
     BinaryObjectType as CctsCctSchemaModule21BinaryObjectType,
@@ -15,12 +16,26 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTyp
 
 @dataclass(frozen=True)
 class AmountType(CctsCctSchemaModule21AmountType):
-    pass
+    currency_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "currencyID",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
 class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
-    pass
+    mime_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "mimeCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
@@ -30,7 +45,14 @@ class CodeType(CctsCctSchemaModule21CodeType):
 
 @dataclass(frozen=True)
 class GraphicType(CctsCctSchemaModule21BinaryObjectType):
-    pass
+    mime_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "mimeCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
@@ -40,7 +62,14 @@ class IdentifierType(CctsCctSchemaModule21IdentifierType):
 
 @dataclass(frozen=True)
 class MeasureType(CctsCctSchemaModule21MeasureType):
-    pass
+    unit_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "unitCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
@@ -60,7 +89,14 @@ class PercentType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class PictureType(CctsCctSchemaModule21BinaryObjectType):
-    pass
+    mime_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "mimeCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
@@ -75,7 +111,14 @@ class RateType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class SoundType(CctsCctSchemaModule21BinaryObjectType):
-    pass
+    mime_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "mimeCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
 
 
 @dataclass(frozen=True)
@@ -90,4 +133,11 @@ class ValueType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class VideoType(CctsCctSchemaModule21BinaryObjectType):
-    pass
+    mime_code: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "mimeCode",
+            "type": "Attribute",
+            "required": True,
+        }
+    )

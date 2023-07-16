@@ -243,6 +243,13 @@ class AnynonNull(AnyType):
     class Meta:
         name = "ANYNonNull"
 
+    null_flavor: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+
 
 @dataclass
 class Bin(AnyType):
@@ -1921,6 +1928,18 @@ class St(Ed):
             "pattern": r"[^\s]+",
         }
     )
+    compression: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+    integrity_check: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
     integrity_check_algorithm: Any = field(
         init=False,
         metadata={
@@ -2211,6 +2230,13 @@ class Ce(Cd):
     class Meta:
         name = "CE"
 
+    qualifier: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+
 
 @dataclass
 class Enxp(St):
@@ -2445,6 +2471,13 @@ class CeExplicit(CdExplicit):
     class Meta:
         name = "CE_explicit"
 
+    qualifier: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+
 
 @dataclass
 class Cv(Ce):
@@ -2455,6 +2488,13 @@ class Cv(Ce):
     """
     class Meta:
         name = "CV"
+
+    translation: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
 
 
 @dataclass
@@ -3222,6 +3262,31 @@ class Cs(Cv):
     """
     class Meta:
         name = "CS"
+
+    code_system: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+    code_system_name: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+    code_system_version: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
+    display_name: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        }
+    )
 
 
 @dataclass

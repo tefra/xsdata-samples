@@ -30,6 +30,7 @@ class Name:
         metadata={
             "name": "given-names",
             "type": "Element",
+            "min_occurs": 1,
             "max_occurs": 2,
             "sequence": 1,
         }

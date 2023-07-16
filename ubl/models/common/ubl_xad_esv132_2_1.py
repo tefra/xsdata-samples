@@ -1095,7 +1095,15 @@ class DataObjectFormat(DataObjectFormatType):
 
 @dataclass(frozen=True)
 class OtherTimeStampType(GenericTimeStampType):
-    pass
+    reference_info: Tuple[ReferenceInfo, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "name": "ReferenceInfo",
+            "type": "Element",
+            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            "min_occurs": 1,
+        }
+    )
 
 
 @dataclass(frozen=True)
