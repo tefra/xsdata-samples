@@ -13,5 +13,6 @@ class PointType(AbstractGeometricPrimitiveType):
         metadata={
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
+            "required": True,
         }
     )

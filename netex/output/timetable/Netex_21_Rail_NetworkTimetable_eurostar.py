@@ -739,7 +739,7 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="STPADOM",
-                                            type="tiploc"
+                                            type_value="tiploc"
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
@@ -1831,7 +1831,7 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="EBSFDOM",
-                                            type="tiploc"
+                                            type_value="tiploc"
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
@@ -1932,7 +1932,7 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="ASHFKY",
-                                            type="tiploc"
+                                            type_value="tiploc"
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[

@@ -20641,10 +20641,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100BRAINTR",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:68010"
                                         ),
                                         vehicle_modes=[
@@ -20705,10 +20705,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100CLACTON",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:68500"
                                         ),
                                         vehicle_modes=[
@@ -20769,10 +20769,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100YARMTH",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:73280"
                                         ),
                                         vehicle_modes=[
@@ -20833,10 +20833,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100HARWICH",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:69050"
                                         ),
                                         vehicle_modes=[
@@ -20897,10 +20897,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100IPSWICH",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:72170"
                                         ),
                                         vehicle_modes=[
@@ -20972,10 +20972,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100LIVST",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:69650"
                                         ),
                                         vehicle_modes=[
@@ -21041,10 +21041,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100LOWSTFT",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:72680"
                                         ),
                                         vehicle_modes=[
@@ -21105,10 +21105,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100NRCH",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:73090"
                                         ),
                                         vehicle_modes=[
@@ -21169,10 +21169,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100STFD",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:7190"
                                         ),
                                         vehicle_modes=[
@@ -21236,10 +21236,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100SHENFLD",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:68880"
                                         ),
                                         vehicle_modes=[
@@ -21303,10 +21303,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100STANAIR",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:68340"
                                         ),
                                         vehicle_modes=[
@@ -21368,10 +21368,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100STHVIC",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:74200"
                                         ),
                                         vehicle_modes=[
@@ -21432,10 +21432,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100SUDBURY",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:70980"
                                         ),
                                         vehicle_modes=[
@@ -21499,10 +21499,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100TTNHMHL",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:69510"
                                         ),
                                         vehicle_modes=[
@@ -21566,10 +21566,10 @@ obj = PublicationDelivery(
                                         ),
                                         private_code=PrivateCode(
                                             value="9100WONNAZE",
-                                            type="naptan"
+                                            type_value="naptan"
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
-                                            type="uicLocation",
+                                            type_value="uicLocation",
                                             ref="uic:68580"
                                         ),
                                         vehicle_modes=[
