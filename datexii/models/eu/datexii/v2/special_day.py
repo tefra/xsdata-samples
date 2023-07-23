@@ -10,7 +10,10 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class SpecialDay:
-    """Specification of a special day, for example schoolDay, electionDay, ...  Gives also the possibility to define a public holiday (country specific).
+    """Specification of a special day, for example schoolDay, electionDay, ...
+
+    Gives also the possibility to define a public holiday (country
+    specific).
 
     :ivar intersect_with_applicable_days: When true, the period is the
         intersection of applicable days and this special day. When

@@ -4,7 +4,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class RoadTypeEnum(Enum):
-    """Categorisation of the  road type (motorway, main road, ...).
+    """
+    Categorisation of the  road type (motorway, main road, ...).
 
     :cvar MOTORWAY: Motorway.
     :cvar TRUNK_ROAD: Trunk road.

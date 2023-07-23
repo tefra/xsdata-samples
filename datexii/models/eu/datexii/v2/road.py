@@ -9,7 +9,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class Road:
-    """Identification of a road by its name, identifier, type ...
+    """
+    Identification of a road by its name, identifier, type ...
 
     :ivar name_of_road: The name of the road.
     :ivar road_identifier: Identifier/number of the road.

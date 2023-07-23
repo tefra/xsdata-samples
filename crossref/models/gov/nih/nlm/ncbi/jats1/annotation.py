@@ -11715,9 +11715,9 @@ class Thead:
 
 @dataclass
 class Table:
-    """<div>
-    <h3>Table: Table Element ..............................</h3>
-    </div>"""
+    """
+    <div> <h3>Table: Table Element ..............................</h3> </div>
+    """
     class Meta:
         name = "table"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"

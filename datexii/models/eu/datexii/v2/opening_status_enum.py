@@ -4,7 +4,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class OpeningStatusEnum(Enum):
-    """The opening status of some entity (e.g. parking site, service facility, access,...)
+    """
+    The opening status of some entity (e.g. parking site, service facility,
+    access,...)
 
     :cvar OPEN: Open resp. available.
     :cvar CLOSED: Closed, usually because of the regular opening times.

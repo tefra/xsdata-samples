@@ -45,10 +45,8 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
       - name: Generate Code
-        if: matrix.collection.id != 'defxml'
         run: ./run.py build ${{ matrix.collection.id }}
       - name: Run Tests
-        if: matrix.collection.id != 'common_types'
         run: ./run.py test ${{ matrix.collection.id }}
       - name: Run mypy
         if: matrix.collection.id != 'generali'

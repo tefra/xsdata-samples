@@ -4,7 +4,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class OccupancyDetectionTypeEnum(Enum):
-    """Type of parking occupancy detection (balancing, single slot, ...  ).
+    """Type of parking occupancy detection (balancing, single slot, ...
+
+    ).
 
     :cvar NONE: No occupancy detection available.
     :cvar BALANCING: Counting and balancing incoming and outcoming

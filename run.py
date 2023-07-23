@@ -65,7 +65,9 @@ def init_config(suite: str, *args):
 def all(suite: str, output_format: str, *args):
     build(suite, output_format, *args)
     test(suite, output_format, *args)
-    mypy(suite)
+
+    if suite != "generali":
+        mypy(suite)
 
 
 args, cli_flags = parser.parse_known_args()

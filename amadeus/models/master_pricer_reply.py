@@ -5071,7 +5071,9 @@ class TransportIdentifierType:
 
 @dataclass
 class TravelProductType:
-    """Contains flight travel (date, time, flight number,...) and posting avaibility information
+    """
+    Contains flight travel (date, time, flight number,...) and posting avaibility
+    information.
 
     :ivar product_date_time: Date and time of departure and arrival
     :ivar location: Location of departure and arrival

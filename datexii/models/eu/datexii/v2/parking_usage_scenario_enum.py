@@ -4,7 +4,8 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
 class ParkingUsageScenarioEnum(Enum):
-    """Types of parking usage (park &amp; ride, kiss &amp; ride, ...)
+    """
+    Types of parking usage (park &amp; ride, kiss &amp; ride, ...)
 
     :cvar TRUCK_PARKING: The parking site is designed for lorries (other
         vehicles are allowed as well).
