@@ -5,7 +5,7 @@ from lxml import etree
 from travelport.models import LowFareSearchReq
 
 cwd = Path(__file__).parent.absolute()
-xsd_location = str(cwd.joinpath("schemas/air_v48_0/AirReqRsp.xsd"))
+xsd_location = str(cwd.joinpath("schemas/air_v52_0/AirReqRsp.xsd"))
 
 
 def test_bindings(json_parser, xml_serializer):
@@ -19,8 +19,8 @@ def test_bindings(json_parser, xml_serializer):
     xml = xml_serializer.render(
         obj=obj,
         ns_map={
-            None: "http://www.travelport.com/schema/air_v48_0",
-            "ns1": "http://www.travelport.com/schema/common_v48_0",
+            None: "http://www.travelport.com/schema/air_v52_0",
+            "ns1": "http://www.travelport.com/schema/common_v52_0",
         },
     )
 

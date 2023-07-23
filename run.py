@@ -17,7 +17,7 @@ config = {
     "reqif": "reqif/schemas/reqif.xsd",
     "sabre": "sabre/schemas",
     "spacex": "spacex/launches.json",
-    "travelport": "travelport/schemas/air_v48_0/Air.wsdl",
+    "travelport": "travelport/schemas -r",
     "ubl": "ubl/schemas/maindoc",
     "voko": "voko/dtd",
     "xcbl": "xcbl/schemas",

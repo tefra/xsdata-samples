@@ -1,0 +1,23 @@
+from __future__ import annotations
+from dataclasses import dataclass, field
+
+__NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
+
+
+@dataclass
+class HotelChain:
+    """
+    The hotel chain code.
+    """
+    class Meta:
+        namespace = "http://www.travelport.com/schema/hotel_v52_0"
+
+    code: None | str = field(
+        default=None,
+        metadata={
+            "name": "Code",
+            "type": "Attribute",
+            "required": True,
+            "length": 2,
+        }
+    )

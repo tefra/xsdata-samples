@@ -3,7 +3,7 @@
   <Output maxLineLength="79" subscriptableTypes="true" unionType="true">
     <Package>travelport.models</Package>
     <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
-    <Structure>namespaces</Structure>
+    <Structure>clusters</Structure>
     <DocstringStyle>NumPy</DocstringStyle>
     <FilterStrategy>allGlobals</FilterStrategy>
     <RelativeImports>false</RelativeImports>
@@ -21,11 +21,6 @@
     <PackageName case="snakeCase" safePrefix="pkg"/>
   </Conventions>
   <Substitutions>
-    <Substitution type="package" search="http://www.travelport.com/schema/common_v48_0" replace="common"/>
-    <Substitution type="package" search="http://www.travelport.com/schema/rail_v48_0" replace="rail"/>
-    <Substitution type="package" search="http://www.travelport.com/schema/air_v48_0" replace="air"/>
-    <Substitution type="package" search="http://www.travelport.com/service/air_v48_0" replace="services"/>
-    <Substitution type="package" search="http://www.travelport.com/soa/common/security/SessionContext_v1" replace="session"/>
   </Substitutions>
   <Extensions/>
 </Config>

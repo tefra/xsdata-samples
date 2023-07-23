@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LowFareSearchReq xmlns="http://www.travelport.com/schema/air_v48_0" xmlns:ns1="http://www.travelport.com/schema/common_v48_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" CheckOBFees="All">
+<LowFareSearchReq xmlns="http://www.travelport.com/schema/air_v52_0" xmlns:ns1="http://www.travelport.com/schema/common_v52_0" TraceId="c0716df8-12f5-11ea-9d04-000c293dfa64" TargetBranch="P107695" CheckOBFees="All">
   <ns1:BillingPointOfSaleInfo OriginApplication="UAPI"/>
   <SearchAirLeg>
     <SearchOrigin>
@@ -22,7 +22,7 @@
   <ns1:SearchPassenger Code="CNN" Age="7"/>
   <ns1:SearchPassenger Code="CNN" Age="7"/>
   <ns1:SearchPassenger Code="INF" Age="0"/>
-  <AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes"/>
+  <AirPricingModifiers CurrencyType="EUR" FaresIndicator="PublicAndPrivateFares" ETicketability="Yes" ReturnServices="true"/>
   <ns1:FormOfPayment Type="Credit">
     <ns1:CreditCard Type="CA" Number="5234123412341234" ExpDate="2020-11" Name="Thug Life" CVV="123"/>
   </ns1:FormOfPayment>
