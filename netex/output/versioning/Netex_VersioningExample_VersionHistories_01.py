@@ -14,6 +14,7 @@ from netex.models.modification_enumeration import ModificationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
 from netex.models.private_code import PrivateCode
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay

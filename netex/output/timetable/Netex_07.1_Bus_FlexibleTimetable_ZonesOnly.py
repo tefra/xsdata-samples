@@ -24,6 +24,7 @@ from netex.models.flexible_line import FlexibleLine
 from netex.models.flexible_line_ref import FlexibleLineRef
 from netex.models.flexible_line_type_enumeration import FlexibleLineTypeEnumeration
 from netex.models.flexible_stop_place import FlexibleStopPlace
+from netex.models.flexible_stop_place_version_structure import FlexibleStopPlaceVersionStructure
 from netex.models.flexible_stop_places_in_frame_rel_structure import FlexibleStopPlacesInFrameRelStructure
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.line_refs_rel_structure import LineRefsRelStructure

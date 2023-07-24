@@ -1,3 +1,10 @@
+from ubl.models.common.ubl_xad_esv132_2_1 import AnyType
+from ubl.models.common.ubl_xad_esv132_2_1 import QualifyingProperties
+from ubl.models.common.ubl_xad_esv132_2_1 import SignedPropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import SignedSignaturePropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import UnsignedPropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import UnsignedSignaturePropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import XadEstimeStampType
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import CanonicalizationMethod
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import DigestMethod
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import KeyInfo
@@ -11,7 +18,7 @@ from ubl.models.common.ubl_xmldsig_core_schema_2_1 import SignatureValue
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import SignedInfo
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import X509Data
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import X509IssuerSerialType
-from xsdata.formats.dataclass.models.generics import AnyElement
+from xsdata.models.datatype import XmlDateTime
 
 
 obj = Signature(
@@ -76,58 +83,30 @@ obj = Signature(
     object_value=[
         Object(
             content=[
-                AnyElement(
-                    qname="{http://uri.etsi.org/01903/v1.3.2#}QualifyingProperties",
-                    text="",
-                    children=[
-                        AnyElement(
-                            qname="{http://uri.etsi.org/01903/v1.3.2#}SignedProperties",
-                            text="",
-                            children=[
-                                AnyElement(
-                                    qname="{http://uri.etsi.org/01903/v1.3.2#}SignedSignatureProperties",
-                                    text="",
-                                    children=[
-                                        AnyElement(
-                                            qname="{http://uri.etsi.org/01903/v1.3.2#}SigningTime",
-                                            text="2010-11-26T18:00:00Z"
-                                        ),
-                                    ]
-                                ),
-                            ],
-                            attributes={
-                                "Id": "xades-test-s",
-                            }
+                QualifyingProperties(
+                    signed_properties=SignedPropertiesType(
+                        signed_signature_properties=SignedSignaturePropertiesType(
+                            signing_time=XmlDateTime(2010, 11, 26, 18, 0, 0, 0, 0)
                         ),
-                        AnyElement(
-                            qname="{http://uri.etsi.org/01903/v1.3.2#}UnsignedProperties",
-                            text="",
-                            children=[
-                                AnyElement(
-                                    qname="{http://uri.etsi.org/01903/v1.3.2#}UnsignedSignatureProperties",
-                                    text="",
-                                    children=[
-                                        AnyElement(
-                                            qname="{http://uri.etsi.org/01903/v1.3.2#}SignatureTimeStamp",
-                                            text="",
-                                            children=[
-                                                AnyElement(
-                                                    qname="{http://uri.etsi.org/01903/v1.3.2#}XMLTimeStamp",
-                                                    text="2010-11-26T18:00:00Z"
-                                                ),
+                        id="xades-test-s"
+                    ),
+                    unsigned_properties=UnsignedPropertiesType(
+                        unsigned_signature_properties=UnsignedSignaturePropertiesType(
+                            signature_time_stamp=[
+                                XadEstimeStampType(
+                                    xmltime_stamp=[
+                                        AnyType(
+                                            content=[
+                                                "2010-11-26T18:00:00Z",
                                             ]
                                         ),
                                     ]
                                 ),
-                            ],
-                            attributes={
-                                "Id": "xades-test-u",
-                            }
+                            ]
                         ),
-                    ],
-                    attributes={
-                        "Target": "#addedSig",
-                    }
+                        id="xades-test-u"
+                    ),
+                    target="#addedSig"
                 ),
             ]
         ),

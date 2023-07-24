@@ -41,42 +41,21 @@
                   <ds:DigestValue>rcWlUoFmv2beSz8h5BKpxBv/IWQ=</ds:DigestValue>
                 </ds:Reference>
               </ds:SignedInfo>
-              <ds:SignatureValue Id="addedSigVal">nUGjDSgnAizCE4n8VsJhM1DljVf+lmQqKcXiuWkM2xUaRFoni4VUiku7BzC4I8w2
-NbDjhusexvxIzN5IZf8uY4gXn4OrNuWsYZT/U73qj0T8N32jsHpeyXFMsuUq5kgG
-m4MqK4QcI8/VnSYqfGOF/wCJi0GDM/sccLbB7tKgX8Y=</ds:SignatureValue>
+              <ds:SignatureValue Id="addedSigVal">nUGjDSgnAizCE4n8VsJhM1DljVf+lmQqKcXiuWkM2xUaRFoni4VUiku7BzC4I8w2NbDjhusexvxIzN5IZf8uY4gXn4OrNuWsYZT/U73qj0T8N32jsHpeyXFMsuUq5kgGm4MqK4QcI8/VnSYqfGOF/wCJi0GDM/sccLbB7tKgX8Y=</ds:SignatureValue>
               <ds:KeyInfo>
                 <ds:KeyValue>
                   <ds:RSAKeyValue>
-                    <ds:Modulus>
-uXEmg0yTZN1Yf7IuwDcf+MhHjILcPtFXVW3FRFpy5ymWDDmoOddPJrG3S6zHcCbu
-kdqJR+fIHhpGauMifTbC4k9F0UNgT0DSzxoOkVMFwv/pREK28lvnDZD1rGnS9GKt
-cyOMVbGe5BSl49iBI5xhpUtmRYxVR/RAxSUmCrfZFoM=
-</ds:Modulus>
-                    <ds:Exponent>
-AQAB
-</ds:Exponent>
+                    <ds:Modulus>uXEmg0yTZN1Yf7IuwDcf+MhHjILcPtFXVW3FRFpy5ymWDDmoOddPJrG3S6zHcCbukdqJR+fIHhpGauMifTbC4k9F0UNgT0DSzxoOkVMFwv/pREK28lvnDZD1rGnS9GKtcyOMVbGe5BSl49iBI5xhpUtmRYxVR/RAxSUmCrfZFoM=</ds:Modulus>
+                    <ds:Exponent>AQAB</ds:Exponent>
                   </ds:RSAKeyValue>
                 </ds:KeyValue>
                 <ds:X509Data>
-                  <ds:X509Certificate>MIICcTCCAdoCCQDzGe/d5rwBKzANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJV
-UzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEO
-MAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVl
-MQ8wDQYDVQQDDAZVQkwgVEMwHhcNMTMwMjE1MTg1OTQ2WhcNMTMwMzE3MTg1OTQ2
-WjB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UE
-BwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNo
-bmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwgZ8wDQYJKoZIhvcNAQEB
-BQADgY0AMIGJAoGBALlxJoNMk2TdWH+yLsA3H/jIR4yC3D7RV1VtxURacucplgw5
-qDnXTyaxt0usx3Am7pHaiUfnyB4aRmrjIn02wuJPRdFDYE9A0s8aDpFTBcL/6URC
-tvJb5w2Q9axp0vRirXMjjFWxnuQUpePYgSOcYaVLZkWMVUf0QMUlJgq32RaDAgMB
-AAEwDQYJKoZIhvcNAQEFBQADgYEAVtqeUFJQa64pqCYJAxflCGdOKFBX2p8LCo3K
-eupnQC9UvLdOxuS8fAjzo40FQG687/7NGcZ30ysVjy/s3XyqxDFLln601vI470i9
-6Gip3cBF8WHB5lUnvaT9dNEYFDBBR22glEnY9SA8y8EbbO+Cy8hIQEzULoVOkr/a
-JfeH5w4=</ds:X509Certificate>
-                  <ds:X509SubjectName>CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US</ds:X509SubjectName>
                   <ds:X509IssuerSerial>
                     <ds:X509IssuerName>CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US</ds:X509IssuerName>
                     <ds:X509SerialNumber>17517295961972146475</ds:X509SerialNumber>
                   </ds:X509IssuerSerial>
+                  <ds:X509SubjectName>CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US</ds:X509SubjectName>
+                  <ds:X509Certificate>MIICcTCCAdoCCQDzGe/d5rwBKzANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwHhcNMTMwMjE1MTg1OTQ2WhcNMTMwMzE3MTg1OTQ2WjB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALlxJoNMk2TdWH+yLsA3H/jIR4yC3D7RV1VtxURacucplgw5qDnXTyaxt0usx3Am7pHaiUfnyB4aRmrjIn02wuJPRdFDYE9A0s8aDpFTBcL/6URCtvJb5w2Q9axp0vRirXMjjFWxnuQUpePYgSOcYaVLZkWMVUf0QMUlJgq32RaDAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAVtqeUFJQa64pqCYJAxflCGdOKFBX2p8LCo3KeupnQC9UvLdOxuS8fAjzo40FQG687/7NGcZ30ysVjy/s3XyqxDFLln601vI470i96Gip3cBF8WHB5lUnvaT9dNEYFDBBR22glEnY9SA8y8EbbO+Cy8hIQEzULoVOkr/aJfeH5w4=</ds:X509Certificate>
                 </ds:X509Data>
               </ds:KeyInfo>
               <ds:Object>

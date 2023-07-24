@@ -42,6 +42,7 @@ from netex.models.flexible_line_type_enumeration import FlexibleLineTypeEnumerat
 from netex.models.flexible_stop_assignment import FlexibleStopAssignment
 from netex.models.flexible_stop_place import FlexibleStopPlace
 from netex.models.flexible_stop_place_ref import FlexibleStopPlaceRef
+from netex.models.flexible_stop_place_version_structure import FlexibleStopPlaceVersionStructure
 from netex.models.flexible_stop_places_in_frame_rel_structure import FlexibleStopPlacesInFrameRelStructure
 from netex.models.hail_and_ride_area import HailAndRideArea
 from netex.models.hail_and_ride_area_ref import HailAndRideAreaRef

@@ -29,6 +29,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.network_ref import NetworkRef
+from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
 from netex.models.operator import Operator
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration

@@ -86,9 +86,34 @@ from ubl.models.common.ubl_common_extension_components_2_1 import ExtensionConte
 from ubl.models.common.ubl_common_extension_components_2_1 import ExtensionUri
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextension
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
+from ubl.models.common.ubl_common_signature_components_2_1 import UbldocumentSignatures
+from ubl.models.common.ubl_signature_aggregate_components_2_1 import SignatureInformation
+from ubl.models.common.ubl_xad_esv132_2_1 import AnyType
+from ubl.models.common.ubl_xad_esv132_2_1 import QualifyingProperties
+from ubl.models.common.ubl_xad_esv132_2_1 import SignedPropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import SignedSignaturePropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import UnsignedPropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import UnsignedSignaturePropertiesType
+from ubl.models.common.ubl_xad_esv132_2_1 import XadEstimeStampType
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import CanonicalizationMethod
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import DigestMethod
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import KeyInfo
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import KeyValue
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Object
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Reference
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import RsakeyValue
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Signature
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import SignatureMethod
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import SignatureValue
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import SignedInfo
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Transform
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Transforms
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import X509Data
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import X509IssuerSerialType
 from ubl.models.maindoc.ubl_invoice_2_1 import Invoice
 from xsdata.formats.dataclass.models.generics import AnyElement
 from xsdata.models.datatype import XmlDate
+from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlTime
 
 
@@ -119,223 +144,114 @@ obj = Invoice(
             ),
             Ublextension(
                 extension_content=ExtensionContent(
-                    other_element=AnyElement(
-                        qname="{urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2}UBLDocumentSignatures",
-                        text="",
-                        children=[
-                            AnyElement(
-                                qname="{urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2}SignatureInformation",
-                                text="",
-                                children=[
-                                    AnyElement(
-                                        qname="{http://www.w3.org/2000/09/xmldsig#}Signature",
-                                        text="",
-                                        children=[
-                                            AnyElement(
-                                                qname="{http://www.w3.org/2000/09/xmldsig#}SignedInfo",
-                                                text="",
-                                                children=[
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}CanonicalizationMethod",
-                                                        text="",
-                                                        attributes={
-                                                            "Algorithm": "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
-                                                        }
-                                                    ),
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}SignatureMethod",
-                                                        text="",
-                                                        attributes={
-                                                            "Algorithm": "http://www.w3.org/2000/09/xmldsig#rsa-sha1",
-                                                        }
-                                                    ),
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}Reference",
-                                                        text="",
-                                                        children=[
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}Transforms",
-                                                                text="",
-                                                                children=[
-                                                                    AnyElement(
-                                                                        qname="{http://www.w3.org/2000/09/xmldsig#}Transform",
-                                                                        text="",
-                                                                        children=[
-                                                                            AnyElement(
-                                                                                qname="{http://www.w3.org/2000/09/xmldsig#}XPath",
-                                                                                text="&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures |&#10;                  here()/ancestor::sig:UBLDocumentSignatures[1]) &gt;&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures)&#10;          "
-                                                                            ),
-                                                                        ],
-                                                                        attributes={
-                                                                            "Algorithm": "http://www.w3.org/TR/1999/REC-xpath-19991116",
-                                                                        }
-                                                                    ),
-                                                                ]
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}DigestMethod",
-                                                                text="",
-                                                                attributes={
-                                                                    "Algorithm": "http://www.w3.org/2000/09/xmldsig#sha1",
-                                                                }
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}DigestValue",
-                                                                text="d7OYkPHx+k+Qg+tBX2RfdzaBuYs="
-                                                            ),
-                                                        ],
-                                                        attributes={
-                                                            "URI": "",
-                                                        }
-                                                    ),
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}Reference",
-                                                        text="",
-                                                        children=[
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}DigestMethod",
-                                                                text="",
-                                                                attributes={
-                                                                    "Algorithm": "http://www.w3.org/2000/09/xmldsig#sha1",
-                                                                }
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}DigestValue",
-                                                                text="rcWlUoFmv2beSz8h5BKpxBv/IWQ="
-                                                            ),
-                                                        ],
-                                                        attributes={
-                                                            "URI": "#xades-test-s",
-                                                        }
-                                                    ),
-                                                ]
+                    other_element=UbldocumentSignatures(
+                        signature_information=[
+                            SignatureInformation(
+                                signature=Signature(
+                                    signed_info=SignedInfo(
+                                        canonicalization_method=CanonicalizationMethod(
+                                            algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+                                            content=[]
+                                        ),
+                                        signature_method=SignatureMethod(
+                                            algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+                                            content=[]
+                                        ),
+                                        reference=[
+                                            Reference(
+                                                transforms=Transforms(
+                                                    transform=[
+                                                        Transform(
+                                                            algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116",
+                                                            content=[
+                                                                AnyElement(
+                                                                    qname="{http://www.w3.org/2000/09/xmldsig#}XPath",
+                                                                    text="&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures |&#10;                  here()/ancestor::sig:UBLDocumentSignatures[1]) &gt;&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures)&#10;          "
+                                                                ),
+                                                            ]
+                                                        ),
+                                                    ]
+                                                ),
+                                                digest_method=DigestMethod(
+                                                    algorithm="http://www.w3.org/2000/09/xmldsig#sha1",
+                                                    content=[]
+                                                ),
+                                                digest_value=b"w\xb3\x98\x90\xf1\xf1\xfaO\x90\x83\xebA_d_w6\x81\xb9\x8b",
+                                                uri=""
                                             ),
-                                            AnyElement(
-                                                qname="{http://www.w3.org/2000/09/xmldsig#}SignatureValue",
-                                                text="nUGjDSgnAizCE4n8VsJhM1DljVf+lmQqKcXiuWkM2xUaRFoni4VUiku7BzC4I8w2&#10;NbDjhusexvxIzN5IZf8uY4gXn4OrNuWsYZT/U73qj0T8N32jsHpeyXFMsuUq5kgG&#10;m4MqK4QcI8/VnSYqfGOF/wCJi0GDM/sccLbB7tKgX8Y=",
-                                                attributes={
-                                                    "Id": "addedSigVal",
-                                                }
+                                            Reference(
+                                                digest_method=DigestMethod(
+                                                    algorithm="http://www.w3.org/2000/09/xmldsig#sha1",
+                                                    content=[]
+                                                ),
+                                                digest_value=b"\xad\xc5\xa5R\x81f\xbff\xdeK?!\xe4\x12\xa9\xc4\x1b\xff!d",
+                                                uri="#xades-test-s"
                                             ),
-                                            AnyElement(
-                                                qname="{http://www.w3.org/2000/09/xmldsig#}KeyInfo",
-                                                text="",
-                                                children=[
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}KeyValue",
-                                                        text="",
-                                                        children=[
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}RSAKeyValue",
-                                                                text="",
-                                                                children=[
-                                                                    AnyElement(
-                                                                        qname="{http://www.w3.org/2000/09/xmldsig#}Modulus",
-                                                                        text="&#10;uXEmg0yTZN1Yf7IuwDcf+MhHjILcPtFXVW3FRFpy5ymWDDmoOddPJrG3S6zHcCbu&#10;kdqJR+fIHhpGauMifTbC4k9F0UNgT0DSzxoOkVMFwv/pREK28lvnDZD1rGnS9GKt&#10;cyOMVbGe5BSl49iBI5xhpUtmRYxVR/RAxSUmCrfZFoM=&#10;"
-                                                                    ),
-                                                                    AnyElement(
-                                                                        qname="{http://www.w3.org/2000/09/xmldsig#}Exponent",
-                                                                        text="&#10;AQAB&#10;"
-                                                                    ),
-                                                                ]
-                                                            ),
-                                                        ]
-                                                    ),
-                                                    AnyElement(
-                                                        qname="{http://www.w3.org/2000/09/xmldsig#}X509Data",
-                                                        text="",
-                                                        children=[
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}X509Certificate",
-                                                                text="MIICcTCCAdoCCQDzGe/d5rwBKzANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJV&#10;UzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEO&#10;MAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVl&#10;MQ8wDQYDVQQDDAZVQkwgVEMwHhcNMTMwMjE1MTg1OTQ2WhcNMTMwMzE3MTg1OTQ2&#10;WjB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UE&#10;BwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNo&#10;bmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwgZ8wDQYJKoZIhvcNAQEB&#10;BQADgY0AMIGJAoGBALlxJoNMk2TdWH+yLsA3H/jIR4yC3D7RV1VtxURacucplgw5&#10;qDnXTyaxt0usx3Am7pHaiUfnyB4aRmrjIn02wuJPRdFDYE9A0s8aDpFTBcL/6URC&#10;tvJb5w2Q9axp0vRirXMjjFWxnuQUpePYgSOcYaVLZkWMVUf0QMUlJgq32RaDAgMB&#10;AAEwDQYJKoZIhvcNAQEFBQADgYEAVtqeUFJQa64pqCYJAxflCGdOKFBX2p8LCo3K&#10;eupnQC9UvLdOxuS8fAjzo40FQG687/7NGcZ30ysVjy/s3XyqxDFLln601vI470i9&#10;6Gip3cBF8WHB5lUnvaT9dNEYFDBBR22glEnY9SA8y8EbbO+Cy8hIQEzULoVOkr/a&#10;JfeH5w4="
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}X509SubjectName",
-                                                                text="CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US"
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://www.w3.org/2000/09/xmldsig#}X509IssuerSerial",
-                                                                text="",
-                                                                children=[
-                                                                    AnyElement(
-                                                                        qname="{http://www.w3.org/2000/09/xmldsig#}X509IssuerName",
-                                                                        text="CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US"
-                                                                    ),
-                                                                    AnyElement(
-                                                                        qname="{http://www.w3.org/2000/09/xmldsig#}X509SerialNumber",
-                                                                        text="17517295961972146475"
-                                                                    ),
-                                                                ]
-                                                            ),
-                                                        ]
-                                                    ),
-                                                ]
-                                            ),
-                                            AnyElement(
-                                                qname="{http://www.w3.org/2000/09/xmldsig#}Object",
-                                                text="",
-                                                children=[
-                                                    AnyElement(
-                                                        qname="{http://uri.etsi.org/01903/v1.3.2#}QualifyingProperties",
-                                                        text="",
-                                                        children=[
-                                                            AnyElement(
-                                                                qname="{http://uri.etsi.org/01903/v1.3.2#}SignedProperties",
-                                                                text="",
-                                                                children=[
-                                                                    AnyElement(
-                                                                        qname="{http://uri.etsi.org/01903/v1.3.2#}SignedSignatureProperties",
-                                                                        text="",
-                                                                        children=[
-                                                                            AnyElement(
-                                                                                qname="{http://uri.etsi.org/01903/v1.3.2#}SigningTime",
-                                                                                text="2010-11-26T18:00:00Z"
-                                                                            ),
-                                                                        ]
-                                                                    ),
-                                                                ],
-                                                                attributes={
-                                                                    "Id": "xades-test-s",
-                                                                }
-                                                            ),
-                                                            AnyElement(
-                                                                qname="{http://uri.etsi.org/01903/v1.3.2#}UnsignedProperties",
-                                                                text="",
-                                                                children=[
-                                                                    AnyElement(
-                                                                        qname="{http://uri.etsi.org/01903/v1.3.2#}UnsignedSignatureProperties",
-                                                                        text="",
-                                                                        children=[
-                                                                            AnyElement(
-                                                                                qname="{http://uri.etsi.org/01903/v1.3.2#}SignatureTimeStamp",
-                                                                                text="",
-                                                                                children=[
-                                                                                    AnyElement(
-                                                                                        qname="{http://uri.etsi.org/01903/v1.3.2#}XMLTimeStamp",
-                                                                                        text="2010-11-26T18:00:00Z"
-                                                                                    ),
-                                                                                ]
-                                                                            ),
-                                                                        ]
-                                                                    ),
-                                                                ],
-                                                                attributes={
-                                                                    "Id": "xades-test-u",
-                                                                }
-                                                            ),
-                                                        ],
-                                                        attributes={
-                                                            "Target": "#addedSig",
-                                                        }
-                                                    ),
-                                                ]
-                                            ),
-                                        ],
-                                        attributes={
-                                            "Id": "addedSig",
-                                        }
+                                        ]
                                     ),
-                                ]
+                                    signature_value=SignatureValue(
+                                        value=b"\x9dA\xa3\r("\x02,\xc2\x13\x89\xfcV\xc2a3P\xe5\x8dW\xfe\x96d*)\xc5\xe2\xb9i\x0c\xdb\x15\x1aDZ"\x8b\x85T\x8aK\xbb\x070\xb8#\xcc65\xb0\xe3\x86\xeb\x1e\xc6\xfcH\xcc\xdeHe\xff.c\x88\x17\x9f\x83\xab6\xe5\xaca\x94\xffS\xbd\xea\x8fD\xfc7}\xa3\xb0z^\xc9qL\xb2\xe5*\xe6H\x06\x9b\x83*+\x84\x1c#\xcf\xd5\x9d&*|c\x85\xff\x00\x89\x8bA\x833\xfb\x1cp\xb6\xc1\xee\xd2\xa0_\xc6",
+                                        id="addedSigVal"
+                                    ),
+                                    key_info=KeyInfo(
+                                        content=[
+                                            KeyValue(
+                                                content=[
+                                                    RsakeyValue(
+                                                        modulus=b"\xb9q&\x83L\x93d\xddX\x7f\xb2.\xc07\x1f\xf8\xc8G\x8c\x82\xdc>\xd1WUm\xc5DZr\xe7)\x96\x0c9\xa89\xd7O&\xb1\xb7K\xac\xc7p&\xee\x91\xda\x89G\xe7\xc8\x1e\x1aFj\xe3"}6\xc2\xe2OE\xd1C`O@\xd2\xcf\x1a\x0e\x91S\x05\xc2\xff\xe9DB\xb6\xf2[\xe7\r\x90\xf5\xaci\xd2\xf4b\xads#\x8cU\xb1\x9e\xe4\x14\xa5\xe3\xd8\x81#\x9ca\xa5KfE\x8cUG\xf4@\xc5%&\n\xb7\xd9\x16\x83",
+                                                        exponent=b"\x01\x00\x01"
+                                                    ),
+                                                ]
+                                            ),
+                                            X509Data(
+                                                x509_issuer_serial=[
+                                                    X509IssuerSerialType(
+                                                        x509_issuer_name="CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US",
+                                                        x509_serial_number=17517295961972146475
+                                                    ),
+                                                ],
+                                                x509_subject_name=[
+                                                    "CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US",
+                                                ],
+                                                x509_certificate=[
+                                                    b"0\x82\x02q0\x82\x01\xda\x02\t\x00\xf3\x19\xef\xdd\xe6\xbc\x01+0\r\x06\t*\x86H\x86\xf7\r\x01\x01\x05\x05\x000}1\x0b0\t\x06\x03U\x04\x06\x13\x02US1\x160\x14\x06\x03U\x04\x08\x0c\rMassachusetts1\x130\x11\x06\x03U\x04\x07\x0c\nBurlington1\x0e0\x0c\x06\x03U\x04\n\x0c\x05OASIS1 0\x1e\x06\x03U\x04\x0b\x0c\x17UBL Technical Committee1\x0f0\r\x06\x03U\x04\x03\x0c\x06UBL TC0\x1e\x17\r130215185946Z\x17\r130317185946Z0}1\x0b0\t\x06\x03U\x04\x06\x13\x02US1\x160\x14\x06\x03U\x04\x08\x0c\rMassachusetts1\x130\x11\x06\x03U\x04\x07\x0c\nBurlington1\x0e0\x0c\x06\x03U\x04\n\x0c\x05OASIS1 0\x1e\x06\x03U\x04\x0b\x0c\x17UBL Technical Committee1\x0f0\r\x06\x03U\x04\x03\x0c\x06UBL TC0\x81\x9f0\r\x06\t*\x86H\x86\xf7\r\x01\x01\x01\x05\x00\x03\x81\x8d\x000\x81\x89\x02\x81\x81\x00\xb9q&\x83L\x93d\xddX\x7f\xb2.\xc07\x1f\xf8\xc8G\x8c\x82\xdc>\xd1WUm\xc5DZr\xe7)\x96\x0c9\xa89\xd7O&\xb1\xb7K\xac\xc7p&\xee\x91\xda\x89G\xe7\xc8\x1e\x1aFj\xe3"}6\xc2\xe2OE\xd1C`O@\xd2\xcf\x1a\x0e\x91S\x05\xc2\xff\xe9DB\xb6\xf2[\xe7\r\x90\xf5\xaci\xd2\xf4b\xads#\x8cU\xb1\x9e\xe4\x14\xa5\xe3\xd8\x81#\x9ca\xa5KfE\x8cUG\xf4@\xc5%&\n\xb7\xd9\x16\x83\x02\x03\x01\x00\x010\r\x06\t*\x86H\x86\xf7\r\x01\x01\x05\x05\x00\x03\x81\x81\x00V\xda\x9ePRPk\xae)\xa8&\t\x03\x17\xe5\x08gN(PW\xda\x9f\x0b\n\x8d\xcaz\xeag@/T\xbc\xb7N\xc6\xe4\xbc|\x08\xf3\xa3\x8d\x05@n\xbc\xef\xfe\xcd\x19\xc6w\xd3+\x15\x8f/\xec\xdd|\xaa\xc41K\x96~\xb4\xd6\xf28\xefH\xbd\xe8h\xa9\xdd\xc0E\xf1a\xc1\xe6U\"\xbd\xa4\xfdt\xd1\x18\x140AGm\xa0\x94I\xd8\xf5 <\xcb\xc1\x1bl\xef\x82\xcb\xc8H@L\xd4.\x85N\x92\xbf\xda%\xf7\x87\xe7\x0e",
+                                                ]
+                                            ),
+                                        ]
+                                    ),
+                                    object_value=[
+                                        Object(
+                                            content=[
+                                                QualifyingProperties(
+                                                    signed_properties=SignedPropertiesType(
+                                                        signed_signature_properties=SignedSignaturePropertiesType(
+                                                            signing_time=XmlDateTime(2010, 11, 26, 18, 0, 0, 0, 0)
+                                                        ),
+                                                        id="xades-test-s"
+                                                    ),
+                                                    unsigned_properties=UnsignedPropertiesType(
+                                                        unsigned_signature_properties=UnsignedSignaturePropertiesType(
+                                                            signature_time_stamp=[
+                                                                XadEstimeStampType(
+                                                                    xmltime_stamp=[
+                                                                        AnyType(
+                                                                            content=[
+                                                                                "2010-11-26T18:00:00Z",
+                                                                            ]
+                                                                        ),
+                                                                    ]
+                                                                ),
+                                                            ]
+                                                        ),
+                                                        id="xades-test-u"
+                                                    ),
+                                                    target="#addedSig"
+                                                ),
+                                            ]
+                                        ),
+                                    ],
+                                    id="addedSig"
+                                )
                             ),
                         ]
                     )

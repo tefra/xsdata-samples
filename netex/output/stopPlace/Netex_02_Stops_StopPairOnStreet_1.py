@@ -19,6 +19,7 @@ from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
 from netex.models.passenger_information_equipment import PassengerInformationEquipment
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
