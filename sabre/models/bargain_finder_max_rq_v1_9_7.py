@@ -8985,8 +8985,8 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
                 date.
             minus: Number of alternate dates after requested travel
                 date.
-            validate: Flag telling if dates within the specified range
-                should be processed in the validate path.
+            validate_value: Flag telling if dates within the specified
+                range should be processed in the validate path.
         """
         nbr_of_days: None | int = field(
             default=None,
@@ -9009,7 +9009,7 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
                 "type": "Attribute",
             }
         )
-        validate: None | bool = field(
+        validate_value: None | bool = field(
             default=None,
             metadata={
                 "name": "Validate",
@@ -10297,8 +10297,9 @@ class OtaAirLowFareSearchRq:
                         travel date.
                     minus: Number of alternate dates after requested
                         travel date.
-                    validate: Flag telling if dates within the specified
-                        range should be processed in the validate path.
+                    validate_value: Flag telling if dates within the
+                        specified range should be processed in the
+                        validate path.
                 """
                 nbr_of_days: None | int = field(
                     default=None,
@@ -10321,7 +10322,7 @@ class OtaAirLowFareSearchRq:
                         "type": "Attribute",
                     }
                 )
-                validate: None | bool = field(
+                validate_value: None | bool = field(
                     default=None,
                     metadata={
                         "name": "Validate",
