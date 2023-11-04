@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -18,7 +18,7 @@ class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructur
     class Meta:
         name = "JourneyWaitTime_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

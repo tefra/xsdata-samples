@@ -50,7 +50,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         }
     )
-    month_of_year_or_day_of_month_or_day_of_year: Optional[object] = field(
+    month_of_year_or_day_of_month_or_day_of_year: Optional[XmlPeriod] = field(
         default=None,
         metadata={
             "type": "Elements",

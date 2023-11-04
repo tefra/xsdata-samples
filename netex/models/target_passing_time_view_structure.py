@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .headway_interval_structure import HeadwayIntervalStructure
 from .passing_time_view_structure import PassingTimeViewStructure
@@ -12,7 +12,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "TargetPassingTime_ViewStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[XmlTime, XmlDuration, int]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

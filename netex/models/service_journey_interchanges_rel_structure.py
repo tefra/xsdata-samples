@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .service_journey_interchange import ServiceJourneyInterchange
 from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
 from .service_journey_interchange_view import ServiceJourneyInterchangeView
@@ -13,7 +13,7 @@ class ServiceJourneyInterchangesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "serviceJourneyInterchanges_RelStructure"
 
-    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[object] = field(
+    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[Union[ServiceJourneyInterchangeView, ServiceJourneyInterchangeRef, ServiceJourneyInterchange]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

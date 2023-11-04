@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .entrance import Entrance
 from .entrance_ref import EntranceRef
@@ -26,7 +26,7 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteEntrances_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[VehicleEntranceRef, ParkingEntranceForVehicles, ParkingEntranceRef, ParkingPassengerEntrance, PointOfInterestEntranceRef, PointOfInterestVehicleEntrance, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, PointOfInterestEntrance, StopPlaceVehicleEntrance, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, StopPlaceEntrance, ParkingPassengerEntranceRef, Entrance]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

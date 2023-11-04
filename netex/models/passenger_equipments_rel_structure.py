@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .help_point_equipment import HelpPointEquipment
@@ -23,7 +23,7 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerEquipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[HelpPointEquipmentRef, PassengerSafetyEquipment, SanitaryEquipmentRef, AccessVehicleEquipmentRef, PassengerEquipmentRef, RubbishDisposalEquipment, WheelchairVehicleRef, PassengerInformationEquipment, HelpPointEquipment, SanitaryEquipment, RubbishDisposalEquipmentRef, PassengerSafetyEquipmentRef, VehicleEquipmentRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

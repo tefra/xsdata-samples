@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .class_of_use_ref import ClassOfUseRef
 from .companion_profile_ref import CompanionProfileRef
@@ -78,7 +78,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref_or_group_of_operators_ref: Optional[object] = field(
+    operator_ref_or_group_of_operators_ref: Optional[Union[GroupOfOperatorsRef, OperatorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -128,7 +128,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    companion_profile_ref_or_user_profile_ref: Optional[object] = field(
+    companion_profile_ref_or_user_profile_ref: Optional[Union[CompanionProfileRef, UserProfileRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

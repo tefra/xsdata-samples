@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -80,7 +80,7 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitEquipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[StaircaseEquipment, TravelatorEquipment, AssistanceBookingService, RampEquipment, SeatingEquipment, PlaceSign, MeetingPointServiceRef, GeneralSign, AssistanceService, RoughSurface, ComplaintsServiceRef, AccessEquipment, CustomerService, VehicleChargingEquipment, WheelchairVehicleEquipment, PassengerInformationEquipmentRef, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, PassengerSafetyEquipment, SanitaryEquipmentRef, EntranceEquipment, LocalServiceRef, HireServiceRef, AccessVehicleEquipmentRef, RetailDevice, RubbishDisposalEquipment, PassengerInformationEquipment, LiftEquipment, MoneyService, RetailService, TicketingService, CrossingEquipment, PassengerSafetyEquipmentRef, TicketingEquipment, TrolleyStandEquipment, ShelterEquipment, VehicleEquipmentRef, CycleStorageEquipment, LostPropertyServiceRef, HelpPointEquipmentRef, TicketingServiceRef, CommunicationService, HireService, LuggageServiceRef, MeetingPointService, OtherPlaceEquipment, PlaceLighting, AssistanceBookingServiceRef, LeftLuggageService, EscalatorEquipment, TicketValidatorEquipment, CustomerServiceRef, CateringServiceRef, HeadingSign, ComplaintsService, LuggageService, CateringService, LeftLuggageServiceRef, LostPropertyService, QueueingEquipment, RubbishDisposalEquipmentRef, WaitingRoomEquipment, WheelchairVehicleRef, HelpPointEquipment, SignEquipment, SanitaryEquipment, PassengerEquipmentRef, AccessVehicleEquipment, MoneyServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

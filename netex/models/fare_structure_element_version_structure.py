@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
@@ -49,7 +49,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[object] = field(
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[Union[GeographicalStructureFactorsRelStructure, GeographicalIntervalRef, GeographicalIntervalsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         }
     )
-    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[object] = field(
+    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[Union[TimeStructureFactorsRelStructure, TimeIntervalRef, TimeIntervalsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,7 +95,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[FareQuotaFactorRef, QualityStructureFactorsRelStructure, QualityStructureFactorRef, FareDemandFactorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -123,7 +123,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[GroupOfDistanceMatrixElementsRef, DistanceMatrixElementsRelStructure, DistanceMatrixElementRef, GroupOfDistanceMatrixElements]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -159,7 +159,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
         default=None,
         metadata={
             "type": "Elements",

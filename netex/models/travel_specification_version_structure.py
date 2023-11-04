@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_ref import CellRef
@@ -54,7 +54,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[StopFinderRequestRef, ScheduleRequestRef, TripPlanRequestRef, SingleTripFareRequestRef, FareRequestRef, StopEventRequestRef, RepeatedTripFareRequestRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,7 +97,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, QualityStructureFactorPriceRef, CellRef, FareProductPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, SeriesConstraintPriceRef, TimeIntervalPriceRef, ParkingPriceRef, ControllableElementPriceRef, TimeUnitPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, GeographicalUnitPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
@@ -94,7 +94,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, GroupOfOperatorsRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -152,7 +152,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[LineRef, NetworkRef, FlexibleLineRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .cancelling_ref import CancellingRef
 from .charging_policy_ref import ChargingPolicyRef
 from .commercial_profile_ref import CommercialProfileRef
@@ -40,7 +40,7 @@ class UsageParameterPriceVersionedChildStructure(FarePriceVersionedChildStructur
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice_2: Optional[object] = field(
+    choice_2: Optional[Union[CompanionProfileRef, ResellingRef, RoundTripRef, FrequencyOfUseRef, ReservingRef, RefundingRef, UsageValidityPeriodRef, ReplacingRef, SalesOfferPackageEntitlementGivenRef, GroupTicketRef, ExchangingRef, StepLimitRef, TransferabilityRef, InterchangingRef, SubscribingRef, PurchaseWindowRef, SuspendingRef, ProfileParameterRef, EntitlementGivenRef, MinimumStayRef, EligibilityChangePolicyRef, EntitlementRequiredRef, LuggageAllowanceRef, SalesOfferPackageEntitlementRequiredRef, ChargingPolicyRef, UserProfileRef, CancellingRef, PenaltyPolicyRef, CommercialProfileRef, RoutingRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

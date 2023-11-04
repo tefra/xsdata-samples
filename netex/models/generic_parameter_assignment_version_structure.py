@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .boolean_operator_enumeration import BooleanOperatorEnumeration
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .validity_parameter_assignment_version_structure import ValidityParameterAssignmentVersionStructure
@@ -46,7 +46,7 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[Union[GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cancelling import Cancelling
 from .charging_policy import ChargingPolicy
 from .commercial_profile import CommercialProfile
@@ -39,7 +39,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[LuggageAllowance, SalesOfferPackageEntitlementRequired, UserProfile, Exchanging, Routing, Suspending, Reserving, GroupTicket, RoundTrip, SalesOfferPackageEntitlementGiven, EntitlementGiven, Subscribing, PurchaseWindow, Transferability, MinimumStay, CompanionProfile, UsageValidityPeriod, Interchanging, StepLimit, EligibilityChangePolicy, Refunding, CommercialProfile, ChargingPolicy, FrequencyOfUse, PenaltyPolicy, Cancelling, Reselling, Replacing, EntitlementRequired]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

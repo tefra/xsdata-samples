@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometricPrimitivePropertyType:
-    polygon_or_line_string_or_point: Optional[object] = field(
+    polygon_or_line_string_or_point: Optional[Union[LineString, Polygon, Point1]] = field(
         default=None,
         metadata={
             "type": "Elements",

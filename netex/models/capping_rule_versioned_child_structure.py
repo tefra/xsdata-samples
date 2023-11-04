@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import List, Optional, Union
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
 from .capping_rule_prices_rel_structure import CappingRulePricesRelStructure
@@ -46,7 +46,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_product_ref_or_preassigned_fare_product_ref: List[object] = field(
+    supplement_product_ref_or_preassigned_fare_product_ref: List[Union[PreassignedFareProductRef, SupplementProductRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
         default=None,
         metadata={
             "type": "Elements",

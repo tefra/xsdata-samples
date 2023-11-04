@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_table_ref import FareTableRef
 from .multilingual_string import MultilingualString
@@ -32,7 +32,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[object] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[Union[FareTableRef, StandardFareTableRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

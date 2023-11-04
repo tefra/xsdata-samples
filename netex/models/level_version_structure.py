@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
@@ -73,7 +73,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceSiteRef, ParkingRef, SiteRef, StopPlaceRef, PointOfInterestRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access import Access
 from .access_ref import AccessRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref_or_access: List[object] = field(
+    access_ref_or_access: List[Union[Access, AccessRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

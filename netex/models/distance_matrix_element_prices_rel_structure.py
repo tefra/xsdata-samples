@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_ref import CellRef
 from .distance_matrix_element_price import DistanceMatrixElementPrice
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
@@ -13,7 +13,7 @@ class DistanceMatrixElementPricesRelStructure(StrictContainmentAggregationStruct
     class Meta:
         name = "distanceMatrixElementPrices_RelStructure"
 
-    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: List[object] = field(
+    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: List[Union[CellRef, DistanceMatrixElementPrice, DistanceMatrixElementPriceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

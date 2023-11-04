@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
 from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
@@ -21,7 +21,7 @@ class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildSt
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[Union[DayTypeRef, FareDayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

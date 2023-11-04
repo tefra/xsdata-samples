@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
 from .road_link_ref import RoadLinkRef
@@ -18,7 +18,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    wire_link_ref_or_road_link_ref_or_railway_link_ref: Optional[object] = field(
+    wire_link_ref_or_road_link_ref_or_railway_link_ref: Optional[Union[RoadLinkRef, WireLinkRef, RailwayLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -41,7 +41,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         }
     )
-    wire_point_ref_or_road_point_ref_or_railway_point_ref: Optional[object] = field(
+    wire_point_ref_or_road_point_ref_or_railway_point_ref: Optional[Union[RailwayPointRef, WirePointRef, RoadPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

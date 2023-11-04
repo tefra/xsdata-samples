@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .journey_pattern_wait_time import JourneyPatternWaitTime
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -12,7 +12,7 @@ class JourneyPatternWaitTimesRelStructure(StrictContainmentAggregationStructure)
     class Meta:
         name = "journeyPatternWaitTimes_RelStructure"
 
-    journey_pattern_wait_time_ref_or_journey_pattern_wait_time: List[object] = field(
+    journey_pattern_wait_time_ref_or_journey_pattern_wait_time: List[Union[JourneyPatternWaitTimeRef, JourneyPatternWaitTime]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

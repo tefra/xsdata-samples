@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service import AssistanceService
@@ -39,7 +39,7 @@ class ExplicitLocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitLocalServices_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[AssistanceBookingService, AssistanceService, MeetingPointServiceRef, ComplaintsServiceRef, CustomerService, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, LocalServiceRef, HireServiceRef, MoneyService, RetailService, TicketingService, CommunicationService, TicketingServiceRef, LostPropertyServiceRef, HireService, LuggageServiceRef, MeetingPointService, AssistanceBookingServiceRef, LeftLuggageService, CustomerServiceRef, CateringServiceRef, ComplaintsService, LuggageService, CateringService, LeftLuggageServiceRef, LostPropertyService, MoneyServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dated_calls_rel_structure import DatedCallsRelStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -23,7 +23,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
     class Meta:
         name = "DatedSpecialService_VersionStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

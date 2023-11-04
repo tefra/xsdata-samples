@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
 from .fare_structure_element_ref import FareStructureElementRef
 from .generic_parameter_assignment_version_structure import (
@@ -33,7 +33,7 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
         default=None,
         metadata={
             "type": "Elements",

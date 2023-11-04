@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
@@ -43,7 +43,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice: List[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

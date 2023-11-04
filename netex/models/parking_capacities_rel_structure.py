@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_capacity import ParkingCapacity
 from .parking_capacity_ref import ParkingCapacityRef
@@ -12,7 +12,7 @@ class ParkingCapacitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingCapacities_RelStructure"
 
-    parking_capacity_ref_or_parking_capacity: List[object] = field(
+    parking_capacity_ref_or_parking_capacity: List[Union[ParkingCapacity, ParkingCapacityRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

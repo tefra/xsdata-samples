@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .hail_and_ride_area import HailAndRideArea
 from .hail_and_ride_area_ref import HailAndRideAreaRef
@@ -12,7 +12,7 @@ class HailAndRideAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "hailAndRideAreas_RelStructure"
 
-    hail_and_ride_area_ref_or_hail_and_ride_area: List[object] = field(
+    hail_and_ride_area_ref_or_hail_and_ride_area: List[Union[HailAndRideArea, HailAndRideAreaRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

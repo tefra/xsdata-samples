@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_link_ref import ActivationLinkRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .flexible_link_type_enumeration import FlexibleLinkTypeEnumeration
@@ -20,7 +20,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[RoadLinkRef, LineLinkRef, ActivationLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, PathLinkRef, RailwayLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .train_element import TrainElement
 from .vehicle import Vehicle
@@ -12,7 +12,7 @@ class VehiclesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehiclesInFrame_RelStructure"
 
-    train_element_or_vehicle: List[object] = field(
+    train_element_or_vehicle: List[Union[TrainElement, Vehicle]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

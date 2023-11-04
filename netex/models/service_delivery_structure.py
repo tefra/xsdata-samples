@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
 from .other_error import OtherError
@@ -52,7 +52,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: Optional[object] = field(
+        capability_not_supported_error_or_other_error: Optional[Union[OtherError, CapabilityNotSupportedError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

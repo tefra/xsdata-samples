@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .class_refs_rel_structure import ClassRefsRelStructure
 from .customer_account_status import CustomerAccountStatus
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
@@ -56,7 +56,7 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[TypeOfTransfer, TypeOfOrganisationPart, TypeOfEntity, TypeOfFlexibleService, TypeOfPoint, TypeOfRetailDevice, TypeOfLine, CustomerAccountStatus, TypeOfFareStructureFactor, TypeOfNotice, TypeOfSalesOfferPackage, TypeOfTariff, TypeOfCongestion, TypeOfZone, TypeOfFacility, TypeOfJourneyPattern, TypeOfService, TypeOfTravelDocument, TypeOfLinkSequence, TypeOfFareContractEntry, TypeOfFrame, TypeOfActivation, TypeOfCustomerAccount, TypeOfResponsibilityRole, TypeOfPassengerInformationEquipment, TypeOfFeature, TypeOfFareStructureElement, TypeOfAccessRightAssignment, TypeOfDeliveryVariant, TypeOfEquipment, TypeOfOperation, TypeOfFareProduct, TypeOfTimeDemandType, TypeOfFareContract, TypeOfPlace, TypeOfOrganisation, TypeOfProjection, TypeOfLink]] = field(
         default=None,
         metadata={
             "type": "Elements",

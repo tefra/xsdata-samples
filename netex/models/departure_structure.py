@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .accessibility_assessment import AccessibilityAssessment
 from .check_constraint import CheckConstraint
@@ -93,7 +93,7 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref_or_timeband_ref: Optional[object] = field(
+    time_demand_type_ref_or_timeband_ref: Optional[Union[TimeDemandTypeRef, TimebandRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -119,7 +119,7 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[VehicleJourneyStopAssignmentRef, PassengerStopAssignmentRef, DynamicStopAssignmentRef, QuayAssignmentView]] = field(
         default=None,
         metadata={
             "type": "Elements",

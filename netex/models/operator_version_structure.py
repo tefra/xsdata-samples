@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .contact_structure import ContactStructure
 from .country_ref import CountryRef
 from .departments_rel_structure import DepartmentsRelStructure
@@ -26,7 +26,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address_or_road_address_or_address: Optional[object] = field(
+    postal_address_or_road_address_or_address: Optional[Union[PostalAddressVersionStructure, RoadAddress, PostalAddress]] = field(
         default=None,
         metadata={
             "type": "Elements",

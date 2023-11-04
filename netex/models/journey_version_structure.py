@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .accessibility_assessment import AccessibilityAssessment
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .external_object_ref_structure import ExternalObjectRefStructure
@@ -60,7 +60,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    link_sequence_projection_ref_or_link_sequence_projection: Optional[object] = field(
+    link_sequence_projection_ref_or_link_sequence_projection: Optional[Union[LinkSequenceProjectionRef, LinkSequenceProjection]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .customer_account_status_ref import CustomerAccountStatusRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -50,7 +50,7 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[TypeOfLineRef, TypeOfFareContractEntryRef, TypeOfZoneRef, TypeOfOrganisationRef, TypeOfPointRef, TypeOfDeliveryVariantRef, TypeOfPlaceRef, TypeOfPricingRuleRef, TypeOfLinkSequenceRef, TypeOfFareStructureFactorRef, TypeOfJourneyPatternRef, TypeOfSalesOfferPackageRef, TypeOfMachineReadabilityRef, TypeOfServiceFeatureRef, CustomerAccountStatusRef, TypeOfEquipmentRef, TypeOfProjectionRef, AllDistributionChannelsRef, TypeOfFareStructureElementRef, TypeOfFacilityRef, TypeOfFeatureRef, TypeOfValidityRef, TypeOfPassengerInformationEquipmentRef, TypeOfNoticeRef, TypeOfTimeDemandTypeRef, TypeOfRetailDeviceRef, TypeOfServiceRef, TypeOfTravelDocumentRef, TypeOfCustomerAccountRef, TypeOfFrameRef, TypeOfFareContractRef, TypeOfTariffRef, TypeOfCongestionRef, TypeOfSecurityListRef, TypeOfFareProductRef, TypeOfTransferRef, TypeOfLinkRef, TypeOfAccessRightAssignmentRef, TypeOfOrganisationPartRef, TypeOfFlexibleServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

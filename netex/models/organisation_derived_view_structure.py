@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -22,7 +22,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Organisation_DerivedViewStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

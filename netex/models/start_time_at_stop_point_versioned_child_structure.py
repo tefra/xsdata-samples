@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
@@ -22,7 +22,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class AssistanceBookingServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "assistanceBookingServices_RelStructure"
 
-    assistance_booking_service_ref_or_assistance_booking_service: List[object] = field(
+    assistance_booking_service_ref_or_assistance_booking_service: List[Union[AssistanceBookingService, AssistanceBookingServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

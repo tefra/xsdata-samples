@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
 from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
 from .authority_ref import AuthorityRef
@@ -60,7 +60,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -78,7 +78,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         }
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

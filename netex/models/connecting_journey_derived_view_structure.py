@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
 from .day_type_ref import DayTypeRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -30,7 +30,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "required": True,
         }
     )
-    departure_time_or_frequency: Optional[object] = field(
+    departure_time_or_frequency: Optional[Union[XmlTime, FrequencyStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +64,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[Union[DayTypeRef, FareDayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,7 +82,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

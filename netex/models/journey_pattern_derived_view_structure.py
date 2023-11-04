@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -25,7 +25,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "JourneyPattern_DerivedViewStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -53,7 +53,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         }
     )
-    route_ref_or_route_view: Optional[object] = field(
+    route_ref_or_route_view: Optional[Union[RouteRef, RouteView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +79,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[object] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,7 +97,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

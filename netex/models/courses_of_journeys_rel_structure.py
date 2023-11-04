@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .course_of_journeys import CourseOfJourneys
 from .course_of_journeys_ref import CourseOfJourneysRef
@@ -12,7 +12,7 @@ class CoursesOfJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coursesOfJourneys_RelStructure"
 
-    course_of_journeys_ref_or_course_of_journeys: List[object] = field(
+    course_of_journeys_ref_or_course_of_journeys: List[Union[CourseOfJourneys, CourseOfJourneysRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

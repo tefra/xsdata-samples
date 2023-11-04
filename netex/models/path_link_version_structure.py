@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_mode_enumeration import AccessModeEnumeration
 from .accessibility_assessment import AccessibilityAssessment
@@ -57,7 +57,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    accessibility_assessment_ref_or_accessibility_assessment: Optional[object] = field(
+    accessibility_assessment_ref_or_accessibility_assessment: Optional[Union[AccessibilityAssessment, AccessibilityAssessmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

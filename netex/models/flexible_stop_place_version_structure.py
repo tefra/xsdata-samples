@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .flexible_area import FlexibleArea
 from .flexible_area_ref import FlexibleAreaRef
@@ -67,7 +67,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
 
     @dataclass
     class Areas:
-        choice: List[object] = field(
+        choice: List[Union[FlexibleArea, HailAndRideArea, FlexibleAreaRef, HailAndRideAreaRef]] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",

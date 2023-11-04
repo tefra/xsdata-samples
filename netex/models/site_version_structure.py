@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef
@@ -33,7 +33,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "Site_VersionStructure"
 
-    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceView, TopographicPlaceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +83,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef, OrganisationDerivedViewStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from .availability_condition_ref import AvailabilityConditionRef
 from .branding_ref import BrandingRef
@@ -51,7 +51,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[DayTypeRef, "OrganisationDayType", "FareDayType", "DayType", FareDayTypeRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -91,7 +91,7 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDays_RelStructure"
 
-    operating_day_ref_or_operating_day: List[object] = field(
+    operating_day_ref_or_operating_day: List[Union[OperatingDayRef, "OperatingDay"]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -116,7 +116,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebands_RelStructure"
 
-    timeband_ref_or_timeband: List[object] = field(
+    timeband_ref_or_timeband: List[Union[TimebandRef, "TimebandVersionedChildStructure"]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -141,7 +141,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union["SimpleAvailabilityCondition", ValidityRuleParameterRef, "AvailabilityCondition", "ValidityRuleParameter", "ValidDuring", AvailabilityConditionRef, ValidityConditionRef, "ValidBetween", "ValidityTrigger", "ValidityCondition", ValidityTriggerRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -208,7 +208,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
 
 @dataclass
 class EntityInVersionStructure(EntityStructure):
-    validity_conditions_or_valid_between: List[object] = field(
+    validity_conditions_or_valid_between: List[Union[ValidityConditionsRelStructure, "ValidBetween"]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -549,7 +549,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "required": True,
         }
     )
-    end_time_or_day_offset_or_duration: List[object] = field(
+    end_time_or_day_offset_or_duration: List[Union[XmlTime, XmlDuration, int]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -703,7 +703,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice: List[Union[object, bool, RelativeOperatorEnumeration, str]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -831,7 +831,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[DayOfWeekEnumeration, str, DayTypeRef, FareDayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

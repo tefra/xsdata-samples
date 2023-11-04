@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .direction_ref import DirectionRef
 from .flexible_line_ref import FlexibleLineRef
@@ -14,7 +14,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AllowedLineDirection_VersionStructure"
 
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

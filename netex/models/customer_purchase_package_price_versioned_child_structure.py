@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
@@ -12,7 +12,7 @@ class CustomerPurchasePackagePriceVersionedChildStructure(FarePriceVersionedChil
     class Meta:
         name = "CustomerPurchasePackagePrice_VersionedChildStructure"
 
-    customer_purchase_package_ref_or_customer_purchase_package_element_ref: Optional[object] = field(
+    customer_purchase_package_ref_or_customer_purchase_package_element_ref: Optional[Union[CustomerPurchasePackageElementRef, CustomerPurchasePackageRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

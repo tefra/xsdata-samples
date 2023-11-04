@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDate
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
@@ -73,7 +73,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

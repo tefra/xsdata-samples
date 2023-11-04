@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
@@ -30,7 +30,7 @@ class StopPlaceEntranceVersionStructure(SiteEntranceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_part_ref import BlockPartRef
@@ -63,7 +63,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_part_ref_or_block_part_ref: Optional[object] = field(
+    train_block_part_ref_or_block_part_ref: Optional[Union[TrainBlockPartRef, BlockPartRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .block_ref import BlockRef
 from .calls_rel_structure import CallsRelStructure
@@ -114,7 +114,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -158,7 +158,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[object] = field(
+    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[JourneyFrequencyGroupRef, HeadwayJourneyGroupRef, RhythmicalJourneyGroupRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -181,7 +181,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -212,7 +212,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref_or_block_ref: Optional[object] = field(
+    train_block_ref_or_block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -246,7 +246,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref_or_operator_view: Optional[object] = field(
+    operator_ref_or_operator_view: Optional[Union[OperatorRef, OperatorView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -264,7 +264,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[LineRef, FlexibleLineView, LineView, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -424,7 +424,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[object] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementsView, PassengerCarryingRequirementRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -457,7 +457,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_service_properties_ref_or_flexible_service_properties: Optional[object] = field(
+    flexible_service_properties_ref_or_flexible_service_properties: Optional[Union[FlexibleServicePropertiesRef, FlexibleServiceProperties]] = field(
         default=None,
         metadata={
             "type": "Elements",

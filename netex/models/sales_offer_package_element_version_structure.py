@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
@@ -55,7 +55,7 @@ class SalesOfferPackageElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

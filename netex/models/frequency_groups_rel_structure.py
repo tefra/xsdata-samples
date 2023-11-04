@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .headway_journey_group import HeadwayJourneyGroup
 from .headway_journey_group_ref import HeadwayJourneyGroupRef
@@ -14,7 +14,7 @@ class FrequencyGroupsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroups_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[RhythmicalJourneyGroup, HeadwayJourneyGroupRef, RhythmicalJourneyGroupRef, HeadwayJourneyGroup]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

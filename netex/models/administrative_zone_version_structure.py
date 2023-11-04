@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .authority_ref import AuthorityRef
@@ -33,7 +33,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -143,7 +143,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[object] = field(
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[Union[TransportAdministrativeZone, AdministrativeZone, AdministrativeZoneRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

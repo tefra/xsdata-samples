@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .condition_summary import ConditionSummary
 from .distribution_assignments_rel_structure import DistributionAssignmentsRelStructure
@@ -84,7 +84,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: Optional[object] = field(
+    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: Optional[Union[GroupOfSalesOfferPackageRefsRelStructure, GroupOfSalesOfferPackagesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

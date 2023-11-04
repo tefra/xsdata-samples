@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .address_ref import AddressRef
 from .boarding_position_ref import BoardingPositionRef
 from .postal_address_ref import PostalAddressRef
@@ -22,7 +22,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address_ref_or_road_address_ref_or_address_ref: Optional[object] = field(
+    postal_address_ref_or_road_address_ref_or_address_ref: Optional[Union[RoadAddressRef, PostalAddressRef, AddressRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

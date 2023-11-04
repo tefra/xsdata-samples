@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .other_error import OtherError
@@ -71,7 +71,7 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        choice: Optional[object] = field(
+        choice: Optional[Union[UnknownSubscriberError, CapabilityNotSupportedError, OtherError, UnknownSubscriptionError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

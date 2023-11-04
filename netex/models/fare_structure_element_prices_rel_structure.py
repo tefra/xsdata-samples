@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_ref import CellRef
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
 from .fare_structure_element_price_versioned_child_structure import FareStructureElementPriceVersionedChildStructure
@@ -13,7 +13,7 @@ class FareStructureElementPricesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "fareStructureElementPrices_RelStructure"
 
-    fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: List[object] = field(
+    fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: List[Union[FareStructureElementPriceRef, CellRef, FareStructureElementPriceVersionedChildStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .assistance_booking_service import AssistanceBookingService
@@ -55,7 +55,7 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipmentsInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[StaircaseEquipment, AssistanceBookingService, TravelatorEquipment, RampEquipment, SeatingEquipment, AssistanceService, PlaceSign, GeneralSign, RoughSurface, AccessEquipment, CustomerService, VehicleChargingEquipment, WheelchairVehicleEquipment, PassengerSafetyEquipment, EntranceEquipment, RetailDevice, RubbishDisposalEquipment, PassengerInformationEquipment, LiftEquipment, MoneyService, TicketingService, RetailService, CrossingEquipment, ShelterEquipment, TicketingEquipment, CommunicationService, TrolleyStandEquipment, CycleStorageEquipment, HireService, MeetingPointService, PlaceLighting, LeftLuggageService, EscalatorEquipment, TicketValidatorEquipment, ComplaintsService, HeadingSign, LuggageService, CateringService, LostPropertyService, QueueingEquipment, WaitingRoomEquipment, HelpPointEquipment, SignEquipment, SanitaryEquipment, AccessVehicleEquipment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

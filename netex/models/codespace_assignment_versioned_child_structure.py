@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDate
 from .administrative_zone_ref import AdministrativeZoneRef
 from .alternative_texts_rel_structure import VersionedChildStructure
@@ -16,7 +16,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: Optional[object] = field(
+    codespace_ref_or_codespace: Optional[Union[CodespaceRef, Codespace]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,7 +74,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    start_value_or_end_value: List[object] = field(
+    start_value_or_end_value: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

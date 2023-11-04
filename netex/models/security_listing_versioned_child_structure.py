@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .blacklist_ref import BlacklistRef
 from .multilingual_string import MultilingualString
@@ -21,7 +21,7 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    whitelist_ref_or_blacklist_ref: Optional[object] = field(
+    whitelist_ref_or_blacklist_ref: Optional[Union[WhitelistRef, BlacklistRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

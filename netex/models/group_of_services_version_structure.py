@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .day_type_ref_structure import DayTypeRefStructure
 from .destination_display_refs_rel_structure import DestinationDisplayRefsRelStructure
 from .direction_ref import DirectionRef
@@ -34,7 +34,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[object] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

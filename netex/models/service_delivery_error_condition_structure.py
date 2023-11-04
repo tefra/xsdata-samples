@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_not_allowed_error import AccessNotAllowedError
 from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
 from .beyond_data_horizon import BeyondDataHorizon
@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceDeliveryErrorConditionStructure:
-    choice: Optional[object] = field(
+    choice: Optional[Union[UnapprovedKeyAccessError, UnknownParticipantError, EndpointDeniedAccessError, ServiceNotAvailableError, ParametersIgnoredError, UnknownEndpointError, UnknownExtensionsError, AccessNotAllowedError, OtherError, EndpointNotAvailableAccessError, BeyondDataHorizon, InvalidDataReferencesError, AllowedResourceUsageExceededError, NoInfoForTopicError, CapabilityNotSupportedError]] = field(
         default=None,
         metadata={
             "type": "Elements",

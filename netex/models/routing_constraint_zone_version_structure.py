@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .group_of_lines_ref import GroupOfLinesRef
 from .line_refs_rel_structure import LineRefsRelStructure
 from .network_ref import NetworkRef
@@ -38,7 +38,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref_or_group_of_lines_ref: Optional[object] = field(
+    network_ref_or_group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

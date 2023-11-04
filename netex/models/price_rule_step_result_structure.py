@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .capping_rule_price_ref import CappingRulePriceRef
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PriceRuleStepResultStructure:
-    choice: Optional[object] = field(
+    choice: Optional[Union[TimeUnitPriceRef, SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, SeriesConstraintPriceRef, QualityStructureFactorPriceRef, TimeIntervalPriceRef, ParkingPriceRef, FareProductPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, GeographicalUnitPriceRef, ControllableElementPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -189,7 +189,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[object] = field(
+    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[Union[PricingRuleRef, LimitingRuleRef, DiscountingRuleRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

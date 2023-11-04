@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .derived_view_structure import DerivedViewStructure
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .multilingual_string import MultilingualString
@@ -16,7 +16,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PassengerStopAssignment_DerivedViewStructure"
 
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[object] = field(
+    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[Union[VehicleJourneyStopAssignmentRef, PassengerStopAssignmentRef, DynamicStopAssignmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

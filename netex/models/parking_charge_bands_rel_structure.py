@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_versioned_child_structure import ParkingChargeBand
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_charge_band_ref import ParkingChargeBandRef
@@ -12,7 +12,7 @@ class ParkingChargeBandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingChargeBands_RelStructure"
 
-    parking_charge_band_ref_or_parking_charge_band: List[object] = field(
+    parking_charge_band_ref_or_parking_charge_band: List[Union[ParkingChargeBandRef, ParkingChargeBand]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

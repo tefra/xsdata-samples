@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .controllable_element_in_sequence import ControllableElementInSequence
 from .controllable_element_in_sequence_ref import ControllableElementInSequenceRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -12,7 +12,7 @@ class ControllableElementsInSequenceRelStructure(StrictContainmentAggregationStr
     class Meta:
         name = "controllableElementsInSequence_RelStructure"
 
-    controllable_element_in_sequence_ref_or_controllable_element_in_sequence: List[object] = field(
+    controllable_element_in_sequence_ref_or_controllable_element_in_sequence: List[Union[ControllableElementInSequence, ControllableElementInSequenceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

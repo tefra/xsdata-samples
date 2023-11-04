@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDateTime
 from .alternative_texts_rel_structure import (
     AvailabilityCondition,
@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: Optional[object] = field(
+    choice: Optional[Union[XmlDateTime, ClosedTimestampRangeStructure, "NetworkFrameTopicStructure.SelectionValidityConditions", EmptyType2]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,7 +73,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: List[object] = field(
+    choice_1: List[Union[TimetableFrameRef, SalesTransactionFrameRef, FareFrameRef, ResourceFrameRef, SiteFrameRef, DriverScheduleFrameRef, CompositeFrameRef, NetworkFilterByValueStructure, InfrastructureFrameRef, GeneralFrameRef, ServiceCalendarFrameRef, VehicleScheduleFrameRef, ServiceFrameRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -149,7 +149,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class SelectionValidityConditions:
-        choice: List[object] = field(
+        choice: List[Union[ValidityTrigger, ValidityCondition, SimpleAvailabilityCondition, AvailabilityCondition, ValidityRuleParameter, ValidDuring]] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",

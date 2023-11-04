@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .compound_train_ref import CompoundTrainRef
 from .equipments_rel_structure import EquipmentsRelStructure
@@ -65,7 +65,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

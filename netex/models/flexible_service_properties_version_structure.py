@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .booking_access_enumeration import BookingAccessEnumeration
@@ -26,7 +26,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FlexibleServiceProperties_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

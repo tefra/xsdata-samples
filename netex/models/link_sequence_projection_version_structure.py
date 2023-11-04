@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .line_string import LineString
 from .link_sequence_ref_structure import LinkSequenceRefStructure
 from .point_refs_rel_structure import PointRefsRelStructure
@@ -30,7 +30,7 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    points_or_line_string: Optional[object] = field(
+    points_or_line_string: Optional[Union[LineString, PointRefsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .effective_from_enumeration import EffectiveFromEnumeration
 from .empty_type_2 import EmptyType2
@@ -60,7 +60,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[object] = field(
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[Union[Decimal, EmptyType2, XmlDuration]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +91,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[object] = field(
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[Union[Decimal, EmptyType2, XmlDuration]] = field(
         default=None,
         metadata={
             "type": "Elements",

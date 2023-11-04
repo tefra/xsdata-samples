@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
 from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
@@ -28,7 +28,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

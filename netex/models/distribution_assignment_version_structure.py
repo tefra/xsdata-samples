@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .all_authorities_ref import AllAuthoritiesRef
 from .all_countries_ref import AllCountriesRef
 from .all_distribution_channels_ref import AllDistributionChannelsRef
@@ -48,7 +48,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
     class Meta:
         name = "DistributionAssignment_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[SaleDiscountRightRef, ServiceAccessRightRef, AmountOfPriceUnitProductRef, ThirdPartyProductRef, UsageDiscountRightRef, EntitlementProductRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -131,7 +131,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         }
     )
-    all_countries_ref_or_country_ref: Optional[object] = field(
+    all_countries_ref_or_country_ref: Optional[Union[CountryRef, AllCountriesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -165,7 +165,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: Optional[object] = field(
+    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: Optional[Union[AllDistributionChannelsRef, GroupOfDistributionChannelsRef, DistributionChannelRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -244,7 +244,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, AllOperatorsRef, AuthorityRef, AllAuthoritiesRef, AllTransportOrganisationsRef, OperatorRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef, AllOrganisationsRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

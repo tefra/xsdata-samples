@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
@@ -74,7 +74,7 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "groupOfEntitiesInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[RhythmicalJourneyGroup, ParkingArea, ParkingComponent, BoardingPosition, TopographicPlace, StopArea, AdministrativeZone, GroupOfPoints, StandardFareTable, GroupOfOperators, PostalAddress, TransportAdministrativeZone, FareTable, Country, PointOfInterestEntrance, GeneralGroupOfEntities, GroupOfDistanceMatrixElements, CrewBase, TariffZone, Zone, FlexibleStopPlace, PointOfInterest, FareTableInContext, ParkingBay, PointOfInterestVehicleEntrance, StopPlaceVehicleEntrance, VehicleStoppingPlace, ServiceSite, GroupOfServices, RoutingConstraintZone, HailAndRideArea, GroupOfLinkSequences, FlexibleQuay, VehicleStoppingPosition, ParkingEntranceForVehicles, GeneralZone, ParkingPassengerEntrance, Parking, GroupOfLines, AccessSpace, GroupOfPlaces, Quay, FareZone, Garage, GroupOfTimingLinks, GroupOfDistributionChannels, StopPlace, FlexibleArea, PointOfInterestSpace, PriceGroup, RoadAddress, AccessZone, Layer, Network, HeadwayJourneyGroup, GroupOfLinks, AddressablePlace, EquipmentPlace, StopPlaceEntrance, Entrance]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

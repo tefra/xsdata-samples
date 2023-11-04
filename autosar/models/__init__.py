@@ -1289,7 +1289,7 @@ from .field_access_enum import FieldAccessEnum
 from .field_access_enum_simple import FieldAccessEnumSimple
 from .field_in_executable_instance_ref import FieldInExecutableInstanceRef
 from .field_mapping import FieldMapping
-from .field_mod import Field
+from .field_mod import FieldType
 from .field_sender_com_spec import FieldSenderComSpec
 from .field_subtypes_enum import FieldSubtypesEnum
 from .file_info_comment import FileInfoComment
@@ -4145,7 +4145,7 @@ __all__ = [
     "FieldAccessEnumSimple",
     "FieldInExecutableInstanceRef",
     "FieldMapping",
-    "Field",
+    "FieldType",
     "FieldSenderComSpec",
     "FieldSubtypesEnum",
     "FileInfoComment",

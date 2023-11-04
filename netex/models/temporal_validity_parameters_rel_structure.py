@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
@@ -19,7 +19,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[Union[DayTypeRef, FareDayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,7 +61,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ValidityTriggerRef, AvailabilityConditionRef, ValidityConditionRef, ValidityRuleParameterRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .cancelling_ref import CancellingRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -71,7 +71,7 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "priceableObjectRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[DistanceMatrixElementInverseRef, ServiceAccessRightRef, FareStructureElementRef, CompanionProfileRef, ResellingRef, CustomerPurchasePackageElementRef, DistanceMatrixElementRef, RoundTripRef, FrequencyOfUseRef, CappedDiscountRightRef, ReservingRef, TimeIntervalRef, RefundingRef, SaleDiscountRightRef, UsageValidityPeriodRef, ReplacingRef, ControllableElementRef, SalesOfferPackageEntitlementGivenRef, GroupTicketRef, ExchangingRef, EntitlementProductRef, FareDemandFactorRef, StepLimitRef, TransferabilityRef, PreassignedFareProductRef, PriceableObjectRef, InterchangingRef, SeriesConstraintRef, SalesOfferPackageElementRef, SupplementProductRef, CustomerPurchasePackageRef, SalesOfferPackageRef, SubscribingRef, PurchaseWindowRef, SuspendingRef, GeographicalIntervalRef, ProfileParameterRef, AmountOfPriceUnitProductRef, FareQuotaFactorRef, UsageDiscountRightRef, EntitlementGivenRef, MinimumStayRef, EligibilityChangePolicyRef, EntitlementRequiredRef, LuggageAllowanceRef, CappingRuleRef, ParkingChargeBandRef, ValidableElementRef, GeographicalStructureFactorRef, SalesOfferPackageEntitlementRequiredRef, ChargingPolicyRef, UserProfileRef, ThirdPartyProductRef, FulfilmentMethodRef, CancellingRef, FareProductRef, TimeStructureFactorRef, PenaltyPolicyRef, CommercialProfileRef, RoutingRef, QualityStructureFactorRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

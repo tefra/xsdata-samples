@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .call import Call
 from .call_z import CallZ
 from .dated_call import DatedCall
@@ -14,7 +14,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "calls_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[CallZ, DatedCallZ, Call, DatedCall]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

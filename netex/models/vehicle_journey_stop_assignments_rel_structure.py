@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_journey_stop_assignment import VehicleJourneyStopAssignment
 from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
@@ -12,7 +12,7 @@ class VehicleJourneyStopAssignmentsRelStructure(ContainmentAggregationStructure)
     class Meta:
         name = "vehicleJourneyStopAssignments_RelStructure"
 
-    vehicle_journey_stop_assignment_ref_or_vehicle_journey_stop_assignment: List[object] = field(
+    vehicle_journey_stop_assignment_ref_or_vehicle_journey_stop_assignment: List[Union[VehicleJourneyStopAssignmentRef, VehicleJourneyStopAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

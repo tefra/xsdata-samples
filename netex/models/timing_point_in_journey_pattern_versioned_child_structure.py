@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -22,7 +22,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -81,7 +81,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time_or_wait_times: Optional[object] = field(
+    wait_time_or_wait_times: Optional[Union[JourneyPatternWaitTimesRelStructure, XmlDuration]] = field(
         default=None,
         metadata={
             "type": "Elements",

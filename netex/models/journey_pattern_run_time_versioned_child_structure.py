@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .journey_pattern_ref import JourneyPatternRef
 from .journey_run_time_versioned_child_structure import JourneyRunTimeVersionedChildStructure
@@ -14,7 +14,7 @@ class JourneyPatternRunTimeVersionedChildStructure(JourneyRunTimeVersionedChildS
     class Meta:
         name = "JourneyPatternRunTime_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .open_transport_mode_ref import OpenTransportModeRef
 from .transport_mode_structure import TransportModeStructure
@@ -12,7 +12,7 @@ class TransportModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportModes_RelStructure"
 
-    open_transport_mode_ref_or_transport_mode: List[object] = field(
+    open_transport_mode_ref_or_transport_mode: List[Union[OpenTransportModeRef, TransportModeStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

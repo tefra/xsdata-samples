@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .direction_ref import DirectionRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .flexible_line_ref import FlexibleLineRef
@@ -13,7 +13,7 @@ class LineInDirectionRefStructure:
     class Meta:
         name = "LineInDirectionRef_Structure"
 
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

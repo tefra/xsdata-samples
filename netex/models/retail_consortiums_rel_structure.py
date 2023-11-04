@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .retail_consortium import RetailConsortium
 from .retail_consortium_ref import RetailConsortiumRef
@@ -12,7 +12,7 @@ class RetailConsortiumsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "retailConsortiums_RelStructure"
 
-    retail_consortium_ref_or_retail_consortium: List[object] = field(
+    retail_consortium_ref_or_retail_consortium: List[Union[RetailConsortiumRef, RetailConsortium]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

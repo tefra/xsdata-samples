@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .all_modes_enumeration import AllModesEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
@@ -28,7 +28,7 @@ class TransportModeStructure:
             "required": True,
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, TaxiSubmodeEnumeration, SelfDriveSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

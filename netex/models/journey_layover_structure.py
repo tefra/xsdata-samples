@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -32,7 +32,7 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "required": True,
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

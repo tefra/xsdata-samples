@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
@@ -45,7 +45,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[Union[ScheduledStopPointRef, ScheduledStopPointView, FareScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -76,7 +76,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    onward_service_link_ref_or_onward_service_link_view: Optional[object] = field(
+    onward_service_link_ref_or_onward_service_link_view: Optional[Union[ServiceLinkRefStructure, OnwardServiceLinkView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,7 +102,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[object] = field(
+    template_service_journey_ref_or_service_journey_ref: Optional[Union[ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -152,7 +152,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -257,7 +257,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[object] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementsView, PassengerCarryingRequirementRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .special_service import SpecialService
@@ -13,7 +13,7 @@ class SpecialServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "specialServices_RelStructure"
 
-    dated_special_service_ref_or_special_service_ref_or_special_service: List[object] = field(
+    dated_special_service_ref_or_special_service_ref_or_special_service: List[Union[SpecialService, DatedSpecialServiceRef, SpecialServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

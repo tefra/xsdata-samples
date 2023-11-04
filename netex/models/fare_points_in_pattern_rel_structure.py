@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_point_in_pattern import FarePointInPattern
 from .fare_point_in_pattern_ref import FarePointInPatternRef
@@ -12,7 +12,7 @@ class FarePointsInPatternRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "farePointsInPattern_RelStructure"
 
-    fare_point_in_pattern_ref_or_fare_point_in_pattern: List[object] = field(
+    fare_point_in_pattern_ref_or_fare_point_in_pattern: List[Union[FarePointInPattern, FarePointInPatternRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

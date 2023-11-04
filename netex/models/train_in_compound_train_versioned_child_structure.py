@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .compound_train_ref import CompoundTrainRef
 from .multilingual_string import MultilingualString
@@ -31,7 +31,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_ref_or_train: Optional[object] = field(
+    train_ref_or_train: Optional[Union[Train, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

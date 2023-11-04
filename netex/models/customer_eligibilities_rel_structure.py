@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .commercial_profile_eligibility import CommercialProfileEligibility
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_eligibility import CustomerEligibility
@@ -14,7 +14,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[ResidentialQualificationEligibility, CustomerEligibility, CommercialProfileEligibility, UserProfileEligibility]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

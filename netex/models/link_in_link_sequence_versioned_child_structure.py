@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -27,7 +27,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "LinkInLinkSequence_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[TimingPatternRef, DatedSpecialServiceRef, DeadRunJourneyPatternRef, JourneyPatternRef, DeadRunRef, VehicleJourneyRef, LinkSequenceRef, NavigationPathRef, DatedVehicleJourneyRef, RouteRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServicePatternRef, ServiceJourneyPatternRef, SpecialServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
 from .customer_eligibility_ref import CustomerEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[CommercialProfileEligibilityRef, CustomerEligibilityRef, UserProfileEligibilityRef, ResidentialQualificationEligibilityRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

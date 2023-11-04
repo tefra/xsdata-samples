@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .authority_ref import AuthorityRef
@@ -50,7 +50,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    type_of_fare_product_ref_or_types_of_fare_product: Optional[object] = field(
+    type_of_fare_product_ref_or_types_of_fare_product: Optional[Union[TypeOfFareProductRef, TypeOfFareProductRefsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +68,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         }
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -94,7 +94,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -142,7 +142,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .branding import Branding
 from .charging_moment import ChargingMoment
 from .class_of_use import ClassOfUse
@@ -74,7 +74,7 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[TypeOfTransfer, TypeOfConcession, TypeOfOrganisationPart, Branding, TypeOfEntity, TypeOfFlexibleService, TypeOfPoint, TypeOfRetailDevice, ChargingMoment, TypeOfLine, CustomerAccountStatus, Submode, Direction, PointOfInterestClassification, TypeOfFareStructureFactor, TypeOfNotice, TimingAlgorithmType, TypeOfSalesOfferPackage, TypeOfTariff, PurposeOfGrouping, TypeOfCongestion, TypeOfPaymentMethod, TypeOfProductCategory, TypeOfZone, TypeOfFacility, TypeOfJourneyPattern, ValueSet, TypeOfUsageParameter, TypeOfTravelDocument, TypeOfService, TypeOfLinkSequence, TypeOfFareContractEntry, TypeOfVersion, TypeOfSecurityList, ClassOfUse, TypeOfFrame, TypeOfActivation, TypeOfCustomerAccount, PurposeOfEquipmentProfile, TypeOfResponsibilityRole, TypeOfPassengerInformationEquipment, TypeOfFareTable, OpenTransportMode, TypeOfCodespaceAssignment, TypeOfFeature, DataSource, TypeOfFareStructureElement, TypeOfAccessRightAssignment, TypeOfDeliveryVariant, PriceUnit, TypeOfEquipment, TypeOfPricingRule, TypeOfOperation, TypeOfServiceFeature, PurposeOfJourneyPartition, TypeOfValidity, TypeOfFareProduct, TypeOfTimeDemandType, TypeOfFareContract, TypeOfPlace, TypeOfOrganisation, TypeOfProjection, TypeOfLink, TypeOfMachineReadability]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

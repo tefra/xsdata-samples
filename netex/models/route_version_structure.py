@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .direction_ref import DirectionRef
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .flexible_line_ref import FlexibleLineRef
@@ -16,7 +16,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"
 
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

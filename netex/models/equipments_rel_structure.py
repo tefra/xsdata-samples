@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_equipment import AccessEquipment
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment import AccessVehicleEquipment
@@ -108,7 +108,7 @@ class EquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[LuggageLockerEquipmentRef, AssistanceBookingService, AssistanceService, EscalatorEquipmentRef, CustomerService, SeatingEquipmentRef, AssistanceServiceRef, LocalServiceRef, AccessVehicleEquipmentRef, MoneyService, WaitingEquipmentRef, CrossingEquipment, VehicleChargingEquipmentRef, RetailDeviceRef, TicketingEquipment, CycleStorageEquipment, HelpPointEquipmentRef, HireService, CrossingEquipmentRef, CustomerServiceRef, CateringServiceRef, HeadingSign, EquipmentRef, QueueingEquipment, SignEquipment, SignEquipmentRef, SanitaryEquipment, PassengerEquipmentRef, RubbishDisposalEquipmentRef, AccessVehicleEquipment, LiftEquipmentRef, TravelatorEquipment, SeatingEquipment, RoughSurface, AccessEquipment, HeadingSignRef, WheelchairVehicleEquipment, RetailServiceRef, PassengerSafetyEquipment, ShelterEquipmentRef, HireServiceRef, PassengerInformationEquipment, LiftEquipment, TicketingService, PassengerSafetyEquipmentRef, TrolleyStandEquipment, EntranceEquipmentRef, AssistanceBookingServiceRef, PlaceLighting, AccessEquipmentRef, LeftLuggageService, TicketValidatorEquipment, PlaceSignRef, ComplaintsService, LeftLuggageServiceRef, TicketingEquipmentRef, PlaceLightingEquipmentRef, ActivatedEquipmentRef, PlaceSign, QueueingEquipmentRef, GeneralSign, TrolleyStandEquipmentRef, PassengerInformationEquipmentRef, CommunicationServiceRef, TravelatorEquipmentRef, SanitaryEquipmentRef, EntranceEquipment, CycleStorageEquipmentRef, RetailService, ShelterEquipment, VehicleEquipmentRef, CommunicationService, TicketingServiceRef, LuggageServiceRef, StaircaseEquipmentRef, MeetingPointService, EscalatorEquipment, WaitingRoomEquipmentRef, WheelchairVehicleRef, HelpPointEquipment, StaircaseEquipment, RampEquipment, MeetingPointServiceRef, ComplaintsServiceRef, SiteEquipmentRef, VehicleChargingEquipment, GeneralSignRef, RetailDevice, RubbishDisposalEquipment, RampEquipmentRef, LostPropertyServiceRef, RoughSurfaceRef, TicketValidatorEquipmentRef, LuggageService, CateringService, LostPropertyService, WaitingRoomEquipment, MoneyServiceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

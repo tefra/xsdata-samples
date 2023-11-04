@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
 from .other_error import OtherError
 from .unknown_subscription_error import UnknownSubscriptionError
@@ -28,7 +28,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: Optional[object] = field(
+        unknown_subscription_error_or_other_error: Optional[Union[OtherError, UnknownSubscriptionError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

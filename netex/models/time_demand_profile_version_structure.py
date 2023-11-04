@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
@@ -28,7 +28,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref_or_timeband_ref: Optional[object] = field(
+    time_demand_type_ref_or_timeband_ref: Optional[Union[TimeDemandTypeRef, TimebandRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +46,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,7 +74,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         }
     )
-    dead_run_ref_or_vehicle_journey_ref: Optional[object] = field(
+    dead_run_ref_or_vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

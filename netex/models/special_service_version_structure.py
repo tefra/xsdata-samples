@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .booking_access_enumeration import BookingAccessEnumeration
 from .booking_method_enumeration import BookingMethodEnumeration
@@ -78,7 +78,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -106,7 +106,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

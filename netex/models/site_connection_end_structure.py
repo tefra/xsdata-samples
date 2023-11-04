@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .boarding_position_ref import BoardingPositionRef
@@ -49,7 +49,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[object] = field(
+    choice: List[Union[AccessSpaceRef, ParkingRef, ParkingEntranceRef, ParkingPassengerEntranceRef, PointOfInterestEntranceRef, QuayRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, StopPlaceRef, PointOfInterestRef, BoardingPositionRef, ParkingAreaRef, PointOfInterestSpaceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -123,7 +123,7 @@ class SiteConnectionEndStructure:
             "max_occurs": 5,
         }
     )
-    operator_ref_or_operator_view: Optional[object] = field(
+    operator_ref_or_operator_view: Optional[Union[OperatorRef, OperatorView]] = field(
         default=None,
         metadata={
             "type": "Elements",

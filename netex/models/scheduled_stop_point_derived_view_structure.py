@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .derived_view_structure import DerivedViewStructure
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -19,7 +19,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ScheduledStopPoint_DerivedViewStructure"
 
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

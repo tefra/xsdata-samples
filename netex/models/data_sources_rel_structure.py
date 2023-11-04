@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .data_source import DataSource
 from .data_source_ref import DataSourceRef
@@ -12,7 +12,7 @@ class DataSourcesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dataSources_RelStructure"
 
-    data_source_ref_or_data_source: List[object] = field(
+    data_source_ref_or_data_source: List[Union[DataSource, DataSourceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

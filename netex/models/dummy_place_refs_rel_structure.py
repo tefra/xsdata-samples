@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
 from .addressable_place_ref import AddressablePlaceRef
@@ -47,7 +47,7 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dummyPlaceRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[EquipmentPlaceRef, AccessSpaceRef, VehicleStoppingPositionRef, SiteRef, EquipmentPositionRef, HailAndRideAreaRef, QuayRef, PostalAddressRef, StopPlaceRef, GarageRef, StopPlaceSpaceRef, PointOfInterestRef, RoadAddressRef, PathJunctionRef, AddressRef, ServiceSiteRef, PointOfInterestEntranceRef, AddressablePlaceRef, FlexibleStopPlaceRef, ParkingEntranceForVehiclesRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, PointOfInterestSpaceRef, VehicleEntranceRef, SiteComponentRef, TopographicPlaceRef, StopPlaceEntranceRef, BoardingPositionRef, ParkingBayRef, ParkingPassengerEntranceRef, ParkingEntranceRef, ParkingRef, VehicleStoppingPlaceRef, FlexibleQuayRef, FlexibleAreaRef, EntranceRef, SiteElementRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -73,7 +73,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[LiftEquipmentRef, LuggageLockerEquipmentRef, PlaceLightingEquipmentRef, ActivatedEquipmentRef, MeetingPointServiceRef, QueueingEquipmentRef, ComplaintsServiceRef, EscalatorEquipmentRef, SiteEquipmentRef, HeadingSignRef, SeatingEquipmentRef, TrolleyStandEquipmentRef, PassengerInformationEquipmentRef, GeneralSignRef, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, TravelatorEquipmentRef, LocalServiceRef, ShelterEquipmentRef, SanitaryEquipmentRef, HireServiceRef, AccessVehicleEquipmentRef, RampEquipmentRef, WaitingEquipmentRef, CycleStorageEquipmentRef, PassengerSafetyEquipmentRef, VehicleChargingEquipmentRef, RetailDeviceRef, TicketingServiceRef, VehicleEquipmentRef, LostPropertyServiceRef, HelpPointEquipmentRef, EntranceEquipmentRef, LuggageServiceRef, StaircaseEquipmentRef, AssistanceBookingServiceRef, RoughSurfaceRef, AccessEquipmentRef, CrossingEquipmentRef, PassengerEquipmentRef, CustomerServiceRef, CateringServiceRef, TicketValidatorEquipmentRef, PlaceSignRef, WaitingRoomEquipmentRef, EquipmentRef, LeftLuggageServiceRef, TicketingEquipmentRef, WheelchairVehicleRef, SignEquipmentRef, RubbishDisposalEquipmentRef, MoneyServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .border_point_ref import BorderPointRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -21,7 +21,7 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
     class Meta:
         name = "JourneyPatternHeadway_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +49,7 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

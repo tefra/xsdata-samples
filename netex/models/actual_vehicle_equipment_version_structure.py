@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .accessibility_assessment import AccessibilityAssessment
@@ -75,7 +75,7 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -98,7 +98,7 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[LiftEquipmentRef, LuggageLockerEquipmentRef, PlaceLightingEquipmentRef, ActivatedEquipmentRef, MeetingPointServiceRef, QueueingEquipmentRef, ComplaintsServiceRef, EscalatorEquipmentRef, SiteEquipmentRef, HeadingSignRef, SeatingEquipmentRef, TrolleyStandEquipmentRef, PassengerInformationEquipmentRef, GeneralSignRef, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, TravelatorEquipmentRef, LocalServiceRef, ShelterEquipmentRef, SanitaryEquipmentRef, HireServiceRef, AccessVehicleEquipmentRef, RampEquipmentRef, WaitingEquipmentRef, CycleStorageEquipmentRef, PassengerSafetyEquipmentRef, VehicleChargingEquipmentRef, RetailDeviceRef, TicketingServiceRef, VehicleEquipmentRef, LostPropertyServiceRef, HelpPointEquipmentRef, EntranceEquipmentRef, LuggageServiceRef, StaircaseEquipmentRef, AssistanceBookingServiceRef, RoughSurfaceRef, AccessEquipmentRef, CrossingEquipmentRef, PassengerEquipmentRef, CustomerServiceRef, CateringServiceRef, TicketValidatorEquipmentRef, PlaceSignRef, WaitingRoomEquipmentRef, EquipmentRef, LeftLuggageServiceRef, TicketingEquipmentRef, WheelchairVehicleRef, SignEquipmentRef, RubbishDisposalEquipmentRef, MoneyServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

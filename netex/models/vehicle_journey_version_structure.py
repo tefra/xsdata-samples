@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .block_ref import BlockRef
 from .compound_train_ref import CompoundTrainRef
@@ -86,7 +86,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -130,7 +130,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[object] = field(
+    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[JourneyFrequencyGroupRef, HeadwayJourneyGroupRef, RhythmicalJourneyGroupRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -153,7 +153,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -184,7 +184,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_block_ref_or_block_ref: Optional[object] = field(
+    train_block_ref_or_block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

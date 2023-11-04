@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_ref import CellRef
 from .fulfilment_method_price_ref import FulfilmentMethodPriceRef
 from .fulfilment_method_price_versioned_child_structure import FulfilmentMethodPriceVersionedChildStructure
@@ -13,7 +13,7 @@ class FulfilmentMethodPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fulfilmentMethodPrices_RelStructure"
 
-    fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref: List[object] = field(
+    fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref: List[Union[FulfilmentMethodPriceVersionedChildStructure, FulfilmentMethodPriceRef, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

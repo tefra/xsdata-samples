@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .activation_link_ref import ActivationLinkRef
 from .activation_link_ref_by_value import ActivationLinkRefByValue
 from .line_link_ref import LineLinkRef
@@ -30,7 +30,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[LineLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, PathLinkRef, ServiceLinkRefByValue, RailwayLinkRef, ModalLinkRefByValue, RouteLinkRefByValue, PathLinkRefByValue, WireLinkRefByValue, RoadLinkRef, LineLinkRefByValue, LinkRefByValue, TimingLinkRef, ActivationLinkRefByValue, RoadLinkRefByValue, TimingLinkRefByValue, ActivationLinkRef, RailwayLinkRefByValue]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

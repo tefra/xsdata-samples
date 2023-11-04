@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .alternative_texts_rel_structure import (
     DayType,
     FareDayType,
@@ -15,7 +15,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    fare_day_type_or_organisation_day_type_or_day_type: List[object] = field(
+    fare_day_type_or_organisation_day_type_or_day_type: List[Union[OrganisationDayType, FareDayType, DayType]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

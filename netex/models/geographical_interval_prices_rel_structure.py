@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_ref import CellRef
 from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_interval_price_versioned_child_structure import GeographicalIntervalPriceVersionedChildStructure
@@ -13,7 +13,7 @@ class GeographicalIntervalPricesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "geographicalIntervalPrices_RelStructure"
 
-    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: List[object] = field(
+    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: List[Union[GeographicalIntervalPriceVersionedChildStructure, CellRef, GeographicalIntervalPriceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

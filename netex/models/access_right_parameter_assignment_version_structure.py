@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_right_in_product_ref import AccessRightInProductRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .assignment_version_structure_1 import AssignmentVersionStructure1
@@ -80,7 +80,7 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -128,7 +128,7 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             ),
         }
     )
-    parking_tariff_ref_or_tariff_ref: Optional[object] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[Union[TariffRef, ParkingTariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -154,7 +154,7 @@ class AccessRightParameterAssignmentVersionStructure(AssignmentVersionStructure1
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: Optional[object] = field(
+    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: Optional[Union[AccessRightInProductRef, ControllableElementInSequenceRef, FareStructureElementInSequenceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

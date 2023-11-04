@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
@@ -18,7 +18,7 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    choice_2: Optional[object] = field(
+    choice_2: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

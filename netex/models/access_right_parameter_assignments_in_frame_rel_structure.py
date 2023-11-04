@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .customer_purchase_parameter_assignment import CustomerPurchaseParameterAssignment
 from .frame_containment_structure import FrameContainmentStructure
@@ -18,7 +18,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(FrameContainmentStructu
     class Meta:
         name = "accessRightParameterAssignmentsInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[GenericParameterAssignmentInContext, SpecificParameterAssignment, ValidityParameterAssignment, AccessRightParameterAssignment, CustomerPurchaseParameterAssignment, GenericParameterAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

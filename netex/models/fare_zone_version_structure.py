@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .authority_ref import AuthorityRef
 from .fare_sections_rel_structure import FareSectionsRelStructure
 from .fare_zone_ref_structure import FareZoneRefStructure
@@ -43,7 +43,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

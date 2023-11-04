@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
@@ -18,7 +18,7 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[object] = field(
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[Union[TimeIntervalRef, ParkingChargeBandRef, TimeStructureFactorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -41,7 +41,7 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
             ),
         }
     )
-    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[object] = field(
+    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[Union[GeographicalIntervalRef, GeographicalStructureFactorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -59,7 +59,7 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
             ),
         }
     )
-    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[object] = field(
+    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[Union[FareQuotaFactorRef, QualityStructureFactorRef, FareDemandFactorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

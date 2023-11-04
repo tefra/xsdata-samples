@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .data_role_type_enumeration import DataRoleTypeEnumeration
 from .multilingual_string import MultilingualString
@@ -53,7 +53,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(VersionedChildStructur
             "tokens": True,
         }
     )
-    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[object] = field(
+    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[Union[ResponsibilityRoleRef, TypeOfResponsibilityRoleRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .whitelist import Whitelist
 from .whitelist_ref import WhitelistRef
@@ -12,7 +12,7 @@ class WhitelistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "whitelists_RelStructure"
 
-    whitelist_ref_or_whitelist: List[object] = field(
+    whitelist_ref_or_whitelist: List[Union[Whitelist, WhitelistRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

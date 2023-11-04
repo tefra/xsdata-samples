@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
@@ -27,7 +27,7 @@ class PointOnRouteVersionedChildStructure(PointInLinkSequenceVersionedChildStruc
     class Meta:
         name = "PointOnRoute_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

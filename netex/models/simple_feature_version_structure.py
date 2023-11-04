@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .fare_zone_ref import FareZoneRef
@@ -17,7 +17,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
     class Meta:
         name = "SimpleFeature_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[TariffZoneRef, AdministrativeZoneRef, StopAreaRef, ZoneRef, AccessZoneRef, FareZoneRef, TransportAdministrativeZoneRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

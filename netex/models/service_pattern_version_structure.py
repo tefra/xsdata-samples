@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
 from .direction_ref import DirectionRef
@@ -28,7 +28,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "ServicePattern_VersionStructure"
 
-    route_ref_or_route_view: Optional[object] = field(
+    route_ref_or_route_view: Optional[Union[RouteRef, RouteView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -54,7 +54,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[object] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

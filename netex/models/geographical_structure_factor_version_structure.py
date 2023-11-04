@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import FareStructureFactorVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -16,7 +16,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    parking_tariff_ref_or_tariff_ref: Optional[object] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[Union[TariffRef, ParkingTariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -58,7 +58,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    number_of_units_or_amount_factor: Optional[object] = field(
+    number_of_units_or_amount_factor: Optional[Union[Decimal, int]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .class_of_use_ref import ClassOfUseRef
 from .distribution_channel_ref import DistributionChannelRef
 from .facility_set_ref import FacilitySetRef
@@ -45,7 +45,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    network_ref_or_group_of_lines_ref: Optional[object] = field(
+    network_ref_or_group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -63,7 +63,7 @@ class FareTableSpecificsStructure:
             ),
         }
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -81,7 +81,7 @@ class FareTableSpecificsStructure:
             ),
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceSiteRef, ParkingRef, SiteRef, StopPlaceRef, PointOfInterestRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -162,7 +162,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[object] = field(
+    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[Union[FacilitySetRef, ServiceFacilitySetRef, SiteFacilitySetRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -201,7 +201,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[GroupOfServicesRef, TrainNumberRef, ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -237,7 +237,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[object] = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[Union[GroupOfDistributionChannelsRef, DistributionChannelRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDate
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .capping_rule_price_ref import CappingRulePriceRef
@@ -142,7 +142,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[TimeUnitPriceRef, SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, SeriesConstraintPriceRef, QualityStructureFactorPriceRef, TimeIntervalPriceRef, ParkingPriceRef, FareProductPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, GeographicalUnitPriceRef, ControllableElementPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -240,7 +240,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[DiscountingRuleRef, PricingRule, DiscountingRule, LimitingRuleInContext, PricingRuleRef, LimitingRuleRef, LimitingRule]] = field(
         default=None,
         metadata={
             "type": "Elements",

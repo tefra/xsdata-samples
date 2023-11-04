@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -67,7 +67,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -146,7 +146,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         }
     )
-    distribution_points_or_distribution_group_ref: Optional[object] = field(
+    distribution_points_or_distribution_group_ref: Optional[Union[PointRefsRelStructure, GeneralGroupOfEntitiesRefStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

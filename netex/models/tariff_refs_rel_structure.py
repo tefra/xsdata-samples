@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_tariff_ref import ParkingTariffRef
 from .tariff_ref import TariffRef
@@ -12,7 +12,7 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffRefs_RelStructure"
 
-    parking_tariff_ref_or_tariff_ref: List[object] = field(
+    parking_tariff_ref_or_tariff_ref: List[Union[TariffRef, ParkingTariffRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

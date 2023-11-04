@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_contract_entry import FareContractEntry
 from .fare_contract_entry_ref import FareContractEntryRef
@@ -21,7 +21,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareContractEntries_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[SalesTransaction, TravelSpecification2, OfferedTravelSpecificationRef, FareContractEntry, RequestedTravelSpecification, FareContractEntryRef, SalesTransactionRef, OfferedTravelSpecification, TravelSpecification1, RequestedTravelSpecificationRef, TravelSpecificationRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .authority_ref import AuthorityRef
 from .group_of_lines_version_structure import GroupOfLinesVersionStructure
 from .groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
@@ -15,7 +15,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
     class Meta:
         name = "Network_VersionStructure"
 
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
@@ -38,7 +38,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "DeadRunCall_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, ScheduledStopPointView, BeaconPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -150,7 +150,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

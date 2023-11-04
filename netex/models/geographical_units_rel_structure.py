@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .geographical_unit import GeographicalUnit
 from .geographical_unit_ref import GeographicalUnitRef
@@ -12,7 +12,7 @@ class GeographicalUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnits_RelStructure"
 
-    geographical_unit_ref_or_geographical_unit: List[object] = field(
+    geographical_unit_ref_or_geographical_unit: List[Union[GeographicalUnit, GeographicalUnitRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

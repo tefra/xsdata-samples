@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_space_ref import AccessSpaceRef
 from .boarding_position_ref import BoardingPositionRef
 from .default_connection_end_structure import DefaultConnectionEndStructure
@@ -69,7 +69,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[AccessSpaceRef, VehicleStoppingPositionRef, SiteRef, QuayRef, StopPlaceRef, StopPlaceSpaceRef, PointOfInterestRef, ServiceSiteRef, PointOfInterestEntranceRef, ParkingEntranceForVehiclesRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, PointOfInterestSpaceRef, VehicleEntranceRef, SiteComponentRef, StopPlaceEntranceRef, BoardingPositionRef, ParkingBayRef, ParkingPassengerEntranceRef, ParkingEntranceRef, ParkingRef, VehicleStoppingPlaceRef, EntranceRef, SiteElementRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

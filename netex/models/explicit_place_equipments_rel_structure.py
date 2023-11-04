@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .crossing_equipment import CrossingEquipment
 from .entrance_equipment import EntranceEquipment
@@ -30,7 +30,7 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitPlaceEquipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[StaircaseEquipment, TravelatorEquipment, RampEquipment, RoughSurface, HeadingSignStructure, PassengerSafetyEquipment, EntranceEquipment, RubbishDisposalEquipment, LiftEquipment, CrossingEquipment, TicketingEquipment, OtherPlaceEquipment, PlaceLighting, EscalatorEquipment, GeneralSignStructure, TicketValidatorEquipment, QueueingEquipment, HelpPointEquipment, SanitaryEquipment, PlaceSignStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
@@ -18,7 +18,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AllSubmodeStructure:
-    choice: Optional[object] = field(
+    choice: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, TaxiSubmodeEnumeration, SelfDriveSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

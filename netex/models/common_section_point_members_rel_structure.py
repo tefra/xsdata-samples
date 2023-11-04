@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .common_section_point_member import CommonSectionPointMember
 from .line_section_point_member import LineSectionPointMember
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -12,7 +12,7 @@ class CommonSectionPointMembersRelStructure(StrictContainmentAggregationStructur
     class Meta:
         name = "commonSectionPointMembers_RelStructure"
 
-    line_section_point_member_or_common_section_point_member: List[object] = field(
+    line_section_point_member_or_common_section_point_member: List[Union[LineSectionPointMember, CommonSectionPointMember]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

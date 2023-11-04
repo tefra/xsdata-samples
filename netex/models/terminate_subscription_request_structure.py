@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .authenticated_request_structure import AuthenticatedRequestStructure
 from .empty_type_1 import EmptyType1
 from .extensions_1 import Extensions1
@@ -58,7 +58,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         }
     )
-    all_or_subscription_ref: List[object] = field(
+    all_or_subscription_ref: List[Union[EmptyType1, str]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

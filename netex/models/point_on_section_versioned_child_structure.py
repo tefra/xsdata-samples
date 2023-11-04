@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_link_ref import ActivationLinkRef
 from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
@@ -50,7 +50,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
     class Meta:
         name = "PointOnSection_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[WireJunction, Point2, ReliefPoint, TimingPointRef, RoadPointRef, ScheduledStopPoint, GaragePointRef, BeaconPointRef, BorderPoint, TrafficControlPoint, TrafficControlPointRef, ParkingPointRef, BeaconPoint, ParkingPoint, PathJunction, ActivationPoint, RailwayJunction, RailwayPointRef, WirePointRef, RoutePointRef, FareScheduledStopPointRef, ActivationPointRef, GaragePoint, BorderPointRef, PointRef, ScheduledStopPointRef, RoutePoint, RoadJunction, ReliefPointRef, FareScheduledStopPoint, TimingPoint]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -213,7 +213,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             ),
         }
     )
-    choice_2: Optional[object] = field(
+    choice_2: Optional[Union[RoadLinkRef, LineLinkRef, ActivationLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, PathLinkRef, RailwayLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

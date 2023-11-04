@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .accessibility_assessment import AccessibilityAssessment
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .compound_train_ref import CompoundTrainRef
@@ -131,7 +131,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

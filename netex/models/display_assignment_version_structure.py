@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -30,7 +30,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -56,7 +56,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,7 +82,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

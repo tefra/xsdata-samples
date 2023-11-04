@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .blacklist import Blacklist
 from .blacklist_ref import BlacklistRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,7 @@ class BlacklistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blacklists_RelStructure"
 
-    blacklist_ref_or_blacklist: List[object] = field(
+    blacklist_ref_or_blacklist: List[Union[Blacklist, BlacklistRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

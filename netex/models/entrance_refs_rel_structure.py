@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .entrance_ref import EntranceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
@@ -19,7 +19,7 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entranceRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[VehicleEntranceRef, ParkingEntranceRef, PointOfInterestEntranceRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, ParkingPassengerEntranceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .control_centre_ref import ControlCentreRef
@@ -42,7 +42,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[OrganisationPartRef, ControlCentreRef, OrganisationalUnitRef, DepartmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

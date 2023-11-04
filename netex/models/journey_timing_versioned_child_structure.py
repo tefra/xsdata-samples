@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
@@ -23,7 +23,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    time_demand_type_ref_or_timeband_ref: Optional[object] = field(
+    time_demand_type_ref_or_timeband_ref: Optional[Union[TimeDemandTypeRef, TimebandRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

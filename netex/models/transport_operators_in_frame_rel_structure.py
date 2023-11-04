@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operator import Operator
@@ -12,7 +12,7 @@ class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"
 
-    authority_or_operator: List[object] = field(
+    authority_or_operator: List[Union[Operator, Authority]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

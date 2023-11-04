@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
 from .accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
 from .boarding_position_ref import BoardingPositionRef
@@ -49,7 +49,7 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[VehicleEntranceRef, AccessSpaceRef, ParkingEntranceRef, VehicleStoppingPlaceRef, ParkingPassengerEntranceRef, VehicleStoppingPositionRef, PointOfInterestEntranceRef, SiteComponentRef, QuayRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, StopPlaceSpaceRef, BoardingPositionRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, ParkingBayRef, PointOfInterestSpaceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

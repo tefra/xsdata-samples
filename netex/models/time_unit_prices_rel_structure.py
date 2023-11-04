@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cell_ref import CellRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
 from .time_unit_price_ref import TimeUnitPriceRef
@@ -13,7 +13,7 @@ class TimeUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeUnitPrices_RelStructure"
 
-    time_unit_price_ref_or_time_unit_price_or_cell_ref: List[object] = field(
+    time_unit_price_ref_or_time_unit_price_or_cell_ref: List[Union[TimeUnitPriceRef, CellRef, TimeUnitPriceVersionedChildStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

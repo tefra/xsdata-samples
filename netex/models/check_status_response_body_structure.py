@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .other_error import OtherError
 from .service_not_available_error import ServiceNotAvailableError
@@ -60,7 +60,7 @@ class CheckStatusResponseBodyStructure:
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: Optional[object] = field(
+        service_not_available_error_or_other_error: Optional[Union[ServiceNotAvailableError, OtherError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

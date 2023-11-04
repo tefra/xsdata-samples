@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref_structure import FareScheduledStopPointRefStructure
 from .multilingual_string import MultilingualString
@@ -15,7 +15,7 @@ class FareScheduledStopPointVersionStructure(ScheduledStopPointVersionStructure)
     class Meta:
         name = "FareScheduledStopPoint_VersionStructure"
 
-    site_facility_set_ref_or_site_facility_set: Optional[object] = field(
+    site_facility_set_ref_or_site_facility_set: Optional[Union[SiteFacilitySet, SiteFacilitySetRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

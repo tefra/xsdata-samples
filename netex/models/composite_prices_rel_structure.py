@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_versioned_child_structure import (
@@ -49,7 +49,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, QualityStructureFactorPriceRef, FareProductPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, GeographicalUnitPrice, SeriesConstraintPriceRef, SalesOfferPackagePrice, TimeIntervalPriceRef, ParkingPriceRef, PriceGroupRef, GeographicalIntervalPrice, SeriesConstraintPrice, ControllableElementPriceRef, FareProductPrice, ParkingPrice, TimeUnitPriceRef, ControllableElementPrice, ValidableElementPriceRef, TimeIntervalPrice, TimeUnitPrice, QualityStructureFactorPrice, UsageParameterPrice, FareStructureElementPrice, FulfilmentMethodPrice, ValidableElementPrice, CappingRulePrice, PriceGroup, DistanceMatrixElementPrice, DistanceMatrixElementPriceRef, GeographicalUnitPriceRef, CustomerPurchasePackagePrice, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

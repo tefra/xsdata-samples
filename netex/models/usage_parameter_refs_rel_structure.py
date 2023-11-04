@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cancelling_ref import CancellingRef
 from .charging_policy_ref import ChargingPolicyRef
 from .commercial_profile_ref import CommercialProfileRef
@@ -40,7 +40,7 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameterRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[CompanionProfileRef, ResellingRef, RoundTripRef, FrequencyOfUseRef, ReservingRef, RefundingRef, UsageValidityPeriodRef, ReplacingRef, SalesOfferPackageEntitlementGivenRef, GroupTicketRef, ExchangingRef, StepLimitRef, TransferabilityRef, InterchangingRef, SubscribingRef, PurchaseWindowRef, SuspendingRef, ProfileParameterRef, EntitlementGivenRef, MinimumStayRef, EligibilityChangePolicyRef, EntitlementRequiredRef, LuggageAllowanceRef, SalesOfferPackageEntitlementRequiredRef, ChargingPolicyRef, UserProfileRef, CancellingRef, PenaltyPolicyRef, CommercialProfileRef, RoutingRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

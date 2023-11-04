@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .complex_feature_projection import ComplexFeatureProjection
 from .complex_feature_projection_ref import ComplexFeatureProjectionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -22,7 +22,7 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "projections_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[PointProjection, LinkSequenceProjection, LinkSequenceProjectionRef, ZoneProjectionRef, LinkProjectionRef, ComplexFeatureProjection, LinkProjection, PointProjectionRef, ComplexFeatureProjectionRef, TopographicProjectionRef, ZoneProjection, TopographicProjection]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

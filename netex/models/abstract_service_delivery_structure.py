@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
-    choice: List[object] = field(
+    choice: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

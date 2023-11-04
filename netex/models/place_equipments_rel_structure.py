@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -50,7 +50,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "placeEquipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[StaircaseEquipment, TravelatorEquipment, RampEquipment, SeatingEquipment, PlaceSign, GeneralSign, RoughSurface, AccessEquipment, VehicleChargingEquipment, WheelchairVehicleEquipment, PassengerInformationEquipmentRef, PassengerSafetyEquipment, SanitaryEquipmentRef, EntranceEquipment, AccessVehicleEquipmentRef, RetailDevice, RubbishDisposalEquipment, PassengerInformationEquipment, LiftEquipment, CrossingEquipment, PassengerSafetyEquipmentRef, TicketingEquipment, TrolleyStandEquipment, ShelterEquipment, VehicleEquipmentRef, CycleStorageEquipment, HelpPointEquipmentRef, PlaceLighting, EscalatorEquipment, TicketValidatorEquipment, HeadingSign, QueueingEquipment, RubbishDisposalEquipmentRef, WaitingRoomEquipment, WheelchairVehicleRef, HelpPointEquipment, SignEquipment, SanitaryEquipment, PassengerEquipmentRef, AccessVehicleEquipment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

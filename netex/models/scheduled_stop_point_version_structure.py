@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .country_ref import CountryRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .multilingual_string import MultilingualString
@@ -184,7 +184,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceView, TopographicPlaceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

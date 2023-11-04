@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDate, XmlTime
 from .authority_ref import AuthorityRef
 from .day_type_ref import DayTypeRef
@@ -71,7 +71,7 @@ class JourneyDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[Union[DayTypeRef, FareDayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -89,7 +89,7 @@ class JourneyDesignatorStructure:
             ),
         }
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +107,7 @@ class JourneyDesignatorStructure:
             ),
         }
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

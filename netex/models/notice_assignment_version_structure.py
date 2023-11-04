@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -37,7 +37,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 
-    notice_ref_or_group_of_notices_ref_or_notice: Optional[object] = field(
+    notice_ref_or_group_of_notices_ref_or_notice: Optional[Union[Notice, GeneralGroupOfEntitiesRefStructure, NoticeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +68,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[TimingPatternRef, DatedSpecialServiceRef, DeadRunJourneyPatternRef, JourneyPatternRef, DeadRunRef, VehicleJourneyRef, LinkSequenceRef, NavigationPathRef, DatedVehicleJourneyRef, RouteRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServicePatternRef, ServiceJourneyPatternRef, SpecialServiceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -151,7 +151,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[SectionRef, ParentCommonSectionRef, GeneralSectionRef, LineSectionRef, CommonSectionRef, FareSectionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

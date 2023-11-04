@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .encumbrance_enumeration import EncumbranceEnumeration
 from .medical_need_enumeration import MedicalNeedEnumeration
@@ -14,7 +14,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "UserNeed_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[EncumbranceEnumeration, MobilityEnumeration, MedicalNeedEnumeration, PyschosensoryNeedEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

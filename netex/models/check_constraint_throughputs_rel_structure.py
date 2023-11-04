@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .check_constraint_throughput import CheckConstraintThroughput
 from .check_constraint_throughput_ref import CheckConstraintThroughputRef
 from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
@@ -12,7 +12,7 @@ class CheckConstraintThroughputsRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "checkConstraintThroughputs_RelStructure"
 
-    check_constraint_throughput_ref_or_check_constraint_throughput: List[object] = field(
+    check_constraint_throughput_ref_or_check_constraint_throughput: List[Union[CheckConstraintThroughputRef, CheckConstraintThroughput]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

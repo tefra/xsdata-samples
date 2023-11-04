@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_right_parameter_assignments_in_frame_rel_structure import AccessRightParameterAssignmentsInFrameRelStructure
 from .authority_ref import AuthorityRef
 from .border_points_in_frame_rel_structure import BorderPointsInFrameRelStructure
@@ -57,7 +57,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

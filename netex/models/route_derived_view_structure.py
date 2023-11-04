@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from .derived_view_structure import DerivedViewStructure
 from .direction_view import DirectionView
@@ -42,7 +42,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_line_ref_or_line_ref_or_line_view: Optional[object] = field(
+    flexible_line_ref_or_line_ref_or_line_view: Optional[Union[LineRef, LineView, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

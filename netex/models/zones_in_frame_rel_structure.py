@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
@@ -52,7 +52,7 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "zonesInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[Union[ParkingArea, ParkingComponent, BoardingPosition, TopographicPlace, StopArea, AdministrativeZone, PostalAddress, TransportAdministrativeZone, Country, PointOfInterestEntrance, Zone, TariffZone, FlexibleStopPlace, PointOfInterest, ParkingBay, PointOfInterestVehicleEntrance, StopPlaceVehicleEntrance, VehicleStoppingPlace, ServiceSite, RoutingConstraintZone, HailAndRideArea, FlexibleQuay, VehicleStoppingPosition, ParkingEntranceForVehicles, GeneralZone, ParkingPassengerEntrance, Parking, AccessSpace, Quay, FareZone, Garage, StopPlace, FlexibleArea, PointOfInterestSpace, RoadAddress, AccessZone, AddressablePlace, EquipmentPlace, StopPlaceEntrance, Entrance]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

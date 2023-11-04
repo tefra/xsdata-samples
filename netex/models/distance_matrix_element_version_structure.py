@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_prices_rel_structure import DistanceMatrixElementPricesRelStructure
 from .fare_point_in_pattern_ref_structure import FarePointInPatternRefStructure
@@ -55,7 +55,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[object] = field(
+    choice: Optional[Union[FareSectionRefStructure, ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FarePointInPatternRefStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -93,7 +93,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         }
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[Union[FareSectionRefStructure, ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FarePointInPatternRefStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -154,7 +154,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[object] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[Union[FareTableRef, StandardFareTableRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

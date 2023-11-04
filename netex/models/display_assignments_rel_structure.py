@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .display_assignment import DisplayAssignment
 from .display_assignment_ref import DisplayAssignmentRef
@@ -12,7 +12,7 @@ class DisplayAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "displayAssignments_RelStructure"
 
-    display_assignment_ref_or_display_assignment: List[object] = field(
+    display_assignment_ref_or_display_assignment: List[Union[DisplayAssignmentRef, DisplayAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

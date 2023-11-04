@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
 from .service_journey_ref import ServiceJourneyRef
@@ -22,7 +22,7 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
             "required": True,
         }
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[object] = field(
+    template_service_journey_ref_or_service_journey_ref: Optional[Union[ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

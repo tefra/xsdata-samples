@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dead_run_endpoint_structure import DeadRunEndpointStructure
 from .dead_run_type_enumeration import DeadRunTypeEnumeration
 from .direction_type_enumeration import DirectionTypeEnumeration
@@ -26,7 +26,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .derived_view_structure import DerivedViewStructure
@@ -19,7 +19,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Zone_DerivedViewStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[Union[TariffZoneRef, AdministrativeZoneRef, StopAreaRef, ZoneRef, AccessZoneRef, FareZoneRef, TransportAdministrativeZoneRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
