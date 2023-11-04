@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from crossref.models.org.crossref.schema_pkg.pkg_5.pkg_3 import DoiBatch
+from crossref.models.org.crossref.schema.pkg_5.pkg_3 import DoiBatch
 
 here = Path(__file__).parent
 examples = [

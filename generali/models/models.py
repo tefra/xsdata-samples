@@ -43,7 +43,7 @@ class Models:
             "type": "Element",
         }
     )
-    schema_value: Optional[str] = field(
+    schema: Optional[str] = field(
         default=None,
         metadata={
             "name": "$schema",
