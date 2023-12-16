@@ -55,7 +55,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: List[Union[LineInDirectionRef, LinesInDirectionRefsRelStructure, EmptyType2]] = field(
+    all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: List[Union[EmptyType2, LinesInDirectionRefsRelStructure, LineInDirectionRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -78,7 +78,7 @@ class InterchangeRuleParameterStructure:
             ),
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef]] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[FareScheduledStopPointRef, ScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -136,7 +136,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_journey_ref_or_journey_designator_or_service_designator: Optional[Union[ServiceDesignator, JourneyDesignator, ServiceJourneyRefStructure]] = field(
+    service_journey_ref_or_journey_designator_or_service_designator: Optional[Union[ServiceJourneyRefStructure, JourneyDesignator, ServiceDesignator]] = field(
         default=None,
         metadata={
             "type": "Elements",

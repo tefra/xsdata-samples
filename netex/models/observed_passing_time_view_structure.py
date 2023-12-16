@@ -12,7 +12,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "ObservedPassingTime_ViewStructure"
 
-    choice: List[Union[XmlTime, XmlDuration, int]] = field(
+    choice: List[Union[XmlTime, int, XmlDuration]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

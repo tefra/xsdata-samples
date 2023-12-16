@@ -21,7 +21,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PassingTime_VersionedChildStructure"
 
-    choice: Optional[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[Union[TimingPointInJourneyPatternRef, FarePointInPatternRef, PointInJourneyPatternRef, StopPointInJourneyPatternRef]] = field(
+    choice_1: Optional[Union[FarePointInPatternRef, StopPointInJourneyPatternRef, TimingPointInJourneyPatternRef, PointInJourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -13,7 +13,7 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriods_RelStructure"
 
-    operating_period_ref_or_operating_period_or_uic_operating_period: List[Union[OperatingPeriod, OperatingPeriodRef, UicOperatingPeriod]] = field(
+    operating_period_ref_or_operating_period_or_uic_operating_period: List[Union[OperatingPeriodRef, OperatingPeriod, UicOperatingPeriod]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

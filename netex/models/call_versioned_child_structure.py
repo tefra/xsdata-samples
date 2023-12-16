@@ -45,7 +45,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[Union[ScheduledStopPointRef, ScheduledStopPointView, FareScheduledStopPointRef]] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[Union[FareScheduledStopPointRef, ScheduledStopPointRef, ScheduledStopPointView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,7 +102,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[Union[ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
+    template_service_journey_ref_or_service_journey_ref: Optional[Union[TemplateServiceJourneyRef, ServiceJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -152,7 +152,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -257,7 +257,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementsView, PassengerCarryingRequirementRef]] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementRef, PassengerCarryingRequirementsView]] = field(
         default=None,
         metadata={
             "type": "Elements",

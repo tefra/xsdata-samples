@@ -12,7 +12,7 @@ class TypesOfSalesOfferPackageRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfSalesOfferPackage_RelStructure"
 
-    type_of_sales_offer_package_ref_or_type_of_sales_offer_package: List[Union[TypeOfSalesOfferPackage, TypeOfSalesOfferPackageRef]] = field(
+    type_of_sales_offer_package_ref_or_type_of_sales_offer_package: List[Union[TypeOfSalesOfferPackageRef, TypeOfSalesOfferPackage]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

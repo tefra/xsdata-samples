@@ -15,7 +15,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
     class Meta:
         name = "Network_VersionStructure"
 
-    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
+    authority_ref_or_operator_ref: Optional[Union[AuthorityRef, OperatorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

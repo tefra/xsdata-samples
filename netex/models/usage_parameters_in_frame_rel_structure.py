@@ -39,7 +39,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    choice: List[Union[LuggageAllowance, SalesOfferPackageEntitlementRequired, UserProfile, Exchanging, Routing, Suspending, Reserving, GroupTicket, RoundTrip, SalesOfferPackageEntitlementGiven, EntitlementGiven, Subscribing, PurchaseWindow, Transferability, MinimumStay, CompanionProfile, UsageValidityPeriod, Interchanging, StepLimit, EligibilityChangePolicy, Refunding, CommercialProfile, ChargingPolicy, FrequencyOfUse, PenaltyPolicy, Cancelling, Reselling, Replacing, EntitlementRequired]] = field(
+    choice: List[Union[SalesOfferPackageEntitlementRequired, SalesOfferPackageEntitlementGiven, MinimumStay, Interchanging, Suspending, UsageValidityPeriod, FrequencyOfUse, StepLimit, Routing, RoundTrip, LuggageAllowance, EntitlementRequired, EntitlementGiven, EligibilityChangePolicy, CompanionProfile, GroupTicket, CommercialProfile, UserProfile, Subscribing, PenaltyPolicy, ChargingPolicy, Cancelling, Reserving, PurchaseWindow, Transferability, Replacing, Refunding, Exchanging, Reselling]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

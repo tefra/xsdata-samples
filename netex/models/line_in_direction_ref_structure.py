@@ -13,7 +13,7 @@ class LineInDirectionRefStructure:
     class Meta:
         name = "LineInDirectionRef_Structure"
 
-    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

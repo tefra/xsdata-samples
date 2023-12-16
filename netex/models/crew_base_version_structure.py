@@ -14,7 +14,7 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "CrewBase_VersionStructure"
 
-    garage_point_ref_or_parking_point_ref_or_relief_point_ref: Optional[Union[GaragePointRef, ReliefPointRef, ParkingPointRef]] = field(
+    garage_point_ref_or_parking_point_ref_or_relief_point_ref: Optional[Union[GaragePointRef, ParkingPointRef, ReliefPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -19,7 +19,7 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyRefs_RelStructure"
 
-    choice: List[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, JourneyDesignator, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServiceDesignator, SpecialServiceRef]] = field(
+    choice: List[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, JourneyDesignator, ServiceDesignator]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

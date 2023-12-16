@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TransportSubmodeStructure:
-    choice: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
+    choice: Optional[Union[AirSubmodeEnumeration, BusSubmodeEnumeration, CoachSubmodeEnumeration, FunicularSubmodeEnumeration, MetroSubmodeEnumeration, TramSubmodeEnumeration, TelecabinSubmodeEnumeration, RailSubmodeEnumeration, WaterSubmodeEnumeration, SnowAndIceSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -22,7 +22,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeadRunEndpointStructure:
-    choice: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
+    choice: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef, RoutePointRef, WirePointRef, RoadPointRef, RailwayPointRef, TrafficControlPointRef, BeaconPointRef, ActivationPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

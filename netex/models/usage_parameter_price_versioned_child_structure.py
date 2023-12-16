@@ -40,7 +40,7 @@ class UsageParameterPriceVersionedChildStructure(FarePriceVersionedChildStructur
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice_2: Optional[Union[CompanionProfileRef, ResellingRef, RoundTripRef, FrequencyOfUseRef, ReservingRef, RefundingRef, UsageValidityPeriodRef, ReplacingRef, SalesOfferPackageEntitlementGivenRef, GroupTicketRef, ExchangingRef, StepLimitRef, TransferabilityRef, InterchangingRef, SubscribingRef, PurchaseWindowRef, SuspendingRef, ProfileParameterRef, EntitlementGivenRef, MinimumStayRef, EligibilityChangePolicyRef, EntitlementRequiredRef, LuggageAllowanceRef, SalesOfferPackageEntitlementRequiredRef, ChargingPolicyRef, UserProfileRef, CancellingRef, PenaltyPolicyRef, CommercialProfileRef, RoutingRef]] = field(
+    choice_2: Optional[Union[SalesOfferPackageEntitlementGivenRef, SalesOfferPackageEntitlementRequiredRef, MinimumStayRef, InterchangingRef, FrequencyOfUseRef, SuspendingRef, UsageValidityPeriodRef, StepLimitRef, RoutingRef, RoundTripRef, LuggageAllowanceRef, EntitlementGivenRef, EntitlementRequiredRef, EligibilityChangePolicyRef, GroupTicketRef, CommercialProfileRef, CompanionProfileRef, UserProfileRef, ProfileParameterRef, SubscribingRef, PenaltyPolicyRef, ChargingPolicyRef, TransferabilityRef, ReplacingRef, RefundingRef, ExchangingRef, ResellingRef, CancellingRef, ReservingRef, PurchaseWindowRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

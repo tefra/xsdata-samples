@@ -16,7 +16,7 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "availabilityConditions_RelStructure"
 
-    choice: List[Union[AvailabilityConditionRef, ValidDuring, AvailabilityCondition, ValidBetween]] = field(
+    choice: List[Union[AvailabilityConditionRef, AvailabilityCondition, ValidDuring, ValidBetween]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

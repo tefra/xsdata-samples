@@ -22,7 +22,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    choice: Optional[Union[SubscriptionResponse, TerminateSubscriptionResponse, DataReceivedAcknowledgement, CapabilitiesResponse, ServiceRequest, CapabilitiesRequest, DataReadyAcknowledgement, CheckStatusResponse, Extensions1, TerminateSubscriptionRequest, DataSupplyRequest, HeartbeatNotification, ServiceDelivery, CheckStatusRequest, SubscriptionRequest, DataReadyNotification]] = field(
+    choice: Optional[Union[ServiceRequest, SubscriptionRequest, TerminateSubscriptionRequest, DataReadyNotification, DataSupplyRequest, CheckStatusRequest, HeartbeatNotification, CapabilitiesRequest, SubscriptionResponse, TerminateSubscriptionResponse, DataReadyAcknowledgement, ServiceDelivery, DataReceivedAcknowledgement, CheckStatusResponse, CapabilitiesResponse, Extensions1]] = field(
         default=None,
         metadata={
             "type": "Elements",

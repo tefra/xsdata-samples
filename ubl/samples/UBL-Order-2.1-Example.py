@@ -218,7 +218,7 @@ obj = Order(
                     value="PoBox123"
                 ),
                 street_name=StreetName(
-                    value="Rådhusgatan"
+                    value="R\xe5dhusgatan"
                 ),
                 additional_street_name=AdditionalStreetName(
                     value="2nd floor"
@@ -508,7 +508,7 @@ obj = Order(
                         value="123"
                     ),
                     street_name=StreetName(
-                        value="Rådhusgatan"
+                        value="R\xe5dhusgatan"
                     ),
                     additional_street_name=AdditionalStreetName(
                         value="2nd floor"
@@ -714,7 +714,7 @@ obj = Order(
                         ),
                     ],
                     name=Name(
-                        value="Falu Rödfärg"
+                        value="Falu R\xf6df\xe4rg"
                     ),
                     sellers_item_identification=SellersItemIdentification(
                         id=Id(

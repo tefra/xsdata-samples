@@ -12,7 +12,7 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classRefs_RelStructure"
 
-    class_in_frame_ref_or_class_ref: List[Union[ClassRef, ClassInFrameRef]] = field(
+    class_in_frame_ref_or_class_ref: List[Union[ClassInFrameRef, ClassRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

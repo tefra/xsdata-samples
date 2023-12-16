@@ -12,7 +12,7 @@ class CustomersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customers_RelStructure"
 
-    customer_ref_or_customer: List[Union[Customer, CustomerRef]] = field(
+    customer_ref_or_customer: List[Union[CustomerRef, Customer]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

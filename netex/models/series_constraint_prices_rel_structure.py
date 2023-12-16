@@ -13,7 +13,7 @@ class SeriesConstraintPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "seriesConstraintPrices_RelStructure"
 
-    series_constraint_price_ref_or_series_constraint_price_or_cell_ref: List[Union[CellRef, SeriesConstraintPriceRef, SeriesConstraintPriceVersionedChildStructure]] = field(
+    series_constraint_price_ref_or_series_constraint_price_or_cell_ref: List[Union[SeriesConstraintPriceRef, SeriesConstraintPriceVersionedChildStructure, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

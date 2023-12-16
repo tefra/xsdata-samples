@@ -13,7 +13,7 @@ class CustomerPurchasePackagePricesRelStructure(StrictContainmentAggregationStru
     class Meta:
         name = "customerPurchasePackagePrices_RelStructure"
 
-    customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: List[Union[CellRef, CustomerPurchasePackagePriceVersionedChildStructure, CustomerPurchasePackagePriceRef]] = field(
+    customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: List[Union[CustomerPurchasePackagePriceRef, CustomerPurchasePackagePriceVersionedChildStructure, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

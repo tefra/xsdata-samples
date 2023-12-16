@@ -63,7 +63,7 @@ class FareTableSpecificsStructure:
             ),
         }
     )
-    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -81,7 +81,7 @@ class FareTableSpecificsStructure:
             ),
         }
     )
-    choice: Optional[Union[ServiceSiteRef, ParkingRef, SiteRef, StopPlaceRef, PointOfInterestRef]] = field(
+    choice: Optional[Union[StopPlaceRef, ParkingRef, PointOfInterestRef, ServiceSiteRef, SiteRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -162,7 +162,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[Union[FacilitySetRef, ServiceFacilitySetRef, SiteFacilitySetRef]] = field(
+    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -201,7 +201,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[Union[GroupOfServicesRef, TrainNumberRef, ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
+    choice_1: Optional[Union[TemplateServiceJourneyRef, ServiceJourneyRef, TrainNumberRef, GroupOfServicesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -237,7 +237,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[Union[GroupOfDistributionChannelsRef, DistributionChannelRef]] = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[Union[DistributionChannelRef, GroupOfDistributionChannelsRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

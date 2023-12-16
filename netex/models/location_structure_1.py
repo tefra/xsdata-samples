@@ -10,7 +10,7 @@ class LocationStructure1:
     class Meta:
         name = "LocationStructure"
 
-    longitude_or_latitude_or_coordinates: List[Union[str, Decimal]] = field(
+    longitude_or_latitude_or_coordinates: List[Union[Decimal, str]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

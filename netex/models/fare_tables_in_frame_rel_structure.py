@@ -15,7 +15,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareTablesInFrame_RelStructure"
 
-    standard_fare_table_or_fare_table_in_context_or_fare_table: List[Union[FareTable, StandardFareTable, FareTableInContext]] = field(
+    standard_fare_table_or_fare_table_in_context_or_fare_table: List[Union[StandardFareTable, FareTableInContext, FareTable]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -184,7 +184,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceView, TopographicPlaceRef]] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceRef, TopographicPlaceView]] = field(
         default=None,
         metadata={
             "type": "Elements",

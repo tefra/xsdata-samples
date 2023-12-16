@@ -14,7 +14,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    choice: List[Union[CommercialProfileEligibilityRef, CustomerEligibilityRef, UserProfileEligibilityRef, ResidentialQualificationEligibilityRef]] = field(
+    choice: List[Union[ResidentialQualificationEligibilityRef, CommercialProfileEligibilityRef, UserProfileEligibilityRef, CustomerEligibilityRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -13,7 +13,7 @@ class VehicleTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleTypeRefs_RelStructure"
 
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: List[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: List[Union[CompoundTrainRef, TrainRef, VehicleTypeRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -35,7 +35,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         }
     )
-    quay_ref_or_quay: Optional[Union[Quay, QuayRef]] = field(
+    quay_ref_or_quay: Optional[Union[QuayRef, Quay]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -53,7 +53,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         }
     )
-    boarding_position_ref_or_boarding_position: Optional[Union[BoardingPosition, BoardingPositionRef]] = field(
+    boarding_position_ref_or_boarding_position: Optional[Union[BoardingPositionRef, BoardingPosition]] = field(
         default=None,
         metadata={
             "type": "Elements",

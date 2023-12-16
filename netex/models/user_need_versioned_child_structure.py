@@ -14,7 +14,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "UserNeed_VersionedChildStructure"
 
-    choice: Optional[Union[EncumbranceEnumeration, MobilityEnumeration, MedicalNeedEnumeration, PyschosensoryNeedEnumeration]] = field(
+    choice: Optional[Union[MobilityEnumeration, PyschosensoryNeedEnumeration, MedicalNeedEnumeration, EncumbranceEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

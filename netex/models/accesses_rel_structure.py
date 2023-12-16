@@ -12,7 +12,7 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref_or_access: List[Union[Access, AccessRef]] = field(
+    access_ref_or_access: List[Union[AccessRef, Access]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

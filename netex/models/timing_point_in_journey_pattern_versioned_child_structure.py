@@ -22,7 +22,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
+    choice_1: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -81,7 +81,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time_or_wait_times: Optional[Union[JourneyPatternWaitTimesRelStructure, XmlDuration]] = field(
+    wait_time_or_wait_times: Optional[Union[XmlDuration, JourneyPatternWaitTimesRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

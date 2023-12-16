@@ -12,7 +12,7 @@ class RetailDevicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "RetailDevices_RelStructure"
 
-    retail_device_ref_or_retail_device: List[Union[RetailDevice, RetailDeviceRef]] = field(
+    retail_device_ref_or_retail_device: List[Union[RetailDeviceRef, RetailDevice]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

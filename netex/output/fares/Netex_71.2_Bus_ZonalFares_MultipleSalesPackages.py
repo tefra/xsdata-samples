@@ -2180,22 +2180,22 @@ obj = PublicationDelivery(
                                 pricing_rules=PricingRulesRelStructure(
                                     choice=[
                                         DiscountingRule(
-                                            id="cdla:£0-Off",
+                                            id="cdla:\xa30-Off",
                                             version="any",
                                             discount_as_value=Decimal("0")
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£80-Off",
+                                            id="cdla:\xa380-Off",
                                             version="any",
                                             discount_as_value=Decimal("80")
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£115-Off",
+                                            id="cdla:\xa3115-Off",
                                             version="any",
                                             discount_as_value=Decimal("115")
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£135-Off",
+                                            id="cdla:\xa3135-Off",
                                             version="any",
                                             discount_as_value=Decimal("135")
                                         ),
@@ -3366,7 +3366,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("250"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£0-Off"
+                                                            ref="cdla:\xa30-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3408,7 +3408,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("170"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£80-Off"
+                                                            ref="cdla:\xa380-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3446,7 +3446,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("135"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£115-Off"
+                                                            ref="cdla:\xa3115-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3484,7 +3484,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("115"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£115-Off"
+                                                            ref="cdla:\xa3115-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3881,7 +3881,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("220"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£0-Off"
+                                                            ref="cdla:\xa30-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3919,7 +3919,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("140"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£80-Off"
+                                                            ref="cdla:\xa380-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3957,7 +3957,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("105"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£115-Off"
+                                                            ref="cdla:\xa3115-Off"
                                                         )
                                                     ),
                                                     choice_1=[
@@ -3995,7 +3995,7 @@ obj = PublicationDelivery(
                                                         amount=Decimal("85"),
                                                         choice_1=DiscountingRuleRef(
                                                             version="any",
-                                                            ref="cdla:£135-Off"
+                                                            ref="cdla:\xa3135-Off"
                                                         )
                                                     ),
                                                     choice_1=[

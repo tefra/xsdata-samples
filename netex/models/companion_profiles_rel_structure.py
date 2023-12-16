@@ -12,7 +12,7 @@ class CompanionProfilesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "companionProfiles_RelStructure"
 
-    companion_profile_ref_or_companion_profile: List[Union[CompanionProfile, CompanionProfileRef]] = field(
+    companion_profile_ref_or_companion_profile: List[Union[CompanionProfileRef, CompanionProfile]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

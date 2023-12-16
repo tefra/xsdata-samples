@@ -60,7 +60,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[Union[Decimal, EmptyType2, XmlDuration]] = field(
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[Union[EmptyType2, XmlDuration, Decimal]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +91,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[Union[Decimal, EmptyType2, XmlDuration]] = field(
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[Union[EmptyType2, XmlDuration, Decimal]] = field(
         default=None,
         metadata={
             "type": "Elements",

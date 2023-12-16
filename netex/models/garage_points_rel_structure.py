@@ -12,7 +12,7 @@ class GaragePointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "garagePoints_RelStructure"
 
-    garage_point_ref_or_garage_point: List[Union[GaragePoint, GaragePointRef]] = field(
+    garage_point_ref_or_garage_point: List[Union[GaragePointRef, GaragePoint]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

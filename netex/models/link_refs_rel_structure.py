@@ -30,7 +30,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    choice: List[Union[LineLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, PathLinkRef, ServiceLinkRefByValue, RailwayLinkRef, ModalLinkRefByValue, RouteLinkRefByValue, PathLinkRefByValue, WireLinkRefByValue, RoadLinkRef, LineLinkRefByValue, LinkRefByValue, TimingLinkRef, ActivationLinkRefByValue, RoadLinkRefByValue, TimingLinkRefByValue, ActivationLinkRef, RailwayLinkRefByValue]] = field(
+    choice: List[Union[ServiceLinkRef, LineLinkRef, PathLinkRef, TimingLinkRef, RouteLinkRef, WireLinkRef, RoadLinkRef, RailwayLinkRef, ActivationLinkRef, ServiceLinkRefByValue, LineLinkRefByValue, PathLinkRefByValue, TimingLinkRefByValue, RouteLinkRefByValue, WireLinkRefByValue, RoadLinkRefByValue, RailwayLinkRefByValue, ActivationLinkRefByValue, ModalLinkRefByValue, LinkRefByValue]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

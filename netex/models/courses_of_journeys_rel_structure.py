@@ -12,7 +12,7 @@ class CoursesOfJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coursesOfJourneys_RelStructure"
 
-    course_of_journeys_ref_or_course_of_journeys: List[Union[CourseOfJourneys, CourseOfJourneysRef]] = field(
+    course_of_journeys_ref_or_course_of_journeys: List[Union[CourseOfJourneysRef, CourseOfJourneys]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

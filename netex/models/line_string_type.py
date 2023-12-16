@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class LineStringType(AbstractCurveType):
-    pos_or_point_property_or_pos_list: List[Union[PointProperty, Pos, PosList]] = field(
+    pos_or_point_property_or_pos_list: List[Union[Pos, PointProperty, PosList]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -2649,7 +2649,7 @@ obj = PublicationDelivery(
                                         id="hde::sji_YP_01_YQ_02",
                                         version="any",
                                         description=MultilingualString(
-                                            value="14:45  Change for Quebec&#9; Notice (1) "
+                                            value="14:45  Change for Quebec\t Notice (1) "
                                         ),
                                         connection_ref=ConnectionRefStructure(
                                             version="any",
@@ -2700,7 +2700,7 @@ obj = PublicationDelivery(
                                         id="hde::sji_ZP_02_YP_03",
                                         version="any",
                                         description=MultilingualString(
-                                            value="15:05   Change for Papa&#9;Notice (2) "
+                                            value="15:05   Change for Papa\tNotice (2) "
                                         ),
                                         connection_ref=ConnectionRefStructure(
                                             version="any",
@@ -2751,7 +2751,7 @@ obj = PublicationDelivery(
                                         id="hde::sji_YP_03_ZQ_04",
                                         version="any",
                                         description=MultilingualString(
-                                            value="15:15   Change for Quebec&#9;Notice (1)  "
+                                            value="15:15   Change for Quebec\tNotice (1)  "
                                         ),
                                         connection_ref=ConnectionRefStructure(
                                             version="any",

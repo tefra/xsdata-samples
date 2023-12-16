@@ -12,7 +12,7 @@ class LineSectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "lineSections_RelStructure"
 
-    line_section_ref_or_line_section: List[Union[LineSection, LineSectionRef]] = field(
+    line_section_ref_or_line_section: List[Union[LineSectionRef, LineSection]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

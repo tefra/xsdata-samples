@@ -31,7 +31,7 @@ class AirFeeType:
     """
     Defines the data fields available for the fees.
 
-    Attributes
+    Attributes:
         value:
         fee_code: Identifies the code for the fee.
         amount:
@@ -83,7 +83,7 @@ class AirFeeType:
 
 class AirItineraryPricingInfoTypeReissueExchange(Enum):
     """
-    Attributes
+    Attributes:
         VALUE_1: Priced as Reissue
         VALUE_2: Priced as Exchange
     """
@@ -102,7 +102,7 @@ class AirTaxType:
     """
     Defines the data fields available for air tax.
 
-    Attributes
+    Attributes:
         value:
         tax_code: Identifies the code for the tax.
         amount:
@@ -313,7 +313,7 @@ class CurrencyAmountType:
     Provides a monetary amount and the code of the currency in which this amount is
     expressed.
 
-    Attributes
+    Attributes:
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
         decimal_places: Indicates the number of decimal places for a
@@ -360,7 +360,7 @@ class CurrencyConversionsType:
     @dataclass
     class Conversion:
         """
-        Attributes
+        Attributes:
             from_value:
             to:
             rate_of_exchange: Exchange rate
@@ -409,7 +409,7 @@ class FareComponentBreakdownType:
     """
     Fare Component Breakdown.
 
-    Attributes
+    Attributes:
         fare_component_reference_id:
         fare_component_commission: Commission Amount per Fare Component
         rule_id: Commission Rule ID
@@ -483,7 +483,7 @@ class FareMessagesType:
     @dataclass
     class Message:
         """
-        Attributes
+        Attributes:
             airline_code:
             type_value:
             fail_code:
@@ -527,7 +527,7 @@ class FreeTextType:
     """
     Textual information to provide descriptions and/or additional information.
 
-    Attributes
+    Attributes:
         value:
         language: Language identification.
     """
@@ -549,7 +549,7 @@ class FreeTextType:
 @dataclass
 class HandlingMarkupSummaryType:
     """
-    Attributes
+    Attributes:
         type_code: Value M: Embedded Mark Up, J: Adjusted Selling, H:
             Handling Fee, G: GST Taxes
         description: Max 10 chars
@@ -588,7 +588,7 @@ class MessageClassType(Enum):
     """
     Definies the available messaage class type.
 
-    Attributes
+    Attributes:
         E: Error
         W: Warrning
         D: Diagnostic
@@ -605,7 +605,7 @@ class ObfeeType:
     """
     Defines the data fields available for the ob fees.
 
-    Attributes
+    Attributes:
         type_value: OB Fee sub type code
         description: OB Fee description
         amount:
@@ -661,7 +661,7 @@ class OcfeeType:
     """
     OC Fee details.
 
-    Attributes
+    Attributes:
         amount: Fee amount
         description: Fee description
         origin_airport: Origin airport
@@ -757,7 +757,7 @@ class OcfeeType:
 
 class PtcfareBreakdownTypeReissueExchange(Enum):
     """
-    Attributes
+    Attributes:
         VALUE_1: Priced as Reissue
         VALUE_2: Priced as Exchange
     """
@@ -775,7 +775,7 @@ class ProcessingMessageType:
     """
     Message generated per for particular date and leg.
 
-    Attributes
+    Attributes:
         pricing_source: Pricing source.
         message: Message text
     """
@@ -801,7 +801,7 @@ class ProcessingMessageType:
 @dataclass
 class RateOfExchangeType:
     """
-    Attributes
+    Attributes:
         value: Exchange rate
     """
     value: None | float = field(
@@ -898,7 +898,7 @@ class ReissueInfoType:
         @dataclass
         class ChangeFee:
             """
-            Attributes
+            Attributes:
                 highest_change_fee:
                 amount:
                 currency_code: A currency code (e.g. USD, EUR, PLN)
@@ -959,7 +959,7 @@ class ResponseLocationType:
     """
     Code and optional string to describe a location point.
 
-    Attributes
+    Attributes:
         value:
         location_code: Location identifying code.
         code_context: Identifies the context of the identifying code,
@@ -1037,7 +1037,7 @@ class UnflownPriceType:
     """
     Totally Unflown Itinerary Price Information.
 
-    Attributes
+    Attributes:
         amount:
         currency_code: A currency code (e.g. USD, EUR, PLN)
         decimal_places: Indicates the number of decimal places for a
@@ -1078,7 +1078,7 @@ class ValidInterlineType(Enum):
 @dataclass
 class ValidatingCarrierInfoType:
     """
-    Attributes
+    Attributes:
         default: Default validating carrier code
         alternate: Alternate validating carrier code
         settlement_method:
@@ -1229,7 +1229,7 @@ class AirportInformationType(ResponseLocationType):
     """
     Code and optional string to describe a location point.
 
-    Attributes
+    Attributes:
         terminal_id: Location terminal identifier.
     """
     terminal_id: None | str = field(
@@ -1339,7 +1339,7 @@ class BaggageInformationType:
     @dataclass
     class Segment:
         """
-        Attributes
+        Attributes:
             id: Id of segment that current baggage information applies
                 to.
         """
@@ -1355,7 +1355,7 @@ class BaggageInformationType:
     @dataclass
     class Allowance:
         """
-        Attributes
+        Attributes:
             pieces: Number of Pieces
             weight: Weight Limit
             unit: Units of the Weight Limit
@@ -1386,7 +1386,7 @@ class BaggageInformationType:
 @dataclass
 class ComplexProcessingMessageType(ProcessingMessageType):
     """
-    Attributes
+    Attributes:
         leg: Optional list of departure dates for each leg
     """
     leg: list[ComplexProcessingMessageType.Leg] = field(
@@ -1402,7 +1402,7 @@ class ComplexProcessingMessageType(ProcessingMessageType):
     @dataclass
     class Leg:
         """
-        Attributes
+        Attributes:
             departure_date: Departure date
         """
         departure_date: None | XmlDate = field(
@@ -1421,7 +1421,7 @@ class ErrorType(FreeTextType):
     Standard way to indicate that an error occurred during the processing of an OTA
     message.
 
-    Attributes
+    Attributes:
         type_value: The Error element MUST contain the Type attribute
             that uses a recommended set of values to indicate the error
             type. The validating XSD can expect to accept values that it
@@ -1530,7 +1530,7 @@ class ErrorType(FreeTextType):
 @dataclass
 class FareComponentTaxesType:
     """
-    Attributes
+    Attributes:
         flight_segment: A container for necessary data to describe one
             or more flight segments.
         tax: Any individual tax applied to the fare
@@ -1557,7 +1557,7 @@ class FareComponentTaxesType:
     @dataclass
     class FlightSegment:
         """
-        Attributes
+        Attributes:
             departure_airport_code: Departure point of flight segment.
             arrival_airport_code: Arrival point of flight segment.
         """
@@ -1580,7 +1580,7 @@ class FareComponentTaxesType:
 @dataclass
 class OneWayProcessingMessageType(ProcessingMessageType):
     """
-    Attributes
+    Attributes:
         departure_date: Departure date
         departure_airport: Location identifying code.
         arrival_airport: Location identifying code.
@@ -1635,7 +1635,7 @@ class RuleInfoType:
     Information may be actual rules data or the results returned from a
     rules-based inquiry.
 
-    Attributes
+    Attributes:
         res_ticketing_rules: General container for rules regarding fare
             reservation,  ticketing and sale restrictions
         length_of_stay_rules: Rules providing minimum or maximum stay
@@ -1661,7 +1661,7 @@ class RuleInfoType:
     @dataclass
     class ResTicketingRules:
         """
-        Attributes
+        Attributes:
             adv_res_ticketing: Container for holding rules regarding
                 advance reservation or ticketing restrictions.
         """
@@ -1700,7 +1700,7 @@ class TicketingInfoRsType:
     """
     Extends TicketingInfoType to provide an eTicketNumber.
 
-    Attributes
+    Attributes:
         ticket_advisory: Open text field available for additional ticket
             information.
         tpa_extensions: Place holder for additional elements.
@@ -1772,7 +1772,7 @@ class VccinformationType:
     """
     Validating Carrier Commission Information.
 
-    Attributes
+    Attributes:
         fare_component_breakdown:
         validating_carrier:
         commission_amount: Commission Amount (in equivalent amount
@@ -1834,7 +1834,7 @@ class WarningType(FreeTextType):
     Standard way to indicate successful processing of an OTA message, but one in
     which warnings are generated.
 
-    Attributes
+    Attributes:
         type_value: The Warning element MUST contain the Type attribute
             that uses a recommended set of values to indicate the
             warning type. The validating XSD can expect to accept values
@@ -1949,7 +1949,7 @@ class BookFlightSegmentType:
     """
     Container for the flight segment data plus the MarriageGrp.
 
-    Attributes
+    Attributes:
         departure_airport: Departure point of flight segment.
         arrival_airport: Arrival point of flight segment.
         operating_airline: The operating airline of the flight if it is
@@ -2178,7 +2178,7 @@ class BookFlightSegmentType:
     @dataclass
     class StopAirports:
         """
-        Attributes
+        Attributes:
             stop_airport: Stop point of flight segment.
         """
         stop_airport: list[BookFlightSegmentType.StopAirports.StopAirport] = field(
@@ -2194,7 +2194,7 @@ class BookFlightSegmentType:
         @dataclass
         class StopAirport(ResponseLocationType):
             """
-            Attributes
+            Attributes:
                 arrival_date_time: This date should be of the form YYYY-
                     MM-DDTHH:MM:SS
                 departure_date_time: This date should be of the form
@@ -2354,7 +2354,7 @@ class ErrorsType:
     """
     A collection of errors that occurred during the processing of a message.
 
-    Attributes
+    Attributes:
         error: Describes an error that occurred during the processing of
             an OTA message
     """
@@ -2374,7 +2374,7 @@ class FareInfoType:
     """
     Rules for this priced option.
 
-    Attributes
+    Attributes:
         departure_date: Departure Date for this priced fare.
         fare_reference: FareReferenceCode can be used for either the
             Fare Basis Code or the Fare Class Code.
@@ -2474,7 +2474,7 @@ class FareType:
     """
     Holds a base fare, tax, total and currency information on a price.
 
-    Attributes
+    Attributes:
         base_fare: Price of the inventory excluding taxes and fees.
         non_refundable_base_fare: Non-refundable base fare amount
         fare_construction: Fare construction total amount.
@@ -2618,7 +2618,7 @@ class FareType:
     @dataclass
     class EquivFare(CurrencyAmountType):
         """
-        Attributes
+        Attributes:
             effective_price_deviation: Effective Price Deviation
         """
         effective_price_deviation: None | Decimal = field(
@@ -2633,7 +2633,7 @@ class FareType:
     @dataclass
     class Taxes:
         """
-        Attributes
+        Attributes:
             fare_components_taxes:
             legs_taxes:
             tax: Any individual tax applied to the fare
@@ -2703,7 +2703,7 @@ class FareType:
             @dataclass
             class LegTaxes:
                 """
-                Attributes
+                Attributes:
                     tax: Any individual tax applied to the fare
                     number:
                 """
@@ -2728,7 +2728,7 @@ class FareType:
     @dataclass
     class Fees:
         """
-        Attributes
+        Attributes:
             fee: Any additional fee incurred by the passenger but not
                 shown on the ticket.
         """
@@ -2746,7 +2746,7 @@ class FareType:
     @dataclass
     class Obfees:
         """
-        Attributes
+        Attributes:
             obfee: OB fees
             ttype_amount: Total T-type OB Fee
         """
@@ -2770,7 +2770,7 @@ class FareType:
     @dataclass
     class ReissueInfoList:
         """
-        Attributes
+        Attributes:
             reissue_info: Reissue Info
         """
         reissue_info: list[ReissueInfoType] = field(
@@ -2786,7 +2786,7 @@ class FareType:
     @dataclass
     class PenaltiesInfo:
         """
-        Attributes
+        Attributes:
             penalty: Penalty Info
         """
         penalty: list[FareType.PenaltiesInfo.Penalty] = field(
@@ -2802,7 +2802,7 @@ class FareType:
         @dataclass
         class Penalty:
             """
-            Attributes
+            Attributes:
                 cat16_text_only: Missing Data
                 type_value:
                 applicability:
@@ -2893,7 +2893,7 @@ class FareType:
             @dataclass
             class Cat16TextOnly:
                 """
-                Attributes
+                Attributes:
                     fare_basis_code: Fare basis code
                     fare_component_id: Fare component Id
                 """
@@ -2920,7 +2920,7 @@ class FareType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             surcharges: Surcharge information
             legs: This is a collection of Leg Information
             fare_components: A collection of additional information for
@@ -2990,7 +2990,7 @@ class FareType:
         @dataclass
         class Legs:
             """
-            Attributes
+            Attributes:
                 leg: Leg Information
             """
             leg: list[FareType.TpaExtensions.Legs.Leg] = field(
@@ -3006,7 +3006,7 @@ class FareType:
             @dataclass
             class Leg:
                 """
-                Attributes
+                Attributes:
                     base_fare: Price of the inventory excluding taxes
                         and fees.
                     equiv_fare: Price of the inventory excluding taxes
@@ -3082,7 +3082,7 @@ class FareType:
                 @dataclass
                 class EquivFare(CurrencyAmountType):
                     """
-                    Attributes
+                    Attributes:
                         effective_price_deviation: Effective Price
                             Deviation
                     """
@@ -3098,7 +3098,7 @@ class FareType:
                 @dataclass
                 class Taxes:
                     """
-                    Attributes
+                    Attributes:
                         tax: Any individual tax applied to the fare
                     """
                     tax: None | AirTaxType = field(
@@ -3125,7 +3125,7 @@ class FareType:
         @dataclass
         class FareComponents:
             """
-            Attributes
+            Attributes:
                 fare_component: Subtotal pricing summary for Fare
                     Component.
             """
@@ -3142,7 +3142,7 @@ class FareType:
             @dataclass
             class FareComponent:
                 """
-                Attributes
+                Attributes:
                     base_fare: Price of the inventory excluding taxes
                         and fees.
                     equiv_fare: Price of the inventory excluding taxes
@@ -3257,7 +3257,7 @@ class FareType:
                 @dataclass
                 class EquivFare(CurrencyAmountType):
                     """
-                    Attributes
+                    Attributes:
                         effective_price_deviation: Effective Price
                             Deviation
                     """
@@ -3273,7 +3273,7 @@ class FareType:
                 @dataclass
                 class Taxes:
                     """
-                    Attributes
+                    Attributes:
                         tax: Any individual tax applied to the fare
                     """
                     tax: None | AirTaxType = field(
@@ -3289,7 +3289,7 @@ class FareType:
                 @dataclass
                 class Segment:
                     """
-                    Attributes
+                    Attributes:
                         leg_index: Refers to OriginDestinationOption of
                             current itinerary
                         flight_index: Refers to FlightSegment within
@@ -3315,7 +3315,7 @@ class FareType:
                 @dataclass
                 class HandlingMarkupDetail:
                     """
-                    Attributes
+                    Attributes:
                         markup_handling_fee_app_id: Markup/Handling fee
                             Application ID
                         markup_type_code: Markup type code, reserved for
@@ -3384,7 +3384,7 @@ class FareType:
                 @dataclass
                 class FareRetailerRule:
                     """
-                    Attributes
+                    Attributes:
                         transaction_type: General or
                             AdjustedSellingLevel
                         code:
@@ -3423,7 +3423,7 @@ class FareType:
         @dataclass
         class CommissionData:
             """
-            Attributes
+            Attributes:
                 vccinformation:
                 cat35_commission_percentage: Cat 35 Commission
                     Percentage
@@ -3487,7 +3487,7 @@ class OriginDestinationOptionType:
     """
     A container for flight segments.
 
-    Attributes
+    Attributes:
         flight_segment: A container for necessary data to describe one
             or more legs of a single flight number.
         elapsed_time: Elapsed leg trip time in minutes
@@ -3516,7 +3516,7 @@ class AirItineraryType:
     """
     Specifies the origin and destination of the traveler.
 
-    Attributes
+    Attributes:
         origin_destination_options: A collection of
             OriginDestinationOption
         direction_ind: A directional indicator that identifies a type of
@@ -3549,7 +3549,7 @@ class AirItineraryType:
     @dataclass
     class OriginDestinationOptions:
         """
-        Attributes
+        Attributes:
             origin_destination_option: A container for flight segments.
         """
         origin_destination_option: list[OriginDestinationOptionType] = field(
@@ -3567,7 +3567,7 @@ class AirItineraryType:
 @dataclass
 class ItinTotalFareType(FareType):
     """
-    Attributes
+    Attributes:
         extras: Air Extras total summary amount
         total_with_extras: Total price with Air Extras
         total_mileage:
@@ -3642,7 +3642,7 @@ class ItinTotalFareType(FareType):
     @dataclass
     class ServiceFee:
         """
-        Attributes
+        Attributes:
             amount: Service Fee Amount
             tax_amount: Service Fee Tax
         """
@@ -3672,7 +3672,7 @@ class PtcfareBreakdownType:
 
     Set if fareBreakdown was requested.
 
-    Attributes
+    Attributes:
         passenger_type_quantity: Number of individuals traveling under
             this PTC
         fare_basis_codes: This is a collection of Fare Basis Codes
@@ -3783,7 +3783,7 @@ class PtcfareBreakdownType:
     @dataclass
     class FareBasisCodes:
         """
-        Attributes
+        Attributes:
             fare_basis_code: Fare basis code for the price for this PTC
         """
         fare_basis_code: list[PtcfareBreakdownType.FareBasisCodes.FareBasisCode] = field(
@@ -3800,7 +3800,7 @@ class PtcfareBreakdownType:
         @dataclass
         class FareBasisCode:
             """
-            Attributes
+            Attributes:
                 value:
                 private_fare_type: Private fare type symbol.
                 fare_component_reference_id:
@@ -3933,7 +3933,7 @@ class PtcfareBreakdownType:
     @dataclass
     class Endorsements:
         """
-        Attributes
+        Attributes:
             endorsement: Specifies ticket endorsement information.
             tpa_extensions:
             non_refundable_indicator: Indicates whether the ticket is
@@ -3976,7 +3976,7 @@ class PtcfareBreakdownType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             fare_calc_line: Fare calculation line.
             fare_type:
         """
@@ -4016,7 +4016,7 @@ class PtcfareBreakdownType:
     @dataclass
     class FareInfos:
         """
-        Attributes
+        Attributes:
             fare_info: Detailed information on individual priced fares
         """
         fare_info: list[PtcfareBreakdownType.FareInfos.FareInfo] = field(
@@ -4033,7 +4033,7 @@ class PtcfareBreakdownType:
         @dataclass
         class FareInfo:
             """
-            Attributes
+            Attributes:
                 departure_date: Departure Date for this priced fare.
                 fare_reference: FareReference is the booking code.
                 rule_info: Information regarding restrictions governing
@@ -4248,7 +4248,7 @@ class AirItineraryPricingInfoType:
     """
     Pricing Information for an Air Itinerary.
 
-    Attributes
+    Attributes:
         itin_total_fare: Total price of the itinerary
         ptc_fare_breakdowns: This is a collection of PTC Fare Breakdowns
         fare_infos: This is a collection of FareInfo
@@ -4485,7 +4485,7 @@ class AirItineraryPricingInfoType:
     @dataclass
     class FareInfos:
         """
-        Attributes
+        Attributes:
             fare_info: Detailed information on individual priced fares
         """
         fare_info: list[AirItineraryPricingInfoType.FareInfos.FareInfo] = field(
@@ -4502,7 +4502,7 @@ class AirItineraryPricingInfoType:
         @dataclass
         class FareInfo:
             """
-            Attributes
+            Attributes:
                 departure_date: Departure Date for this priced fare.
                 fare_reference: FareReference is the booking code.
                 rule_info: Information regarding restrictions governing
@@ -4714,7 +4714,7 @@ class AirItineraryPricingInfoType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             divide_in_party: Indicates if different passenger types are
                 booked in different inventories.
             promo_offer: Promotional offer
@@ -4823,7 +4823,7 @@ class AirItineraryPricingInfoType:
         @dataclass
         class PromoOffer:
             """
-            Attributes
+            Attributes:
                 promo_id: Promotional offer identifier
                 corp_id: Airline identifier.
                 content_id: This information comes from Fare Notes Rule
@@ -4856,7 +4856,7 @@ class AirItineraryPricingInfoType:
         @dataclass
         class FareNote:
             """
-            Attributes
+            Attributes:
                 fare_type_name: Corresponds to data in the Fare Note
                     rule (action target: Fare Type). For example:
                     "PROMOTIONAL"
@@ -4914,7 +4914,7 @@ class AirItineraryPricingInfoType:
         @dataclass
         class Rule:
             """
-            Attributes
+            Attributes:
                 type_value: Rule type. For example: "Fare Note Itin",
                     "DRE"
                 id: Rule ID
@@ -4954,7 +4954,7 @@ class AirItineraryPricingInfoType:
         @dataclass
         class AncillaryFeeGroups:
             """
-            Attributes
+            Attributes:
                 ancillary_fee_group: Ancillary fee group returned
                 message: Arbitrary message returned from MIP
             """
@@ -4977,7 +4977,7 @@ class AirItineraryPricingInfoType:
             @dataclass
             class AncillaryFeeGroup:
                 """
-                Attributes
+                Attributes:
                     ancillary_fee_item: OC Fee returned
                     code: Group code
                     name: Group name
@@ -5030,7 +5030,7 @@ class AirItineraryPricingInfoType:
             @dataclass
             class Leg:
                 """
-                Attributes
+                Attributes:
                     segment:
                     number:
                     brand_id:
@@ -5113,7 +5113,7 @@ class AirItineraryPricingInfoType:
                 @dataclass
                 class Segment:
                     """
-                    Attributes
+                    Attributes:
                         number: Reference to the flight segment
                         program_id:
                         program_description:
@@ -5182,7 +5182,7 @@ class TicketPricingType:
     """
     Pricing Information for Single Ticket.
 
-    Attributes
+    Attributes:
         origin_destination_options:
         air_itinerary_pricing_info: Pricing Information for a Ticket.
         notes: Provides for free form descriptive information for the
@@ -5276,7 +5276,7 @@ class TicketPricingType:
             @dataclass
             class FlightSegment:
                 """
-                Attributes
+                Attributes:
                     departure_airport: Departure point of flight
                         segment.
                     arrival_airport: Arrival point of flight segment.
@@ -5312,7 +5312,7 @@ class TicketPricingType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             validating_carrier: Issuing airline whose numeric airline
                 code is reflected in the electronic transaction for the
                 flight/value coupon(s).The Validating Carrier shall be
@@ -5331,7 +5331,7 @@ class TicketPricingType:
         @dataclass
         class ValidatingCarrier:
             """
-            Attributes
+            Attributes:
                 code: Identifies a company by the company code.
             """
             code: None | str = field(
@@ -5363,7 +5363,7 @@ class PricedItineraryType:
     """
     Itinerary with pricing information.
 
-    Attributes
+    Attributes:
         air_itinerary: Specifies the origin and destination of the
             traveler.
         air_itinerary_pricing_info: Pricing Information for an Air
@@ -5479,7 +5479,7 @@ class PricedItineraryType:
     @dataclass
     class AirItineraryPricingInfo(AirItineraryPricingInfoType):
         """
-        Attributes
+        Attributes:
             tickets: Pricing information for multiple separate tickets
         """
         tickets: None | TicketsPricingType = field(
@@ -5494,7 +5494,7 @@ class PricedItineraryType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             additional_fares:
             ops: Populated if an Ops rule has been hit.
             itin_source: The source of the itinerary
@@ -5579,7 +5579,7 @@ class PricedItineraryType:
         @dataclass
         class AdditionalFares:
             """
-            Attributes
+            Attributes:
                 air_itinerary_pricing_info: Pricing Information for an
                     Air Itinerary.
                 notes: Provides for free form descriptive information
@@ -5625,7 +5625,7 @@ class PricedItineraryType:
             @dataclass
             class AirItineraryPricingInfo(AirItineraryPricingInfoType):
                 """
-                Attributes
+                Attributes:
                     tickets: Pricing information for multiple separate
                         tickets
                 """
@@ -5641,7 +5641,7 @@ class PricedItineraryType:
         @dataclass
         class Ops:
             """
-            Attributes
+            Attributes:
                 fare_types:
                 action_code: Corresponds to data in the Ops rule (action
                     target: Ops Action). The numeric id corresponds to
@@ -5691,7 +5691,7 @@ class PricedItineraryType:
         @dataclass
         class ItinSource:
             """
-            Attributes
+            Attributes:
                 source: The name of the source.
             """
             source: None | str = field(
@@ -5706,7 +5706,7 @@ class PricedItineraryType:
         @dataclass
         class ValueBucket:
             """
-            Attributes
+            Attributes:
                 price_time_value_rank: Price Time Value rank.
                 value_bucket_number: Price Time Value Bucket number.
             """
@@ -5728,7 +5728,7 @@ class PricedItineraryType:
         @dataclass
         class ValidatingCarrier:
             """
-            Attributes
+            Attributes:
                 code: Identifies a company by the company code.
             """
             code: None | str = field(
@@ -5744,7 +5744,7 @@ class PricedItineraryType:
         @dataclass
         class DiversitySwapper:
             """
-            Attributes
+            Attributes:
                 weighed_price_amount: (Penalty * price / 10) -- by which
                     itins are sorted in Diversity Swapper
             """
@@ -5760,7 +5760,7 @@ class PricedItineraryType:
         @dataclass
         class Failed:
             """
-            Attributes
+            Attributes:
                 minimum_connect_time: Indicates that the itinerary does
                     not fullfill the Minimum Connect Time requirement.
                     It cannot be sold.
@@ -5785,7 +5785,7 @@ class OtaAirLowFareSearchRs:
     - Fare Basis Codes and the information necessary to make a rules entry.
     This message contains similar information to a standard airline CRS or GDS Low Fare Search Response message.
 
-    Attributes
+    Attributes:
         errors: In case of failure errors are returned.
         success: In case of success this element is returned.
         warnings: In case of any warnings this element is returned.
@@ -6021,7 +6021,7 @@ class OtaAirLowFareSearchRs:
     @dataclass
     class PricedItineraries:
         """
-        Attributes
+        Attributes:
             tpa_extensions:
             priced_itinerary: Successfull Low Fare priced itineraries in
                 response to a Low Fare Search request.
@@ -6045,7 +6045,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class TpaExtensions:
             """
-            Attributes
+            Attributes:
                 processing_message: Container for itinerary message
                     type.
             """
@@ -6060,7 +6060,7 @@ class OtaAirLowFareSearchRs:
     @dataclass
     class OneWayItineraries:
         """
-        Attributes
+        Attributes:
             branded_one_way_itineraries: Container for priced
                 itineraries assigned to particular leg.
             simple_one_way_itineraries: Container for priced itineraries
@@ -6086,7 +6086,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class BrandedOneWayItineraries:
             """
-            Attributes
+            Attributes:
                 tpa_extensions:
                 priced_itinerary: Container for priced itinerary type.
                 rph: Leg ID from request.
@@ -6118,7 +6118,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class TpaExtensions:
                 """
-                Attributes
+                Attributes:
                     processing_message: Container for itinerary message
                         type.
                 """
@@ -6133,7 +6133,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class SimpleOneWayItineraries:
             """
-            Attributes
+            Attributes:
                 tpa_extensions:
                 priced_itinerary: Container for priced itinerary type.
                 rph: Leg ID from request.
@@ -6165,7 +6165,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class TpaExtensions:
                 """
-                Attributes
+                Attributes:
                     processing_message: Container for itinerary message
                         type.
                 """
@@ -6180,7 +6180,7 @@ class OtaAirLowFareSearchRs:
     @dataclass
     class DepartedItineraries:
         """
-        Attributes
+        Attributes:
             priced_itineraries: Low Fare priced itineraries container.
             one_way_itineraries: Successfull Low Fare priced itineraries
                 in response to a Simplified One Way request.
@@ -6203,7 +6203,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class PricedItineraries:
             """
-            Attributes
+            Attributes:
                 tpa_extensions:
                 priced_itinerary: Successfull Low Fare priced
                     itineraries in response to a Low Fare Search
@@ -6228,7 +6228,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class TpaExtensions:
                 """
-                Attributes
+                Attributes:
                     processing_message: Container for itinerary message
                         type.
                 """
@@ -6243,7 +6243,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class OneWayItineraries:
             """
-            Attributes
+            Attributes:
                 branded_one_way_itineraries: Container for priced
                     itineraries assigned to particular leg.
                 simple_one_way_itineraries: Container for priced
@@ -6269,7 +6269,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class BrandedOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6302,7 +6302,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6317,7 +6317,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class SimpleOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6350,7 +6350,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6365,7 +6365,7 @@ class OtaAirLowFareSearchRs:
     @dataclass
     class SoldOutItineraries:
         """
-        Attributes
+        Attributes:
             priced_itineraries: Low Fare priced itineraries container.
             one_way_itineraries: Successfull Low Fare priced itineraries
                 in response to a Simplified One Way request.
@@ -6388,7 +6388,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class PricedItineraries:
             """
-            Attributes
+            Attributes:
                 tpa_extensions:
                 priced_itinerary: Successfull Low Fare priced
                     itineraries in response to a Low Fare Search
@@ -6413,7 +6413,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class TpaExtensions:
                 """
-                Attributes
+                Attributes:
                     processing_message: Container for itinerary message
                         type.
                 """
@@ -6428,7 +6428,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class OneWayItineraries:
             """
-            Attributes
+            Attributes:
                 branded_one_way_itineraries: Container for priced
                     itineraries assigned to particular leg.
                 simple_one_way_itineraries: Container for priced
@@ -6454,7 +6454,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class BrandedOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6487,7 +6487,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6502,7 +6502,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class SimpleOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6535,7 +6535,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6550,7 +6550,7 @@ class OtaAirLowFareSearchRs:
     @dataclass
     class AvailableItineraries:
         """
-        Attributes
+        Attributes:
             priced_itineraries: Low Fare priced itineraries container.
             one_way_itineraries: Successfull Low Fare priced itineraries
                 in response to a Simplified One Way request.
@@ -6573,7 +6573,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class PricedItineraries:
             """
-            Attributes
+            Attributes:
                 tpa_extensions:
                 priced_itinerary: Successfull Low Fare priced
                     itineraries in response to a Low Fare Search
@@ -6598,7 +6598,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class TpaExtensions:
                 """
-                Attributes
+                Attributes:
                     processing_message: Container for itinerary message
                         type.
                 """
@@ -6613,7 +6613,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class OneWayItineraries:
             """
-            Attributes
+            Attributes:
                 branded_one_way_itineraries: Container for priced
                     itineraries assigned to particular leg.
                 simple_one_way_itineraries: Container for priced
@@ -6639,7 +6639,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class BrandedOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6672,7 +6672,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6687,7 +6687,7 @@ class OtaAirLowFareSearchRs:
             @dataclass
             class SimpleOneWayItineraries:
                 """
-                Attributes
+                Attributes:
                     tpa_extensions:
                     priced_itinerary: Container for priced itinerary
                         type.
@@ -6720,7 +6720,7 @@ class OtaAirLowFareSearchRs:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         processing_message: Container for itinerary
                             message type.
                     """
@@ -6745,7 +6745,7 @@ class OtaAirLowFareSearchRs:
         @dataclass
         class AirlineOrderList:
             """
-            Attributes
+            Attributes:
                 airline_order: The airline that filed the fare(s).
             """
             airline_order: list[OtaAirLowFareSearchRs.TpaExtensions.AirlineOrderList.AirlineOrder] = field(
@@ -6774,7 +6774,7 @@ class PricedItinerariesType:
     """
     Container for priced itineraries.
 
-    Attributes
+    Attributes:
         priced_itinerary: Container for priced itinerary type.
     """
     priced_itinerary: list[PricedItineraryType] = field(

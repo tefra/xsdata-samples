@@ -20,7 +20,7 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "serviceAccessRightRefs_RelStructure"
 
-    choice: List[Union[SaleDiscountRightRef, ServiceAccessRightRef, AmountOfPriceUnitProductRef, ThirdPartyProductRef, UsageDiscountRightRef, EntitlementProductRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice: List[Union[EntitlementProductRef, SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef, ServiceAccessRightRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

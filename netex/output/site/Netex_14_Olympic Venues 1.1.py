@@ -637,7 +637,7 @@ obj = PublicationDelivery(
                                                     lang="fr",
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Vélodrome"
+                                                        value="V\xe9lodrome"
                                                     )
                                                 ),
                                             ]

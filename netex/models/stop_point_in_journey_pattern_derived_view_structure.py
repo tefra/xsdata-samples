@@ -24,7 +24,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
-    choice: Optional[Union[TimingPointInJourneyPatternRef, FarePointInPatternRef, PointInJourneyPatternRef, StopPointInJourneyPatternRef]] = field(
+    choice: Optional[Union[FarePointInPatternRef, StopPointInJourneyPatternRef, TimingPointInJourneyPatternRef, PointInJourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,7 +60,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[Union[ScheduledStopPointRef, ScheduledStopPointView, FareScheduledStopPointRef]] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[Union[FareScheduledStopPointRef, ScheduledStopPointRef, ScheduledStopPointView]] = field(
         default=None,
         metadata={
             "type": "Elements",

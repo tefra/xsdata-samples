@@ -12,7 +12,7 @@ class TrainComponentLabelAssignmentsRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "trainComponentLabelAssignments_RelStructure"
 
-    train_component_label_assignment_ref_or_train_component_label_assignment: List[Union[TrainComponentLabelAssignment, TrainComponentLabelAssignmentRef]] = field(
+    train_component_label_assignment_ref_or_train_component_label_assignment: List[Union[TrainComponentLabelAssignmentRef, TrainComponentLabelAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

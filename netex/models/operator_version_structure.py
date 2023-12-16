@@ -26,7 +26,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    postal_address_or_road_address_or_address: Optional[Union[PostalAddressVersionStructure, RoadAddress, PostalAddress]] = field(
+    postal_address_or_road_address_or_address: Optional[Union[PostalAddress, RoadAddress, PostalAddressVersionStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -30,7 +30,7 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitPlaceEquipments_RelStructure"
 
-    choice: List[Union[StaircaseEquipment, TravelatorEquipment, RampEquipment, RoughSurface, HeadingSignStructure, PassengerSafetyEquipment, EntranceEquipment, RubbishDisposalEquipment, LiftEquipment, CrossingEquipment, TicketingEquipment, OtherPlaceEquipment, PlaceLighting, EscalatorEquipment, GeneralSignStructure, TicketValidatorEquipment, QueueingEquipment, HelpPointEquipment, SanitaryEquipment, PlaceSignStructure]] = field(
+    choice: List[Union[OtherPlaceEquipment, RoughSurface, EntranceEquipment, StaircaseEquipment, LiftEquipment, EscalatorEquipment, TravelatorEquipment, RampEquipment, QueueingEquipment, CrossingEquipment, PlaceLighting, PlaceSignStructure, HeadingSignStructure, GeneralSignStructure, HelpPointEquipment, PassengerSafetyEquipment, RubbishDisposalEquipment, SanitaryEquipment, TicketingEquipment, TicketValidatorEquipment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

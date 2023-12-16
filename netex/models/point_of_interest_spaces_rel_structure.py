@@ -12,7 +12,7 @@ class PointOfInterestSpacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointOfInterestSpaces_RelStructure"
 
-    point_of_interest_space_ref_or_point_of_interest_space: List[Union[PointOfInterestSpace, SiteComponentRefStructure]] = field(
+    point_of_interest_space_ref_or_point_of_interest_space: List[Union[SiteComponentRefStructure, PointOfInterestSpace]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

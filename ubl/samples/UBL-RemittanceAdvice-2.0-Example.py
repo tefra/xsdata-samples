@@ -394,7 +394,7 @@ obj = RemittanceAdvice(
                             value="AQ1 6TH"
                         ),
                         country_subentity=CountrySubentity(
-                            value="London&#10;"
+                            value="London\n"
                         ),
                         address_line=[
                             AddressLine(

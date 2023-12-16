@@ -12,7 +12,7 @@ class ControllableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "controllableElements_RelStructure"
 
-    controllable_element_ref_or_controllable_element: List[Union[ControllableElement, ControllableElementRef]] = field(
+    controllable_element_ref_or_controllable_element: List[Union[ControllableElementRef, ControllableElement]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

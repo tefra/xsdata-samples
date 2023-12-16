@@ -12,7 +12,7 @@ class WhitelistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "whitelists_RelStructure"
 
-    whitelist_ref_or_whitelist: List[Union[Whitelist, WhitelistRef]] = field(
+    whitelist_ref_or_whitelist: List[Union[WhitelistRef, Whitelist]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

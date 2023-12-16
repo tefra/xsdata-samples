@@ -86,7 +86,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -130,7 +130,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[JourneyFrequencyGroupRef, HeadwayJourneyGroupRef, RhythmicalJourneyGroupRef]] = field(
+    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[RhythmicalJourneyGroupRef, HeadwayJourneyGroupRef, JourneyFrequencyGroupRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -153,7 +153,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[CompoundTrainRef, TrainRef, VehicleTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

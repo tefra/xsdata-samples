@@ -12,7 +12,7 @@ class DataSourcesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dataSources_RelStructure"
 
-    data_source_ref_or_data_source: List[Union[DataSource, DataSourceRef]] = field(
+    data_source_ref_or_data_source: List[Union[DataSourceRef, DataSource]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

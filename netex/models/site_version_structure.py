@@ -33,7 +33,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "Site_VersionStructure"
 
-    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceView, TopographicPlaceRef]] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[Union[TopographicPlaceRef, TopographicPlaceView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +83,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef, OrganisationDerivedViewStructure]] = field(
+    choice: Optional[Union[RetailConsortiumRef, AuthorityRef, OperatorRef, GeneralOrganisationRef, ManagementAgentRef, ServicedOrganisationRef, TravelAgentRef, OtherOrganisationRef, OrganisationRef, OrganisationDerivedViewStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

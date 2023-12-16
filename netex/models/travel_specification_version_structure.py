@@ -54,7 +54,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[StopFinderRequestRef, ScheduleRequestRef, TripPlanRequestRef, SingleTripFareRequestRef, FareRequestRef, StopEventRequestRef, RepeatedTripFareRequestRef]] = field(
+    choice: Optional[Union[RepeatedTripFareRequestRef, SingleTripFareRequestRef, FareRequestRef, StopFinderRequestRef, StopEventRequestRef, ScheduleRequestRef, TripPlanRequestRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,7 +97,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             ),
         }
     )
-    choice_1: Optional[Union[SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, QualityStructureFactorPriceRef, CellRef, FareProductPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, SeriesConstraintPriceRef, TimeIntervalPriceRef, ParkingPriceRef, ControllableElementPriceRef, TimeUnitPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, GeographicalUnitPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
+    choice_1: Optional[Union[CustomerPurchasePackagePriceRef, ParkingPriceRef, TimeIntervalPriceRef, TimeUnitPriceRef, QualityStructureFactorPriceRef, ControllableElementPriceRef, ValidableElementPriceRef, GeographicalIntervalPriceRef, GeographicalUnitPriceRef, UsageParameterPriceRef, SalesOfferPackagePriceRef, DistanceMatrixElementPriceRef, FareStructureElementPriceRef, FulfilmentMethodPriceRef, SeriesConstraintPriceRef, CappingRulePriceRef, FareProductPriceRef, FarePriceRef, CellRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

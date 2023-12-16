@@ -12,7 +12,7 @@ class FareStructureElementsInSequenceRelStructure(StrictContainmentAggregationSt
     class Meta:
         name = "fareStructureElementsInSequence_RelStructure"
 
-    fare_structure_element_in_sequence_or_controllable_element_in_sequence: List[Union[ControllableElementInSequence, FareStructureElementInSequence]] = field(
+    fare_structure_element_in_sequence_or_controllable_element_in_sequence: List[Union[FareStructureElementInSequence, ControllableElementInSequence]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

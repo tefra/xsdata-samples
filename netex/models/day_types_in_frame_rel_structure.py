@@ -15,7 +15,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    fare_day_type_or_organisation_day_type_or_day_type: List[Union[OrganisationDayType, FareDayType, DayType]] = field(
+    fare_day_type_or_organisation_day_type_or_day_type: List[Union[FareDayType, OrganisationDayType, DayType]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

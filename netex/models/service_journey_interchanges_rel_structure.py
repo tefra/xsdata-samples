@@ -13,7 +13,7 @@ class ServiceJourneyInterchangesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "serviceJourneyInterchanges_RelStructure"
 
-    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[Union[ServiceJourneyInterchangeView, ServiceJourneyInterchangeRef, ServiceJourneyInterchange]] = field(
+    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[Union[ServiceJourneyInterchangeRef, ServiceJourneyInterchange, ServiceJourneyInterchangeView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -420,7 +420,7 @@ obj = PublicationDelivery(
                                 value="Peak Travel times"
                             ),
                             description=MultilingualString(
-                                value="Conditions for Peak/OffPeak &#10;&#10;http://www.tfl.gov.uk/tickets/14837.aspx&#10;&#10;There is a peak and off-peak daily price cap, depending on when you touch in on the yellow card readers, not when you travel.&#10;&#10;Peak&#10;Monday-Friday 04:30-09:29&#10;Off-peak&#10;Monday-Friday from 09:30-04:29 (the following day)&#10;Saturdays, Sundays and public holidays from 04:30-04:29 (the following day)&#10;Special peak and off-peak times apply on journeys that start at stations north of Moor Park and from some Southern Region stations.&#10;"
+                                value="Conditions for Peak/OffPeak \n\nhttp://www.tfl.gov.uk/tickets/14837.aspx\n\nThere is a peak and off-peak daily price cap, depending on when you touch in on the yellow card readers, not when you travel.\n\nPeak\nMonday-Friday 04:30-09:29\nOff-peak\nMonday-Friday from 09:30-04:29 (the following day)\nSaturdays, Sundays and public holidays from 04:30-04:29 (the following day)\nSpecial peak and off-peak times apply on journeys that start at stations north of Moor Park and from some Southern Region stations.\n"
                             ),
                             day_types=DayTypesRelStructure(
                                 choice=[
@@ -763,7 +763,7 @@ obj = PublicationDelivery(
                                                                     id="tfl:Visitor_Centre_opening_times@LVP_EUS",
                                                                     version="1",
                                                                     description=MultilingualString(
-                                                                        value="Monday to Thursday: 07:15-19:00 &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Friday: 07:15-20:00 &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Saturday: 07:15-19:00 &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Sunday and Bank Holidays: 08:15-19:00"
+                                                                        value="Monday to Thursday: 07:15-19:00 \n\t\t\t\t\t\t\t\t\t\t\tFriday: 07:15-20:00 \n\t\t\t\t\t\t\t\t\t\t\tSaturday: 07:15-19:00 \n\t\t\t\t\t\t\t\t\t\t\tSunday and Bank Holidays: 08:15-19:00"
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         choice=[
@@ -928,7 +928,7 @@ obj = PublicationDelivery(
                                                                     id="tfl:Visitor_Centre_opening_times@PIC",
                                                                     version="1",
                                                                     description=MultilingualString(
-                                                                        value="Monday to Friday: 07:45-19:00&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Saturday (including Bank Holiday): 09:15-19:00&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Sunday: 09:15-18:00"
+                                                                        value="Monday to Friday: 07:45-19:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSaturday (including Bank Holiday): 09:15-19:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSunday: 09:15-18:00"
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         choice=[
@@ -1101,7 +1101,7 @@ obj = PublicationDelivery(
                                                                     id="tfl:Visitor_Centre_opening_times@VIC_KGX",
                                                                     version="1",
                                                                     description=MultilingualString(
-                                                                        value="Monday to Saturday: &#9;07:15-20:00&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Sunday and Bank Holidays: 08:15-19:00"
+                                                                        value="Monday to Saturday: \t07:15-20:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSunday and Bank Holidays: 08:15-19:00"
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
                                                                         choice=[
@@ -3749,7 +3749,7 @@ obj = PublicationDelivery(
                                             ),
                                             description=[
                                                 MultilingualString(
-                                                    value="&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;City Cruises: Westminster - Greenwich&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Crown River Cruises: Westminster - St Katherine's&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames Clippers: Bankside - Millbank&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames River Services: Westminster - Greenwich - Thames Barrier&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;WPSA: Westminster - Hampton Court&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                    value="\t\t\n\t\t\t\t\t\t\t\t\tCity Cruises: Westminster - Greenwich\n\t\t\t\t\t\t\t\t\tCrown River Cruises: Westminster - St Katherine's\n\t\t\t\t\t\t\t\t\tThames Clippers: Bankside - Millbank\n\t\t\t\t\t\t\t\t\tThames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal\n\t\t\t\t\t\t\t\t\tThames River Services: Westminster - Greenwich - Thames Barrier\n\t\t\t\t\t\t\t\t\tWPSA: Westminster - Hampton Court\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t"
                                                 ),
                                             ],
                                             members=LineRefsRelStructure(
@@ -4217,7 +4217,7 @@ obj = PublicationDelivery(
                                             id="tfl:Top_Up_in_5_Pound_steps",
                                             version="any",
                                             name=MultilingualString(
-                                                value="Oyster Top ups must be in in £5 Multiples"
+                                                value="Oyster Top ups must be in in \xa35 Multiples"
                                             ),
                                             rounding_method=RoundingMethodEnumeration.UP,
                                             rounding_modulus=Decimal("5")
@@ -4226,7 +4226,7 @@ obj = PublicationDelivery(
                                             id="tfl:Top_Up_in_20_Pound_steps",
                                             version="any",
                                             name=MultilingualString(
-                                                value="Oyster AUTO Top ups must be in in £20 Multiples"
+                                                value="Oyster AUTO Top ups must be in in \xa320 Multiples"
                                             ),
                                             rounding_method=RoundingMethodEnumeration.UP,
                                             rounding_modulus=Decimal("20")
@@ -6096,7 +6096,7 @@ obj = PublicationDelivery(
                                             value="School Parties"
                                         ),
                                         description=MultilingualString(
-                                            value="You can get:&#10;Free off-peak school group travel from Monday to Friday&#10;If you are:&#10;A London school&#10;And visiting educational and cultural venues in London&#10;And registered on the scheme "
+                                            value="You can get:\nFree off-peak school group travel from Monday to Friday\nIf you are:\nA London school\nAnd visiting educational and cultural venues in London\nAnd registered on the scheme "
                                         ),
                                         type_of_concession_ref=TypeOfConcessionRef(
                                             version="any",
@@ -6237,7 +6237,7 @@ obj = PublicationDelivery(
                                             value="Child Fare"
                                         ),
                                         description=MultilingualString(
-                                            value=" Under-5s http://www.tfl.gov.uk/tickets/14414.aspx &#10;Under-5s travel free if with someone who has a valid ticket, is using Oyster to pay as they go, has a Freedom Pass, 60+ London Oyster photocard or a Veterans Oyster photocard."
+                                            value=" Under-5s http://www.tfl.gov.uk/tickets/14414.aspx \nUnder-5s travel free if with someone who has a valid ticket, is using Oyster to pay as they go, has a Freedom Pass, 60+ London Oyster photocard or a Veterans Oyster photocard."
                                         ),
                                         base_user_profile_ref=UserProfileRefStructure(
                                             version="any",
@@ -6371,7 +6371,7 @@ obj = PublicationDelivery(
                                             value="Child Fare - uSing Oyster"
                                         ),
                                         description=MultilingualString(
-                                            value="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;http://www.tfl.gov.uk/tickets/14308.aspx&#10;Applications for 16+ Oyster photocards will not be accepted at Post Offices between Monday 1 July 2013 and Sunday 1 September 2013.&#10;&#10;If you live in a London borough, online applications for 16+ Oyster photocards with free bus and tram travel will not be accepted for the 2013/14 academic year between Monday 1 July and Tuesday 20 August 2013.&#10;&#10;Call us on 0343 222 1234 if you need to apply during this time.&#10;&#10;If you live outside London, you can still apply online for your 16+ Oyster photocard.&#10;&#10;If you're under 18, your parent or guardian must apply on your behalf.&#10;&#10;Residents of a London borough&#10;If you live in a London borough, you can apply online or at a Post Office.&#10;&#10;Apply online&#10;&#10;If you're the parent or guardian applying on behalf of a 16-18 year-old who lives in London, you can apply online.&#10;&#10;To apply online you will need:&#10;&#10;An active, valid email address&#10;A colour, digital photo of your child&#10;Debit or credit card to pay the £10 administration fee&#10;You will be asked for your child's machine readable passport number. If your child does not have a machine-readable passport and you can't complete all the application steps online you may be prompted to:&#10;&#10;Download and print off a verification letter&#10;Get the verification letter signed and approved by your child's education establishment&#10;Take the verification letter to the Post Office along with required documentation and pay the £10 administration fee&#10;Apply online&#10;Applying at a Post Office&#10;You can collect a 16+ Zip Oyster photocard application form from a Post Office in London.&#10;&#10;If the applicant is eligible for free travel on buses and trams, their school, college or training provider must confirm they meet the education criteria.&#10;&#10;You should then submit the completed application at a Post Office in London.&#10;&#10;To apply at a Post Office, you will need:&#10;&#10;Proof of your address, which must be one of the following:&#10;- Residential utility bill (dated in the last three months)&#10;- Current council tax bill&#10;- Bank, building society or credit card statement (dated in the last three months)&#10;- Council or housing association rent book or statement&#10;- Driving license (full or provisional)&#10;Proof of applicants age, which must be one of the following: &#10;- Passport&#10;- ID card from a European Economic Area country &#10;- Birth certificate &#10;- Driving license (full or provisional)&#10;- Biometric Residency Permit&#10;Proof of education status - the education part of the application needs to be signed and stamped by your child's school/college&#10;You must provide original documents; we don't accept photocopies.&#10;&#10;We will send the 16+ Zip Oyster photocard to the address you provide.&#10;&#10;If you provide an email address on your application, we will create a web account for you. We will send you an email with instructions on how to log in and activate your web account. You can then manage your card online, order a replacement for a lost, stolen or damaged Oyster photocard, change the photo on an Oyster photocard or order an Oyster photocard for another child.&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="\n\t\t\t\t\t\t\thttp://www.tfl.gov.uk/tickets/14308.aspx\nApplications for 16+ Oyster photocards will not be accepted at Post Offices between Monday 1 July 2013 and Sunday 1 September 2013.\n\nIf you live in a London borough, online applications for 16+ Oyster photocards with free bus and tram travel will not be accepted for the 2013/14 academic year between Monday 1 July and Tuesday 20 August 2013.\n\nCall us on 0343 222 1234 if you need to apply during this time.\n\nIf you live outside London, you can still apply online for your 16+ Oyster photocard.\n\nIf you're under 18, your parent or guardian must apply on your behalf.\n\nResidents of a London borough\nIf you live in a London borough, you can apply online or at a Post Office.\n\nApply online\n\nIf you're the parent or guardian applying on behalf of a 16-18 year-old who lives in London, you can apply online.\n\nTo apply online you will need:\n\nAn active, valid email address\nA colour, digital photo of your child\nDebit or credit card to pay the \xa310 administration fee\nYou will be asked for your child's machine readable passport number. If your child does not have a machine-readable passport and you can't complete all the application steps online you may be prompted to:\n\nDownload and print off a verification letter\nGet the verification letter signed and approved by your child's education establishment\nTake the verification letter to the Post Office along with required documentation and pay the \xa310 administration fee\nApply online\nApplying at a Post Office\nYou can collect a 16+ Zip Oyster photocard application form from a Post Office in London.\n\nIf the applicant is eligible for free travel on buses and trams, their school, college or training provider must confirm they meet the education criteria.\n\nYou should then submit the completed application at a Post Office in London.\n\nTo apply at a Post Office, you will need:\n\nProof of your address, which must be one of the following:\n- Residential utility bill (dated in the last three months)\n- Current council tax bill\n- Bank, building society or credit card statement (dated in the last three months)\n- Council or housing association rent book or statement\n- Driving license (full or provisional)\nProof of applicants age, which must be one of the following: \n- Passport\n- ID card from a European Economic Area country \n- Birth certificate \n- Driving license (full or provisional)\n- Biometric Residency Permit\nProof of education status - the education part of the application needs to be signed and stamped by your child's school/college\nYou must provide original documents; we don't accept photocopies.\n\nWe will send the 16+ Zip Oyster photocard to the address you provide.\n\nIf you provide an email address on your application, we will create a web account for you. We will send you an email with instructions on how to log in and activate your web account. You can then manage your card online, order a replacement for a lost, stolen or damaged Oyster photocard, change the photo on an Oyster photocard or order an Oyster photocard for another child.\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -6482,7 +6482,7 @@ obj = PublicationDelivery(
                                             value="11 to 15 year old"
                                         ),
                                         description=MultilingualString(
-                                            value="   http://www.tfl.gov.uk/tickets/14416.aspx&#10;&#10;You must have an 11-15 Oyster photocard to get:&#10;Child-rate fares on the Tube, DLR and London Overground&#10;7 Day, Monthly and longer period Travelcards at child rate&#10;&#10;Holders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just £2 each for up to four children travelling with them:&#10;Gold Card&#10;Network RailCard&#10;Family and Friends RailCard&#10;HM Forces RailCard&#10;Find out more about National RailCards&#10;You do not need an 11-15 Oyster photocard to pay cash single fares or to buy Day Travelcards.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="   http://www.tfl.gov.uk/tickets/14416.aspx\n\nYou must have an 11-15 Oyster photocard to get:\nChild-rate fares on the Tube, DLR and London Overground\n7 Day, Monthly and longer period Travelcards at child rate\n\nHolders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just \xa32 each for up to four children travelling with them:\nGold Card\nNetwork RailCard\nFamily and Friends RailCard\nHM Forces RailCard\nFind out more about National RailCards\nYou do not need an 11-15 Oyster photocard to pay cash single fares or to buy Day Travelcards.\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -6581,7 +6581,7 @@ obj = PublicationDelivery(
                                             value="16 to 18 year old"
                                         ),
                                         description=MultilingualString(
-                                            value=" &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;Can I get a 16+ Oyster photocard?&#10;&#10;If you're 16 or 17&#10;Your parent/guardian can apply for a 16+ Oyster photocard for you, which will allow you to travel at reduced rate on bus, Tube, tram, DLR, London Overground and some National Rail services.&#10;&#10;If you were 18 or under on 31 August 2012&#10;You may be eligible for a 16+ Oyster photocard which gives free travel on buses and trams as well as reduced rates on Tube, DLR, London Overground and some National Rail services.&#10;&#10;To be eligible for free bus and tram travel, you must:&#10;&#10;Be in full-time education&#10;And live in a London borough&#10;Full-time education criteria:&#10;&#10;At least 12 hours of guided learning per week, between 09:00-17:00 Monday-Friday, for at least 10 weeks on further education courses at Level 3 or below in a sixth form college, academy, further education college or other training provider  &#10;Examples of Level 3 courses include A levels (AS/A2), vocational awards such as BTEC or City and Guilds qualifications at level 3 and the International Baccalaureate. It can also include apprenticeships and training courses funded by the Education Funding Agency provided the student is 18 or under on 31 August 2012. Your school, college or training provider will be able to confirm if the course qualifies&#10;You're not eligible for free bus and tram travel if:&#10;&#10;You don't live in a London borough and/or&#10;You're not in full time education &#10;If you were under 16 on 31 August 2012&#10;You can apply for an 11-15 Oyster photocard that you can use to travel free on buses and trams and to buy child rate Travelcards. You can continue to use the 11-15 Oyster photocard after you turn 16, until the expiry date printed on the front of the card.&#10;&#10;Terms and conditions 16+ Oyster photocard&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;  http://www.tfl.gov.uk/tickets/14416.aspx&#10;&#10;You must have a 16+ Oyster photocard to get:&#10;7 Day, Monthly and longer period Travelcards at child rate&#10;Half the adult rate when you pay as you go on Tube, DLR and London Overground&#10;You can also get 34 per cent off the off-peak daily price caps if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 16+ Oyster photocard&#10;You do not need a 16+ Oyster photocard to pay cash single fares or to buy Day Travelcards&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value=" \n\t\t\t\t\t\t\t\nCan I get a 16+ Oyster photocard?\n\nIf you're 16 or 17\nYour parent/guardian can apply for a 16+ Oyster photocard for you, which will allow you to travel at reduced rate on bus, Tube, tram, DLR, London Overground and some National Rail services.\n\nIf you were 18 or under on 31 August 2012\nYou may be eligible for a 16+ Oyster photocard which gives free travel on buses and trams as well as reduced rates on Tube, DLR, London Overground and some National Rail services.\n\nTo be eligible for free bus and tram travel, you must:\n\nBe in full-time education\nAnd live in a London borough\nFull-time education criteria:\n\nAt least 12 hours of guided learning per week, between 09:00-17:00 Monday-Friday, for at least 10 weeks on further education courses at Level 3 or below in a sixth form college, academy, further education college or other training provider  \nExamples of Level 3 courses include A levels (AS/A2), vocational awards such as BTEC or City and Guilds qualifications at level 3 and the International Baccalaureate. It can also include apprenticeships and training courses funded by the Education Funding Agency provided the student is 18 or under on 31 August 2012. Your school, college or training provider will be able to confirm if the course qualifies\nYou're not eligible for free bus and tram travel if:\n\nYou don't live in a London borough and/or\nYou're not in full time education \nIf you were under 16 on 31 August 2012\nYou can apply for an 11-15 Oyster photocard that you can use to travel free on buses and trams and to buy child rate Travelcards. You can continue to use the 11-15 Oyster photocard after you turn 16, until the expiry date printed on the front of the card.\n\nTerms and conditions 16+ Oyster photocard\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  http://www.tfl.gov.uk/tickets/14416.aspx\n\nYou must have a 16+ Oyster photocard to get:\n7 Day, Monthly and longer period Travelcards at child rate\nHalf the adult rate when you pay as you go on Tube, DLR and London Overground\nYou can also get 34 per cent off the off-peak daily price caps if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 16+ Oyster photocard\nYou do not need a 16+ Oyster photocard to pay cash single fares or to buy Day Travelcards\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -6693,7 +6693,7 @@ obj = PublicationDelivery(
                                             value="Student 18+"
                                         ),
                                         description=MultilingualString(
-                                            value="   http://www.tfl.gov.uk/tickets/14312.aspx&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;If you are:&#10;Aged 18 or over&#10;Enrolled with a participating education establishment registered on the TfL scheme, or on mandatory work placement in London&#10;Enrolled in an eligible full-time or part-time course&#10;Living at a London address during term time&#10;You can get an 18+ Student Oyster photocard to:&#10;Save 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9; http://www.tfl.gov.uk/tickets/14416.aspx&#10; &#10;&#10;&#10;You need an 18+ Student Oyster photocard or an Oyster card to use pay as you go and benefit from daily price capping&#10;You do not need an 18+ Student Oyster photocard to pay cash single fares or to buy Day Travelcards&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="   http://www.tfl.gov.uk/tickets/14312.aspx\n\t\t\t\t\t\t\tIf you are:\nAged 18 or over\nEnrolled with a participating education establishment registered on the TfL scheme, or on mandatory work placement in London\nEnrolled in an eligible full-time or part-time course\nLiving at a London address during term time\nYou can get an 18+ Student Oyster photocard to:\nSave 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14416.aspx\n \n\n\nYou need an 18+ Student Oyster photocard or an Oyster card to use pay as you go and benefit from daily price capping\nYou do not need an 18+ Student Oyster photocard to pay cash single fares or to buy Day Travelcards\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -6714,7 +6714,7 @@ obj = PublicationDelivery(
                                                                 id="tfl:18Plus@TravelCard_on_Oyster@discount",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="&#9;&#9; http://www.tfl.gov.uk/tickets/14416.aspx&#10;You must have an 18+ Student Oyster photocard to get 30 per cent off 7 Day, Monthly and longer period Travelcards"
+                                                                    value="\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou must have an 18+ Student Oyster photocard to get 30 per cent off 7 Day, Monthly and longer period Travelcards"
                                                                 ),
                                                                 choice=FarePriceVersionedChildStructure(
                                                                     choice_1=DiscountingRuleRef(
@@ -6737,7 +6737,7 @@ obj = PublicationDelivery(
                                                                 id="tfl:18Plus@Oyster@discount",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="&#9;&#9; http://www.tfl.gov.uk/tickets/14416.aspx&#10;You can get 34 per cent off off-peak pay as you go single fares and off-peak daily price caps on Tube, DLR and London Overground if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 18+ Student Oyster photocard "
+                                                                    value="\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou can get 34 per cent off off-peak pay as you go single fares and off-peak daily price caps on Tube, DLR and London Overground if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 18+ Student Oyster photocard "
                                                                 ),
                                                                 choice=UsageParameterPriceRef(
                                                                     version="any",
@@ -6805,7 +6805,7 @@ obj = PublicationDelivery(
                                             value="Young Person 16-25"
                                         ),
                                         description=MultilingualString(
-                                            value="To get an Apprentice Oyster photocard you must be:&#10;Aged 18 or over&#10;Living in a London borough&#10;Enrolled on an Apprenticeship* with a further education college or training organisation for a minimum of 12 months&#10;In the first 12 months of your Apprenticeship&#10;*The Apprenticeship must be SASE (Specification for Apprenticeship Standards in England) compliant and delivered through a further education college or training organisation approved or funded by the Skills Funding Agency.&#10;&#10;You are not eligible if you:&#10;Live outside London, even if your Apprenticeship is in London&#10;Already have an Oyster photocard, a Freedom Pass or a Bus and Tram Discount photocard&#10;Are on a Planned Break from your apprenticeship learning&#10;Are on a pre-Apprenticeship Access programme&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9; &#10;You can get an Apprentice Oyster photocard to:&#10;Save 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes&#10;Apply online&#10;You will need:&#10;Your Unique Learner Number (ULN)&#10;A UK Provider Reference Number (UKPRN)&#10;A colour, digital photo to upload&#10;An active email address&#10;A credit or debit card to pay the £10 fee&#10;"
+                                            value="To get an Apprentice Oyster photocard you must be:\nAged 18 or over\nLiving in a London borough\nEnrolled on an Apprenticeship* with a further education college or training organisation for a minimum of 12 months\nIn the first 12 months of your Apprenticeship\n*The Apprenticeship must be SASE (Specification for Apprenticeship Standards in England) compliant and delivered through a further education college or training organisation approved or funded by the Skills Funding Agency.\n\nYou are not eligible if you:\nLive outside London, even if your Apprenticeship is in London\nAlready have an Oyster photocard, a Freedom Pass or a Bus and Tram Discount photocard\nAre on a Planned Break from your apprenticeship learning\nAre on a pre-Apprenticeship Access programme\t\t\t\t\t\t\t\n\t\t\t\t\t \nYou can get an Apprentice Oyster photocard to:\nSave 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes\nApply online\nYou will need:\nYour Unique Learner Number (ULN)\nA UK Provider Reference Number (UKPRN)\nA colour, digital photo to upload\nAn active email address\nA credit or debit card to pay the \xa310 fee\n"
                                         ),
                                         base_user_profile_ref=UserProfileRefStructure(
                                             version="any",
@@ -6912,7 +6912,7 @@ obj = PublicationDelivery(
                                             value="Child Fare"
                                         ),
                                         description=MultilingualString(
-                                            value=" job_centre Plus http://www.tfl.gov.uk/tickets/14416.aspx&#10;&#10;You need a job_centre Plus Travel Discount Card to get the cash single fares at child rate below&#10;You need a job_centre Plus Travel Discount Card and an Oyster card with the job_centre Plus discount entitlement added to it, to qualify for the half adult-rate prices below for pay as you go, daily price caps and Travelcard season tickets&#10;job_centre Plus Travel Discount Card holders pay full adult rates listed below for Day Travelcards&#10;Find out more about job_centre Plus Travel Discount Cards "
+                                            value=" job_centre Plus http://www.tfl.gov.uk/tickets/14416.aspx\n\nYou need a job_centre Plus Travel Discount Card to get the cash single fares at child rate below\nYou need a job_centre Plus Travel Discount Card and an Oyster card with the job_centre Plus discount entitlement added to it, to qualify for the half adult-rate prices below for pay as you go, daily price caps and Travelcard season tickets\njob_centre Plus Travel Discount Card holders pay full adult rates listed below for Day Travelcards\nFind out more about job_centre Plus Travel Discount Cards "
                                         ),
                                         base_user_profile_ref=UserProfileRefStructure(
                                             version="any",
@@ -6947,7 +6947,7 @@ obj = PublicationDelivery(
                                             value="Veterand (War WOunded)"
                                         ),
                                         description=MultilingualString(
-                                            value="You can apply for a Veterans Oyster photocard if you are:&#10;&#10;Receiving ongoing payments under the War Pensions Scheme in your name (this includes widows, widowers and dependants)&#10;Or receiving Guaranteed Income Payment under the Armed Forces Compensation Scheme in your name (this includes widows, widowers and dependants)&#10;We will not issue a Veterans Oyster photocard if you live in London and are eligible for the Freedom Pass."
+                                            value="You can apply for a Veterans Oyster photocard if you are:\n\nReceiving ongoing payments under the War Pensions Scheme in your name (this includes widows, widowers and dependants)\nOr receiving Guaranteed Income Payment under the Armed Forces Compensation Scheme in your name (this includes widows, widowers and dependants)\nWe will not issue a Veterans Oyster photocard if you live in London and are eligible for the Freedom Pass."
                                         ),
                                         base_user_profile_ref=UserProfileRefStructure(
                                             version="any",
@@ -6995,7 +6995,7 @@ obj = PublicationDelivery(
                                             value="Travel anytime"
                                         ),
                                         description=MultilingualString(
-                                            value=" Groups  http://www.tfl.gov.uk/tickets/14416.aspx&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;For groups of 10 or more fare-paying passengers you can get Group Day Tickets. Provides unlimited travel at any time and on any day within the zones paid for on Tube, DLR, London Overground and some National Rail services*. You can only get these as paper tickets, not on an Oyster card.&#10;&#10;Group Day tickets are available from Tube or London Overground station ticket offices and Tube station touchscreen machines. You can also get Group Day Tickets from some National Rail stations that Tube and London Overground services run through.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Adult&#9;Under-18s&#10;Zones 1-6&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;£4.50 each&#9;£1.70 each&#10;Zones 1-8 + Watford Junction&#9;&#9;£6.50 each&#9;£2.20 each&#10;Zones 1-9&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;£6.50 each&#9;£2.20 each&#10;* Only valid on the following National Rail services:&#10;&#10;Amersham to Marylebone&#10;Finsbury Park to King's Cross/Moorgate&#10;Stratford to Liverpool Street&#10;Tottenham Hale/Seven Sisters to Stratford&#10;Upminster to Fenchurch Street/Liverpool Street via Barking (but not at Forest Gate/Maryland)&#10;Walthamstow Central/Tottenham Hale/Seven Sisters to Liverpool Street&#10;Watford Junction to Euston&#10;Watford Junction to Clapham Junction&#10;West Hampstead Thameslink to Moorgate/Elephant and Castle/London Bridge&#10;West Ruislip to South Ruislip&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value=" Groups  http://www.tfl.gov.uk/tickets/14416.aspx\n\t\t\t\t\t\t\tFor groups of 10 or more fare-paying passengers you can get Group Day Tickets. Provides unlimited travel at any time and on any day within the zones paid for on Tube, DLR, London Overground and some National Rail services*. You can only get these as paper tickets, not on an Oyster card.\n\nGroup Day tickets are available from Tube or London Overground station ticket offices and Tube station touchscreen machines. You can also get Group Day Tickets from some National Rail stations that Tube and London Overground services run through.\n\t\t\t\t\t\t\t\t\t\t\t\tAdult\tUnder-18s\nZones 1-6\t\t\t\t\t\t\t\t\t\xa34.50 each\t\xa31.70 each\nZones 1-8 + Watford Junction\t\t\xa36.50 each\t\xa32.20 each\nZones 1-9\t\t\t\t\t\t\t\t\t\xa36.50 each\t\xa32.20 each\n* Only valid on the following National Rail services:\n\nAmersham to Marylebone\nFinsbury Park to King's Cross/Moorgate\nStratford to Liverpool Street\nTottenham Hale/Seven Sisters to Stratford\nUpminster to Fenchurch Street/Liverpool Street via Barking (but not at Forest Gate/Maryland)\nWalthamstow Central/Tottenham Hale/Seven Sisters to Liverpool Street\nWatford Junction to Euston\nWatford Junction to Clapham Junction\nWest Hampstead Thameslink to Moorgate/Elephant and Castle/London Bridge\nWest Ruislip to South Ruislip\n\t\t\t\t\t\t\t"
                                         ),
                                         minimum_number_of_persons=10
                                     ),
@@ -7039,7 +7039,7 @@ obj = PublicationDelivery(
                                             value="Companion  allowed at discount onf"
                                         ),
                                         description=MultilingualString(
-                                            value="Disabled Persons RailCard holders&#10;Discounted travel for one adult travelling with the RailCard holder for the whole journey. The accompanying adult should buy a child Zones 1-6 Off-Peak Day Travelcard"
+                                            value="Disabled Persons RailCard holders\nDiscounted travel for one adult travelling with the RailCard holder for the whole journey. The accompanying adult should buy a child Zones 1-6 Off-Peak Day Travelcard"
                                         ),
                                         type_of_concession_ref=TypeOfConcessionRef(
                                             version="any",
@@ -7354,7 +7354,7 @@ obj = PublicationDelivery(
                                             value="Travel Carid cards valid for course length, max 3 years"
                                         ),
                                         description=MultilingualString(
-                                            value="If you're on a course that is longer than one year, you can get a card valid for the length of your course or up to three years, whichever is sooner.&#10; "
+                                            value="If you're on a course that is longer than one year, you can get a card valid for the length of your course or up to three years, whichever is sooner.\n "
                                         ),
                                         usage_trigger=UsageTriggerEnumeration.SPECIFIED_START_DATE,
                                         usage_end=UsageEndEnumeration.PROFILE_EXPIRY,
@@ -7463,7 +7463,7 @@ obj = PublicationDelivery(
                                             value="Purchase from Ticket Machine"
                                         ),
                                         description=MultilingualString(
-                                            value="At ticket offices Day Travelcards and Group Day tickets can be bought up to seven days in advance of the start date"
+                                            value="At ticket offices Day Travelcards and Group Day tickets can be bought up to\xa0seven days in advance of the start date"
                                         ),
                                         maximum_period_before_departure=XmlDuration("P4D")
                                     ),
@@ -7485,7 +7485,7 @@ obj = PublicationDelivery(
                                             value="Purchase from Office"
                                         ),
                                         description=MultilingualString(
-                                            value="Choose a station or tram stop from the dropdown list for where you want to activate Auto top-up&#10;You need to activate within eight days"
+                                            value="Choose a station or tram stop from the dropdown list for where you want to activate Auto top-up\nYou need to activate within eight days"
                                         ),
                                         maximum_period_before_departure=XmlDuration("P8D")
                                     ),
@@ -7496,7 +7496,7 @@ obj = PublicationDelivery(
                                             value="Activate AUto Top up AUto"
                                         ),
                                         description=MultilingualString(
-                                            value="At ticket machines7 Day, monthly or longer period tickets on Oyster can be bought up to four days in advance of the start date. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Day Travelcards and Group Day tickets must be bought on the start date"
+                                            value="At ticket machines7 Day, monthly or longer period tickets on Oyster can be bought up to four days in advance of the start date. \n\t\t\t\t\t\t\tDay Travelcards and Group Day tickets must be bought on the start date"
                                         ),
                                         maximum_period_before_departure=XmlDuration("P30D")
                                     ),
@@ -7583,7 +7583,7 @@ obj = PublicationDelivery(
                                             value="Cash Ride  Paid for before ride -"
                                         ),
                                         description=MultilingualString(
-                                            value="Can be made with&#10;&#9;Goldcard  - TravelCard &#10;TravelCard_on_Oyster  - PayAsYouGo_trip&#10;Oyster_PayAsYouGo_right -   PayAsYouGo_trip&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="Can be made with\n\tGoldcard  - TravelCard \nTravelCard_on_Oyster  - PayAsYouGo_trip\nOyster_PayAsYouGo_right -   PayAsYouGo_trip\t\n\t\t\t\t\t\t\t"
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
                                             version="any",
@@ -7606,7 +7606,7 @@ obj = PublicationDelivery(
                                                         value="Cant Break Metro journeys"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can't split your journey when using Oyster pay as you go. You can with National Rail tickets. "
+                                                        value=" Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYou can't split your journey when using Oyster pay as you go. You can with National Rail tickets. "
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -7636,7 +7636,7 @@ obj = PublicationDelivery(
                                                         value="Cant Break Metro journeys"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="  &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Flat far simgle tripcase. "
+                                                        value="  \t\t\t\t\t\t\t\t\t\t\t\t\t\tFlat far simgle tripcase. "
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -7720,7 +7720,7 @@ obj = PublicationDelivery(
                                                         value="Can Break Rail  journeys"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can't split your journey when using Oyster pay as you go. You can with National Rail tickets. "
+                                                        value=" Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYou can't split your journey when using Oyster pay as you go. You can with National Rail tickets. "
                                                     ),
                                                     order=4,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -7915,7 +7915,7 @@ obj = PublicationDelivery(
                                                         value="Can Break Rail  journeys"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can't split your journey when using Oyster pay as you go. You can with National Rail tickets."
+                                                        value="Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx\n\t\t\t\t\t\t\t\t\t\t\tYou can't split your journey when using Oyster pay as you go. You can with National Rail tickets."
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -8077,7 +8077,7 @@ obj = PublicationDelivery(
                                             value="Auto Cash Top up  Payment before ride -"
                                         ),
                                         description=MultilingualString(
-                                            value="Auto top-up makes sure you never run out of pay as you go credit by automatically topping up your Oyster card with money from your credit or debit card, whenever your pay as you go balance falls below £10.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;How to set up Auto top-up&#10;&#10;Create or log in to your Oyster online account&#10;Select 'add/renew/top-up ticket' and then 'pay as you go with Auto top-up'&#10;Add some pay as you go credit (minimum £10)&#10;Select a Auto top-up amount (£20 or £40)&#10;Choose a station or tram stop from the dropdown list for where you want to activate Auto top-up&#10;You need to activate within eight days&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Setting up an Oyster online account&#10;&#10;To set up an Oyster online account you'll need to provide:&#10;&#10;Your name&#10;Your address&#10;An active, valid email address &#10;Your Oyster card number&#10;You can't set up an Oyster online account if you have an Oyster photocard, Freedom Pass or Visitor Oyster card.  TO DO &#10;&#10;If you don't have an Oyster card, you can get one online and set up an Oyster online account at the same time: &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="Auto top-up makes sure you never run out of pay as you go credit by automatically topping up your Oyster card with money from your credit or debit card, whenever your pay as you go balance falls below \xa310.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tHow to set up Auto top-up\n\nCreate or log in to your Oyster online account\nSelect 'add/renew/top-up ticket' and then 'pay as you go with Auto top-up'\nAdd some pay as you go credit (minimum \xa310)\nSelect a Auto top-up amount (\xa320 or \xa340)\nChoose a station or tram stop from the dropdown list for where you want to activate Auto top-up\nYou need to activate within eight days\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tSetting up an Oyster online account\n\nTo set up an Oyster online account you'll need to provide:\n\nYour name\nYour address\nAn active, valid email address \nYour Oyster card number\nYou can't set up an Oyster online account if you have an Oyster photocard, Freedom Pass or Visitor Oyster card.  TO DO \n\nIf you don't have an Oyster card, you can get one online and set up an Oyster online account at the same time: \n\t\t\t\t\t\t\t"
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
                                             version="any",
@@ -8502,7 +8502,7 @@ obj = PublicationDelivery(
                                                                     value="No Transfer"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="At ticket offices Day Travelcards and Group Day tickets can be bought up to seven days in advance of the start date"
+                                                                    value="At ticket offices Day Travelcards and Group Day tickets can be bought up to\xa0seven days in advance of the start date"
                                                                 ),
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -8799,7 +8799,7 @@ obj = PublicationDelivery(
                                             value="Travel card  on Oyster"
                                         ),
                                         description=MultilingualString(
-                                            value="You can put Adult, 18+ Student, 16+, child and job_centre Plus Travel Discount 7 Day monthly and longer period Travelcards and Bus and Tram passes on Oyster.&#10;&#10;If you are travelling in London and using a Travelcard, it must cover all the zones you intend to travel through. For example, if you are going somewhere in Zone 3, you must make sure that you have paid enough money for your Travelcard to cover you. If you travel beyond the zones covered by your Travelcard, you can expect to be charged an extension fare which will be deducted from your Oyster pay as you go balance. If your Oyster pay as you go displays a minus sign before the balance, you may need to top up your Oyster card before you travel again, even if you have a valid Travelcard for the zones of your travel.&#10;&#10;Your Oyster card will automatically work out when to switch between a Travelcard and pay as you go.&#10;&#10;Day Travelcards for travel in London are not available on Oyster. However, if you use Oyster to pay as you go and make a number of journeys in one day, you won't pay more than the equivalent Day Travelcard.*&#10;&#10;* Does not apply for travel to/from Grays, Purfleet, Ockendon or Chafford Hundred.&#10;&#10;Oyster cards that have a Travelcard or Bus and Tram pass on it are non transferable. They cannot be used by anyone other than the registered owner. &#10;"
+                                            value="You can put Adult, 18+ Student, 16+, child and job_centre Plus Travel Discount 7 Day monthly and longer period Travelcards and Bus and Tram passes on Oyster.\n\nIf you are travelling in London and using a Travelcard, it must cover all the zones you intend to travel through. For example, if you are going somewhere in Zone 3, you must make sure that you have paid enough money for your Travelcard to cover you. If you travel beyond the zones covered by your Travelcard, you can expect to be charged an extension fare which will be deducted from your Oyster pay as you go balance. If your Oyster pay as you go displays a minus sign before the balance, you may need to top up your Oyster card before you travel again, even if you have a valid Travelcard for the zones of your travel.\n\nYour Oyster card will automatically work out when to switch between a Travelcard and pay as you go.\n\nDay Travelcards for travel in London are not available on Oyster. However, if you use Oyster to pay as you go and make a number of journeys in one day, you won't pay more than the equivalent Day Travelcard.*\n\n* Does not apply for travel to/from Grays, Purfleet, Ockendon or Chafford Hundred.\n\nOyster cards that have a Travelcard or Bus and Tram pass on it are non transferable. They cannot be used by anyone other than the registered owner. \n"
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         authority_ref_or_operator_ref=AuthorityRef(
@@ -9290,7 +9290,7 @@ obj = PublicationDelivery(
                                                     version="any",
                                                     description=[
                                                         MultilingualString(
-                                                            value="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9; http://www.tfl.gov.uk/tickets/14837.aspx&#10;National RailCard and Gold Card discounts&#10;&#10;We'll reduce the daily price cap by 34 per cent if:&#10;&#10;All your travel is during off-peak hours&#10;And you have put any of the RailCard discount entitlements below on your Oyster card:&#10;Disabled Persons&#10;HM Forces&#10;Senior&#10;16 - 25&#10;Gold Card&#10;(subject to the conditions on your RailCard or Gold Card)&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                            value="\n\t\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14837.aspx\nNational RailCard and Gold Card discounts\n\nWe'll reduce the daily price cap by 34 per cent if:\n\nAll your travel is during off-peak hours\nAnd you have put any of the RailCard discount entitlements below on your Oyster card:\nDisabled Persons\nHM Forces\nSenior\n16 - 25\nGold Card\n(subject to the conditions on your RailCard or Gold Card)\n\t\t\t\t\t\t\t\t"
                                                         ),
                                                     ],
                                                     cells=CellsRelStructure(
@@ -9550,7 +9550,7 @@ obj = PublicationDelivery(
                                                     id="tfl:Oyster@Oyster@refunding",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="You will need to pay £5 deposit when you get a new Oyster card. This is refundable if you return the card."
+                                                        value="You will need to pay \xa35 deposit when you get a new Oyster card. This is refundable if you return the card."
                                                     ),
                                                     order=3,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -9667,7 +9667,7 @@ obj = PublicationDelivery(
                                                                     value="Adult over 18 or under"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="Crd can be used by another adult&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can give your Oyster card to someone else  http://www.tfl.gov.uk/tickets/19798.aspx&#10;If your Oyster only has pay as you go credit at adult rate on it you can let someone else use it, even if the card is registered in your name."
+                                                                    value="Crd can be used by another adult\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tYou can give your Oyster card to someone else  http://www.tfl.gov.uk/tickets/19798.aspx\nIf your Oyster only has pay as you go credit at adult rate on it you can let someone else use it, even if the card is registered in your name."
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -9748,7 +9748,7 @@ obj = PublicationDelivery(
                                                     id="tfl:Oyster@costOfCard",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="You will need to pay £5 deposit when you get a new Oyster card. This is refundable if you return the card."
+                                                        value="You will need to pay \xa35 deposit when you get a new Oyster card. This is refundable if you return the card."
                                                     ),
                                                     amount=Decimal("5.00")
                                                 ),
@@ -10042,7 +10042,7 @@ obj = PublicationDelivery(
                                                         value="Capping rule for River  Travel"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="   River services http://www.tfl.gov.uk/tickets/19798.aspx&#10;You can use Oyster pay as you go to pay for journeys on KPMG Thames Clipper river services which is cheaper than the cash fare. This does not count towards the daily price cap.&#10; "
+                                                        value="   River services http://www.tfl.gov.uk/tickets/19798.aspx\nYou can use Oyster pay as you go to pay for journeys on KPMG Thames Clipper river services which is cheaper than the cash fare. This does not count towards the daily price cap.\n "
                                                     ),
                                                     capping_period=CappingPeriodEnumeration.NONE,
                                                     capped_discount_right_ref=[
@@ -10060,7 +10060,7 @@ obj = PublicationDelivery(
                                                     id="tfl:CappingRule:Oyster@cableway",
                                                     version="any",
                                                     description=MultilingualString(
-                                                        value="If you use Oyster to pay as you go for 5 or more Emirates Air Line journeys in a calendar week (Sunday to Saturday), you'll get the 5+ Reward. The 5+ Reward is 50 per cent off the total price paid for 5 journeys or more during a week.&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;How do I get the 5+ Reward?&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;If you make 5 journeys or more in a calendar week, you'll pay the full pay as you go fare for all the journeys you made. However, when you travel the following week, 50 per cent of the total cost of your previous week's journeys will be credited back to your Oyster card.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;At the end of each week, we will work out how much to reward you and automatically send this to the Emirates Air Line gates ready for you to collect from the following week.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;The 5+ Reward will be loaded on to your Oyster card as pay as you go credit when you touch your Oyster card on a yellow card reader at the Emirates Air Line gates. The 5+ Reward can only be collected as part of an Emirates Air Line journey.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Your 5+ Reward will be available to collect from the next calendar week for up to 6 weeks; after this, it will expire."
+                                                        value="If you use Oyster to pay as you go for 5 or more Emirates Air Line journeys in a calendar week (Sunday to Saturday), you'll get the 5+ Reward. The 5+ Reward is 50 per cent off the total price paid for 5 journeys or more during a week.\n\n\t\t\t\t\t\t\t\tHow do I get the 5+ Reward?\n\t\t\t\t\t\t\t\tIf you make 5 journeys or more in a calendar week, you'll pay the full pay as you go fare for all the journeys you made. However, when you travel the following week, 50 per cent of the total cost of your previous week's journeys will be credited back to your Oyster card.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAt the end of each week, we will work out how much to reward you and automatically send this to the Emirates Air Line gates ready for you to collect from the following week.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tThe 5+ Reward will be loaded on to your Oyster card as pay as you go credit when you touch your Oyster card on a yellow card reader at the Emirates Air Line gates. The 5+ Reward can only be collected as part of an Emirates Air Line journey.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour 5+ Reward will be available to collect from the next calendar week for up to 6 weeks; after this, it will expire."
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         choice=[
@@ -10143,7 +10143,7 @@ obj = PublicationDelivery(
                                             value="GoldCard for Annual season ticket holders"
                                         ),
                                         description=MultilingualString(
-                                            value=" Gold Cards are annual season tickets with a difference:&#10;&#10;When you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card&#10;When you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card"
+                                            value=" Gold Cards are annual season tickets with a difference:\n\nWhen you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card\nWhen you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card"
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         authority_ref_or_operator_ref=OperatorRef(
@@ -10249,7 +10249,7 @@ obj = PublicationDelivery(
                                                                     value="Oyster 60 + Not allowed if have Disabled passs"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="You can get a 60+ London Oyster photocard if: , You are aged 60 or over, You live in a London borough&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;You're not eligible if you:&#10;&#10;&#10;TODO&#10;&#10;Have, or are eligible for, an older or disabled persons Freedom Pass&#10;Have a Veterans Oyster photocard&#10;Are aged under 60&#10;Don't live in a London borough"
+                                                                    value="You can get a 60+ London Oyster photocard if: , You are aged 60 or over, You live in a London borough\n\t\t\t\t\t\t\t\t\t\t\nYou're not eligible if you:\n\n\nTODO\n\nHave, or are eligible for, an older or disabled persons Freedom Pass\nHave a Veterans Oyster photocard\nAre aged under 60\nDon't live in a London borough"
                                                                 ),
                                                                 order=2,
                                                                 is_allowed=False,
@@ -10297,7 +10297,7 @@ obj = PublicationDelivery(
                                                     id="tfl:disabled_personsRailCard@group_Ticket",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Disabled Persons RailCard holders&#10;Discounted travel for one adult travelling with the RailCard holder for the whole journey. The accompanying adult should buy a child Zones 1-6 Off-Peak Day Travelcard"
+                                                        value="Disabled Persons RailCard holders\nDiscounted travel for one adult travelling with the RailCard holder for the whole journey. The accompanying adult should buy a child Zones 1-6 Off-Peak Day Travelcard"
                                                     ),
                                                     order=4,
                                                     limitations=UsageParametersRelStructure(
@@ -10332,7 +10332,7 @@ obj = PublicationDelivery(
                                             value="Freedom Pass"
                                         ),
                                         description=MultilingualString(
-                                            value="    &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9; http://www.tfl.gov.uk/tickets/14305.aspx&#10;&#9;You can get a Freedom Pass if your only or main home is in a London borough and:&#10;&#10;You were 60 or older before 6 April 2010&#10;You turned 60 on or after 6 April 2010 and meet the new age criteria&#10;Or have an eligible disability&#10;Eligible disability&#10;You can also get a Freedom Pass if you:&#10;&#10;Are blind or partially sighted&#10;Or are profoundly or severely deaf&#10;Or are without speech&#10;Or have a disability, or have suffered an injury which makes walking more difficult&#10;Or have no arms or have a long-term loss of the use of both arms&#10;Or have a learning disability&#10;Or have been refused a licence on the grounds of your disability&#10;&#10;&#10;How do I use my Freedom Pass?&#10;&#10;Once you've got your pass you can start using it immediately.&#10;&#10;touch_ing in and out&#10;Make sure you touch your card on the yellow card readers. It's a bit different for each type of transport. Find out more about touch_ing in and out.&#10;&#10;Using your pass outside London&#10;If you've got a rose symbol or a bus hologram on your pass you can use it on local buses all over England. You can use it between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.&#10;&#10;Concessionary bus passes from outside London&#10;If you've got a National Concessionary pass from an English council outside London you can use it at any time on buses in London displaying this symbol.&#10;&#10;On buses not showing this sign check with the driver - most will let you travel free between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.&#10;&#10;You'll need to show your pass to the driver.&#10;&#10;No one else can use your pass. You can't use it on Tube, tram, DLR, London Overground or National Rail services.&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9; "
+                                            value="    \n\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14305.aspx\n\tYou can get a Freedom Pass if your only or main home is in a London borough and:\n\nYou were 60 or older before 6 April 2010\nYou turned 60 on or after 6 April 2010 and meet the new age criteria\nOr have an eligible disability\nEligible disability\nYou can also get a Freedom Pass if you:\n\nAre blind or partially sighted\nOr are profoundly or severely deaf\nOr are without speech\nOr have a disability, or have suffered an injury which makes walking more difficult\nOr have no arms or have a long-term loss of the use of both arms\nOr have a learning disability\nOr have been refused a licence on the grounds of your disability\n\n\nHow do I use my Freedom Pass?\n\nOnce you've got your pass you can start using it immediately.\n\ntouch_ing in and out\nMake sure you touch your card on the yellow card readers. It's a bit different for each type of transport. Find out more about touch_ing in and out.\n\nUsing your pass outside London\nIf you've got a rose symbol or a bus hologram on your pass you can use it on local buses all over England. You can use it between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nConcessionary bus passes from outside London\nIf you've got a National Concessionary pass from an English council outside London you can use it at any time on buses in London displaying this symbol.\n\nOn buses not showing this sign check with the driver - most will let you travel free between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nYou'll need to show your pass to the driver.\n\nNo one else can use your pass. You can't use it on Tube, tram, DLR, London Overground or National Rail services.\t\n\t\t\t\t\t\t\t "
                                         ),
                                         authority_ref_or_operator_ref=AuthorityRef(
                                             version="any",
@@ -10357,7 +10357,7 @@ obj = PublicationDelivery(
                                                                 id="tfl:Freedom_pass@EntitlementRequired@disabled_personsRailCard",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="You can also get a Freedom Pass if you:&#10;&#10;Are blind or partially sighted&#10;Or are profoundly or severely deaf&#10;Or are without speech&#10;Or have a disability, or have suffered an injury which makes walking more difficult&#10;Or have no arms or have a long-term loss of the use of both arms&#10;Or have a learning disability&#10;Or have been refused a licence on the grounds of your disability"
+                                                                    value="You can also get a Freedom Pass if you:\n\nAre blind or partially sighted\nOr are profoundly or severely deaf\nOr are without speech\nOr have a disability, or have suffered an injury which makes walking more difficult\nOr have no arms or have a long-term loss of the use of both arms\nOr have a learning disability\nOr have been refused a licence on the grounds of your disability"
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -10380,7 +10380,7 @@ obj = PublicationDelivery(
                                                     id="tfl:Freedom_pass@Londoner",
                                                     version="any",
                                                     description=MultilingualString(
-                                                        value="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Bus&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Travel free at any time on buses in London showing this symbol   &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Tube, tram, DLR and London Overground Travel free at any time&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;National Rail services in London&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Travel free from 09.30 weekdays, any time on weekends and public holidays on most National Rail services in London, including services to Dartford and Swanley.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can travel free at any time on:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Chiltern Railway services between:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- Amersham - Marylebone &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- West Ruislip - South Ruislip&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;First Capital Connect services between:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- Finsbury Park - King's Cross or Moorgate &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- West Hampstead - Moorgate, Elephant and Castle and London Bridge&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;London Midland services between:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- Harrow and Wealdstone - Euston&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Greater Anglia services between:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- Stratford - Liverpool Street&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;c2c services between:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;- Upminster - Fenchurch Street&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;View the 60+ London Oyster photocard map  to see where and when you can travel free on National Rail services.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You'll need to pay full fare on National Rail services not shown and if you travel before 09.30 on weekdays (except where it states free travel is allowed at any time). You can't add pay as you go credit to your 60+ London Oyster photocard to pay full fare. &#10;TODO &#10;"
+                                                        value="\n\t\t\t\t\t\t\t\t\tBus\n\t\t\t\t\t\t\t\t\t\tTravel free at any time on buses in London showing this symbol   \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tTube, tram, DLR and London Overground Travel free at any time\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tNational Rail services in London\n\t\t\t\t\t\t\t\t\t\tTravel free from 09.30 weekdays, any time on weekends and public holidays on most National Rail services in London, including services to Dartford and Swanley.\n\t\t\t\t\t\t\t\t\t\tYou can travel free at any time on:\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChiltern Railway services between:\n\t\t\t\t\t\t\t\t\t\t\t- Amersham - Marylebone \n\t\t\t\t\t\t\t\t\t\t\t- West Ruislip - South Ruislip\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tFirst Capital Connect services between:\n\t\t\t\t\t\t\t\t\t\t\t- Finsbury Park - King's Cross or Moorgate \n\t\t\t\t\t\t\t\t\t\t\t- West Hampstead - Moorgate, Elephant and Castle and London Bridge\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLondon Midland services between:\n\t\t\t\t\t\t\t\t\t\t\t- Harrow and Wealdstone - Euston\n\t\t\t\t\t\t\t\t\t\t\tGreater Anglia services between:\n\t\t\t\t\t\t\t\t\t\t\t- Stratford - Liverpool Street\n\t\t\t\t\t\t\t\t\t\t\tc2c services between:\n\t\t\t\t\t\t\t\t\t\t\t- Upminster - Fenchurch Street\n\t\t\t\t\t\t\t\t\tView the 60+ London Oyster photocard map  to see where and when you can travel free on National Rail services.\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tYou'll need to pay full fare on National Rail services not shown and if you travel before 09.30 on weekdays (except where it states free travel is allowed at any time). You can't add pay as you go credit to your 60+ London Oyster photocard to pay full fare. \nTODO \n"
                                                     ),
                                                     order=2,
                                                     includes=GenericParameterAssignmentsRelStructure(
@@ -10418,7 +10418,7 @@ obj = PublicationDelivery(
                                                                 id="tfl:Freedom_pass@Londoner@metro",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="Tube, tram, DLR and London Overground&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Travel free at any time&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                                    value="Tube, tram, DLR and London Overground\n\t\t\t\t\t\t\t\t\t\t\t\tTravel free at any time\n\t\t\t\t\t\t\t\t\t\t"
                                                                 ),
                                                                 order=2,
                                                                 charging_basis=ChargingBasisEnumeration.FREE,
@@ -10472,7 +10472,7 @@ obj = PublicationDelivery(
                                                                     value="Freedom pass use of River services"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;River Services&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;You can show your 60+ London Oyster to pay discounted fares on:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;City Cruises: Westminster - Greenwich&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Crown River Cruises: Westminster - St Katherine's&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames Clippers: Bankside - Millbank&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Thames River Services: Westminster - Greenwich - Thames Barrier&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;WPSA: Westminster - Hampton Court&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                                    value="\n\t\t\t\t\t\t\t\t\t\t\t\tRiver Services\n\t\t\t\t\t\t\t\t\t\t\t\t\tYou can show your 60+ London Oyster to pay discounted fares on:\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tCity Cruises: Westminster - Greenwich\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tCrown River Cruises: Westminster - St Katherine's\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThames Clippers: Bankside - Millbank\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThames River Services: Westminster - Greenwich - Thames Barrier\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tWPSA: Westminster - Hampton Court\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t"
                                                                 ),
                                                                 order=4,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
@@ -10505,7 +10505,7 @@ obj = PublicationDelivery(
                                                                     value="Freedom pass use of cableway"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="Emirates Air Line&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Show your 60+ London Oyster photocard to pay the discounted adult Boarding Pass fare&#9;"
+                                                                    value="Emirates Air Line\n\n\t\t\t\t\t\t\t\t\t\t\t\tShow your 60+ London Oyster photocard to pay the discounted adult Boarding Pass fare\t"
                                                                 ),
                                                                 order=5,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
@@ -10596,7 +10596,7 @@ obj = PublicationDelivery(
                                                                     value="Freedom free not allowed to use of certail rail  services"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="As a summary, the Freedom Pass is not valid for travel on train services operated by:&#10;&#10;East Coast&#10;East Midlands Trains&#10;Grand Central&#10;Hull Trains&#10;Gatwick Express (between London Victoria and Gatwick)&#10;Heathrow Express&#10;Heathrow Connect between Hayes and Harlington and Heathrow&#10;Virgin Trains&#10;Southeastern high speed services to and from St Pancras International and Stratford International"
+                                                                    value="As a summary, the Freedom Pass is not valid for travel on train services operated by:\n\nEast Coast\nEast Midlands Trains\nGrand Central\nHull Trains\nGatwick Express (between London Victoria and Gatwick)\nHeathrow Express\nHeathrow Connect between Hayes and Harlington and Heathrow\nVirgin Trains\nSoutheastern high speed services to and from St Pancras International and Stratford International"
                                                                 ),
                                                                 order=8,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
@@ -10627,7 +10627,7 @@ obj = PublicationDelivery(
                                                                     value="Freedom free not allowed to use of certail rail  services"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="As a summary, the Freedom Pass is not valid for travel on train services operated by:&#10;&#10; &#10;Southeastern high speed services to and from St Pancras International and Stratford International"
+                                                                    value="As a summary, the Freedom Pass is not valid for travel on train services operated by:\n\n \nSoutheastern high speed services to and from St Pancras International and Stratford International"
                                                                 ),
                                                                 order=9,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
@@ -10772,7 +10772,7 @@ obj = PublicationDelivery(
                                             value="Group Day Ticket -"
                                         ),
                                         description=MultilingualString(
-                                            value="For groups of 10 or more fare-paying passengers you can get Group Day Tickets. These allow unlimited travel at any time and on any day within the zones paid for.&#10;You can only get these as paper tickets, not on an Oyster card, and they must be purchased upon arrival in London."
+                                            value="For groups of 10 or more fare-paying passengers you can get Group Day Tickets. These allow unlimited travel at any time and on any day within the zones paid for.\nYou can only get these as paper tickets, not on an Oyster card, and they must be purchased upon arrival in London."
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -11000,7 +11000,7 @@ obj = PublicationDelivery(
                                             value="Family Day Travel Card"
                                         ),
                                         description=MultilingualString(
-                                            value="  Holders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just £2 each for up to four children travelling with them:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Gold Card&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Network RailCard&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Family and Friends RailCard&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;HM Forces RailCard"
+                                            value="  Holders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just \xa32 each for up to four children travelling with them:\n\t\t\t\t\t\t\t\t\t\t\t\t\tGold Card\n\t\t\t\t\t\t\t\t\t\t\t\t\tNetwork RailCard\n\t\t\t\t\t\t\t\t\t\t\t\t\tFamily and Friends RailCard\n\t\t\t\t\t\t\t\t\t\t\t\t\tHM Forces RailCard"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -11091,7 +11091,7 @@ obj = PublicationDelivery(
                                                                     value="Rail  Card holder"
                                                                 ),
                                                                 description=MultilingualString(
-                                                                    value="  &#9;Network RailCard, &#9;&#9;Family and Friends RailCard, &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;HM Forces RailCard"
+                                                                    value="  \tNetwork RailCard, \t\tFamily and Friends RailCard, \t\t\t\t\t\t\t\tHM Forces RailCard"
                                                                 ),
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -11453,7 +11453,7 @@ obj = PublicationDelivery(
                                             value="Oyster Ticket Stops"
                                         ),
                                         description=MultilingualString(
-                                            value="You'll find Oyster Ticket Stops in newsagents, garages, off licences and hundreds of other shops in London.&#9;&#9;&#10;&#10;Get an Oyster card&#10;&#9;Top up an Oyster card or Oyster photocard with pay as you go credit&#10;&#9;Buy or renew the following tickets &#10;&#9;&#9;7 Day Bus and Tram Pass&#10;&#9;&#9;7 Day Travelcard&#10;&#9;&#9;Monthly Travelcard&#10;&#9;&#9;Monthly Bus and Tram Pass&#10;&#9;&#9;Annual Bus and Tram Pass&#10;You can't&#10;&#9;Get an Oyster photocard for discount travel&#10;&#9;Buy paper tickets (cash single tickets and Day Travelcards)"
+                                            value="You'll find Oyster Ticket Stops in newsagents, garages, off licences and hundreds of other shops in London.\t\t\n\nGet an Oyster card\n\tTop up an Oyster card or Oyster photocard with pay as you go credit\n\tBuy or renew the following tickets \n\t\t7 Day Bus and Tram Pass\n\t\t7 Day Travelcard\n\t\tMonthly Travelcard\n\t\tMonthly Bus and Tram Pass\n\t\tAnnual Bus and Tram Pass\nYou can't\n\tGet an Oyster photocard for discount travel\n\tBuy paper tickets (cash single tickets and Day Travelcards)"
                                         ),
                                         payment_methods=[
                                             PaymentMethodEnumeration.DEBIT_CARD,
@@ -11471,7 +11471,7 @@ obj = PublicationDelivery(
                                             value="Oyster Online"
                                         ),
                                         description=MultilingualString(
-                                            value="&#10;&#9;&#9;&#9;&#9; &#10;&#9;&#9;&#9;&#9; &#10;* Please note that you cannot get an Oyster card with a discounted or child-rate Travelcard or Bus and Tram Pass from Oyster online.&#9;&#9;&#9;&#9; &#10;&#9;&#9;&#9;&#9; "
+                                            value="\n\t\t\t\t \n\t\t\t\t \n* Please note that you cannot get an Oyster card with a discounted or child-rate Travelcard or Bus and Tram Pass from Oyster online.\t\t\t\t \n\t\t\t\t "
                                         )
                                     ),
                                     DistributionChannel(
@@ -11481,7 +11481,7 @@ obj = PublicationDelivery(
                                             value="Oyster salesline 0845 330 98761"
                                         ),
                                         description=MultilingualString(
-                                            value="&#9;NB only adults can top up their pay as you go online or by phone&#9;&#9;&#9; &#9;&#9;&#9;&#9; "
+                                            value="\tNB only adults can top up their pay as you go online or by phone\t\t\t \t\t\t\t "
                                         ),
                                         choice=AuthorityRef(
                                             version="any",
@@ -11776,7 +11776,7 @@ obj = PublicationDelivery(
                                             value="Mag or paper ticket is issued"
                                         ),
                                         description=MultilingualString(
-                                            value="For groups of 10 or more fare-paying passengers you can get Group Day Tickets. These allow unlimited travel at any time and on any day within the zones paid for.&#10;You can only get these as paper tickets, not on an Oyster card, and they must be purchased upon arrival in London."
+                                            value="For groups of 10 or more fare-paying passengers you can get Group Day Tickets. These allow unlimited travel at any time and on any day within the zones paid for.\nYou can only get these as paper tickets, not on an Oyster card, and they must be purchased upon arrival in London."
                                         ),
                                         condition_summary=ConditionSummary(
                                             provides_card=False,
@@ -12074,7 +12074,7 @@ obj = PublicationDelivery(
                                             value="Adult  Oyster Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value=" &#10;&#10;"
+                                            value=" \n\n"
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12139,7 +12139,7 @@ obj = PublicationDelivery(
                                             value="6Visitor Oyster Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="Visitor Oyster cards are plastic smartcards you can use instead of paper tickets. Put pay as you go credit on it which you use when you travel. It is the cheapest way to pay for single journeys on bus, Tube, tram, DLR, London Overground and most National Rail services in London.&#10;Visitor Oyster cards can be reused and never expire. If you run out of pay as you go credit, simply top up your credit at Tube stations, Oyster Ticket Stops and Travel Information Centres to use again.&#10;You can also use your Visitor Oyster card to get discounted fares on some TfL River Services and the Emirates Air Line cable car.&#10;&#10;Visitor Oyster cards are valid across all travel zones in London and automatically calculate the best value fare for all the journeys you make in a single day if you have touched in and out.&#10;Who can use a Visitor Oyster card?&#10;&#10;Visitor Oyster card are only available for adults. However, an adult with a Visitor Oyster card can take up to 4 children under the age of 11 years to travel for free on Tube, DLR and London Overground services. &#10;&#10;"
+                                            value="Visitor Oyster cards are plastic smartcards you can use instead of paper tickets. Put pay as you go credit on it which you use when you travel. It is the cheapest way to pay for single journeys on bus, Tube, tram, DLR, London Overground and most National Rail services in London.\nVisitor Oyster cards can be reused and never expire. If you run out of pay as you go credit, simply top up your credit at Tube stations, Oyster Ticket Stops and Travel Information Centres to use again.\nYou can also use your Visitor Oyster card to get discounted fares on some TfL River Services and the Emirates Air Line cable car.\n\nVisitor Oyster cards are valid across all travel zones in London and automatically calculate the best value fare for all the journeys you make in a single day if you have touched in and out.\nWho can use a Visitor Oyster card?\n\nVisitor Oyster card are only available for adults. However, an adult with a Visitor Oyster card can take up to 4 children under the age of 11 years to travel for free on Tube, DLR and London Overground services. \n\n"
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12327,7 +12327,7 @@ obj = PublicationDelivery(
                                             value="11-15 ZIP  Oyster Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9; &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="\t\t\t\t\t\t\t\n\t\t\t \n\t\t\t\t\t\t\t"
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12376,7 +12376,7 @@ obj = PublicationDelivery(
                                             value="Deprecated YellowBlue 11-15 Oyster Card Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="Does your child have a yellow/blue 11-15 Oyster photocard   If so, it needs to be replaced with a green/blue 11-15 Zip Oyster photocard. This will be done free of charge.  &#10;You must do this by Wednesday 31 July 2013.&#10;  &#10;If you don't order a replacement your child's existing yellow/blue 11-15 Oyster photocard will be stopped. If your child has pay as you go credit on their photocard, this will be transferred to their replacement photocard. "
+                                            value="Does your child have a yellow/blue 11-15 Oyster photocard   If so, it needs to be replaced with a green/blue 11-15 Zip Oyster photocard. This will be done free of charge.  \nYou must do this by Wednesday 31 July 2013.\n  \nIf you don't order a replacement your child's existing yellow/blue 11-15 Oyster photocard will be stopped. If your child has pay as you go credit on their photocard, this will be transferred to their replacement photocard. "
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
                                             version="any",
@@ -12390,7 +12390,7 @@ obj = PublicationDelivery(
                                             value="16 Plus ZIP  Oyster Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="If you're:&#10;Aged 16 to 18&#10;You can get a 16+ Zip Oyster photocard to pay:&#10;Child rate for 7 Day, monthly or longer period Travelcards and Bus and Tram Passes &#10;Half the adult pay as you go rate on bus, Tube, tram, DLR, London Overground and some National Rail services&#10;If eligible, you can get free travel on buses and trams.&#10;If you're under 18, a parent or guardian must apply on your behalf. You can apply online or at a Post Office in London.&#9;&#9;&#10;&#10;&#10;If you're 16 or 17&#10;Your parent/guardian can apply for a 16+ Oyster photocard for you, which will allow you to travel at reduced rate on bus, Tube, tram, DLR, London Overground and some National Rail services.&#10;&#10;If you were 18 or under on 31 August 2012&#10;You may be eligible for a 16+ Oyster photocard which gives free travel on buses and trams as well as reduced rates on Tube, DLR, London Overground and some National Rail services.&#10;&#10;To be eligible for free bus and tram travel, you must:&#10;&#10;Be in full-time education&#10;And live in a London borough&#10;Full-time education criteria:&#10;&#10;At least 12 hours of guided learning per week, between 09:00-17:00 Monday-Friday, for at least 10 weeks on further education courses at Level 3 or below in a sixth form college, academy, further education college or other training provider  &#10;Examples of Level 3 courses include A levels (AS/A2), vocational awards such as BTEC or City and Guilds qualifications at level 3 and the International Baccalaureate. It can also include apprenticeships and training courses funded by the Education Funding Agency provided the student is 18 or under on 31 August 2012. Your school, college or training provider will be able to confirm if the course qualifies&#10;You're not eligible for free bus and tram travel if:&#10;&#10;You don't live in a London borough and/or&#10;You're not in full time education &#10;If you were under 16 on 31 August 2012&#10;You can apply for an 11-15 Oyster photocard that you can use to travel free on buses and trams and to buy child rate Travelcards. You can continue to use the 11-15 Oyster photocard after you turn 16, until the expiry date printed on the front of the card.&#10;&#10;Terms and conditions 16+ Oyster photocard&#10;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9; &#10;&#9;&#9;&#9; &#10;Applications for 16+ Oyster photocards will not be accepted at Post Offices between Monday 1 July 2013 and Sunday 1 September 2013.&#10;&#10;If you live in a London borough, online applications for 16+ Oyster photocards with free bus and tram travel will not be accepted for the 2013/14 academic year between Monday 1 July and Tuesday 20 August 2013.&#10;&#10;Call us on 0343 222 1234 if you need to apply during this time.&#10;If you live outside London, you can still apply online for your 16+ Oyster photocard.&#10;If you're under 18, your parent or guardian must apply on your behalf.&#10;&#10;Residents of a London borough&#10;If you live in a London borough, you can apply online or at a Post Office.&#10;&#10;Apply online&#10;&#10;If you're the parent or guardian applying on behalf of a 16-18 year-old who lives in London, you can apply online.&#10;To apply online you will need:&#10;&#10;An active, valid email address&#10;A colour, digital photo of your child&#10;Debit or credit card to pay the £10 administration fee&#10;You will be asked for your child's machine readable passport number. If your child does not have a machine-readable passport and you can't complete all the application steps online you may be prompted to:&#10;&#10;Download and print off a verification letter&#10;Get the verification letter signed and approved by your child's education establishment&#10;Take the verification letter to the Post Office along with required documentation and pay the £10 administration fee&#10;Apply online&#10;Applying at a Post Office&#10;You can collect a 16+ Zip Oyster photocard application form from a Post Office in London.&#10;&#10;If the applicant is eligible for free travel on buses and trams, their school, college or training provider must confirm they meet the education criteria.&#10;&#10;You should then submit the completed application at a Post Office in London.&#10;&#10;To apply at a Post Office, you will need:&#10;&#10;Proof of your address, which must be one of the following:&#10;- Residential utility bill (dated in the last three months)&#10;- Current council tax bill&#10;- Bank, building society or credit card statement (dated in the last three months)&#10;- Council or housing association rent book or statement&#10;- Driving license (full or provisional)&#10;Proof of applicants age, which must be one of the following: &#10;- Passport&#10;- ID card from a European Economic Area country &#10;- Birth certificate &#10;- Driving license (full or provisional)&#10;- Biometric Residency Permit&#10;Proof of education status - the education part of the application needs to be signed and stamped by your child's school/college&#10;You must provide original documents; we don't accept photocopies.&#10;&#10;We will send the 16+ Zip Oyster photocard to the address you provide.&#10;&#10;If you provide an email address on your application, we will create a web account for you. We will send you an email with instructions on how to log in and activate your web account. You can then manage your card online, order a replacement for a lost, stolen or damaged Oyster photocard, change the photo on an Oyster photocard or order an Oyster photocard for another child.&#10;&#10;UK applicants outside London&#10;If you're the parent or guardian applying on behalf of a 16 or 17 year-old who lives outside London, you need to apply online.&#10;&#10;To apply online, you will  need:&#10;&#10;An active, valid email address&#10;Your child's machine-readable passport number&#10;A digital photo of your child&#10;Credit or debit card to pay the £10 administration fee&#10;If we're able to verify your child's age online:&#10;&#10;We will post the 16+ Zip Oyster photocard to the address you provide. It can take up to two weeks for the photocard to be delivered.&#10;&#10;If we're unable to verify your child's age online:&#10;&#10;You'll have to collect the photocard from a London Travel Information Centre. You can select a Travel Information Centre to collect from during the application process. It can take up to four weeks for your application to be processed.&#10;&#10;Apply online&#10;Non UK applicants&#10;If you're the parent or guardian of a 16 or 17 year-old who lives outside the UK, you need to apply online.&#10;&#10;We can't post Oyster photocards outside of the UK, so you need to select a Travel Information Centre to collect the photocard from during the application process. &#10;&#10;You must apply at least four weeks in advance of collecting the Oyster photocard. You can apply up to three months before the collection date.&#10;&#10;To apply you will need:&#10;&#10;An active, valid email address&#10;A digital photo of your child&#10;Credit or debit card to pay the £10 administration fee&#10;You need to bring your confirmation email and proof of the applicants' age when collecting the Oyster photocard from a London Travel Information Centre. This can be either:&#10;&#10;Passport&#10;ID card from a European Economic Area country &#10;Birth certificate &#10;Driving license (full or provisional)&#10;You must provide original documents - we don't accept photocopies.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="If you're:\nAged 16 to 18\nYou can get a 16+ Zip Oyster photocard to pay:\nChild rate for 7 Day, monthly or longer period Travelcards and Bus and Tram Passes \nHalf the adult pay as you go rate on bus, Tube, tram, DLR, London Overground and some National Rail services\nIf eligible, you can get free travel on buses and trams.\nIf you're under 18, a parent or guardian must apply on your behalf. You can apply online or at a Post Office in London.\t\t\n\n\nIf you're 16 or 17\nYour parent/guardian can apply for a 16+ Oyster photocard for you, which will allow you to travel at reduced rate on bus, Tube, tram, DLR, London Overground and some National Rail services.\n\nIf you were 18 or under on 31 August 2012\nYou may be eligible for a 16+ Oyster photocard which gives free travel on buses and trams as well as reduced rates on Tube, DLR, London Overground and some National Rail services.\n\nTo be eligible for free bus and tram travel, you must:\n\nBe in full-time education\nAnd live in a London borough\nFull-time education criteria:\n\nAt least 12 hours of guided learning per week, between 09:00-17:00 Monday-Friday, for at least 10 weeks on further education courses at Level 3 or below in a sixth form college, academy, further education college or other training provider  \nExamples of Level 3 courses include A levels (AS/A2), vocational awards such as BTEC or City and Guilds qualifications at level 3 and the International Baccalaureate. It can also include apprenticeships and training courses funded by the Education Funding Agency provided the student is 18 or under on 31 August 2012. Your school, college or training provider will be able to confirm if the course qualifies\nYou're not eligible for free bus and tram travel if:\n\nYou don't live in a London borough and/or\nYou're not in full time education \nIf you were under 16 on 31 August 2012\nYou can apply for an 11-15 Oyster photocard that you can use to travel free on buses and trams and to buy child rate Travelcards. You can continue to use the 11-15 Oyster photocard after you turn 16, until the expiry date printed on the front of the card.\n\nTerms and conditions 16+ Oyster photocard\n\t\t\t\t\t\n\t\t\t \n\t\t\t \nApplications for 16+ Oyster photocards will not be accepted at Post Offices between Monday 1 July 2013 and Sunday 1 September 2013.\n\nIf you live in a London borough, online applications for 16+ Oyster photocards with free bus and tram travel will not be accepted for the 2013/14 academic year between Monday 1 July and Tuesday 20 August 2013.\n\nCall us on 0343 222 1234 if you need to apply during this time.\nIf you live outside London, you can still apply online for your 16+ Oyster photocard.\nIf you're under 18, your parent or guardian must apply on your behalf.\n\nResidents of a London borough\nIf you live in a London borough, you can apply online or at a Post Office.\n\nApply online\n\nIf you're the parent or guardian applying on behalf of a 16-18 year-old who lives in London, you can apply online.\nTo apply online you will need:\n\nAn active, valid email address\nA colour, digital photo of your child\nDebit or credit card to pay the \xa310 administration fee\nYou will be asked for your child's machine readable passport number. If your child does not have a machine-readable passport and you can't complete all the application steps online you may be prompted to:\n\nDownload and print off a verification letter\nGet the verification letter signed and approved by your child's education establishment\nTake the verification letter to the Post Office along with required documentation and pay the \xa310 administration fee\nApply online\nApplying at a Post Office\nYou can collect a 16+ Zip Oyster photocard application form from a Post Office in London.\n\nIf the applicant is eligible for free travel on buses and trams, their school, college or training provider must confirm they meet the education criteria.\n\nYou should then submit the completed application at a Post Office in London.\n\nTo apply at a Post Office, you will need:\n\nProof of your address, which must be one of the following:\n- Residential utility bill (dated in the last three months)\n- Current council tax bill\n- Bank, building society or credit card statement (dated in the last three months)\n- Council or housing association rent book or statement\n- Driving license (full or provisional)\nProof of applicants age, which must be one of the following: \n- Passport\n- ID card from a European Economic Area country \n- Birth certificate \n- Driving license (full or provisional)\n- Biometric Residency Permit\nProof of education status - the education part of the application needs to be signed and stamped by your child's school/college\nYou must provide original documents; we don't accept photocopies.\n\nWe will send the 16+ Zip Oyster photocard to the address you provide.\n\nIf you provide an email address on your application, we will create a web account for you. We will send you an email with instructions on how to log in and activate your web account. You can then manage your card online, order a replacement for a lost, stolen or damaged Oyster photocard, change the photo on an Oyster photocard or order an Oyster photocard for another child.\n\nUK applicants outside London\nIf you're the parent or guardian applying on behalf of a 16 or 17 year-old who lives outside London, you need to apply online.\n\nTo apply online, you will  need:\n\nAn active, valid email address\nYour child's machine-readable passport number\nA digital photo of your child\nCredit or debit card to pay the \xa310 administration fee\nIf we're able to verify your child's age online:\n\nWe will post the 16+ Zip Oyster photocard to the address you provide. It can take up to two weeks for the photocard to be delivered.\n\nIf we're unable to verify your child's age online:\n\nYou'll have to collect the photocard from a London Travel Information Centre. You can select a Travel Information Centre to collect from during the application process. It can take up to four weeks for your application to be processed.\n\nApply online\nNon UK applicants\nIf you're the parent or guardian of a 16 or 17 year-old who lives outside the UK, you need to apply online.\n\nWe can't post Oyster photocards outside of the UK, so you need to select a Travel Information Centre to collect the photocard from during the application process. \n\nYou must apply at least four weeks in advance of collecting the Oyster photocard. You can apply up to three months before the collection date.\n\nTo apply you will need:\n\nAn active, valid email address\nA digital photo of your child\nCredit or debit card to pay the \xa310 administration fee\nYou need to bring your confirmation email and proof of the applicants' age when collecting the Oyster photocard from a London Travel Information Centre. This can be either:\n\nPassport\nID card from a European Economic Area country \nBirth certificate \nDriving license (full or provisional)\nYou must provide original documents - we don't accept photocopies.\n\t\t\t\t\t\t\t"
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12440,7 +12440,7 @@ obj = PublicationDelivery(
                                             value="18 Plus Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="If you are:&#10;Aged 18 or over&#10;Enrolled with a participating education establishment registered on the TfL scheme, or on mandatory work placement in London&#10;Enrolled in an eligible full-time or part-time course&#10;Living at a London address during term time&#10;You can get an 18+ Student Oyster photocard to:&#10;Save 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes. &#10;&#10;&#10;To apply online, you will need:&#10;&#10;A colour, digital photo&#10;Your enrolment ID from your education establishment&#10;A London address&#10;A valid debit or credit card to pay the £10 administration fee&#10;An active, valid email address&#10;Once you've fully enrolled with your education establishment, you can apply up to four weeks before your course start date, or on your 18th birthday. Applications received sooner than then this will be rejected.&#10;&#10;If you're on a course that is longer than one year, you can get a card valid for the length of your course or up to three years, whichever is sooner.&#10;&#10;An 18+ web account will be created for you when you apply - you can use it to check the progress of your application and correct any mistakes.&#10;&#10;TO DO &#10;How do I confirm I'm still eligible for my photocard?&#10;&#10;At the start of a new academic year, you'll need to confirm that you're still eligible for an 18+ Student Oyster photocard.&#10;&#10;To confirm, you need to:&#10;&#10;Re-enroll at your education establishment&#10;Log onto your 18+ web account&#10;Click on the reconfirmation link&#10;Confirm your details and accept the 2012/2013 Terms and Conditions&#10;Your application will be sent to your education establishment for their approval.&#10;&#10;You must confirm you're still eligible by 31 October 2012 - your 18+ Student Oyster photocard will be stopped if you don't.&#10;&#10;"
+                                            value="If you are:\nAged 18 or over\nEnrolled with a participating education establishment registered on the TfL scheme, or on mandatory work placement in London\nEnrolled in an eligible full-time or part-time course\nLiving at a London address during term time\nYou can get an 18+ Student Oyster photocard to:\nSave 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes. \n\n\nTo apply online, you will need:\n\nA colour, digital photo\nYour enrolment ID from your education establishment\nA London address\nA valid debit or credit card to pay the \xa310 administration fee\nAn active, valid email address\nOnce you've fully enrolled with your education establishment, you can apply up to four weeks before your course start date, or on your 18th birthday. Applications received sooner than then this will be rejected.\n\nIf you're on a course that is longer than one year, you can get a card valid for the length of your course or up to three years, whichever is sooner.\n\nAn 18+ web account will be created for you when you apply - you can use it to check the progress of your application and correct any mistakes.\n\nTO DO \nHow do I confirm I'm still eligible for my photocard?\n\nAt the start of a new academic year, you'll need to confirm that you're still eligible for an 18+ Student Oyster photocard.\n\nTo confirm, you need to:\n\nRe-enroll at your education establishment\nLog onto your 18+ web account\nClick on the reconfirmation link\nConfirm your details and accept the 2012/2013 Terms and Conditions\nYour application will be sent to your education establishment for their approval.\n\nYou must confirm you're still eligible by 31 October 2012 - your 18+ Student Oyster photocard will be stopped if you don't.\n\n"
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12529,7 +12529,7 @@ obj = PublicationDelivery(
                                             value="Apprentice Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="You can get an Apprentice Oyster photocard if:&#10;You are aged 18 or above&#10;You live in a London borough&#10;You are enrolled on an Apprenticeship* with a further education college or training organisation for a minimum of 12 months&#10;You are in the first 12 months of your Apprenticeship&#10;*The Apprenticeship must be SASE compliant (Specification for Apprenticeship Standards in England) and delivered through a further education college or training organisation approved or funded by the Skills Funding Agency.."
+                                            value="You can get an Apprentice Oyster photocard if:\nYou are aged 18 or above\nYou live in a London borough\nYou are enrolled on an Apprenticeship* with a further education college or training organisation for a minimum of 12 months\nYou are in the first 12 months of your Apprenticeship\n*The Apprenticeship must be SASE compliant (Specification for Apprenticeship Standards in England) and delivered through a further education college or training organisation approved or funded by the Skills Funding Agency.."
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
@@ -12598,7 +12598,7 @@ obj = PublicationDelivery(
                                             value="60 + London Oyster Product is carried on Oyster card"
                                         ),
                                         description=MultilingualString(
-                                            value="&#10;You can apply for a Veterans Oyster photocard if you are:&#10;&#10;Receiving ongoing payments under the War Pensions Scheme in your name (this includes widows, widowers and dependants)&#10;Or receiving Guaranteed Income Payment under the Armed Forces Compensation Scheme in your name (this includes widows, widowers and dependants)&#10;We will not issue a Veterans Oyster photocard if you live in London and are eligible for the Freedom Pass.&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#10;You can travel free at any time using your Veterans Oyster photocard on:&#10;&#10;Bus&#10;Travel free at any time on buses within London showing the following symbol&#10;&#10;Tube, tram, DLR and London Overground&#10;Travel free at any time&#10;Some National Rail services in London&#10;Travel free at any time on:&#10;Chiltern Railway services between:&#10;  - Amersham - Marylebone&#10;  - West Ruislip - South Ruislip&#10;First Capital Connect services between:&#10;  - Finsbury Park - King's Cross or Moorgate&#10;  - West Hampstead - Moorgate, Elephant and Castle and London Bridge&#10;London Midland services between:&#10;  - Harrow and Wealdstone - Euston&#10;Greater Anglia services between:&#10;  - Stratford - Liverpool Street&#10;c2c services between:&#10;  - Upminster - Fenchurch Street&#10;You can travel free from 09:30* weekdays, any time on weekends and public holidays on most other National Rail services in London and services to Dartford and Swanley.&#10;&#10;(*You can travel free from 09:00 on Southern Services between Clapham Junction and Harrow and Wealdstone)&#10;&#10;View the Veterans Concessionary Travel Scheme map (PDF 45KB) to see where and when you can travel free on National Rail services&#10;&#10;You need to pay full fare on National Rail services not shown or listed.&#10;&#10;You can show your Veterans Oyster photocard to pay discounted fares on:&#10;&#10;River services&#10;Get a discount on any of the following services:&#10;- City Cruises: Westminster - Greenwich&#10;- Thames River Services: Westminster - Greenwich - Thames Barrier&#10;- Crown River Cruises: Westminster - St Katherine's&#10;- WPSA: Westminster - Hampton Court&#10;- Thames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal&#10;- Thames Clippers: Bankside - Millbank&#10;&#10;Emirates Air Line&#10;Show your Veterans Oyster photocard to pay the discounted adult Boarding Pass fare"
+                                            value="\nYou can apply for a Veterans Oyster photocard if you are:\n\nReceiving ongoing payments under the War Pensions Scheme in your name (this includes widows, widowers and dependants)\nOr receiving Guaranteed Income Payment under the Armed Forces Compensation Scheme in your name (this includes widows, widowers and dependants)\nWe will not issue a Veterans Oyster photocard if you live in London and are eligible for the Freedom Pass.\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\nYou can travel free at any time using your Veterans Oyster photocard on:\n\nBus\nTravel free at any time on buses within London showing the following symbol\n\nTube, tram, DLR and London Overground\nTravel free at any time\nSome National Rail services in London\nTravel free at any time on:\nChiltern Railway services between:\n  - Amersham - Marylebone\n  - West Ruislip - South Ruislip\nFirst Capital Connect services between:\n  - Finsbury Park - King's Cross or Moorgate\n  - West Hampstead - Moorgate, Elephant and Castle and London Bridge\nLondon Midland services between:\n  - Harrow and Wealdstone - Euston\nGreater Anglia services between:\n  - Stratford - Liverpool Street\nc2c services between:\n  - Upminster - Fenchurch Street\nYou can travel free from 09:30* weekdays, any time on weekends and public holidays on most other National Rail services in London and services to Dartford and Swanley.\n\n(*You can travel free from 09:00 on Southern Services between Clapham Junction and Harrow and Wealdstone)\n\nView the Veterans Concessionary Travel Scheme map (PDF 45KB) to see where and when you can travel free on National Rail services\n\nYou need to pay full fare on National Rail services not shown or listed.\n\nYou can show your Veterans Oyster photocard to pay discounted fares on:\n\nRiver services\nGet a discount on any of the following services:\n- City Cruises: Westminster - Greenwich\n- Thames River Services: Westminster - Greenwich - Thames Barrier\n- Crown River Cruises: Westminster - St Katherine's\n- WPSA: Westminster - Hampton Court\n- Thames Clippers: Embankment and the London Eye - The O2 and Woolwich Arsenal\n- Thames Clippers: Bankside - Millbank\n\nEmirates Air Line\nShow your Veterans Oyster photocard to pay the discounted adult Boarding Pass fare"
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
@@ -23810,7 +23810,7 @@ obj = PublicationDelivery(
                                                         value="Rail Through rip&gt;"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" The extension fare will be charged as a National Rail though fare when:&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Any part of your journey is on a red route on the map,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;And National Rail through fares apply for the journey you are making,   ???&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;And you have a Travelcard valid for any zonal combination in Zones 3-6   ??&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                        value=" The extension fare will be charged as a National Rail though fare when:\n\t\t\t\t\t\t\t\t\t\tAny part of your journey is on a red route on the map,\n\t\t\t\t\t\t\t\t\t\tAnd National Rail through fares apply for the journey you are making,   ???\n\t\t\t\t\t\t\t\t\t\tAnd you have a Travelcard valid for any zonal combination in Zones 3-6   ??\n\t\t\t\t\t\t\t\t\t"
                                                     ),
                                                     fare_structure_elements_in_sequence=FareStructureElementsInSequenceRelStructure(
                                                         fare_structure_element_in_sequence_or_controllable_element_in_sequence=[
@@ -23902,7 +23902,7 @@ obj = PublicationDelivery(
                                                         value="Rail extension trip TfL Parts of Rail Network &gt;"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="The extension fare will be charged as a Zone 1 TfL fare when:&#10;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Any part of your journey is on a National Rail route (either red or green on the map)  - Rail OK&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;And National Rail through fares apply for the journey you are making   ????&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;And you are travelling into Zone 1  - OK&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;And you have a Travelcard which is valid for any of the following zonal combinations:   ???&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Zones 2-3&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Zones 2-4&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Zones 2-5&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Zones 2-6&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Zones 2-7"
+                                                        value="The extension fare will be charged as a Zone 1 TfL fare when:\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAny part of your journey is on a National Rail route (either red or green on the map)  - Rail OK\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAnd National Rail through fares apply for the journey you are making   ????\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAnd you are travelling into Zone 1  - OK\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAnd you have a Travelcard which is valid for any of the following zonal combinations:   ???\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tZones 2-3\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tZones 2-4\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tZones 2-5\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tZones 2-6\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tZones 2-7"
                                                     ),
                                                     fare_structure_elements_in_sequence=FareStructureElementsInSequenceRelStructure(
                                                         fare_structure_element_in_sequence_or_controllable_element_in_sequence=[
@@ -27425,7 +27425,7 @@ obj = PublicationDelivery(
                                             value="Family and frieds card"
                                         ),
                                         description=MultilingualString(
-                                            value=" you are travelling with a child who is aged five to 15 years old you are eligible to apply for a RailCard. The good news is that up to four adults and four kids can travel on one RailCard _ and they don_t even need to be related.&#10;&#10;You can have two adults named on your Family and Friends RailCard allowing either adult to carry the card and get a discount.&#10;&#10;All kids under five travel free - and each adult may take up to two 'under fives' with them. However, if the only child in the group is under five, you'll need to purchase a discounted child ticket to qualify for the adult RailCard discount. All child fares are subject to a £1 minimum fare.&#10;&#10;If your child turns 16 during the validity period of your 1-year Family and Friends RailCard, they will still be entitled to travel at the discounted child fare. This lasts for as long as your 1-year Family and Friends RailCard is valid.&#10;&#10;If your child turns 16 during the validity period of your 3-year Family and Friends RailCard, they can only travel as a child on the card until the day before they turn 17.&#10;&#10;&#10;TODO  some stuff not captured&#10; "
+                                            value=" you are travelling with a child who is aged five to 15 years old you are eligible to apply for a RailCard. The good news is that up to four adults and four kids can travel on one RailCard _ and they don_t even need to be related.\n\nYou can have two adults named on your Family and Friends RailCard allowing either adult to carry the card and get a discount.\n\nAll kids under five travel free - and each adult may take up to two 'under fives' with them. However, if the only child in the group is under five, you'll need to purchase a discounted child ticket to qualify for the adult RailCard discount. All child fares are subject to a \xa31 minimum fare.\n\nIf your child turns 16 during the validity period of your 1-year Family and Friends RailCard, they will still be entitled to travel at the discounted child fare. This lasts for as long as your 1-year Family and Friends RailCard is valid.\n\nIf your child turns 16 during the validity period of your 3-year Family and Friends RailCard, they can only travel as a child on the card until the day before they turn 17.\n\n\nTODO  some stuff not captured\n "
                                         ),
                                         minimum_number_of_persons=2,
                                         maximum_number_of_persons=8,
@@ -27488,7 +27488,7 @@ obj = PublicationDelivery(
                                             value="Rail card"
                                         ),
                                         description=MultilingualString(
-                                            value=" Senior RailCard, 16-25 RailCard, Disabled Persons RailCard, GoldCard HM Forces RailCard &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10; &#10;&#10;There are a range of National RailCards you can buy that allow discounted travel during off-peak times on Tube, DLR, London Overground and National Rail services.&#10;&#10; Name&#9;&#9;&#9;&#9;&#9;&#9; Cost per annum&#9; Validity&#9; Eligibility&#10; 16-25 RailCard&#9;&#9;&#9;&#9;&#9; £28&#9; 12 months&#9; Visit website&#10; Senior RailCard&#9;&#9;&#9;&#9;&#9; £28&#9; 12 months&#9; Visit website&#10; HM Forces RailCard&#9;&#9;&#9; £15&#9; 12 months&#9; Visit website&#10; Disabled Persons RailCard&#9; £20&#9; 12 months&#9; Visit website&#10; Network RailCard&#9;&#9;&#9;&#9; £28&#9; 12 months&#9; Visit website&#10; Family and Friends RailCard&#9; £28&#9; 12 months&#9; Visit website&#10;Gold Cards&#10;&#10;Gold Cards are annual season tickets with a difference:&#10;&#10;When you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card&#10;When you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value=" Senior RailCard, 16-25 RailCard, Disabled Persons RailCard, GoldCard HM Forces RailCard \n\t\t\t\t\t\t\t\n \n\nThere are a range of National RailCards you can buy that allow discounted travel during off-peak times on Tube, DLR, London Overground and National Rail services.\n\n Name\t\t\t\t\t\t Cost per annum\t Validity\t Eligibility\n 16-25 RailCard\t\t\t\t\t \xa328\t 12 months\t Visit website\n Senior RailCard\t\t\t\t\t \xa328\t 12 months\t Visit website\n HM Forces RailCard\t\t\t \xa315\t 12 months\t Visit website\n Disabled Persons RailCard\t \xa320\t 12 months\t Visit website\n Network RailCard\t\t\t\t \xa328\t 12 months\t Visit website\n Family and Friends RailCard\t \xa328\t 12 months\t Visit website\nGold Cards\n\nGold Cards are annual season tickets with a difference:\n\nWhen you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card\nWhen you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -27555,7 +27555,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value=" Buy your RailCard now and Save!&#10;On 19 May the price of a 1-year RailCard will change from £28 to £30 and a 3-year RailCard from £65 to £70.  The Family and Friends RailCard is still great value with cardholders saving on average £131 a year on their rail travel, as well as taking advantage of our RailCard partner offers.&#10; "
+                                                            value=" Buy your RailCard now and Save!\nOn 19 May the price of a 1-year RailCard will change from \xa328 to \xa330 and a 3-year RailCard from \xa365 to \xa370.  The Family and Friends RailCard is still great value with cardholders saving on average \xa3131 a year on their rail travel, as well as taking advantage of our RailCard partner offers.\n "
                                                         ),
                                                     ],
                                                     start_date=XmlDate(2013, 5, 19),
@@ -27957,7 +27957,7 @@ obj = PublicationDelivery(
                                             value="HM Forces Rail card"
                                         ),
                                         description=MultilingualString(
-                                            value="&#10;What is the HM Forces RailCard?&#10;&#10;The HM Forces RailCard costs £15 and it'll save you 1/3 on most rail fares throughout Great Britain for a whole year. That works out to under £2 a month for huge savings. You're eligible if you're a member of the Regular Forces or a spouse of a member, for more details see eligibility.&#10;&#10;There are plenty of ways you can use your RailCard, for both long and short trips. Better still you can use it anytime on weekends, Public Holidays and during the week. The only restriction is that if you travel before 10am Monday to Friday (except during July and August) a minimum fare will apply. For more details see minimum fares.&#10; &#10;Your HM Forces RailCard will save you 1/3 on many tickets. As with most things in life, there are some exceptions, so take a look at the ticket types you can and can't make savings on with your HM Forces RailCard.&#10; &#10;Please note that the railcard can only be used for non-duty (leisure) travel only. Commuting between home and place of duty, work or education is not available.&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="\nWhat is the HM Forces RailCard?\n\nThe HM Forces RailCard costs \xa315 and it'll save you 1/3 on most rail fares throughout Great Britain for a whole year. That works out to under \xa32 a month for huge savings. You're eligible if you're a member of the Regular Forces or a spouse of a member, for more details see eligibility.\n\nThere are plenty of ways you can use your RailCard, for both long and short trips. Better still you can use it anytime on weekends, Public Holidays and during the week. The only restriction is that if you travel before 10am Monday to Friday (except during July and August) a minimum fare will apply. For more details see minimum fares.\n \nYour HM Forces RailCard will save you 1/3 on many tickets. As with most things in life, there are some exceptions, so take a look at the ticket types you can and can't make savings on with your HM Forces RailCard.\n \nPlease note that the railcard can only be used for non-duty (leisure) travel only. Commuting between home and place of duty, work or education is not available.\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                         ),
                                         choice=SaleDiscountRightRef(
                                             version="any",
@@ -28097,7 +28097,7 @@ obj = PublicationDelivery(
                                             value="Disabled Persons RailCard"
                                         ),
                                         description=MultilingualString(
-                                            value="Am I Eligible?&#10;&#10;You qualify for a Disabled Persons RailCard if:&#10;&#10;You&#9;&#10;Please send in one of the following with your application&#10;&#10;Photocopies and printed scans are acceptable - original documents will not be returned&#10;&#10;Are registered as having a visual impairment&#9;Social Services official stamp in the space allocated on the application form&#10;A copy of your Certificate of Visual Impairment (CVI), BP1 Certificate (Scotland) or BD8 Certificate for being registered blind or partially-sighted&#10;Are registered as deaf or use a hearing aid&#9;Social Services official stamp in the space allocated on the application form&#10;A copy of the front page of your NHS battery book or a copy of your dispensing prescription from a private hearing aid supplier&#10;Have epilepsy and either:&#10;have repeated attacks even though you receive drug treatment; or&#10;are currently prohibited from driving because of your epilepsy&#10;A copy of your Exemption Certificate for epilepsy medication and a photocopy of your prescription for drugs in line with the National Society for Epilepsy Society guidelines&#10;A copy of your Exemption Certification for epliepsy medication and a photocopy of your letter from the DVLA telling you that you are unable to drive&#10;Receive Attendance Allowance&#9;A copy of your award letter&#10;Receive Personal Independence Payments&#9;A copy of your award letter&#10;Receive Disability Living Allowance at either:&#10;the higher rate or lower rate for getting around (mobility); or&#10;the higher or middle rate for help with personal care&#10;A copy of your award letter showing receipt of Disability Living Allowance in the past 12 months&#10;Receive Severe Disablement Allowance&#9;A copy of your award letter&#10;Receive War Pensioner's Mobility Supplement&#9;A copy of your award letter&#10;Receive War or Service Disablement Pension for 80% or more disability&#9;A copy of your award letter&#10;Are buying or leasing a vehicle through the Motability scheme&#9;A copy of the leasing or hire-purchase agreement, dated within the past 12 mont"
+                                            value="Am I Eligible?\n\nYou qualify for a Disabled Persons RailCard if:\n\nYou\t\nPlease send in one of the following with your application\n\nPhotocopies and printed scans are acceptable - original documents will not be returned\n\nAre registered as having a visual impairment\tSocial Services official stamp in the space allocated on the application form\nA copy of your Certificate of Visual Impairment (CVI), BP1 Certificate (Scotland) or BD8 Certificate for being registered blind or partially-sighted\nAre registered as deaf or use a hearing aid\tSocial Services official stamp in the space allocated on the application form\nA copy of the front page of your NHS battery book or a copy of your dispensing prescription from a private hearing aid supplier\nHave epilepsy and either:\nhave repeated attacks even though you receive drug treatment; or\nare currently prohibited from driving because of your epilepsy\nA copy of your Exemption Certificate for epilepsy medication and a photocopy of your prescription for drugs in line with the National Society for Epilepsy Society guidelines\nA copy of your Exemption Certification for epliepsy medication and a photocopy of your letter from the DVLA telling you that you are unable to drive\nReceive Attendance Allowance\tA copy of your award letter\nReceive Personal Independence Payments\tA copy of your award letter\nReceive Disability Living Allowance at either:\nthe higher rate or lower rate for getting around (mobility); or\nthe higher or middle rate for help with personal care\nA copy of your award letter showing receipt of Disability Living Allowance in the past 12 months\nReceive Severe Disablement Allowance\tA copy of your award letter\nReceive War Pensioner's Mobility Supplement\tA copy of your award letter\nReceive War or Service Disablement Pension for 80% or more disability\tA copy of your award letter\nAre buying or leasing a vehicle through the Motability scheme\tA copy of the leasing or hire-purchase agreement, dated within the past 12 mont"
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
@@ -28658,7 +28658,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="You need an Oyster card to:&#10;Use pay as you go and daily price capping&#10;Buy 7 Day, monthly and longer period Bus and Tram Passes&#10;You do not need an Oyster card to pay cash single fares.&#10;You can also use a contactless payment card to pay for single fares on buses (not trams) at the pay as you go fare of £1.40.&#10;Find out more about using contactless payment cards on buses"
+                                                            value="You need an Oyster card to:\nUse pay as you go and daily price capping\nBuy 7 Day, monthly and longer period Bus and Tram Passes\nYou do not need an Oyster card to pay cash single fares.\nYou can also use a contactless payment card to pay for single fares on buses (not trams) at the pay as you go fare of \xa31.40.\nFind out more about using contactless payment cards on buses"
                                                         ),
                                                     ],
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -29579,7 +29579,7 @@ obj = PublicationDelivery(
                                             value="Embankement - Woolich Arsenal"
                                         ),
                                         description=MultilingualString(
-                                            value="RB1: Embankement - Woolich Arsenal&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;RB3: London Bridge - Canary Wharf (for fares see route RB1)&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;RB5: North Greenwich - Woolwich Arsenal (for fares see route RB1)&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="RB1: Embankement - Woolich Arsenal\n\t\t\t\t\t\t\t\tRB3: London Bridge - Canary Wharf (for fares see route RB1)\n\t\t\t\t\t\t\t\tRB5: North Greenwich - Woolwich Arsenal (for fares see route RB1)\n\t\t\t\t\t\t\t\t"
                                         ),
                                         choice=OperatorRef(
                                             version="any",
@@ -30142,7 +30142,7 @@ obj = PublicationDelivery(
                                             value="Bankside - Embankment - Millbank - St George Wharf ("
                                         ),
                                         description=MultilingualString(
-                                            value="RB2: Bankside - Embankment - Millbank - St George Wharf (Tate to Tate and St George Wharf)&#10;Operated by KPMG Thames Clippers&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                            value="RB2: Bankside - Embankment - Millbank - St George Wharf (Tate to Tate and St George Wharf)\nOperated by KPMG Thames Clippers\n\t\t\t\t\t\t\t\t"
                                         ),
                                         choice=OperatorRef(
                                             version="any",
@@ -30222,7 +30222,7 @@ obj = PublicationDelivery(
                                                     id="lrs:RB2@St_George_Wharf+Millbank",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="St George Wharf to Millbank&#9;£3.30&#9;£2.97&#9;£2.20&#9; £6.60"
+                                                        value="St George Wharf to Millbank\t\xa33.30\t\xa32.97\t\xa32.20\t \xa36.60"
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
                                                         version="any",
@@ -30237,7 +30237,7 @@ obj = PublicationDelivery(
                                                     id="lrs:RB2@Millbank+Bankside",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Millbank to Bankside&#9;£5.50&#9;£4.95&#9;£3.70&#9; £11"
+                                                        value="Millbank to Bankside\t\xa35.50\t\xa34.95\t\xa33.70\t \xa311"
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
                                                         version="any",
@@ -30260,7 +30260,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Millbank to Bankside&#9;£5.50&#9;£4.95&#9;£3.70&#9; £11&#10;St George Wharf to Millbank&#9;£3.30&#9;£2.97&#9;£2.20&#9; £6.60&#10;All other journeys on this service&#9;£6&#9;£5.40&#9;£4&#9; £12"
+                                                            value="Millbank to Bankside\t\xa35.50\t\xa34.95\t\xa33.70\t \xa311\nSt George Wharf to Millbank\t\xa33.30\t\xa32.97\t\xa32.20\t \xa36.60\nAll other journeys on this service\t\xa36\t\xa35.40\t\xa34\t \xa312"
                                                         ),
                                                     ],
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -30536,7 +30536,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Millbank to Bankside&#9;£2.80&#9;n/a&#9;£1.80&#10;St George Wharf to Millbank&#9;£1.70&#9;n/a&#9;£1.10&#10;All other journeys on this service&#9;£3.00&#9;n/a&#9;£2.00"
+                                                            value="Millbank to Bankside\t\xa32.80\tn/a\t\xa31.80\nSt George Wharf to Millbank\t\xa31.70\tn/a\t\xa31.10\nAll other journeys on this service\t\xa33.00\tn/a\t\xa32.00"
                                                         ),
                                                     ],
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -30812,7 +30812,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Millbank to Bankside&#9;£2.80&#9;n/a&#9;£1.80&#10;St George Wharf to Millbank&#9;£1.70&#9;n/a&#9;£1.10&#10;All other journeys on this service&#9;£3.00&#9;n/a&#9;£2.00"
+                                                            value="Millbank to Bankside\t\xa32.80\tn/a\t\xa31.80\nSt George Wharf to Millbank\t\xa31.70\tn/a\t\xa31.10\nAll other journeys on this service\t\xa33.00\tn/a\t\xa32.00"
                                                         ),
                                                     ],
                                                     prices_for=PriceableObjectRefsRelStructure(
@@ -31712,7 +31712,7 @@ obj = PublicationDelivery(
                                                     id="lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Westminster/London Eye to Greenwich Pier&#9;"
+                                                        value="Westminster/London Eye to Greenwich Pier\t"
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         choice=[
@@ -31809,7 +31809,7 @@ obj = PublicationDelivery(
                                                     id="lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Tower",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Westminster/London Eye to Tower Pier&#9;"
+                                                        value="Westminster/London Eye to Tower Pier\t"
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
                                                         choice=[
@@ -32999,7 +32999,7 @@ obj = PublicationDelivery(
                                             value="A Cableway  Trip"
                                         ),
                                         description=MultilingualString(
-                                            value="360° tour&#10;You will have the option of taking a non-stop return trip on the Emirates Air Line; just ask for a 360° tour Boarding Pass at an Emirates Air Line ticket office. 360° tour Boarding Pass fares are the same as return fares.&#10;&#10;Oyster card holders who want to travel on the Emirates Air Line as part of a 360° tour will need to buy a Boarding Pass - available at the discounted rate when you show your Oyster card."
+                                            value="360\xb0 tour\nYou will have the option of taking a non-stop return trip on the Emirates Air Line; just ask for a 360\xb0 tour Boarding Pass at an Emirates Air Line ticket office. 360\xb0 tour Boarding Pass fares are the same as return fares.\n\nOyster card holders who want to travel on the Emirates Air Line as part of a 360\xb0 tour will need to buy a Boarding Pass - available at the discounted rate when you show your Oyster card."
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
                                             choice=[
@@ -33100,7 +33100,7 @@ obj = PublicationDelivery(
                                             value="Carnet of 10 journey"
                                         ),
                                         description=MultilingualString(
-                                            value="Multi-journey Boarding Pass&#10;You can buy a Multi-journey Boarding Pass from Emirates Air Line ticket offices. The Multi-journey Boarding Pass can be used for 10 single journeys and is valid for up to 12 months. The Multi-journey Boarding Pass works out at over 60 per cent cheaper per journey compared to the price of a single Emirates Air Line Boarding Pass.&#10;&#10;Multi-journey Boarding Passes are not transferable."
+                                            value="Multi-journey Boarding Pass\nYou can buy a Multi-journey Boarding Pass from Emirates Air Line ticket offices. The Multi-journey Boarding Pass can be used for 10 single journeys and is valid for up to 12 months. The Multi-journey Boarding Pass works out at over 60 per cent cheaper per journey compared to the price of a single Emirates Air Line Boarding Pass.\n\nMulti-journey Boarding Passes are not transferable."
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
                                             version="any",
@@ -33360,7 +33360,7 @@ obj = PublicationDelivery(
                                                         value="Buy SIngle Cash ticket  for  zone  1"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" £ 4.50 cash    "
+                                                        value=" \xa3 4.50 cash    "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 0),
                                                     amount=Decimal("4.50")
@@ -33482,7 +33482,7 @@ obj = PublicationDelivery(
                                                         value="Buy Group Day ticket  ticket  for  zone  1-6   4 Adults 10 Children"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="  4 @£ 4.50 each + 10@  £ 1.70 each    "
+                                                        value="  4 @\xa3 4.50 each + 10@  \xa3 1.70 each    "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 15),
                                                     amount=Decimal("28.70")
@@ -33648,7 +33648,7 @@ obj = PublicationDelivery(
                                                         value="Buy single  Cash ticket  with Travel card discount fr River RB2 Millbank to Bankside"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" £ 3.70 cash    "
+                                                        value=" \xa3 3.70 cash    "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 0),
                                                     amount=Decimal("3.70")
@@ -33764,7 +33764,7 @@ obj = PublicationDelivery(
                                                         value="Buy an Travel Card Oyster Card  with 7 days  for  zones 1 and 2"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Card 5.00  deposit  + Pass @  £30.40     "
+                                                        value=" Card 5.00  deposit  + Pass @  \xa330.40     "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 0),
                                                     amount=Decimal("35.40")
@@ -33845,7 +33845,7 @@ obj = PublicationDelivery(
                                                                 id="xpl:Oyster-12345@trans001@purchase_new_card@TravelCard_on_Oyster@Zones_1-2",
                                                                 version="any",
                                                                 name=MultilingualString(
-                                                                    value="Fare  zones 1 and2  &#9;Adult"
+                                                                    value="Fare  zones 1 and2  \tAdult"
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -33892,10 +33892,10 @@ obj = PublicationDelivery(
                                                     id="xpl:Oyster-12345@trans002@Oyster_Top_Up",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Top up Oyster card with £10"
+                                                        value="Top up Oyster card with \xa310"
                                                     ),
                                                     description=MultilingualString(
-                                                        value="   £10     "
+                                                        value="   \xa310     "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 10),
                                                     amount=Decimal("10.00")
@@ -33952,7 +33952,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch in  in a zone inside  travel card"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Raises liability for max far £.8.40 ( £2.40) "
+                                                        value=" Raises liability for max far \xa3.8.40 ( \xa32.40) "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 9, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -34035,7 +34035,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch out  in a zone inside  travel card"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Raises liabliity for max incremntal  fare zons 2- 8 £.8.40 ( £2.40) "
+                                                        value=" Raises liabliity for max incremntal  fare zons 2- 8 \xa3.8.40 ( \xa32.40) "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 9, 10),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -34139,7 +34139,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch in"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Raises libailiity for max far £.8.40 ( £2.40) "
+                                                        value=" Raises libailiity for max far \xa3.8.40 ( \xa32.40) "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 12, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -34232,7 +34232,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch out  n a zone outside traval card"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Max 8.40  - actusl £2.40   = -£6.00"
+                                                        value=" Max 8.40  - actusl \xa32.40   = -\xa36.00"
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 12, 30),
                                                     amount=Decimal("-6.0")
@@ -34310,10 +34310,10 @@ obj = PublicationDelivery(
                                                     id="xpl:Oyster-12345@trans007@Oyster_Auto_Top_Up@signup",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Top up Oyster card with £10"
+                                                        value="Top up Oyster card with \xa310"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Put  £10  on card to trigger    "
+                                                        value=" Put  \xa310  on card to trigger    "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 10),
                                                     amount=Decimal("10.00")
@@ -34430,10 +34430,10 @@ obj = PublicationDelivery(
                                                     id="xpl:Oyster-12345@trans008@Oyster_Auto_Top_Up@activate",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Top up Oyster card with £10"
+                                                        value="Top up Oyster card with \xa310"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Put  £10  on card to trigger    "
+                                                        value=" Put  \xa310  on card to trigger    "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 10),
                                                     amount=Decimal("10.00")
@@ -34562,7 +34562,7 @@ obj = PublicationDelivery(
                                                         value="Buy an Travel Card Oyster Card  with 20 PAY as you go"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Card 5.00  deposit  + Pass @  £20   "
+                                                        value=" Card 5.00  deposit  + Pass @  \xa320   "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 0),
                                                     amount=Decimal("25.00")
@@ -34625,7 +34625,7 @@ obj = PublicationDelivery(
                                                     id="xpl:Oyster-122222@trans001@Oyster_Top_Up",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Add £10 Pay as you go"
+                                                        value="Add \xa310 Pay as you go"
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 7, 10),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -34673,7 +34673,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch in"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Raises libailiity for max far £.8.40 ( £2.40) "
+                                                        value=" Raises libailiity for max far \xa3.8.40 ( \xa32.40) "
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 12, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
@@ -34766,7 +34766,7 @@ obj = PublicationDelivery(
                                                         value="Oyster Touch out  n a zone outside traval card"
                                                     ),
                                                     description=MultilingualString(
-                                                        value=" Max 8.40  - actusl £2.40   = -£6.00"
+                                                        value=" Max 8.40  - actusl \xa32.40   = -\xa36.00"
                                                     ),
                                                     date=XmlDateTime(2013, 7, 8, 1, 12, 30),
                                                     amount=Decimal("-6.0")
@@ -35993,7 +35993,7 @@ obj = PublicationDelivery(
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10; Your Freedom Pass allows you to travel in Standard Class on most local rail services in London, provided you travel at the following times: &#10;&#10;Monday to Friday from 9.30am and until 4.30am the following morning&#10;Weekends and public holidays at any time&#10;On some routes Freedom Pass holders may travel free 24 hours. To find out more about this download the Freedom Pass travel map for the whole of London (PDF, 114kb) Opens in a new window&#10;&#10;For borough-by-borough exclusions, you can see our exclusions map&#10;As a summary, the Freedom Pass is not valid for travel on train services operated by:&#10;&#10;East Coast&#10;East Midlands Trains&#10;Grand Central&#10;Hull Trains&#10;Gatwick Express (between London Victoria and Gatwick)&#10;Heathrow Express&#10;Heathrow Connect between Hayes and Harlington and Heathrow&#10;Virgin Trains&#10;Southeastern high speed services to and from St Pancras International and Stratford International&#10;If you are travelling by National Rail you need to make sure you are travelling in the Freedom Pass area or you may receive a penalty fare. If you wish to travel beyond the Freedom Pass area you must buy a separate extension ticket before you travel. Extension tickets used in conjunction with a Freedom Pass are NOT valid on services operated by any of the Train Companies listed above. Always show your Freedom Pass with your photograph at the ticket office when buying extension tickets. Holders of Senior and Disabled Persons RailCards may be able to obtain a discount on the price of extension tickets.&#10;&#10;For more information on National Rail services see the&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                value="\n\t\t\t\t\t\t\t\n Your Freedom Pass allows you to travel in Standard Class on most local rail services in London, provided you travel at the following times: \n\nMonday to Friday from 9.30am and until 4.30am the following morning\nWeekends and public holidays at any time\nOn some routes Freedom Pass holders may travel free 24 hours. To find out more about this download the Freedom Pass travel map for the whole of London (PDF, 114kb) Opens in a new window\n\nFor borough-by-borough exclusions, you can see our exclusions map\nAs a summary, the Freedom Pass is not valid for travel on train services operated by:\n\nEast Coast\nEast Midlands Trains\nGrand Central\nHull Trains\nGatwick Express (between London Victoria and Gatwick)\nHeathrow Express\nHeathrow Connect between Hayes and Harlington and Heathrow\nVirgin Trains\nSoutheastern high speed services to and from St Pancras International and Stratford International\nIf you are travelling by National Rail you need to make sure you are travelling in the Freedom Pass area or you may receive a penalty fare. If you wish to travel beyond the Freedom Pass area you must buy a separate extension ticket before you travel. Extension tickets used in conjunction with a Freedom Pass are NOT valid on services operated by any of the Train Companies listed above. Always show your Freedom Pass with your photograph at the ticket office when buying extension tickets. Holders of Senior and Disabled Persons RailCards may be able to obtain a discount on the price of extension tickets.\n\nFor more information on National Rail services see the\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                             ),
                                         ],
                                         members=TransportOrganisationRefsRelStructure(

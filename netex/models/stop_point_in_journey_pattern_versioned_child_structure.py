@@ -26,7 +26,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
     class Meta:
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef]] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[Union[FareScheduledStopPointRef, ScheduledStopPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,7 +60,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    wait_time_or_wait_times: Optional[Union[JourneyPatternWaitTimesRelStructure, XmlDuration]] = field(
+    wait_time_or_wait_times: Optional[Union[XmlDuration, JourneyPatternWaitTimesRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -109,7 +109,7 @@ class StopPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersio
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",

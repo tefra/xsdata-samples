@@ -15,7 +15,7 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "SecurityListingRefs_RelStructure"
 
-    choice: List[Union[RetailDeviceSecurityListingRef, FareContractSecurityListingRef, TravelDocumentSecurityListingRef, CustomerAccountSecurityListingRef, CustomerSecurityListingRef]] = field(
+    choice: List[Union[TravelDocumentSecurityListingRef, RetailDeviceSecurityListingRef, CustomerAccountSecurityListingRef, FareContractSecurityListingRef, CustomerSecurityListingRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

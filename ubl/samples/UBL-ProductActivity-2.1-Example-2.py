@@ -44,7 +44,7 @@ obj = ProductActivity(
     issue_date=XmlDate(2010, 4, 10),
     note=[
         Note(
-            value="Report about movements of goods between Beta Shop's locations located in&#10;        Emilia-Romagna."
+            value="Report about movements of goods between Beta Shop's locations located in\n        Emilia-Romagna."
         ),
     ],
     activity_period=ActivityPeriod(

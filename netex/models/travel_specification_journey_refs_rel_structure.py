@@ -13,7 +13,7 @@ class TravelSpecificationJourneyRefsRelStructure(OneToManyRelationshipStructure)
     class Meta:
         name = "travelSpecificationJourneyRefs_RelStructure"
 
-    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[Union[TrainNumberRef, ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
+    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[Union[TemplateServiceJourneyRef, ServiceJourneyRef, TrainNumberRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

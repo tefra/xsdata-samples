@@ -13,7 +13,7 @@ class QualityStructureFactorPricesRelStructure(StrictContainmentAggregationStruc
     class Meta:
         name = "qualityStructureFactorPrices_RelStructure"
 
-    quality_structure_factor_price_ref_or_quality_structure_factor_price_or_cell_ref: List[Union[CellRef, QualityStructureFactorPriceVersionedChildStructure, QualityStructureFactorPriceRef]] = field(
+    quality_structure_factor_price_ref_or_quality_structure_factor_price_or_cell_ref: List[Union[QualityStructureFactorPriceRef, QualityStructureFactorPriceVersionedChildStructure, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

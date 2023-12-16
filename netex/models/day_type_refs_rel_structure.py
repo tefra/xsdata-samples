@@ -12,7 +12,7 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dayTypeRefs_RelStructure"
 
-    fare_day_type_ref_or_day_type_ref: List[Union[DayTypeRef, FareDayTypeRef]] = field(
+    fare_day_type_ref_or_day_type_ref: List[Union[FareDayTypeRef, DayTypeRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -42,7 +42,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[OrganisationPartRef, ControlCentreRef, OrganisationalUnitRef, DepartmentRef]] = field(
+    choice: Optional[Union[ControlCentreRef, OrganisationalUnitRef, DepartmentRef, OrganisationPartRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

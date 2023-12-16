@@ -13,7 +13,7 @@ class GeographicalIntervalPricesRelStructure(StrictContainmentAggregationStructu
     class Meta:
         name = "geographicalIntervalPrices_RelStructure"
 
-    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: List[Union[GeographicalIntervalPriceVersionedChildStructure, CellRef, GeographicalIntervalPriceRef]] = field(
+    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: List[Union[GeographicalIntervalPriceRef, GeographicalIntervalPriceVersionedChildStructure, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

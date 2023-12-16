@@ -28,7 +28,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: Optional[Union[OtherError, UnknownSubscriptionError]] = field(
+        unknown_subscription_error_or_other_error: Optional[Union[UnknownSubscriptionError, OtherError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

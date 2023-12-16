@@ -16,7 +16,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    parking_tariff_ref_or_tariff_ref: Optional[Union[TariffRef, ParkingTariffRef]] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[Union[ParkingTariffRef, TariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -58,7 +58,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    number_of_units_or_amount_factor: Optional[Union[Decimal, int]] = field(
+    number_of_units_or_amount_factor: Optional[Union[int, Decimal]] = field(
         default=None,
         metadata={
             "type": "Elements",

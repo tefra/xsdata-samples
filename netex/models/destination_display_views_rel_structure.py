@@ -12,7 +12,7 @@ class DestinationDisplayViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "destinationDisplayViews_RelStructure"
 
-    destination_display_ref_or_destination_display_view: List[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: List[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

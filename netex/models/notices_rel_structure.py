@@ -12,7 +12,7 @@ class NoticesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "notices_RelStructure"
 
-    notice_ref_or_notice: List[Union[Notice, NoticeRef]] = field(
+    notice_ref_or_notice: List[Union[NoticeRef, Notice]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

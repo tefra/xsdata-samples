@@ -15,7 +15,7 @@ class FareScheduledStopPointVersionStructure(ScheduledStopPointVersionStructure)
     class Meta:
         name = "FareScheduledStopPoint_VersionStructure"
 
-    site_facility_set_ref_or_site_facility_set: Optional[Union[SiteFacilitySet, SiteFacilitySetRef]] = field(
+    site_facility_set_ref_or_site_facility_set: Optional[Union[SiteFacilitySetRef, SiteFacilitySet]] = field(
         default=None,
         metadata={
             "type": "Elements",

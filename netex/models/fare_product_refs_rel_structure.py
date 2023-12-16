@@ -18,7 +18,7 @@ class FareProductRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareProductRefs_RelStructure"
 
-    choice: List[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice: List[Union[SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

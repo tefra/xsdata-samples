@@ -23,7 +23,7 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
     class Meta:
         name = "DatedVehicleJourney_VersionStructure"
 
-    choice_1: Optional[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
+    choice_1: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

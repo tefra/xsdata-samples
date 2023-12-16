@@ -30,7 +30,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
     class Meta:
         name = "PointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
+    choice_1: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef, RoutePointRef, WirePointRef, RoadPointRef, RailwayPointRef, TrafficControlPointRef, BeaconPointRef, ActivationPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -113,7 +113,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -14,7 +14,7 @@ class GeographicalUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnitPrices_RelStructure"
 
-    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: List[Union["GeographicalUnitPriceVersionedChildStructure", CellRef, GeographicalUnitPriceRef]] = field(
+    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: List[Union[GeographicalUnitPriceRef, "GeographicalUnitPriceVersionedChildStructure", CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

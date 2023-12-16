@@ -39,7 +39,7 @@ class ExplicitLocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitLocalServices_RelStructure"
 
-    choice: List[Union[AssistanceBookingService, AssistanceService, MeetingPointServiceRef, ComplaintsServiceRef, CustomerService, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, LocalServiceRef, HireServiceRef, MoneyService, RetailService, TicketingService, CommunicationService, TicketingServiceRef, LostPropertyServiceRef, HireService, LuggageServiceRef, MeetingPointService, AssistanceBookingServiceRef, LeftLuggageService, CustomerServiceRef, CateringServiceRef, ComplaintsService, LuggageService, CateringService, LeftLuggageServiceRef, LostPropertyService, MoneyServiceRef]] = field(
+    choice: List[Union[AssistanceBookingServiceRef, CateringServiceRef, RetailServiceRef, MoneyServiceRef, HireServiceRef, CommunicationServiceRef, MeetingPointServiceRef, LeftLuggageServiceRef, LuggageServiceRef, LostPropertyServiceRef, ComplaintsServiceRef, CustomerServiceRef, AssistanceServiceRef, TicketingServiceRef, LocalServiceRef, AssistanceBookingService, CateringService, RetailService, MoneyService, HireService, CommunicationService, MeetingPointService, LostPropertyService, LeftLuggageService, ComplaintsService, CustomerService, LuggageService, AssistanceService, TicketingService]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

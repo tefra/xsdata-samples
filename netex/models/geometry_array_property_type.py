@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryArrayPropertyType:
-    polygon_or_line_string_or_point: List[Union[LineString, Polygon, Point1]] = field(
+    polygon_or_line_string_or_point: List[Union[Polygon, LineString, Point1]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

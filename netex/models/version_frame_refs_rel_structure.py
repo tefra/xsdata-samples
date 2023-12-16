@@ -22,7 +22,7 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"
 
-    choice: List[Union[TimetableFrameRef, SalesTransactionFrameRef, FareFrameRef, ResourceFrameRef, SiteFrameRef, DriverScheduleFrameRef, CompositeFrameRef, InfrastructureFrameRef, GeneralFrameRef, ServiceCalendarFrameRef, VehicleScheduleFrameRef, ServiceFrameRef]] = field(
+    choice: List[Union[SalesTransactionFrameRef, FareFrameRef, ServiceFrameRef, DriverScheduleFrameRef, VehicleScheduleFrameRef, TimetableFrameRef, SiteFrameRef, InfrastructureFrameRef, GeneralFrameRef, ResourceFrameRef, ServiceCalendarFrameRef, CompositeFrameRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

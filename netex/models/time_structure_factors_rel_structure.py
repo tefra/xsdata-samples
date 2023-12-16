@@ -13,7 +13,7 @@ class TimeStructureFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeStructureFactors_RelStructure"
 
-    parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor: List[Union[TimeStructureFactor, TimeStructureFactorRef, ParkingChargeBandRef]] = field(
+    parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor: List[Union[ParkingChargeBandRef, TimeStructureFactorRef, TimeStructureFactor]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

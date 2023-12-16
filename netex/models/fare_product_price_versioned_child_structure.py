@@ -18,7 +18,7 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    choice_2: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice_2: Optional[Union[SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

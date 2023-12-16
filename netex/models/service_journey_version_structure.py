@@ -114,7 +114,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -158,7 +158,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[JourneyFrequencyGroupRef, HeadwayJourneyGroupRef, RhythmicalJourneyGroupRef]] = field(
+    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[Union[RhythmicalJourneyGroupRef, HeadwayJourneyGroupRef, JourneyFrequencyGroupRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -181,7 +181,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[CompoundTrainRef, TrainRef, VehicleTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -264,7 +264,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         }
     )
-    choice_1: Optional[Union[LineRef, FlexibleLineView, LineView, FlexibleLineRef]] = field(
+    choice_1: Optional[Union[FlexibleLineRef, LineRef, LineView, FlexibleLineView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -424,7 +424,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementsView, PassengerCarryingRequirementRef]] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[Union[PassengerCarryingRequirementRef, PassengerCarryingRequirementsView]] = field(
         default=None,
         metadata={
             "type": "Elements",

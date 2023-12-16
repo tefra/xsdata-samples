@@ -12,7 +12,7 @@ class DutyPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dutyParts_RelStructure"
 
-    duty_part_ref_or_duty_part: List[Union[DutyPart, DutyPartRef]] = field(
+    duty_part_ref_or_duty_part: List[Union[DutyPartRef, DutyPart]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

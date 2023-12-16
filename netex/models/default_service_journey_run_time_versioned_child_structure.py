@@ -22,7 +22,7 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
             "required": True,
         }
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[Union[ServiceJourneyRef, TemplateServiceJourneyRef]] = field(
+    template_service_journey_ref_or_service_journey_ref: Optional[Union[TemplateServiceJourneyRef, ServiceJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

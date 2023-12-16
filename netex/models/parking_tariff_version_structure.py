@@ -80,7 +80,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, GroupOfOperatorsRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
+    choice: Optional[Union[RetailConsortiumRef, AuthorityRef, OperatorRef, GeneralOrganisationRef, ManagementAgentRef, ServicedOrganisationRef, TravelAgentRef, OtherOrganisationRef, OrganisationRef, GroupOfOperatorsRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

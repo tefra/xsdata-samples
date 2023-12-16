@@ -12,7 +12,7 @@ class FrequencyGroupsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroupsInFrame_RelStructure"
 
-    headway_journey_group_or_rhythmical_journey_group: List[Union[RhythmicalJourneyGroup, HeadwayJourneyGroup]] = field(
+    headway_journey_group_or_rhythmical_journey_group: List[Union[HeadwayJourneyGroup, RhythmicalJourneyGroup]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

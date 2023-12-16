@@ -12,7 +12,7 @@ class GeographicalStructureFactorsRelStructure(StrictContainmentAggregationStruc
     class Meta:
         name = "geographicalStructureFactors_RelStructure"
 
-    geographical_structure_factor_ref_or_geographical_structure_factor: List[Union[GeographicalStructureFactor, GeographicalStructureFactorRef]] = field(
+    geographical_structure_factor_ref_or_geographical_structure_factor: List[Union[GeographicalStructureFactorRef, GeographicalStructureFactor]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

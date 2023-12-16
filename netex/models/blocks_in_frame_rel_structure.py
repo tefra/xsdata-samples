@@ -13,7 +13,7 @@ class BlocksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blocksInFrame_RelStructure"
 
-    block_or_compound_block_or_train_block: List[Union[CompoundBlock, TrainBlock, Block]] = field(
+    block_or_compound_block_or_train_block: List[Union[Block, CompoundBlock, TrainBlock]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

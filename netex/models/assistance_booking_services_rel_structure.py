@@ -12,7 +12,7 @@ class AssistanceBookingServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "assistanceBookingServices_RelStructure"
 
-    assistance_booking_service_ref_or_assistance_booking_service: List[Union[AssistanceBookingService, AssistanceBookingServiceRef]] = field(
+    assistance_booking_service_ref_or_assistance_booking_service: List[Union[AssistanceBookingServiceRef, AssistanceBookingService]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

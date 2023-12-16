@@ -42,7 +42,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_line_ref_or_line_ref_or_line_view: Optional[Union[LineRef, LineView, FlexibleLineRef]] = field(
+    flexible_line_ref_or_line_ref_or_line_view: Optional[Union[FlexibleLineRef, LineRef, LineView]] = field(
         default=None,
         metadata={
             "type": "Elements",

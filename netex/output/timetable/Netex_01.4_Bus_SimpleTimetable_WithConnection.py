@@ -2433,7 +2433,7 @@ obj = PublicationDelivery(
                                         id="hde:sji_24o@01+46o_01",
                                         version="any",
                                         description=MultilingualString(
-                                            value="15:00  Change for Romeo&#9; "
+                                            value="15:00  Change for Romeo\t "
                                         ),
                                         connection_ref=ConnectionRefStructure(
                                             version="any",
@@ -2469,7 +2469,7 @@ obj = PublicationDelivery(
                                         id="hde:sji_24o@02+46o_02",
                                         version="any",
                                         description=MultilingualString(
-                                            value="16:00  Change for Romeo&#9; "
+                                            value="16:00  Change for Romeo\t "
                                         ),
                                         connection_ref=ConnectionRefStructure(
                                             version="any",

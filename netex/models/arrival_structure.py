@@ -111,7 +111,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[VehicleJourneyStopAssignmentRef, PassengerStopAssignmentRef, DynamicStopAssignmentRef, QuayAssignmentView]] = field(
+    choice: Optional[Union[VehicleJourneyStopAssignmentRef, DynamicStopAssignmentRef, PassengerStopAssignmentRef, QuayAssignmentView]] = field(
         default=None,
         metadata={
             "type": "Elements",

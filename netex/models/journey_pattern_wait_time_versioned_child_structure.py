@@ -14,7 +14,7 @@ class JourneyPatternWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChil
     class Meta:
         name = "JourneyPatternWaitTime_VersionedChildStructure"
 
-    choice_1: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice_1: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

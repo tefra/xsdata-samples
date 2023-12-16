@@ -68,7 +68,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         }
     )
-    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
+    authority_ref_or_operator_ref: Optional[Union[AuthorityRef, OperatorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -94,7 +94,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[SaleDiscountRightRef, ThirdPartyProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice: Optional[Union[SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -142,7 +142,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignment, GenericParameterAssignmentInContext]] = field(
         default=None,
         metadata={
             "type": "Elements",

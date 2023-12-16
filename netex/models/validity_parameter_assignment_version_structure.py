@@ -59,7 +59,7 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
             ),
         }
     )
-    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[Union[FareQuotaFactorRef, QualityStructureFactorRef, FareDemandFactorRef]] = field(
+    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[Union[FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

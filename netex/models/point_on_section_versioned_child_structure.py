@@ -50,7 +50,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
     class Meta:
         name = "PointOnSection_VersionedChildStructure"
 
-    choice_1: Optional[Union[WireJunction, Point2, ReliefPoint, TimingPointRef, RoadPointRef, ScheduledStopPoint, GaragePointRef, BeaconPointRef, BorderPoint, TrafficControlPoint, TrafficControlPointRef, ParkingPointRef, BeaconPoint, ParkingPoint, PathJunction, ActivationPoint, RailwayJunction, RailwayPointRef, WirePointRef, RoutePointRef, FareScheduledStopPointRef, ActivationPointRef, GaragePoint, BorderPointRef, PointRef, ScheduledStopPointRef, RoutePoint, RoadJunction, ReliefPointRef, FareScheduledStopPoint, TimingPoint]] = field(
+    choice_1: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef, RoutePointRef, WirePointRef, RoadPointRef, RailwayPointRef, TrafficControlPointRef, BeaconPointRef, ActivationPointRef, PointRef, BorderPoint, FareScheduledStopPoint, ScheduledStopPoint, PathJunction, RoutePoint, ParkingPoint, GaragePoint, ReliefPoint, TimingPoint, WireJunction, RoadJunction, RailwayJunction, TrafficControlPoint, BeaconPoint, ActivationPoint, Point2]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -213,7 +213,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             ),
         }
     )
-    choice_2: Optional[Union[RoadLinkRef, LineLinkRef, ActivationLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, PathLinkRef, RailwayLinkRef]] = field(
+    choice_2: Optional[Union[ServiceLinkRef, LineLinkRef, PathLinkRef, TimingLinkRef, RouteLinkRef, WireLinkRef, RoadLinkRef, RailwayLinkRef, ActivationLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

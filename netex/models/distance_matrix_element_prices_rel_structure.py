@@ -13,7 +13,7 @@ class DistanceMatrixElementPricesRelStructure(StrictContainmentAggregationStruct
     class Meta:
         name = "distanceMatrixElementPrices_RelStructure"
 
-    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: List[Union[CellRef, DistanceMatrixElementPrice, DistanceMatrixElementPriceRef]] = field(
+    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: List[Union[DistanceMatrixElementPriceRef, DistanceMatrixElementPrice, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

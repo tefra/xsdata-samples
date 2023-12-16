@@ -22,7 +22,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementRequired_VersionStructure"
 
-    choice: Optional[Union[SaleDiscountRightRef, ServiceAccessRightRef, AmountOfPriceUnitProductRef, ThirdPartyProductRef, UsageDiscountRightRef, EntitlementProductRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice: Optional[Union[EntitlementProductRef, SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef, ServiceAccessRightRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

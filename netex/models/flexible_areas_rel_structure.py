@@ -12,7 +12,7 @@ class FlexibleAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleAreas_RelStructure"
 
-    flexible_area_ref_or_flexible_area: List[Union[FlexibleArea, FlexibleAreaRef]] = field(
+    flexible_area_ref_or_flexible_area: List[Union[FlexibleAreaRef, FlexibleArea]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

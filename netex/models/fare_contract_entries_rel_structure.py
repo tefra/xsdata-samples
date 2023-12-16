@@ -21,7 +21,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareContractEntries_RelStructure"
 
-    choice: List[Union[SalesTransaction, TravelSpecification2, OfferedTravelSpecificationRef, FareContractEntry, RequestedTravelSpecification, FareContractEntryRef, SalesTransactionRef, OfferedTravelSpecification, TravelSpecification1, RequestedTravelSpecificationRef, TravelSpecificationRef]] = field(
+    choice: List[Union[SalesTransactionRef, OfferedTravelSpecificationRef, RequestedTravelSpecificationRef, TravelSpecificationRef, FareContractEntryRef, SalesTransaction, OfferedTravelSpecification, RequestedTravelSpecification, TravelSpecification1, TravelSpecification2, FareContractEntry]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

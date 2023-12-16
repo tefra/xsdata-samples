@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PriceRuleStepResultStructure:
-    choice: Optional[Union[TimeUnitPriceRef, SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, SeriesConstraintPriceRef, QualityStructureFactorPriceRef, TimeIntervalPriceRef, ParkingPriceRef, FareProductPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, GeographicalUnitPriceRef, ControllableElementPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
+    choice: Optional[Union[CustomerPurchasePackagePriceRef, ParkingPriceRef, TimeIntervalPriceRef, TimeUnitPriceRef, QualityStructureFactorPriceRef, ControllableElementPriceRef, ValidableElementPriceRef, GeographicalIntervalPriceRef, GeographicalUnitPriceRef, UsageParameterPriceRef, SalesOfferPackagePriceRef, DistanceMatrixElementPriceRef, FareStructureElementPriceRef, FulfilmentMethodPriceRef, SeriesConstraintPriceRef, CappingRulePriceRef, FareProductPriceRef, FarePriceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -189,7 +189,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[Union[PricingRuleRef, LimitingRuleRef, DiscountingRuleRef]] = field(
+    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

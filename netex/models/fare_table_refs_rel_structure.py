@@ -12,7 +12,7 @@ class FareTableRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareTableRefs_RelStructure"
 
-    standard_fare_table_ref_or_fare_table_ref: List[Union[FareTableRef, StandardFareTableRef]] = field(
+    standard_fare_table_ref_or_fare_table_ref: List[Union[StandardFareTableRef, FareTableRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

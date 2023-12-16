@@ -12,7 +12,7 @@ class VehicleManoeuvringRequirementsRelStructure(ContainmentAggregationStructure
     class Meta:
         name = "vehicleManoeuvringRequirements_RelStructure"
 
-    vehicle_manoeuvring_requirement_ref_or_vehicle_manoeuvring_requirement: List[Union[VehicleManoeuvringRequirement, VehicleManoeuvringRequirementRef]] = field(
+    vehicle_manoeuvring_requirement_ref_or_vehicle_manoeuvring_requirement: List[Union[VehicleManoeuvringRequirementRef, VehicleManoeuvringRequirement]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

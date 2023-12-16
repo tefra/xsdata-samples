@@ -56,7 +56,7 @@ class SectionInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildS
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    choice_1: Optional[Union[SectionRef, ParentCommonSectionRef, "CommonSection", "FareSection", "LineSection", GeneralSectionRef, LineSectionRef, CommonSectionRef, "GeneralSection", FareSectionRef]] = field(
+    choice_1: Optional[Union[ParentCommonSectionRef, CommonSectionRef, LineSectionRef, FareSectionRef, GeneralSectionRef, SectionRef, "FareSection", "CommonSection", "LineSection", "GeneralSection"]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -239,7 +239,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionRef, DirectionView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -257,7 +257,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -390,7 +390,7 @@ class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
 
-    points_on_section_or_members: Optional[Union[CommonSectionPointMembersRelStructure, PointsOnSectionRelStructure]] = field(
+    points_on_section_or_members: Optional[Union[PointsOnSectionRelStructure, CommonSectionPointMembersRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -444,7 +444,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "LineSection_VersionStructure"
 
-    points_on_section_or_members: Optional[Union[CommonSectionPointMembersRelStructure, PointOnLineSectionsRelStructure]] = field(
+    points_on_section_or_members: Optional[Union[PointOnLineSectionsRelStructure, CommonSectionPointMembersRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -462,7 +462,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         }
     )
-    reverse_points_on_section_or_reverse_members: Optional[Union[CommonSectionPointMembersRelStructure, PointOnLineSectionsRelStructure]] = field(
+    reverse_points_on_section_or_reverse_members: Optional[Union[PointOnLineSectionsRelStructure, CommonSectionPointMembersRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -488,7 +488,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    flexible_line_ref_or_line_ref: Optional[Union[LineRef, FlexibleLineRef]] = field(
+    flexible_line_ref_or_line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -506,7 +506,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         }
     )
-    authority_ref_or_operator_ref: Optional[Union[OperatorRef, AuthorityRef]] = field(
+    authority_ref_or_operator_ref: Optional[Union[AuthorityRef, OperatorRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -537,7 +537,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: Optional[Union[JourneyPattern, DeadRunJourneyPatternRef, JourneyPatternRef, ServicePatternRef, ServiceJourneyPatternRef]] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef, JourneyPattern]] = field(
         default=None,
         metadata={
             "type": "Elements",

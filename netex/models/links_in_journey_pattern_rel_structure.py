@@ -12,7 +12,7 @@ class LinksInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksInJourneyPattern_RelStructure"
 
-    service_link_in_journey_pattern_or_timing_link_in_journey_pattern: List[Union[TimingLinkInJourneyPattern, ServiceLinkInJourneyPattern]] = field(
+    service_link_in_journey_pattern_or_timing_link_in_journey_pattern: List[Union[ServiceLinkInJourneyPattern, TimingLinkInJourneyPattern]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

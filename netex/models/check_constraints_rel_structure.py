@@ -12,7 +12,7 @@ class CheckConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "checkConstraints_RelStructure"
 
-    check_constraint_ref_or_check_constraint: List[Union[CheckConstraint, CheckConstraintRef]] = field(
+    check_constraint_ref_or_check_constraint: List[Union[CheckConstraintRef, CheckConstraint]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

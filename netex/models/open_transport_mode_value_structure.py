@@ -33,7 +33,7 @@ class OpenTransportModeValueStructure(TypeOfValueVersionStructure):
             "required": True,
         }
     )
-    choice: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, TaxiSubmodeEnumeration, SelfDriveSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
+    choice: Optional[Union[AirSubmodeEnumeration, BusSubmodeEnumeration, CoachSubmodeEnumeration, FunicularSubmodeEnumeration, MetroSubmodeEnumeration, TramSubmodeEnumeration, TelecabinSubmodeEnumeration, RailSubmodeEnumeration, WaterSubmodeEnumeration, SnowAndIceSubmodeEnumeration, TaxiSubmodeEnumeration, SelfDriveSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -14,7 +14,7 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usedInRefs_RelStructure"
 
-    choice: List[Union[TariffRef, ParkingTariffRef, GroupOfDistanceMatrixElementsRef, GroupOfSalesOfferPackagesRef]] = field(
+    choice: List[Union[ParkingTariffRef, TariffRef, GroupOfDistanceMatrixElementsRef, GroupOfSalesOfferPackagesRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

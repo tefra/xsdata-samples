@@ -69,7 +69,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[AccessSpaceRef, VehicleStoppingPositionRef, SiteRef, QuayRef, StopPlaceRef, StopPlaceSpaceRef, PointOfInterestRef, ServiceSiteRef, PointOfInterestEntranceRef, ParkingEntranceForVehiclesRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, PointOfInterestSpaceRef, VehicleEntranceRef, SiteComponentRef, StopPlaceEntranceRef, BoardingPositionRef, ParkingBayRef, ParkingPassengerEntranceRef, ParkingEntranceRef, ParkingRef, VehicleStoppingPlaceRef, EntranceRef, SiteElementRef]] = field(
+    choice: Optional[Union[VehicleStoppingPositionRef, VehicleStoppingPlaceRef, BoardingPositionRef, AccessSpaceRef, QuayRef, StopPlaceSpaceRef, ParkingBayRef, PointOfInterestSpaceRef, StopPlaceVehicleEntranceRef, StopPlaceEntranceRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef, PointOfInterestVehicleEntranceRef, PointOfInterestEntranceRef, VehicleEntranceRef, EntranceRef, SiteComponentRef, StopPlaceRef, ParkingRef, PointOfInterestRef, ServiceSiteRef, SiteRef, SiteElementRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

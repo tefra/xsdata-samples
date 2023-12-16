@@ -12,7 +12,7 @@ class TypesOfTravelDocumentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfTravelDocuments_RelStructure"
 
-    type_of_travel_document_ref_or_type_of_travel_document: List[Union[TypeOfTravelDocument, TypeOfTravelDocumentRef]] = field(
+    type_of_travel_document_ref_or_type_of_travel_document: List[Union[TypeOfTravelDocumentRef, TypeOfTravelDocument]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

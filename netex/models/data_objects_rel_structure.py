@@ -23,7 +23,7 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    choice: List[Union[DriverScheduleFrame, ResourceFrame, GeneralFrame, TimetableFrame, FareFrame, InfrastructureFrame, ServiceCalendarFrame, VehicleScheduleFrame, ServiceFrame, SalesTransactionFrame, CompositeFrame, SiteFrame]] = field(
+    choice: List[Union[CompositeFrame, SalesTransactionFrame, FareFrame, DriverScheduleFrame, VehicleScheduleFrame, ServiceFrame, TimetableFrame, SiteFrame, InfrastructureFrame, GeneralFrame, ResourceFrame, ServiceCalendarFrame]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

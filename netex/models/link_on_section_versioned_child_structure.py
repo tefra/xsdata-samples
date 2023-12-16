@@ -28,7 +28,7 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
     class Meta:
         name = "LinkOnSection_VersionedChildStructure"
 
-    choice_1: Optional[Union[RoadLinkRef, TimingLink, WireElement, LineLinkRef, ActivationLinkRef, RailwayElement, ActivationLink, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, RouteLink, PathLinkRef, ServiceLink, PathLink, RailwayLinkRef, RoadElement, SitePathLink]] = field(
+    choice_1: Optional[Union[ServiceLinkRef, LineLinkRef, PathLinkRef, TimingLinkRef, RouteLinkRef, WireLinkRef, RoadLinkRef, RailwayLinkRef, ActivationLinkRef, ServiceLink, SitePathLink, PathLink, RouteLink, TimingLink, WireElement, RoadElement, RailwayElement, ActivationLink]] = field(
         default=None,
         metadata={
             "type": "Elements",

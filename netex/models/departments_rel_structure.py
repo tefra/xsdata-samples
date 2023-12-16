@@ -12,7 +12,7 @@ class DepartmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "departments_RelStructure"
 
-    department_ref_or_department: List[Union[Department, DepartmentRef]] = field(
+    department_ref_or_department: List[Union[DepartmentRef, Department]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

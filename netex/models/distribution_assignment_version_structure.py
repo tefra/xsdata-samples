@@ -48,7 +48,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
     class Meta:
         name = "DistributionAssignment_VersionStructure"
 
-    choice: Optional[Union[SaleDiscountRightRef, ServiceAccessRightRef, AmountOfPriceUnitProductRef, ThirdPartyProductRef, UsageDiscountRightRef, EntitlementProductRef, FareProductRef, PreassignedFareProductRef, CappedDiscountRightRef, SupplementProductRef]] = field(
+    choice: Optional[Union[EntitlementProductRef, SupplementProductRef, PreassignedFareProductRef, AmountOfPriceUnitProductRef, UsageDiscountRightRef, ThirdPartyProductRef, CappedDiscountRightRef, SaleDiscountRightRef, FareProductRef, ServiceAccessRightRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -131,7 +131,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         }
     )
-    all_countries_ref_or_country_ref: Optional[Union[CountryRef, AllCountriesRef]] = field(
+    all_countries_ref_or_country_ref: Optional[Union[AllCountriesRef, CountryRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -244,7 +244,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, AllOperatorsRef, AuthorityRef, AllAuthoritiesRef, AllTransportOrganisationsRef, OperatorRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef, AllOrganisationsRef]] = field(
+    choice_1: Optional[Union[AllAuthoritiesRef, AllOperatorsRef, AllTransportOrganisationsRef, AllOrganisationsRef, RetailConsortiumRef, AuthorityRef, OperatorRef, GeneralOrganisationRef, ManagementAgentRef, ServicedOrganisationRef, TravelAgentRef, OtherOrganisationRef, OrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

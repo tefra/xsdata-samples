@@ -14,7 +14,7 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "networkRestrictionsInFrame_RelStructure"
 
-    choice: List[Union[MeetingRestriction, VehicleTypeAtPoint, OvertakingPossibility, RestrictedManoeuvre]] = field(
+    choice: List[Union[OvertakingPossibility, MeetingRestriction, RestrictedManoeuvre, VehicleTypeAtPoint]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

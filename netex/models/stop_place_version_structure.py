@@ -51,7 +51,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: Optional[Union[AirSubmodeEnumeration, TramSubmodeEnumeration, SnowAndIceSubmodeEnumeration, RailSubmodeEnumeration, FunicularSubmodeEnumeration, CoachSubmodeEnumeration, BusSubmodeEnumeration, WaterSubmodeEnumeration, MetroSubmodeEnumeration, TelecabinSubmodeEnumeration]] = field(
+    choice_1: Optional[Union[AirSubmodeEnumeration, BusSubmodeEnumeration, CoachSubmodeEnumeration, FunicularSubmodeEnumeration, MetroSubmodeEnumeration, TramSubmodeEnumeration, TelecabinSubmodeEnumeration, RailSubmodeEnumeration, WaterSubmodeEnumeration, SnowAndIceSubmodeEnumeration]] = field(
         default=None,
         metadata={
             "type": "Elements",

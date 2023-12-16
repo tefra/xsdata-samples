@@ -32,7 +32,7 @@ class FareTableColumnVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[Union[FareTableRef, StandardFareTableRef]] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

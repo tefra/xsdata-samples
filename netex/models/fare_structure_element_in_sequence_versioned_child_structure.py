@@ -33,7 +33,7 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[Union[GenericParameterAssignmentsRelStructure, GenericParameterAssignment, GenericParameterAssignmentInContext]] = field(
         default=None,
         metadata={
             "type": "Elements",

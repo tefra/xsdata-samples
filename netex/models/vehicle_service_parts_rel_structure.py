@@ -12,7 +12,7 @@ class VehicleServicePartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleServiceParts_RelStructure"
 
-    vehicle_service_part_ref_or_vehicle_service_part: List[Union[VehicleServicePart, VehicleServicePartRef]] = field(
+    vehicle_service_part_ref_or_vehicle_service_part: List[Union[VehicleServicePartRef, VehicleServicePart]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

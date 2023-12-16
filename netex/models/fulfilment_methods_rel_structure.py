@@ -12,7 +12,7 @@ class FulfilmentMethodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fulfilmentMethods_RelStructure"
 
-    fulfilment_method_ref_or_fulfilment_method: List[Union[FulfilmentMethod, FulfilmentMethodRef]] = field(
+    fulfilment_method_ref_or_fulfilment_method: List[Union[FulfilmentMethodRef, FulfilmentMethod]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

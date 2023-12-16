@@ -13,7 +13,7 @@ class ControllableElementPricesRelStructure(StrictContainmentAggregationStructur
     class Meta:
         name = "controllableElementPrices_RelStructure"
 
-    controllable_element_price_ref_or_cell_ref_or_controllable_element_price: List[Union[CellRef, ControllableElementPriceRef, ControllableElementPrice]] = field(
+    controllable_element_price_ref_or_cell_ref_or_controllable_element_price: List[Union[ControllableElementPriceRef, CellRef, ControllableElementPrice]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -49,7 +49,7 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[VehicleEntranceRef, AccessSpaceRef, ParkingEntranceRef, VehicleStoppingPlaceRef, ParkingPassengerEntranceRef, VehicleStoppingPositionRef, PointOfInterestEntranceRef, SiteComponentRef, QuayRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, StopPlaceSpaceRef, BoardingPositionRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, ParkingBayRef, PointOfInterestSpaceRef]] = field(
+    choice: Optional[Union[VehicleStoppingPositionRef, VehicleStoppingPlaceRef, BoardingPositionRef, AccessSpaceRef, QuayRef, StopPlaceSpaceRef, ParkingBayRef, PointOfInterestSpaceRef, StopPlaceVehicleEntranceRef, StopPlaceEntranceRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef, PointOfInterestVehicleEntranceRef, PointOfInterestEntranceRef, VehicleEntranceRef, EntranceRef, SiteComponentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

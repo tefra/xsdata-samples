@@ -30,7 +30,7 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    parking_properties_or_parking_properties: Optional[Union[ParkingPropertiesRelStructure, ParkingProperties]] = field(
+    parking_properties_or_parking_properties: Optional[Union[ParkingProperties, ParkingPropertiesRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

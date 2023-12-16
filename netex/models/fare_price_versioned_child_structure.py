@@ -142,7 +142,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[TimeUnitPriceRef, SalesOfferPackagePriceRef, GeographicalIntervalPriceRef, SeriesConstraintPriceRef, QualityStructureFactorPriceRef, TimeIntervalPriceRef, ParkingPriceRef, FareProductPriceRef, ValidableElementPriceRef, DistanceMatrixElementPriceRef, FulfilmentMethodPriceRef, CappingRulePriceRef, FarePriceRef, GeographicalUnitPriceRef, ControllableElementPriceRef, CustomerPurchasePackagePriceRef, FareStructureElementPriceRef, UsageParameterPriceRef]] = field(
+    choice: Optional[Union[CustomerPurchasePackagePriceRef, ParkingPriceRef, TimeIntervalPriceRef, TimeUnitPriceRef, QualityStructureFactorPriceRef, ControllableElementPriceRef, ValidableElementPriceRef, GeographicalIntervalPriceRef, GeographicalUnitPriceRef, UsageParameterPriceRef, SalesOfferPackagePriceRef, DistanceMatrixElementPriceRef, FareStructureElementPriceRef, FulfilmentMethodPriceRef, SeriesConstraintPriceRef, CappingRulePriceRef, FareProductPriceRef, FarePriceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -240,7 +240,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             ),
         }
     )
-    choice_1: Optional[Union[DiscountingRuleRef, PricingRule, DiscountingRule, LimitingRuleInContext, PricingRuleRef, LimitingRuleRef, LimitingRule]] = field(
+    choice_1: Optional[Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef, LimitingRuleInContext, LimitingRule, DiscountingRule, PricingRule]] = field(
         default=None,
         metadata={
             "type": "Elements",

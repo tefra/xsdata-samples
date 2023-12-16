@@ -2766,7 +2766,7 @@ obj = PublicationDelivery(
                                         id="hde:sji_42a@E+A@03+42a@E+A@04",
                                         version="any",
                                         description=MultilingualString(
-                                            value="15:30    Can Stay Seated  &#9; 42a_E+A@03     to   42a_E+A@04  &#9;&#9;"
+                                            value="15:30    Can Stay Seated  \t 42a_E+A@03     to   42a_E+A@04  \t\t"
                                         ),
                                         stay_seated=True,
                                         planned=True,

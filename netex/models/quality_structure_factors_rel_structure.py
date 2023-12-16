@@ -16,7 +16,7 @@ class QualityStructureFactorsRelStructure(StrictContainmentAggregationStructure)
     class Meta:
         name = "qualityStructureFactors_RelStructure"
 
-    choice: List[Union[FareQuotaFactorRef, QualityStructureFactor, FareDemandFactorRef, FareQuotaFactor, QualityStructureFactorRef, FareDemandFactor]] = field(
+    choice: List[Union[FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef, FareQuotaFactor, FareDemandFactor, QualityStructureFactor]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

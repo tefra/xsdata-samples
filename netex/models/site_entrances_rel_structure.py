@@ -26,7 +26,7 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteEntrances_RelStructure"
 
-    choice: List[Union[VehicleEntranceRef, ParkingEntranceForVehicles, ParkingEntranceRef, ParkingPassengerEntrance, PointOfInterestEntranceRef, PointOfInterestVehicleEntrance, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, PointOfInterestEntrance, StopPlaceVehicleEntrance, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, StopPlaceEntrance, ParkingPassengerEntranceRef, Entrance]] = field(
+    choice: List[Union[StopPlaceVehicleEntranceRef, StopPlaceEntranceRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef, PointOfInterestVehicleEntranceRef, PointOfInterestEntranceRef, VehicleEntranceRef, EntranceRef, PointOfInterestVehicleEntrance, PointOfInterestEntrance, ParkingPassengerEntrance, ParkingEntranceForVehicles, StopPlaceVehicleEntrance, StopPlaceEntrance, Entrance]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

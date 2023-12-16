@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: Optional[Union[XmlDateTime, ClosedTimestampRangeStructure, "NetworkFrameTopicStructure.SelectionValidityConditions", EmptyType2]] = field(
+    choice: Optional[Union[EmptyType2, XmlDateTime, ClosedTimestampRangeStructure, "NetworkFrameTopicStructure.SelectionValidityConditions"]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,7 +73,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice_1: List[Union[TimetableFrameRef, SalesTransactionFrameRef, FareFrameRef, ResourceFrameRef, SiteFrameRef, DriverScheduleFrameRef, CompositeFrameRef, NetworkFilterByValueStructure, InfrastructureFrameRef, GeneralFrameRef, ServiceCalendarFrameRef, VehicleScheduleFrameRef, ServiceFrameRef]] = field(
+    choice_1: List[Union[SalesTransactionFrameRef, FareFrameRef, ServiceFrameRef, DriverScheduleFrameRef, VehicleScheduleFrameRef, TimetableFrameRef, SiteFrameRef, InfrastructureFrameRef, GeneralFrameRef, ResourceFrameRef, ServiceCalendarFrameRef, CompositeFrameRef, NetworkFilterByValueStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -149,7 +149,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class SelectionValidityConditions:
-        choice: List[Union[ValidityTrigger, ValidityCondition, SimpleAvailabilityCondition, AvailabilityCondition, ValidityRuleParameter, ValidDuring]] = field(
+        choice: List[Union[SimpleAvailabilityCondition, ValidDuring, AvailabilityCondition, ValidityRuleParameter, ValidityTrigger, ValidityCondition]] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",

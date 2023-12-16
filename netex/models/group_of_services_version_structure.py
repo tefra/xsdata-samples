@@ -34,7 +34,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionRef, DirectionView]] = field(
         default=None,
         metadata={
             "type": "Elements",

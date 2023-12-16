@@ -98,7 +98,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    connecting_journey_ref_or_connecting_journey_view: Optional[Union[ConnectingJourneyView, VehicleJourneyRefStructure]] = field(
+    connecting_journey_ref_or_connecting_journey_view: Optional[Union[VehicleJourneyRefStructure, ConnectingJourneyView]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -12,7 +12,7 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "addressesInFrame_RelStructure"
 
-    postal_address_or_road_address: List[Union[RoadAddress, PostalAddress]] = field(
+    postal_address_or_road_address: List[Union[PostalAddress, RoadAddress]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

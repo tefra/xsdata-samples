@@ -12,7 +12,7 @@ class ControllableElementsInSequenceRelStructure(StrictContainmentAggregationStr
     class Meta:
         name = "controllableElementsInSequence_RelStructure"
 
-    controllable_element_in_sequence_ref_or_controllable_element_in_sequence: List[Union[ControllableElementInSequence, ControllableElementInSequenceRef]] = field(
+    controllable_element_in_sequence_ref_or_controllable_element_in_sequence: List[Union[ControllableElementInSequenceRef, ControllableElementInSequence]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

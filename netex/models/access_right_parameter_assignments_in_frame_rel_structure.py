@@ -18,7 +18,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(FrameContainmentStructu
     class Meta:
         name = "accessRightParameterAssignmentsInFrame_RelStructure"
 
-    choice: List[Union[GenericParameterAssignmentInContext, SpecificParameterAssignment, ValidityParameterAssignment, AccessRightParameterAssignment, CustomerPurchaseParameterAssignment, GenericParameterAssignment]] = field(
+    choice: List[Union[CustomerPurchaseParameterAssignment, SpecificParameterAssignment, GenericParameterAssignmentInContext, GenericParameterAssignment, ValidityParameterAssignment, AccessRightParameterAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

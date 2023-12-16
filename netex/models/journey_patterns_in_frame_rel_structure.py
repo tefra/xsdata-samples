@@ -14,7 +14,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPatternsInFrame_RelStructure"
 
-    choice: List[Union[JourneyPatternView, DeadRunJourneyPattern, JourneyPattern, ServiceJourneyPattern]] = field(
+    choice: List[Union[ServiceJourneyPattern, DeadRunJourneyPattern, JourneyPattern, JourneyPatternView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

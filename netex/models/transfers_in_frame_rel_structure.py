@@ -14,7 +14,7 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transfersInFrame_RelStructure"
 
-    choice: List[Union[SiteConnection, Connection, Access, DefaultConnection]] = field(
+    choice: List[Union[Connection, DefaultConnection, SiteConnection, Access]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -12,7 +12,7 @@ class PassengerCarryingRequirementsRelStructure(ContainmentAggregationStructure)
     class Meta:
         name = "passengerCarryingRequirements_RelStructure"
 
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirement: List[Union[PassengerCarryingRequirement, PassengerCarryingRequirementRef]] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirement: List[Union[PassengerCarryingRequirementRef, PassengerCarryingRequirement]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

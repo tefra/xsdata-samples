@@ -17,7 +17,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupMembershipRefs_RelStructure"
 
-    choice: List[Union[TariffZoneRef, AdministrativeZoneRef, StopAreaRef, ZoneRef, AccessZoneRef, FareZoneRef, TransportAdministrativeZoneRef]] = field(
+    choice: List[Union[StopAreaRef, AccessZoneRef, TransportAdministrativeZoneRef, AdministrativeZoneRef, FareZoneRef, TariffZoneRef, ZoneRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

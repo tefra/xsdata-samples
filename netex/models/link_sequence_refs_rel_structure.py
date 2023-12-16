@@ -25,7 +25,7 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkSequenceRefs_RelStructure"
 
-    choice: List[Union[TimingPatternRef, DatedSpecialServiceRef, DeadRunJourneyPatternRef, JourneyPatternRef, DeadRunRef, VehicleJourneyRef, LinkSequenceRef, NavigationPathRef, DatedVehicleJourneyRef, RouteRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServicePatternRef, ServiceJourneyPatternRef, SpecialServiceRef]] = field(
+    choice: List[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, NavigationPathRef, ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef, TimingPatternRef, RouteRef, LinkSequenceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

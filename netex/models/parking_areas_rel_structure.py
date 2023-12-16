@@ -12,7 +12,7 @@ class ParkingAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingAreas_RelStructure"
 
-    parking_area_ref_or_parking_area: List[Union[ParkingArea, ParkingAreaRef]] = field(
+    parking_area_ref_or_parking_area: List[Union[ParkingAreaRef, ParkingArea]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

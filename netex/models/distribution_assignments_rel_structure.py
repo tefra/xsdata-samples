@@ -12,7 +12,7 @@ class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distributionAssignments_RelStructure"
 
-    distribution_assignment_ref_or_distribution_assignment: List[Union[DistributionAssignment, DistributionAssignmentRef]] = field(
+    distribution_assignment_ref_or_distribution_assignment: List[Union[DistributionAssignmentRef, DistributionAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

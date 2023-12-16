@@ -53,7 +53,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(VersionedChildStructur
             "tokens": True,
         }
     )
-    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[Union[ResponsibilityRoleRef, TypeOfResponsibilityRoleRef]] = field(
+    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[Union[TypeOfResponsibilityRoleRef, ResponsibilityRoleRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

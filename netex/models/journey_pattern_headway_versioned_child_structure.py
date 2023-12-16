@@ -21,7 +21,7 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
     class Meta:
         name = "JourneyPatternHeadway_VersionedChildStructure"
 
-    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +49,7 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
             ),
         }
     )
-    choice_1: Optional[Union[ScheduledStopPointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
+    choice_1: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

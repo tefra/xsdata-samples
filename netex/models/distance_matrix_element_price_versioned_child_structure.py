@@ -12,7 +12,7 @@ class DistanceMatrixElementPriceVersionedChildStructure(FarePriceVersionedChildS
     class Meta:
         name = "DistanceMatrixElementPrice_VersionedChildStructure"
 
-    distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref: Optional[Union[GroupOfDistanceMatrixElementsRef, DistanceMatrixElementRef]] = field(
+    distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref: Optional[Union[DistanceMatrixElementRef, GroupOfDistanceMatrixElementsRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -195,7 +195,7 @@ obj = OrderChange(
                         ),
                     ],
                     name=Name(
-                        value="Falu Rödfärg"
+                        value="Falu R\xf6df\xe4rg"
                     ),
                     sellers_item_identification=SellersItemIdentification(
                         id=Id(

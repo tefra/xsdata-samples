@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ErrorConditionStructure:
-    choice: Optional[Union[ServiceNotAvailableError, ParametersIgnoredError, UnknownExtensionsError, AccessNotAllowedError, OtherError, BeyondDataHorizon, InvalidDataReferencesError, AllowedResourceUsageExceededError, NoInfoForTopicError, CapabilityNotSupportedError]] = field(
+    choice: Optional[Union[ServiceNotAvailableError, CapabilityNotSupportedError, AccessNotAllowedError, InvalidDataReferencesError, BeyondDataHorizon, NoInfoForTopicError, ParametersIgnoredError, UnknownExtensionsError, AllowedResourceUsageExceededError, OtherError]] = field(
         default=None,
         metadata={
             "type": "Elements",

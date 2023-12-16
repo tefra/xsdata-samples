@@ -12,7 +12,7 @@ class ParkingEntrancesForVehiclesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingEntrancesForVehicles_RelStructure"
 
-    parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: List[Union[ParkingEntranceForVehicles, ParkingEntranceForVehiclesRef]] = field(
+    parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: List[Union[ParkingEntranceForVehiclesRef, ParkingEntranceForVehicles]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

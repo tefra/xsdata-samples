@@ -18,7 +18,7 @@ class JourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeysInFrame_RelStructure"
 
-    choice: List[Union[TemplateServiceJourney, ServiceJourney, VehicleJourney, NormalDatedVehicleJourney, DatedServiceJourney, SpecialService, DeadRun, DatedVehicleJourney]] = field(
+    choice: List[Union[VehicleJourney, DatedVehicleJourney, NormalDatedVehicleJourney, ServiceJourney, DatedServiceJourney, DeadRun, SpecialService, TemplateServiceJourney]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

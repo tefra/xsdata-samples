@@ -12,7 +12,7 @@ class QuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "quays_RelStructure"
 
-    quay_ref_or_quay: List[Union[Quay, QuayRef]] = field(
+    quay_ref_or_quay: List[Union[QuayRef, Quay]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

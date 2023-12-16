@@ -21,7 +21,7 @@ class SupplementProductVersionStructure(PreassignedFareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_to_fare_product_ref_or_supplement_to: Optional[Union[FareProductRefsRelStructure, FareProductRefStructure]] = field(
+    supplement_to_fare_product_ref_or_supplement_to: Optional[Union[FareProductRefStructure, FareProductRefsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

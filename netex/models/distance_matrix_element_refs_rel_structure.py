@@ -12,7 +12,7 @@ class DistanceMatrixElementRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "distanceMatrixElementRefs_RelStructure"
 
-    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: List[Union[DistanceMatrixElementInverseRef, DistanceMatrixElementRef]] = field(
+    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: List[Union[DistanceMatrixElementRef, DistanceMatrixElementInverseRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

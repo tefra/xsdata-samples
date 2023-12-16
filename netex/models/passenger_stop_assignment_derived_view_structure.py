@@ -16,7 +16,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PassengerStopAssignment_DerivedViewStructure"
 
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[Union[VehicleJourneyStopAssignmentRef, PassengerStopAssignmentRef, DynamicStopAssignmentRef]] = field(
+    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[Union[VehicleJourneyStopAssignmentRef, DynamicStopAssignmentRef, PassengerStopAssignmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

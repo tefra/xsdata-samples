@@ -37,7 +37,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 
-    notice_ref_or_group_of_notices_ref_or_notice: Optional[Union[Notice, GeneralGroupOfEntitiesRefStructure, NoticeRef]] = field(
+    notice_ref_or_group_of_notices_ref_or_notice: Optional[Union[NoticeRef, GeneralGroupOfEntitiesRefStructure, Notice]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +68,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[TimingPatternRef, DatedSpecialServiceRef, DeadRunJourneyPatternRef, JourneyPatternRef, DeadRunRef, VehicleJourneyRef, LinkSequenceRef, NavigationPathRef, DatedVehicleJourneyRef, RouteRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServicePatternRef, ServiceJourneyPatternRef, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, NavigationPathRef, ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef, TimingPatternRef, RouteRef, LinkSequenceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -151,7 +151,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         }
     )
-    choice_1: Optional[Union[SectionRef, ParentCommonSectionRef, GeneralSectionRef, LineSectionRef, CommonSectionRef, FareSectionRef]] = field(
+    choice_1: Optional[Union[ParentCommonSectionRef, CommonSectionRef, LineSectionRef, FareSectionRef, GeneralSectionRef, SectionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

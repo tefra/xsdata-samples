@@ -21,7 +21,7 @@ class AccessRightInProductVersionedChildStructure(FareElementInSequenceVersioned
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    supplement_product_ref_or_preassigned_fare_product_ref: Optional[Union[PreassignedFareProductRef, SupplementProductRef]] = field(
+    supplement_product_ref_or_preassigned_fare_product_ref: Optional[Union[SupplementProductRef, PreassignedFareProductRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

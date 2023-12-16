@@ -14,7 +14,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    choice: List[Union[ResidentialQualificationEligibility, CustomerEligibility, CommercialProfileEligibility, UserProfileEligibility]] = field(
+    choice: List[Union[ResidentialQualificationEligibility, CommercialProfileEligibility, UserProfileEligibility, CustomerEligibility]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

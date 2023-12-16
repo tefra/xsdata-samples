@@ -150,7 +150,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ConnectingJourneyView, DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, ConnectingJourneyView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -198,7 +198,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             ),
         }
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[Union[LineRef, LineDerivedViewStructure, FlexibleLineRef]] = field(
+    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[Union[FlexibleLineRef, LineRef, LineDerivedViewStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

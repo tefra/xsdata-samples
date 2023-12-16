@@ -20,7 +20,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    choice: Optional[Union[RoadLinkRef, LineLinkRef, ActivationLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, PathLinkRef, RailwayLinkRef]] = field(
+    choice: Optional[Union[ServiceLinkRef, LineLinkRef, PathLinkRef, TimingLinkRef, RouteLinkRef, WireLinkRef, RoadLinkRef, RailwayLinkRef, ActivationLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

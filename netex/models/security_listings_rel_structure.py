@@ -15,7 +15,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    choice: List[Union[CustomerAccountSecurityListing, CustomerSecurityListing, TravelDocumentSecurityListing, FareContractSecurityListing, RetailDeviceSecurityListing]] = field(
+    choice: List[Union[TravelDocumentSecurityListing, RetailDeviceSecurityListing, FareContractSecurityListing, CustomerSecurityListing, CustomerAccountSecurityListing]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

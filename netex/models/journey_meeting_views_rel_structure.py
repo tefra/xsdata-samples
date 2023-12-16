@@ -12,7 +12,7 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyMeetingViews_RelStructure"
 
-    journey_meeting_ref_or_journey_meeting_view: List[Union[JourneyMeetingView, JourneyMeetingRef]] = field(
+    journey_meeting_ref_or_journey_meeting_view: List[Union[JourneyMeetingRef, JourneyMeetingView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

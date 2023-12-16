@@ -51,7 +51,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    choice: List[Union[DayTypeRef, "OrganisationDayType", "FareDayType", "DayType", FareDayTypeRef]] = field(
+    choice: List[Union[FareDayTypeRef, DayTypeRef, "FareDayType", "OrganisationDayType", "DayType"]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -141,7 +141,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: List[Union["SimpleAvailabilityCondition", ValidityRuleParameterRef, "AvailabilityCondition", "ValidityRuleParameter", "ValidDuring", AvailabilityConditionRef, ValidityConditionRef, "ValidBetween", "ValidityTrigger", "ValidityCondition", ValidityTriggerRef]] = field(
+    choice: List[Union[AvailabilityConditionRef, ValidityRuleParameterRef, ValidityTriggerRef, ValidityConditionRef, "ValidBetween", "SimpleAvailabilityCondition", "ValidDuring", "AvailabilityCondition", "ValidityRuleParameter", "ValidityTrigger", "ValidityCondition"]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -549,7 +549,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "required": True,
         }
     )
-    end_time_or_day_offset_or_duration: List[Union[XmlTime, XmlDuration, int]] = field(
+    end_time_or_day_offset_or_duration: List[Union[XmlTime, int, XmlDuration]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -703,7 +703,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[Union[object, bool, RelativeOperatorEnumeration, str]] = field(
+    choice: List[Union[str, RelativeOperatorEnumeration, object, bool]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -831,7 +831,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: Optional[Union[DayOfWeekEnumeration, str, DayTypeRef, FareDayTypeRef]] = field(
+    choice: Optional[Union[FareDayTypeRef, DayTypeRef, DayOfWeekEnumeration, str]] = field(
         default=None,
         metadata={
             "type": "Elements",

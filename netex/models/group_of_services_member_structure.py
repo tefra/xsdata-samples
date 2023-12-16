@@ -27,7 +27,7 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[DatedSpecialServiceRef, TrainNumberRef, DeadRunRef, VehicleJourneyRef, JourneyDesignator, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServiceDesignator, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, TrainNumberRef, JourneyDesignator, ServiceDesignator]] = field(
         default=None,
         metadata={
             "type": "Elements",

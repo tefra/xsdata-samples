@@ -12,7 +12,7 @@ class HailAndRideAreasRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "hailAndRideAreas_RelStructure"
 
-    hail_and_ride_area_ref_or_hail_and_ride_area: List[Union[HailAndRideArea, HailAndRideAreaRef]] = field(
+    hail_and_ride_area_ref_or_hail_and_ride_area: List[Union[HailAndRideAreaRef, HailAndRideArea]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -12,7 +12,7 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocuments_RelStructure"
 
-    travel_document_ref_or_travel_document: List[Union[TravelDocument, TravelDocumentRef]] = field(
+    travel_document_ref_or_travel_document: List[Union[TravelDocumentRef, TravelDocument]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -12,7 +12,7 @@ class ViasRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "vias_RelStructure"
 
-    none_or_via: List[Union[ViaVersionedChildStructure, EmptyType2]] = field(
+    none_or_via: List[Union[EmptyType2, ViaVersionedChildStructure]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

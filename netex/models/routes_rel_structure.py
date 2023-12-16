@@ -12,7 +12,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"
 
-    route_ref_or_route: List[Union[Route, RouteRef]] = field(
+    route_ref_or_route: List[Union[RouteRef, Route]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

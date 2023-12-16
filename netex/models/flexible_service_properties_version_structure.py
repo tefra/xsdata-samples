@@ -26,7 +26,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FlexibleServiceProperties_VersionStructure"
 
-    choice: Optional[Union[DatedSpecialServiceRef, DeadRunRef, VehicleJourneyRef, DatedVehicleJourneyRef, ServiceJourneyRef, TemplateServiceJourneyRef, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -42,7 +42,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         }
     )
-    choice: Optional[Union[ServiceSiteRef, ParkingRef, SiteRef, StopPlaceRef, PointOfInterestRef]] = field(
+    choice: Optional[Union[StopPlaceRef, ParkingRef, PointOfInterestRef, ServiceSiteRef, SiteRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

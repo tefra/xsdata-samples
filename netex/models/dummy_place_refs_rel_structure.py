@@ -47,7 +47,7 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dummyPlaceRefs_RelStructure"
 
-    choice: List[Union[EquipmentPlaceRef, AccessSpaceRef, VehicleStoppingPositionRef, SiteRef, EquipmentPositionRef, HailAndRideAreaRef, QuayRef, PostalAddressRef, StopPlaceRef, GarageRef, StopPlaceSpaceRef, PointOfInterestRef, RoadAddressRef, PathJunctionRef, AddressRef, ServiceSiteRef, PointOfInterestEntranceRef, AddressablePlaceRef, FlexibleStopPlaceRef, ParkingEntranceForVehiclesRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, PointOfInterestSpaceRef, VehicleEntranceRef, SiteComponentRef, TopographicPlaceRef, StopPlaceEntranceRef, BoardingPositionRef, ParkingBayRef, ParkingPassengerEntranceRef, ParkingEntranceRef, ParkingRef, VehicleStoppingPlaceRef, FlexibleQuayRef, FlexibleAreaRef, EntranceRef, SiteElementRef]] = field(
+    choice: List[Union[HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef, FlexibleStopPlaceRef, PathJunctionRef, TopographicPlaceRef, EquipmentPlaceRef, EquipmentPositionRef, VehicleStoppingPositionRef, VehicleStoppingPlaceRef, BoardingPositionRef, AccessSpaceRef, QuayRef, StopPlaceSpaceRef, ParkingBayRef, PointOfInterestSpaceRef, StopPlaceVehicleEntranceRef, StopPlaceEntranceRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef, PointOfInterestVehicleEntranceRef, PointOfInterestEntranceRef, VehicleEntranceRef, EntranceRef, SiteComponentRef, StopPlaceRef, ParkingRef, PointOfInterestRef, ServiceSiteRef, SiteRef, SiteElementRef, GarageRef, AddressablePlaceRef, PostalAddressRef, RoadAddressRef, AddressRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

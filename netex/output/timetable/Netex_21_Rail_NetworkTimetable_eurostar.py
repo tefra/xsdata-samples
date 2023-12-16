@@ -284,7 +284,7 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Eurostar Dec 2010 to July 2011&#10;&#9;&#10;  See http://www.eurostar.com/pdf/timetables/UK_timetable(1).pdf"
+        value="Eurostar Dec 2010 to July 2011\n\t\n  See http://www.eurostar.com/pdf/timetables/UK_timetable(1).pdf"
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
@@ -3473,7 +3473,7 @@ obj = PublicationDelivery(
                                         version="any",
                                         responsibility_set_ref_attribute="fr:RS_01",
                                         name=MultilingualString(
-                                            value="Calais Fréthun",
+                                            value="Calais Fr\xe9thun",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
@@ -3623,7 +3623,7 @@ obj = PublicationDelivery(
                                         version="any",
                                         responsibility_set_ref_attribute="fr:RS_01",
                                         name=MultilingualString(
-                                            value="Marne La Vallée Chessy",
+                                            value="Marne La Vall\xe9e Chessy",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
@@ -3899,17 +3899,17 @@ obj = PublicationDelivery(
                                         version="any",
                                         responsibility_set_ref_attribute="fr:RS_01",
                                         name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         ),
                                         covered=CoveredEnumeration.OUTDOORS,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             name=MultilingualString(
-                                                value="Moûtiers",
+                                                value="Mo\xfbtiers",
                                                 lang="fr"
                                             ),
                                             country_ref=CountryRef(
@@ -4333,7 +4333,7 @@ obj = PublicationDelivery(
                                         id="eos:DR_London-Marne",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Disneyland Paris  / Marne-La-Vallée"
+                                            value="Disneyland Paris  / Marne-La-Vall\xe9e"
                                         )
                                     ),
                                     Direction(
@@ -4361,7 +4361,7 @@ obj = PublicationDelivery(
                                         id="eos:DR_Marne-London",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Disneyland Paris (Marne-La-Vallée) to London"
+                                            value="Disneyland Paris (Marne-La-Vall\xe9e) to London"
                                         )
                                     ),
                                     Direction(
@@ -4584,7 +4584,7 @@ obj = PublicationDelivery(
                                         id="eos:RL_out_05-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Calais to Moûtiers"
+                                            value="Calais to Mo\xfbtiers"
                                         ),
                                         from_point_ref=RoutePointRefStructure(
                                             version="any",
@@ -4599,7 +4599,7 @@ obj = PublicationDelivery(
                                         id="eos:RL_out_21-22",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Aime"
+                                            value="Mo\xfbtiers to Aime"
                                         ),
                                         from_point_ref=RoutePointRefStructure(
                                             version="any",
@@ -4782,7 +4782,7 @@ obj = PublicationDelivery(
                                         id="eos:RL_in_21-05",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Calais"
+                                            value="Mo\xfbtiers to Calais"
                                         ),
                                         from_point_ref=RoutePointRefStructure(
                                             version="any",
@@ -4797,7 +4797,7 @@ obj = PublicationDelivery(
                                         id="eos:RL_in_22-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Aime to Moûtiers"
+                                            value="Aime to Mo\xfbtiers"
                                         ),
                                         from_point_ref=RoutePointRefStructure(
                                             version="any",
@@ -5063,7 +5063,7 @@ obj = PublicationDelivery(
                                         id="eos:RT_04_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London -  (Ebbsfleet) - Ashford - (Calais) - Lille - Marne La Vallée"
+                                            value="London -  (Ebbsfleet) - Ashford - (Calais) - Lille - Marne La Vall\xe9e"
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
@@ -5179,7 +5179,7 @@ obj = PublicationDelivery(
                                         id="eos:RT_05_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - (Ebbsfleet) - Ashford  - (Calais) - Moûtiers - Aime - Bourg St Maurice"
+                                            value="London - (Ebbsfleet) - Ashford  - (Calais) - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
@@ -5759,7 +5759,7 @@ obj = PublicationDelivery(
                                         id="eos:RT_05_in",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Bourg  - Aime - Moûtiers  - (lille) - (Calais) - Ashford -( Ebbsfleet) - London"
+                                            value="Bourg  - Aime - Mo\xfbtiers  - (lille) - (Calais) - Ashford -( Ebbsfleet) - London"
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
@@ -6093,7 +6093,7 @@ obj = PublicationDelivery(
                                         id="eos:DD_MarneLV",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Disneyland Resort Paris / Marne La Vallée"
+                                            value="Disneyland Resort Paris / Marne La Vall\xe9e"
                                         ),
                                         short_name=MultilingualString(
                                             value="Disneyland / Marne"
@@ -6123,7 +6123,7 @@ obj = PublicationDelivery(
                                         id="eos:DD_Alps",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers - Aime la Plagne - Bourg St Maurice"
+                                            value="Mo\xfbtiers - Aime la Plagne - Bourg St Maurice"
                                         ),
                                         short_name=MultilingualString(
                                             value="French Alps"
@@ -6313,7 +6313,7 @@ obj = PublicationDelivery(
                                                                 id="eos:LSM_A_05-21",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="Calais to Moûtiers"
+                                                                    value="Calais to Mo\xfbtiers"
                                                                 ),
                                                                 order=1,
                                                                 choice_1=ScheduledStopPointRef(
@@ -6325,7 +6325,7 @@ obj = PublicationDelivery(
                                                                 id="eos:LSM_A_21-22",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="Moûtiers to Aime"
+                                                                    value="Mo\xfbtiers to Aime"
                                                                 ),
                                                                 order=1,
                                                                 choice_1=ScheduledStopPointRef(
@@ -6776,7 +6776,7 @@ obj = PublicationDelivery(
                                                                 id="eos:LSM_B_01-23_21",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="Calais to Moûtiers"
+                                                                    value="Calais to Mo\xfbtiers"
                                                                 ),
                                                                 order=5,
                                                                 choice_1=ScheduledStopPointRef(
@@ -6788,7 +6788,7 @@ obj = PublicationDelivery(
                                                                 id="eos:LSM_B_01-23_22",
                                                                 version="any",
                                                                 description=MultilingualString(
-                                                                    value="Moûtiers to Aime"
+                                                                    value="Mo\xfbtiers to Aime"
                                                                 ),
                                                                 order=6,
                                                                 choice_1=ScheduledStopPointRef(
@@ -6863,7 +6863,7 @@ obj = PublicationDelivery(
                                         id="eos:SSP_04_fr_Calais",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Calais Fréthun",
+                                            value="Calais Fr\xe9thun",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
@@ -6923,7 +6923,7 @@ obj = PublicationDelivery(
                                         id="eos:SSP_08_fr_MarneLV",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Marne-La-Vallée",
+                                            value="Marne-La-Vall\xe9e",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
@@ -6974,11 +6974,11 @@ obj = PublicationDelivery(
                                         id="eos:SSP_21_fr_Moutiers",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         )
                                     ),
@@ -7138,7 +7138,7 @@ obj = PublicationDelivery(
                                         id="eos:SL_out_05-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Calais to Moûtiers"
+                                            value="Calais to Mo\xfbtiers"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -7153,7 +7153,7 @@ obj = PublicationDelivery(
                                         id="eos:SL_out_21-22",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Aime"
+                                            value="Mo\xfbtiers to Aime"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -7307,7 +7307,7 @@ obj = PublicationDelivery(
                                         id="eos:SL_in_21-05",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Calais"
+                                            value="Mo\xfbtiers to Calais"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -7322,7 +7322,7 @@ obj = PublicationDelivery(
                                         id="eos:SL_in_22-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Aime to Moûtiers"
+                                            value="Aime to Mo\xfbtiers"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -8047,7 +8047,7 @@ obj = PublicationDelivery(
                                         id="eos:SP_04a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Lille - Marne La Vallée"
+                                            value="London - Ashford - Lille - Marne La Vall\xe9e"
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
@@ -8097,7 +8097,7 @@ obj = PublicationDelivery(
                                         id="eos:SP_05a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Moûtiers - Aime - Bourg St Maurice"
+                                            value="London - Ashford - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
@@ -8938,7 +8938,7 @@ obj = PublicationDelivery(
                                         id="eos:SP_05a_in",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Bourg St Maurice - Aime - Moûtiers  - Ashford - London"
+                                            value="Bourg St Maurice - Aime - Mo\xfbtiers  - Ashford - London"
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
@@ -9948,7 +9948,7 @@ obj = PublicationDelivery(
                                         id="eos:PSA_04_fr_Calais",
                                         version="any",
                                         description=MultilingualString(
-                                            value="Calais Fréthun",
+                                            value="Calais Fr\xe9thun",
                                             lang="fr"
                                         ),
                                         order=1,
@@ -9999,7 +9999,7 @@ obj = PublicationDelivery(
                                         id="eos:PSA_08_fr_MarneLV",
                                         version="any",
                                         description=MultilingualString(
-                                            value="Marne-La-Marne-La-Vallée (for Disneyland Resort)",
+                                            value="Marne-La-Marne-La-Vall\xe9e (for Disneyland Resort)",
                                             lang="fr"
                                         ),
                                         order=1,
@@ -10050,7 +10050,7 @@ obj = PublicationDelivery(
                                         id="eos:PSA_21_fr_Moutiers",
                                         version="any",
                                         description=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         ),
                                         order=1,
@@ -10635,7 +10635,7 @@ obj = PublicationDelivery(
                                         id="eos:TL_out_05-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Calais to Moûtiers"
+                                            value="Calais to Mo\xfbtiers"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -10650,7 +10650,7 @@ obj = PublicationDelivery(
                                         id="eos:TL_out_21-22",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Aime"
+                                            value="Mo\xfbtiers to Aime"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -10999,7 +10999,7 @@ obj = PublicationDelivery(
                                         id="eos:TL_in_21-05",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Calais"
+                                            value="Mo\xfbtiers to Calais"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -11014,7 +11014,7 @@ obj = PublicationDelivery(
                                         id="eos:TL_in_22-21",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Aime to Moûtiers"
+                                            value="Aime to Mo\xfbtiers"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -11209,7 +11209,7 @@ obj = PublicationDelivery(
                                         id="eos:TL_in_21-03",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers to Ashford"
+                                            value="Mo\xfbtiers to Ashford"
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
                                             version="any",
@@ -12294,7 +12294,7 @@ obj = PublicationDelivery(
                                         id="eos:TP_04a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Lille - Marne La Vallée"
+                                            value="London - Ashford - Lille - Marne La Vall\xe9e"
                                         ),
                                         route_ref=RouteRefStructure(
                                             version="any",
@@ -12370,7 +12370,7 @@ obj = PublicationDelivery(
                                         id="eos:TP_05a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Moûtiers - Aime - Bourg St Maurice"
+                                            value="London - Ashford - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         route_ref=RouteRefStructure(
                                             version="any",
@@ -13593,7 +13593,7 @@ obj = PublicationDelivery(
                                         id="eos:TP_05a_in",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Bourg St Maurice  - Aime - Moûtiers  - Ashford - London"
+                                            value="Bourg St Maurice  - Aime - Mo\xfbtiers  - Ashford - London"
                                         ),
                                         route_ref=RouteRefStructure(
                                             version="any",
@@ -14526,7 +14526,7 @@ obj = PublicationDelivery(
                                         id="eos:JP_04a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Lille - Marne La Vallée"
+                                            value="London - Ashford - Lille - Marne La Vall\xe9e"
                                         ),
                                         route_ref_or_route_view=RouteRef(
                                             version="any",
@@ -14595,7 +14595,7 @@ obj = PublicationDelivery(
                                         id="eos:JP_05a_out",
                                         version="any",
                                         name=MultilingualString(
-                                            value="London - Ashford - Moûtiers - Aime - Bourg St Maurice"
+                                            value="London - Ashford - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         route_ref_or_route_view=RouteRef(
                                             version="any",
@@ -15585,7 +15585,7 @@ obj = PublicationDelivery(
                                         id="eos:JP_05a_in",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Bourg St Maurice - Aime - Moûtiers  - Ashford - London"
+                                            value="Bourg St Maurice - Aime - Mo\xfbtiers  - Ashford - London"
                                         ),
                                         route_ref_or_route_view=RouteRef(
                                             version="any",
@@ -15936,7 +15936,7 @@ obj = PublicationDelivery(
                                                     id="eos:TDRT_01_out_04_21",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Calais to Moûtiers"
+                                                        value="Calais to Mo\xfbtiers"
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version="any",
@@ -15948,7 +15948,7 @@ obj = PublicationDelivery(
                                                     id="eos:TDRT_01_out_21_22",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Moûtiers to Aime"
+                                                        value="Mo\xfbtiers to Aime"
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version="any",
@@ -24965,7 +24965,7 @@ obj = PublicationDelivery(
                                         ],
                                         version="any",
                                         description=MultilingualString(
-                                            value="9074 London - Ebbsfleet - Ashford - Moûtiers - Aime - Bourg St Maurice"
+                                            value="9074 London - Ebbsfleet - Ashford - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
@@ -25104,7 +25104,7 @@ obj = PublicationDelivery(
                                         ],
                                         version="any",
                                         description=MultilingualString(
-                                            value="9096 London - Ebbsfleet - Ashford - Moûtiers - Aime - Bourg St Maurice"
+                                            value="9096 London - Ebbsfleet - Ashford - Mo\xfbtiers - Aime - Bourg St Maurice"
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
@@ -25236,7 +25236,7 @@ obj = PublicationDelivery(
                                         ],
                                         version="any",
                                         description=MultilingualString(
-                                            value="9095  Bourg St Maurice - AIme - Moûtiers - Ashford -  London"
+                                            value="9095  Bourg St Maurice - AIme - Mo\xfbtiers - Ashford -  London"
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
@@ -25371,7 +25371,7 @@ obj = PublicationDelivery(
                                         ],
                                         version="any",
                                         description=MultilingualString(
-                                            value="9099 Bourg St Maurice - AIme - Moûtiers - Ashford -  London"
+                                            value="9099 Bourg St Maurice - AIme - Mo\xfbtiers - Ashford -  London"
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
@@ -25525,7 +25525,7 @@ obj = PublicationDelivery(
                                                     version="any",
                                                     order=1,
                                                     choice=ServiceJourneyRef(
-                                                        value="9092 London -  Ashford - Moûtiers - Aime - Bourg St Maurice",
+                                                        value="9092 London -  Ashford - Mo\xfbtiers - Aime - Bourg St Maurice",
                                                         version="any",
                                                         ref="eos:VJ_SA_9092"
                                                     ),
@@ -25546,7 +25546,7 @@ obj = PublicationDelivery(
                                                     version="any",
                                                     order=2,
                                                     choice=ServiceJourneyRef(
-                                                        value="9096 London -  Ashford - Moûtiers - Aime - Bourg St Maurice",
+                                                        value="9096 London -  Ashford - Mo\xfbtiers - Aime - Bourg St Maurice",
                                                         version="any",
                                                         ref="eos:VJ_FR_9096"
                                                     ),
@@ -25612,7 +25612,7 @@ obj = PublicationDelivery(
                                                     version="any",
                                                     order=1,
                                                     choice=ServiceJourneyRef(
-                                                        value="9095 Bourg St Maurice - Aime - Moûtiers - Ashford -  London",
+                                                        value="9095 Bourg St Maurice - Aime - Mo\xfbtiers - Ashford -  London",
                                                         version="any",
                                                         ref="eos:VJ_SA_9095"
                                                     ),
@@ -25633,7 +25633,7 @@ obj = PublicationDelivery(
                                                     version="any",
                                                     order=2,
                                                     choice=ServiceJourneyRef(
-                                                        value="9099 Bourg St Maurice - Aime - Moûtiers - Ashford -  London",
+                                                        value="9099 Bourg St Maurice - Aime - Mo\xfbtiers - Ashford -  London",
                                                         version="any",
                                                         ref="eos:VJ_SA_9099"
                                                     ),
@@ -25832,11 +25832,11 @@ obj = PublicationDelivery(
                                         id="sncf:SSP_104_fr_Rennes",
                                         version="any",
                                         name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         ),
                                         short_name=MultilingualString(
-                                            value="Moûtiers",
+                                            value="Mo\xfbtiers",
                                             lang="fr"
                                         )
                                     ),

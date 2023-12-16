@@ -12,7 +12,7 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "validableElements_RelStructure"
 
-    validable_element_ref_or_validable_element: List[Union[ValidableElement, ValidableElementRef]] = field(
+    validable_element_ref_or_validable_element: List[Union[ValidableElementRef, ValidableElement]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

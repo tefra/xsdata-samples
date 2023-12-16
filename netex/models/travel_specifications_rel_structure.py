@@ -17,7 +17,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    choice: List[Union[TravelSpecification2, OfferedTravelSpecificationRef, RequestedTravelSpecification, OfferedTravelSpecification, TravelSpecification1, RequestedTravelSpecificationRef, TravelSpecificationRef]] = field(
+    choice: List[Union[OfferedTravelSpecificationRef, RequestedTravelSpecificationRef, TravelSpecificationRef, OfferedTravelSpecification, RequestedTravelSpecification, TravelSpecification1, TravelSpecification2]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

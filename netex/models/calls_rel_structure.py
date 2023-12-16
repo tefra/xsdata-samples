@@ -14,7 +14,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "calls_RelStructure"
 
-    choice: List[Union[CallZ, DatedCallZ, Call, DatedCall]] = field(
+    choice: List[Union[DatedCallZ, DatedCall, CallZ, Call]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

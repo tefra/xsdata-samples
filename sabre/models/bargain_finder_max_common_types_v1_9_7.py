@@ -21,7 +21,7 @@ class CompanyNameType:
     """
     Identifies a company by name.
 
-    Attributes
+    Attributes:
         value:
         company_short_name:
         travel_sector: Refer to OTA Code List Travel Sector (TVS).
@@ -81,7 +81,7 @@ class EquipmentType:
     """
     Specifies the aircraft equipment type.
 
-    Attributes
+    Attributes:
         value:
         air_equip_type: This is the 3 character IATA code.
         change_of_gauge: Indicates there is an equipment change.
@@ -118,7 +118,7 @@ class FareDirectionality(Enum):
 
 class MaximumStayReturnType(Enum):
     """
-    Attributes
+    Attributes:
         C: Return travel must be Completed.
         S: Return travel must be Started.
     """
@@ -133,7 +133,7 @@ class OtaAirLowFareSearchRqTarget(Enum):
 
 class OtaAirLowFareSearchRqTransactionStatusCode(Enum):
     """
-    Attributes
+    Attributes:
         START: This is the first message within a transaction.
         END: This is the last message within a transaction.
         ROLLBACK: This indicates that all messages within the current
@@ -154,7 +154,7 @@ class OtaAirLowFareSearchRsTarget(Enum):
 
 class OtaAirLowFareSearchRsTransactionStatusCode(Enum):
     """
-    Attributes
+    Attributes:
         START: This is the first message within a transaction.
         END: This is the last message within a transaction.
         ROLLBACK: This indicates that all messages within the current
@@ -187,7 +187,7 @@ class StayUnitType(Enum):
     """
     Defines the 'Units' that can be applied to Stay restrictions.
 
-    Attributes
+    Attributes:
         MINUTES:
         HOURS:
         DAYS:
@@ -220,7 +220,7 @@ class TravelerCountType:
     either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that is
     acceptable to both Trading Partners).
 
-    Attributes
+    Attributes:
         age:
         code: Specify traveler type code.
         code_context: Identifies the source authority for the code.
@@ -279,7 +279,7 @@ class VoluntaryChangesType:
     Specifies charges and/or penalties associated with making ticket changes after
     purchase.
 
-    Attributes
+    Attributes:
         penalty: Specifies penalty charges as either a currency amount
             or a percentage of the fare.
         vol_change_ind: Indicator used to specify whether voluntary
@@ -305,7 +305,7 @@ class VoluntaryChangesType:
     @dataclass
     class Penalty:
         """
-        Attributes
+        Attributes:
             penalty_type: Indicates the type of penalty involved in the
                 search or response.
             departure_status: Identifier used to indicate whether the
@@ -369,7 +369,7 @@ class VoluntaryChangesType:
 
 class VoluntaryChangesMatch(Enum):
     """
-    Attributes
+    Attributes:
         ALL: Conditions are joined by logical conjunction - fare needs
             to fulfill all the conditions to be returned in response.
         ANY: Conditions are joined by logical disjunction - fare needs
@@ -388,7 +388,7 @@ class AdvResTicketingType:
     Container used to hold information regarding advance reservation and/or advance
     ticketing.
 
-    Attributes
+    Attributes:
         adv_reservation: Specifies constraints on date of advance
             reservations.
         adv_ticketing: Specifies advance ticketing restrictions.
@@ -433,7 +433,7 @@ class AdvResTicketingType:
     @dataclass
     class AdvReservation:
         """
-        Attributes
+        Attributes:
             latest_time_of_day: The time of day by which reservations
                 must be made on the last day that advance reservations
                 can be made.
@@ -469,7 +469,7 @@ class AdvResTicketingType:
     @dataclass
     class AdvTicketing:
         """
-        Attributes
+        Attributes:
             from_res_time_of_day: The time of day after reservations are
                 made by which a ticket must be purchased.
             from_res_period: A length of time expressed as either an
@@ -539,7 +539,7 @@ class AdvResTicketingType:
 class PassengerTypeQuantityType(TravelerCountType):
     """Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
 
-    Attributes
+    Attributes:
         tpa_extensions: Additional elements and attributes to be
             included if required, per Trading Partner Agreement (TPA).
         changeable:
@@ -572,7 +572,7 @@ class PassengerTypeQuantityType(TravelerCountType):
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             birth_date:
             age: Exchange-specific
             state: Exchange-specific
@@ -671,7 +671,7 @@ class PassengerTypeQuantityType(TravelerCountType):
             Specifies charges and/or penalties associated with making ticket changes after
             purchase.
 
-            Attributes
+            Attributes:
                 penalty: Specifies penalty charges as either a currency
                     amount or a percentage of the fare.
                 match: Indicates relation between conditions.
@@ -696,7 +696,7 @@ class PassengerTypeQuantityType(TravelerCountType):
             @dataclass
             class Penalty:
                 """
-                Attributes
+                Attributes:
                     type_value: Indicates the type (Refund or Exchange)
                         of penalty involved in the search or response.
                     exclude: Indicate that specific penalty type should
@@ -762,7 +762,7 @@ class StayRestrictionsType:
     """
     Type defining Min and Max Stay Restrictions.
 
-    Attributes
+    Attributes:
         minimum_stay: Specifies restrictions for the shortest
             length/period of time or earliest day return travel can
             commence or be completed.
@@ -799,7 +799,7 @@ class StayRestrictionsType:
     @dataclass
     class MinimumStay:
         """
-        Attributes
+        Attributes:
             return_time_of_day: The time of day when return travel may
                 commence.
             min_stay: The amount of elapsed time or number of
@@ -844,7 +844,7 @@ class StayRestrictionsType:
     @dataclass
     class MaximumStay:
         """
-        Attributes
+        Attributes:
             return_type: Code indicating whether travel must commence or
                 be completed in order to satisfy the stay restriction.
             return_time_of_day: The time of day when return travel may

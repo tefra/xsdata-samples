@@ -938,7 +938,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     name=MultilingualString(
-                                                                        value="Copii până la vârsta de 5 ani",
+                                                                        value="Copii p\xe2n\u0103 la v\xe2rsta de 5 ani",
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
@@ -995,7 +995,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     name=MultilingualString(
-                                                                        value="Copiii până la vârsta de 10 ani împliniţi",
+                                                                        value="Copiii p\xe2n\u0103 la v\xe2rsta de 10 ani \xeemplini\u0163i",
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
@@ -1061,7 +1061,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="1. Students in compulsory, vocational and post-secondary education, accredited / licensed high school, benefit from a 50% reduced tariff for internal rail transport in all train categories, second class, throughout the calendar year.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Release surcharge , tickets to travel with discount 50% discount for all categories of train and 50% from the reservation, class II, and monthly fees for students discount &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;50% discount for all categories of train with unlimited number of trips up to 300 km, 2nd class."
+                                                                        value="1. Students in compulsory, vocational and post-secondary education, accredited / licensed high school, benefit from a 50% reduced tariff for internal rail transport in all train categories, second class, throughout the calendar year.\n\t\t\t\t\t\t\tRelease surcharge , tickets to travel with discount 50% discount for all categories of train and 50% from the reservation, class II, and monthly fees for students discount \n\t\t\t\t\t\t\t50% discount for all categories of train with unlimited number of trips up to 300 km, 2nd class."
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1103,7 +1103,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Romanian / foreign students enrolled in the form of education - bachelor, master, doctorate - in accredited Romanian higher education institutions benefit from free of charge for the internal railway transport in all train categories, second class, throughout the calendar year regardless of distance or travel routes.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Free travel tickets for all class 2 train travels, as well as free monthly subscriptions for students with unlimited distance trips up to 300 km, 2nd class, are issued free of charge."
+                                                                        value="Romanian / foreign students enrolled in the form of education - bachelor, master, doctorate - in accredited Romanian higher education institutions benefit from free of charge for the internal railway transport in all train categories, second class, throughout the calendar year regardless of distance or travel routes.\n\t\t\t\t\t\t\tFree travel tickets for all class 2 train travels, as well as free monthly subscriptions for students with unlimited distance trips up to 300 km, 2nd class, are issued free of charge."
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1145,7 +1145,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="6 simple trips 50% discount, regional and interregio train tariff, 2nd class,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;* the spouse is entitled to the trip and the spouse is not entitled to the presence of the holder."
+                                                                        value="6 simple trips 50% discount, regional and interregio train tariff, 2nd class,\n\t\t\t\t\t\t\t* the spouse is entitled to the trip and the spouse is not entitled to the presence of the holder."
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1188,7 +1188,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="State Secretariat for People with Disabilities. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;6 round trips free of charge, with interregional train with booking regime, 2nd class accentuated) and companions. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;* companions travel only by joining the holder  &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;* personal assistants can travel alone"
+                                                                        value="State Secretariat for People with Disabilities. \n\t\t\t\t\t\t\t12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants. \n\t\t\t\t\t\t\t6 round trips free of charge, with interregional train with booking regime, 2nd class accentuated) and companions. \n\t\t\t\t\t\t\t* companions travel only by joining the holder  \n\t\t\t\t\t\t\t* personal assistants can travel alone"
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1265,7 +1265,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants &#10;6 round trips free of charge, with interregional train with booking regime, &#10;2nd class accentuated) and companions &#10;* companions travel only by joining the holder &#10;* personal assistants can travel alone."
+                                                                        value="12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants \n6 round trips free of charge, with interregional train with booking regime, \n2nd class accentuated) and companions \n* companions travel only by joining the holder \n* personal assistants can travel alone."
                                                                     ),
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version="any",
@@ -1340,7 +1340,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="State Secretariat for Revolutionary Issues in  December 1989.&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;12 free round trips, first class, train any rank, with: &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;* a single attendant - only circulated in the presence of the holder, &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9; * family members - can circulate without a holder"
+                                                                        value="State Secretariat for Revolutionary Issues in  December 1989.\n\t\t\t\t\t\t\t12 free round trips, first class, train any rank, with: \n\t\t\t\t\t\t\t* a single attendant - only circulated in the presence of the holder, \n\t\t\t\t\t\t\t * family members - can circulate without a holder"
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1402,7 +1402,7 @@ obj = PublicationDelivery(
                                                                         lang="ro"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Persecution on ethnic grounds&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;6 free round trips, first class, train any rank, with: * a single attendant - only circulated in the presence of the holder"
+                                                                        value="Persecution on ethnic grounds\n\t\t\t\t\t\t\t6 free round trips, first class, train any rank, with: * a single attendant - only circulated in the presence of the holder"
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1467,7 +1467,7 @@ obj = PublicationDelivery(
                                                                         value="Disabled Youth  and Special Needs"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value=" &#10;     2. Orphan pupils with special educational needs and those for whom a special protection measure has been established  under the law or guardianship benefit from free of charge for the domestic railway transport throughout the calendar year.&#10;Free travel tickets for all train categories, for the booking fee, 2nd class, as well as monthly subscriptions for students to all train categories, with unlimited number of trips to distances up to 300 km, class II are issued free of charge."
+                                                                        value=" \n     2. Orphan pupils with special educational needs and those for whom a special protection measure has been established  under the law or guardianship benefit from free of charge for the domestic railway transport throughout the calendar year.\nFree travel tickets for all train categories, for the booking fee, 2nd class, as well as monthly subscriptions for students to all train categories, with unlimited number of trips to distances up to 300 km, class II are issued free of charge."
                                                                     ),
                                                                     url="https://www.transferoviarcalatori.ro/tarife/facilitati.html",
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
@@ -1977,7 +1977,7 @@ obj = PublicationDelivery(
                                                                         value="No Ticket"
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Traveling without a travel pass from a ticket station will be charged on the train at the toll rate on the train for the requested distance. Beneficiaries of the facilities (50% or 100% discount) lose their right to discount.&#10;Passengers not presenting a valid ticket in the train and not requesting the train staff at the first revision of the travel passes after the climbing station are required to pay the train toll for the entire distance traveled by the regio train to that relationship . Beneficiaries of the facilities lose their right to reduction and will be treated as any passenger who did not request a travel pass.&#10;&#10;Tickets will be issued for the distance traveled by a single train and the continuation of the trip with another train (whether it is the same or not) will be charged starting from 0 km. According to the regulations in force in December 2011, with the change of train ranges, the distances do not add up"
+                                                                        value="Traveling without a travel pass from a ticket station will be charged on the train at the toll rate on the train for the requested distance. Beneficiaries of the facilities (50% or 100% discount) lose their right to discount.\nPassengers not presenting a valid ticket in the train and not requesting the train staff at the first revision of the travel passes after the climbing station are required to pay the train toll for the entire distance traveled by the regio train to that relationship . Beneficiaries of the facilities lose their right to reduction and will be treated as any passenger who did not request a travel pass.\n\nTickets will be issued for the distance traveled by a single train and the continuation of the trip with another train (whether it is the same or not) will be charged starting from 0 km. According to the regulations in force in December 2011, with the change of train ranges, the distances do not add up"
                                                                     ),
                                                                     penalty_policy_type=PenaltyPolicyTypeEnumeration.NO_TICKET
                                                                 ),
@@ -2096,7 +2096,7 @@ obj = PublicationDelivery(
                                             value="Self service  Ticket Machine"
                                         ),
                                         description=MultilingualString(
-                                            value="From ticket vending machines installed in Gara de Nord (near the TFC Ticket Office), Mizil station (waiting room), Braila station  and Oradea station. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Payment is made exclusively with the bank card. &#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;The types of tickets that can be bought from the vending machines are: full price tickets, reduced tickets 50% students, free student tickets (based on ID created at a TFC ticket house), children tickets, subscriptions, round trip established."
+                                            value="From ticket vending machines installed in Gara de Nord (near the TFC Ticket Office), Mizil station (waiting room), Braila station  and Oradea station. \n\t\t\t\t\t\t\tPayment is made exclusively with the bank card. \n\t\t\t\t\t\t\tThe types of tickets that can be bought from the vending machines are: full price tickets, reduced tickets 50% students, free student tickets (based on ID created at a TFC ticket house), children tickets, subscriptions, round trip established."
                                         ),
                                         url="https://www.transferoviarcalatori.ro/tarife/eliberare-legitimatii-calatorie.html",
                                         payment_methods=[
@@ -2523,7 +2523,7 @@ obj = PublicationDelivery(
                                                         value="Return  Trip  "
                                                     ),
                                                     description=MultilingualString(
-                                                        value="A return Ticket must be used in the correct sequence (you must use the  outward portion of your return Ticket before you use the return portion). &#10;&#9;&#9;&#9;&#9;&#9;&#9;"
+                                                        value="A return Ticket must be used in the correct sequence (you must use the  outward portion of your return Ticket before you use the return portion). \n\t\t\t\t\t\t"
                                                     ),
                                                     fare_structure_elements_in_sequence=FareStructureElementsInSequenceRelStructure(
                                                         fare_structure_element_in_sequence_or_controllable_element_in_sequence=[
@@ -3696,7 +3696,7 @@ obj = PublicationDelivery(
                                                     id="tfc:TFC@Trip_Supplement@Seat_Reservation@Required",
                                                     version="01",
                                                     description=MultilingualString(
-                                                        value="Reservations required according to distance&#10;Dear travelers, we would like to inform you that starting with 1 May 2015 the reservation fee is 2.50 lei.&#10;&#10;The reservation fee is obligatory as follows:&#10;&#10;* for the Bucharest North - Buzau relationship and return the local reservation fee of 2.50 lei is paid for the distances covered over 50 km. &#10;&#10;* for the Bucharest North - Galati relationship and return is paid including the reservation fee in the amount of 2.50 lei for the distances covered more than 70 km. &#10;&#10;* for the Cluj Napoca - Oradea relationship and the return is paid including the reservation fee in the amount of 2.50 lei by the passengers traveling over the entire distance Cluj Napoca - Oradea and Oradea - Cluj Napoca.&#10;&#10;* North Bucharest - Târgovişte Reservation ticket is optional.&#10;&#10;Dear travelers, we inform you that no reservations are made at this time. Thank you for your understanding."
+                                                        value="Reservations required according to distance\nDear travelers, we would like to inform you that starting with 1 May 2015 the reservation fee is 2.50 lei.\n\nThe reservation fee is obligatory as follows:\n\n* for the Bucharest North - Buzau relationship and return the local reservation fee of 2.50 lei is paid for the distances covered over 50 km. \n\n* for the Bucharest North - Galati relationship and return is paid including the reservation fee in the amount of 2.50 lei for the distances covered more than 70 km. \n\n* for the Cluj Napoca - Oradea relationship and the return is paid including the reservation fee in the amount of 2.50 lei by the passengers traveling over the entire distance Cluj Napoca - Oradea and Oradea - Cluj Napoca.\n\n* North Bucharest - T\xe2rgovi\u015fte Reservation ticket is optional.\n\nDear travelers, we inform you that no reservations are made at this time. Thank you for your understanding."
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -3902,11 +3902,11 @@ obj = PublicationDelivery(
                                                                         ),
                                                                         LineRef(
                                                                             version="01",
-                                                                            ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa"
+                                                                            ref="tfc:TFC@Lines@T\xe2rgovi\u015fte+Pietro\u015fi\u0163a"
                                                                         ),
                                                                         LineRef(
                                                                             version="01",
-                                                                            ref="tfc:TFC@Lines@Roşiori+Costeşti"
+                                                                            ref="tfc:TFC@Lines@Ro\u015fiori+Coste\u015fti"
                                                                         ),
                                                                     ],
                                                                     template_service_journey_ref_or_service_journey_ref=[
@@ -15683,7 +15683,7 @@ obj = PublicationDelivery(
                                             value="Statutory right to travel "
                                         ),
                                         description=MultilingualString(
-                                            value="Statutory allowances&#10;State Secretariat for Revolutionary Issues in December 1989: : 12 free round trips, first class, train any rank, with: &#10;&#9;* a single attendant - only circulated in the presence of the holder,   &#10;&#9;* family members - can circulate without a holder"
+                                            value="Statutory allowances\nState Secretariat\xa0for\xa0Revolutionary\xa0Issues\xa0in\xa0December 1989: : 12 free round trips, first class, train any rank, with: \n\t* a single attendant - only circulated in the presence of the holder,\xa0  \n\t* family members - can circulate without a holder"
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
                                             version="any",
@@ -15880,11 +15880,11 @@ obj = PublicationDelivery(
                                         ),
                                         LineRef(
                                             version="01",
-                                            ref="tfc:TFC@Lines@Târgovişte+Pietroşiţa"
+                                            ref="tfc:TFC@Lines@T\xe2rgovi\u015fte+Pietro\u015fi\u0163a"
                                         ),
                                         LineRef(
                                             version="01",
-                                            ref="tfc:TFC@Lines@Roşiori+Costeşti"
+                                            ref="tfc:TFC@Lines@Ro\u015fiori+Coste\u015fti"
                                         ),
                                     ]
                                 ),
@@ -16110,10 +16110,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Line(
-                                        id="tfc:TFC@Lines@Târgovişte+Pietroşiţa",
+                                        id="tfc:TFC@Lines@T\xe2rgovi\u015fte+Pietro\u015fi\u0163a",
                                         version="01",
                                         name=MultilingualString(
-                                            value="Târgovişte - Pietroşiţa",
+                                            value="T\xe2rgovi\u015fte - Pietro\u015fi\u0163a",
                                             lang="ro"
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
@@ -16122,13 +16122,13 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Line(
-                                        id="tfc:TFC@Lines@Roşiori+Costeşti",
+                                        id="tfc:TFC@Lines@Ro\u015fiori+Coste\u015fti",
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
                                                 AlternativeText(
-                                                    id="tfc:TFC@Lines@Roşiori+Costeşti@en",
+                                                    id="tfc:TFC@Lines@Ro\u015fiori+Coste\u015fti@en",
                                                     text=MultilingualString(
-                                                        value="Roşiori - Costeşti",
+                                                        value="Ro\u015fiori - Coste\u015fti",
                                                         lang="en"
                                                     ),
                                                     attribute_name="Name",
@@ -16138,7 +16138,7 @@ obj = PublicationDelivery(
                                         ),
                                         version="01",
                                         name=MultilingualString(
-                                            value="Roşiori  Nord- Costeşti",
+                                            value="Ro\u015fiori  Nord- Coste\u015fti",
                                             lang="ro"
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
@@ -16511,7 +16511,7 @@ obj = PublicationDelivery(
                                         ],
                                         version="01",
                                         name=MultilingualString(
-                                            value="Săhăteni",
+                                            value="S\u0103h\u0103teni",
                                             lang="ro"
                                         ),
                                         types=TypeOfPointRefsRelStructure(
@@ -16935,12 +16935,12 @@ obj = PublicationDelivery(
                                                                 ref="tfc:dme_50172+50213"
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Mizil  to Săhăteni.",
+                                                                value="Mizil  to S\u0103h\u0103teni.",
                                                                 version="01",
                                                                 ref="tfc:dme_50213+50237"
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Săhăteni to Ulmeni.",
+                                                                value="S\u0103h\u0103teni to Ulmeni.",
                                                                 version="01",
                                                                 ref="tfc:dme_50237+50263"
                                                             ),
@@ -17145,7 +17145,7 @@ obj = PublicationDelivery(
                                                                 id="tfc:dme_50213+50237",
                                                                 version="01",
                                                                 name=MultilingualString(
-                                                                    value="Mizil  to Săhăteni."
+                                                                    value="Mizil  to S\u0103h\u0103teni."
                                                                 ),
                                                                 distance=Decimal("7"),
                                                                 choice=FareScheduledStopPointRefStructure(
@@ -17161,7 +17161,7 @@ obj = PublicationDelivery(
                                                                 id="tfc:dme_50237+50263",
                                                                 version="01",
                                                                 name=MultilingualString(
-                                                                    value="Săhăteni to Ulmeni."
+                                                                    value="S\u0103h\u0103teni to Ulmeni."
                                                                 ),
                                                                 distance=Decimal("12"),
                                                                 choice=FareScheduledStopPointRefStructure(
@@ -17585,14 +17585,14 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 GroupOfDistanceMatrixElements(
-                                                    id="tfc:TFC@ODs@Târgovişte+Pietroşiţa",
+                                                    id="tfc:TFC@ODs@T\xe2rgovi\u015fte+Pietro\u015fi\u0163a",
                                                     version="01",
                                                     name=MultilingualString(
                                                         value="TODO - add members"
                                                     )
                                                 ),
                                                 GroupOfDistanceMatrixElements(
-                                                    id="tfc:TFC@ODs@Roşiori+Costeşti",
+                                                    id="tfc:TFC@ODs@Ro\u015fiori+Coste\u015fti",
                                                     version="01",
                                                     name=MultilingualString(
                                                         value="TODO - add members"
@@ -17751,7 +17751,7 @@ obj = PublicationDelivery(
                                                     id="tfc:TFC@brand",
                                                     version="any",
                                                     name=MultilingualString(
-                                                        value="Transferoviar Călători"
+                                                        value="Transferoviar C\u0103l\u0103tori"
                                                     ),
                                                     image="TODO-BITMAPVALUE",
                                                     url="https://www.transferoviarcalatori.ro/logo.png",
@@ -17807,7 +17807,7 @@ obj = PublicationDelivery(
                                             value="TFC"
                                         ),
                                         name=MultilingualString(
-                                            value="Transferoviar Călători S.R.L."
+                                            value="Transferoviar C\u0103l\u0103tori S.R.L."
                                         ),
                                         contact_details=ContactStructure(
                                             email="ilete@tfc-online.ro",
@@ -17828,7 +17828,7 @@ obj = PublicationDelivery(
                                             ),
                                             post_code="ap 1 et 1 sector 1 ",
                                             province=MultilingualString(
-                                                value="Judeţul Cluj"
+                                                value="Jude\u0163ul Cluj"
                                             )
                                         )
                                     ),
@@ -20245,7 +20245,7 @@ obj = PublicationDelivery(
                                                 value="Euro"
                                             ),
                                             private_code=PrivateCode(
-                                                value="€"
+                                                value="\u20ac"
                                             ),
                                             precision=2
                                         ),
@@ -20256,7 +20256,7 @@ obj = PublicationDelivery(
                                                 value="Pound Sterling"
                                             ),
                                             private_code=PrivateCode(
-                                                value="£"
+                                                value="\xa3"
                                             ),
                                             precision=2
                                         ),

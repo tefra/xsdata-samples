@@ -18,7 +18,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"
 
-    choice: List[Union[ManagementAgent, Operator, RetailConsortium, GeneralOrganisation, TravelAgent, OtherOrganisation, Authority, ServicedOrganisation]] = field(
+    choice: List[Union[RetailConsortium, Authority, Operator, ServicedOrganisation, GeneralOrganisation, ManagementAgent, TravelAgent, OtherOrganisation]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

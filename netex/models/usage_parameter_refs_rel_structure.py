@@ -40,7 +40,7 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameterRefs_RelStructure"
 
-    choice: List[Union[CompanionProfileRef, ResellingRef, RoundTripRef, FrequencyOfUseRef, ReservingRef, RefundingRef, UsageValidityPeriodRef, ReplacingRef, SalesOfferPackageEntitlementGivenRef, GroupTicketRef, ExchangingRef, StepLimitRef, TransferabilityRef, InterchangingRef, SubscribingRef, PurchaseWindowRef, SuspendingRef, ProfileParameterRef, EntitlementGivenRef, MinimumStayRef, EligibilityChangePolicyRef, EntitlementRequiredRef, LuggageAllowanceRef, SalesOfferPackageEntitlementRequiredRef, ChargingPolicyRef, UserProfileRef, CancellingRef, PenaltyPolicyRef, CommercialProfileRef, RoutingRef]] = field(
+    choice: List[Union[SalesOfferPackageEntitlementGivenRef, SalesOfferPackageEntitlementRequiredRef, MinimumStayRef, InterchangingRef, FrequencyOfUseRef, SuspendingRef, UsageValidityPeriodRef, StepLimitRef, RoutingRef, RoundTripRef, LuggageAllowanceRef, EntitlementGivenRef, EntitlementRequiredRef, EligibilityChangePolicyRef, GroupTicketRef, CommercialProfileRef, CompanionProfileRef, UserProfileRef, ProfileParameterRef, SubscribingRef, PenaltyPolicyRef, ChargingPolicyRef, TransferabilityRef, ReplacingRef, RefundingRef, ExchangingRef, ResellingRef, CancellingRef, ReservingRef, PurchaseWindowRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

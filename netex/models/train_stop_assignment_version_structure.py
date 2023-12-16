@@ -18,7 +18,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "TrainStopAssignment_VersionStructure"
 
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[Union[VehicleJourneyStopAssignmentRef, PassengerStopAssignmentRef, DynamicStopAssignmentRef]] = field(
+    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[Union[VehicleJourneyStopAssignmentRef, DynamicStopAssignmentRef, PassengerStopAssignmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +49,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_component_ref_or_train_component_view: Optional[Union[TrainComponentView, TrainComponentRef]] = field(
+    train_component_ref_or_train_component_view: Optional[Union[TrainComponentRef, TrainComponentView]] = field(
         default=None,
         metadata={
             "type": "Elements",

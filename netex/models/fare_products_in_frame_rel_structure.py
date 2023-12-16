@@ -17,7 +17,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareProductsInFrame_RelStructure"
 
-    choice: List[Union[UsageDiscountRight, ThirdPartyProduct, SupplementProduct, AmountOfPriceUnitProduct, SaleDiscountRight, CappedDiscountRight, PreassignedFareProduct]] = field(
+    choice: List[Union[SupplementProduct, PreassignedFareProduct, AmountOfPriceUnitProduct, CappedDiscountRight, UsageDiscountRight, ThirdPartyProduct, SaleDiscountRight]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

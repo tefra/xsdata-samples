@@ -49,7 +49,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: List[Union[AccessSpaceRef, ParkingRef, ParkingEntranceRef, ParkingPassengerEntranceRef, PointOfInterestEntranceRef, QuayRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, StopPlaceRef, PointOfInterestRef, BoardingPositionRef, ParkingAreaRef, PointOfInterestSpaceRef]] = field(
+    choice: List[Union[StopPlaceRef, AccessSpaceRef, BoardingPositionRef, QuayRef, StopPlaceEntranceRef, PointOfInterestRef, PointOfInterestSpaceRef, PointOfInterestEntranceRef, ParkingRef, ParkingAreaRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

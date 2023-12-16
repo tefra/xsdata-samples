@@ -29,7 +29,7 @@ class BorderPointValueStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_operators_ref_or_group_of_operators: Optional[Union[GroupOfOperators, GroupOfOperatorsRef]] = field(
+    group_of_operators_ref_or_group_of_operators: Optional[Union[GroupOfOperatorsRef, GroupOfOperators]] = field(
         default=None,
         metadata={
             "type": "Elements",

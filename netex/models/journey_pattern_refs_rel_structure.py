@@ -14,7 +14,7 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPatternRefs_RelStructure"
 
-    choice: List[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice: List[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -75,7 +75,7 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[VehicleTypeRef, CompoundTrainRef, TrainRef]] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[Union[CompoundTrainRef, TrainRef, VehicleTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -98,7 +98,7 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             ),
         }
     )
-    choice: Optional[Union[LiftEquipmentRef, LuggageLockerEquipmentRef, PlaceLightingEquipmentRef, ActivatedEquipmentRef, MeetingPointServiceRef, QueueingEquipmentRef, ComplaintsServiceRef, EscalatorEquipmentRef, SiteEquipmentRef, HeadingSignRef, SeatingEquipmentRef, TrolleyStandEquipmentRef, PassengerInformationEquipmentRef, GeneralSignRef, CommunicationServiceRef, RetailServiceRef, AssistanceServiceRef, TravelatorEquipmentRef, LocalServiceRef, ShelterEquipmentRef, SanitaryEquipmentRef, HireServiceRef, AccessVehicleEquipmentRef, RampEquipmentRef, WaitingEquipmentRef, CycleStorageEquipmentRef, PassengerSafetyEquipmentRef, VehicleChargingEquipmentRef, RetailDeviceRef, TicketingServiceRef, VehicleEquipmentRef, LostPropertyServiceRef, HelpPointEquipmentRef, EntranceEquipmentRef, LuggageServiceRef, StaircaseEquipmentRef, AssistanceBookingServiceRef, RoughSurfaceRef, AccessEquipmentRef, CrossingEquipmentRef, PassengerEquipmentRef, CustomerServiceRef, CateringServiceRef, TicketValidatorEquipmentRef, PlaceSignRef, WaitingRoomEquipmentRef, EquipmentRef, LeftLuggageServiceRef, TicketingEquipmentRef, WheelchairVehicleRef, SignEquipmentRef, RubbishDisposalEquipmentRef, MoneyServiceRef]] = field(
+    choice: Optional[Union[RetailDeviceRef, AssistanceBookingServiceRef, CateringServiceRef, RetailServiceRef, MoneyServiceRef, HireServiceRef, CommunicationServiceRef, MeetingPointServiceRef, LeftLuggageServiceRef, LuggageServiceRef, LostPropertyServiceRef, ComplaintsServiceRef, CustomerServiceRef, AssistanceServiceRef, TicketingServiceRef, LocalServiceRef, VehicleChargingEquipmentRef, CycleStorageEquipmentRef, TicketValidatorEquipmentRef, TicketingEquipmentRef, TrolleyStandEquipmentRef, SeatingEquipmentRef, ShelterEquipmentRef, LuggageLockerEquipmentRef, WaitingRoomEquipmentRef, WaitingEquipmentRef, SiteEquipmentRef, HeadingSignRef, GeneralSignRef, PlaceSignRef, SignEquipmentRef, PlaceLightingEquipmentRef, RoughSurfaceRef, StaircaseEquipmentRef, QueueingEquipmentRef, TravelatorEquipmentRef, EscalatorEquipmentRef, LiftEquipmentRef, CrossingEquipmentRef, RampEquipmentRef, EntranceEquipmentRef, AccessEquipmentRef, ActivatedEquipmentRef, PassengerInformationEquipmentRef, RubbishDisposalEquipmentRef, HelpPointEquipmentRef, PassengerSafetyEquipmentRef, SanitaryEquipmentRef, WheelchairVehicleRef, AccessVehicleEquipmentRef, VehicleEquipmentRef, PassengerEquipmentRef, EquipmentRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

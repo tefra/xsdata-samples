@@ -67,7 +67,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
 
     @dataclass
     class Areas:
-        choice: List[Union[FlexibleArea, HailAndRideArea, FlexibleAreaRef, HailAndRideAreaRef]] = field(
+        choice: List[Union[FlexibleArea, FlexibleAreaRef, HailAndRideArea, HailAndRideAreaRef]] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",

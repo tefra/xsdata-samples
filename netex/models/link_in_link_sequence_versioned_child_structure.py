@@ -27,7 +27,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "LinkInLinkSequence_VersionedChildStructure"
 
-    choice: Optional[Union[TimingPatternRef, DatedSpecialServiceRef, DeadRunJourneyPatternRef, JourneyPatternRef, DeadRunRef, VehicleJourneyRef, LinkSequenceRef, NavigationPathRef, DatedVehicleJourneyRef, RouteRef, ServiceJourneyRef, TemplateServiceJourneyRef, ServicePatternRef, ServiceJourneyPatternRef, SpecialServiceRef]] = field(
+    choice: Optional[Union[DatedVehicleJourneyRef, DatedSpecialServiceRef, SpecialServiceRef, TemplateServiceJourneyRef, ServiceJourneyRef, DeadRunRef, VehicleJourneyRef, NavigationPathRef, ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef, TimingPatternRef, RouteRef, LinkSequenceRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

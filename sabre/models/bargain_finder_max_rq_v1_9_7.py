@@ -67,7 +67,7 @@ class AirTravelerTypeShareSynchInd(Enum):
 @dataclass
 class AirlineType:
     """
-    Attributes
+    Attributes:
         operating: Operating airline code
         marketing: Marketing airline code
     """
@@ -94,7 +94,7 @@ class AirlineType:
 @dataclass
 class AllianceType:
     """
-    Attributes
+    Attributes:
         code: Identifies an alliance by the alliance code.
     """
     code: None | str = field(
@@ -131,7 +131,7 @@ class ApplyResidentDiscountType:
 @dataclass
 class AwardShoppingType:
     """
-    Attributes
+    Attributes:
         enable: Enable award shopping.
         use_ras: Use Redemption Availability Service
     """
@@ -225,7 +225,7 @@ class BookingChannelType:
     Specifies the booking channel types and whether it is the primary means of
     connectivity of the source.
 
-    Attributes
+    Attributes:
         type_value: The type of booking channel (e.g. Global
             Distribution System (GDS), Alternative Distribution System
             (ADS), Sales and Catering System (SCS), Property Management
@@ -305,7 +305,7 @@ class CarrierType(Enum):
 
 class ConnectionLocationConnectionInfo(Enum):
     """
-    Attributes
+    Attributes:
         VIA: Location without stopping or changing.
         STOP: Location is for stopping.
         CHANGE: Location is for changing.
@@ -326,7 +326,7 @@ class CountryNameType:
     The name or code of a country (e.g. as used in an address or to specify
     citizenship of a traveller).
 
-    Attributes
+    Attributes:
         value:
         code: ISO 3166 code for a country.
     """
@@ -374,7 +374,7 @@ class CustLoyaltyTypeSingleVendorInd(Enum):
 
 class CustomerTypeValue(Enum):
     """
-    Attributes
+    Attributes:
         REGULAR: Regular customer type.
         TVLYPREF: TVLY_PREFERRED customer type.
         PREFELITE: PREFERED_ELITE customer type.
@@ -389,7 +389,7 @@ class CustomerTypeValue(Enum):
 @dataclass
 class DateRangeType:
     """
-    Attributes
+    Attributes:
         outbound_date: Outbound date
         date_range: Number of date range
     """
@@ -412,7 +412,7 @@ class DateRangeType:
 @dataclass
 class DateTimeType:
     """
-    Attributes
+    Attributes:
         time_window_start: Allowed amount of time before specified time.
         time_window_end: Allowed amount of time after specified time.
         time_tolerance: Maximum time difference between actual and
@@ -481,7 +481,7 @@ class DepartureDaysType:
     """
     Specify which days of week  to consider for departure.
 
-    Attributes
+    Attributes:
         value: Value format: First letter of the name of the day or '_',
             eg. 'SMT___S' means we are interested in departing at
             Saturday, Sunday, Monday or Tuesday. Even if there are
@@ -546,7 +546,7 @@ class EmailTypeShareSynchInd(Enum):
 @dataclass
 class ExchangeFareType:
     """
-    Attributes
+    Attributes:
         base_fare_amount: Base fare amount
         non_refundable_amount: Non-refundable Base Fare Amount. Currency
             is defined by @BaseFareCurrency.
@@ -626,7 +626,7 @@ class FareDetailsType:
     of a given fare component. For details, see notes below --- the
     attributes are annotated with ,,last Flight in Fare Component''.
 
-    Attributes
+    Attributes:
         component_no: Fare component number
         basis_code: Fare basis code
         amount: Fare amount (note: last Flight in Fare Component)
@@ -719,7 +719,7 @@ class FareOptionalDetailsType:
     of a given fare component. For details, see notes below --- the
     attributes are annotated with ,,last Flight in Fare Component''.
 
-    Attributes
+    Attributes:
         component_no: Fare component number
         basis_code: Fare basis code
         amount: Fare amount (note: last Flight in Fare Component)
@@ -820,7 +820,7 @@ class FlightStopsAsConnectionsType:
 class FlightTypeType(Enum):
     """Identifies a particular type of flight - Direct, Stopover etc.
 
-    Attributes
+    Attributes:
         NONSTOP: Flight without plane change and without intermediate
             landing.
         DIRECT: Flight without plane change and possible intermediate
@@ -836,7 +836,7 @@ class FlightTypeType(Enum):
 @dataclass
 class GoverningCarrierOverrideType:
     """
-    Attributes
+    Attributes:
         airline_code: Airline Carrier Code - override the GOVERNING
             CARRIER to get the fare filed by that carrier.
     """
@@ -856,7 +856,7 @@ class IncludeVendorPrefType:
     """
     Consider only these carriers for this leg.
 
-    Attributes
+    Attributes:
         code: Identifies a company by the company code.
     """
     code: None | str = field(
@@ -874,7 +874,7 @@ class IncludeVendorPrefType:
 @dataclass
 class JumpCabinLogicType:
     """
-    Attributes
+    Attributes:
         disabled: Controls if response could contain options with cabin
             class different than requested.
     """
@@ -891,7 +891,7 @@ class JumpCabinLogicType:
 @dataclass
 class KeepSameCabinType:
     """
-    Attributes
+    Attributes:
         enabled: Set to "true" guarantees that all segments within
             single shopping option belong to the requested cabin.
     """
@@ -908,7 +908,7 @@ class KeepSameCabinType:
 @dataclass
 class MileageDisplayType:
     """
-    Attributes
+    Attributes:
         type_value: Mileage display type
         city: Mileage display city
         surcharge: Mileage surcharge percentage
@@ -949,7 +949,7 @@ class NumTripsType:
     """
     This element allows a user to specify the number of itineraries returned.
 
-    Attributes
+    Attributes:
         number:
         per_date_min: Minimum number of options to be retrieved for each
             combination of outbound/inbound dates.
@@ -1002,7 +1002,7 @@ class NumTripsType:
 @dataclass
 class OptionsPerDatePairType:
     """
-    Attributes
+    Attributes:
         departure: Departure date
         return_value: Return date
         min: Minimum number of options per date/date pair
@@ -1045,7 +1045,7 @@ class OptionsPerDatePairType:
 
 class PassengerStatusType(Enum):
     """
-    Attributes
+    Attributes:
         R: Residency.
         E: Employment.
         N: Nationality.
@@ -1077,7 +1077,7 @@ class PersonNameTypeShareSynchInd(Enum):
 @dataclass
 class PlusUpType:
     """
-    Attributes
+    Attributes:
         amount: Amount
         origin_city: Origin City
         destination_city: Destination City
@@ -1232,7 +1232,7 @@ class RequestLocationType:
     """
     Code and optional string to describe a location point.
 
-    Attributes
+    Attributes:
         value:
         location_code: Location identifying code. Required unless
             AirportsGroup or AllAirports is specified. Cannot appear
@@ -1286,7 +1286,7 @@ class RequestPricingSourceType(Enum):
 @dataclass
 class ReservationType:
     """
-    Attributes
+    Attributes:
         status: Reservation status
         real_status: Real reservation status
     """
@@ -1311,7 +1311,7 @@ class ReservationType:
 @dataclass
 class RetailerRulesType:
     """
-    Attributes
+    Attributes:
         retailer_rule:
         force: If set to true, only fares with a matched Business Rule
             containing the specified Retailer Rule Qualifier will be
@@ -1412,7 +1412,7 @@ class SeatStatusSimType:
 
 class SegmentTypeCode(Enum):
     """
-    Attributes
+    Attributes:
         ARUNK: Arrival unknown
         O: Normal
         X: Connection. Collapses this and subsequent
@@ -1427,7 +1427,7 @@ class SegmentTypeCode(Enum):
 @dataclass
 class SideTripType:
     """
-    Attributes
+    Attributes:
         number: Side trip number
         start: Side trip start
         end: Side trip end
@@ -1465,7 +1465,7 @@ class StateProvType:
     """
     State, province, or region name or code needed to identify location.
 
-    Attributes
+    Attributes:
         value:
         state_code: The postal service standard code or abbreviation for
             the state, province, or region.
@@ -1494,7 +1494,7 @@ class StreetNmbrType:
     """
     Street name; number on street.
 
-    Attributes
+    Attributes:
         value:
         po_box: Defines a Post Office Box number.
     """
@@ -1522,7 +1522,7 @@ class TaxCodeType:
     """
     Defines the data fields available for tax code.
 
-    Attributes
+    Attributes:
         tax_code: Identifies the code for the tax.
     """
     tax_code: None | str = field(
@@ -1561,7 +1561,7 @@ class TravelDateTimeType:
     Date and time of trip, that allows specifying a time window before and after
     the given date.
 
-    Attributes
+    Attributes:
         departure_date_time: This date should be of the form YYYY-MM-
             DDTHH:MM:SS
         arrival_date_time: This date should be of the form YYYY-MM-
@@ -1627,7 +1627,7 @@ class TravelDateTimeType:
     @dataclass
     class DepartureDates:
         """
-        Attributes
+        Attributes:
             day:
             days_range:
             length_of_stay: Amount of days between previous leg's
@@ -1687,7 +1687,7 @@ class TravelDateTimeType:
         @dataclass
         class LengthOfStayRange:
             """
-            Attributes
+            Attributes:
                 min_days: (inclusive)
                 max_days: (inclusive)
             """
@@ -1813,7 +1813,7 @@ class TravelDateTimeType:
 @dataclass
 class TravelerInfoSummaryTpaExtensionsType:
     """
-    Attributes
+    Attributes:
         traveler_rating: Customer Value Scores and Frequent Flyer Tiers
             for one traveler. It can influence Availability results when
             provided.
@@ -1893,7 +1893,7 @@ class TravelerRefNumberType:
     """
     A reference place holder used as a pointer to link back to the traveler.
 
-    Attributes
+    Attributes:
         rph: Reference place holder.
     """
     rph: None | str = field(
@@ -1936,7 +1936,7 @@ class XofaresType:
 @dataclass
 class AddressType:
     """
-    Attributes
+    Attributes:
         street_nmbr: Street Name and Number within the address
         bldg_room: Building name, room, apartment, or suite number.
         address_line:
@@ -2065,7 +2065,7 @@ class AltCitiesCombinationsType:
     Which (if any) alt cities locations should be handled in a special way (i.e.
     Validate instead of precomputed path).
 
-    Attributes
+    Attributes:
         origins: Which origins to process in live path (All or Main
             only)
         destinations: Which destinations to process in live path (All or
@@ -2090,7 +2090,7 @@ class AltCitiesCombinationsType:
 @dataclass
 class ArunkType:
     """
-    Attributes
+    Attributes:
         origin_location: Origin code
         destination_location: Destination code
         side_trip: Side trip information
@@ -2129,7 +2129,7 @@ class BookingClassPrefType:
     Booking class code and preference level for specifying booking classes
     preferred/not preferred in a request.
 
-    Attributes
+    Attributes:
         res_book_desig_code: Booking class code
         prefer_level:
     """
@@ -2156,7 +2156,7 @@ class CabinPrefType:
     """
     Indicates preferences for choice of airline cabin for a given travel situation.
 
-    Attributes
+    Attributes:
         prefer_level:
         cabin: Specify cabin type.
     """
@@ -2194,7 +2194,7 @@ class CompanyNamePrefType(CompanyNameType):
     """
     Identifies a preferred company by name.
 
-    Attributes
+    Attributes:
         prefer_level:
         type_value: Specify what type  of carrier it comes to.
     """
@@ -2234,7 +2234,7 @@ class ConnectionType:
     @dataclass
     class ConnectionLocation(RequestLocationType):
         """
-        Attributes
+        Attributes:
             inclusive:
             prefer_level:
             min_change_time: Number of minutes between connections.
@@ -2276,7 +2276,7 @@ class CustLoyaltyType:
     Program rewarding frequent use by accumulating credits for services provided by
     vendors.
 
-    Attributes
+    Attributes:
         share_synch_ind:
         share_market_ind:
         program_id: Identifier to indicate the company owner of the
@@ -2625,7 +2625,7 @@ class DiversityControlType:
         @dataclass
         class TimeOfDay:
             """
-            Attributes
+            Attributes:
                 distribution: Exactly one attribute: either Direction or
                     Leg must be provided
                 weight:
@@ -2734,7 +2734,7 @@ class DocumentType:
     """
     Provides information on a specific documents.
 
-    Attributes
+    Attributes:
         doc_holder_name: Specify document holder name.
         doc_limitations: Used to indicate any limitations on the
             document (e.g. as a person may only be allowed to spend a
@@ -2859,7 +2859,7 @@ class EmailType:
     """
     Electronic email addresses, in IETF specified format.
 
-    Attributes
+    Attributes:
         value:
         share_synch_ind:
         share_market_ind:
@@ -2909,7 +2909,7 @@ class EmailType:
 @dataclass
 class EquipmentTypePref(EquipmentType):
     """
-    Attributes
+    Attributes:
         prefer_level:
         wide_body: Specify if equipment should have a wide body or not.
     """
@@ -2932,7 +2932,7 @@ class EquipmentTypePref(EquipmentType):
 @dataclass
 class ExchangeOriginDestinationFlightType:
     """
-    Attributes
+    Attributes:
         origin_location: Flight origin code
         destination_location: Flight destination code
         airline: Airline information
@@ -3101,7 +3101,7 @@ class ExchangeOriginDestinationFlightType:
         @dataclass
         class Adjustment:
             """
-            Attributes
+            Attributes:
                 value: Adjustment Value, can be positive or negative,
                     number or percentage
                 currency: Currency of Adjustment's Value
@@ -3136,7 +3136,7 @@ class ExchangeOriginDestinationFlightType:
 @dataclass
 class ExchangeSettingsType:
     """
-    Attributes
+    Attributes:
         reprice_current_itin: If set to ''false'', disables processing
             of Current Itin path.
         attach_exchange_info: If set to ''true'', adds exchange-specific
@@ -3218,7 +3218,7 @@ class FareRestrictPrefType:
     Identifies preferences for airfare restrictions acceptable or not acceptable
     for a given travel situation.
 
-    Attributes
+    Attributes:
         prefer_level:
         fare_restriction: Refer to OTA Code List Fare Restriction (FAR).
     """
@@ -3241,7 +3241,7 @@ class FareRestrictPrefType:
 @dataclass
 class FlexibleFaresType:
     """
-    Attributes
+    Attributes:
         fare_parameters: This element specifies parameters for desired
             fare.
     """
@@ -3259,7 +3259,7 @@ class FlexibleFaresType:
     @dataclass
     class FareParameters:
         """
-        Attributes
+        Attributes:
             exclude_restricted: Setting this to true means the same as
                 setting ResTicketing, MinMaxStay and RefundPenalty to
                 false.
@@ -3498,7 +3498,7 @@ class FlexibleFaresType:
         @dataclass
         class PassengerType:
             """
-            Attributes
+            Attributes:
                 code: Specify traveler type code.
             """
             code: None | str = field(
@@ -3566,7 +3566,7 @@ class FlightTypePrefType:
     Indicates preferences for certain types of flights, such as connections or
     stopovers, when used for a specific travel situation.
 
-    Attributes
+    Attributes:
         prefer_level:
         flight_type:
         max_connections: Indicates that if connection is chosen, then
@@ -3599,7 +3599,7 @@ class FlightTypePrefType:
 @dataclass
 class GlobalDateTimeType(DateTimeType):
     """
-    Attributes
+    Attributes:
         date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
     """
     date_time: None | str = field(
@@ -3616,7 +3616,7 @@ class GlobalDateTimeType(DateTimeType):
 @dataclass
 class InterlineBrandsType:
     """
-    Attributes
+    Attributes:
         brand: Brand list to be returned
         change_brand_for_soldout: If specific XX brand is not available
             for requested date/flight, another cheapest brand will be
@@ -3642,7 +3642,7 @@ class InterlineBrandsType:
 @dataclass
 class OriginDestinationFlightType:
     """
-    Attributes
+    Attributes:
         origin_location: Flight origin code
         destination_location: Flight destination code
         airline: Airline information
@@ -3807,7 +3807,7 @@ class OriginDestinationFlightType:
 @dataclass
 class OverrideDateTimeType(DateTimeType):
     """
-    Attributes
+    Attributes:
         date_time: This date should be of the form YYYY-MM-DDTHH:MM:SS.
     """
     date_time: None | str = field(
@@ -3825,7 +3825,7 @@ class PersonNameType:
     """
     This is an XML Schema representing the OTA Person Name object.
 
-    Attributes
+    Attributes:
         name_prefix: Salutation of honorific. (e.g., Mr. Mrs., Ms.,
             Miss, Dr.)
         given_name: Given name, first name or names
@@ -3946,7 +3946,7 @@ class PriceRequestInformationType:
     Identify pricing source, if negotiated fares are requested and if it is a
     reprice request.
 
-    Attributes
+    Attributes:
         negotiated_fare_code:
         account_code:
         tpa_extensions: Additional elements and attributes to be
@@ -4062,7 +4062,7 @@ class PriceRequestInformationType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             public_fare: This element finds only public fares.
             private_fare: This element finds only private fares.
             iatafare: This element finds only IATA fares.
@@ -4292,7 +4292,7 @@ class PriceRequestInformationType:
         @dataclass
         class WebFare:
             """
-            Attributes
+            Attributes:
                 ind: Web fare
             """
             ind: None | bool = field(
@@ -4397,7 +4397,7 @@ class PriceRequestInformationType:
         @dataclass
         class Indicators:
             """
-            Attributes
+            Attributes:
                 retain_fare: Currently must be set to true.
                 min_max_stay: If set to true, fares that have a min/max
                     stay can be included in the responses. If set to
@@ -4525,7 +4525,7 @@ class PriceRequestInformationType:
         @dataclass
         class MultipleTravelerGroups:
             """
-            Attributes
+            Attributes:
                 itineraries_per_group: Indicates desired number of
                     itineraries to be returned in each passenger group
                     at beggining of response.
@@ -4543,7 +4543,7 @@ class PriceRequestInformationType:
         @dataclass
         class BrandedFareIndicators:
             """
-            Attributes
+            Attributes:
                 return_cheapest_unbranded_fare:
                 single_branded_fare: Return single brand option per itin
                 multiple_branded_fares: Return multiple brand options
@@ -4575,7 +4575,7 @@ class PriceRequestInformationType:
             @dataclass
             class ReturnCheapestUnbrandedFare:
                 """
-                Attributes
+                Attributes:
                     ind: Indicator to turn on or off return of cheapest
                         unbranded fare referred as "catch all" fare for
                         the branded carriers from the branded fares
@@ -4632,7 +4632,7 @@ class PriceRequestInformationType:
         @dataclass
         class EticketableOverride:
             """
-            Attributes
+            Attributes:
                 value: ETicketable override
             """
             value: None | bool = field(
@@ -4646,7 +4646,7 @@ class PriceRequestInformationType:
         @dataclass
         class Currency:
             """
-            Attributes
+            Attributes:
                 dual: Dual currency
                 moverride: M override
             """
@@ -4679,7 +4679,7 @@ class PriceRequestInformationType:
         @dataclass
         class Obfees:
             """
-            Attributes
+            Attributes:
                 rtype: Indicator Returning R-Type OB Fees
                 ttype: Indicator Returning T-Type OB Fees
             """
@@ -4711,7 +4711,7 @@ class PriceRequestInformationType:
         @dataclass
         class FareAdjustment:
             """
-            Attributes
+            Attributes:
                 value: Adjustment Value, can be positive or negative,
                     number or percentage
                 currency: Currency of Adjustment's Value
@@ -4737,7 +4737,7 @@ class PriceRequestInformationType:
     @dataclass
     class NegotiatedFareCode:
         """
-        Attributes
+        Attributes:
             code: Any code used to specify an item, for example, type of
                 traveler, service code, room amenity, etc.
             code_context: Identifies the source authority for the code.
@@ -4843,7 +4843,7 @@ class RoutingDefinitionType:
     """
     Definition of a routing.
 
-    Attributes
+    Attributes:
         routing_leg:
         add_wildcards: If true, wildcards will be automatically inserted
             between each two leg (RoutingLeg) elements. Will be set to
@@ -4873,7 +4873,7 @@ class SourceBookingChannelType(BookingChannelType):
     Specifies the booking channel type and whether it is the primary means of
     connectivity of the source.
 
-    Attributes
+    Attributes:
         company_name: Identifies the company that is associated with the
             booking channel.
     """
@@ -4907,7 +4907,7 @@ class TelephoneType:
     """
     Construct for holding a telephone number.
 
-    Attributes
+    Attributes:
         share_synch_ind:
         share_market_ind:
         phone_location_type: Refer to OTA Code List Phone Location Type
@@ -5013,7 +5013,7 @@ class TicketDistribPrefType:
     """
     Type of ticket distribution to be used with this collection of preferences.
 
-    Attributes
+    Attributes:
         value:
         prefer_level:
         distrib_type: Ticket distribution method; such as Fax, Email,
@@ -5060,7 +5060,7 @@ class UniqueIdType:
     reservation reference, customer profile reference, booking confirmation number,
     or a reference to a previous availability quote).
 
-    Attributes
+    Attributes:
         company_name: Identifies the company that is associated with the
             UniqueID.
         url: URL that identifies the location associated with the record
@@ -5138,7 +5138,7 @@ class UniqueIdType:
 @dataclass
 class ValidatingCarrierType:
     """
-    Attributes
+    Attributes:
         preference:
         code: Validating Carrier code
     """
@@ -5185,7 +5185,7 @@ class AirSearchPrefsType:
     """
     Defines user preferences to be used in conducting a search.
 
-    Attributes
+    Attributes:
         vendor_pref: Specify vendors to include and exclude from the
             response.
         flight_type_pref: Defines preferred flight characteristics to be
@@ -5382,7 +5382,7 @@ class AirSearchPrefsType:
     @dataclass
     class FareRestrictPref(FareRestrictPrefType):
         """
-        Attributes
+        Attributes:
             adv_res_ticketing: Identifies whether advance reservation or
                 ticketing restrictions are acceptable in the search
                 results.
@@ -5421,7 +5421,7 @@ class AirSearchPrefsType:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             departure_window: This should be of the form HHMMHHMM.
             arrival_window: This should be of the form HHMMHHMM.
             exclude_vendor_pref: This element allows a user to exclude
@@ -6208,7 +6208,7 @@ class AirSearchPrefsType:
         @dataclass
         class ExcludeVendorPref:
             """
-            Attributes
+            Attributes:
                 code: Identifies a company by the company code.
             """
             code: None | str = field(
@@ -6758,7 +6758,7 @@ class AirSearchPrefsType:
         @dataclass
         class TicketingSumOfLocals:
             """
-            Attributes
+            Attributes:
                 enable: Enable Ticketing Sum of Locals processing.
             """
             enable: bool = field(
@@ -6772,7 +6772,7 @@ class AirSearchPrefsType:
         @dataclass
         class MultiAirportCodes:
             """
-            Attributes
+            Attributes:
                 enable_open_jaw: Enable open jaw leg combinations.
             """
             enable_open_jaw: bool = field(
@@ -6786,7 +6786,7 @@ class AirSearchPrefsType:
         @dataclass
         class ExcludeCallDirectCarriers:
             """
-            Attributes
+            Attributes:
                 enabled: Force DSF to return schedules only for carriers
                     bookable by Sabre.
             """
@@ -6890,7 +6890,7 @@ class AirSearchPrefsType:
         @dataclass
         class FlightRepeatLimit:
             """
-            Attributes
+            Attributes:
                 value: Flight Repeat Limit for DSF. Expected value
                     1-100.
             """
@@ -6906,7 +6906,7 @@ class AirSearchPrefsType:
         @dataclass
         class DiversityParameters:
             """
-            Attributes
+            Attributes:
                 weightings: Defines how important various parameter
                     options are in the response. Sum of all weightings
                     needs to equal 10.
@@ -6971,7 +6971,7 @@ class AirSearchPrefsType:
             @dataclass
             class Weightings:
                 """
-                Attributes
+                Attributes:
                     price_weight: Defines how important price options
                         are on a scale from 0 to 10.
                     travel_time_weight: Defines how important travel
@@ -7014,7 +7014,7 @@ class AirSearchPrefsType:
                 @dataclass
                 class TimeOfDayRange:
                     """
-                    Attributes
+                    Attributes:
                         begin: Beginning of the TimeOfDayRange in HHMM
                             format.
                         end: End of the TimeOfDayRange in HHMM format.
@@ -7053,7 +7053,7 @@ class AirSearchPrefsType:
         @dataclass
         class AdditionalFareLimit:
             """
-            Attributes
+            Attributes:
                 value: Additional fare limit.
             """
             value: None | int = field(
@@ -7068,7 +7068,7 @@ class AirSearchPrefsType:
         @dataclass
         class FareFocusRules:
             """
-            Attributes
+            Attributes:
                 exclude: Exclude fare focus rules.
             """
             exclude: None | bool = field(
@@ -7101,7 +7101,7 @@ class AirSearchPrefsType:
             @dataclass
             class SellingLevelRules:
                 """
-                Attributes
+                Attributes:
                     ignore: Force ignore adjustment selling level rules
                 """
                 ignore: None | bool = field(
@@ -7116,7 +7116,7 @@ class AirSearchPrefsType:
             @dataclass
             class ShowFareAmounts:
                 """
-                Attributes
+                Attributes:
                     original: Show original selling fare level amounts
                         and total adjusted amount in Fare Calc line
                     adjusted: Show selling level amounts and total
@@ -7140,7 +7140,7 @@ class AirSearchPrefsType:
         @dataclass
         class Budget:
             """
-            Attributes
+            Attributes:
                 minimum_price: Minimum price to include in response
                 maximum_price: Maximum price to include in response
                 relative_price_threshold: Relative price difference
@@ -7206,7 +7206,7 @@ class AirSearchPrefsType:
         @dataclass
         class OnlineIndicator:
             """
-            Attributes
+            Attributes:
                 ind: Specifies if the associated data is formatted or
                     not. If true, then it is formatted, if false, then
                     not formatted.
@@ -7222,7 +7222,7 @@ class AirSearchPrefsType:
         @dataclass
         class InterlineIndicator:
             """
-            Attributes
+            Attributes:
                 ind: Specifies if the associated data is formatted or
                     not. If true, then it is formatted, if false, then
                     not formatted.
@@ -7260,7 +7260,7 @@ class AirSearchPrefsType:
         @dataclass
         class Taxes:
             """
-            Attributes
+            Attributes:
                 tax: Specify tax amount and code.
             """
             tax: list[TaxCodeAmountType] = field(
@@ -7275,7 +7275,7 @@ class AirSearchPrefsType:
     @dataclass
     class AncillaryFees:
         """
-        Attributes
+        Attributes:
             ancillary_fee_group: List of requested groups
             enable: Enable Ancillary Fees processing path.
             summary: Flag whether this is a summary request.
@@ -7307,7 +7307,7 @@ class AirSearchPrefsType:
         @dataclass
         class AncillaryFeeGroup:
             """
-            Attributes
+            Attributes:
                 code: Group code
                 count: Number of items
             """
@@ -7330,7 +7330,7 @@ class AirSearchPrefsType:
     @dataclass
     class FrequentFlyer:
         """
-        Attributes
+        Attributes:
             status: Frequent Flyer Status
             airline_code: Airline Carrier Code
         """
@@ -7353,7 +7353,7 @@ class AirSearchPrefsType:
     @dataclass
     class SpanishFamilyDiscount:
         """
-        Attributes
+        Attributes:
             level: Spanish Large Family Discount Level. Valid values are
                 1 or 2.
         """
@@ -7373,7 +7373,7 @@ class AirTravelerType:
 
     Gender - the gender of the customer, if needed. BirthDate - Date of Birth. Currency - the preferred currency in which monetary amounts should be returned.
 
-    Attributes
+    Attributes:
         profile_ref: Stored information about a customer. May contain
             readily available information relevant to the booking.
         person_name:
@@ -7554,7 +7554,7 @@ class AirTravelerType:
     @dataclass
     class FlightSegmentRphs:
         """
-        Attributes
+        Attributes:
             flight_segment_rph: Reference to the flight segments for
                 this traveler
         """
@@ -7574,7 +7574,7 @@ class AirTravelerType:
 @dataclass
 class ExchangeSourceType:
     """
-    Attributes
+    Attributes:
         booking_channel:
         agent_sine: Identifies the party within the requesting entity.
         pseudo_city_code: An identification code assigned to an
@@ -7852,7 +7852,7 @@ class ExchangeSourceType:
 @dataclass
 class ExchangeTravelPreferencesTpaExtensionsType:
     """
-    Attributes
+    Attributes:
         exempt_all_taxes: Exempt all taxes (/TE)
         exempt_all_taxes_and_fees: Exempt all taxes and fees (/TN)
         taxes: Specify Taxes (/TX)
@@ -7929,7 +7929,7 @@ class ExchangeTravelPreferencesTpaExtensionsType:
     @dataclass
     class Taxes:
         """
-        Attributes
+        Attributes:
             tax: Specify tax amount and code.
         """
         tax: list[TaxCodeAmountType] = field(
@@ -7949,7 +7949,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
     Also includes the ability to specify a connection location for the
     search.
 
-    Attributes
+    Attributes:
         origin_location: Travel Origin Location - for example, air uses
             the IATA 3 letter code.
         destination_location: Travel Destination Location - for example,
@@ -7987,7 +7987,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
     @dataclass
     class OriginLocation(RequestLocationType):
         """
-        Attributes
+        Attributes:
             all_airports: Flag indicating if all cached origin cities
                 are to be processed as origin airports.
         """
@@ -8002,7 +8002,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
     @dataclass
     class DestinationLocation(RequestLocationType):
         """
-        Attributes
+        Attributes:
             all_airports: Flag indicating if all cached destination
                 cities are to be processed as destination airports.
         """
@@ -8018,7 +8018,7 @@ class OriginDestinationInformationType(TravelDateTimeType):
 @dataclass
 class SourceType:
     """
-    Attributes
+    Attributes:
         requestor_id: An identifier of the entity making the request
             (e.g. ATA/IATA/ID number, Electronic Reservation Service
             Provider (ERSP), Association of British Travel Agents
@@ -8302,7 +8302,7 @@ class TransactionType:
     """
     IntelliSell Type.
 
-    Attributes
+    Attributes:
         request_type: Identifier of the type of request.
         service_tag: Identifier of the transaction path.
         purchase_type: A target available for user, that can be used to
@@ -8610,7 +8610,7 @@ class TransactionType:
     @dataclass
     class FareOverrides:
         """
-        Attributes
+        Attributes:
             fare_override: Contains attributes of the FareGroup
                 functionality used during shopping and pricing. If
                 passed in this request, it will override setting in the
@@ -8630,7 +8630,7 @@ class TransactionType:
         @dataclass
         class FareOverride:
             """
-            Attributes
+            Attributes:
                 vendor_pref: Specify vendors to include and exclude from
                     the response.
                 tpa_extensions: This is a place holder for additional
@@ -8691,7 +8691,7 @@ class TransactionType:
     @dataclass
     class Diagnostics:
         """
-        Attributes
+        Attributes:
             diagnostic: Specify diagnostic code and which service to
                 sent it to.
         """
@@ -8708,7 +8708,7 @@ class TransactionType:
         @dataclass
         class Diagnostic:
             """
-            Attributes
+            Attributes:
                 diagnostic_argument: Name-value pairs to be used as
                     arguments for the diagnostic.
                 tpa_extensions: This is a place holder for additional
@@ -8801,7 +8801,7 @@ class TransactionType:
     @dataclass
     class Atsetest:
         """
-        Attributes
+        Attributes:
             feature: Meaning of that attribute is dependent on MIP Team,
                 ISell sends it in all ShoppingRequests when specified.
         """
@@ -8817,7 +8817,7 @@ class TransactionType:
 @dataclass
 class ExchangeAirSearchPrefsType:
     """
-    Attributes
+    Attributes:
         tpa_extensions:
         valid_interline_ticket: Request itins that are validated on base
             of interline ticketing aggrement.
@@ -8842,7 +8842,7 @@ class ExchangeAirSearchPrefsType:
 @dataclass
 class ExchangeOriginDestinationInformationType(OriginDestinationInformationType):
     """
-    Attributes
+    Attributes:
         flight:
         date_flexibility: The number of alternate days around the travel
             date to search.
@@ -8978,7 +8978,7 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     @dataclass
     class DateFlexibility:
         """
-        Attributes
+        Attributes:
             nbr_of_days: Number of alternate dates before and after
                 requested travel date.
             plus: Number of alternate dates before requested travel
@@ -9042,7 +9042,7 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     @dataclass
     class SegmentType:
         """
-        Attributes
+        Attributes:
             code: "Code" can be "ARUNK", "O" for normal, or "X" for
                 connection.
         """
@@ -9057,7 +9057,7 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     @dataclass
     class AlternateTime:
         """
-        Attributes
+        Attributes:
             plus_minus: Maximum time difference between actual and
                 desired time.
             plus: Maximum number of hours after desired time.
@@ -9116,7 +9116,7 @@ class ExchangeOriginDestinationInformationType(OriginDestinationInformationType)
     @dataclass
     class ConnectionTime:
         """
-        Attributes
+        Attributes:
             min:
             max:
             excluded_connection_begin: Excluded connection time begin in
@@ -9204,7 +9204,7 @@ class PosType:
     Point of Sale (POS) is the details identifying the party or connection channel
     making the request.
 
-    Attributes
+    Attributes:
         source: This holds details regarding the requestor. It may be
             repeated to also accommodate the delivery systems.
     """
@@ -9228,7 +9228,7 @@ class TravelerInformationType:
     """
     Specifies passenger numbers and types.
 
-    Attributes
+    Attributes:
         passenger_type_quantity: Specifies number of passengers using
             Passenger Type Codes.
         air_traveler: Information profiling the person traveling Gender
@@ -9261,7 +9261,7 @@ class TravelerInfoSummaryType:
     """
     Specifies passenger numbers and types.
 
-    Attributes
+    Attributes:
         seats_requested: The sum of all seats required by all passenger
             groups.
         air_traveler_avail: Specifies passenger numbers and types.
@@ -9321,7 +9321,7 @@ class TravelerInfoSummaryType:
 @dataclass
 class ExchangeType:
     """
-    Attributes
+    Attributes:
         fare:
         pos:
         origin_destination_information:
@@ -9447,7 +9447,7 @@ class OtaAirLowFareSearchRq:
 
     Optional request information can include: - Time / Time Window - Connecting cities. - Client Preferences (airlines, cabin, flight types etc.) The Low Fare Search request contains similar information to a Low Fare Search entry on an airline CRS or GDS.
 
-    Attributes
+    Attributes:
         pos: Point of sale object.
         origin_destination_information: Origin and Destination location,
             and time information for the Air Low Fare Search request.
@@ -9673,7 +9673,7 @@ class OtaAirLowFareSearchRq:
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             intelli_sell_transaction:
             diversity_control:
             messaging_details:
@@ -9880,7 +9880,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class MultiTicket:
             """
-            Attributes
+            Attributes:
                 display_policy: Display Option Policy, takes values: -
                     SOW - Show OneWays separately - GOW2RT - Group
                     OneWays and match to RoundTrip - SCHS - Group
@@ -9915,7 +9915,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class ReservationData:
             """
-            Attributes
+            Attributes:
                 dknumber: DK number
             """
             dknumber: None | str = field(
@@ -9929,7 +9929,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class AlternatePcc:
             """
-            Attributes
+            Attributes:
                 travel_preferences:
                 pseudo_city_code: An identification code assigned to an
                     office/agency by a reservation system.
@@ -9972,7 +9972,7 @@ class OtaAirLowFareSearchRq:
                 @dataclass
                 class VendorPref:
                     """
-                    Attributes
+                    Attributes:
                         code: Identifies a company by the company code.
                         prefer_level:
                     """
@@ -9997,7 +9997,7 @@ class OtaAirLowFareSearchRq:
                 @dataclass
                 class TpaExtensions:
                     """
-                    Attributes
+                    Attributes:
                         include_alliance_pref: Consider only these
                             alliances.
                         exclude_alliance_pref: Do not consider these
@@ -10021,7 +10021,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class AlternateAirportCities:
             """
-            Attributes
+            Attributes:
                 specified_location: A desired location (airport city).
                 alternate_location: An alternate location (airport
                     city).
@@ -10069,7 +10069,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class AlternateAirportMileage:
             """
-            Attributes
+            Attributes:
                 number: Maximum allowed number of miles from desired
                     airport.
             """
@@ -10085,7 +10085,7 @@ class OtaAirLowFareSearchRq:
     @dataclass
     class OriginDestinationInformation(OriginDestinationInformationType):
         """
-        Attributes
+        Attributes:
             tpa_extensions: Additional elements and attributes to be
                 included if required, per Trading Partner Agreement
                 (TPA).
@@ -10131,7 +10131,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class TpaExtensions:
             """
-            Attributes
+            Attributes:
                 flight:
                 routing:
                 date_flexibility: The number of alternate days around
@@ -10290,7 +10290,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class DateFlexibility:
                 """
-                Attributes
+                Attributes:
                     nbr_of_days: Number of alternate dates before and
                         after requested travel date.
                     plus: Number of alternate dates before requested
@@ -10354,7 +10354,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class SegmentType:
                 """
-                Attributes
+                Attributes:
                     code: "Code" can be "ARUNK", "O" for normal, or "X"
                         for connection.
                 """
@@ -10369,7 +10369,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class AlternateTime:
                 """
-                Attributes
+                Attributes:
                     plus_minus: Maximum time difference between actual
                         and desired time.
                     plus: Maximum number of hours after desired time.
@@ -10428,7 +10428,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class ConnectionTime:
                 """
-                Attributes
+                Attributes:
                     min:
                     max:
                     excluded_connection_begin: Excluded connection time
@@ -10496,7 +10496,7 @@ class OtaAirLowFareSearchRq:
     @dataclass
     class Leg:
         """
-        Attributes
+        Attributes:
             departure_date_time:
             arrival_date_time:
             origins:
@@ -10593,7 +10593,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class Origin:
                 """
-                Attributes
+                Attributes:
                     airport_code: Required unless AirportsGroup is
                         specified. Cannot appear with AirportsGroup.
                     airports_group: Name of the airports group
@@ -10629,7 +10629,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class Destination:
                 """
-                Attributes
+                Attributes:
                     airport_code: Required unless AirportsGroup is
                         specified. Cannot appear with AirportsGroup.
                     airports_group: Name of the airports group
@@ -10654,7 +10654,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class Carriers:
             """
-            Attributes
+            Attributes:
                 include_vendor_pref:
                 exclude_vendor_pref: Do not consider these carriers for
                     this leg.
@@ -10677,7 +10677,7 @@ class OtaAirLowFareSearchRq:
             @dataclass
             class ExcludeVendorPref:
                 """
-                Attributes
+                Attributes:
                     code: Identifies a company by the company code.
                 """
                 code: None | str = field(
@@ -10694,7 +10694,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class Cabin:
             """
-            Attributes
+            Attributes:
                 preference_level:
                 type_value: Specifies cabin type.
             """
@@ -10716,7 +10716,7 @@ class OtaAirLowFareSearchRq:
         @dataclass
         class DepartureDateTime(GlobalDateTimeType):
             """
-            Attributes
+            Attributes:
                 week_days: Specify which days of week  to consider for
                     departure. Value format: First letter of the name of
                     the day or '_', eg. 'SMT___S' means we are

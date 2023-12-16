@@ -23,7 +23,7 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerEquipments_RelStructure"
 
-    choice: List[Union[HelpPointEquipmentRef, PassengerSafetyEquipment, SanitaryEquipmentRef, AccessVehicleEquipmentRef, PassengerEquipmentRef, RubbishDisposalEquipment, WheelchairVehicleRef, PassengerInformationEquipment, HelpPointEquipment, SanitaryEquipment, RubbishDisposalEquipmentRef, PassengerSafetyEquipmentRef, VehicleEquipmentRef]] = field(
+    choice: List[Union[RubbishDisposalEquipmentRef, HelpPointEquipmentRef, PassengerSafetyEquipmentRef, SanitaryEquipmentRef, WheelchairVehicleRef, AccessVehicleEquipmentRef, VehicleEquipmentRef, PassengerEquipmentRef, PassengerInformationEquipment, RubbishDisposalEquipment, HelpPointEquipment, PassengerSafetyEquipment, SanitaryEquipment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

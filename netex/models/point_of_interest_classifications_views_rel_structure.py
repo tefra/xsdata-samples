@@ -12,7 +12,7 @@ class PointOfInterestClassificationsViewsRelStructure(OneToManyRelationshipStruc
     class Meta:
         name = "pointOfInterestClassificationsViews_RelStructure"
 
-    point_of_interest_classification_ref_or_point_of_interest_classification_view: List[Union[PointOfInterestClassificationView, PointOfInterestClassificationRef]] = field(
+    point_of_interest_classification_ref_or_point_of_interest_classification_view: List[Union[PointOfInterestClassificationRef, PointOfInterestClassificationView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

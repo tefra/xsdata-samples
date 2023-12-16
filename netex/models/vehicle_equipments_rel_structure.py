@@ -12,7 +12,7 @@ class VehicleEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleEquipments_RelStructure"
 
-    access_vehicle_equipment_or_wheelchair_vehicle_equipment: List[Union[WheelchairVehicleEquipment, AccessVehicleEquipment]] = field(
+    access_vehicle_equipment_or_wheelchair_vehicle_equipment: List[Union[AccessVehicleEquipment, WheelchairVehicleEquipment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

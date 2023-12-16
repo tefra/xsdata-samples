@@ -36,7 +36,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[RoadLinkRef, LineLinkRef, ActivationLinkRef, RouteLinkRef, ServiceLinkRef, WireLinkRef, TimingLinkRef, PathLinkRef, RailwayLinkRef]] = field(
+    choice: Optional[Union[ServiceLinkRef, LineLinkRef, PathLinkRef, TimingLinkRef, RouteLinkRef, WireLinkRef, RoadLinkRef, RailwayLinkRef, ActivationLinkRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -85,7 +85,7 @@ obj = PublicationDelivery(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
         participant_ref="SYS002",
         description=MultilingualString(
-            value="Filter used to get  these contents: Get all STOP PLACEs, STOP ASSIGNMENTs and TOPOGRAPHIC PLACEfor Network TNET1 in specified  area    :TP_0032A.  Also return any  RESPONSIBILITY SETs  used.&#10;&#9;&#9;&#9;&#9;Also get details for &#10;&#9;&#9;&#9;&#9;"
+            value="Filter used to get  these contents: Get all STOP PLACEs, STOP ASSIGNMENTs and TOPOGRAPHIC PLACEfor Network TNET1 in specified  area    :TP_0032A.  Also return any  RESPONSIBILITY SETs  used.\n\t\t\t\tAlso get details for \n\t\t\t\t"
         ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[

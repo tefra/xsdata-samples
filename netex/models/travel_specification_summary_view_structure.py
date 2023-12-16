@@ -78,7 +78,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    operator_ref_or_group_of_operators_ref: Optional[Union[GroupOfOperatorsRef, OperatorRef]] = field(
+    operator_ref_or_group_of_operators_ref: Optional[Union[OperatorRef, GroupOfOperatorsRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

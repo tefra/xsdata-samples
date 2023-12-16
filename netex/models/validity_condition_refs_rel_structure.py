@@ -14,7 +14,7 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"
 
-    choice: List[Union[ValidityTriggerRef, AvailabilityConditionRef, ValidityConditionRef, ValidityRuleParameterRef]] = field(
+    choice: List[Union[AvailabilityConditionRef, ValidityRuleParameterRef, ValidityTriggerRef, ValidityConditionRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -22,7 +22,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"
 
-    destination_display_ref_or_destination_display_view_or_name: Optional[Union[MultilingualString, DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view_or_name: Optional[Union[DestinationDisplayRef, DestinationDisplayView, MultilingualString]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -45,7 +45,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             ),
         }
     )
-    choice: Optional[Union[ScheduledStopPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, BorderPointRef, GaragePointRef]] = field(
+    choice: Optional[Union[BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef, RoutePointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -260,7 +260,7 @@ obj = PublicationDelivery(
                                                         id="xj:DT_01",
                                                         version="any",
                                                         text=MultilingualString(
-                                                            value="Tous les jours sauf pour les jours fériés",
+                                                            value="Tous les jours sauf pour les jours f\xe9ri\xe9s",
                                                             lang="fr"
                                                         ),
                                                         attribute_name="Name",
@@ -270,7 +270,7 @@ obj = PublicationDelivery(
                                                         id="xj:DT_01",
                                                         version="any",
                                                         text=MultilingualString(
-                                                            value="Jeden Tag außer an Feiertagen",
+                                                            value="Jeden Tag au\xdfer an Feiertagen",
                                                             lang="de"
                                                         ),
                                                         attribute_name="Name",

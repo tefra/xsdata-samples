@@ -52,7 +52,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: Optional[Union[OtherError, CapabilityNotSupportedError]] = field(
+        capability_not_supported_error_or_other_error: Optional[Union[CapabilityNotSupportedError, OtherError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

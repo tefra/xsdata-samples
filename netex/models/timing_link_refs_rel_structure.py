@@ -12,7 +12,7 @@ class TimingLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timingLinkRefs_RelStructure"
 
-    timing_link_ref_or_timing_link_ref_by_value: List[Union[TimingLinkRefByValue, TimingLinkRef]] = field(
+    timing_link_ref_or_timing_link_ref_by_value: List[Union[TimingLinkRef, TimingLinkRefByValue]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

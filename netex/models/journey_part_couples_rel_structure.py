@@ -12,7 +12,7 @@ class JourneyPartCouplesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPartCouples_RelStructure"
 
-    journey_part_couple_ref_or_journey_part_couple: List[Union[JourneyPartCouple, JourneyPartCoupleRef]] = field(
+    journey_part_couple_ref_or_journey_part_couple: List[Union[JourneyPartCoupleRef, JourneyPartCouple]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -19,7 +19,7 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entranceRefs_RelStructure"
 
-    choice: List[Union[VehicleEntranceRef, ParkingEntranceRef, PointOfInterestEntranceRef, ParkingEntranceForVehiclesRef, StopPlaceEntranceRef, EntranceRef, PointOfInterestVehicleEntranceRef, StopPlaceVehicleEntranceRef, ParkingPassengerEntranceRef]] = field(
+    choice: List[Union[StopPlaceVehicleEntranceRef, StopPlaceEntranceRef, ParkingEntranceForVehiclesRef, ParkingPassengerEntranceRef, ParkingEntranceRef, PointOfInterestVehicleEntranceRef, PointOfInterestEntranceRef, VehicleEntranceRef, EntranceRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

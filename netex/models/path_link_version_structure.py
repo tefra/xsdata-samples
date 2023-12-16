@@ -57,7 +57,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    accessibility_assessment_ref_or_accessibility_assessment: Optional[Union[AccessibilityAssessment, AccessibilityAssessmentRef]] = field(
+    accessibility_assessment_ref_or_accessibility_assessment: Optional[Union[AccessibilityAssessmentRef, AccessibilityAssessment]] = field(
         default=None,
         metadata={
             "type": "Elements",

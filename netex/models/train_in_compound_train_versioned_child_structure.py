@@ -31,7 +31,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    train_ref_or_train: Optional[Union[Train, TrainRef]] = field(
+    train_ref_or_train: Optional[Union[TrainRef, Train]] = field(
         default=None,
         metadata={
             "type": "Elements",

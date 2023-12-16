@@ -17,7 +17,7 @@ class FareStructureFactorsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareStructureFactors_RelStructure"
 
-    choice: List[Union[FareQuotaFactorRef, FareDemandFactorRef, TimeStructureFactorRef, FareStructureFactor, QualityStructureFactorRef, ParkingChargeBandRef, GeographicalStructureFactorRef]] = field(
+    choice: List[Union[ParkingChargeBandRef, TimeStructureFactorRef, FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef, GeographicalStructureFactorRef, FareStructureFactor]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

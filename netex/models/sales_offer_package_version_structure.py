@@ -84,7 +84,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: Optional[Union[GroupOfSalesOfferPackageRefsRelStructure, GroupOfSalesOfferPackagesRef]] = field(
+    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: Optional[Union[GroupOfSalesOfferPackagesRef, GroupOfSalesOfferPackageRefsRelStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",

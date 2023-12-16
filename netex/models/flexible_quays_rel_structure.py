@@ -14,7 +14,7 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleQuays_RelStructure"
 
-    choice: List[Union[FlexibleQuayRef, FlexibleAreaRef, HailAndRideAreaRef, FlexibleQuay]] = field(
+    choice: List[Union[HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef, FlexibleQuay]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

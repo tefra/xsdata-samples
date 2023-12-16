@@ -12,7 +12,7 @@ class ThirdPartyProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "ThirdPartyProduct_VersionStructure"
 
-    general_group_of_entities_ref_or_general_group_of_entities: Optional[Union[GeneralGroupOfEntities, GeneralGroupOfEntitiesRef]] = field(
+    general_group_of_entities_ref_or_general_group_of_entities: Optional[Union[GeneralGroupOfEntitiesRef, GeneralGroupOfEntities]] = field(
         default=None,
         metadata={
             "type": "Elements",

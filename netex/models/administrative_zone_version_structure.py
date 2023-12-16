@@ -33,7 +33,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
+    choice: Optional[Union[RetailConsortiumRef, AuthorityRef, OperatorRef, GeneralOrganisationRef, ManagementAgentRef, ServicedOrganisationRef, TravelAgentRef, OtherOrganisationRef, OrganisationRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -143,7 +143,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[Union[TransportAdministrativeZone, AdministrativeZone, AdministrativeZoneRef]] = field(
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[Union[AdministrativeZoneRef, TransportAdministrativeZone, AdministrativeZone]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

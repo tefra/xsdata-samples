@@ -26,7 +26,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexiblePointProperties_VersionedChildStructure"
 
-    choice: Optional[Union[ScheduledStopPointRef, RailwayPointRef, WirePointRef, TrafficControlPointRef, RoutePointRef, FareScheduledStopPointRef, ReliefPointRef, ParkingPointRef, TimingPointRef, RoadPointRef, PointOnRouteRef, ActivationPointRef, BorderPointRef, GaragePointRef, BeaconPointRef, PointRef]] = field(
+    choice: Optional[Union[PointOnRouteRef, BorderPointRef, FareScheduledStopPointRef, ScheduledStopPointRef, GaragePointRef, ParkingPointRef, ReliefPointRef, TimingPointRef, RoutePointRef, WirePointRef, RoadPointRef, RailwayPointRef, TrafficControlPointRef, BeaconPointRef, ActivationPointRef, PointRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

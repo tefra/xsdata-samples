@@ -16,7 +16,7 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAssignmentsInFrame_RelStructure"
 
-    choice: List[Union[VehicleJourneyStopAssignment, FlexibleStopAssignment, DynamicStopAssignment, PassengerStopAssignment, TrainStopAssignment, NavigationPathAssignment]] = field(
+    choice: List[Union[FlexibleStopAssignment, VehicleJourneyStopAssignment, NavigationPathAssignment, TrainStopAssignment, DynamicStopAssignment, PassengerStopAssignment]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

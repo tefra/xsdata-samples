@@ -12,7 +12,7 @@ class ResponsibilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "responsibilitySets_RelStructure"
 
-    responsibility_set_ref_or_responsibility_set: List[Union[ResponsibilitySet, ResponsibilitySetRef]] = field(
+    responsibility_set_ref_or_responsibility_set: List[Union[ResponsibilitySetRef, ResponsibilitySet]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

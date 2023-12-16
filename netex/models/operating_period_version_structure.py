@@ -40,7 +40,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    from_operating_day_ref_or_from_date: Optional[Union[XmlDateTime, OperatingDayRefStructure]] = field(
+    from_operating_day_ref_or_from_date: Optional[Union[OperatingDayRefStructure, XmlDateTime]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -58,7 +58,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             ),
         }
     )
-    to_operating_day_ref_or_to_date: Optional[Union[XmlDateTime, OperatingDayRefStructure]] = field(
+    to_operating_day_ref_or_to_date: Optional[Union[OperatingDayRefStructure, XmlDateTime]] = field(
         default=None,
         metadata={
             "type": "Elements",

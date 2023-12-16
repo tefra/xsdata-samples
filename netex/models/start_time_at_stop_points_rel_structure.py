@@ -12,7 +12,7 @@ class StartTimeAtStopPointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "startTimeAtStopPoints_RelStructure"
 
-    start_time_at_stop_point_ref_or_start_time_at_stop_point: List[Union[StartTimeAtStopPoint, StartTimeAtStopPointRef]] = field(
+    start_time_at_stop_point_ref_or_start_time_at_stop_point: List[Union[StartTimeAtStopPointRef, StartTimeAtStopPoint]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

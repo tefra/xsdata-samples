@@ -642,7 +642,7 @@ obj = CreditNote(
             item=Item(
                 description=[
                     Description(
-                        value="Processor: Intel Core 2 Duo SU9400 LV (1.4GHz). RAM:&#10;&#9;&#9;&#9;&#9;3MB. Screen 1440x900",
+                        value="Processor: Intel Core 2 Duo SU9400 LV (1.4GHz). RAM:\n\t\t\t\t3MB. Screen 1440x900",
                         language_id="EN"
                     ),
                 ],

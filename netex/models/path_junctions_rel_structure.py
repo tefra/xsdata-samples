@@ -12,7 +12,7 @@ class PathJunctionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathJunctions_RelStructure"
 
-    path_junction_ref_or_path_junction: List[Union[PathJunction, PathJunctionRef]] = field(
+    path_junction_ref_or_path_junction: List[Union[PathJunctionRef, PathJunction]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

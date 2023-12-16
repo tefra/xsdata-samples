@@ -55,7 +55,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[FareSectionRefStructure, ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FarePointInPatternRefStructure]] = field(
+    choice: Optional[Union[ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FareSectionRefStructure, FarePointInPatternRefStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -93,7 +93,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         }
     )
-    choice_1: Optional[Union[FareSectionRefStructure, ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FarePointInPatternRefStructure]] = field(
+    choice_1: Optional[Union[ScheduledStopPointRefStructure, ScheduledStopPointDerivedViewStructure, TariffZoneRefStructure, ZoneDerivedViewStructure, FareSectionRefStructure, FarePointInPatternRefStructure]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -154,7 +154,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[Union[FareTableRef, StandardFareTableRef]] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

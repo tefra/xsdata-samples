@@ -12,7 +12,7 @@ class FareDemandFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareDemandFactors_RelStructure"
 
-    fare_demand_factor_ref_or_fare_demand_factor: List[Union[FareDemandFactor, FareDemandFactorRef]] = field(
+    fare_demand_factor_ref_or_fare_demand_factor: List[Union[FareDemandFactorRef, FareDemandFactor]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

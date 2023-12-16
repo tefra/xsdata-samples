@@ -19,7 +19,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Zone_DerivedViewStructure"
 
-    choice: Optional[Union[TariffZoneRef, AdministrativeZoneRef, StopAreaRef, ZoneRef, AccessZoneRef, FareZoneRef, TransportAdministrativeZoneRef]] = field(
+    choice: Optional[Union[StopAreaRef, AccessZoneRef, TransportAdministrativeZoneRef, AdministrativeZoneRef, FareZoneRef, TariffZoneRef, ZoneRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -19,7 +19,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    fare_day_type_ref_or_day_type_ref: Optional[Union[DayTypeRef, FareDayTypeRef]] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,7 +61,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    choice: Optional[Union[ValidityTriggerRef, AvailabilityConditionRef, ValidityConditionRef, ValidityRuleParameterRef]] = field(
+    choice: Optional[Union[AvailabilityConditionRef, ValidityRuleParameterRef, ValidityTriggerRef, ValidityConditionRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

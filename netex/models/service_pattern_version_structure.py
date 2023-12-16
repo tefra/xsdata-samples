@@ -54,7 +54,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionRef, DirectionView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",

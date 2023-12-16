@@ -55,7 +55,7 @@ obj = FulfilmentCancellation(
     ],
     cancellation_note=[
         CancellationNote(
-            value="The quality check has detected that the beeswax doesn't become liquid at the&#10;        expected temperature."
+            value="The quality check has detected that the beeswax doesn't become liquid at the\n        expected temperature."
         ),
     ],
     despatch_document_reference=[

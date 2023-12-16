@@ -13,7 +13,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "usageParameterPrices_RelStructure"
 
-    usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: List[Union[UsageParameterPrice, CellRef, UsageParameterPriceRef]] = field(
+    usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: List[Union[UsageParameterPriceRef, UsageParameterPrice, CellRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -194,13 +194,13 @@ obj = RequestForQuotation(
                     list_agency_id="320"
                 ),
                 street_name=StreetName(
-                    value="Arne Jacobsens Allé"
+                    value="Arne Jacobsens All\xe9"
                 ),
                 building_number=BuildingNumber(
                     value="15"
                 ),
                 city_name=CityName(
-                    value="København S"
+                    value="K\xf8benhavn S"
                 ),
                 postal_zone=PostalZone(
                     value="2300"
@@ -330,7 +330,7 @@ obj = RequestForQuotation(
                 item=Item(
                     description=[
                         Description(
-                            value="Stationær computer"
+                            value="Station\xe6r computer"
                         ),
                     ],
                     name=Name(
@@ -345,7 +345,7 @@ obj = RequestForQuotation(
             ),
             note=[
                 Note(
-                    value="Skærm"
+                    value="Sk\xe6rm"
                 ),
             ],
             line_item=LineItem(
@@ -359,7 +359,7 @@ obj = RequestForQuotation(
                 item=Item(
                     description=[
                         Description(
-                            value="Fladskærm"
+                            value="Fladsk\xe6rm"
                         ),
                     ],
                     name=Name(

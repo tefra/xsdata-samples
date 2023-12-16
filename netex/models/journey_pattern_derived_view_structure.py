@@ -25,7 +25,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "JourneyPattern_DerivedViewStructure"
 
-    choice: Optional[Union[ServiceJourneyPatternRef, JourneyPatternRef, DeadRunJourneyPatternRef, ServicePatternRef]] = field(
+    choice: Optional[Union[ServiceJourneyPatternRef, ServicePatternRef, DeadRunJourneyPatternRef, JourneyPatternRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +79,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         }
     )
-    direction_ref_or_direction_view: Optional[Union[DirectionView, DirectionRef]] = field(
+    direction_ref_or_direction_view: Optional[Union[DirectionRef, DirectionView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,7 +97,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         }
     )
-    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayView, DestinationDisplayRef]] = field(
+    destination_display_ref_or_destination_display_view: Optional[Union[DestinationDisplayRef, DestinationDisplayView]] = field(
         default=None,
         metadata={
             "type": "Elements",

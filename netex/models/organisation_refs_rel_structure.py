@@ -19,7 +19,7 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "organisationRefs_RelStructure"
 
-    choice: List[Union[ManagementAgentRef, TravelAgentRef, OrganisationRef, OperatorRef, AuthorityRef, ServicedOrganisationRef, RetailConsortiumRef, OtherOrganisationRef, GeneralOrganisationRef]] = field(
+    choice: List[Union[RetailConsortiumRef, AuthorityRef, OperatorRef, GeneralOrganisationRef, ManagementAgentRef, ServicedOrganisationRef, TravelAgentRef, OtherOrganisationRef, OrganisationRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

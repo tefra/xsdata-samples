@@ -12,7 +12,7 @@ class PassengerCapacitiesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "passengerCapacities_RelStructure"
 
-    passenger_capacity_ref_or_passenger_capacity: List[Union[PassengerCapacity, PassengerCapacityRef]] = field(
+    passenger_capacity_ref_or_passenger_capacity: List[Union[PassengerCapacityRef, PassengerCapacity]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

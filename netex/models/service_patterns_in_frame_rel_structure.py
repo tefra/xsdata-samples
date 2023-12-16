@@ -12,7 +12,7 @@ class ServicePatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "servicePatternsInFrame_RelStructure"
 
-    service_pattern_or_journey_pattern_view: List[Union[JourneyPatternView, ServicePattern]] = field(
+    service_pattern_or_journey_pattern_view: List[Union[ServicePattern, JourneyPatternView]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

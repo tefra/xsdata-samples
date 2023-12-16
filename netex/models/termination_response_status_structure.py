@@ -71,7 +71,7 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        choice: Optional[Union[UnknownSubscriberError, CapabilityNotSupportedError, OtherError, UnknownSubscriptionError]] = field(
+        choice: Optional[Union[CapabilityNotSupportedError, UnknownSubscriberError, UnknownSubscriptionError, OtherError]] = field(
             default=None,
             metadata={
                 "type": "Elements",

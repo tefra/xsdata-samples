@@ -46,7 +46,7 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[Union[GenericParameterAssignmentInContext, GenericParameterAssignment]] = field(
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[Union[GenericParameterAssignment, GenericParameterAssignmentInContext]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

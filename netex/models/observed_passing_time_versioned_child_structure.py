@@ -12,7 +12,7 @@ class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildS
     class Meta:
         name = "ObservedPassingTime_VersionedChildStructure"
 
-    choice_2: List[Union[XmlTime, XmlDuration, int]] = field(
+    choice_2: List[Union[XmlTime, int, XmlDuration]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
